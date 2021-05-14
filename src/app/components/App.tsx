@@ -3,40 +3,49 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import { ThemeSwitch } from '../../theme'
 import makeStyles from '@material-ui/core/styles/makeStyles'
-import { ChatErrors, ChatHistory, ChatInput } from '../../chat'
+import UnitProcesses from './UnitProcessesMUI'
+import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles({
   toolbar: {
     display: 'grid',
-    gridTemplateColumns: 'auto',
-    justifyItems: 'end'
+    gridTemplateColumns: 'auto auto',
+    justifyItems: 'end',
+    justifyContent: 'space-between'
   },
   main: {
     display: 'grid',
     height: '100vh',
     width: '100vw',
-    gridTemplateRows: 'auto 1fr',
+    gridTemplateColumns: '1fr',
     gridRowGap: 8,
     paddingTop: 100,
-    paddingLeft: '20vw',
-    paddingRight: '20vw'
+    justifyItems: 'stretch',
+    justifyContent: 'center',
+    paddingLeft: '10vw',
+    paddingRight: '10vw'
+  },
+  title: {
+    textAlign: 'left'
   }
 })
 
 export const App = () => {
   const classes = useStyles()
+
   return (
     <div className="App">
-      <AppBar className={classes.toolbar}>
-        <Toolbar>
+      <AppBar>
+        <Toolbar className={classes.toolbar}>
+          <div className={classes.title}>
+            <Typography>Poseidon Web alpha 0.1</Typography>
+          </div>
           <ThemeSwitch />
         </Toolbar>
       </AppBar>
       <div className={classes.main}>
-        <ChatInput />
-        <ChatHistory />
+        <UnitProcesses />
       </div>
-      <ChatErrors />
     </div>
   )
 }
