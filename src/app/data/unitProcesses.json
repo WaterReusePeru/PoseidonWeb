@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "Bar screen",
-    "turbity": "0",
+    "turbidity": "0",
     "tss": "2",
     "bod": "2",
     "cod": "1.3",
@@ -38,7 +38,7 @@
   {
     "id": "2",
     "name": "Coarse screen",
-    "turbity": "0",
+    "turbidity": "0",
     "tss": "5",
     "bod": "4",
     "cod": "2",
@@ -74,7 +74,7 @@
   {
     "id": "3",
     "name": "Grit Chamber",
-    "turbity": "2",
+    "turbidity": "2",
     "tss": "2",
     "bod": "2",
     "cod": "2",
@@ -110,7 +110,7 @@
   {
     "id": "4",
     "name": "Equalization Basin",
-    "turbity": "0",
+    "turbidity": "0",
     "tss": "0",
     "bod": "12",
     "cod": "12",
@@ -146,7 +146,7 @@
   {
     "id": "5",
     "name": "Sedimentation without coagulant",
-    "turbity": "0",
+    "turbidity": "0",
     "tss": "50",
     "bod": "25",
     "cod": "25",
@@ -182,7 +182,7 @@
   {
     "id": "6",
     "name": "Sedimentation with coagulant",
-    "turbity": "70",
+    "turbidity": "70",
     "tss": "70",
     "bod": "50",
     "cod": "50",
@@ -218,7 +218,7 @@
   {
     "id": "7",
     "name": "Anaerobic stabilization ponds",
-    "turbity": "70",
+    "turbidity": "70",
     "tss": "45",
     "bod": "65",
     "cod": "58",
@@ -254,7 +254,7 @@
   {
     "id": "8",
     "name": "Activated sludge",
-    "turbity": "90",
+    "turbidity": "90",
     "tss": "70",
     "bod": "70",
     "cod": "80",
@@ -290,7 +290,7 @@
   {
     "id": "9",
     "name": "Low Loaded Activated Sludge w/o de-N + Sec Sedim.",
-    "turbity": "98",
+    "turbidity": "98",
     "tss": "97",
     "bod": "97",
     "cod": "90",
@@ -326,7 +326,7 @@
   {
     "id": "10",
     "name": "Low Loaded Activated Sludge w de-N + sec. Sedim.",
-    "turbity": "98",
+    "turbidity": "98",
     "tss": "97",
     "bod": "98",
     "cod": "90",
@@ -362,7 +362,7 @@
   {
     "id": "11",
     "name": "High Loaded Activated Sludge + Sec. Sedim.",
-    "turbity": "97",
+    "turbidity": "97",
     "tss": "96",
     "bod": "95",
     "cod": "90",
@@ -398,7 +398,7 @@
   {
     "id": "12",
     "name": "Extended aeration",
-    "turbity": "99",
+    "turbidity": "99",
     "tss": "88",
     "bod": "90",
     "cod": "90",
@@ -434,7 +434,7 @@
   {
     "id": "13",
     "name": "Trickling filter with secondary sedimentation",
-    "turbity": "30",
+    "turbidity": "30",
     "tss": "70",
     "bod": "70",
     "cod": "80",
@@ -470,7 +470,7 @@
   {
     "id": "14",
     "name": "Rotating biological contactor (RBC)",
-    "turbity": "70",
+    "turbidity": "70",
     "tss": "60",
     "bod": "60",
     "cod": "70",
@@ -506,7 +506,7 @@
   {
     "id": "15",
     "name": "Stabilization ponds: Aerobic",
-    "turbity": "60",
+    "turbidity": "60",
     "tss": "45",
     "bod": "60",
     "cod": "40",
@@ -542,7 +542,7 @@
   {
     "id": "16",
     "name": "Stabilization ponds: Facultative",
-    "turbity": "50",
+    "turbidity": "50",
     "tss": "70",
     "bod": "70",
     "cod": "80",
@@ -578,7 +578,7 @@
   {
     "id": "17",
     "name": "Membrane bioreactor (MBR)",
-    "turbity": "92",
+    "turbidity": "92",
     "tss": "92",
     "bod": "92",
     "cod": "80",
@@ -614,7 +614,7 @@
   {
     "id": "18",
     "name": "Constructed wetland",
-    "turbity": "15",
+    "turbidity": "15",
     "tss": "75",
     "bod": "35",
     "cod": "15",
@@ -650,7 +650,7 @@
   {
     "id": "19",
     "name": "Enhanced biological phosphorus removal (EBPR)",
-    "turbity": "0",
+    "turbidity": "0",
     "tss": "0",
     "bod": "0",
     "cod": "0",
@@ -686,7 +686,7 @@
   {
     "id": "20",
     "name": "P-Precipitation",
-    "turbity": "0",
+    "turbidity": "0",
     "tss": "0",
     "bod": "0",
     "cod": "0",
@@ -722,7 +722,7 @@
   {
     "id": "21",
     "name": "Denitrification",
-    "turbity": "0",
+    "turbidity": "0",
     "tss": "0",
     "bod": "0",
     "cod": "0",
@@ -758,7 +758,7 @@
   {
     "id": "22",
     "name": "Dual media filter",
-    "turbity": "90",
+    "turbidity": "90",
     "tss": "90",
     "bod": "75",
     "cod": "70",
@@ -794,7 +794,7 @@
   {
     "id": "23",
     "name": "Microfiltration",
-    "turbity": "90",
+    "turbidity": "90",
     "tss": "90",
     "bod": "75",
     "cod": "70",
@@ -830,7 +830,7 @@
   {
     "id": "24",
     "name": "Ultrafiltration",
-    "turbity": "90",
+    "turbidity": "90",
     "tss": "90",
     "bod": "75",
     "cod": "70",
@@ -866,7 +866,7 @@
   {
     "id": "25",
     "name": "Nanofiltration",
-    "turbity": "50",
+    "turbidity": "50",
     "tss": "99.95",
     "bod": "90",
     "cod": "90",
@@ -902,7 +902,7 @@
   {
     "id": "26",
     "name": "Reverse osmosis",
-    "turbity": "50",
+    "turbidity": "50",
     "tss": "90",
     "bod": "35",
     "cod": "70",
@@ -938,7 +938,7 @@
   {
     "id": "27",
     "name": "Activated Carbon",
-    "turbity": "40",
+    "turbidity": "40",
     "tss": "45",
     "bod": "45",
     "cod": "30",
@@ -974,7 +974,7 @@
   {
     "id": "28",
     "name": "Ion exchange",
-    "turbity": "20",
+    "turbidity": "20",
     "tss": "45",
     "bod": "20",
     "cod": "0",
@@ -1010,7 +1010,7 @@
   {
     "id": "29",
     "name": "Advanced oxidation process",
-    "turbity": "80",
+    "turbidity": "80",
     "tss": "0",
     "bod": "80",
     "cod": "80",
@@ -1046,7 +1046,7 @@
   {
     "id": "30",
     "name": "Soil-aquifer treatment (SAT)",
-    "turbity": "85",
+    "turbidity": "85",
     "tss": "90",
     "bod": "85",
     "cod": "85",
@@ -1082,7 +1082,7 @@
   {
     "id": "31",
     "name": "Maturation pond",
-    "turbity": "45",
+    "turbidity": "45",
     "tss": "25",
     "bod": "13",
     "cod": "20",
@@ -1118,7 +1118,7 @@
   {
     "id": "32",
     "name": "Flocculation",
-    "turbity": "30",
+    "turbidity": "30",
     "tss": "60",
     "bod": "30",
     "cod": "35",
@@ -1154,7 +1154,7 @@
   {
     "id": "33",
     "name": "Electrodialysis",
-    "turbity": "80",
+    "turbidity": "80",
     "tss": "0",
     "bod": "0",
     "cod": "0",
@@ -1190,7 +1190,7 @@
   {
     "id": "34",
     "name": "Ozonation",
-    "turbity": "0",
+    "turbidity": "0",
     "tss": "0",
     "bod": "15",
     "cod": "15",
@@ -1226,7 +1226,7 @@
   {
     "id": "35",
     "name": "Chlorine gas",
-    "turbity": "0",
+    "turbidity": "0",
     "tss": "0",
     "bod": "0",
     "cod": "0",
@@ -1262,7 +1262,7 @@
   {
     "id": "36",
     "name": "Chlorine dioxide",
-    "turbity": "0",
+    "turbidity": "0",
     "tss": "0",
     "bod": "0",
     "cod": "0",
@@ -1298,7 +1298,7 @@
   {
     "id": "37",
     "name": "Ultraviolet disinfection",
-    "turbity": "0",
+    "turbidity": "0",
     "tss": "0",
     "bod": "0",
     "cod": "0",
