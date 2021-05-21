@@ -5,6 +5,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import unitProcesses from '../data/unitProcesses.json'
 import Chip from '@material-ui/core/Chip'
 import Tooltip from '@material-ui/core/Tooltip'
+import Avatar from '@material-ui/core/Avatar'
+import { theme } from '../../theme'
 
 const useStyles = makeStyles({
   root: {
@@ -50,6 +52,57 @@ export default function UnitProcesses() {
     )
   }
 
+  function getEvaluationCriteria(params) {
+    console.log(params)
+
+    const columns = [
+      'ease_to_upgrade',
+      'adaptability_to_varying_flow',
+      'adaptability_to_varying_quality',
+      'ease_of_om',
+      'ease_of_construction',
+      'ease_of_demonstration',
+      'power_demand',
+      'chemical_demand',
+      'odor_generation',
+      'impact_on_ground_water',
+      'land_requirements',
+      'cost_of_treatment',
+      'waste'
+    ]
+    const columnTitles = [
+      'ease to upgrade',
+      'adaptability to varying flow',
+      'adaptability to varying quality',
+      'ease of O & M',
+      'ease of construction',
+      'ease of demonstration',
+      'power demand',
+      'chemical_demand',
+      'odor generation',
+      'impact on ground water',
+      'land requirements',
+      'cost of treatment',
+      'waste'
+    ]
+
+    return (
+      <div className={classes.chipContainer}>
+        {columns.map((column, index) => (
+          <Tooltip title={columnTitles[index]}>
+            <Chip
+              label={params.getValue(column)}
+              key={index}
+              size="small"
+              color="primary"
+              style={{ opacity: 0.25 + params.getValue(column) / 4 }}
+            />
+          </Tooltip>
+        ))}
+      </div>
+    )
+  }
+
   const columns = [
     {
       field: 'id',
@@ -64,100 +117,33 @@ export default function UnitProcesses() {
       field: 'turbidity',
       headerName: 'Pollutant Removal Efficiencies [% removal]',
       flex: 1,
-      //headerClassName: 'wrapperHeader'
       renderCell: params => {
         return getPollutantRemovalEfficiencies(params)
       }
     },
-    /*
-    {
-      field: 'tss',
-      headerName: 'TSS [% removal]',
-      flex: 1
-    },
-     {
-      field: 'bod',
-      headerName: 'BOD [% removal]',
-      flex: 1
-    },
-    {
-      field: 'cod',
-      headerName: 'COD [% removal]',
-      flex: 1
-    },
-    {
-      field: 'fc',
-      headerName: 'FC [% removal]',
-      flex: 1
-    },
-    {
-      field: 'tc',
-      headerName: 'TC [% removal]',
-      flex: 1
-    },
-    {
-      field: "construction_cost_b",
-      headerName: "const cost b",
-    },
-    {
-      field: "construction_cost_c",
-      headerName: "const cost c",
-    },
-    {
-      field: "land_requirements_b",
-      headerName: "land req b",
-    },
-    {
-      field: "land_requirements_c",
-      headerName: "land req c",
-    },
-    {
-      field: "energy_requirements_b",
-      headerName: "energy req b",
-    },
-    {
-      field: "energy_requirements_c",
-      headerName: "energy req c",
-    },
-    {
-      field: "labor_requirements_b",
-      headerName: "labor req b",
-    },
-    {
-      field: "labor_requirements_c",
-      headerName: "labor req c",
-    },
-    {
-      field: "other_om_b",
-      headerName: "other om b",
-    },
-    {
-      field: "other_om_c",
-      headerName: "other om c",
-    }, */
     {
       field: 'recovery',
       headerName: 'Recovery [%]',
       flex: 0.5
     },
     {
-      field: 'reliability',
-      headerName: 'Reliability',
-      flex: 1
+      field: 'ease_to_upgrade',
+      headerName: 'Evaluation Criteria [0-3]',
+      flex: 1.5,
+      renderCell: params => {
+        return getEvaluationCriteria(params)
+      }
     },
     {
-      field: 'ease_to_upgrade',
-      headerName: 'Ease to Upgrade'
-    },
-    {
-      field: 'ease_to_upgrade',
-      headerName: 'Evaluation'
+      field: 'useful_life',
+      headerName: 'Useful Life [yrs]',
+      flex: 0.5
     }
   ]
 
   return (
     <div style={{ flexGrow: 1 }} className={classes.root}>
-      <DataGrid rows={data} columns={columns} pageSize={10} headerHeight={120} />
+      <DataGrid rows={data} columns={columns} pageSize={10} />
     </div>
   )
 }
