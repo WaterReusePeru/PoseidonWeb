@@ -10,6 +10,8 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuBookIcon from '@material-ui/icons/MenuBook'
 import AddBoxIcon from '@material-ui/icons/AddBox'
 import ShowChartIcon from '@material-ui/icons/ShowChart'
+import TreatmentTrains from './TreatmentTrains'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 const useStyles = makeStyles({
   toolbar: {
@@ -66,7 +68,13 @@ export const App = () => {
         </Toolbar>
       </AppBar>
       <div className={classes.main}>
-        <UnitProcesses />
+        <Router>
+          <Switch>
+            <Route exact path="/" component={UnitProcesses} />
+            <Route path="/unitprocesses" component={UnitProcesses} />
+            <Route path="/treatmenttrains" component={TreatmentTrains} />
+          </Switch>
+        </Router>
       </div>
     </div>
   )

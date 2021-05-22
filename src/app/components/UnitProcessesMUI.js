@@ -5,8 +5,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import unitProcesses from '../data/unitProcesses.json'
 import Chip from '@material-ui/core/Chip'
 import Tooltip from '@material-ui/core/Tooltip'
-import Avatar from '@material-ui/core/Avatar'
-import { theme } from '../../theme'
 
 const useStyles = makeStyles({
   root: {
@@ -36,8 +34,6 @@ export default function UnitProcesses() {
   const classes = useStyles()
 
   function getPollutantRemovalEfficiencies(params) {
-    console.log(params)
-
     const columns = ['turbidity', 'tss', 'bod', 'cod', 'fc', 'tc']
     const columnTitles = ['Turbidity', 'TSS', 'BOD', 'COD', 'FC', 'TC']
 
@@ -52,9 +48,15 @@ export default function UnitProcesses() {
     )
   }
 
-  function getEvaluationCriteria(params) {
-    console.log(params)
+  function getRecovery(params) {
+    return (
+      <div className={classes.chipContainer}>
+        <Chip label={params.getValue('recovery')} size="small" />
+      </div>
+    )
+  }
 
+  function getEvaluationCriteria(params) {
     const columns = [
       'ease_to_upgrade',
       'adaptability_to_varying_flow',
@@ -103,15 +105,24 @@ export default function UnitProcesses() {
     )
   }
 
+  function getUsefulLife(params) {
+    return (
+      <div className={classes.chipContainer}>
+        <Chip label={params.getValue('useful_life')} size="small" />
+      </div>
+    )
+  }
+
   const columns = [
     {
       field: 'id',
-      headerName: 'ID'
+      headerName: 'ID',
+      flex: 0.25
     },
     {
       field: 'name',
       headerName: 'Name',
-      width: 200
+      flex: 0.5
     },
     {
       field: 'turbidity',
@@ -124,7 +135,10 @@ export default function UnitProcesses() {
     {
       field: 'recovery',
       headerName: 'Recovery [%]',
-      flex: 0.5
+      flex: 0.5,
+      renderCell: params => {
+        return getRecovery(params)
+      }
     },
     {
       field: 'ease_to_upgrade',
@@ -137,7 +151,10 @@ export default function UnitProcesses() {
     {
       field: 'useful_life',
       headerName: 'Useful Life [yrs]',
-      flex: 0.5
+      flex: 0.5,
+      renderCell: params => {
+        return getUsefulLife(params)
+      }
     }
   ]
 
