@@ -73,7 +73,7 @@ export default function TreatmentTrains() {
 
   return (
     <div style={{ flexGrow: 1 }} className={classes.root}>
-      <DataGrid rows={data} columns={columns} pageSize={10} rowHeight={100} />
+      <DataGrid rows={data} columns={columns} pageSize={100} rowHeight={100} hideFooter />
     </div>
   )
 }
