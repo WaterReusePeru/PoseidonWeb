@@ -11,10 +11,8 @@ import MenuBookIcon from '@material-ui/icons/MenuBook'
 import AddBoxIcon from '@material-ui/icons/AddBox'
 import ShowChartIcon from '@material-ui/icons/ShowChart'
 import TreatmentTrains from './TreatmentTrains'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
-import Paper from '@material-ui/core/Paper'
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Learn } from './Learn'
 
 const useStyles = makeStyles({
   toolbar: {
@@ -22,18 +20,6 @@ const useStyles = makeStyles({
     gridTemplateColumns: 'auto 1fr auto',
     justifyItems: 'center',
     justifyContent: 'space-between'
-  },
-  main: {
-    display: 'grid',
-    height: '100vh',
-    width: '100vw',
-    gridTemplateColumns: '1fr',
-    gridRowGap: 8,
-    paddingTop: 160,
-    justifyItems: 'stretch',
-    justifyContent: 'center',
-    paddingLeft: '10vw',
-    paddingRight: '10vw'
   },
   title: {
     textAlign: 'left'
@@ -46,16 +32,10 @@ const useStyles = makeStyles({
 export const App = () => {
   const classes = useStyles()
 
-  const [menuPoint, setMenuPoint] = React.useState(0)
-
-  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-    setMenuPoint(newValue)
-  }
-
   return (
     <div className="App">
       <Router>
-        <AppBar>
+        <AppBar elevation={0}>
           <Toolbar className={classes.toolbar}>
             <div>
               <Tooltip title="Learn">
@@ -79,22 +59,13 @@ export const App = () => {
             </div>
             <ThemeSwitch />
           </Toolbar>
-          <Paper className={classes.root} square>
-            <Tabs value={menuPoint} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
-              <Tab label="General Reference" />
-              <Tab label="PESTLE" />
-              <Tab label="Unit Processes" to="/unitprocesses" component={Link} />
-              <Tab label="Treatment Trains" to="/treatmenttrains" component={Link} />
-              <Tab label="Case Studies" />
-            </Tabs>
-          </Paper>
         </AppBar>
 
-        <div className={classes.main}>
+        <div>
           <Switch>
-            <Route exact path="/" component={UnitProcesses} />
-            <Route path="/unitprocesses" component={UnitProcesses} />
-            <Route path="/treatmenttrains" component={TreatmentTrains} />
+            <Route path="/" component={Learn} />
+            <Route path="/learn" component={Learn} />
+            {/* <Route path="/case" component={Case} /> */}
           </Switch>
         </div>
       </Router>

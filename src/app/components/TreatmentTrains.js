@@ -6,6 +6,7 @@ import treatmentTrains from '../data/treatmentTrains.json'
 import Chip from '@material-ui/core/Chip'
 import Tooltip from '@material-ui/core/Tooltip'
 import unitProcesses from '../data/unitProcesses.json'
+import { Divider, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles({
   chipContainer: {
@@ -14,6 +15,13 @@ const useStyles = makeStyles({
     flexWrap: 'wrap',
     '& > *': {
       margin: 2
+    }
+  },
+  root: {
+    '& .MuiDataGrid-cellLeft': {
+      overflow: 'overlay',
+      lineHeight: '20px !important',
+      whiteSpace: 'break-spaces'
     }
   }
 })
@@ -47,6 +55,11 @@ export default function TreatmentTrains() {
       flex: 0.25
     },
     {
+      field: 'category',
+      headerName: 'Category',
+      flex: 0.3
+    },
+    {
       field: 'title',
       headerName: 'Title',
       flex: 0.5
@@ -54,7 +67,8 @@ export default function TreatmentTrains() {
     {
       field: 'description',
       headerName: 'Description',
-      flex: 1.5
+      flex: 1.5,
+      type: 'string'
     },
     {
       field: 'case_study',
@@ -64,7 +78,7 @@ export default function TreatmentTrains() {
     {
       field: 'unit_processes',
       headerName: 'Unit Processes',
-      flex: 1.5,
+      flex: 1,
       renderCell: params => {
         return getUnitProcesses(params)
       }
@@ -73,7 +87,7 @@ export default function TreatmentTrains() {
 
   return (
     <div style={{ flexGrow: 1 }} className={classes.root}>
-      <DataGrid rows={data} columns={columns} pageSize={100} rowHeight={100} hideFooter />
+      <DataGrid className={classes.root} rows={data} columns={columns} pageSize={100} rowHeight={120} hideFooter />
     </div>
   )
 }
