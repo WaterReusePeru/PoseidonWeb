@@ -1,7 +1,7 @@
 import React from 'react'
 
 import makeStyles from '@material-ui/core/styles/makeStyles'
-import UnitProcesses from './UnitProcessesMUI'
+import UnitProcesses from './UnitProcesses'
 
 import TreatmentTrains from './TreatmentTrains'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'

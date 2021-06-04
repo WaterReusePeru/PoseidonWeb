@@ -1,30 +1,37 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import MUIDataTable from 'mui-datatables'
-import { createMuiTheme, MuiThemeProvider, withStyles } from '@material-ui/core/styles'
+import { MuiThemeProvider, withStyles } from '@material-ui/core/styles'
 
 import unitProcesses from '../data/unitProcesses.json'
-import { theme } from '../../theme'
+
+import Chip from '@material-ui/core/Chip'
+import Tooltip from '@material-ui/core/Tooltip'
+
+const styles = theme => ({
+  chipContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    '& > *': {
+      margin: 2
+    }
+  }
+})
 
 class UnitProcesses extends React.Component {
-  getMuiTheme = () =>
-    createMuiTheme({
-      overrides: {
-        MUIDataTable: {
-          paper: {
-            boxShadow: 'none'
-          }
-        },
-        MUIDataTableBodyCell: {
-          root: {
-            color: theme.palette.text.primary,
-            backgroundColor: theme.palette.background.paper
-          }
+  getMuiTheme = theme => ({
+    overrides: {
+      MUIDataTable: {
+        paper: {
+          boxShadow: 'none'
         }
       }
-    })
+    }
+  })
 
   render() {
+    const { classes } = this.props
+
     const data = unitProcesses
 
     const columns = [
@@ -36,140 +43,116 @@ class UnitProcesses extends React.Component {
       },
       {
         name: 'name',
+        label: 'Name',
         options: {
           filter: true
         }
       },
       {
-        name: 'turbity',
-        label: 'Turbidity [% removal]',
+        name: 'turbidity',
+        label: 'Pollutant Removal Efficiencies [% removal]',
         options: {
-          filter: false
+          filter: false,
+          customBodyRenderLite: dataIndex => {
+            const columns = ['turbidity', 'tss', 'bod', 'cod', 'fc', 'tc']
+            const columnTitles = ['Turbidity', 'TSS', 'BOD', 'COD', 'FC', 'TC']
+
+            return (
+              <div className={classes.chipContainer}>
+                {columns.map((column, index) => (
+                  <Tooltip title={columnTitles[index]}>
+                    <Chip label={data[dataIndex][column]} key={index} size="small" />
+                  </Tooltip>
+                ))}
+              </div>
+            )
+          }
         }
       },
-      {
-        name: 'tss',
-        label: 'TSS [% removal]',
-        options: {
-          filter: false
-        }
-      },
-      {
-        name: 'bod',
-        label: 'BOD [% removal]',
-        options: {
-          filter: false
-        }
-      },
-      {
-        name: 'cod',
-        label: 'COD [% removal]',
-        options: {
-          filter: false
-        }
-      },
-      {
-        name: 'fc',
-        label: 'FC [% removal]',
-        options: {
-          filter: false
-        }
-      },
-      {
-        name: 'tc',
-        label: 'TC [% removal]',
-        options: {
-          filter: false
-        }
-      },
-      /* {
-        name: "construction_cost_b",
-        label: "const cost b",
-        options: {
-          filter: false
-        }
-      },
-      {
-        name: "construction_cost_c",
-        label: "const cost c",
-        options: {
-          filter: false
-        }
-      },
-      {
-        name: "land_requirements_b",
-        label: "land req b",
-        options: {
-          filter: false
-        }
-      },
-      {
-        name: "land_requirements_c",
-        label: "land req c",
-        options: {
-          filter: false
-        }
-      },
-      {
-        name: "energy_requirements_b",
-        label: "energy req b",
-        options: {
-          filter: false
-        }
-      },
-      {
-        name: "energy_requirements_c",
-        label: "energy req c",
-        options: {
-          filter: false
-        }
-      },
-      {
-        name: "labor_requirements_b",
-        label: "labor req b",
-        options: {
-          filter: false
-        }
-      },
-      {
-        name: "labor_requirements_c",
-        label: "labor req c",
-        options: {
-          filter: false
-        }
-      },
-      {
-        name: "other_om_b",
-        label: "other om b",
-        options: {
-          filter: false
-        }
-      },
-      {
-        name: "other_om_c",
-        label: "other om c",
-        options: {
-          filter: false
-        }
-      }, */
       {
         name: 'recovery',
         label: 'Recovery [%]',
         options: {
-          filter: false
+          filter: false,
+          customBodyRenderLite: dataIndex => {
+            return (
+              <div className={classes.chipContainer}>
+                <Chip label={data[dataIndex].recovery} size="small" />
+              </div>
+            )
+          }
         }
       },
       {
         name: 'reliability',
+        label: 'Evaluation Criteria [0-3]',
         options: {
-          filter: false
+          filter: false,
+          customBodyRenderLite: dataIndex => {
+            const columns = [
+              'reliability',
+              'ease_to_upgrade',
+              'adaptability_to_varying_flow',
+              'adaptability_to_varying_quality',
+              'ease_of_om',
+              'ease_of_construction',
+              'ease_of_demonstration',
+              'power_demand',
+              'chemical_demand',
+              'odor_generation',
+              'impact_on_ground_water',
+              'land_requirements',
+              'cost_of_treatment',
+              'waste'
+            ]
+            const columnTitles = [
+              'reliability',
+              'ease to upgrade',
+              'adaptability to varying flow',
+              'adaptability to varying quality',
+              'ease of O & M',
+              'ease of construction',
+              'ease of demonstration',
+              'power demand',
+              'chemical_demand',
+              'odor generation',
+              'impact on ground water',
+              'land requirements',
+              'cost of treatment',
+              'waste'
+            ]
+
+            return (
+              <div className={classes.chipContainer}>
+                {columns.map((column, index) => (
+                  <Tooltip title={columnTitles[index]}>
+                    <Chip
+                      label={data[dataIndex][column]}
+                      key={index}
+                      size="small"
+                      color="primary"
+                      style={{ opacity: 0.25 + data[dataIndex][column] / 4 }}
+                    />
+                  </Tooltip>
+                ))}
+              </div>
+            )
+          },
+          setCellProps: () => ({ style: { minWidth: '25vw' } })
         }
       },
       {
-        name: 'ease_to_upgrade',
-        label: 'ease to upgrade',
+        name: 'useful_life',
+        label: 'Useful Life [yrs]',
         options: {
-          filter: false
+          filter: false,
+          customBodyRenderLite: dataIndex => {
+            return (
+              <div className={classes.chipContainer}>
+                <Chip label={data[dataIndex].recovery} size="small" />
+              </div>
+            )
+          }
         }
       }
     ]
@@ -177,7 +160,10 @@ class UnitProcesses extends React.Component {
     const options = {
       filter: true,
       filterType: 'dropdown',
-      responsive: 'stacked'
+      responsive: 'stacked',
+      selectableRows: 'none',
+      rowsPerPage: 100,
+      print: false
     }
 
     return (
@@ -188,4 +174,4 @@ class UnitProcesses extends React.Component {
   }
 }
 
-export default UnitProcesses
+export default withStyles(styles)(UnitProcesses)
