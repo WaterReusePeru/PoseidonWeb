@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/PoseidonWeb/static/js/main.da9076da.chunk.js",
+    "main.js.map": "/PoseidonWeb/static/js/main.da9076da.chunk.js.map",
+    "runtime-main.js": "/PoseidonWeb/static/js/runtime-main.3114d419.js",
+    "runtime-main.js.map": "/PoseidonWeb/static/js/runtime-main.3114d419.js.map",
+    "static/js/2.d50f854c.chunk.js": "/PoseidonWeb/static/js/2.d50f854c.chunk.js",
+    "static/js/2.d50f854c.chunk.js.map": "/PoseidonWeb/static/js/2.d50f854c.chunk.js.map",
+    "index.html": "/PoseidonWeb/index.html",
+    "precache-manifest.0a4a5ed9a5379a6c9d9e832941e6f977.js": "/PoseidonWeb/precache-manifest.0a4a5ed9a5379a6c9d9e832941e6f977.js",
+    "service-worker.js": "/PoseidonWeb/service-worker.js",
+    "static/js/2.d50f854c.chunk.js.LICENSE.txt": "/PoseidonWeb/static/js/2.d50f854c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3114d419.js",
+    "static/js/2.d50f854c.chunk.js",
+    "static/js/main.da9076da.chunk.js"
+  ]
+}
