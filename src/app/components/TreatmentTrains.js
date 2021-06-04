@@ -6,7 +6,6 @@ import treatmentTrains from '../data/treatmentTrains.json'
 import Chip from '@material-ui/core/Chip'
 import Tooltip from '@material-ui/core/Tooltip'
 import unitProcesses from '../data/unitProcesses.json'
-import { Divider, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles({
   chipContainer: {
