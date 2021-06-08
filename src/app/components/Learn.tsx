@@ -4,7 +4,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles'
 import UnitProcesses from './UnitProcesses'
 
 import TreatmentTrains from './TreatmentTrains'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route, Switch, useParams } from 'react-router-dom'
 import Paper from '@material-ui/core/Paper'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
@@ -38,6 +38,10 @@ const useStyles = makeStyles({
 })
 
 export const Learn = () => {
+  const { id } = useParams<{ id: string }>()
+
+  console.log(id)
+
   const classes = useStyles()
 
   const [menuPoint, setMenuPoint] = React.useState(0)
@@ -48,13 +52,13 @@ export const Learn = () => {
 
   return (
     <div className="App">
-      <Router>
+      <Router basename={'/PoseidonWeb'}>
         <Paper className={classes.root} square elevation={3}>
           <Tabs value={menuPoint} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
             <Tab label="General Reference" />
             <Tab label="PESTLE" />
-            <Tab label="Unit Processes" to="/unitprocesses" component={Link} />
-            <Tab label="Treatment Trains" to="/treatmenttrains" component={Link} />
+            <Tab label="Unit Processes" to="/learn/unitprocesses" component={Link} />
+            <Tab label="Treatment Trains" to="/learn/treatmenttrains" component={Link} />
             <Tab label="Case Studies" />
           </Tabs>
         </Paper>
@@ -62,8 +66,8 @@ export const Learn = () => {
         <div className={classes.main}>
           <Switch>
             <Route exact path="/learn/" component={UnitProcesses} />
-            <Route path="/unitprocesses" component={UnitProcesses} />
-            <Route path="/treatmenttrains" component={TreatmentTrains} />
+            <Route path="/learn/unitprocesses" component={UnitProcesses} />
+            <Route path="/learn/treatmenttrains" component={TreatmentTrains} />
           </Switch>
         </div>
       </Router>

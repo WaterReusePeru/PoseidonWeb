@@ -11,6 +11,7 @@ import AddBoxIcon from '@material-ui/icons/AddBox'
 import ShowChartIcon from '@material-ui/icons/ShowChart'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Learn } from './Learn'
+import { Case } from './Case'
 
 const useStyles = makeStyles({
   toolbar: {
@@ -32,20 +33,21 @@ export const App = () => {
 
   return (
     <div className="App">
-      <Router>
+      <Router basename={'/PoseidonWeb'}>
         <AppBar elevation={0}>
           <Toolbar className={classes.toolbar}>
             <div>
               <Tooltip title="Learn">
-                <IconButton color="inherit">
+                <IconButton color="inherit" href="/learn">
                   <MenuBookIcon />
                 </IconButton>
               </Tooltip>
               <Tooltip title="New Case">
-                <IconButton color="inherit">
+                <IconButton color="inherit" href="/case">
                   <AddBoxIcon />
                 </IconButton>
               </Tooltip>
+
               <Tooltip title="View Results">
                 <IconButton color="default">
                   <ShowChartIcon />
@@ -61,9 +63,9 @@ export const App = () => {
 
         <div>
           <Switch>
-            <Route path="/" component={Learn} />
-            <Route path="/learn" component={Learn} />
-            {/* <Route path="/case" component={Case} /> */}
+            <Route exact path="/" component={Learn} />
+            <Route path="/learn/:id?" component={Learn} />
+            <Route path="/case" component={Case} />
           </Switch>
         </div>
       </Router>

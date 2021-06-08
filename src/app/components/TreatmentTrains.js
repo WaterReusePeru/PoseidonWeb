@@ -96,7 +96,6 @@ class TreatmentTrains extends React.Component {
     const options = {
       filter: true,
       filterType: 'dropdown',
-      responsive: 'stacked',
       selectableRows: 'none',
       rowsPerPage: 100,
       print: false
