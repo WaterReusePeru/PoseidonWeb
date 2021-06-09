@@ -9,7 +9,7 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuBookIcon from '@material-ui/icons/MenuBook'
 import AddBoxIcon from '@material-ui/icons/AddBox'
 import ShowChartIcon from '@material-ui/icons/ShowChart'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { Learn } from './Learn'
 import { Case } from './Case'
 
@@ -38,14 +38,18 @@ export const App = () => {
           <Toolbar className={classes.toolbar}>
             <div>
               <Tooltip title="Learn">
-                <IconButton color="inherit" href="/learn">
-                  <MenuBookIcon />
-                </IconButton>
+                <Link to="/learn">
+                  <IconButton>
+                    <MenuBookIcon />
+                  </IconButton>
+                </Link>
               </Tooltip>
               <Tooltip title="New Case">
-                <IconButton color="inherit" href="/case">
-                  <AddBoxIcon />
-                </IconButton>
+                <Link to="/case">
+                  <IconButton>
+                    <AddBoxIcon />
+                  </IconButton>
+                </Link>
               </Tooltip>
 
               <Tooltip title="View Results">
