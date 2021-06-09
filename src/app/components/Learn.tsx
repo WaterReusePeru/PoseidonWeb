@@ -52,7 +52,7 @@ export const Learn = () => {
 
   return (
     <div className="App">
-      <Router basename={'/PoseidonWeb'}>
+      <Router>
         <Paper className={classes.root} square elevation={3}>
           <Tabs value={menuPoint} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
             <Tab label="General Reference" />
