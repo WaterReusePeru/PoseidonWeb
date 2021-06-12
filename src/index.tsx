@@ -1,10 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { App } from './app'
-import { configureStore } from './store'
+import store from './app/store'
 import { Provider } from 'react-redux'
-
-const store = configureStore()
 
 const Root = () => (
   <Provider store={store}>

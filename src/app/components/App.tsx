@@ -1,7 +1,6 @@
 import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
-import { ThemeSwitch } from '../../theme'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Typography from '@material-ui/core/Typography'
 import Tooltip from '@material-ui/core/Tooltip'
@@ -61,7 +60,7 @@ export const App = () => {
             <div className={classes.title}>
               <Typography>Poseidon Web alpha 0.1</Typography>
             </div>
-            <ThemeSwitch />
+            {/* <ThemeSwitch /> */}
           </Toolbar>
         </AppBar>
 

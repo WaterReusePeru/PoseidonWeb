@@ -68,7 +68,8 @@ class TreatmentTrains extends React.Component {
         name: 'case_study',
         label: 'Case Study',
         options: {
-          filter: true
+          filter: true,
+          setCellProps: () => ({ style: { maxWidth: '25vw' } })
         }
       },
       {
