@@ -16,6 +16,8 @@ export default function CommInfo() {
     return countries.push(country.name)
   })
 
+  const usdObj = { id: 1000, currency: 'USD' }
+
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
       <Grid item xs={12}>
@@ -28,10 +30,11 @@ export default function CommInfo() {
         <Autocomplete
           id="combo-box-demo"
           options={communityInfoData}
-          getOptionLabel={option => option.name}
+          getOptionLabel={option => (option.name ? option.name : '')}
+          getOptionSelected={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setCountry(newValue.id))}
           disableClearable
-          style={{ width: 300 }}
+          value={commInfo.countryID !== null ? communityInfoData[commInfo.countryID] : null}
           renderInput={params => <TextField {...params} variant="outlined" />}
         />
       </Grid>
@@ -46,12 +49,19 @@ export default function CommInfo() {
       <Grid item xs={5}>
         <Autocomplete
           id="combo-box-demo"
-          options={[communityInfoData[commInfo.countryID], { id: 1000, currency: 'USD' }]}
+          options={[communityInfoData[commInfo.countryID], usdObj]}
           getOptionLabel={option => option.currency}
+          getOptionSelected={(option, value) => option.currency === value.currency}
           onChange={(event, newValue) => dispatch(setCurrency(newValue.id))}
           disableClearable
+          value={
+            commInfo.currency !== null
+              ? commInfo.currency === 0
+                ? usdObj
+                : communityInfoData[commInfo.countryID]
+              : null
+          }
           disabled={commInfo.countryID === null ? true : false}
-          style={{ width: 300 }}
           renderInput={params => <TextField {...params} variant="outlined" />}
         />
       </Grid>

@@ -17,6 +17,7 @@ import Typography from '@material-ui/core/Typography'
 
 import { useSelector, useDispatch } from 'react-redux'
 import { next, previous, reset } from '../case/caseSlice'
+import { theme } from '../theme/theme'
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -74,6 +75,9 @@ function getStepContent(step) {
 
 export const Case = () => {
   const count = useSelector(state => state.case.step)
+  const completedSteps = useSelector(state => state.case.completedSteps)
+  console.log(completedSteps)
+
   const dispatch = useDispatch()
 
   const classes = useStyles()
@@ -121,7 +125,7 @@ export const Case = () => {
                 >
                   {getStepContent(count)}
 
-                  <div>
+                  <div style={{ paddingTop: theme.spacing(2) }}>
                     <Button disabled={count === 0} onClick={() => dispatch(previous())} className={classes.button}>
                       Back
                     </Button>
@@ -130,6 +134,7 @@ export const Case = () => {
                       color="primary"
                       onClick={() => dispatch(next())}
                       className={classes.button}
+                      disabled={completedSteps.includes(count) ? false : true}
                     >
                       {count === steps.length - 1 ? 'Finish' : 'Next'}
                     </Button>

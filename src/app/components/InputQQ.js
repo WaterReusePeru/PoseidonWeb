@@ -31,7 +31,6 @@ export default function CommInfo() {
           getOptionLabel={option => option.name}
           onChange={(event, newValue) => dispatch(setCountry(newValue.id))}
           disableClearable
-          style={{ width: 300 }}
           renderInput={params => <TextField {...params} variant="outlined" />}
         />
       </Grid>
@@ -49,7 +48,6 @@ export default function CommInfo() {
           options={communityInfoData}
           getOptionLabel={option => option.currency}
           disableClearable
-          style={{ width: 300 }}
           renderInput={params => <TextField {...params} variant="outlined" />}
         />
       </Grid>
@@ -67,7 +65,6 @@ export default function CommInfo() {
           options={communityInfoData}
           getOptionLabel={option => option.currency}
           disableClearable
-          style={{ width: 300 }}
           renderInput={params => <TextField {...params} variant="outlined" />}
         />
       </Grid>
@@ -79,15 +76,18 @@ export default function CommInfo() {
       <Grid item xs={5}>
         <Typography>Average Amount</Typography>
       </Grid>
-      <Grid item xs={5}>
-        <Autocomplete
-          id="combo-box-demo"
-          options={communityInfoData}
-          getOptionLabel={option => option.currency}
-          disableClearable
-          style={{ width: 300 }}
-          renderInput={params => <TextField {...params} variant="outlined" />}
+      <Grid item xs={3}>
+        <TextField
+          id="standard-number"
+          type="number"
+          variant="outlined"
+          InputLabelProps={{
+            shrink: true
+          }}
         />
+      </Grid>
+      <Grid item xs={2}>
+        <Typography>m^3/day</Typography>
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
         <Tooltip title="Information about currencies">

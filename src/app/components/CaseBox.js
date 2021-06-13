@@ -11,7 +11,7 @@ import { communityInfoData } from '../data/formValues'
 const useStyles = makeStyles(theme => ({
   paper: {
     backgroundColor: theme.palette.background.default,
-    paddingTop: 10
+    padding: 10
   }
 }))
 
@@ -30,7 +30,7 @@ export default function CaseBox() {
           <Typography variant="h6">Case Overview</Typography>
         </Grid>
 
-        <Grid item container xs={12} spacing={1}>
+        <Grid item container xs={12} spacing={1} alignItems="center">
           <Grid item>
             <Chip label="1" color="primary" size="small" />
           </Grid>
@@ -39,10 +39,10 @@ export default function CaseBox() {
           </Grid>
           {caseState.commInfo.countryID !== null ? (
             <>
-              <Grid item xs={4}>
+              <Grid item xs={6}>
                 <Typography>Country:</Typography>
               </Grid>
-              <Grid item xs={8}>
+              <Grid item xs={6}>
                 <Typography>{communityInfoData[caseState.commInfo.countryID].name}</Typography>
               </Grid>
             </>
@@ -51,10 +51,10 @@ export default function CaseBox() {
           )}
           {caseState.commInfo.currency !== null ? (
             <>
-              <Grid item xs={4}>
+              <Grid item xs={6}>
                 <Typography>Currency:</Typography>
               </Grid>
-              <Grid item xs={8}>
+              <Grid item xs={6}>
                 <Typography>
                   {caseState.commInfo.currency === 0 ? 'USD' : communityInfoData[caseState.commInfo.countryID].currency}
                 </Typography>
