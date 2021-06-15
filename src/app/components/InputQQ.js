@@ -19,7 +19,7 @@ export default function CommInfo() {
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
       <Grid item xs={12}>
-        <Typography variant="h6">Input Quality & Quantity</Typography>
+        <Typography variant="h6">Input Quality &#38; Quantity</Typography>
       </Grid>
       <Grid item xs={5}>
         <Typography>Select the Category</Typography>
@@ -35,7 +35,7 @@ export default function CommInfo() {
         />
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Tooltip title="Information about countries">
+        <Tooltip title="Information about categories">
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>
@@ -52,7 +52,7 @@ export default function CommInfo() {
         />
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Tooltip title="Information about currencies">
+        <Tooltip title="Information about water quality classes">
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>
@@ -69,7 +69,7 @@ export default function CommInfo() {
         />
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Tooltip title="Information about currencies">
+        <Tooltip title="Information about quantities">
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>
@@ -87,10 +87,12 @@ export default function CommInfo() {
         />
       </Grid>
       <Grid item xs={2}>
-        <Typography>m^3/day</Typography>
+        <Typography>
+          m<sup>3</sup>/day
+        </Typography>
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Tooltip title="Information about currencies">
+        <Tooltip title="Information about amounts">
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>

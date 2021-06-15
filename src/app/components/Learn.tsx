@@ -2,6 +2,9 @@ import React from 'react'
 
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import UnitProcesses from './UnitProcesses'
+import GeneralReference from './GeneralReference'
+import Pestle from './Pestle'
+import CaseStudies from './CaseStudies'
 
 import TreatmentTrains from './TreatmentTrains'
 import { BrowserRouter as Router, Link, Route, Switch, useParams } from 'react-router-dom'
@@ -55,19 +58,22 @@ export const Learn = () => {
       <Router>
         <Paper className={classes.root} square elevation={3}>
           <Tabs value={menuPoint} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
-            <Tab label="General Reference" />
-            <Tab label="PESTLE" />
+            <Tab label="General Reference" to="/learn/general" component={Link} />
+            <Tab label="PESTLE" to="/learn/pestle" component={Link} />
             <Tab label="Unit Processes" to="/learn/unitprocesses" component={Link} />
             <Tab label="Treatment Trains" to="/learn/treatmenttrains" component={Link} />
-            <Tab label="Case Studies" />
+            <Tab label="Case Studies" to="/learn/casestudies" component={Link} />
           </Tabs>
         </Paper>
 
         <div className={classes.main}>
           <Switch>
-            <Route exact path="/learn/" component={UnitProcesses} />
+            <Route exact path="/learn/" component={GeneralReference} />
+            <Route exact path="/learn/general" component={GeneralReference} />
+            <Route exact path="/learn/pestle" component={Pestle} />
             <Route path="/learn/unitprocesses" component={UnitProcesses} />
             <Route path="/learn/treatmenttrains" component={TreatmentTrains} />
+            <Route path="/learn/casestudies" component={CaseStudies} />
           </Switch>
         </div>
       </Router>

@@ -60,6 +60,7 @@ export const App = () => {
             <div className={classes.title}>
               <Typography>Poseidon Web alpha 0.1</Typography>
             </div>
+            <div style={{ width: 150 }} />
             {/* <ThemeSwitch /> */}
           </Toolbar>
         </AppBar>

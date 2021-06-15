@@ -63,6 +63,24 @@ export default function CaseBox() {
           ) : (
             <div />
           )}
+          <Grid item>
+            <Chip label="2" color="primary" size="small" />
+          </Grid>
+          <Grid item xs={10}>
+            <Typography>Input Quality &#38; Quantity</Typography>
+          </Grid>
+          <Grid item>
+            <Chip label="3" color="primary" size="small" />
+          </Grid>
+          <Grid item xs={10}>
+            <Typography>End Use</Typography>
+          </Grid>
+          <Grid item>
+            <Chip label="4" color="primary" size="small" />
+          </Grid>
+          <Grid item xs={10}>
+            <Typography>Personalisze</Typography>
+          </Grid>
         </Grid>
       </Grid>
     </Paper>
