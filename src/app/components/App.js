@@ -7,7 +7,6 @@ import Tooltip from '@material-ui/core/Tooltip'
 import IconButton from '@material-ui/core/IconButton'
 import MenuBookIcon from '@material-ui/icons/MenuBook'
 import AddBoxIcon from '@material-ui/icons/AddBox'
-import ShowChartIcon from '@material-ui/icons/ShowChart'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { Learn } from './Learn'
 import { Case } from './Case'
@@ -31,7 +30,7 @@ const useStyles = makeStyles({
 
 export const App = () => {
   const classes = useStyles()
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <div className="App">

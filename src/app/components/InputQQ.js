@@ -17,7 +17,7 @@ export default function CommInfo() {
     return countries.push(country.name)
   })
 
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>

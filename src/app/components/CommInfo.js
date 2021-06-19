@@ -18,7 +18,7 @@ export default function CommInfo() {
     return countries.push(country.name)
   })
 
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const lang = i18next.language
 
   const usdObj = { id: 1000, currency: 'USD' }

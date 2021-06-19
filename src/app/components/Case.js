@@ -71,7 +71,7 @@ function getStepContent(step) {
 }
 
 export const Case = () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   const getSteps = () => {
     return [t('Community Information'), t('Input Quality & Quantity'), t('End Use'), t('Personalize')]

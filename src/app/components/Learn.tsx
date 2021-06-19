@@ -7,7 +7,7 @@ import Pestle from './Pestle'
 import CaseStudies from './CaseStudies'
 
 import TreatmentTrains from './TreatmentTrains'
-import { BrowserRouter as Router, Link, Route, Switch, useParams } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import Paper from '@material-ui/core/Paper'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
@@ -43,9 +43,7 @@ const useStyles = makeStyles({
 })
 
 export const Learn = () => {
-  const { id } = useParams<{ id: string }>()
-
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   const classes = useStyles()
 

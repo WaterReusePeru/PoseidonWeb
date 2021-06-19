@@ -22,7 +22,7 @@ export default function CaseBox() {
 
   const caseState = useSelector(state => state.case)
 
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const lang = i18next.language
 
   return (
