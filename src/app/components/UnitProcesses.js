@@ -7,6 +7,9 @@ import unitProcesses from '../data/unitProcesses.json'
 import Chip from '@material-ui/core/Chip'
 import Tooltip from '@material-ui/core/Tooltip'
 
+import { withTranslation } from 'react-i18next'
+import i18next from 'i18next'
+
 const styles = theme => ({
   chipContainer: {
     display: 'flex',
@@ -30,9 +33,12 @@ class UnitProcesses extends React.Component {
   })
 
   render() {
-    const { classes } = this.props
+    const { t, classes } = this.props
 
     const data = unitProcesses
+    const lang = i18next.language
+
+    var nameCol = lang === 'en' ? 'name' : 'nameEs'
 
     const columns = [
       {
@@ -42,7 +48,7 @@ class UnitProcesses extends React.Component {
         }
       },
       {
-        name: 'name',
+        name: nameCol,
         label: 'Name',
         options: {
           filter: true
@@ -167,10 +173,10 @@ class UnitProcesses extends React.Component {
 
     return (
       <MuiThemeProvider theme={this.getMuiTheme()}>
-        <MUIDataTable title={'Unit Processes'} data={data} columns={columns} options={options} />
+        <MUIDataTable title={t('Unit Processes')} data={data} columns={columns} options={options} />
       </MuiThemeProvider>
     )
   }
 }
 
-export default withStyles(styles)(UnitProcesses)
+export default withStyles(styles)(withTranslation()(UnitProcesses))

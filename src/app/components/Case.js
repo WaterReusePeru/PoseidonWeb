@@ -18,6 +18,7 @@ import Typography from '@material-ui/core/Typography'
 import { useSelector, useDispatch } from 'react-redux'
 import { next, previous, reset } from '../case/caseSlice'
 import { theme } from '../theme/theme'
+import { useTranslation } from 'react-i18next'
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -54,10 +55,6 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-function getSteps() {
-  return ['Community Information', 'Input Quality & Quantity', 'End Use', 'Personalize']
-}
-
 function getStepContent(step) {
   switch (step) {
     case 0:
@@ -74,6 +71,12 @@ function getStepContent(step) {
 }
 
 export const Case = () => {
+  const { t, i18n } = useTranslation()
+
+  const getSteps = () => {
+    return [t('Community Information'), t('Input Quality & Quantity'), t('End Use'), t('Personalize')]
+  }
+
   const count = useSelector(state => state.case.step)
   const completedSteps = useSelector(state => state.case.completedSteps)
   console.log(completedSteps)
@@ -127,7 +130,7 @@ export const Case = () => {
 
                   <div style={{ paddingTop: theme.spacing(2) }}>
                     <Button disabled={count === 0} onClick={() => dispatch(previous())} className={classes.button}>
-                      Back
+                      {t('Back')}
                     </Button>
                     <Button
                       variant="contained"
@@ -136,7 +139,7 @@ export const Case = () => {
                       className={classes.button}
                       disabled={completedSteps.includes(count) ? false : true}
                     >
-                      {count === steps.length - 1 ? 'Finish' : 'Next'}
+                      {count === steps.length - 1 ? t('Finish') : t('Next')}
                     </Button>
                   </div>
                 </Grid>

@@ -5,6 +5,8 @@ import makeStyles from '@material-ui/core/styles/makeStyles'
 import Chip from '@material-ui/core/Chip'
 import Paper from '@material-ui/core/Paper'
 import { Typography } from '@material-ui/core'
+import { useTranslation } from 'react-i18next'
+import i18next from 'i18next'
 
 import { communityInfoData } from '../data/formValues'
 
@@ -19,15 +21,15 @@ export default function CaseBox() {
   const classes = useStyles()
 
   const caseState = useSelector(state => state.case)
-  console.log(caseState)
-  console.log(caseState.commInfo.countryID)
-  console.log(communityInfoData[0].name)
+
+  const { t, i18n } = useTranslation()
+  const lang = i18next.language
 
   return (
     <Paper className={classes.paper} elevation={0}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Typography variant="h6">Case Overview</Typography>
+          <Typography variant="h6">{t('Case Overview')}</Typography>
         </Grid>
 
         <Grid item container xs={12} spacing={1} alignItems="center">
@@ -35,15 +37,19 @@ export default function CaseBox() {
             <Chip label="1" color="primary" size="small" />
           </Grid>
           <Grid item xs={10}>
-            <Typography>Community Information</Typography>
+            <Typography>{t('Community Information')}</Typography>
           </Grid>
           {caseState.commInfo.countryID !== null ? (
             <>
               <Grid item xs={6}>
-                <Typography>Country:</Typography>
+                <Typography>{t('Country')}:</Typography>
               </Grid>
               <Grid item xs={6}>
-                <Typography>{communityInfoData[caseState.commInfo.countryID].name}</Typography>
+                <Typography>
+                  {lang === 'en'
+                    ? communityInfoData[caseState.commInfo.countryID].name
+                    : communityInfoData[caseState.commInfo.countryID].nameEs}
+                </Typography>
               </Grid>
             </>
           ) : (
@@ -52,7 +58,7 @@ export default function CaseBox() {
           {caseState.commInfo.currency !== null ? (
             <>
               <Grid item xs={6}>
-                <Typography>Currency:</Typography>
+                <Typography>{t('Currency')}:</Typography>
               </Grid>
               <Grid item xs={6}>
                 <Typography>
@@ -67,19 +73,19 @@ export default function CaseBox() {
             <Chip label="2" color="primary" size="small" />
           </Grid>
           <Grid item xs={10}>
-            <Typography>Input Quality &#38; Quantity</Typography>
+            <Typography>{t('Input Quality & Quantity')}</Typography>
           </Grid>
           <Grid item>
             <Chip label="3" color="primary" size="small" />
           </Grid>
           <Grid item xs={10}>
-            <Typography>End Use</Typography>
+            <Typography>{t('End Use')}</Typography>
           </Grid>
           <Grid item>
             <Chip label="4" color="primary" size="small" />
           </Grid>
           <Grid item xs={10}>
-            <Typography>Personalisze</Typography>
+            <Typography>{t('Personalize')}</Typography>
           </Grid>
         </Grid>
       </Grid>

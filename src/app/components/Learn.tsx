@@ -12,6 +12,8 @@ import Paper from '@material-ui/core/Paper'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 
+import { useTranslation } from 'react-i18next'
+
 const useStyles = makeStyles({
   toolbar: {
     display: 'grid',
@@ -43,7 +45,7 @@ const useStyles = makeStyles({
 export const Learn = () => {
   const { id } = useParams<{ id: string }>()
 
-  console.log(id)
+  const { t, i18n } = useTranslation()
 
   const classes = useStyles()
 
@@ -58,11 +60,11 @@ export const Learn = () => {
       <Router>
         <Paper className={classes.root} square elevation={3}>
           <Tabs value={menuPoint} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
-            <Tab label="General Reference" to="/learn/general" component={Link} />
+            <Tab label={t('General Reference')} to="/learn/general" component={Link} />
             <Tab label="PESTLE" to="/learn/pestle" component={Link} />
-            <Tab label="Unit Processes" to="/learn/unitprocesses" component={Link} />
-            <Tab label="Treatment Trains" to="/learn/treatmenttrains" component={Link} />
-            <Tab label="Case Studies" to="/learn/casestudies" component={Link} />
+            <Tab label={t('Unit Processes')} to="/learn/unitprocesses" component={Link} />
+            <Tab label={t('Treatment Trains')} to="/learn/treatmenttrains" component={Link} />
+            <Tab label={t('Case Studies')} to="/learn/casestudies" component={Link} />
           </Tabs>
         </Paper>
 

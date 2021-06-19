@@ -7,6 +7,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete'
 import { communityInfoData } from '../data/formValues'
 import { setCountry } from '../case/caseSlice'
 import Chip from '@material-ui/core/Chip'
+import { useTranslation } from 'react-i18next'
 
 export default function CommInfo() {
   //const commInfo = useSelector((state) => state.case.commInfo)
@@ -16,13 +17,15 @@ export default function CommInfo() {
     return countries.push(country.name)
   })
 
+  const { t, i18n } = useTranslation()
+
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
       <Grid item xs={12}>
-        <Typography variant="h6">Input Quality &#38; Quantity</Typography>
+        <Typography variant="h6">{t('Input Quality & Quantity')}</Typography>
       </Grid>
       <Grid item xs={5}>
-        <Typography>Select the Category</Typography>
+        <Typography>{t('Select the Category')}</Typography>
       </Grid>
       <Grid item xs={5}>
         <Autocomplete

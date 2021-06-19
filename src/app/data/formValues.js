@@ -2,6 +2,7 @@ export const communityInfoData = [
   {
     id: 0 /* TODO */,
     name: 'Peru',
+    nameEs: 'Perú',
     currency: 'PEN',
     exchangeToUSD: 3.75,
     landCost: 10000,
@@ -12,6 +13,7 @@ export const communityInfoData = [
   {
     id: 1,
     name: 'Argentina',
+    nameEs: 'Argentina',
     currency: 'ARS',
     exchangeToUSD: 3.07,
     landCost: 15000,
@@ -22,6 +24,7 @@ export const communityInfoData = [
   {
     id: 2,
     name: 'Chile',
+    nameEs: 'Chile',
     currency: 'CLP',
     exchangeToUSD: 525.51,
     landCost: 10000,
@@ -33,6 +36,7 @@ export const communityInfoData = [
   {
     id: 3,
     name: 'Brazil',
+    nameEs: 'Brasil',
     currency: 'BRL',
     exchangeToUSD: 2.41,
     landCost: 12004,
@@ -43,6 +47,7 @@ export const communityInfoData = [
   {
     id: 4,
     name: 'Mexico',
+    nameEs: 'México',
     currency: 'MXN',
     exchangeToUSD: 10.77,
     landCost: 10000,
@@ -53,6 +58,7 @@ export const communityInfoData = [
   {
     id: 5,
     name: 'Egypt',
+    nameEs: 'Egipto',
     currency: 'EGP',
     exchangeToUSD: 7.32,
     landCost: 10000,
@@ -63,6 +69,7 @@ export const communityInfoData = [
   {
     id: 6,
     name: 'Morocco',
+    nameEs: 'Marruecos',
     currency: 'MAD',
     exchangeToUSD: 11.72,
     landCost: 10000,
@@ -73,6 +80,7 @@ export const communityInfoData = [
   {
     id: 7,
     name: 'Tunisia',
+    nameEs: 'Túnez',
     currency: 'TND',
     exchangeToUSD: 1.73,
     landCost: 10000,
@@ -83,6 +91,7 @@ export const communityInfoData = [
   {
     id: 8,
     name: 'Vietnam',
+    nameEs: 'Vietnam',
     currency: 'VND',
     exchangeToUSD: 20418.07,
     landCost: 10000,

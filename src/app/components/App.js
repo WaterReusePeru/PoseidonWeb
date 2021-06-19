@@ -11,6 +11,8 @@ import ShowChartIcon from '@material-ui/icons/ShowChart'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { Learn } from './Learn'
 import { Case } from './Case'
+import UserMenu from './UserMenu'
+import { useTranslation } from 'react-i18next'
 
 const useStyles = makeStyles({
   toolbar: {
@@ -29,6 +31,7 @@ const useStyles = makeStyles({
 
 export const App = () => {
   const classes = useStyles()
+  const { t, i18n } = useTranslation()
 
   return (
     <div className="App">
@@ -36,31 +39,32 @@ export const App = () => {
         <AppBar elevation={0}>
           <Toolbar className={classes.toolbar}>
             <div>
-              <Tooltip title="Learn">
+              <Tooltip title={t('Learn')}>
                 <Link to="/learn">
                   <IconButton>
                     <MenuBookIcon />
                   </IconButton>
                 </Link>
               </Tooltip>
-              <Tooltip title="New Case">
+              <Tooltip title={t('New Case')}>
                 <Link to="/case">
                   <IconButton>
                     <AddBoxIcon />
                   </IconButton>
                 </Link>
               </Tooltip>
-
-              <Tooltip title="View Results">
+              {/* <Tooltip title="View Results">
                 <IconButton color="default">
                   <ShowChartIcon />
                 </IconButton>
-              </Tooltip>
+              </Tooltip> */}
             </div>
             <div className={classes.title}>
               <Typography>Poseidon Web alpha 0.1</Typography>
             </div>
-            <div style={{ width: 150 }} />
+            <div style={{ width: 150 }}>
+              <UserMenu />
+            </div>
             {/* <ThemeSwitch /> */}
           </Toolbar>
         </AppBar>
