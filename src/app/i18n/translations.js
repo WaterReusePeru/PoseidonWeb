@@ -46,7 +46,7 @@ export const resources = {
       Finish: 'Terminar',
       Next: 'Próximo',
       Back: 'Volver',
-      'Case Overview': 'resumen del caso',
+      'Case Overview': 'Resumen del Caso',
       'Select the Country': 'selectar país',
       'Select the Currency': 'selectar moneda',
       Country: 'País',
