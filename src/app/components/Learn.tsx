@@ -58,22 +58,22 @@ export const Learn = () => {
       <Router>
         <Paper className={classes.root} square elevation={3}>
           <Tabs value={menuPoint} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
-            <Tab label={t('General Reference')} to="/learn/general" component={Link} />
-            <Tab label="PESTLE" to="/learn/pestle" component={Link} />
-            <Tab label={t('Unit Processes')} to="/learn/unitprocesses" component={Link} />
-            <Tab label={t('Treatment Trains')} to="/learn/treatmenttrains" component={Link} />
-            <Tab label={t('Case Studies')} to="/learn/casestudies" component={Link} />
+            <Tab label={t('General Reference')} to="general" component={Link} />
+            <Tab label="PESTLE" to="pestle" component={Link} />
+            <Tab label={t('Unit Processes')} to="unitprocesses" component={Link} />
+            <Tab label={t('Treatment Trains')} to="treatmenttrains" component={Link} />
+            <Tab label={t('Case Studies')} to="casestudies" component={Link} />
           </Tabs>
         </Paper>
 
         <div className={classes.main}>
           <Switch>
-            <Route exact path="/learn/" component={GeneralReference} />
-            <Route exact path="/learn/general" component={GeneralReference} />
-            <Route exact path="/learn/pestle" component={Pestle} />
-            <Route path="/learn/unitprocesses" component={UnitProcesses} />
-            <Route path="/learn/treatmenttrains" component={TreatmentTrains} />
-            <Route path="/learn/casestudies" component={CaseStudies} />
+            <Route exact path="/learn" component={GeneralReference} />
+            <Route path="/general" component={GeneralReference} />
+            <Route path="/pestle" component={Pestle} />
+            <Route path="/unitprocesses" component={UnitProcesses} />
+            <Route path="/treatmenttrains" component={TreatmentTrains} />
+            <Route path="/casestudies" component={CaseStudies} />
           </Switch>
         </div>
       </Router>

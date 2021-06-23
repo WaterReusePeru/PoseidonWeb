@@ -39,14 +39,14 @@ export const App = () => {
           <Toolbar className={classes.toolbar}>
             <div>
               <Tooltip title={t('Learn')}>
-                <Link to="/learn">
+                <Link to="learn">
                   <IconButton>
                     <MenuBookIcon />
                   </IconButton>
                 </Link>
               </Tooltip>
               <Tooltip title={t('New Case')}>
-                <Link to="/case">
+                <Link to="case">
                   <IconButton>
                     <AddBoxIcon />
                   </IconButton>
