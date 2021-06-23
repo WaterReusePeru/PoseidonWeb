@@ -43,7 +43,7 @@ export default function CommInfo() {
         </Tooltip>
       </Grid>
       <Grid item xs={5}>
-        <Typography>Adequate Water Quality Class</Typography>
+        <Typography>{t('Adequate Water Quality Class')}</Typography>
       </Grid>
       <Grid item xs={5}>
         <Autocomplete
@@ -60,7 +60,7 @@ export default function CommInfo() {
         </Tooltip>
       </Grid>
       <Grid item xs={5}>
-        <Typography>Define Quantity</Typography>
+        <Typography>{t('Define Quantity')}</Typography>
       </Grid>
       <Grid item xs={5}>
         <Autocomplete
@@ -77,7 +77,7 @@ export default function CommInfo() {
         </Tooltip>
       </Grid>
       <Grid item xs={5}>
-        <Typography>Average Amount</Typography>
+        <Typography>{t('Average Amount')}</Typography>
       </Grid>
       <Grid item xs={3}>
         <TextField
@@ -91,7 +91,7 @@ export default function CommInfo() {
       </Grid>
       <Grid item xs={2}>
         <Typography>
-          m<sup>3</sup>/day
+          m<sup>3</sup>/{t('day')}
         </Typography>
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>

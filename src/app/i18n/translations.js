@@ -9,13 +9,14 @@ export const resources = {
       'Treatment Trains': 'Trenes de tratamiento',
       'Case Studies': 'Estudios de caso',
 
+      Name: 'Nombre',
       'Pollutant Removal Efficiencies [% removal]': '',
       Turbidity: '',
       Recovery: '',
       'Evaluation Criteria': '',
       'Useful Life [yrs]': '',
 
-      reliability: '',
+      reliability: 'fiabilidad',
       'ease to upgrade': '',
       'adaptability to varying flow': '',
       'adaptability to varying quality': '',
@@ -38,6 +39,8 @@ export const resources = {
 
       Category: '',
       Title: '',
+      Description: '',
+      'Case Study': '',
 
       'Community Information': 'Información Comunitaria',
       'Input Quality & Quantity': 'Introducir la Calidad y la Cantidad',
@@ -55,7 +58,7 @@ export const resources = {
       'Adequate Water Quality Class': '',
       'Define Quantity': '',
       'Average Amount': '',
-      'm3/day': ''
+      day: 'día'
     }
   }
 }

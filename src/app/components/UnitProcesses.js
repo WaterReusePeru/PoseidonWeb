@@ -49,19 +49,19 @@ class UnitProcesses extends React.Component {
       },
       {
         name: nameCol,
-        label: 'Name',
+        label: t('Name'),
         options: {
           filter: true
         }
       },
       {
-        name: 'turbidity',
-        label: 'Pollutant Removal Efficiencies [% removal]',
+        name: 'pre',
+        label: t('Pollutant Removal Efficiencies [% removal]'),
         options: {
           filter: false,
           customBodyRenderLite: dataIndex => {
             const columns = ['turbidity', 'tss', 'bod', 'cod', 'fc', 'tc']
-            const columnTitles = ['Turbidity', 'TSS', 'BOD', 'COD', 'FC', 'TC']
+            const columnTitles = [t('Turbidity'), 'TSS', 'BOD', 'COD', 'FC', 'TC']
 
             return (
               <div className={classes.chipContainer}>
@@ -77,7 +77,7 @@ class UnitProcesses extends React.Component {
       },
       {
         name: 'recovery',
-        label: 'Recovery [%]',
+        label: t('Recovery') + ' [%]',
         options: {
           filter: false,
           customBodyRenderLite: dataIndex => {
@@ -91,7 +91,7 @@ class UnitProcesses extends React.Component {
       },
       {
         name: 'reliability',
-        label: 'Evaluation Criteria [0-3]',
+        label: t('Evaluation Criteria') + ' [0-3]',
         options: {
           filter: false,
           customBodyRenderLite: dataIndex => {
@@ -112,20 +112,20 @@ class UnitProcesses extends React.Component {
               'waste'
             ]
             const columnTitles = [
-              'reliability',
-              'ease to upgrade',
-              'adaptability to varying flow',
-              'adaptability to varying quality',
-              'ease of O & M',
-              'ease of construction',
-              'ease of demonstration',
-              'power demand',
-              'chemical_demand',
-              'odor generation',
-              'impact on ground water',
-              'land requirements',
-              'cost of treatment',
-              'waste'
+              t('reliability'),
+              t('ease to upgrade'),
+              t('adaptability to varying flow'),
+              t('adaptability to varying quality'),
+              t('ease of O & M'),
+              t('ease of construction'),
+              t('ease of demonstration'),
+              t('power demand'),
+              t('chemical_demand'),
+              t('odor generation'),
+              t('impact on ground water'),
+              t('land requirements'),
+              t('cost of treatment'),
+              t('waste')
             ]
 
             return (
@@ -149,7 +149,7 @@ class UnitProcesses extends React.Component {
       },
       {
         name: 'useful_life',
-        label: 'Useful Life [yrs]',
+        label: t('Useful Life [yrs]'),
         options: {
           filter: false,
           customBodyRenderLite: dataIndex => {

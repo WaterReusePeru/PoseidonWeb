@@ -8,6 +8,9 @@ import unitProcesses from '../data/unitProcesses.json'
 import Chip from '@material-ui/core/Chip'
 import Tooltip from '@material-ui/core/Tooltip'
 
+import { withTranslation } from 'react-i18next'
+import i18next from 'i18next'
+
 const styles = theme => ({
   chipContainer: {
     display: 'flex',
@@ -31,9 +34,16 @@ class TreatmentTrains extends React.Component {
   })
 
   render() {
-    const { classes } = this.props
+    const { t, classes } = this.props
 
     const data = treatmentTrains
+
+    const lang = i18next.language
+
+    var categoryCol = lang === 'en' ? 'category' : 'categoryEs'
+    var titleCol = lang === 'en' ? 'title' : 'titleEs'
+    var descriptionCol = lang === 'en' ? 'description' : 'descriptionEs'
+    var caseStudyCol = lang === 'en' ? 'case_study' : 'case_studyEs'
 
     const columns = [
       {
@@ -44,28 +54,28 @@ class TreatmentTrains extends React.Component {
         }
       },
       {
-        name: 'category',
+        name: categoryCol,
         label: 'Category',
         options: {
           filter: true
         }
       },
       {
-        name: 'title',
+        name: titleCol,
         label: 'Title',
         options: {
           filter: true
         }
       },
       {
-        name: 'description',
+        name: descriptionCol,
         label: 'Description',
         options: {
           filter: true
         }
       },
       {
-        name: 'case_study',
+        name: caseStudyCol,
         label: 'Case Study',
         options: {
           filter: true,
@@ -83,7 +93,7 @@ class TreatmentTrains extends React.Component {
             return (
               <div className={classes.chipContainer}>
                 {UPList.map((up, index) => (
-                  <Tooltip title={unitProcesses[up - 1].name}>
+                  <Tooltip title={lang === 'en' ? unitProcesses[up - 1].name : unitProcesses[up - 1].nameEs}>
                     <Chip label={up} key={index} size="small" color="primary" />
                   </Tooltip>
                 ))}
@@ -104,10 +114,10 @@ class TreatmentTrains extends React.Component {
 
     return (
       <MuiThemeProvider theme={this.getMuiTheme()}>
-        <MUIDataTable title={'Treatment Trains'} data={data} columns={columns} options={options} />
+        <MUIDataTable title={t('Treatment Trains')} data={data} columns={columns} options={options} />
       </MuiThemeProvider>
     )
   }
 }
 
-export default withStyles(styles)(TreatmentTrains)
+export default withStyles(styles)(withTranslation()(TreatmentTrains))

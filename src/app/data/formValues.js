@@ -3,7 +3,7 @@ export const communityInfoData = [
     id: 0 /* TODO */,
     name: 'Peru',
     nameEs: 'Perú',
-    currency: 'PEN',
+    currency: 'SOL',
     exchangeToUSD: 3.75,
     landCost: 10000,
     electricityCost: 0.79,
