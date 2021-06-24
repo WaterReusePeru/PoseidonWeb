@@ -71,8 +71,8 @@ export const App = () => {
         <div>
           <Switch>
             <Route exact path="/" component={Learn} />
-            <Route path="/learn/:id?" component={Learn} />
-            <Route path="/case" component={Case} />
+            <Route path="learn" component={Learn} />
+            <Route path="case" component={Case} />
           </Switch>
         </div>
       </Router>
