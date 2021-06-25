@@ -7,7 +7,6 @@ import waterQualityCategories from '../data/waterQualityCategories.json'
 
 import Chip from '@material-ui/core/Chip'
 import Tooltip from '@material-ui/core/Tooltip'
-import Typography from '@material-ui/core/Typography'
 
 import { withTranslation } from 'react-i18next'
 import i18next from 'i18next'
@@ -15,7 +14,7 @@ import i18next from 'i18next'
 const styles = theme => ({
   chipContainer: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'left',
     flexWrap: 'wrap',
     '& > *': {
       margin: 2
@@ -60,9 +59,7 @@ class WaterQualities extends React.Component {
         options: {
           filter: true,
           customBodyRender: value => {
-            return (
-              <div>{lang === 'en' ? waterQualityCategories[value].name : waterQualityCategories[value].nameEs}</div>
-            )
+            return <div>{lang === 'en' ? qualities[value].name : qualities[value].nameEs}</div>
           }
         }
       },

@@ -10,10 +10,9 @@ export const caseSlice = createSlice({
       currency: null //0 is USD, 1 is local currency
     },
     inputQQ: {
-      category: '',
-      waterQualityClass: '',
-      quantity: '',
-      averageAmount: null
+      category: null,
+      qualityClass: null,
+      quantity: null
     }
   },
   reducers: {
@@ -34,11 +33,32 @@ export const caseSlice = createSlice({
     setCurrency: (state, action) => {
       action.payload === 1000 ? (state.commInfo.currency = 0) : (state.commInfo.currency = 1)
       state.completedSteps[0] = 0
+    },
+    setInputQualityCategory: (state, action) => {
+      state.inputQQ.category = action.payload
+      state.inputQQ.qualityClass = null
+      state.completedSteps[1] = null
+    },
+    setInputQualityClass: (state, action) => {
+      state.inputQQ.qualityClass = action.payload
+    },
+    setInputQuantity: (state, action) => {
+      state.inputQQ.quantity = action.payload
+      state.completedSteps[1] = 1
     }
   }
 })
 
 // Action creators are generated for each case reducer function
-export const { next, previous, reset, setCountry, setCurrency } = caseSlice.actions
+export const {
+  next,
+  previous,
+  reset,
+  setCountry,
+  setCurrency,
+  setInputQualityCategory,
+  setInputQualityClass,
+  setInputQuantity
+} = caseSlice.actions
 
 export default caseSlice.reducer

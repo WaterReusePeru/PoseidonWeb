@@ -9,6 +9,8 @@ import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
 import { communityInfoData } from '../data/formValues'
+import waterQualities from '../data/waterQualities.json'
+import waterQualityCategories from '../data/waterQualityCategories.json'
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -75,6 +77,52 @@ export default function CaseBox() {
           <Grid item xs={10}>
             <Typography>{t('Input Quality & Quantity')}</Typography>
           </Grid>
+          {caseState.inputQQ.category !== null ? (
+            <>
+              <Grid item xs={6} alignItems="flex-start">
+                <Typography>{t('Category')}:</Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography>
+                  {lang === 'en'
+                    ? waterQualityCategories[caseState.inputQQ.category].name
+                    : waterQualityCategories[caseState.inputQQ.category].nameEs}
+                </Typography>
+              </Grid>
+            </>
+          ) : (
+            <div />
+          )}
+          {caseState.inputQQ.qualityClass !== null ? (
+            <>
+              <Grid item xs={6} alignItems="flex-start">
+                <Typography>{t('Quality Class')}:</Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography>
+                  {lang === 'en'
+                    ? waterQualities[caseState.inputQQ.qualityClass].name
+                    : waterQualities[caseState.inputQQ.qualityClass].nameEs}
+                </Typography>
+              </Grid>
+            </>
+          ) : (
+            <div />
+          )}
+          {caseState.inputQQ.quantity !== null ? (
+            <>
+              <Grid item xs={6} alignItems="flex-start">
+                <Typography>{t('Average Quantity')}:</Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography>
+                  {caseState.inputQQ.quantity}m&sup3;/{t('day')}
+                </Typography>
+              </Grid>
+            </>
+          ) : (
+            <div />
+          )}
           <Grid item>
             <Chip label="3" color="primary" size="small" />
           </Grid>

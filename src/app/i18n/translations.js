@@ -59,8 +59,7 @@ export const resources = {
       Currency: 'Moneda',
       'Select the Category': 'Seleccione la categoría',
       'Adequate Water Quality Class': '',
-      'Define Quantity': '',
-      'Average Amount': '',
+      'Average Quantity': '',
       day: 'día',
 
       'Water Quality Indicators': 'Indicadores de calidad del agua'

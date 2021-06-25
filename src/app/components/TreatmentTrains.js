@@ -14,7 +14,7 @@ import i18next from 'i18next'
 const styles = theme => ({
   chipContainer: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'left',
     flexWrap: 'wrap',
     '& > *': {
       margin: 2
@@ -79,7 +79,7 @@ class TreatmentTrains extends React.Component {
         label: 'Case Study',
         options: {
           filter: true,
-          setCellProps: () => ({ style: { maxWidth: '25vw' } })
+          setCellProps: () => ({ style: { maxWidth: '20vw' } })
         }
       },
       {
@@ -99,7 +99,8 @@ class TreatmentTrains extends React.Component {
                 ))}
               </div>
             )
-          }
+          },
+          setCellProps: () => ({ style: { minWidth: '15vw' } })
         }
       }
     ]

@@ -13,7 +13,7 @@ import i18next from 'i18next'
 const styles = theme => ({
   chipContainer: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'left',
     flexWrap: 'wrap',
     '& > *': {
       margin: 2

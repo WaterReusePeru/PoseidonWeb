@@ -3,9 +3,7 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Typography from '@material-ui/core/Typography'
-import Tooltip from '@material-ui/core/Tooltip'
 import Button from '@material-ui/core/Button'
-import IconButton from '@material-ui/core/IconButton'
 import MenuBookIcon from '@material-ui/icons/MenuBook'
 import AddBoxIcon from '@material-ui/icons/AddBox'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
@@ -47,7 +45,7 @@ export const App = () => {
                 startIcon={<MenuBookIcon />}
                 color="inherit"
               >
-                Learn
+                {t('Learn')}
               </Button>
               <Button
                 aria-controls="simple-menu"
@@ -57,13 +55,8 @@ export const App = () => {
                 startIcon={<AddBoxIcon />}
                 color="inherit"
               >
-                New Case
+                {t('New Case')}
               </Button>
-              {/* <Tooltip title="View Results">
-                <IconButton color="default">
-                  <ShowChartIcon />
-                </IconButton>
-              </Tooltip> */}
             </div>
             <div className={classes.title}>
               <Typography>Poseidon Web alpha 0.1</Typography>

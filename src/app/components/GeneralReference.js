@@ -6,6 +6,8 @@ import Paper from '@material-ui/core/Paper'
 
 import Typography from '@material-ui/core/Typography'
 
+import { useTranslation } from 'react-i18next'
+
 const useStyles = makeStyles(theme => ({
   main: {
     display: 'grid',
@@ -27,11 +29,12 @@ const useStyles = makeStyles(theme => ({
 
 export default function GeneralReference() {
   const classes = useStyles()
+  const { t } = useTranslation()
 
   return (
     <div className={classes.main}>
       <Paper elevation={0} style={{ padding: 10 }}>
-        <Typography variant="h6">General Reference</Typography>
+        <Typography variant="h6">{t('General Reference')}</Typography>
       </Paper>
     </div>
   )

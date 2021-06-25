@@ -2,22 +2,22 @@ import React from 'react'
 import { Tooltip, Typography } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
-import { useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import Autocomplete from '@material-ui/lab/Autocomplete'
-import { communityInfoData } from '../data/formValues'
-import { setCountry } from '../case/caseSlice'
+import waterQualities from '../data/waterQualities.json'
+import waterQualityCategories from '../data/waterQualityCategories.json'
+import { setInputQualityCategory, setInputQualityClass, setInputQuantity } from '../case/caseSlice'
 import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
+import i18next from 'i18next'
+import InputAdornment from '@material-ui/core/InputAdornment'
 
-export default function CommInfo() {
-  //const commInfo = useSelector((state) => state.case.commInfo)
+export default function InputQQ() {
+  const inputQQ = useSelector(state => state.case.inputQQ)
   const dispatch = useDispatch()
-  const countries = []
-  communityInfoData.map(country => {
-    return countries.push(country.name)
-  })
 
   const { t } = useTranslation()
+  const lang = i18next.language
 
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
@@ -30,10 +30,12 @@ export default function CommInfo() {
       <Grid item xs={5}>
         <Autocomplete
           id="combo-box-demo"
-          options={communityInfoData}
-          getOptionLabel={option => option.name}
-          onChange={(event, newValue) => dispatch(setCountry(newValue.id))}
+          options={waterQualityCategories}
+          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
+          getOptionSelected={(option, value) => option.name === value.name}
+          onChange={(event, newValue) => dispatch(setInputQualityCategory(newValue.id))}
           disableClearable
+          value={inputQQ.category !== null ? waterQualityCategories[inputQQ.category] : null}
           renderInput={params => <TextField {...params} variant="outlined" />}
         />
       </Grid>
@@ -48,10 +50,14 @@ export default function CommInfo() {
       <Grid item xs={5}>
         <Autocomplete
           id="combo-box-demo"
-          options={communityInfoData}
-          getOptionLabel={option => option.currency}
+          options={waterQualities.filter(q => q.category === inputQQ.category)}
+          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
+          getOptionSelected={(option, value) => option.name === value.name}
+          onChange={(event, newValue) => dispatch(setInputQualityClass(newValue.id))}
           disableClearable
+          value={inputQQ.qualityClass !== null ? waterQualities[inputQQ.qualityClass] : null}
           renderInput={params => <TextField {...params} variant="outlined" />}
+          disabled={inputQQ.category === null ? true : false}
         />
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
@@ -60,26 +66,9 @@ export default function CommInfo() {
         </Tooltip>
       </Grid>
       <Grid item xs={5}>
-        <Typography>{t('Define Quantity')}</Typography>
+        <Typography>{t('Average Quantity')}</Typography>
       </Grid>
       <Grid item xs={5}>
-        <Autocomplete
-          id="combo-box-demo"
-          options={communityInfoData}
-          getOptionLabel={option => option.currency}
-          disableClearable
-          renderInput={params => <TextField {...params} variant="outlined" />}
-        />
-      </Grid>
-      <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Tooltip title="Information about quantities">
-          <Chip label="?" size="small" />
-        </Tooltip>
-      </Grid>
-      <Grid item xs={5}>
-        <Typography>{t('Average Amount')}</Typography>
-      </Grid>
-      <Grid item xs={3}>
         <TextField
           id="standard-number"
           type="number"
@@ -87,12 +76,12 @@ export default function CommInfo() {
           InputLabelProps={{
             shrink: true
           }}
+          disabled={inputQQ.qualityClass === null ? true : false}
+          onChange={event => dispatch(setInputQuantity(event.target.value))}
+          InputProps={{
+            endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>
+          }}
         />
-      </Grid>
-      <Grid item xs={2}>
-        <Typography>
-          m<sup>3</sup>/{t('day')}
-        </Typography>
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
         <Tooltip title="Information about amounts">
