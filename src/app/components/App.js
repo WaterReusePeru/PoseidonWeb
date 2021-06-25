@@ -34,19 +34,19 @@ export const App = () => {
 
   return (
     <div className="App">
-      <Router>
+      <Router basename="/PoseidonWeb">
         <AppBar elevation={0}>
           <Toolbar className={classes.toolbar}>
             <div>
               <Tooltip title={t('Learn')}>
-                <Link to="learn">
+                <Link to={`${process.env.PUBLIC_URL}/learn`}>
                   <IconButton>
                     <MenuBookIcon />
                   </IconButton>
                 </Link>
               </Tooltip>
               <Tooltip title={t('New Case')}>
-                <Link to="case">
+                <Link to={`${process.env.PUBLIC_URL}/case`}>
                   <IconButton>
                     <AddBoxIcon />
                   </IconButton>
@@ -70,9 +70,9 @@ export const App = () => {
 
         <div>
           <Switch>
-            <Route exact path="/" component={Learn} />
-            <Route path="/learn/:id?" component={Learn} />
-            <Route path="/case" component={Case} />
+            <Route exact path={`${process.env.PUBLIC_URL}/`} component={Learn} />
+            <Route path={`${process.env.PUBLIC_URL}/learn`} component={Learn} />
+            <Route path={`${process.env.PUBLIC_URL}/case`} component={Case} />
           </Switch>
         </div>
       </Router>
