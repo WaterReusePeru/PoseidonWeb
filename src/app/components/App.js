@@ -4,6 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Typography from '@material-ui/core/Typography'
 import Tooltip from '@material-ui/core/Tooltip'
+import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import MenuBookIcon from '@material-ui/icons/MenuBook'
 import AddBoxIcon from '@material-ui/icons/AddBox'
@@ -38,20 +39,26 @@ export const App = () => {
         <AppBar elevation={0}>
           <Toolbar className={classes.toolbar}>
             <div>
-              <Tooltip title={t('Learn')}>
-                <Link to={`${process.env.PUBLIC_URL}/learn`}>
-                  <IconButton>
-                    <MenuBookIcon />
-                  </IconButton>
-                </Link>
-              </Tooltip>
-              <Tooltip title={t('New Case')}>
-                <Link to={`${process.env.PUBLIC_URL}/case`}>
-                  <IconButton>
-                    <AddBoxIcon />
-                  </IconButton>
-                </Link>
-              </Tooltip>
+              <Button
+                aria-controls="simple-menu"
+                aria-haspopup="true"
+                component={Link}
+                to={`${process.env.PUBLIC_URL}/learn`}
+                startIcon={<MenuBookIcon />}
+                color="inherit"
+              >
+                Learn
+              </Button>
+              <Button
+                aria-controls="simple-menu"
+                aria-haspopup="true"
+                component={Link}
+                to={`${process.env.PUBLIC_URL}/case`}
+                startIcon={<AddBoxIcon />}
+                color="inherit"
+              >
+                New Case
+              </Button>
               {/* <Tooltip title="View Results">
                 <IconButton color="default">
                   <ShowChartIcon />

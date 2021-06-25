@@ -167,7 +167,7 @@ class UnitProcesses extends React.Component {
       filter: true,
       filterType: 'dropdown',
       selectableRows: 'none',
-      rowsPerPage: 100,
+      rowsPerPage: 20,
       print: false
     }
 

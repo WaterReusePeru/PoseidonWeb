@@ -8,6 +8,7 @@ export const resources = {
       'Unit Processes': 'Procesos unitarios',
       'Treatment Trains': 'Trenes de tratamiento',
       'Case Studies': 'Estudios de caso',
+      'Water Qualities': 'Cualidades del agua',
 
       Name: 'Nombre',
       'Pollutant Removal Efficiencies [% removal]': '',
@@ -41,6 +42,8 @@ export const resources = {
       Title: '',
       Description: '',
       'Case Study': '',
+      Note: 'Nota',
+      Reference: 'Referencia',
 
       'Community Information': 'Información Comunitaria',
       'Input Quality & Quantity': 'Introducir la Calidad y la Cantidad',
@@ -58,7 +61,9 @@ export const resources = {
       'Adequate Water Quality Class': '',
       'Define Quantity': '',
       'Average Amount': '',
-      day: 'día'
+      day: 'día',
+
+      'Water Quality Indicators': 'Indicadores de calidad del agua'
     }
   }
 }

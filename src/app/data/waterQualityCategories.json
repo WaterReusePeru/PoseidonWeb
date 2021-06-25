@@ -1,0 +1,152 @@
+[
+  {
+    "id": 0,
+    "name": "Municipal wastewater - typical input for reuse",
+    "nameEs": ""
+  },
+  {
+    "id": 1,
+    "name": "Textile industry",
+    "nameEs": ""
+  },
+  {
+    "id": 2,
+    "name": "Dairy industry",
+    "nameEs": ""
+  },
+  {
+    "id": 3,
+    "name": "Pulp & paper industry",
+    "nameEs": ""
+  },
+  {
+    "id": 4,
+    "name": "Beverage industry",
+    "nameEs": ""
+  },
+  {
+    "id": 5,
+    "name": "US EPA guidelines, 2012",
+    "nameEs": ""
+  },
+  {
+    "id": 6,
+    "name": "Texas water re-use standards",
+    "nameEs": ""
+  },
+  {
+    "id": 7,
+    "name": "California water re-use standards",
+    "nameEs": ""
+  },
+  {
+    "id": 8,
+    "name": "Standards for Water Re-use in Eastern Mediterranean Region (EMR), based on WHO guidelines 1989",
+    "nameEs": ""
+  },
+  {
+    "id": 9,
+    "name": "Jordanian Standards for wastewater reuse",
+    "nameEs": ""
+  },
+  {
+    "id": 10,
+    "name": "AQUAREC Water quality criteria, 2006",
+    "nameEs": ""
+  },
+  {
+    "id": 11,
+    "name": "Brazil",
+    "nameEs": ""
+  },
+  {
+    "id": 12,
+    "name": "Chile",
+    "nameEs": ""
+  },
+  {
+    "id": 13,
+    "name": "Argentina",
+    "nameEs": ""
+  },
+  {
+    "id": 14,
+    "name": "Mexico",
+    "nameEs": ""
+  },
+  {
+    "id": 15,
+    "name": "Poseidon Classes",
+    "nameEs": ""
+  },
+  {
+    "id": 16,
+    "name": "User-defined",
+    "nameEs": ""
+  },
+  {
+    "id": 17,
+    "name": "VietnamWQS",
+    "nameEs": ""
+  },
+  {
+    "id": 18,
+    "name": "VietnamWW",
+    "nameEs": ""
+  },
+  {
+    "id": 19,
+    "name": "ISOguidelines",
+    "nameEs": ""
+  },
+  {
+    "id": 20,
+    "name": "Moroccan water irrigation regulation",
+    "nameEs": ""
+  },
+  {
+    "id": 21,
+    "name": "Moroccan water quality grid for surface water",
+    "nameEs": ""
+  },
+  {
+    "id": 22,
+    "name": "Moroccan Water quality grid for ground water",
+    "nameEs": ""
+  },
+  {
+    "id": 23,
+    "name": "Tunisian guidelines for wastewater reuse ",
+    "nameEs": ""
+  },
+  {
+    "id": 24,
+    "name": "Tunisian Guidelines for wastewater discharge ",
+    "nameEs": ""
+  },
+  {
+    "id": 25,
+    "name": "Tunisian Guidelines for wastewater discharge divided by type of activity",
+    "nameEs": ""
+  },
+  {
+    "id": 26,
+    "name": "Egyptian Guidelines for wastewater reuse",
+    "nameEs": ""
+  },
+  {
+    "id": 27,
+    "name": "EU-Proposal for a regulation on minimum requirements for water reuse",
+    "nameEs": ""
+  },
+  {
+    "id": 28,
+    "name": "Peru - Water Quality Classes",
+    "nameEs": ""
+  },
+  {
+    "id": 29,
+    "name": "WHO guidelines, 2006; Vol. 2-4",
+    "nameEs": ""
+  }
+]

@@ -31,6 +31,7 @@ export default function SimpleMenu() {
         onClick={handleClick}
         startIcon={<TranslateIcon />}
         endIcon={<ExpandMoreIcon />}
+        color="inherit"
       >
         {i18next.language === 'en' ? 'English' : 'Español'}
       </Button>
