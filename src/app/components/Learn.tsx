@@ -55,7 +55,7 @@ export const Learn = () => {
 
   return (
     <div className="App">
-      <Router basename="/PoseidonWeb">
+      <Router>
         <Paper className={classes.root} square elevation={3}>
           <Tabs value={menuPoint} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
             <Tab label={t('General Reference')} to={`${process.env.PUBLIC_URL}/general`} component={Link} />

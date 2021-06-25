@@ -34,7 +34,7 @@ export const App = () => {
 
   return (
     <div className="App">
-      <Router basename="/PoseidonWeb">
+      <Router>
         <AppBar elevation={0}>
           <Toolbar className={classes.toolbar}>
             <div>
