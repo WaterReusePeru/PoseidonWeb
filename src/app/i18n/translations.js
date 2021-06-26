@@ -12,10 +12,10 @@ export const resources = {
 
       Name: 'Nombre',
       'Pollutant Removal Efficiencies [% removal]': '',
-      Turbidity: '',
-      Recovery: '',
-      'Evaluation Criteria': '',
-      'Useful Life [yrs]': '',
+      Turbidity: 'Turbidez',
+      Recovery: 'Recuperación',
+      'Evaluation Criteria': 'Criterios de evaluación',
+      'Useful Life [yrs]': 'Vida útil [años]',
 
       reliability: 'fiabilidad',
       'ease to upgrade': '',
@@ -25,23 +25,23 @@ export const resources = {
       'ease of construction': '',
       'ease of demonstration': '',
       'power demand': '',
-      chemical_demand: '',
+      'chemical demand': '',
       'odor generation': '',
       'impact on ground water': '',
       'land requirements': '',
       'cost of treatment': '',
       waste: '',
 
-      Search: '',
-      'Download CSV': '',
-      'View Columns': '',
-      'Filter Table': '',
-      'Rows per page': '',
+      Search: 'Buscar en',
+      'Download CSV': 'Descargar CSV',
+      'View Columns': 'Ver columnas',
+      'Filter Table': 'Tabla de filtros',
+      'Rows per page': 'Rows per page',
 
-      Category: '',
-      Title: '',
-      Description: '',
-      'Case Study': '',
+      Category: 'Categoría',
+      Title: 'Título',
+      Description: 'Descripción',
+      'Case Study': 'Estudio de caso',
       Note: 'Nota',
       Reference: 'Referencia',
 
@@ -58,11 +58,12 @@ export const resources = {
       Country: 'País',
       Currency: 'Moneda',
       'Select the Category': 'Seleccione la categoría',
-      'Adequate Water Quality Class': '',
-      'Average Quantity': '',
+      'Water Quality Class': 'Clase de calidad de agua',
+      'Average Quantity': 'Average Quantity',
       day: 'día',
 
-      'Water Quality Indicators': 'Indicadores de calidad del agua'
+      'Water Quality Indicators': 'Indicadores de calidad del agua',
+      'Value must be between 1 and 1 million': 'El valor debe estar entre 1 y 1 millón'
     }
   }
 }

@@ -79,7 +79,6 @@ export const Case = () => {
 
   const count = useSelector(state => state.case.step)
   const completedSteps = useSelector(state => state.case.completedSteps)
-  console.log(completedSteps)
 
   const dispatch = useDispatch()
 
@@ -109,7 +108,7 @@ export const Case = () => {
       <div className={classes.main}>
         <Paper elevation={0} style={{ padding: 10 }}>
           <Grid container spacing={3}>
-            <Grid item container xs={9}>
+            <Grid item container xs={8}>
               {count === steps.length ? (
                 <div>
                   <Typography className={classes.instructions}>All steps completed - you&apos;re finished</Typography>
@@ -145,7 +144,7 @@ export const Case = () => {
                 </Grid>
               )}
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={4}>
               <CaseBox />
             </Grid>
           </Grid>

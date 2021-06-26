@@ -8,7 +8,7 @@ import { Typography } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
-import { communityInfoData } from '../data/formValues'
+import { communityInfoData } from '../data/communityInfo'
 import waterQualities from '../data/waterQualities.json'
 import waterQualityCategories from '../data/waterQualityCategories.json'
 

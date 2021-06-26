@@ -19,15 +19,27 @@ export default function InputQQ() {
   const { t } = useTranslation()
   const lang = i18next.language
 
+  const [validQuantity, setValidQuantity] = React.useState(true)
+
+  const handleChangeQuantity = value => {
+    if (value >= 1 && value <= 1000000) {
+      setValidQuantity(true)
+      dispatch(setInputQuantity(value))
+    } else {
+      setValidQuantity(false)
+      dispatch(setInputQuantity(null))
+    }
+  }
+
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
       <Grid item xs={12}>
         <Typography variant="h6">{t('Input Quality & Quantity')}</Typography>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={4}>
         <Typography>{t('Select the Category')}</Typography>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={6}>
         <Autocomplete
           id="combo-box-demo"
           options={waterQualityCategories}
@@ -44,10 +56,10 @@ export default function InputQQ() {
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>
-      <Grid item xs={5}>
-        <Typography>{t('Adequate Water Quality Class')}</Typography>
+      <Grid item xs={4}>
+        <Typography>{t('Water Quality Class')}</Typography>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={6}>
         <Autocomplete
           id="combo-box-demo"
           options={waterQualities.filter(q => q.category === inputQQ.category)}
@@ -65,11 +77,13 @@ export default function InputQQ() {
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={4}>
         <Typography>{t('Average Quantity')}</Typography>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={6}>
         <TextField
+          error={!validQuantity}
+          helperText={!validQuantity ? t('Value must be between 1 and 1 million') : ' '}
           id="standard-number"
           type="number"
           variant="outlined"
@@ -77,7 +91,7 @@ export default function InputQQ() {
             shrink: true
           }}
           disabled={inputQQ.qualityClass === null ? true : false}
-          onChange={event => dispatch(setInputQuantity(event.target.value))}
+          onChange={event => handleChangeQuantity(event.target.value)}
           InputProps={{
             endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>
           }}

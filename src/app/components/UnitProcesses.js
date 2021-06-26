@@ -120,7 +120,7 @@ class UnitProcesses extends React.Component {
               t('ease of construction'),
               t('ease of demonstration'),
               t('power demand'),
-              t('chemical_demand'),
+              t('chemical demand'),
               t('odor generation'),
               t('impact on ground water'),
               t('land requirements'),

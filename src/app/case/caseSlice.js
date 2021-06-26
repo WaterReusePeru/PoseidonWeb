@@ -41,10 +41,18 @@ export const caseSlice = createSlice({
     },
     setInputQualityClass: (state, action) => {
       state.inputQQ.qualityClass = action.payload
+      if (state.inputQQ.quantity !== null) {
+        state.completedSteps[1] = 1
+      }
     },
     setInputQuantity: (state, action) => {
       state.inputQQ.quantity = action.payload
-      state.completedSteps[1] = 1
+      if (action.payload === null) {
+        state.completedSteps[1] = null
+      }
+      if (state.inputQQ.qualityClass !== null && action.payload !== null) {
+        state.completedSteps[1] = 1
+      }
     }
   }
 })

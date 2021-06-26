@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import { useSelector, useDispatch } from 'react-redux'
 import Autocomplete from '@material-ui/lab/Autocomplete'
-import { communityInfoData } from '../data/formValues'
+import { communityInfoData } from '../data/communityInfo'
 import { setCountry, setCurrency } from '../case/caseSlice'
 import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
@@ -28,10 +28,10 @@ export default function CommInfo() {
       <Grid item xs={12}>
         <Typography variant="h6">{t('Community Information')}</Typography>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={4}>
         <Typography>{t('Select the Country')}</Typography>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={6}>
         <Autocomplete
           id="combo-box-demo"
           options={communityInfoData}
@@ -48,10 +48,10 @@ export default function CommInfo() {
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={4}>
         <Typography>{t('Select the Currency')}</Typography>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={6}>
         <Autocomplete
           id="combo-box-demo"
           options={[communityInfoData[commInfo.countryID], usdObj]}
