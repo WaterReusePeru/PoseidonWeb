@@ -2,151 +2,151 @@
   {
     "id": 0,
     "name": "Municipal wastewater - typical input for reuse",
-    "nameEs": ""
+    "nameEs": "Aguas residuales municipales - entrada típica para la reutilización"
   },
   {
     "id": 1,
     "name": "Textile industry",
-    "nameEs": ""
+    "nameEs": "Industria textil"
   },
   {
     "id": 2,
     "name": "Dairy industry",
-    "nameEs": ""
+    "nameEs": "Industria láctea"
   },
   {
     "id": 3,
     "name": "Pulp & paper industry",
-    "nameEs": ""
+    "nameEs": "Industria de la pulpa y el papel"
   },
   {
     "id": 4,
     "name": "Beverage industry",
-    "nameEs": ""
+    "nameEs": "Industria de las bebidas"
   },
   {
     "id": 5,
     "name": "US EPA guidelines, 2012",
-    "nameEs": ""
+    "nameEs": "Directrices de la EPA de EE.UU., 2012"
   },
   {
     "id": 6,
     "name": "Texas water re-use standards",
-    "nameEs": ""
+    "nameEs": "Normas de reutilización del agua en Texas"
   },
   {
     "id": 7,
     "name": "California water re-use standards",
-    "nameEs": ""
+    "nameEs": "Normas de reutilización del agua en California"
   },
   {
     "id": 8,
     "name": "Standards for Water Re-use in Eastern Mediterranean Region (EMR), based on WHO guidelines 1989",
-    "nameEs": ""
+    "nameEs": "Normas para la reutilización del agua en la región del Mediterráneo Oriental (RME), basadas en las directrices de la OMS de 1989"
   },
   {
     "id": 9,
     "name": "Jordanian Standards for wastewater reuse",
-    "nameEs": ""
+    "nameEs": "Normas jordanas para la reutilización de aguas residuales"
   },
   {
     "id": 10,
     "name": "AQUAREC Water quality criteria, 2006",
-    "nameEs": ""
+    "nameEs": "AQUAREC Criterios de calidad del agua, 2006"
   },
   {
     "id": 11,
     "name": "Brazil",
-    "nameEs": ""
+    "nameEs": "Brasil"
   },
   {
     "id": 12,
     "name": "Chile",
-    "nameEs": ""
+    "nameEs": "Chile"
   },
   {
     "id": 13,
     "name": "Argentina",
-    "nameEs": ""
+    "nameEs": "Argentina"
   },
   {
     "id": 14,
     "name": "Mexico",
-    "nameEs": ""
+    "nameEs": "México"
   },
   {
     "id": 15,
     "name": "Poseidon Classes",
-    "nameEs": ""
+    "nameEs": "Clases de Poseidón"
   },
   {
     "id": 16,
     "name": "User-defined",
-    "nameEs": ""
+    "nameEs": "Definido por el usuario"
   },
   {
     "id": 17,
     "name": "VietnamWQS",
-    "nameEs": ""
+    "nameEs": "VietnamWQS"
   },
   {
     "id": 18,
     "name": "VietnamWW",
-    "nameEs": ""
+    "nameEs": "VietnamWW"
   },
   {
     "id": 19,
-    "name": "ISOguidelines",
-    "nameEs": ""
+    "name": "ISO Guidelines",
+    "nameEs": "Directrices ISO"
   },
   {
     "id": 20,
     "name": "Moroccan water irrigation regulation",
-    "nameEs": ""
+    "nameEs": "Regulación del riego en Marruecos"
   },
   {
     "id": 21,
     "name": "Moroccan water quality grid for surface water",
-    "nameEs": ""
+    "nameEs": "Red de calidad del agua marroquí para las aguas superficiales"
   },
   {
     "id": 22,
     "name": "Moroccan Water quality grid for ground water",
-    "nameEs": ""
+    "nameEs": "Red de calidad del agua marroquí para las aguas subterráneas"
   },
   {
     "id": 23,
-    "name": "Tunisian guidelines for wastewater reuse ",
-    "nameEs": ""
+    "name": "Tunisian guidelines for wastewater reuse",
+    "nameEs": "Directrices tunecinas para la reutilización de aguas residuales"
   },
   {
     "id": 24,
-    "name": "Tunisian Guidelines for wastewater discharge ",
-    "nameEs": ""
+    "name": "Tunisian Guidelines for wastewater discharge",
+    "nameEs": "Directrices tunecinas para el vertido de aguas residuales"
   },
   {
     "id": 25,
     "name": "Tunisian Guidelines for wastewater discharge divided by type of activity",
-    "nameEs": ""
+    "nameEs": "Directrices tunecinas para el vertido de aguas residuales divididas por tipo de actividad"
   },
   {
     "id": 26,
     "name": "Egyptian Guidelines for wastewater reuse",
-    "nameEs": ""
+    "nameEs": "Directrices egipcias para la reutilización de aguas residuales"
   },
   {
     "id": 27,
     "name": "EU-Proposal for a regulation on minimum requirements for water reuse",
-    "nameEs": ""
+    "nameEs": "Propuesta de reglamento de la UE sobre los requisitos mínimos para la reutilización del agua"
   },
   {
     "id": 28,
     "name": "Peru - Water Quality Classes",
-    "nameEs": ""
+    "nameEs": "Perú - Clases de calidad del agua"
   },
   {
     "id": 29,
     "name": "WHO guidelines, 2006; Vol. 2-4",
-    "nameEs": ""
+    "nameEs": "Directrices de la OMS, 2006; Vol. 2-4"
   }
 ]

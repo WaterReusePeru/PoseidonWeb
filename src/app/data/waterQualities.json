@@ -2,7 +2,7 @@
   {
     "id": 0,
     "name": "Typical untreated domestic wastewater",
-    "nameEs": "",
+    "nameEs": "Aguas residuales domésticas típicas sin tratar",
     "category": 0,
     "turbidity": "100",
     "tss": "210",
@@ -17,15 +17,15 @@
     "toc": "140",
     "virus": "10",
     "helminths": "",
-    "note": "Typical composition of untreated domestic wastewater. Note: there is no typical wastewater, values should only be used as guide! Data presented are for medium-strengths wastewater based on average flow of 460 L/cap*day and include constituents added by commercial institutional, and industrial sources. ",
-    "noteEs": "",
+    "note": "Typical composition of untreated domestic wastewater. Note: there is no typical wastewater, values should only be used as guide! Data presented are for medium-strengths wastewater based on average flow of 460 L/cap*day and include constituents added by commercial institutional, and industrial sources.",
+    "noteEs": "Composición típica de las aguas residuales domésticas no tratadas. Nota: no existe un agua residual típica, ¡los valores sólo deben utilizarse como guía! Los datos presentados son para aguas residuales de intensidad media, basados en un caudal medio de 460 L/cap*día, e incluyen los componentes añadidos por fuentes comerciales, institucionales e industriales.",
     "reference": "Asano et al., 2006 p. 107. Value for Turbidity: Asano et al., 2006, p.109. Viruses: Asano et al., 2006, p.110",
-    "referenceEs": ""
+    "referenceEs": "Asano et al., 2006 p. 107. Valor de la turbidez: Asano et al., 2006, p.109. Virus: Asano et al., 2006, p.110"
   },
   {
     "id": 1,
     "name": "Untreated domestic wastewater (ranges)",
-    "nameEs": "",
+    "nameEs": "Aguas residuales domésticas no tratadas (rangos)",
     "category": 0,
     "turbidity": "-1",
     "tss": "120",
@@ -43,12 +43,12 @@
     "note": "",
     "noteEs": "",
     "reference": "Asano et al., 2006 p. 107",
-    "referenceEs": ""
+    "referenceEs": "Asano et al., 2006 p. 107"
   },
   {
     "id": 2,
     "name": "Primary effluent",
-    "nameEs": "",
+    "nameEs": "Efluente primario",
     "category": 0,
     "turbidity": "88",
     "tss": "131",
@@ -64,9 +64,9 @@
     "virus": "-1",
     "helminths": "",
     "note": "Constituents remaining after primary treatment. Primary treatment consisted of a rotary drum screen , followed by disk screens",
-    "noteEs": "",
+    "noteEs": "Componentes restantes tras el tratamiento primario. El tratamiento primario consistió en una criba de tambor rotativo, seguida de cribas de disco",
     "reference": "Asano et al., 2006 p. 109",
-    "referenceEs": ""
+    "referenceEs": "Asano et al., 2006 p. 109"
   },
   {
     "id": 3,

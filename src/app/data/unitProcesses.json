@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "Bar screen",
-    "nameEs": "",
+    "nameEs": "Pantalla de la barra",
     "turbidity": "0",
     "tss": "2",
     "bod": "2",
@@ -39,7 +39,7 @@
   {
     "id": "2",
     "name": "Coarse screen",
-    "nameEs": "",
+    "nameEs": "Criba gruesa",
     "turbidity": "0",
     "tss": "5",
     "bod": "4",
@@ -76,7 +76,7 @@
   {
     "id": "3",
     "name": "Grit Chamber",
-    "nameEs": "",
+    "nameEs": "Cámara de arena",
     "turbidity": "2",
     "tss": "2",
     "bod": "2",
@@ -113,7 +113,7 @@
   {
     "id": "4",
     "name": "Equalization Basin",
-    "nameEs": "",
+    "nameEs": "Cuenca de ecualización",
     "turbidity": "0",
     "tss": "0",
     "bod": "12",
@@ -150,7 +150,7 @@
   {
     "id": "5",
     "name": "Sedimentation without coagulant",
-    "nameEs": "",
+    "nameEs": "Sedimentación sin coagulante",
     "turbidity": "0",
     "tss": "50",
     "bod": "25",
