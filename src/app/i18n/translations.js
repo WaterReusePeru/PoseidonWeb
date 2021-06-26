@@ -55,6 +55,10 @@ export const resources = {
       'Case Overview': 'Resumen del Caso',
       'Select the Country': 'selectar país',
       'Select the Currency': 'selectar moneda',
+      'Land Cost': 'Coste del terreno',
+      'Electricity Cost': 'Coste de la electricidad',
+      'Personal Cost': 'Coste personal',
+      'Discount Rate': 'Tipo de descuento',
       Country: 'País',
       Currency: 'Moneda',
       'Select the Category': 'Seleccione la categoría',
@@ -63,7 +67,7 @@ export const resources = {
       day: 'día',
 
       'Water Quality Indicators': 'Indicadores de calidad del agua',
-      'Value must be between 1 and 1 million': 'El valor debe estar entre 1 y 1 millón'
+      'Number must be integer and between 1 and 1 million': 'El número debe ser entero y estar entre 1 y 1 millón'
     }
   }
 }

@@ -11,6 +11,8 @@ import { Learn } from './Learn'
 import { Case } from './Case'
 import UserMenu from './UserMenu'
 import { useTranslation } from 'react-i18next'
+import OpacityIcon from '@material-ui/icons/Opacity'
+import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles({
   toolbar: {
@@ -58,9 +60,19 @@ export const App = () => {
                 {t('New Case')}
               </Button>
             </div>
-            <div className={classes.title}>
-              <Typography>Poseidon Web alpha 0.1</Typography>
-            </div>
+            <Grid container alignItems="center" spacing={1} justify="center">
+              <Grid item>
+                <OpacityIcon />
+              </Grid>
+              <Grid item>
+                <Typography variant="h6">Poseidon Web alpha 0.1</Typography>
+              </Grid>
+            </Grid>
+            {/* <div className={classes.title}>
+              <Typography>
+              <OpacityIcon style={{position: 'relative', top: '8px'}} /> Poseidon Web alpha 0.1
+                </Typography>
+            </div> */}
             <div style={{ width: 150 }}>
               <UserMenu />
             </div>

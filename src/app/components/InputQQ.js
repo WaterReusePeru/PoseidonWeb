@@ -41,9 +41,9 @@ export default function InputQQ() {
       </Grid>
       <Grid item xs={6}>
         <Autocomplete
-          id="combo-box-demo"
+          id="category"
           options={waterQualityCategories}
-          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
+          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : null)}
           getOptionSelected={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setInputQualityCategory(newValue.id))}
           disableClearable
@@ -61,9 +61,9 @@ export default function InputQQ() {
       </Grid>
       <Grid item xs={6}>
         <Autocomplete
-          id="combo-box-demo"
+          id="quality"
           options={waterQualities.filter(q => q.category === inputQQ.category)}
-          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
+          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : null)}
           getOptionSelected={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setInputQualityClass(newValue.id))}
           disableClearable
@@ -83,18 +83,19 @@ export default function InputQQ() {
       <Grid item xs={6}>
         <TextField
           error={!validQuantity}
-          helperText={!validQuantity ? t('Value must be between 1 and 1 million') : ' '}
+          helperText={!validQuantity ? t('Number must be integer and between 1 and 1 million') : ' '}
           id="standard-number"
           type="number"
           variant="outlined"
           InputLabelProps={{
             shrink: true
           }}
-          disabled={inputQQ.qualityClass === null ? true : false}
           onChange={event => handleChangeQuantity(event.target.value)}
+          value={inputQQ.quantity}
           InputProps={{
             endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>
           }}
+          fullWidth
         />
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>

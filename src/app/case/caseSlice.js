@@ -13,6 +13,10 @@ export const caseSlice = createSlice({
       category: null,
       qualityClass: null,
       quantity: null
+    },
+    endUse: {
+      category: null,
+      qualityClass: null
     }
   },
   reducers: {
@@ -53,6 +57,15 @@ export const caseSlice = createSlice({
       if (state.inputQQ.qualityClass !== null && action.payload !== null) {
         state.completedSteps[1] = 1
       }
+    },
+    setEndUseQualityCategory: (state, action) => {
+      state.endUse.category = action.payload
+      state.endUse.qualityClass = null
+      state.completedSteps[1] = null
+    },
+    setEndUseQualityClass: (state, action) => {
+      state.endUse.qualityClass = action.payload
+      state.completedSteps[2] = 2
     }
   }
 })
@@ -66,7 +79,9 @@ export const {
   setCurrency,
   setInputQualityCategory,
   setInputQualityClass,
-  setInputQuantity
+  setInputQuantity,
+  setEndUseQualityCategory,
+  setEndUseQualityClass
 } = caseSlice.actions
 
 export default caseSlice.reducer

@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import { useSelector, useDispatch } from 'react-redux'
 import Autocomplete from '@material-ui/lab/Autocomplete'
-import { communityInfoData } from '../data/communityInfo'
+import communityInfo from '../data/communityInfo'
 import { setCountry, setCurrency } from '../case/caseSlice'
 import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
@@ -14,7 +14,7 @@ export default function CommInfo() {
   const commInfo = useSelector(state => state.case.commInfo)
   const dispatch = useDispatch()
   const countries = []
-  communityInfoData.map(country => {
+  communityInfo.map(country => {
     return countries.push(country.name)
   })
 
@@ -33,13 +33,13 @@ export default function CommInfo() {
       </Grid>
       <Grid item xs={6}>
         <Autocomplete
-          id="combo-box-demo"
-          options={communityInfoData}
-          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
+          id="country"
+          options={communityInfo}
+          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : null)}
           getOptionSelected={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setCountry(newValue.id))}
           disableClearable
-          value={commInfo.countryID !== null ? communityInfoData[commInfo.countryID] : null}
+          value={commInfo.countryID !== null ? communityInfo[commInfo.countryID] : null}
           renderInput={params => <TextField {...params} variant="outlined" />}
         />
       </Grid>
@@ -53,18 +53,14 @@ export default function CommInfo() {
       </Grid>
       <Grid item xs={6}>
         <Autocomplete
-          id="combo-box-demo"
-          options={[communityInfoData[commInfo.countryID], usdObj]}
+          id="currency"
+          options={[communityInfo[commInfo.countryID], usdObj]}
           getOptionLabel={option => option.currency}
           getOptionSelected={(option, value) => option.currency === value.currency}
           onChange={(event, newValue) => dispatch(setCurrency(newValue.id))}
           disableClearable
           value={
-            commInfo.currency !== null
-              ? commInfo.currency === 0
-                ? usdObj
-                : communityInfoData[commInfo.countryID]
-              : null
+            commInfo.currency !== null ? (commInfo.currency === 0 ? usdObj : communityInfo[commInfo.countryID]) : null
           }
           disabled={commInfo.countryID === null ? true : false}
           renderInput={params => <TextField {...params} variant="outlined" />}
@@ -75,6 +71,67 @@ export default function CommInfo() {
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>
+      {commInfo.currency !== null ? (
+        <>
+          <Grid item xs={4}>
+            <Typography>{t('Land Cost')}</Typography>
+          </Grid>
+          <Grid item xs={8}>
+            <Typography>
+              {commInfo.currency === 0
+                ? Math.round(communityInfo[commInfo.countryID].landCost * 100) / 100 + ' ' + usdObj.currency
+                : Math.round(
+                    communityInfo[commInfo.countryID].landCost * communityInfo[commInfo.countryID].exchangeToUSD * 100
+                  ) /
+                    100 +
+                  ' ' +
+                  communityInfo[commInfo.countryID].currency}
+            </Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <Typography>{t('Electricity Cost')}</Typography>
+          </Grid>
+          <Grid item xs={8}>
+            <Typography>
+              {commInfo.currency === 0
+                ? Math.round(communityInfo[commInfo.countryID].electricityCost * 100) / 100 + ' ' + usdObj.currency
+                : Math.round(
+                    communityInfo[commInfo.countryID].electricityCost *
+                      communityInfo[commInfo.countryID].exchangeToUSD *
+                      100
+                  ) /
+                    100 +
+                  ' ' +
+                  communityInfo[commInfo.countryID].currency}
+            </Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <Typography>{t('Personal Cost')}</Typography>
+          </Grid>
+          <Grid item xs={8}>
+            <Typography>
+              {commInfo.currency === 0
+                ? Math.round(communityInfo[commInfo.countryID].personalCost * 100) / 100 + ' ' + usdObj.currency
+                : Math.round(
+                    communityInfo[commInfo.countryID].personalCost *
+                      communityInfo[commInfo.countryID].exchangeToUSD *
+                      100
+                  ) /
+                    100 +
+                  ' ' +
+                  communityInfo[commInfo.countryID].currency}
+            </Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <Typography>{t('Discount Rate')}</Typography>
+          </Grid>
+          <Grid item xs={8}>
+            <Typography>{communityInfo[commInfo.countryID].discountRate * 100 + '%'}</Typography>
+          </Grid>
+        </>
+      ) : (
+        <div />
+      )}
     </Grid>
   )
 }

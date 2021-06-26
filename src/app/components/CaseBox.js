@@ -8,7 +8,7 @@ import { Typography } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
-import { communityInfoData } from '../data/communityInfo'
+import communityInfo from '../data/communityInfo'
 import waterQualities from '../data/waterQualities.json'
 import waterQualityCategories from '../data/waterQualityCategories.json'
 
@@ -49,8 +49,8 @@ export default function CaseBox() {
               <Grid item xs={6}>
                 <Typography>
                   {lang === 'en'
-                    ? communityInfoData[caseState.commInfo.countryID].name
-                    : communityInfoData[caseState.commInfo.countryID].nameEs}
+                    ? communityInfo[caseState.commInfo.countryID].name
+                    : communityInfo[caseState.commInfo.countryID].nameEs}
                 </Typography>
               </Grid>
             </>
@@ -64,7 +64,7 @@ export default function CaseBox() {
               </Grid>
               <Grid item xs={6}>
                 <Typography>
-                  {caseState.commInfo.currency === 0 ? 'USD' : communityInfoData[caseState.commInfo.countryID].currency}
+                  {caseState.commInfo.currency === 0 ? 'USD' : communityInfo[caseState.commInfo.countryID].currency}
                 </Typography>
               </Grid>
             </>
@@ -129,6 +129,38 @@ export default function CaseBox() {
           <Grid item xs={10}>
             <Typography>{t('End Use')}</Typography>
           </Grid>
+          {caseState.endUse.category !== null ? (
+            <>
+              <Grid item xs={6} alignItems="flex-start">
+                <Typography>{t('Category')}:</Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography>
+                  {lang === 'en'
+                    ? waterQualityCategories[caseState.endUse.category].name
+                    : waterQualityCategories[caseState.endUse.category].nameEs}
+                </Typography>
+              </Grid>
+            </>
+          ) : (
+            <div />
+          )}
+          {caseState.endUse.qualityClass !== null ? (
+            <>
+              <Grid item xs={6} alignItems="flex-start">
+                <Typography>{t('Quality Class')}:</Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography>
+                  {lang === 'en'
+                    ? waterQualities[caseState.endUse.qualityClass].name
+                    : waterQualities[caseState.endUse.qualityClass].nameEs}
+                </Typography>
+              </Grid>
+            </>
+          ) : (
+            <div />
+          )}
           <Grid item>
             <Chip label="4" color="primary" size="small" />
           </Grid>
