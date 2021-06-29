@@ -25,7 +25,7 @@ export const resources = {
       'ease of construction': '',
       'ease of demonstration': '',
       'power demand': '',
-      'chemical demand': '',
+      'chemical demand': 'demanda de químicos',
       'odor generation': '',
       'impact on ground water': '',
       'land requirements': '',
