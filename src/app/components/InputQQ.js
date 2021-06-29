@@ -91,7 +91,7 @@ export default function InputQQ() {
             shrink: true
           }}
           onChange={event => handleChangeQuantity(event.target.value)}
-          value={inputQQ.quantity}
+          value={inputQQ.quantity !== null ? inputQQ.quantity : null}
           InputProps={{
             endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>
           }}
