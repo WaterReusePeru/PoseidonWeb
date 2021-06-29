@@ -18,7 +18,7 @@ export const resources = {
       'Useful Life [yrs]': 'Vida útil [años]',
 
       reliability: 'fiabilidad',
-      'ease to upgrade': '',
+      'ease to upgrade': 'facilidad de actualización',
       'adaptability to varying flow': '',
       'adaptability to varying quality': '',
       'ease of O & M': '',
