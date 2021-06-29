@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a8d45c88105a700d6c0a5cec4bd2843f",
+    "revision": "9882f9b9a7fd70f55660b0dbe0e38222",
     "url": "/PoseidonWeb/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PoseidonWeb/static/js/2.c9b5bff7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "37e710462b82fb158575",
-    "url": "/PoseidonWeb/static/js/main.84af3611.chunk.js"
+    "revision": "e223ed2ccf8a5c87e910",
+    "url": "/PoseidonWeb/static/js/main.6266cec7.chunk.js"
   },
   {
     "revision": "5f048fca55f5cf5e823e",
