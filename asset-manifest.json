@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/PoseidonWeb/static/js/main.6266cec7.chunk.js",
-    "main.js.map": "/PoseidonWeb/static/js/main.6266cec7.chunk.js.map",
+    "main.js": "/PoseidonWeb/static/js/main.b7c9a22f.chunk.js",
+    "main.js.map": "/PoseidonWeb/static/js/main.b7c9a22f.chunk.js.map",
     "runtime-main.js": "/PoseidonWeb/static/js/runtime-main.3114d419.js",
     "runtime-main.js.map": "/PoseidonWeb/static/js/runtime-main.3114d419.js.map",
     "static/js/2.c9b5bff7.chunk.js": "/PoseidonWeb/static/js/2.c9b5bff7.chunk.js",
     "static/js/2.c9b5bff7.chunk.js.map": "/PoseidonWeb/static/js/2.c9b5bff7.chunk.js.map",
     "index.html": "/PoseidonWeb/index.html",
-    "precache-manifest.ee141578eb61e312b6ddda3348821296.js": "/PoseidonWeb/precache-manifest.ee141578eb61e312b6ddda3348821296.js",
+    "precache-manifest.d1ce8a794a64fbec525905e2735970eb.js": "/PoseidonWeb/precache-manifest.d1ce8a794a64fbec525905e2735970eb.js",
     "service-worker.js": "/PoseidonWeb/service-worker.js",
     "static/js/2.c9b5bff7.chunk.js.LICENSE.txt": "/PoseidonWeb/static/js/2.c9b5bff7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3114d419.js",
     "static/js/2.c9b5bff7.chunk.js",
-    "static/js/main.6266cec7.chunk.js"
+    "static/js/main.b7c9a22f.chunk.js"
   ]
 }
