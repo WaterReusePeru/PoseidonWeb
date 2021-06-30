@@ -11,6 +11,7 @@ import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 import InputAdornment from '@material-ui/core/InputAdornment'
+import { Bar } from './Bar'
 
 export default function InputQQ() {
   const inputQQ = useSelector(state => state.case.inputQQ)
@@ -98,11 +99,14 @@ export default function InputQQ() {
           fullWidth
         />
       </Grid>
+
       <Grid item xs={2} style={{ textAlign: 'center' }}>
         <Tooltip title="Information about amounts">
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>
+
+      {inputQQ.qualityClass !== null ? <Bar factor={'tss'} input="100" /> : null}
     </Grid>
   )
 }

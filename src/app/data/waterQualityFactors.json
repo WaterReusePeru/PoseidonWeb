@@ -1,0 +1,32 @@
+[
+  {
+    "name": "turbidity",
+    "nameLong": "Turbidity",
+    "unit": "NTU"
+  },
+  {
+    "name": "tss",
+    "nameLong": "Total Suspended Solids",
+    "unit": "mg/L"
+  },
+  {
+    "name": "bod",
+    "nameLong": "Biological Oxygen Demand",
+    "unit": "mg/L"
+  },
+  {
+    "name": "cod",
+    "nameLong": "Chemical Oxygen Demand",
+    "unit": "mg/L"
+  },
+  {
+    "name": "fc",
+    "nameLong": "Faecal Coliform",
+    "unit": "CFU/100ml"
+  },
+  {
+    "name": "tc",
+    "nameLong": "Total Coliform",
+    "unit": "CFU/100ml"
+  }
+]
