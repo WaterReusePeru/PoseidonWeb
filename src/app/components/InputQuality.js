@@ -6,31 +6,19 @@ import { useSelector, useDispatch } from 'react-redux'
 import Autocomplete from '@material-ui/lab/Autocomplete'
 import waterQualities from '../data/waterQualities.json'
 import waterQualityCategories from '../data/waterQualityCategories.json'
-import { setInputQualityCategory, setInputQualityClass, setInputQuantity } from '../case/caseSlice'
+import waterQualityFactors from '../data/waterQualityFactors.json'
+import { setInputQualityCategory, setInputQualityClass } from '../case/caseSlice'
 import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
-import InputAdornment from '@material-ui/core/InputAdornment'
 import { Bar } from './Bar'
 
-export default function InputQQ() {
-  const inputQQ = useSelector(state => state.case.inputQQ)
+export default function InputQuality() {
+  const inputQuality = useSelector(state => state.case.inputQuality)
   const dispatch = useDispatch()
 
   const { t } = useTranslation()
   const lang = i18next.language
-
-  const [validQuantity, setValidQuantity] = React.useState(true)
-
-  const handleChangeQuantity = value => {
-    if (value >= 1 && value <= 1000000) {
-      setValidQuantity(true)
-      dispatch(setInputQuantity(value))
-    } else {
-      setValidQuantity(false)
-      dispatch(setInputQuantity(null))
-    }
-  }
 
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
@@ -48,7 +36,7 @@ export default function InputQQ() {
           getOptionSelected={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setInputQualityCategory(newValue.id))}
           disableClearable
-          value={inputQQ.category !== null ? waterQualityCategories[inputQQ.category] : null}
+          value={inputQuality.category !== null ? waterQualityCategories[inputQuality.category] : null} //Peru is default Category
           renderInput={params => <TextField {...params} variant="outlined" />}
         />
       </Grid>
@@ -63,14 +51,14 @@ export default function InputQQ() {
       <Grid item xs={6}>
         <Autocomplete
           id="quality"
-          options={waterQualities.filter(q => q.category === inputQQ.category)}
+          options={waterQualities.filter(q => q.category === inputQuality.category)}
           getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : null)}
           getOptionSelected={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setInputQualityClass(newValue.id))}
           disableClearable
-          value={inputQQ.qualityClass !== null ? waterQualities[inputQQ.qualityClass] : null}
+          value={inputQuality.qualityClass !== null ? waterQualities[inputQuality.qualityClass] : null}
           renderInput={params => <TextField {...params} variant="outlined" />}
-          disabled={inputQQ.category === null ? true : false}
+          disabled={inputQuality.category === null ? true : false}
         />
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
@@ -78,35 +66,28 @@ export default function InputQQ() {
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>
-      <Grid item xs={4}>
-        <Typography>{t('Average Quantity')}</Typography>
-      </Grid>
-      <Grid item xs={6}>
-        <TextField
-          error={!validQuantity}
-          helperText={!validQuantity ? t('Number must be integer and between 1 and 1 million') : ' '}
-          id="standard-number"
-          type="number"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true
-          }}
-          onChange={event => handleChangeQuantity(event.target.value)}
-          value={inputQQ.quantity !== null ? inputQQ.quantity : null}
-          InputProps={{
-            endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>
-          }}
-          fullWidth
-        />
-      </Grid>
 
-      <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Tooltip title="Information about amounts">
-          <Chip label="?" size="small" />
-        </Tooltip>
-      </Grid>
+      <Grid item container xs={12} justify="space-evenly" alignItems="center">
+        {waterQualityFactors.map(f => {
+          const key = f.name
 
-      {inputQQ.qualityClass !== null ? <Bar factor={'tss'} input="100" /> : null}
+          return (
+            <div style={{ width: 'calc(1/6*80%' }}>
+              <Bar
+                factor={f.name}
+                unit={f.unit}
+                input={
+                  inputQuality.qualityClass === null
+                    ? null
+                    : waterQualities[inputQuality.qualityClass][key] < 0
+                    ? null
+                    : waterQualities[inputQuality.qualityClass][key]
+                }
+              />
+            </div>
+          )
+        })}
+      </Grid>
     </Grid>
   )
 }

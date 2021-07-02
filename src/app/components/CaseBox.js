@@ -77,7 +77,7 @@ export default function CaseBox() {
           <Grid item xs={11}>
             <Typography>{t('Input Quality & Quantity')}</Typography>
           </Grid>
-          {caseState.inputQQ.category !== null ? (
+          {caseState.inputQuality.category !== null ? (
             <>
               <Grid item xs={6} container alignItems="flex-start">
                 <Typography>{t('Category')}:</Typography>
@@ -85,15 +85,15 @@ export default function CaseBox() {
               <Grid item xs={6}>
                 <Typography>
                   {lang === 'en'
-                    ? waterQualityCategories[caseState.inputQQ.category].name
-                    : waterQualityCategories[caseState.inputQQ.category].nameEs}
+                    ? waterQualityCategories[caseState.inputQuality.category].name
+                    : waterQualityCategories[caseState.inputQuality.category].nameEs}
                 </Typography>
               </Grid>
             </>
           ) : (
             <div />
           )}
-          {caseState.inputQQ.qualityClass !== null ? (
+          {caseState.inputQuality.qualityClass !== null ? (
             <>
               <Grid item xs={6} container alignItems="flex-start">
                 <Typography>{t('Quality Class')}:</Typography>
@@ -101,22 +101,22 @@ export default function CaseBox() {
               <Grid item xs={6}>
                 <Typography>
                   {lang === 'en'
-                    ? waterQualities[caseState.inputQQ.qualityClass].name
-                    : waterQualities[caseState.inputQQ.qualityClass].nameEs}
+                    ? waterQualities[caseState.inputQuality.qualityClass].name
+                    : waterQualities[caseState.inputQuality.qualityClass].nameEs}
                 </Typography>
               </Grid>
             </>
           ) : (
             <div />
           )}
-          {caseState.inputQQ.quantity !== null ? (
+          {caseState.inputQuality.quantity !== null ? (
             <>
               <Grid item xs={6} container alignItems="flex-start">
                 <Typography>{t('Average Quantity')}:</Typography>
               </Grid>
               <Grid item xs={6}>
                 <Typography>
-                  {caseState.inputQQ.quantity}m&sup3;/{t('day')}
+                  {caseState.inputQuality.quantity}m&sup3;/{t('day')}
                 </Typography>
               </Grid>
             </>

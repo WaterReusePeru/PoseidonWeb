@@ -9,14 +9,16 @@ export const caseSlice = createSlice({
       countryID: null,
       currency: null //0 is USD, 1 is local currency
     },
-    inputQQ: {
-      category: null,
-      qualityClass: null,
-      quantity: null
+    inputQuality: {
+      category: 28,
+      qualityClass: null
     },
     endUse: {
       category: null,
       qualityClass: null
+    },
+    Quantity: {
+      quantity: null
     }
   },
   reducers: {
@@ -39,33 +41,31 @@ export const caseSlice = createSlice({
       state.completedSteps[0] = 0
     },
     setInputQualityCategory: (state, action) => {
-      state.inputQQ.category = action.payload
-      state.inputQQ.qualityClass = null
+      state.inputQuality.category = action.payload
+      state.inputQuality.qualityClass = null
       state.completedSteps[1] = null
     },
     setInputQualityClass: (state, action) => {
-      state.inputQQ.qualityClass = action.payload
-      if (state.inputQQ.quantity !== null) {
-        state.completedSteps[1] = 1
-      }
-    },
-    setInputQuantity: (state, action) => {
-      state.inputQQ.quantity = action.payload
-      if (action.payload === null) {
-        state.completedSteps[1] = null
-      }
-      if (state.inputQQ.qualityClass !== null && action.payload !== null) {
-        state.completedSteps[1] = 1
-      }
+      state.inputQuality.qualityClass = action.payload
+      state.completedSteps[1] = 1
     },
     setEndUseQualityCategory: (state, action) => {
       state.endUse.category = action.payload
       state.endUse.qualityClass = null
-      state.completedSteps[1] = null
+      state.completedSteps[2] = null
     },
     setEndUseQualityClass: (state, action) => {
       state.endUse.qualityClass = action.payload
       state.completedSteps[2] = 2
+    },
+    setQuantity: (state, action) => {
+      state.Quantity.quantity = action.payload
+      if (action.payload === null) {
+        state.completedSteps[3] = null
+      }
+      if (action.payload !== null) {
+        state.completedSteps[3] = 3
+      }
     }
   }
 })
@@ -79,9 +79,9 @@ export const {
   setCurrency,
   setInputQualityCategory,
   setInputQualityClass,
-  setInputQuantity,
   setEndUseQualityCategory,
-  setEndUseQualityClass
+  setEndUseQualityClass,
+  setQuantity
 } = caseSlice.actions
 
 export default caseSlice.reducer

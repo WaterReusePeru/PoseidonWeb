@@ -6,13 +6,17 @@ import { useSelector, useDispatch } from 'react-redux'
 import Autocomplete from '@material-ui/lab/Autocomplete'
 import waterQualities from '../data/waterQualities.json'
 import waterQualityCategories from '../data/waterQualityCategories.json'
+import waterQualityFactors from '../data/waterQualityFactors.json'
 import { setEndUseQualityCategory, setEndUseQualityClass } from '../case/caseSlice'
 import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
+import { Bar } from './Bar'
 
 export default function EndUse() {
   const endUse = useSelector(state => state.case.endUse)
+  const inputQuality = useSelector(state => state.case.inputQuality)
+
   const dispatch = useDispatch()
 
   const { t } = useTranslation()
@@ -63,6 +67,47 @@ export default function EndUse() {
         <Tooltip title="Information about water quality classes">
           <Chip label="?" size="small" />
         </Tooltip>
+      </Grid>
+
+      <Grid item container xs={12} justify="space-evenly" alignItems="center">
+        {endUse.qualityClass !== null
+          ? waterQualityFactors.map(f => {
+              const key = f.name
+
+              return (
+                <div style={{ width: 'calc(1/6*80%' }}>
+                  <Bar
+                    factor={f.name}
+                    unit={f.unit}
+                    input={
+                      waterQualities[inputQuality.qualityClass][key] < 0
+                        ? null
+                        : waterQualities[inputQuality.qualityClass][key]
+                    }
+                    output={
+                      waterQualities[endUse.qualityClass][key] < 0 ? null : waterQualities[endUse.qualityClass][key]
+                    }
+                  />
+                </div>
+              )
+            })
+          : waterQualityFactors.map(f => {
+              const key = f.name
+
+              return (
+                <div style={{ width: 'calc(1/6*80%' }}>
+                  <Bar
+                    factor={f.name}
+                    unit={f.unit}
+                    input={
+                      waterQualities[inputQuality.qualityClass][key] < 0
+                        ? null
+                        : waterQualities[inputQuality.qualityClass][key]
+                    }
+                  />
+                </div>
+              )
+            })}
       </Grid>
     </Grid>
   )

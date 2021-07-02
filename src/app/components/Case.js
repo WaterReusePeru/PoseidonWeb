@@ -3,8 +3,9 @@ import React from 'react'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
 import CommInfo from './CommInfo'
-import InputQQ from './InputQQ'
+import InputQuality from './InputQuality'
 import EndUse from './EndUse'
+import Quantity from './Quantity'
 import CaseBox from './CaseBox'
 
 import Grid from '@material-ui/core/Grid'
@@ -60,11 +61,11 @@ function getStepContent(step) {
     case 0:
       return <CommInfo />
     case 1:
-      return <InputQQ />
+      return <InputQuality />
     case 2:
       return <EndUse />
     case 3:
-      return 'Personalize'
+      return <Quantity />
     default:
       return 'Unknown step'
   }
@@ -74,7 +75,7 @@ export const Case = () => {
   const { t } = useTranslation()
 
   const getSteps = () => {
-    return [t('Community Information'), t('Input Quality & Quantity'), t('End Use'), t('Personalize')]
+    return [t('Community Information'), t('Input Quality'), t('End Use'), t('Quantity'), t('Personalize')]
   }
 
   const count = useSelector(state => state.case.step)

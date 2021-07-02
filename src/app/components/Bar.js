@@ -24,7 +24,7 @@ export const Bar = props => {
   console.log(theme)
 
   return (
-    <div style={{ height: 200, width: 80 }}>
+    <div style={{ height: 200, width: 100 }}>
       <ResponsiveBar
         data={data}
         indexBy="name"
@@ -37,17 +37,15 @@ export const Bar = props => {
         colorBy="indexValue"
         axisTop={null}
         axisRight={null}
-        axisLeft={null}
         axisBottom={{
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: 'tss',
+          legend: props.factor.toUpperCase() + ' [' + props.unit + ']',
           legendPosition: 'middle',
           legendOffset: 30
         }}
         enableGridY={false}
-        labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
         animate={true}
         motionStiffness={115}
         motionDamping={15}

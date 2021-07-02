@@ -46,8 +46,9 @@ export const resources = {
       Reference: 'Referencia',
 
       'Community Information': 'Información Comunitaria',
-      'Input Quality & Quantity': 'Introducir la Calidad y la Cantidad',
+      'Input Quality': 'Introducir la Calidad',
       'End Use': 'Uso Final',
+      Quantity: 'Qantidad',
       Personalize: 'Personalizar',
       Finish: 'Terminar',
       Next: 'Próximo',
