@@ -14,7 +14,7 @@ export const caseSlice = createSlice({
       qualityClass: null
     },
     endUse: {
-      category: null,
+      category: 28,
       qualityClass: null
     },
     Quantity: {

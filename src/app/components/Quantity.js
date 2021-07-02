@@ -3,20 +3,16 @@ import { Tooltip, Typography } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import { useSelector, useDispatch } from 'react-redux'
-import Autocomplete from '@material-ui/lab/Autocomplete'
 import { setQuantity } from '../case/caseSlice'
 import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
-import i18next from 'i18next'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import { Bar } from './Bar'
 
 export default function Quantity() {
   const Quantity = useSelector(state => state.case.Quantity)
   const dispatch = useDispatch()
 
   const { t } = useTranslation()
-  const lang = i18next.language
 
   const [validQuantity, setValidQuantity] = React.useState(true)
 

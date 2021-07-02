@@ -29,7 +29,7 @@ export const Bar = props => {
         data={data}
         indexBy="name"
         keys={[props.factor]}
-        margin={{ top: 10, right: 0, bottom: 40, left: 0 }}
+        margin={{ top: 10, right: 0, bottom: 50, left: 0 }}
         padding={0.3}
         valueScale={{ type: 'linear' }}
         indexScale={{ type: 'band', round: false }}
@@ -43,7 +43,7 @@ export const Bar = props => {
           tickRotation: 0,
           legend: props.factor.toUpperCase() + ' [' + props.unit + ']',
           legendPosition: 'middle',
-          legendOffset: 30
+          legendOffset: 40
         }}
         enableGridY={false}
         animate={true}

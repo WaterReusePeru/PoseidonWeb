@@ -100,6 +100,7 @@ export const Case = () => {
             return (
               <Step key={label} {...stepProps}>
                 <StepLabel {...labelProps}>{label}</StepLabel>
+                {/* <Typography variant="caption">{index}</Typography> Here we could add the case infos as well.. */}
               </Step>
             )
           })}
