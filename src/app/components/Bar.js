@@ -1,27 +1,40 @@
 import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import { useTheme } from '@material-ui/core/styles'
+import { Paper } from '@material-ui/core'
 
 export const Bar = props => {
   const theme = useTheme()
 
-  const data = [
-    {
-      name: 'input',
-      [props.factor]: props.input
-    }
-  ]
+  var outputColor = theme.palette.primary.main
+
+  if (props.input < props.output) {
+    outputColor = theme.palette.error.main
+  } else {
+    outputColor = theme.palette.success.main
+  }
+
+  const input = {
+    name: 'input',
+    [props.factor]: props.input,
+    color: theme.palette.primary.main
+  }
 
   const output = {
     name: 'output',
-    [props.factor]: props.output
+    [props.factor]: props.output,
+    color: outputColor
+  }
+
+  let data = []
+
+  if (props.input) {
+    data.push(input)
   }
 
   if (props.output) {
     data.push(output)
   }
-
-  console.log(theme)
 
   return (
     <div style={{ height: 200, width: 100 }}>
@@ -33,8 +46,8 @@ export const Bar = props => {
         padding={0.3}
         valueScale={{ type: 'linear' }}
         indexScale={{ type: 'band', round: false }}
-        colors={{ scheme: 'paired' }}
-        colorBy="indexValue"
+        colors={d => d.data.color}
+        colorBy="id"
         axisTop={null}
         axisRight={null}
         axisBottom={{
@@ -45,10 +58,22 @@ export const Bar = props => {
           legendPosition: 'middle',
           legendOffset: 40
         }}
+        labelSkipHeight={36}
+        label={d => `${Number(d.value).toLocaleString('de-CH')}`}
         enableGridY={false}
         animate={true}
         motionStiffness={115}
         motionDamping={15}
+        tooltip={({ id, value, color }) => (
+          <Paper
+            style={{
+              padding: 12,
+              background: '#fff'
+            }}
+          >
+            {id.toUpperCase()}: {Number(value).toLocaleString('de-CH') + ' [' + props.unit + ']'}
+          </Paper>
+        )}
       />
     </div>
   )
