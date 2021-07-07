@@ -2,26 +2,28 @@ import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import { useTheme } from '@material-ui/core/styles'
 import { Paper } from '@material-ui/core'
+import { useTranslation } from 'react-i18next'
 
 export const Bar = props => {
   const theme = useTheme()
+  const { t } = useTranslation()
 
   var outputColor = theme.palette.primary.main
 
-  if (props.input < props.output) {
+  if (Number(props.input) > Number(props.output)) {
     outputColor = theme.palette.error.main
   } else {
     outputColor = theme.palette.success.main
   }
 
   const input = {
-    name: 'input',
+    name: t('input'),
     [props.factor]: props.input,
     color: theme.palette.primary.main
   }
 
   const output = {
-    name: 'output',
+    name: t('output'),
     [props.factor]: props.output,
     color: outputColor
   }
@@ -36,8 +38,16 @@ export const Bar = props => {
     data.push(output)
   }
 
+  var legend
+
+  if (props.factor === 'turbidity') {
+    legend = t('Turbidity') + ' [' + props.unit + ']'
+  } else {
+    legend = props.factor.toUpperCase() + ' [' + props.unit + ']'
+  }
+
   return (
-    <div style={{ height: 200, width: 100 }}>
+    <div style={{ height: 250, width: 100 }}>
       <ResponsiveBar
         data={data}
         indexBy="name"
@@ -45,7 +55,7 @@ export const Bar = props => {
         margin={{ top: 10, right: 0, bottom: 50, left: 0 }}
         padding={0.3}
         valueScale={{ type: 'linear' }}
-        indexScale={{ type: 'band', round: false }}
+        indexScale={{ type: 'band', round: true }}
         colors={d => d.data.color}
         colorBy="id"
         axisTop={null}
@@ -54,7 +64,7 @@ export const Bar = props => {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: props.factor.toUpperCase() + ' [' + props.unit + ']',
+          legend: legend,
           legendPosition: 'middle',
           legendOffset: 40
         }}
@@ -64,14 +74,14 @@ export const Bar = props => {
         animate={true}
         motionStiffness={115}
         motionDamping={15}
-        tooltip={({ id, value, color }) => (
+        tooltip={({ id, value }) => (
           <Paper
             style={{
               padding: 12,
               background: '#fff'
             }}
           >
-            {id.toUpperCase()}: {Number(value).toLocaleString('de-CH') + ' [' + props.unit + ']'}
+            {id.toUpperCase() + ':'} <br /> {Number(value).toLocaleString('de-CH') + ' [' + props.unit + ']'}
           </Paper>
         )}
       />

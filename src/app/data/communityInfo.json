@@ -5,10 +5,10 @@
     "nameEs": "Perú",
     "currency": "SOL",
     "exchangeToUSD": 3.75,
-    "landCost": 10000,
-    "electricityCost": 0.79,
-    "personalCost": 2.5,
-    "discountRate": 0.08
+    "landCost": 2000,
+    "electricityCost": 0.06,
+    "personalCost": 3.5,
+    "discountRate": 0.05
   },
   {
     "id": 1,

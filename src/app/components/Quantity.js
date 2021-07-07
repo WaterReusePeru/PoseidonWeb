@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next'
 import InputAdornment from '@material-ui/core/InputAdornment'
 
 export default function Quantity() {
-  const Quantity = useSelector(state => state.case.Quantity)
+  const quantity = useSelector(state => state.case.quantity)
   const dispatch = useDispatch()
 
   const { t } = useTranslation()
@@ -45,7 +45,7 @@ export default function Quantity() {
             shrink: true
           }}
           onChange={event => handleChangeQuantity(event.target.value)}
-          value={Quantity.quantity !== null ? Quantity.quantity : null}
+          value={quantity.amount !== null ? quantity.amount : null}
           InputProps={{
             endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>
           }}

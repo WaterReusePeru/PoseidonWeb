@@ -6,7 +6,7 @@ export const caseSlice = createSlice({
     step: 0,
     completedSteps: [null, null, null, null],
     commInfo: {
-      countryID: null,
+      countryID: 0,
       currency: null //0 is USD, 1 is local currency
     },
     inputQuality: {
@@ -17,8 +17,8 @@ export const caseSlice = createSlice({
       category: 28,
       qualityClass: null
     },
-    Quantity: {
-      quantity: null
+    quantity: {
+      amount: null
     }
   },
   reducers: {
@@ -59,7 +59,7 @@ export const caseSlice = createSlice({
       state.completedSteps[2] = 2
     },
     setQuantity: (state, action) => {
-      state.Quantity.quantity = action.payload
+      state.quantity.amount = action.payload
       if (action.payload === null) {
         state.completedSteps[3] = null
       }

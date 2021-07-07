@@ -18,7 +18,6 @@ export default function SimpleMenu() {
   }
 
   const handleChooseLanguage = lang => {
-    console.log(lang)
     i18next.changeLanguage(lang)
     handleClose()
   }

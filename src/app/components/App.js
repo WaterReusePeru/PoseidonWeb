@@ -73,7 +73,7 @@ export const App = () => {
               <OpacityIcon style={{position: 'relative', top: '8px'}} /> Poseidon Web alpha 0.1
                 </Typography>
             </div> */}
-            <div style={{ width: 150 }}>
+            <div>
               <UserMenu />
             </div>
             {/* <ThemeSwitch /> */}

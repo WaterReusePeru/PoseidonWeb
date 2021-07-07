@@ -3,7 +3,6 @@ import makeStyles from '@material-ui/core/styles/makeStyles'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import { useTranslation } from 'react-i18next'
-import { Bar } from './Bar'
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -32,7 +31,6 @@ export default function GeneralReference() {
     <div className={classes.main}>
       <Paper elevation={0} style={{ padding: 10 }}>
         <Typography variant="h6">{t('General Reference')}</Typography>
-        <Bar factor={'tss'} input="100" />
       </Paper>
     </div>
   )

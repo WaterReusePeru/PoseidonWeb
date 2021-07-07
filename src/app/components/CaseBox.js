@@ -35,11 +35,13 @@ export default function CaseBox() {
         </Grid>
 
         <Grid item container xs={12} spacing={1} alignItems="center">
-          <Grid item xs={1}>
-            <Chip label="1" color="primary" size="small" />
-          </Grid>
-          <Grid item xs={11}>
-            <Typography>{t('Community Information')}</Typography>
+          <Grid item container justify="flex-start" spacing={1} xs={12} style={{ marginTop: 20 }}>
+            <Grid item>
+              <Chip label="1" color="primary" size="small" />
+            </Grid>
+            <Grid item>
+              <Typography>{t('Community Information')}</Typography>
+            </Grid>
           </Grid>
           {caseState.commInfo.countryID !== null ? (
             <>
@@ -71,11 +73,13 @@ export default function CaseBox() {
           ) : (
             <div />
           )}
-          <Grid item xs={1}>
-            <Chip label="2" color="primary" size="small" />
-          </Grid>
-          <Grid item xs={11}>
-            <Typography>{t('Input Quality & Quantity')}</Typography>
+          <Grid item container justify="flex-start" spacing={1} xs={12} style={{ marginTop: 20 }}>
+            <Grid item>
+              <Chip label="2" color="primary" size="small" />
+            </Grid>
+            <Grid item>
+              <Typography>{t('Input Quality & Quantity')}</Typography>
+            </Grid>
           </Grid>
           {caseState.inputQuality.category !== null ? (
             <>
@@ -109,25 +113,13 @@ export default function CaseBox() {
           ) : (
             <div />
           )}
-          {caseState.inputQuality.quantity !== null ? (
-            <>
-              <Grid item xs={6} container alignItems="flex-start">
-                <Typography>{t('Average Quantity')}:</Typography>
-              </Grid>
-              <Grid item xs={6}>
-                <Typography>
-                  {caseState.inputQuality.quantity}m&sup3;/{t('day')}
-                </Typography>
-              </Grid>
-            </>
-          ) : (
-            <div />
-          )}
-          <Grid item xs={1}>
-            <Chip label="3" color="primary" size="small" />
-          </Grid>
-          <Grid item xs={11}>
-            <Typography>{t('End Use')}</Typography>
+          <Grid item container justify="flex-start" spacing={1} xs={12} style={{ marginTop: 20 }}>
+            <Grid item>
+              <Chip label="3" color="primary" size="small" />
+            </Grid>
+            <Grid item>
+              <Typography>{t('End Use')}</Typography>
+            </Grid>
           </Grid>
           {caseState.endUse.category !== null ? (
             <>
@@ -161,12 +153,28 @@ export default function CaseBox() {
           ) : (
             <div />
           )}
-          <Grid item xs={1}>
-            <Chip label="4" color="primary" size="small" />
+          <Grid item container justify="flex-start" spacing={1} xs={12} style={{ marginTop: 20 }}>
+            <Grid item>
+              <Chip label="4" color="primary" size="small" />
+            </Grid>
+            <Grid item>
+              <Typography>{t('Quantity')}</Typography>
+            </Grid>
           </Grid>
-          <Grid item xs={11}>
-            <Typography>{t('Personalize')}</Typography>
-          </Grid>
+          {caseState.quantity.amount !== null ? (
+            <>
+              <Grid item xs={6} container alignItems="flex-start">
+                <Typography>{t('Average Quantity')}:</Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography>
+                  {caseState.quantity.amount}m&sup3;/{t('day')}
+                </Typography>
+              </Grid>
+            </>
+          ) : (
+            <div />
+          )}
         </Grid>
       </Grid>
     </Paper>
