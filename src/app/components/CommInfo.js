@@ -23,6 +23,10 @@ export default function CommInfo() {
 
   const usdObj = { id: 1000, currency: 'USD' }
 
+  if (commInfo.countryID === null) {
+    dispatch(setCountry(0))
+  }
+
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
       <Grid item xs={12}>

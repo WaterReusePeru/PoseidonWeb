@@ -1,18 +1,20 @@
 import React from 'react'
 
-import makeStyles from '@material-ui/core/styles/makeStyles'
+import { makeStyles, withStyles } from '@material-ui/core/styles'
 
 import CommInfo from './CommInfo'
 import InputQuality from './InputQuality'
 import EndUse from './EndUse'
 import Quantity from './Quantity'
 import CaseBox from './CaseBox'
+import { CaseSummary } from './CaseSummary'
 
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import Stepper from '@material-ui/core/Stepper'
 import Step from '@material-ui/core/Step'
 import StepLabel from '@material-ui/core/StepLabel'
+import StepConnector from '@material-ui/core/StepConnector'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
@@ -20,6 +22,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { next, previous, reset } from '../case/caseSlice'
 import { theme } from '../theme/theme'
 import { useTranslation } from 'react-i18next'
+import i18next from 'i18next'
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -56,6 +59,16 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
+const CustomConnector = withStyles({
+  root: {
+    alignSelf: 'flex-start',
+    paddingTop: '13px' //This hardcoded value sets the line in the middle of the stepper icons. It's not optimal.
+  },
+  line: {
+    borderRadius: 1
+  }
+})(StepConnector)
+
 function getStepContent(step) {
   switch (step) {
     case 0:
@@ -71,7 +84,10 @@ function getStepContent(step) {
   }
 }
 
+const lang = i18next.language
+
 export const Case = () => {
+  const caseState = useSelector(state => state.case)
   const { t } = useTranslation()
 
   const getSteps = () => {
@@ -93,14 +109,14 @@ export const Case = () => {
   return (
     <div className="App">
       <Paper className={classes.root} square elevation={3}>
-        <Stepper activeStep={count}>
+        <Stepper activeStep={count} connector={<CustomConnector />}>
           {steps.map((label, index) => {
             const stepProps = {}
             const labelProps = {}
             return (
-              <Step key={label} {...stepProps}>
+              <Step key={label} {...stepProps} style={{ alignSelf: 'flex-start' }}>
                 <StepLabel {...labelProps}>{label}</StepLabel>
-                {/* <Typography variant="caption">{index}</Typography> Here we could add the case infos as well.. */}
+                <CaseSummary step={index} />
               </Step>
             )
           })}

@@ -6,15 +6,15 @@ export const caseSlice = createSlice({
     step: 0,
     completedSteps: [null, null, null, null],
     commInfo: {
-      countryID: 0,
+      countryID: null,
       currency: null //0 is USD, 1 is local currency
     },
     inputQuality: {
-      category: 28,
+      category: null,
       qualityClass: null
     },
     endUse: {
-      category: 28,
+      category: null,
       qualityClass: null
     },
     quantity: {

@@ -20,6 +20,10 @@ export default function InputQuality() {
   const { t } = useTranslation()
   const lang = i18next.language
 
+  if (inputQuality.category === null) {
+    dispatch(setInputQualityCategory(28))
+  }
+
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
       <Grid item xs={12}>
@@ -68,25 +72,36 @@ export default function InputQuality() {
       </Grid>
 
       <Grid item container xs={12} justify="space-evenly" alignItems="center">
-        {waterQualityFactors.map(f => {
-          const key = f.name
+        {inputQuality.qualityClass !== null
+          ? waterQualityFactors.map(f => {
+              const key = f.name
 
-          return (
-            <div style={{ width: 'calc(1/6*80%' }}>
-              <Bar
-                factor={f.name}
-                unit={f.unit}
-                input={
-                  inputQuality.qualityClass === null
-                    ? null
-                    : waterQualities[inputQuality.qualityClass][key] < 0
-                    ? null
-                    : waterQualities[inputQuality.qualityClass][key]
-                }
-              />
-            </div>
-          )
-        })}
+              return (
+                <div style={{ width: 'calc(1/6*80%' }}>
+                  <Bar
+                    factor={f.name}
+                    unit={f.unit}
+                    input={
+                      inputQuality.qualityClass === null
+                        ? null
+                        : waterQualities[inputQuality.qualityClass][key] < 0
+                        ? null
+                        : waterQualities[inputQuality.qualityClass][key]
+                    }
+                    average={waterQualities[0][key]}
+                  />
+                </div>
+              )
+            })
+          : waterQualityFactors.map(f => {
+              const key = f.name
+
+              return (
+                <div style={{ width: 'calc(1/6*80%' }}>
+                  <Bar factor={f.name} unit={f.unit} />
+                </div>
+              )
+            })}
       </Grid>
     </Grid>
   )

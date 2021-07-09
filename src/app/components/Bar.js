@@ -22,6 +22,12 @@ export const Bar = props => {
     color: theme.palette.primary.main
   }
 
+  const average = {
+    name: t('avg. input'),
+    [props.factor]: props.average,
+    color: theme.palette.info.main
+  }
+
   const output = {
     name: t('output'),
     [props.factor]: props.output,
@@ -38,12 +44,28 @@ export const Bar = props => {
     data.push(output)
   }
 
+  if (props.average) {
+    data.push(average)
+  }
+
   var legend
 
   if (props.factor === 'turbidity') {
     legend = t('Turbidity') + ' [' + props.unit + ']'
   } else {
     legend = props.factor.toUpperCase() + ' [' + props.unit + ']'
+  }
+
+  var label
+
+  function getLabel(d) {
+    if (props.factor === 'tc' || props.factor === 'fc') {
+      return Number(d.value)
+        .toExponential()
+        .toLocaleString('de-CH')
+    } else {
+      return Number(d.value).toLocaleString('de-CH')
+    }
   }
 
   return (
@@ -69,7 +91,7 @@ export const Bar = props => {
           legendOffset: 40
         }}
         labelSkipHeight={36}
-        label={d => `${Number(d.value).toLocaleString('de-CH')}`}
+        label={d => getLabel(d)}
         enableGridY={false}
         animate={true}
         motionStiffness={115}

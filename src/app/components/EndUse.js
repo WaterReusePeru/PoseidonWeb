@@ -22,6 +22,10 @@ export default function EndUse() {
   const { t } = useTranslation()
   const lang = i18next.language
 
+  if (endUse.category === null) {
+    dispatch(setEndUseQualityCategory(28))
+  }
+
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
       <Grid item xs={12}>
