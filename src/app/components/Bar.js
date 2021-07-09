@@ -56,8 +56,6 @@ export const Bar = props => {
     legend = props.factor.toUpperCase() + ' [' + props.unit + ']'
   }
 
-  var label
-
   function getLabel(d) {
     if (props.factor === 'tc' || props.factor === 'fc') {
       return Number(d.value)

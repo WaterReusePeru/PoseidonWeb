@@ -1,33 +1,20 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import Grid from '@material-ui/core/Grid'
-import makeStyles from '@material-ui/core/styles/makeStyles'
 import { Typography } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
 import communityInfo from '../data/communityInfo'
 import waterQualities from '../data/waterQualities.json'
-import waterQualityCategories from '../data/waterQualityCategories.json'
-
-const useStyles = makeStyles(theme => ({
-  paper: {
-    backgroundColor: theme.palette.background.default,
-    padding: 10
-  }
-}))
 
 export const CaseSummary = props => {
-  const classes = useStyles()
-
   const { step } = props
 
   const caseState = useSelector(state => state.case)
 
   const { t } = useTranslation()
   const lang = i18next.language
-
-  let summary
 
   return (
     <Grid item container spacing={1} alignItems="flex-start">

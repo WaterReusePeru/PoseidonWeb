@@ -22,7 +22,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import { next, previous, reset } from '../case/caseSlice'
 import { theme } from '../theme/theme'
 import { useTranslation } from 'react-i18next'
-import i18next from 'i18next'
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -84,10 +83,7 @@ function getStepContent(step) {
   }
 }
 
-const lang = i18next.language
-
 export const Case = () => {
-  const caseState = useSelector(state => state.case)
   const { t } = useTranslation()
 
   const getSteps = () => {

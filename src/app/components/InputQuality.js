@@ -94,8 +94,6 @@ export default function InputQuality() {
               )
             })
           : waterQualityFactors.map(f => {
-              const key = f.name
-
               return (
                 <div style={{ width: 'calc(1/6*80%' }}>
                   <Bar factor={f.name} unit={f.unit} />
