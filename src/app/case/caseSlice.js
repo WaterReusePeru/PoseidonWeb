@@ -31,6 +31,9 @@ export const caseSlice = createSlice({
     reset: state => {
       state.step = 0
     },
+    setStep: (state, action) => {
+      state.step = action.payload
+    },
     setCountry: (state, action) => {
       state.commInfo.countryID = action.payload
       state.commInfo.currency = null
@@ -75,6 +78,7 @@ export const {
   next,
   previous,
   reset,
+  setStep,
   setCountry,
   setCurrency,
   setInputQualityCategory,

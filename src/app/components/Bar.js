@@ -16,16 +16,16 @@ export const Bar = props => {
     outputColor = theme.palette.success.main
   }
 
+  const average = {
+    name: t('avg. input'),
+    [props.factor]: props.average,
+    color: theme.palette.action.disabled
+  }
+
   const input = {
     name: t('input'),
     [props.factor]: props.input,
     color: theme.palette.primary.main
-  }
-
-  const average = {
-    name: t('avg. input'),
-    [props.factor]: props.average,
-    color: theme.palette.info.main
   }
 
   const output = {
@@ -44,7 +44,7 @@ export const Bar = props => {
     data.push(output)
   }
 
-  if (props.average) {
+  if (props.average & props.input) {
     data.push(average)
   }
 

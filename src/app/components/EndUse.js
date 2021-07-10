@@ -12,12 +12,15 @@ import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 import { Bar } from './Bar'
+import { useTheme } from '@material-ui/core/styles'
 
 export default function EndUse() {
   const endUse = useSelector(state => state.case.endUse)
   const inputQuality = useSelector(state => state.case.inputQuality)
 
   const dispatch = useDispatch()
+
+  const theme = useTheme()
 
   const { t } = useTranslation()
   const lang = i18next.language
@@ -112,6 +115,47 @@ export default function EndUse() {
                 </div>
               )
             })}
+      </Grid>
+
+      <Grid item container xs={12} justify="space-evenly" alignItems="flex-start">
+        <Grid item container xs={3} direction="column" alignItems="center" justify="flex-start">
+          <Grid item>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+              <g>
+                <rect width="10" height="10" fill={theme.palette.primary.main} stroke-width="0"></rect>
+              </g>
+            </svg>
+          </Grid>
+          <Grid item>
+            <Typography variant="caption">{t('Input')}</Typography>
+          </Grid>
+        </Grid>
+
+        <Grid item container xs={3} direction="column" alignItems="center" justify="flex-start">
+          <Grid item>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+              <g>
+                <rect width="10" height="10" fill={theme.palette.error.main} stroke-width="0"></rect>
+              </g>
+            </svg>
+          </Grid>
+          <Grid item>
+            <Typography variant="caption">{t('End use above Input, needs treatment')}</Typography>
+          </Grid>
+        </Grid>
+
+        <Grid item container xs={3} direction="column" alignItems="center" justify="flex-start">
+          <Grid item>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+              <g>
+                <rect width="10" height="10" fill={theme.palette.success.main} stroke-width="0"></rect>
+              </g>
+            </svg>
+          </Grid>
+          <Grid item>
+            <Typography variant="caption">{t('End use below Input, no treatment needed')}</Typography>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   )
