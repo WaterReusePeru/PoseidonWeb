@@ -71,7 +71,9 @@ export const resources = {
       'Number must be integer and between 1 and 1 million': 'El número debe ser entero y estar entre 1 y 1 millón',
 
       input: 'entrada',
-      output: 'salida'
+      output: 'salida',
+
+      'Personalize Solutions': 'Personalizar soluciones'
     }
   }
 }

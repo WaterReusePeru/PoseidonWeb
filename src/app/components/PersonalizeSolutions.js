@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Tooltip, Typography } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
@@ -14,9 +14,8 @@ import i18next from 'i18next'
 import { Bar } from './Bar'
 import { useTheme } from '@material-ui/core/styles'
 
-export default function EndUse() {
-  const endUse = useSelector(state => state.case.endUse)
-  const inputQuality = useSelector(state => state.case.inputQuality)
+export default function PersonalizeSolutions() {
+  const caseState = useSelector(state => state.case)
 
   const dispatch = useDispatch()
 
@@ -25,14 +24,10 @@ export default function EndUse() {
   const { t } = useTranslation()
   const lang = i18next.language
 
-  if (endUse.category === null) {
-    dispatch(setEndUseQualityCategory(28))
-  }
-
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
       <Grid item xs={12}>
-        <Typography variant="h6">{t('End Use')}</Typography>
+        <Typography variant="h6">{t('Personalize Solutions')}</Typography>
       </Grid>
       <Grid item xs={4}>
         <Typography>{t('Select the Category')}</Typography>

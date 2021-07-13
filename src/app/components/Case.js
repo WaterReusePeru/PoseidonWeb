@@ -87,7 +87,7 @@ export const Case = () => {
   const { t } = useTranslation()
 
   const getSteps = () => {
-    return [t('Community Information'), t('Input Quality'), t('End Use'), t('Quantity'), t('Personalize')]
+    return [t('Community Information'), t('Input Quality'), t('End Use'), t('Quantity'), t('Personalize Solutions')]
   }
 
   const count = useSelector(state => state.case.step)
@@ -122,7 +122,7 @@ export const Case = () => {
       <div className={classes.main}>
         <Paper elevation={0} style={{ padding: 10 }}>
           <Grid container spacing={3}>
-            <Grid item container xs={8}>
+            <Grid item container xs={12}>
               {count === steps.length ? (
                 <div>
                   <Typography className={classes.instructions}>All steps completed - you&apos;re finished</Typography>
@@ -157,9 +157,6 @@ export const Case = () => {
                   </div>
                 </Grid>
               )}
-            </Grid>
-            <Grid item xs={4}>
-              <CaseBox />
             </Grid>
           </Grid>
         </Paper>

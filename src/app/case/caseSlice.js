@@ -18,7 +18,9 @@ export const caseSlice = createSlice({
       qualityClass: null
     },
     quantity: {
-      amount: null
+      amount: null,
+      distance: null,
+      heightDifference: null
     }
   },
   reducers: {
@@ -66,9 +68,21 @@ export const caseSlice = createSlice({
       if (action.payload === null) {
         state.completedSteps[3] = null
       }
-      if (action.payload !== null) {
+      if (action.payload !== null && state.quantity.distance !== null) {
         state.completedSteps[3] = 3
       }
+    },
+    setDistance: (state, action) => {
+      state.quantity.distance = action.payload
+      if (action.payload === null) {
+        state.completedSteps[3] = null
+      }
+      if (action.payload !== null && state.quantity.quantity !== null) {
+        state.completedSteps[3] = 3
+      }
+    },
+    setHeightDifference: (state, action) => {
+      state.quantity.heightDifference = action.payload
     }
   }
 })
@@ -85,7 +99,9 @@ export const {
   setInputQualityClass,
   setEndUseQualityCategory,
   setEndUseQualityClass,
-  setQuantity
+  setQuantity,
+  setDistance,
+  setHeightDifference
 } = caseSlice.actions
 
 export default caseSlice.reducer
