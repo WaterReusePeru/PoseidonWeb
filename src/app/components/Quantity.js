@@ -8,10 +8,13 @@ import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import SolutionsBox from './SolutionsBox'
+import CalculateSolutions from '../case/CalculateSolutions'
 
 export default function Quantity() {
   const quantity = useSelector(state => state.case.quantity)
   const dispatch = useDispatch()
+
+  CalculateSolutions()
 
   const { t } = useTranslation()
 
@@ -82,7 +85,7 @@ export default function Quantity() {
 
           <Grid item xs={2} style={{ textAlign: 'center' }}>
             <Tooltip title="Information about amounts">
-              <Chip label="?" size="small" />
+              <Chip style={{ marginBottom: 20 }} label="?" size="small" />
             </Tooltip>
           </Grid>
 
@@ -110,7 +113,7 @@ export default function Quantity() {
 
           <Grid item xs={2} style={{ textAlign: 'center' }}>
             <Tooltip title="Information about distance">
-              <Chip label="?" size="small" />
+              <Chip style={{ marginBottom: 20 }} label="?" size="small" />
             </Tooltip>
           </Grid>
 
@@ -138,7 +141,7 @@ export default function Quantity() {
 
           <Grid item xs={2} style={{ textAlign: 'center' }}>
             <Tooltip title="Information about height differences">
-              <Chip label="?" size="small" />
+              <Chip style={{ marginBottom: 20 }} label="?" size="small" />
             </Tooltip>
           </Grid>
         </Grid>

@@ -21,6 +21,14 @@ export const caseSlice = createSlice({
       amount: null,
       distance: null,
       heightDifference: null
+    },
+    solution: {
+      noneNeeded: false,
+      noneAvailable: false
+    },
+    solution1: {
+      treatmentTrain: null,
+      price: null
     }
   },
   reducers: {
@@ -83,6 +91,19 @@ export const caseSlice = createSlice({
     },
     setHeightDifference: (state, action) => {
       state.quantity.heightDifference = action.payload
+    },
+    setSolutionNoneNeeded: (state, action) => {
+      state.solution.noneNeeded = action.payload
+    },
+    resetSolutions: state => {
+      state.solution.noneNeeded = false
+      state.solution.noneAvailable = false
+    },
+    setSolutionNoneAvailable: (state, action) => {
+      state.solution.noneAvailable = action.payload
+    },
+    setSolution1TreatmentTrain: (state, action) => {
+      state.solution1.treatmentTrain = action.payload
     }
   }
 })
@@ -101,7 +122,11 @@ export const {
   setEndUseQualityClass,
   setQuantity,
   setDistance,
-  setHeightDifference
+  setHeightDifference,
+  resetSolutions,
+  setSolutionNoneNeeded,
+  setSolutionNoneAvailable,
+  setSolution1TreatmentTrain
 } = caseSlice.actions
 
 export default caseSlice.reducer

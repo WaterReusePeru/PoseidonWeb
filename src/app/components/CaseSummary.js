@@ -10,7 +10,7 @@ import waterQualities from '../data/waterQualities.json'
 
 import PublicIcon from '@material-ui/icons/Public'
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney'
-import InputIcon from '@material-ui/icons/Input'
+import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 import AutorenewIcon from '@material-ui/icons/Autorenew'
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt'
@@ -31,29 +31,22 @@ export const CaseSummary = props => {
           <>
             <Grid item>
               {caseState.commInfo.countryID !== null ? (
-                <Grid container alignItems="center" spacing={1} justify="center">
-                  <Grid item>
-                    <PublicIcon fontSize="small" color="primary" />
-                  </Grid>
-                  <Grid item>
-                    <Typography variant="caption">
-                      {lang === 'en'
-                        ? communityInfo[caseState.commInfo.countryID].name
-                        : communityInfo[caseState.commInfo.countryID].nameEs}
-                    </Typography>
-                  </Grid>
+                <Grid container alignItems="center" direction="row" spacing={0}>
+                  <PublicIcon fontSize="small" color="primary" />
+
+                  <Typography variant="caption">
+                    {lang === 'en'
+                      ? communityInfo[caseState.commInfo.countryID].name
+                      : communityInfo[caseState.commInfo.countryID].nameEs}
+                  </Typography>
                   {caseState.commInfo.currency !== null ? (
                     <>
-                      <Grid item>
-                        <AttachMoneyIcon fontSize="small" color="primary" />
-                      </Grid>
-                      <Grid item>
-                        <Typography variant="caption">
-                          {caseState.commInfo.currency === 0
-                            ? 'USD'
-                            : communityInfo[caseState.commInfo.countryID].currency}
-                        </Typography>
-                      </Grid>
+                      <AttachMoneyIcon fontSize="small" color="primary" />
+                      <Typography variant="caption">
+                        {caseState.commInfo.currency === 0
+                          ? 'USD'
+                          : communityInfo[caseState.commInfo.countryID].currency}
+                      </Typography>
                     </>
                   ) : (
                     <div />
@@ -71,17 +64,13 @@ export const CaseSummary = props => {
         {step === 1 ? (
           <Grid item>
             {caseState.inputQuality.qualityClass !== null ? (
-              <Grid container alignItems="center" spacing={1} justify="center">
-                <Grid item>
-                  <InputIcon fontSize="small" color="primary" />
-                </Grid>
-                <Grid item>
-                  <Typography variant="caption">
-                    {lang === 'en'
-                      ? waterQualities[caseState.inputQuality.qualityClass].name
-                      : waterQualities[caseState.inputQuality.qualityClass].nameEs}
-                  </Typography>
-                </Grid>
+              <Grid container alignItems="center" direction="row" spacing={0}>
+                <ExitToAppIcon fontSize="small" color="primary" />
+                <Typography variant="caption">
+                  {lang === 'en'
+                    ? waterQualities[caseState.inputQuality.qualityClass].name
+                    : waterQualities[caseState.inputQuality.qualityClass].nameEs}
+                </Typography>
               </Grid>
             ) : (
               <div />
@@ -94,17 +83,13 @@ export const CaseSummary = props => {
         {step === 2 ? (
           <Grid item>
             {caseState.endUse.qualityClass !== null ? (
-              <Grid container alignItems="center" spacing={1} justify="center">
-                <Grid item>
-                  <AutorenewIcon fontSize="small" color="primary" />
-                </Grid>
-                <Grid item>
-                  <Typography variant="caption">
-                    {lang === 'en'
-                      ? waterQualities[caseState.endUse.qualityClass].name
-                      : waterQualities[caseState.endUse.qualityClass].nameEs}
-                  </Typography>
-                </Grid>
+              <Grid container alignItems="center" direction="row" spacing={0}>
+                <AutorenewIcon fontSize="small" color="primary" />
+                <Typography variant="caption">
+                  {lang === 'en'
+                    ? waterQualities[caseState.endUse.qualityClass].name
+                    : waterQualities[caseState.endUse.qualityClass].nameEs}
+                </Typography>
               </Grid>
             ) : (
               <div />
@@ -117,23 +102,15 @@ export const CaseSummary = props => {
         {step === 3 ? (
           <Grid item>
             {caseState.quantity.amount !== null ? (
-              <Grid container alignItems="center" spacing={1} justify="center">
-                <Grid item>
-                  <BatteryFullIcon fontSize="small" color="primary" />
-                </Grid>
-                <Grid item>
-                  <Typography variant="caption">
-                    {caseState.quantity.amount}m&sup3;/{t('day')}
-                  </Typography>
-                </Grid>
+              <Grid container alignItems="center" direction="row" spacing={0}>
+                <BatteryFullIcon fontSize="small" color="primary" />
+                <Typography variant="caption">
+                  {caseState.quantity.amount}m&sup3;/{t('day')}
+                </Typography>
                 {caseState.quantity.distance !== null ? (
                   <>
-                    <Grid item>
-                      <ArrowRightAltIcon fontSize="small" color="primary" />
-                    </Grid>
-                    <Grid item>
-                      <Typography variant="caption">{caseState.quantity.distance}m</Typography>
-                    </Grid>
+                    <ArrowRightAltIcon fontSize="small" color="primary" />
+                    <Typography variant="caption">{caseState.quantity.distance}m</Typography>
                   </>
                 ) : (
                   <div />
@@ -141,12 +118,9 @@ export const CaseSummary = props => {
 
                 {caseState.quantity.heightDifference !== null ? (
                   <>
-                    <Grid item>
-                      <ArrowUpwardIcon fontSize="small" color="primary" />
-                    </Grid>
-                    <Grid item>
-                      <Typography variant="caption">{caseState.quantity.heightDifference}m</Typography>
-                    </Grid>
+                    <ArrowUpwardIcon fontSize="small" color="primary" />
+
+                    <Typography variant="caption">{caseState.quantity.heightDifference}m</Typography>
                   </>
                 ) : (
                   <div />

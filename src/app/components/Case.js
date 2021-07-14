@@ -6,7 +6,6 @@ import CommInfo from './CommInfo'
 import InputQuality from './InputQuality'
 import EndUse from './EndUse'
 import Quantity from './Quantity'
-import CaseBox from './CaseBox'
 import { CaseSummary } from './CaseSummary'
 
 import Grid from '@material-ui/core/Grid'
