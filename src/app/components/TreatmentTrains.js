@@ -93,7 +93,7 @@ class TreatmentTrains extends React.Component {
             return (
               <div className={classes.chipContainer}>
                 {UPList.map((up, index) => (
-                  <Tooltip title={lang === 'en' ? unitProcesses[up - 1].name : unitProcesses[up - 1].nameEs}>
+                  <Tooltip title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
                     <Chip label={up} key={index} size="small" color="primary" />
                   </Tooltip>
                 ))}

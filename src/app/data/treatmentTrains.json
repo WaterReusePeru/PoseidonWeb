@@ -9,7 +9,7 @@
     "descriptionEs": "Tratamiento convencional de aguas residuales, incluida la eliminación de P y N, seguido de una filtración de doble medio y una desinfección por UV o cloro. La reutilización varía desde las aplicaciones urbanas, el paisajismo verde hasta el uso industrial. En Europa y Australia existen varios ejemplos de reutilización de aguas agrícolas y medioambientales tras su tratamiento con variaciones del tren de tratamiento del Título 22.",
     "case_study": "This concept exists as standard in the USA (Graaf, 2005).",
     "case_studyEs": "Este concepto existe como norma en Estados Unidos (Graaf, 2005).",
-    "unit_processes": [1, 3, 6, 8, 20, 21, 22, 35]
+    "unit_processes": [0, 2, 5, 7, 19, 20, 21, 34]
   },
   {
     "id": 1,
@@ -21,7 +21,7 @@
     "descriptionEs": "Las aguas residuales tratadas convencionalmente en la PTAR de Is Arenas (cribado, desarenado, decantación primaria, fangos activados + sedimentación en segundo lugar, desinfección con NaOCl) se someten a un tratamiento terciario y se vierten al embalse de Simbirizzi. Se reutiliza directamente o tras su almacenamiento en el embalse con fines de riego (Vacca et al., 2005).",
     "case_study": "Water reclamation scheme Is Arenas, Sardinia for irrigation (AQUAREC; 2006; Vacca et al., 2005).",
     "case_studyEs": "Plan de recuperación de agua en Is Arenas, Cerdeña, para el riego (AQUAREC; 2006; Vacca et al., 2005).",
-    "unit_processes": [1, 3, 5, 12, 8, 35, 32, 22, 37]
+    "unit_processes": [0, 2, 4, 11, 7, 34, 31, 21, 36]
   },
   {
     "id": 2,
@@ -33,7 +33,7 @@
     "descriptionEs": "El tren de tratamiento de la instalación de recuperación de agua consta de tratamiento preliminar, tratamiento biológico, eliminación de fósforo, tratamiento de lodos, almacenamiento intermedio, tratamiento terciario y desinfección. El plan de recuperación de agua de Callala forma parte del plan de gestión de aguas regeneradas de Northern Shoalhaven (REMS): http://shoalhavenwater.com/projects/rems.htm",
     "case_study": "The Callala water reclamation scheme in New South Wales is designed for irrigation of dairy farm pastures, golf courses and recreational areas (AQUAREC, 2006; Shoalhaven Water: http://shoalwater.nsw.gov.au/education/pdfs/The%20Wastewater%20Process.pdf).",
     "case_studyEs": "El plan de recuperación de agua de Callala, en Nueva Gales del Sur, está diseñado para el riego de pastos de granjas lecheras, campos de golf y zonas de recreo (AQUAREC, 2006; Shoalhaven Water: http://shoalwater.nsw.gov.au/education/pdfs/The%20Wastewater%20Process.pdf).",
-    "unit_processes": [1, 3, 4, 12, 16, 22, 35]
+    "unit_processes": [0, 2, 3, 11, 15, 21, 34]
   },
   {
     "id": 3,
@@ -45,7 +45,7 @@
     "descriptionEs": "El tratamiento primario incluye una unidad de pretratamiento para eliminar las partículas de mayor tamaño y degradar la carga orgánica de las aguas residuales. Además, los colectores de malla, arena y grasa antes del tratamiento biológico garantizan una buena degradación en el proceso de tratamiento secundario, que consiste en un tratamiento convencional de lodos activados. El tratamiento terciario incluye la filtración de arena y la etapa de desinfección realizada con cloro gaseoso (sólo se muestra el sistema terciario)",
     "case_study": "The tertiary treated effluent of Limassol WWTP in Cyprus is distributed and sold for many purposes such as groundwater recharge and irrigation of golf courses, hotel gardens, olives, deciduous trees and some vegetables (AQUAREC, 2006).",
     "case_studyEs": "El efluente tratado en el terciario de la PTAR de Limassol, en Chipre, se distribuye y vende para muchos fines, como la recarga de aguas subterráneas y el riego de campos de golf, jardines de hoteles, olivos, árboles de hoja caduca y algunas hortalizas (AQUAREC, 2006)",
-    "unit_processes": [1, 3, 6, 8, 22, 35]
+    "unit_processes": [0, 2, 5, 7, 21, 34]
   },
   {
     "id": 4,
@@ -57,7 +57,7 @@
     "descriptionEs": "La PTAR de Hersonissos ha sido diseñada para tratar tanto las aguas residuales municipales del municipio de Hersonissos como los residuos sépticos de la zona. El efluente de la PTAR pasa por una unidad de filtración de arena seguida de una etapa de cloración.",
     "case_study": "After tertiary treatment, the effluent of Hersonissos WWTP is re-used mainly for agricultural irrigation (and to a minor extent fire protection and landscape irrigation) (AQUAREC, 2006).",
     "case_studyEs": "Tras el tratamiento terciario, el efluente de la PTAR de Hersonissos se reutiliza principalmente para el riego agrícola (y en menor medida para la protección contra incendios y el riego paisajístico) (AQUAREC, 2006).",
-    "unit_processes": [1, 3, 5, 10, 22, 36]
+    "unit_processes": [0, 2, 4, 9, 21, 35]
   },
   {
     "id": 5,
@@ -69,7 +69,7 @@
     "descriptionEs": "El efluente secundario de la PTAR, La China, en Madrid se recupera en un tratamiento terciario que incluye la filtración por arena y desinfección. Después de la desinfección con rayos UV, el agua regenerada se envía a los depósitos principales y luego se entrega para el riego de los parques. Los depósitos principales reciben cloración (se utiliza dióxido de cloro como desinfectante secundario) (AQUAREC, 2006). Aquí sólo se muestra la etapa de tratamiento terciario.",
     "case_study": "Example from Spain of a water reclamation scheme for park irrigation based on sewage treated in La China WWTP in Madrid (AQUAREC, 2006).",
     "case_studyEs": "Ejemplo de España de un plan de recuperación de agua para el riego de parques basado en las aguas residuales tratadas en la PTAR de La China en Madrid (AQUAREC, 2006).",
-    "unit_processes": [22, 37, 36]
+    "unit_processes": [21, 36, 35]
   },
   {
     "id": 6,
@@ -81,7 +81,7 @@
     "descriptionEs": "Sistema de sedimentación primaria con digestión de lodos y tratamiento de estanques con efluentes colocados en dos lagos construidos. Se dispone de una planta de lodos activados con capacidad de desnitrificación. El efluente se vierte en cuencas de infiltración. La planta terciaria consta de un sistema de coagulación y floculación con alumbre y un decantador de láminas para la eliminación de la turbidez y el exceso de fósforo, seguido de un filtro de desnitrificación con metanol como fuente de carbono. Todos los efluentes se desinfectan con cloro. El efluente que se va a utilizar en el sistema del lago se desclora con dióxido de azufre (Asano et al., 2006).",
     "case_study": "The Santee recreational lakes project developed initially as an economic alternative to wastewater disposal in the Pacific Ocean. The series of lakes are supplied with reclaimed water and used for various recreational activities like fishing, boating, and camping (Asano et al., 2006).",
     "case_studyEs": "El proyecto de los lagos recreativos de Santee se desarrolló inicialmente como una alternativa económica al vertido de aguas residuales en el Océano Pacífico. La serie de lagos se abastece de agua regenerada y se utiliza para diversas actividades recreativas como la pesca, la navegación y el camping (Asano et al., 2006).",
-    "unit_processes": [5, 10, 22, 20, 21, 36]
+    "unit_processes": [4, 9, 21, 19, 20, 35]
   },
   {
     "id": 7,
@@ -93,7 +93,7 @@
     "descriptionEs": "El esquema presentado es un tren de proceso de tratamiento básico para la reutilización del agua. El principal problema es la concentración final de amoníaco en el efluente, ya que el sistema propuesto no realiza la etapa de nitrificación. La principal consecuencia es la mayor dosis de cloro para alcanzar el punto de ruptura (Mierzwa, 2014).",
     "case_study": "Example for Water Reuse for industries in Brazil. This reuse scheme is used by SABESP to supply re-used water (from two wastewater treatment plants, Jesus Neto and Parque Novo Mundo) for industrial purposes in Sao Paulo, Brazil (Mierzwa, 2014).",
     "case_studyEs": "Ejemplo de reutilización del agua para las industrias en Brasil. Este esquema de reutilización es utilizado por SABESP para suministrar agua reutilizada (de dos plantas de tratamiento de aguas residuales, Jesús Neto y Parque Novo Mundo) para fines industriales en Sao Paulo, Brasil (Mierzwa, 2014).",
-    "unit_processes": [2, 3, 5, 11, 22, 36]
+    "unit_processes": [1, 2, 4, 10, 21, 35]
   },
   {
     "id": 8,
@@ -105,7 +105,7 @@
     "descriptionEs": "Una empresa farmacéutica (Tienen) utiliza las aguas residuales municipales tratadas para el agua de refrigeración. El efluente secundario tratado se ozoniza para su desinfección. Si la cantidad de agua residual recuperada es demasiado baja o la temperatura demasiado alta, se mezcla con agua subterránea antes de su uso. La PTAR consiste en un sistema de lodos activados de baja carga con eliminación biológica mejorada de fósforo (AQUAREC, 2006).",
     "case_study": "Example from Belgium re-using water to produce cooling water for industrial purposes (AQUAREC, 2006).",
     "case_studyEs": "Ejemplo de Bélgica que reutiliza el agua para producir agua de refrigeración para fines industriales (AQUAREC, 2006).",
-    "unit_processes": [10, 19, 34]
+    "unit_processes": [9, 18, 33]
   },
   {
     "id": 9,
@@ -117,7 +117,7 @@
     "descriptionEs": "Se trata del primer esquema de reutilización de agua en Brasil con una red de distribución específica para el agua de reutilización. Se implementó en un condominio residencial. El agua de reutilización se utiliza para aplicaciones no potables, como la descarga del inodoro, el riego y la limpieza del suelo (Mierzwa, 2014).",
     "case_study": "This is a reuse scheme in the SPMR for urban water reuse (Mierzwa, 2014).",
     "case_studyEs": "Se trata de un esquema de reutilización en el SPMR para la reutilización de aguas urbanas (Mierzwa, 2014).",
-    "unit_processes": [1, 3, 7, 13, 20, 18, 37, 36]
+    "unit_processes": [0, 2, 6, 12, 19, 17, 36, 35]
   },
   {
     "id": 10,
@@ -129,7 +129,7 @@
     "descriptionEs": "La PTAR de Tenorio se diseñó para una capacidad total de 1'050 L/s (90'720 m3/d) y utiliza las siguientes etapas de tratamiento: Cribado, desarenado y desengrasado y tratamiento primario avanzado en clarificadores lamelares reforzados con productos químicos para la capacidad total. Tratamiento secundario de hasta 38.880 m3/d mediante lodos activados con eliminación de nitrógeno, seguido de un tratamiento terciario con cal, filtración de arena, ablandamiento por intercambio iónico y desinfección con cloro para su reutilización industrial. El agua se reutiliza en las torres de refrigeración de una central eléctrica (Lazarova et al., 2014).",
     "case_study": "Example of water reuse for industrial purpose from San Luis Potosi, Mexico (US EPA,2012; Lazarova et al., 2014).",
     "case_studyEs": "Ejemplo de reutilización de agua para fines industriales de San Luis Potosí, México (US EPA,2012; Lazarova et al., 2014).",
-    "unit_processes": [1, 3, 6, 11, 22, 28, 36]
+    "unit_processes": [0, 2, 5, 10, 21, 27, 35]
   },
   {
     "id": 11,
@@ -141,7 +141,7 @@
     "descriptionEs": "Proyecto de reciclaje de agua en Durban. El proceso de tratamiento preliminar y primario de las aguas residuales consta de operaciones de cribado, degradación y sedimentación primaria; realizadas por Ethekweni Metro Water Services (EMWS). Mientras tanto, el efluente del tanque de sedimentación primaria se introduce en la planta de lodos activados. Se coloca policloruro de aluminio (PAC), seguido de una etapa de filtración de doble medio. El último paso es la ozonización. La instalación de reciclaje de agua produce efluentes (47 megalitros/d) para su reutilización en aplicaciones industriales. La empresa Mondi utiliza el agua regenerada para la producción de papel fino y es muy sensible a la calidad del agua procesada y su impacto en el brillo del papel (US EPA, 2012; E-104).",
     "case_study": "Example of water reuse for industrial purpose from Durban, South Aftica (US EPA, 2012).",
     "case_studyEs": "Ejemplo de reutilización del agua para fines industriales en Durban, Sudáfrica (US EPA, 2012).",
-    "unit_processes": [1, 3, 6, 11, 22, 34]
+    "unit_processes": [0, 2, 5, 10, 21, 33]
   },
   {
     "id": 12,
@@ -153,7 +153,7 @@
     "descriptionEs": "Tratamiento convencional de las aguas residuales, incluida la eliminación de P y N, seguido de la infiltración a través de grandes superficies del suelo; el agua final puede reutilizarse para el riego sin restricciones.",
     "case_study": "Examples are present in the Mediterranean area (Israel).  (Graaf, 2005)",
     "case_studyEs": "Hay ejemplos en la zona del Mediterráneo (Israel).  (Graaf, 2005)",
-    "unit_processes": [1, 3, 6, 8, 20, 21, 30]
+    "unit_processes": [0, 2, 5, 7, 19, 20, 29]
   },
   {
     "id": 13,
@@ -165,7 +165,7 @@
     "descriptionEs": "Los efluentes de la PTAR de la región de Dan se conducen a cuatro cuencas de recarga que cubren una superficie total de 80 hectáreas. La infiltración en las aguas subterráneas se realiza mediante inundación y secado alternados. Tras el sistema SAT, el agua regenerada debe ser clorada para mantener la calidad bacteriológica de las largas líneas de distribución. Aproximadamente 200 pozos de recuperación, situados entre 300 y 1500 m de las cuencas de recarga, bombean el agua recargada desde una profundidad de 100 a 200 m. El agua recuperada del sistema SAT es de muy alta calidad y puede utilizarse para el riego agrícola sin restricciones (AQUAREC, 2006).",
     "case_study": "The Dan region (Israel) infiltrates treated wastewater in the soil (SAT). Water is stored in local reservoirs and post chlorinated before usage for agricultural irrigation (AQUAREC, 2006).",
     "case_studyEs": "La región del Dan (Israel) infiltra las aguas residuales tratadas en el suelo (SAT). El agua se almacena en embalses locales y se clora antes de utilizarla para el riego agrícola (AQUAREC, 2006).",
-    "unit_processes": [1, 3, 10, 30, 35]
+    "unit_processes": [0, 2, 9, 29, 34]
   },
   {
     "id": 14,
@@ -177,7 +177,7 @@
     "descriptionEs": "La planta de Recuperación de Aguas del Noroeste tiene un tratamiento que incluye un tratamiento secundario con eliminación de nutrientes, filtración, clarificación y desinfección. El agua regenerada se vierte en dos lugares de recarga y en el río Salt, que también recarga el acuífero (Asano et al., 2006).",
     "case_study": "Mesa city (Arizona, USA) has two reclamation plants. Both plants reclaim water for re-use on golf courses, crop irrigation, industrial uses, freeway landscape watering, and for groundwater recharge (Asano et al., 2006).",
     "case_studyEs": "La ciudad de Mesa (Arizona, EE.UU.) cuenta con dos plantas de regeneración. Ambas plantas recuperan agua para reutilizarla en campos de golf, en el riego de cultivos, en usos industriales, en el riego de jardines en autopistas y para la recarga de aguas subterráneas (Asano et al., 2006).",
-    "unit_processes": [1, 3, 5, 8, 22, 36, 30]
+    "unit_processes": [0, 2, 4, 7, 21, 35, 29]
   },
   {
     "id": 15,
@@ -189,7 +189,7 @@
     "descriptionEs": "Los humedales se utilizan como unidades de tratamiento secundario o terciario, es decir, las aguas residuales suelen tratarse primero en unidades de tratamiento primario, como tanques de sedimentación o plantas de tratamiento técnico (Gauss, 2008). Los ejemplos de América Central y del Sur utilizan más bien soluciones de baja tecnología como tratamientos primarios, mientras que las aplicaciones en Europa y Estados Unidos utilizan métodos convencionales de tratamiento primario de aguas residuales, incluida la eliminación de P y N. La reutilización puede hacerse en la conservación de la naturaleza o en la agricultura.",
     "case_study": "Applications are present in Europe and the USA (Graaf, 2005). There are also examples in Latin America (Gauss, 2008; http://www.wsp.org/sites/wsp.org/files/publications/ConstructedWetlands.pdf) ",
     "case_studyEs": "Hay aplicaciones en Europa y Estados Unidos (Graaf, 2005). También hay ejemplos en América Latina (Gauss, 2008; http://www.wsp.org/sites/wsp.org/files/publications/ConstructedWetlands.pdf).",
-    "unit_processes": [1, 3, 6, 8, 20, 21, 18]
+    "unit_processes": [0, 2, 5, 7, 19, 20, 17]
   },
   {
     "id": 16,
@@ -201,7 +201,7 @@
     "descriptionEs": "El sistema está tratando las aguas residuales domésticas (100 metros cúbicos al día) generadas por unas 1.000 personas que viven en la ciudad de Masaya (Nicaragua). El sistema comprende un pretratamiento (tamiz y desarenador) y cuatro lechos de humedales construidos alimentados en paralelo. La superficie de cada lecho de humedal es de unos 350 metros cuadrados, con un total de 1.400 metros cuadrados. El efluente de la planta piloto de Masaya puede utilizarse para el riego restringido (Gauss, 2008).",
     "case_study": "Constructed Wetland  in Masaya Pilot Plant Nicaragua (Gauss, 2008).",
     "case_studyEs": "Humedal construido en la planta piloto de Masaya, Nicaragua (Gauss, 2008).",
-    "unit_processes": [1, 3, 18]
+    "unit_processes": [0, 2, 17]
   },
   {
     "id": 17,
@@ -213,7 +213,7 @@
     "descriptionEs": "Se construyeron tres humedales. Cada esquema de humedal construido da servicio a unas 2.500 personas e incluye un tamiz manual, separadores de arena y tanques de sedimentación como pasos de pretratamiento de las aguas residuales domésticas antes de que entren en el humedal, que está compuesto por dos unidades del tipo de flujo horizontal subsuperficial. El agua tratada se reutilizará con fines de reforestación (Gauss, 2008).",
     "case_study": "Constructed Wetland schemes in the arid outskirts of Peru’s capital Lima (Gauss, 2008).",
     "case_studyEs": "Esquemas de humedales construidos en las áridas afueras de la capital de Perú, Lima (Gauss, 2008).",
-    "unit_processes": [1, 3, 5, 18]
+    "unit_processes": [0, 2, 4, 17]
   },
   {
     "id": 18,
@@ -225,7 +225,7 @@
     "descriptionEs": "Los sistemas de tratamiento en humedales construidos (Agronômica, Videira, Tubarão y São Joaquim), que utilizan fosas sépticas como tratamiento primario, se diseñaron para una población de 50 a 150 personas. Se utiliza arena gruesa como medio filtrante y los humedales están plantados con plantas locales de humedal. El efluente de algunos de los sistemas recibe un tratamiento adicional en estanques de estabilización y se utiliza para la acuicultura (piscicultura).",
     "case_study": "Several small constructed wetland projects have been implemented since 1990 in the state of Santa Catarina in south-eastern Brazil (Gauss, 2008)",
     "case_studyEs": "Desde 1990 se han llevado a cabo varios pequeños proyectos de humedales construidos en el estado de Santa Catarina, en el sureste de Brasil (Gauss, 2008).",
-    "unit_processes": [5, 18]
+    "unit_processes": [4, 17]
   },
   {
     "id": 19,
@@ -237,7 +237,7 @@
     "descriptionEs": "Los primeros pasos del tratamiento en la PTAR de Arcata consisten en pantallas de barra, una cámara de arena y 2 tanques de sedimentación para el tratamiento primario. El tratamiento secundario y parcialmente terciario se lleva a cabo mediante 2 estanques de oxidación seguidos de 3 humedales paralelos FWS (superficie de agua libre) que se construyeron en 1985. (Después de la cloración y la decloración, una parte de las aguas residuales se libera mientras que otra fluye hacia los llamados 'humedales de mejora FWS'). Los 'humedales de mejora', junto con algunas características paisajísticas adicionales, se denominan Arcata Marsh and Wildlife Sanctuary (AQUAREC, 2006).",
     "case_study": "Treated effluent from Arcata WWTP (California, USA), is discharged into ‘enhancement wetlands’, which are part of the Arcata Marsh and Wildlife Sanctuary (AQUAREC, 2006).",
     "case_studyEs": "El efluente tratado de la PTAR de Arcata (California, EE.UU.) se vierte en los 'humedales de mejora', que forman parte de la marisma de Arcata y del Santuario de Vida Silvestre (AQUAREC, 2006).",
-    "unit_processes": [1, 3, 5, 7, 36, 18]
+    "unit_processes": [0, 2, 4, 6, 35, 17]
   },
   {
     "id": 20,
@@ -249,7 +249,7 @@
     "descriptionEs": "La PTAR de Empuriabrava (Costa Brava, España) es del tipo de aireación extendida y consta, en su forma actual, de una etapa de pretratamiento mecánico y, a continuación, de dos líneas de tratamiento paralelas, cada una de ellas compuesta por un reactor biológico, un clarificador y tres balsas de pulido de efluentes. Recientemente se ha añadido un tratamiento químico para la eliminación de fósforo. El tratamiento posterior se realiza mediante un sistema de humedales (3 celdas paralelas) que empezó a funcionar en 1998 (AQUAREC, 2006; Sala et al., 2004).",
     "case_study": "Example from Spain with the goals to feed water of sufficient quality to the Cortalet lagoon in a Natural Reserve and to stimulate the recovery and establishment of local flora and fauna (AQUAREC, 2006; Sala et al., 2004). ",
     "case_studyEs": "Ejemplo de España con los objetivos de alimentar con suficiente agua de calidad la laguna del Cortalet en una Reserva Natural y estimular la recuperación y el establecimiento de la flora y la fauna locales (AQUAREC, 2006; Sala et al., 2004).",
-    "unit_processes": [1, 3, 12, 20, 31, 18]
+    "unit_processes": [0, 2, 11, 19, 30, 17]
   },
   {
     "id": 21,
@@ -261,7 +261,7 @@
     "descriptionEs": "La PTAR de Tenorio se diseñó para una capacidad total de 1'050 L/s (90'720 m3/d) y utiliza las siguientes etapas de tratamiento: cribado, desarenado y desengrasado y tratamiento primario avanzado en clarificadores lamelares reforzados con productos químicos para la capacidad total. Tratamiento natural de ingeniería y pulido para al menos 51.840 m3/d en un humedal construido, de forma semirrectangular, con una superficie total de 179 ha y una capacidad de almacenamiento de 2,65 Mm3, denominado Embalse de Tenorio, para su reutilización agrícola (Lazarova et al., 2014).",
     "case_study": "Example of water reuse for agricultural purpose from San Luis Potosi, Mexico (US EPA 2012; Lazarova et al., 2014).",
     "case_studyEs": "Ejemplo de reutilización de agua para fines agrícolas de San Luis Potosí, México (US EPA 2012; Lazarova et al., 2014).",
-    "unit_processes": [1, 3, 6, 18]
+    "unit_processes": [0, 2, 5, 17]
   },
   {
     "id": 22,
@@ -273,7 +273,7 @@
     "descriptionEs": "El principal lugar de reutilización de aguas residuales en la agricultura urbana de Dakar es Pikine. Del total de la superficie cultivada de Pikine, que es de unas 50 hectáreas, unas 16 hectáreas utilizan las aguas residuales brutas para el riego. Normalmente, los agricultores desvían las aguas residuales del alcantarillado mediante tuberías para cargarlas en pozos estrechos situados en su parcela. Desde ese pozo, utilizan bidones de agua para regar cultivos como la lechuga, que crece rápidamente. Se ha introducido el tratamiento de aguas residuales mediante humedales, que ha demostrado una buena eliminación de E. coli y huevos de helmintos. Las líneas de tratamiento probadas utilizaban combinaciones de cuatro estanques (cada uno de 2 m3) en serie: Un estanque de estabilización de residuos seguido de tres estanques plantados con juncos o Vetivera sp. con superficie de agua libre y flujo de agua superficial (US EPA; pp. 97).",
     "case_study": "Example of water reuse for agricultural purpose from Dakar, Senegal (US EPA, 2012)",
     "case_studyEs": "Ejemplo de reutilización del agua para fines agrícolas en Dakar, Senegal (US EPA, 2012).",
-    "unit_processes": [16, 18, 18, 18]
+    "unit_processes": [15, 17, 17, 17]
   },
   {
     "id": 23,
@@ -285,7 +285,7 @@
     "descriptionEs": "Tratamiento de las aguas residuales mediante lagunaje (varios tipos en serie), ocasionalmente seguido de cloración; reutilización del efluente mediante riego (muy) restringido.",
     "case_study": "Typical application for Mediterranean countries with moderate treatment facilities (Graaf, 2005)",
     "case_studyEs": "Aplicación típica para países del Mediterráneo con instalaciones de tratamiento moderadas (Graaf, 2005)",
-    "unit_processes": [31, 31, 31, 31, 36]
+    "unit_processes": [30, 30, 30, 30, 35]
   },
   {
     "id": 24,
@@ -297,7 +297,7 @@
     "descriptionEs": "Los sistemas de recuperación de efluentes de riego sin restricciones de Hakishon se basan principalmente en la recepción de efluentes de las PTAR de Haifa y Afula y algunas aguas de inundación, el almacenamiento a largo plazo y el tratamiento complementario de los efluentes (mediante filtración por colado superficial y cloración). Tren de tratamiento de la PTAR de Haifa: Construido para realizar la nitrificación-desnitrificación junto con la eliminación orgánica (se ha incluido este tren de tratamiento, ya que la PTAR tiene mayor capacidad) Tren de tratamiento de la EDAR de Afula: Funciona según el principio de aireación extendida. Los efluentes clorados de las dos PTAR se depuran en un embalse principal con un tiempo de retención de al menos 60 días (donde también se mezcla con las aguas pluviales). Desde el embalse, el agua se filtra y se clora y se envía al riego o a los embalses periféricos (AQUAREC, 2006).",
     "case_study": "The chlorinated effluents from two WWTPs in Haifa, Israel are purified in retention reservoirs from where water is filtered and chlorinated and either sent to irrigation or to peripheral reservoirs (AQUAREC, 2006).",
     "case_studyEs": "Los efluentes clorados de dos PTAR de Haifa (Israel) se depuran en embalses de retención desde los que se filtra y clora el agua y se envía al riego o a embalses periféricos (AQUAREC, 2006).",
-    "unit_processes": [1, 3, 6, 10, 36, 31, 22, 36]
+    "unit_processes": [0, 2, 5, 9, 35, 30, 21, 35]
   },
   {
     "id": 25,
@@ -309,7 +309,7 @@
     "descriptionEs": "Para el riego agrícola, las aguas residuales tratadas de tres PTAR (la principal: la PTAR de La Salaisière) de la isla se pulen en estanques de maduración. La Salaisiére recibe los efluentes de tres municipios y está compuesta por sistemas de lodos activados y sistemas de lagunas aireadas. Los efluentes tratados de todas las PTAR desembocan en un sistema de lagunas-almacenamiento, cuatro lagunas en serie con un volumen total de 196300 m3 que se utiliza como tratamiento terciario y como instalación de almacenamiento antes del riego. El agua almacenada que no se utiliza para el riego se vierte al mar.",
     "case_study": "One of the typical storage and polishing lagoons case studies. Treated water of WWTPs on the island (Noirmoutier island, France) is polished in maturation ponds and reused for potatoes growing (AQUAREC, 2006).",
     "case_studyEs": "Uno de los estudios de caso típicos de las lagunas de almacenamiento y pulido. El agua tratada de las PTAR de la isla (isla de Noirmoutier, Francia) se pule en lagunas de maduración y se reutiliza para el cultivo de patatas (AQUAREC, 2006).",
-    "unit_processes": [11, 7, 7, 16, 16, 31, 31, 31, 31]
+    "unit_processes": [10, 6, 6, 15, 15, 30, 30, 30, 30]
   },
   {
     "id": 26,
@@ -321,7 +321,7 @@
     "descriptionEs": "Los efluentes de la PTAR de Bolívar se reutilizan para el riego hortícola en la zona de Virginia (Australia). Los principales cultivos que se riegan son los de raíces y ensaladas, las brásicas, las uvas de vino y las aceitunas (= riego sin restricciones). Las aguas residuales de las zonas metropolitanas de Adelaida se tratan en la PTAR de Bolívar mediante un proceso de lodos activados. Los efluentes del tratamiento secundario se mantienen en lagunas de aireación poco profundas durante un mínimo de 6 semanas, antes de pasar por un proceso de flotación por aire disuelto y filtración de doble medio en la planta de recuperación de agua. Aquí, los efluentes se descargan a través de un clorador en un almacenamiento de equilibrio antes de ser bombeados a la tubería para su distribución para el riego hortícola (AQUAREC, 2006).",
     "case_study": "Example from Australia of water reclamation for horticultural (unrestricted) irrigation (AQUAREC, 2006).",
     "case_studyEs": "Ejemplo de recuperación de agua para el riego hortícola (sin restricciones) en Australia (AQUAREC, 2006).",
-    "unit_processes": [31, 32, 22, 36]
+    "unit_processes": [30, 31, 21, 35]
   },
   {
     "id": 27,
@@ -333,7 +333,7 @@
     "descriptionEs": "El sistema de reutilización de aguas de Picton produce agua regenerada que se utiliza para el cultivo de pastos de alfalfa y raygrass/trébol y una parcela de bosque. El proceso de regeneración del agua incluye lagunas de aireación prolongada con decantación intermitente, operadas de manera que permitan niveles de nitrógeno y fósforo en el efluente adecuados para el riego agrícola y silvícola, seguidos de filtros de arena y desinfección UV. El efluente tratado se almacena en una presa donde un tiempo de retención mínimo de 10 días consigue la calidad de agua necesaria para el riego de los cultivos.",
     "case_study": "Example from Australia of water reclamation for restricted irrigation (AQUAREC, 2006).",
     "case_studyEs": "Ejemplo de recuperación de agua para riego restringido en Australia (AQUAREC, 2006).",
-    "unit_processes": [31, 22, 37, 31]
+    "unit_processes": [30, 21, 36, 30]
   },
   {
     "id": 28,
@@ -345,7 +345,7 @@
     "descriptionEs": "Parrow es un suburbio del norte de Ciudad del Cabo, en la provincia del Cabo Occidental (Sudáfrica). La PTAR de Parrow tiene una capacidad de diseño de 1,2 millones de litros al día, pero en 2007 utilizaba el 85% de su capacidad. Todos los efluentes de la depuradora se utilizaban para el riego del campo de golf y los campos de fútbol de Parrow. Se puede mejorar para suministrar efluentes tratados para regar colegios y diferentes complejos deportivos (Adewumi, 2011).",
     "case_study": "Water reuse for irrigation of golf course  and footbal fields from Parrow, South Africa (Adewumi, 2011).",
     "case_studyEs": "Reutilización del agua para el riego de campos de golf y fútbol en Parrow, Sudáfrica (Adewumi, 2011).",
-    "unit_processes": [1, 3, 6, 8, 31, 35]
+    "unit_processes": [0, 2, 5, 7, 30, 34]
   },
   {
     "id": 29,
@@ -357,7 +357,7 @@
     "descriptionEs": "Las balsas de estabilización de residuos de Campo Espejo constan de 12 módulos de tres balsas de estabilización de residuos en serie (facultativa, aeróbica y de pulido), que ocupan unas 790,7 ac (320 ha) en total (Idelovitch y Ringskog, 1997). En la actualidad, proporcionan 147.000 m3 /d de efluente para el riego directo. El efluente de la planta de tratamiento de Campo Espejo se descarga en el Canal Moyano y se conduce a una zona especial de riego restringido de 2.700 ha para su reutilización. Los agricultores con propiedades dentro de la zona especial reciben gratuitamente el efluente tratado y están obligados a seguir las normas de riego establecidas. Aproximadamente una cuarta parte de la zona de riego se dedica a la producción de uvas, otra cuarta parte al cultivo de tomates y calabazas, y el resto al cultivo de alfalfa, alcachofas, ajos, melocotones, peras y biomasa de álamo. (US EPA, 2012; pp. E-5).",
     "case_study": "Water reuse for agriculture from waste stabilization ponds in Argentina (US EPA, 2012; https://landscapearchipelago.wordpress.com/2014/07/21/campo-espejo/).",
     "case_studyEs": "Reutilización de agua para la agricultura a partir de balsas de estabilización de residuos en Argentina (US EPA, 2012; https://landscapearchipelago.wordpress.com/2014/07/21/campo-espejo/).",
-    "unit_processes": [1, 3, 16, 5, 31]
+    "unit_processes": [0, 2, 15, 4, 30]
   },
   {
     "id": 30,
@@ -369,7 +369,7 @@
     "descriptionEs": "Durante más de una década, Abu Dhabi ha implantado la reutilización para el riego en el marco del Comité de Proyectos de Alcantarillado del municipio, bajo la dirección de Su Alteza el Jeque Zayed Bin Sultan Al Nahyan. Una inversión de unos 149 millones de dólares (547,5 millones de dírhams de los EAU) ha dado lugar a un sistema de riego que utiliza el agua regenerada de la instalación de tratamiento de aguas residuales de Mafraq para regar aproximadamente una cuarta parte de la zona insular de la ciudad y crear un oasis verde en ella. Esto ha generado un ahorro de agua dulce y una serie de beneficios ecológicos, sociales y económicos. El reverdecimiento de la ciudad ha mejorado el entorno urbano y ha compensado la contaminación y las emisiones de carbono (US EPA, 2012; pp. E-116; http://pdf.usaid.gov/pdf_docs/Pnadl013.pdf).",
     "case_study": "Water reuse for environmental purposes from Abu-Dhabi, United Arab Emirates (US EPA, 2012).",
     "case_studyEs": "Reutilización del agua con fines medioambientales de Abu-Dhabi, Emiratos Árabes Unidos (US EPA, 2012).",
-    "unit_processes": [1, 3, 5, 10, 15, 15, 16, 22, 31, 36]
+    "unit_processes": [0, 2, 4, 9, 14, 14, 15, 21, 30, 35]
   },
   {
     "id": 31,
@@ -381,7 +381,7 @@
     "descriptionEs": "Tratamiento convencional de las aguas residuales, seguido de cloración, que permite la reutilización del agua tratada para el riego en condiciones restringidas.",
     "case_study": "Many examples are available all over Europe (Graaf, 2005).",
     "case_studyEs": "Hay muchos ejemplos en toda Europa (Graaf, 2005).",
-    "unit_processes": [1, 3, 6, 8, 36]
+    "unit_processes": [0, 2, 5, 7, 35]
   },
   {
     "id": 32,
@@ -393,7 +393,7 @@
     "descriptionEs": "La planta de tratamiento de aguas residuales (PTAR) de Western Branch fue seleccionada como caso de estudio por su característica única: tres sistemas de lodos activados separados que funcionan en serie para eliminar los nutrientes. La PTAR de Western Branch forma parte de la Comisión Sanitaria Suburbana de Washington (WSSC) y se encuentra en Upper Marlboro, Maryland. Está autorizada para un caudal de 30 millones de galones diarios (MGD); en 2006 procesó una media de 19,3 MGD. La planta tiene permiso para verter en la rama occidental del río Patuxent. No hay reutilización (US EPA, 2008).",
     "case_study": "Western branch wastewater treatment plant (US EPA, 2008).",
     "case_studyEs": "Rama occidental de la planta de tratamiento de aguas residuales (US EPA, 2008).",
-    "unit_processes": [1, 3, 11, 21, 22, 37]
+    "unit_processes": [0, 2, 10, 20, 21, 36]
   },
   {
     "id": 33,
@@ -405,7 +405,7 @@
     "descriptionEs": "Las aguas residuales de Copiapó se dirigen a la PTAR de Copiapó, donde en primer lugar las aguas residuales se someten a un tratamiento primario para retener los sólidos gruesos, y luego a un tratamiento secundario para realizar la oxidación de la materia orgánica mediante lodos activados.  La mezcla pasa a un proceso de separación de sólidos y líquidos en el clarificador, generando una corriente de lodos y una corriente de agua tratada. La corriente de agua es sometida a cloración y descargada al río Copiapó (Guzmán, 2015).",
     "case_study": "Treatment train of Copiapó Wastewater Treatment Plant. Water re-use in mining industry and agriculture (Guzmán, 2015).",
     "case_studyEs": "Tren de tratamiento de la Planta de Tratamiento de Aguas Residuales de Copiapó. Reutilización del agua en la industria minera y la agricultura (Guzmán, 2015).",
-    "unit_processes": [1, 3, 12, 35]
+    "unit_processes": [0, 2, 11, 34]
   },
   {
     "id": 34,
@@ -417,7 +417,7 @@
     "descriptionEs": "El agua reutilizada se aplica a las cisternas de los inodoros, al riego y a la limpieza del suelo. Este esquema de reutilización de agua se instaló en, al menos, cinco edificios de apartamentos en el SPMR. Este sistema de reutilización del agua se diseñó originalmente con un contactor biológico rotativo para la eliminación de la BOD y un sistema de filtración. Sin embargo, el promotor, basándose en los costes de inversión, decidió comprar e instalar el tren de tratamiento específico. Debido a esta decisión, el agua tratada no puede ser almacenada durante más de un día antes de ser reutilizada, por problemas de olores (Mierzwa, 2014).",
     "case_study": "This is a reuse scheme in the SPMR for urban water reuse (Mierzwa, 2014).",
     "case_studyEs": "Se trata de un esquema de reutilización en el SPMR para la reutilización de aguas urbanas (Mierzwa, 2014).",
-    "unit_processes": [4, 5, 22, 36]
+    "unit_processes": [3, 4, 21, 35]
   },
   {
     "id": 35,
@@ -429,7 +429,7 @@
     "descriptionEs": "Microfiltración o ultrafiltración de aguas residuales crudas seguida de aplicaciones agrícolas (Graaf, 2005).",
     "case_study": "New concept, which is investigated in several places (Netherland, China, Israel).  (Graaf, 2005)",
     "case_studyEs": "Concepto nuevo, que se investiga en varios lugares (Países Bajos, China, Israel) (Graaf, 2005).",
-    "unit_processes": [1, 3, 24, 26]
+    "unit_processes": [0, 2, 23, 25]
   },
   {
     "id": 36,
@@ -441,7 +441,7 @@
     "descriptionEs": "Water Conserv II es el primer proyecto de Florida que utiliza agua regenerada para regar cultivos destinados al consumo humano. Los objetivos principales de Water Conserv II eran la reducción de los vertidos de aguas residuales, el riego agrícola (principalmente de cítricos) y la recarga de aguas subterráneas. Dos instalaciones de recuperación de agua, la Instalación de Recuperación de Agua de la Ciudad de Orlando y la Instalación Regional de Recuperación de Agua del Condado de Orange, proporcionan agua recuperada en la zona del proyecto. Proceso de tratamiento: cribado, desarenado, sedimentación primaria, lodos activados con aireación de burbujas finas y clarificación secundaria. El efluente se filtra y se clora antes de ser bombeado al centro de distribución para su reutilización. Los clientes agrícolas y comerciales utilizan el 60% del agua regenerada, y el 40% restante se recarga en las aguas subterráneas a través de las cuencas de infiltración del río. (Asano, et al, 2006).",
     "case_study": "Landscape Irrigation with reclaimed wastewater in US (Asano et al., 2006).",
     "case_studyEs": "Riego paisajístico con aguas residuales regeneradas en Estados Unidos (Asano et al., 2006).",
-    "unit_processes": [1, 3, 5, 9, 23, 33, 29, 30]
+    "unit_processes": [0, 2, 4, 8, 22, 32, 28, 29]
   },
   {
     "id": 37,
@@ -453,7 +453,7 @@
     "descriptionEs": "El tratamiento primario incluye un tamiz fino, la eliminación de arenas y un clarificador primario. El sistema de lodos activados incluye la nitrificación, la desnitrificación y la eliminación biológica de fósforo. El tratamiento terciario incluye floculación, sedimentación terciaria y filtración. Una parte del efluente se mejora en la planta de reciclaje mediante microfiltración y dosificación de hipoclorito de sodio. El agua se almacena en tres depósitos. El agua reciclada se utiliza para la jardinería, el lavado de coches y las cisternas de los inodoros (AQUAREC, 2006).",
     "case_study": "Example of urban water reuse scheme in Sydney (Australia) (AQUAREC, 2006). ",
     "case_studyEs": "Ejemplo de plan de reutilización de aguas urbanas en Sidney (Australia) (AQUAREC, 2006).",
-    "unit_processes": [1, 3, 5, 10, 32, 22, 23, 36]
+    "unit_processes": [0, 2, 4, 9, 31, 21, 22, 35]
   },
   {
     "id": 38,
@@ -465,7 +465,7 @@
     "descriptionEs": "Tratamiento a pequeña escala de (parte de) las aguas residuales mediante un sistema MBR con reutilización del agua en el vecindario directo (como agua de descarga del inodoro). Las aguas residuales recuperadas y/o el agua de lluvia recogida se utilizan para diversos fines. El agua se utiliza sobre todo para las cisternas de los inodoros, pero también puede utilizarse para el riego de jardines, la refrigeración, la limpieza de coches y la protección contra incendios (US EPA, 2012).",
     "case_study": "Typical solution for Japanese office buildings is now also introduced in some Europeans sites (Graaf, 2005).",
     "case_studyEs": "La solución típica de los edificios de oficinas japoneses se ha introducido también en algunos sitios europeos (Graaf, 2005).",
-    "unit_processes": [17]
+    "unit_processes": [16]
   },
   {
     "id": 39,
@@ -477,7 +477,7 @@
     "descriptionEs": "El Solaire es un edificio residencial de gran altura en Nueva York que cuenta con un sistema de aguas residuales in situ para tratar las aguas residuales de las cisternas de los inodoros y el agua de refrigeración. El sistema de recuperación de aguas del Solaire incluye los siguientes elementos: tanque de alimentación del afluente aireado, trampa de basura para interceptar los sólidos no biodegradables, biorreactor de membrana (MBR) de tres etapas que consiste en un tanque de mezcla anóxica, un tanque de digestión aeróbica, un tanque de filtrado que contiene unidades de membrana de ultrafiltración y la recirculación del licor mezclado al tanque anóxico, oxidación con ozono para la eliminación del color, desinfección con rayos ultravioleta (UV), tanques de almacenamiento de agua terminada, sistema de bombeo de refuerzo y tuberías de distribución de agua regenerada (Asano et al., 2006)",
     "case_study": "An example of an MBR system used for onsite wastewater reclamation/reuse system in a private building in New York, US (Asano, et al., 2006).",
     "case_studyEs": "Un ejemplo de un sistema MBR utilizado para la recuperación/reutilización de aguas residuales in situ en un edificio privado en Nueva York, Estados Unidos (Asano, et al., 2006).",
-    "unit_processes": [1, 17, 37, 34]
+    "unit_processes": [0, 16, 36, 33]
   },
   {
     "id": 40,
@@ -489,7 +489,7 @@
     "descriptionEs": "Este tren de tratamiento fue una adaptación para la implementación de un esquema de reutilización de aguas industriales. La cuestión principal era utilizar el efluente tratado de un proceso de lodos activados de alta carga como fuente para el esquema de reutilización. Dado que la nitrificación del efluente no estaba contemplada en el proyecto original, fue necesario implementar un sistema MBR capaz de realizar los procesos de nitrificación y desnitrificación (Mierzwa, 2014; http://www.watertoday.org/Article%20Archieve/Koch18.pdf).",
     "case_study": "Example for Water Reuse System for Industrial Purposes. Aquapolo Project at the Santo Andre Wastewater Treatment Plant in the Sao Paulo Metropolitan Region, Sao Paulo (SPMR) – Brazil (Mierzwa, 2014).",
     "case_studyEs": "Ejemplo de sistema de reutilización de agua para fines industriales. Proyecto Aquapolo en la Planta de Tratamiento de Aguas Residuales de Santo André en la Región Metropolitana de Sao Paulo (SPMR) - Brasil (Mierzwa, 2014).",
-    "unit_processes": [1, 3, 5, 11, 23, 26, 36]
+    "unit_processes": [0, 2, 4, 10, 22, 25, 35]
   },
   {
     "id": 41,
@@ -501,7 +501,7 @@
     "descriptionEs": "El agua tratada de la planta de tratamiento de aguas residuales de Qinghe se utiliza principalmente en el riego agrícola, la industria y el paisajismo urbano. La planta consta básicamente de un sistema de pretratamiento, un biorreactor de membrana con una capacidad de 60.000 m³/d (la superficie total de la membrana es de 183.000 m²) y un sistema de ósmosis inversa de flujo parcial, que produce 'agua regenerada de alta calidad' (3.000 m³/d). Esta se reutilizará en la zona central del Parque Olímpico y servirá principalmente para abastecer un pequeño lago con fuentes. 50.000 m³/d se bombearán a la red urbana de agua reciclada. A nivel doméstico, el agua tratada se utiliza principalmente para las cisternas de los inodoros (US EPA, 2012; pp. E-31; http://www.wabag.com/wp-content/uploads/2012/04/Membrane_bioreactors_Article_12_2007.pdf; http://www.water-technology.net/projects/qinghewatertreatment/)",
     "case_study": "Example for Water Reuse System for landscape irrigation of Olympic Park in Bejing, China: Qinghe WWTP (US EPA, 2012; http://www.wabag.com/wp-content/uploads/2012/04/Membrane_bioreactors_Article_12_2007.pdf).",
     "case_studyEs": "Ejemplo de sistema de reutilización de agua para el riego del Parque Olímpico de Bejing, China: EDAR de Qinghe (US EPA, 2012; http://www.wabag.com/wp-content/uploads/2012/04/Membrane_bioreactors_Article_12_2007.pdf).",
-    "unit_processes": [1, 3, 6, 11, 17]
+    "unit_processes": [0, 2, 5, 10, 16]
   },
   {
     "id": 42,
@@ -513,7 +513,7 @@
     "descriptionEs": "En varias grandes ciudades, como Tokio, la normativa exige la instalación de un sistema de reutilización de aguas residuales o un sistema de recogida de escorrentía en un edificio nuevo si la superficie total del edificio supera un determinado tamaño. Los biorreactores de membrana (MBR) se utilizan a menudo para la recuperación de aguas residuales in situ. El sistema MBR se instaló en un edificio de un complejo empresarial de Tokio en 2007. La capacidad de tratamiento del sistema es de 680 m3/día y el agua recuperada se utiliza únicamente para la descarga de los inodoros. Las aguas residuales recuperadas para la descarga del inodoro incluyen las aguas grises de los restaurantes, las aguas grises de las oficinas y la purga de un sistema de torre de refrigeración. Las aguas negras del inodoro no se reciclan y están prohibidas por la normativa. (US EPA, 2012, pp. E-66).",
     "case_study": "An example of an MBR system used for onsite wastewater reclamation/reuse system in a private building in Tokyo, Japan (US EPA, 2012).",
     "case_studyEs": "Ejemplo de un sistema MBR utilizado para la recuperación/reutilización de aguas residuales in situ en un edificio privado en Tokio, Japón (US EPA, 2012).",
-    "unit_processes": [1, 3, 17, 36]
+    "unit_processes": [0, 2, 16, 35]
   },
   {
     "id": 43,
@@ -525,7 +525,7 @@
     "descriptionEs": "Tratamiento convencional de aguas residuales, incluyendo la eliminación de P y N, seguido de una filtración de doble membrana (MF/UF seguida de RO) y desinfección final por UV; eventualmente también se pueden aplicar otros procesos; el agua tratada es de tan alta calidad que son posibles muchas aplicaciones (industriales, domésticas, etc.).",
     "case_study": "Examples of this concept are Water Factory 21, Sydney Olympic Parka and Torrele (Belgium). (Graaf, 2005)",
     "case_studyEs": "Ejemplos de este concepto son la Fábrica de Agua 21, la Parka Olímpica de Sydney y Torrele (Bélgica). (Graaf, 2005).",
-    "unit_processes": [3, 6, 8, 20, 21, 24, 26, 37, 35]
+    "unit_processes": [2, 5, 7, 19, 20, 23, 25, 36, 34]
   },
   {
     "id": 44,
@@ -537,7 +537,7 @@
     "descriptionEs": "PTAR convencionales para aguas residuales municipales con tratamiento UF + RO del efluente de la PTAR para permitir la reutilización potable indirecta de las aguas residuales tratadas. Las unidades de filtración se complementan con dos etapas de desinfección: mediante cloro para controlar el biocrecimiento antes de la etapa de UV y la desinfección UV final antes de la infiltración. El agua tratada se recarga en un acuífero de dunas, que sirve de fuente de agua potable para 6 comunidades (Van Houtte y Verbauwhede, 2008).",
     "case_study": "Wulpen WWTP (Belgium). Indirect potable re-use of municipal wastewater (Van Houtte and Verbauwhede, 2008)",
     "case_studyEs": "PTAR de Wulpen (Bélgica). Reutilización potable indirecta de las aguas residuales municipales (Van Houtte y Verbauwhede, 2008).",
-    "unit_processes": [1, 3, 6, 10, 35, 24, 23, 26, 37, 30]
+    "unit_processes": [0, 2, 5, 9, 34, 23, 22, 25, 36, 29]
   },
   {
     "id": 45,
@@ -549,7 +549,7 @@
     "descriptionEs": "El proceso de regeneración (documentado aquí) consiste en un tratamiento de doble membrana del efluente secundario con MF y RO y una desinfección final por UV (AQUAREC, 2006).",
     "case_study": "NEWater Project (Singapore) was implemented to supply industries and augment freshwater resources from reclaimed water, for a total amount of 10% of Singapore daily water consumption. (AQUAREC, 2006).",
     "case_studyEs": "El proyecto NEWater (Singapur) se puso en marcha para abastecer a las industrias y aumentar los recursos de agua dulce a partir de agua regenerada, por una cantidad total del 10% del consumo diario de agua de Singapur. (AQUAREC, 2006).",
-    "unit_processes": [36, 24, 26, 37]
+    "unit_processes": [35, 23, 25, 36]
   },
   {
     "id": 46,
@@ -561,7 +561,7 @@
     "descriptionEs": "El complejo tren de tratamiento incluye coagulación, filtración de doble medio, ozonización, adsorción de carbón activado en varias etapas y UF antes de la desinfección con cloro. (El agua de origen es agua superficial cruda y aguas residuales domésticas pretratadas) (AQUAREC, 2006).",
     "case_study": "To date, this is the only direct potable reuse project worldwide. It is operating in Windhoek (Namibia) since 2002. It produces potable water from a mixture of pre-treated domestic wastewater effluent and surface water (AQUAREC, 2006).",
     "case_studyEs": "Hasta la fecha, es el único proyecto de reutilización directa de agua potable en todo el mundo. Funciona en Windhoek (Namibia) desde 2002. Produce agua potable a partir de una mezcla de efluentes de aguas residuales domésticas pretratadas y aguas superficiales (AQUAREC, 2006).",
-    "unit_processes": [27, 34, 32, 22, 34, 27, 27, 27, 24, 26]
+    "unit_processes": [26, 33, 31, 21, 33, 26, 26, 26, 23, 25]
   },
   {
     "id": 47,
@@ -573,7 +573,7 @@
     "descriptionEs": "La planta de recuperación de El Segundo (California, EE.UU.) trata el efluente secundario de la PTAR Hyperion de Los Ángeles para producir cuatro tipos de agua regenerada a prueba de sequías. Uno de los flujos es agua regenerada ultrapura producida por un sistema de doble membrana (microfiltración y ósmosis inversa) para su uso como agua de alimentación de calderas en la industria petrolera (AQUAREC, 2006).",
     "case_study": "Example from California re-using water to produce boiler water (steam for the power station turbines) for industrial purposes (AQUAREC, 2006).",
     "case_studyEs": "Ejemplo reutilización de agua para producir agua de caldera (vapor para las turbinas de las centrales eléctricas) con fines industriales en California (AQUAREC, 2006).",
-    "unit_processes": [1, 3, 6, 32, 22, 23, 26]
+    "unit_processes": [0, 2, 5, 31, 21, 22, 25]
   },
   {
     "id": 48,
@@ -585,7 +585,7 @@
     "descriptionEs": "Las PTAR convencionales para aguas residuales municipales se tratan en varios procesos de membrana para producir agua ultrapura. Esta agua es apta para la producción de corriente sin dejar depósitos que puedan dañar calderas, turbinas y bombas. La capacidad de la planta es de 10'000 m3/día (http://nwtr.nl/du/puurwaterfabriek.php).",
     "case_study": "Emmen WWTP (The Netherlands), Reuse of municipal WWTP effluent to ultrapure water for the production of steam (http://nwtr.nl/du/puurwaterfabriek.php)",
     "case_studyEs": "PTAR de Emmen (Países Bajos), reutilización del efluente de la PTAR municipal en agua ultrapura para la producción de vapor (http://nwtr.nl/du/puurwaterfabriek.php).",
-    "unit_processes": [1, 3, 6, 10, 22, 24, 23, 26, 33]
+    "unit_processes": [0, 2, 5, 9, 21, 23, 22, 25, 32]
   },
   {
     "id": 49,
@@ -597,7 +597,7 @@
     "descriptionEs": "El Millenium Dome recupera agua compuesta por aguas grises (10%), agua de lluvia (19%) y aguas subterráneas (71%). Para recuperar el agua se utilizan varias tecnologías, desde un tratamiento de membrana muy innovador hasta humedales naturales. El agua de lluvia se trata en dos cañaverales y una laguna de almacenamiento. En el cañaveral, los Phragmites auralies eliminan los contaminantes del agua de lluvia (filtración y proceso biológico). Las aguas grises se tratan mediante un filtro biológico aireado (BAF) y las aguas subterráneas se mantienen en contacto con peróxido de hidrógeno y carbón activado granular (GAC). En el último paso, las aguas grises, las aguas pluviales y las aguas subterráneas pasan por una membrana de ultrafiltración y ósmosis inversa y, finalmente, se desinfectan con cloro (AQUAREC, 2006).",
     "case_study": "One of the largest in-building recycling schemes for reclaiming water in Europe (Greenwich, United Kingdom) for toilet and urinal flushing. Daily around 500 m3 water is reclaimed (AQUAREC, 2006).",
     "case_studyEs": "Uno de los mayores sistemas de reciclaje en edificios para la recuperación de agua en Europa (Greenwich, Reino Unido) para la descarga de inodoros y urinarios. Cada día se recuperan unos 500 m3 de agua (AQUAREC, 2006).",
-    "unit_processes": [13, 27, 18, 24, 26]
+    "unit_processes": [12, 26, 17, 23, 25]
   },
   {
     "id": 50,
@@ -609,6 +609,6 @@
     "descriptionEs": " Sistema de reposición de aguas subterráneas del Distrito de aguas del condado de Orange: Las fuentes de agua suplementarias para la recarga de las aguas subterráneas son el río Colorado y el río Sacramento, que llegan al sur de California. El agua del río Santa Ana, junto con el agua importada, se recarga mediante cuencas de recarga profunda. El agua recargada se bombea posteriormente y sirve como suministro de agua para una gran parte de la población del condado. El sistema GWR produce aproximadamente 1,73 × 108m3/año) de agua regenerada con tratamiento avanzado. El sistema GWR consta de tres componentes principales: la Instalación de Tratamiento Avanzado de Agua (AWTF) y las estaciones de bombeo, una tubería de 21 km que conecta la AWTF con las cuencas de recarga de aguas subterráneas existentes, y la ampliación de las barreras de intrusión de agua de mar existentes con pozos de inyección y control adicionales. El proceso de la AWTF incluye la microfiltración, la filtración con cartuchos, la ósmosis inversa, la adición de cal y el tratamiento de oxidación avanzada con UV/H2O2. El agua producida se introducirá en las cuencas de esparcimiento de superficie existentes junto con el agua de otras fuentes. El agua mezclada se filtrará a los acuíferos subterráneos, donde acabará formando parte del suministro de agua potable del Condado de Orange (Asano et al., 2006)",
     "case_study": "Groundwater recharge with reclaimed water in Orange County, US (Asano, et al., 2006).",
     "case_studyEs": "Recarga de aguas subterráneas con agua regenerada en el condado de Orange, Estados Unidos (Asano, et al., 2006).",
-    "unit_processes": [1, 3, 6, 9, 23, 26, 29, 30]
+    "unit_processes": [0, 2, 5, 8, 22, 25, 28, 29]
   }
 ]

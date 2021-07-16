@@ -23,7 +23,7 @@ export const caseSlice = createSlice({
       heightDifference: null
     },
     solution: {
-      noneNeeded: false,
+      noneNeeded: true,
       noneAvailable: false
     },
     solution1: {

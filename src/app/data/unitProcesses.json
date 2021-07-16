@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 0,
     "name": "Bar screen",
     "nameEs": "Pantalla de la barra",
     "turbidity": "0",
@@ -37,7 +37,7 @@
     "useful_life": "30"
   },
   {
-    "id": "2",
+    "id": 1,
     "name": "Coarse screen",
     "nameEs": "Criba gruesa",
     "turbidity": "0",
@@ -74,7 +74,7 @@
     "useful_life": "30"
   },
   {
-    "id": "3",
+    "id": 2,
     "name": "Grit Chamber",
     "nameEs": "Cámara de arena",
     "turbidity": "2",
@@ -111,7 +111,7 @@
     "useful_life": "30"
   },
   {
-    "id": "4",
+    "id": 3,
     "name": "Equalization Basin",
     "nameEs": "Cuenca de ecualización",
     "turbidity": "0",
@@ -148,7 +148,7 @@
     "useful_life": "30"
   },
   {
-    "id": "5",
+    "id": 4,
     "name": "Sedimentation without coagulant",
     "nameEs": "Sedimentación sin coagulante",
     "turbidity": "0",
@@ -185,7 +185,7 @@
     "useful_life": "30"
   },
   {
-    "id": "6",
+    "id": 5,
     "name": "Sedimentation with coagulant",
     "nameEs": "Sedimentación con coagulante",
     "turbidity": "70",
@@ -222,7 +222,7 @@
     "useful_life": "30"
   },
   {
-    "id": "7",
+    "id": 6,
     "name": "Anaerobic stabilization ponds",
     "nameEs": "Lagunas de estabilización anaeróbica",
     "turbidity": "70",
@@ -259,7 +259,7 @@
     "useful_life": "15"
   },
   {
-    "id": "8",
+    "id": 7,
     "name": "Activated sludge",
     "nameEs": "Lodos activados",
     "turbidity": "90",
@@ -296,7 +296,7 @@
     "useful_life": "30"
   },
   {
-    "id": "9",
+    "id": 8,
     "name": "Low Loaded Activated Sludge w/o de-N + Sec Sedim.",
     "nameEs": "Lodos activados de baja carga sin de-N + Sedim. Sec.",
     "turbidity": "98",
@@ -333,7 +333,7 @@
     "useful_life": "30"
   },
   {
-    "id": "10",
+    "id": 9,
     "name": "Low Loaded Activated Sludge w de-N + sec. Sedim.",
     "nameEs": "Lodos activados de baja carga con de-N + Sedim. Sec.",
     "turbidity": "98",
@@ -370,7 +370,7 @@
     "useful_life": "30"
   },
   {
-    "id": "11",
+    "id": 10,
     "name": "High Loaded Activated Sludge + Sec. Sedim.",
     "nameEs": "Lodos activados de alta carga + Sedim. sec.",
     "turbidity": "97",
@@ -407,7 +407,7 @@
     "useful_life": "30"
   },
   {
-    "id": "12",
+    "id": 11,
     "name": "Extended aeration",
     "nameEs": "Aireación extendida",
     "turbidity": "99",
@@ -444,7 +444,7 @@
     "useful_life": "30"
   },
   {
-    "id": "13",
+    "id": 12,
     "name": "Trickling filter with secondary sedimentation",
     "nameEs": "Filtro percolador con sedimentación secundaria",
     "turbidity": "30",
@@ -481,7 +481,7 @@
     "useful_life": "30"
   },
   {
-    "id": "14",
+    "id": 13,
     "name": "Rotating biological contactor (RBC)",
     "nameEs": "Contactor biológico rotativo (RBC)",
     "turbidity": "70",
@@ -518,7 +518,7 @@
     "useful_life": "30"
   },
   {
-    "id": "15",
+    "id": 14,
     "name": "Stabilization ponds: Aerobic",
     "nameEs": "Estanques de estabilización: Aeróbico",
     "turbidity": "60",
@@ -555,7 +555,7 @@
     "useful_life": "30"
   },
   {
-    "id": "16",
+    "id": 15,
     "name": "Stabilization ponds: Facultative",
     "nameEs": "Estanques de estabilización: Facultativo",
     "turbidity": "50",
@@ -592,7 +592,7 @@
     "useful_life": "30"
   },
   {
-    "id": "17",
+    "id": 16,
     "name": "Membrane bioreactor (MBR)",
     "nameEs": "Biorreactor de membrana (MBR)",
     "turbidity": "92",
@@ -629,7 +629,7 @@
     "useful_life": "30"
   },
   {
-    "id": "18",
+    "id": 17,
     "name": "Constructed wetland",
     "nameEs": "Humedal construido",
     "turbidity": "15",
@@ -666,7 +666,7 @@
     "useful_life": "30"
   },
   {
-    "id": "19",
+    "id": 18,
     "name": "Enhanced biological phosphorus removal (EBPR)",
     "nameEs": "Eliminación biológica mejorada de fósforo (EBPR)",
     "turbidity": "0",
@@ -703,7 +703,7 @@
     "useful_life": "30"
   },
   {
-    "id": "20",
+    "id": 19,
     "name": "P-Precipitation",
     "nameEs": "P-Precipitación",
     "turbidity": "0",
@@ -740,7 +740,7 @@
     "useful_life": "30"
   },
   {
-    "id": "21",
+    "id": 20,
     "name": "Denitrification",
     "nameEs": "Desnitrificación",
     "turbidity": "0",
@@ -777,7 +777,7 @@
     "useful_life": "30"
   },
   {
-    "id": "22",
+    "id": 21,
     "name": "Dual media filter",
     "nameEs": "Filtro de doble medio",
     "turbidity": "90",
@@ -814,7 +814,7 @@
     "useful_life": "20"
   },
   {
-    "id": "23",
+    "id": 22,
     "name": "Microfiltration",
     "nameEs": "Microfiltración",
     "turbidity": "90",
@@ -851,7 +851,7 @@
     "useful_life": "20"
   },
   {
-    "id": "24",
+    "id": 23,
     "name": "Ultrafiltration",
     "nameEs": "Ultrafiltración",
     "turbidity": "90",
@@ -888,7 +888,7 @@
     "useful_life": "20"
   },
   {
-    "id": "25",
+    "id": 24,
     "name": "Nanofiltration",
     "nameEs": "Nanofiltración",
     "turbidity": "50",
@@ -925,7 +925,7 @@
     "useful_life": "20"
   },
   {
-    "id": "26",
+    "id": 25,
     "name": "Reverse osmosis",
     "nameEs": "Ósmosis inversa",
     "turbidity": "50",
@@ -962,7 +962,7 @@
     "useful_life": "20"
   },
   {
-    "id": "27",
+    "id": 26,
     "name": "Activated Carbon",
     "nameEs": "Carbón activado",
     "turbidity": "40",
@@ -999,7 +999,7 @@
     "useful_life": "20"
   },
   {
-    "id": "28",
+    "id": 27,
     "name": "Ion exchange",
     "nameEs": "Intercambio de iones",
     "turbidity": "20",
@@ -1036,7 +1036,7 @@
     "useful_life": "30"
   },
   {
-    "id": "29",
+    "id": 28,
     "name": "Advanced oxidation process",
     "nameEs": "Proceso de oxidación avanzada",
     "turbidity": "80",
@@ -1073,7 +1073,7 @@
     "useful_life": "30"
   },
   {
-    "id": "30",
+    "id": 29,
     "name": "Soil-aquifer treatment (SAT)",
     "nameEs": "Tratamiento suelo-acuífero (SAT)",
     "turbidity": "85",
@@ -1110,7 +1110,7 @@
     "useful_life": "40"
   },
   {
-    "id": "31",
+    "id": 30,
     "name": "Maturation pond",
     "nameEs": "Estanque de maduración",
     "turbidity": "45",
@@ -1147,7 +1147,7 @@
     "useful_life": "15"
   },
   {
-    "id": "32",
+    "id": 31,
     "name": "Flocculation",
     "nameEs": "Floculación",
     "turbidity": "30",
@@ -1184,7 +1184,7 @@
     "useful_life": "30"
   },
   {
-    "id": "33",
+    "id": 32,
     "name": "Electrodialysis",
     "nameEs": "Electrodiálisis",
     "turbidity": "80",
@@ -1221,7 +1221,7 @@
     "useful_life": "30"
   },
   {
-    "id": "34",
+    "id": 33,
     "name": "Ozonation",
     "nameEs": "Ozonización",
     "turbidity": "0",
@@ -1258,7 +1258,7 @@
     "useful_life": "15"
   },
   {
-    "id": "35",
+    "id": 34,
     "name": "Chlorine gas",
     "nameEs": "Gas clorado",
     "turbidity": "0",
@@ -1295,7 +1295,7 @@
     "useful_life": "15"
   },
   {
-    "id": "36",
+    "id": 35,
     "name": "Chlorine dioxide",
     "nameEs": "Dióxido de cloro",
     "turbidity": "0",
@@ -1332,7 +1332,7 @@
     "useful_life": "15"
   },
   {
-    "id": "37",
+    "id": 36,
     "name": "Ultraviolet disinfection",
     "nameEs": "Desinfección ultravioleta",
     "turbidity": "0",

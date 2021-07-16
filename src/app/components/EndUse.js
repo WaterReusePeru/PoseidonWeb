@@ -140,7 +140,7 @@ export default function EndUse() {
             </svg>
           </Grid>
           <Grid item>
-            <Typography variant="caption">{t('End use above Input, needs treatment')}</Typography>
+            <Typography variant="caption">{t('End use, needs treatment')}</Typography>
           </Grid>
         </Grid>
 
@@ -153,7 +153,7 @@ export default function EndUse() {
             </svg>
           </Grid>
           <Grid item>
-            <Typography variant="caption">{t('End use below Input, no treatment needed')}</Typography>
+            <Typography variant="caption">{t('End use, no treatment needed')}</Typography>
           </Grid>
         </Grid>
       </Grid>

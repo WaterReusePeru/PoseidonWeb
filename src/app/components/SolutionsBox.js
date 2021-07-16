@@ -36,23 +36,27 @@ export default function SolutionsBox() {
           </Typography>
         </Grid>
 
-        <Grid item container xs={12} spacing={1} alignItems="center">
-          <Grid item container justify="flex-start" spacing={1} xs={12}>
-            <Grid item>
-              <Chip label="1" color="secondary" size="small" />
+        {!caseState.solution.noneNeeded ? (
+          <Grid item container xs={12} spacing={1} alignItems="center">
+            <Grid item container justify="flex-start" spacing={1} xs={12}>
+              <Grid item>
+                <Chip label="1" color="secondary" size="small" />
+              </Grid>
+              <Grid item>
+                <Typography>{t('Solution')}</Typography>
+              </Grid>
             </Grid>
-            <Grid item>
-              <Typography>{t('Solution')}</Typography>
+            <Grid item container justify="flex-start" spacing={1} xs={12}>
+              <Typography>
+                {caseState.solution1.treatmentTrain !== null
+                  ? treatmentTrains[caseState.solution1.treatmentTrain].title
+                  : 'none'}
+              </Typography>
             </Grid>
           </Grid>
-          <Grid item container justify="flex-start" spacing={1} xs={12}>
-            <Typography>
-              {caseState.solution1.treatmentTrain !== null
-                ? treatmentTrains[caseState.solution1.treatmentTrain].title
-                : 'none'}
-            </Typography>
-          </Grid>
-        </Grid>
+        ) : (
+          <div />
+        )}
       </Grid>
     </Paper>
   )

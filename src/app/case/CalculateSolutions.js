@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setSolutionNoneNeeded } from './caseSlice'
 import waterQualities from '../data/waterQualities'
 import unitProcesses from '../data/unitProcesses'
-//import treatmentTrains from '../data/treatmentTrains'
+import treatmentTrains from '../data/treatmentTrains'
 
 export default function CalculateSolutions() {
   const dispatch = useDispatch()
@@ -16,40 +16,59 @@ export default function CalculateSolutions() {
 
   let treatmentFactors = []
 
-  console.log(inputQuality, endUseQuality)
-
-  let noneNeeded = true
-
   relevantFactors.map(factor => {
-    if (Number(inputQuality[factor]) > Number(endUseQuality[factor])) {
-      noneNeeded = false
+    if ((Number(inputQuality[factor]) > Number(endUseQuality[factor])) & (endUseQuality[factor] !== -1)) {
+      dispatch(setSolutionNoneNeeded(false))
       //Check here if -1 and don't push?
       treatmentFactors.push(factor)
     }
     return null
   })
 
-  console.log(treatmentFactors)
+  console.log(inputQuality, endUseQuality, treatmentFactors)
 
-  function treat(up, factor, input) {
-    console.log(up, factor, input)
-    console.log(unitProcesses[up][factor])
-    console.log(Number(input) - Number(input) * unitProcesses[up][factor])
+  function runUnitProcess(up, factor, input) {
     return Number(input) - Number(input) * unitProcesses[up][factor]
   }
 
-  console.log(
-    treatmentFactors.map(factor => {
-      treat(1, factor, inputQuality[factor])
+  function runTreatmentTrain(factors, input) {
+    factors.map(factor => {
+      runUnitProcess(1, factor, input[factor])
       return null
     })
-  )
-
-  if (noneNeeded === true) {
-    dispatch(setSolutionNoneNeeded(true))
-  } else {
-    dispatch(setSolutionNoneNeeded(false))
   }
+
+  function findSuitableTreatmentTrains(input, factors) {
+    let outputQualities = []
+
+    treatmentTrains.map((treatmentTrain, index) => {
+      let outputQualityPerFactor = []
+
+      factors.map(factor => {
+        let outputQualityStep = Number(input[factor])
+        treatmentTrain.unit_processes.map(unitProcess => {
+          outputQualityStep = outputQualityStep - (outputQualityStep * Number(unitProcesses[unitProcess][factor])) / 100
+        })
+
+        outputQualityPerFactor[factor] = outputQualityStep
+      })
+
+      outputQualities.push({
+        id: index,
+        treatmentTrain: treatmentTrain.title,
+        turbidity: outputQualityPerFactor['turbidity'],
+        tss: outputQualityPerFactor['tss'],
+        bod: outputQualityPerFactor['bod'],
+        cod: outputQualityPerFactor['cod'],
+        fc: outputQualityPerFactor['fc'],
+        tc: outputQualityPerFactor['tc']
+      })
+    })
+
+    return outputQualities
+  }
+
+  console.log(findSuitableTreatmentTrains(inputQuality, treatmentFactors))
 
   console.log(caseState)
 }
