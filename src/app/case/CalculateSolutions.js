@@ -18,25 +18,14 @@ export default function CalculateSolutions() {
 
   relevantFactors.map(factor => {
     if ((Number(inputQuality[factor]) > Number(endUseQuality[factor])) & (endUseQuality[factor] !== -1)) {
-      dispatch(setSolutionNoneNeeded(false))
       //Check here if -1 and don't push?
+      dispatch(setSolutionNoneNeeded(false))
       treatmentFactors.push(factor)
     }
     return null
   })
 
   console.log(inputQuality, endUseQuality, treatmentFactors)
-
-  function runUnitProcess(up, factor, input) {
-    return Number(input) - Number(input) * unitProcesses[up][factor]
-  }
-
-  function runTreatmentTrain(factors, input) {
-    factors.map(factor => {
-      runUnitProcess(1, factor, input[factor])
-      return null
-    })
-  }
 
   function findSuitableTreatmentTrains(input, factors) {
     let outputQualities = []
@@ -48,9 +37,13 @@ export default function CalculateSolutions() {
         let outputQualityStep = Number(input[factor])
         treatmentTrain.unit_processes.map(unitProcess => {
           outputQualityStep = outputQualityStep - (outputQualityStep * Number(unitProcesses[unitProcess][factor])) / 100
+
+          return null
         })
 
         outputQualityPerFactor[factor] = outputQualityStep
+
+        return null
       })
 
       outputQualities.push({
@@ -63,6 +56,8 @@ export default function CalculateSolutions() {
         fc: outputQualityPerFactor['fc'],
         tc: outputQualityPerFactor['tc']
       })
+
+      return null
     })
 
     return outputQualities
