@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { setSolutionNoneNeeded } from './caseSlice'
+import { setSolutionNoneAvailable, setSolutionNoneNeeded, setSolutions } from './caseSlice'
 import waterQualities from '../data/waterQualities'
 import unitProcesses from '../data/unitProcesses'
 import treatmentTrains from '../data/treatmentTrains'
@@ -44,7 +44,7 @@ export default function CalculateSolutions() {
 
   console.log(inputQuality, endUseQuality, treatmentFactors)
 
-  function findSuitableTreatmentTrains(input, endUse, factors) {
+  function findSuitableTreatments(input, endUse, factors) {
     let outputQualities = []
 
     treatmentTrains.map((treatmentTrain, index) => {
@@ -78,8 +78,6 @@ export default function CalculateSolutions() {
         return null
       })
 
-      console.log(treatmentTrain.unit_processes.length)
-
       if (suitableTreatmentTrain) {
         outputQualities.push({
           id: index,
@@ -98,14 +96,30 @@ export default function CalculateSolutions() {
       return null
     })
 
+    if (outputQualities.length === 0) {
+      dispatch(setSolutionNoneAvailable(true))
+    }
+
+    console.log('output qualities', outputQualities)
+
     return outputQualities
   }
 
-  /* function findTopTreatmentTrains(outputQualities) {
+  function findTopTreatments(outputQualities) {
+    const topThreeTreatments = outputQualities.sort((a, b) => b.rating - a.rating).slice(0, 3)
 
-  } */
+    console.log('top-three', topThreeTreatments)
 
-  console.log('output qualities', findSuitableTreatmentTrains(inputQuality, endUseQuality, treatmentFactors))
+    return topThreeTreatments
+  }
+
+  /* console.log('output qualities', findSuitableTreatments(inputQuality, endUseQuality, treatmentFactors))
+
+  console.log('top-three', findTopTreatments(findSuitableTreatments(inputQuality, endUseQuality, treatmentFactors))) */
+
+  const topThreeTreatments = findTopTreatments(findSuitableTreatments(inputQuality, endUseQuality, treatmentFactors))
+
+  dispatch(setSolutions(topThreeTreatments))
 
   console.log(caseState)
 }

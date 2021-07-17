@@ -7,6 +7,10 @@ import Paper from '@material-ui/core/Paper'
 import { Typography } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 import treatmentTrains from '../data/treatmentTrains.json'
+import unitProcesses from '../data/unitProcesses.json'
+import Tooltip from '@material-ui/core/Tooltip'
+
+import i18next from 'i18next'
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -21,6 +25,7 @@ export default function SolutionsBox() {
   const caseState = useSelector(state => state.case)
 
   const { t } = useTranslation()
+  const lang = i18next.language
 
   return (
     <Paper className={classes.paper} elevation={0}>
@@ -32,27 +37,50 @@ export default function SolutionsBox() {
               ? t(
                   'Based on your input, no treatment is needed because the input quality is better than the end use quality.'
                 )
+              : caseState.solution.noneAvailable
+              ? t('Based on your input, theres no possible solution')
               : t('Based on your input, the following treatment trains are best suited for the case.')}
           </Typography>
         </Grid>
 
-        {!caseState.solution.noneNeeded ? (
+        {!caseState.solution.noneNeeded & !caseState.solution.noneAvailable ? (
           <Grid item container xs={12} spacing={1} alignItems="center">
-            <Grid item container justify="flex-start" spacing={1} xs={12}>
-              <Grid item>
-                <Chip label="1" color="secondary" size="small" />
-              </Grid>
-              <Grid item>
-                <Typography>{t('Solution')}</Typography>
-              </Grid>
-            </Grid>
-            <Grid item container justify="flex-start" spacing={1} xs={12}>
-              <Typography>
-                {caseState.solution1.treatmentTrain !== null
-                  ? treatmentTrains[caseState.solution1.treatmentTrain].title
-                  : 'none'}
-              </Typography>
-            </Grid>
+            {caseState.solutions.map((solution, index) => (
+              <>
+                <Grid item container justify="flex-start" spacing={1} xs={12}>
+                  <Grid item>
+                    <Chip label={index + 1} color="secondary" size="small" />
+                  </Grid>
+                  <Grid item>
+                    <Typography>{treatmentTrains[solution.treatmentTrain].title}</Typography>
+                  </Grid>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography>{t('Category')}:</Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography>{treatmentTrains[solution.treatmentTrain].category}</Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography>{t('Rating')}:</Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography>{Math.round(((solution.rating * 10) / 3) * 1000) / 1000}</Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography>{t('Unit Processes')}:</Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography>
+                    {treatmentTrains[solution.treatmentTrain].unit_processes.map((up, index) => (
+                      <Tooltip title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
+                        <Chip label={up} key={index} size="small" color="primary" style={{ margin: 2 }} />
+                      </Tooltip>
+                    ))}
+                  </Typography>
+                </Grid>
+              </>
+            ))}
           </Grid>
         ) : (
           <div />

@@ -55,99 +55,97 @@ export default function Quantity() {
   }
 
   return (
-    <Grid container>
-      <Grid container xs={12}>
-        <Grid container xs={8} direction="row" alignItems="center" spacing={3}>
-          <Grid item xs={12}>
-            <Typography variant="h6">{t('Quantity')}</Typography>
-          </Grid>
-          <Grid item xs={4}>
-            <Typography style={{ marginBottom: 20 }}>{t('Average Quantity')}</Typography>
-          </Grid>
-          <Grid item xs={6}>
-            <TextField
-              error={!validQuantity}
-              helperText={!validQuantity ? t('Number must be integer and between 1 and 1 million') : ' '}
-              id="standard-number"
-              type="number"
-              variant="outlined"
-              InputLabelProps={{
-                shrink: true
-              }}
-              onChange={event => handleChangeQuantity(event.target.value)}
-              value={quantity.amount !== null ? quantity.amount : null}
-              InputProps={{
-                endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>
-              }}
-              fullWidth
-            />
-          </Grid>
-
-          <Grid item xs={2} style={{ textAlign: 'center' }}>
-            <Tooltip title="Information about amounts">
-              <Chip style={{ marginBottom: 20 }} label="?" size="small" />
-            </Tooltip>
-          </Grid>
-
-          <Grid item xs={4}>
-            <Typography style={{ marginBottom: 20 }}>{t('Distance')}</Typography>
-          </Grid>
-          <Grid item xs={6}>
-            <TextField
-              error={!validDistance}
-              helperText={!validDistance ? t("Number must be integer and between 1 and 100'000") : ' '}
-              id="standard-number"
-              type="number"
-              variant="outlined"
-              InputLabelProps={{
-                shrink: true
-              }}
-              onChange={event => handleChangeDistance(event.target.value)}
-              value={quantity.distance !== null ? quantity.distance : null}
-              InputProps={{
-                endAdornment: <InputAdornment position="end">m</InputAdornment>
-              }}
-              fullWidth
-            />
-          </Grid>
-
-          <Grid item xs={2} style={{ textAlign: 'center' }}>
-            <Tooltip title="Information about distance">
-              <Chip style={{ marginBottom: 20 }} label="?" size="small" />
-            </Tooltip>
-          </Grid>
-
-          <Grid item xs={4}>
-            <Typography style={{ marginBottom: 20 }}>{t('Height Difference')}</Typography>
-          </Grid>
-          <Grid item xs={6}>
-            <TextField
-              error={!validHeightDifference}
-              helperText={!validHeightDifference ? t("Number must be integer and between -1'000 and 1'000") : ' '}
-              id="standard-number"
-              type="number"
-              variant="outlined"
-              InputLabelProps={{
-                shrink: true
-              }}
-              onChange={event => handleChangeHeightDifference(event.target.value)}
-              value={quantity.heightDifference !== null ? quantity.heightDifference : null}
-              InputProps={{
-                endAdornment: <InputAdornment position="end">m</InputAdornment>
-              }}
-              fullWidth
-            />
-          </Grid>
-
-          <Grid item xs={2} style={{ textAlign: 'center' }}>
-            <Tooltip title="Information about height differences">
-              <Chip style={{ marginBottom: 20 }} label="?" size="small" />
-            </Tooltip>
-          </Grid>
+    <Grid container direction="row" alignItems="flex-start" spacing={3}>
+      <Grid item container xs={8} direction="row" alignItems="center" spacing={3}>
+        <Grid item xs={12}>
+          <Typography variant="h6">{t('Quantity')}</Typography>
         </Grid>
-        <Grid item container xs={4}>
-          <SolutionsBox />
+        <Grid item xs={4}>
+          <Typography style={{ marginBottom: 20 }}>{t('Average Quantity')}</Typography>
         </Grid>
+        <Grid item xs={6}>
+          <TextField
+            error={!validQuantity}
+            helperText={!validQuantity ? t('Number must be integer and between 1 and 1 million') : ' '}
+            id="standard-number"
+            type="number"
+            variant="outlined"
+            InputLabelProps={{
+              shrink: true
+            }}
+            onChange={event => handleChangeQuantity(event.target.value)}
+            value={quantity.amount !== null ? quantity.amount : null}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>
+            }}
+            fullWidth
+          />
+        </Grid>
+
+        <Grid item xs={2} style={{ textAlign: 'center' }}>
+          <Tooltip title="Information about amounts">
+            <Chip style={{ marginBottom: 20 }} label="?" size="small" />
+          </Tooltip>
+        </Grid>
+
+        <Grid item xs={4}>
+          <Typography style={{ marginBottom: 20 }}>{t('Distance')}</Typography>
+        </Grid>
+        <Grid item xs={6}>
+          <TextField
+            error={!validDistance}
+            helperText={!validDistance ? t("Number must be integer and between 1 and 100'000") : ' '}
+            id="standard-number"
+            type="number"
+            variant="outlined"
+            InputLabelProps={{
+              shrink: true
+            }}
+            onChange={event => handleChangeDistance(event.target.value)}
+            value={quantity.distance !== null ? quantity.distance : null}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">m</InputAdornment>
+            }}
+            fullWidth
+          />
+        </Grid>
+
+        <Grid item xs={2} style={{ textAlign: 'center' }}>
+          <Tooltip title="Information about distance">
+            <Chip style={{ marginBottom: 20 }} label="?" size="small" />
+          </Tooltip>
+        </Grid>
+
+        <Grid item xs={4}>
+          <Typography style={{ marginBottom: 20 }}>{t('Height Difference')}</Typography>
+        </Grid>
+        <Grid item xs={6}>
+          <TextField
+            error={!validHeightDifference}
+            helperText={!validHeightDifference ? t("Number must be integer and between -1'000 and 1'000") : ' '}
+            id="standard-number"
+            type="number"
+            variant="outlined"
+            InputLabelProps={{
+              shrink: true
+            }}
+            onChange={event => handleChangeHeightDifference(event.target.value)}
+            value={quantity.heightDifference !== null ? quantity.heightDifference : null}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">m</InputAdornment>
+            }}
+            fullWidth
+          />
+        </Grid>
+
+        <Grid item xs={2} style={{ textAlign: 'center' }}>
+          <Tooltip title="Information about height differences">
+            <Chip style={{ marginBottom: 20 }} label="?" size="small" />
+          </Tooltip>
+        </Grid>
+      </Grid>
+      <Grid item container xs={4}>
+        <SolutionsBox />
       </Grid>
     </Grid>
   )

@@ -26,10 +26,23 @@ export const caseSlice = createSlice({
       noneNeeded: true,
       noneAvailable: false
     },
-    solution1: {
-      treatmentTrain: null,
-      price: null
-    }
+    solutions: [
+      {
+        treatmentTrain: null,
+        rating: null,
+        price: null
+      },
+      {
+        treatmentTrain: null,
+        rating: null,
+        price: null
+      },
+      {
+        treatmentTrain: null,
+        rating: null,
+        price: null
+      }
+    ]
   },
   reducers: {
     next: state => {
@@ -102,8 +115,14 @@ export const caseSlice = createSlice({
     setSolutionNoneAvailable: (state, action) => {
       state.solution.noneAvailable = action.payload
     },
-    setSolution1TreatmentTrain: (state, action) => {
-      state.solution1.treatmentTrain = action.payload
+    setSolutions: (state, action) => {
+      console.log(action.payload)
+      action.payload.map((treatment, index) => {
+        console.log(treatment, index)
+        state.solutions[index].treatmentTrain = treatment.treatmentTrain
+        state.solutions[index].rating = treatment.rating
+      })
+      //state.solution1.treatmentTrain = action.payload
     }
   }
 })
@@ -126,7 +145,7 @@ export const {
   resetSolutions,
   setSolutionNoneNeeded,
   setSolutionNoneAvailable,
-  setSolution1TreatmentTrain
+  setSolutions
 } = caseSlice.actions
 
 export default caseSlice.reducer
