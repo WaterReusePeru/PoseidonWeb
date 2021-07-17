@@ -25,37 +25,75 @@ export default function CalculateSolutions() {
     return null
   })
 
+  const evaluationCriteria = [
+    'reliability',
+    'ease_to_upgrade',
+    'adaptability_to_varying_flow',
+    'adaptability_to_varying_quality',
+    'ease_of_om',
+    'ease_of_construction',
+    'ease_of_demonstration',
+    'power_demand',
+    'chemical_demand',
+    'odor_generation',
+    'impact_on_ground_water',
+    'land_requirements',
+    'cost_of_treatment',
+    'waste'
+  ]
+
   console.log(inputQuality, endUseQuality, treatmentFactors)
 
-  function findSuitableTreatmentTrains(input, factors) {
+  function findSuitableTreatmentTrains(input, endUse, factors) {
     let outputQualities = []
 
     treatmentTrains.map((treatmentTrain, index) => {
+      let suitableTreatmentTrain = true
       let outputQualityPerFactor = []
+      let rating = 0
 
-      factors.map(factor => {
+      factors.map((factor, index) => {
         let outputQualityStep = Number(input[factor])
         treatmentTrain.unit_processes.map(unitProcess => {
           outputQualityStep = outputQualityStep - (outputQualityStep * Number(unitProcesses[unitProcess][factor])) / 100
+
+          if (index === 0) {
+            //do rating in the unitProcesses loop but not in the factors loop
+            evaluationCriteria.map(criteria => {
+              rating = rating + Number(unitProcesses[unitProcess][criteria])
+
+              return null
+            })
+          }
 
           return null
         })
 
         outputQualityPerFactor[factor] = outputQualityStep
 
+        if (outputQualityPerFactor[factor] > Number(endUse[factor])) {
+          suitableTreatmentTrain = false
+        }
+
         return null
       })
 
-      outputQualities.push({
-        id: index,
-        treatmentTrain: treatmentTrain.title,
-        turbidity: outputQualityPerFactor['turbidity'],
-        tss: outputQualityPerFactor['tss'],
-        bod: outputQualityPerFactor['bod'],
-        cod: outputQualityPerFactor['cod'],
-        fc: outputQualityPerFactor['fc'],
-        tc: outputQualityPerFactor['tc']
-      })
+      console.log(treatmentTrain.unit_processes.length)
+
+      if (suitableTreatmentTrain) {
+        outputQualities.push({
+          id: index,
+          treatmentTrain: treatmentTrain.id,
+          treatmentTrainTitle: treatmentTrain.title, //not necessary
+          turbidity: outputQualityPerFactor['turbidity'],
+          tss: outputQualityPerFactor['tss'],
+          bod: outputQualityPerFactor['bod'],
+          cod: outputQualityPerFactor['cod'],
+          fc: outputQualityPerFactor['fc'],
+          tc: outputQualityPerFactor['tc'],
+          rating: rating / treatmentTrain.unit_processes.length / evaluationCriteria.length
+        })
+      }
 
       return null
     })
@@ -63,7 +101,11 @@ export default function CalculateSolutions() {
     return outputQualities
   }
 
-  console.log(findSuitableTreatmentTrains(inputQuality, treatmentFactors))
+  /* function findTopTreatmentTrains(outputQualities) {
+
+  } */
+
+  console.log('output qualities', findSuitableTreatmentTrains(inputQuality, endUseQuality, treatmentFactors))
 
   console.log(caseState)
 }
