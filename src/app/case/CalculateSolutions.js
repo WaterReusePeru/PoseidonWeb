@@ -98,6 +98,8 @@ export default function CalculateSolutions() {
 
     if (outputQualities.length === 0) {
       dispatch(setSolutionNoneAvailable(true))
+    } else {
+      dispatch(setSolutionNoneAvailable(false))
     }
 
     console.log('output qualities', outputQualities)

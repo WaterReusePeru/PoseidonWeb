@@ -38,7 +38,7 @@ export default function InputQuality() {
       <Grid item xs={6}>
         <Autocomplete
           id="category"
-          options={waterQualityCategories}
+          options={waterQualityCategories.filter(category => category.input === true)}
           getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : null)}
           getOptionSelected={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setInputQualityCategory(newValue.id))}

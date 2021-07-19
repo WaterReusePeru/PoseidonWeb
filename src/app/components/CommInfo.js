@@ -26,6 +26,9 @@ export default function CommInfo() {
   if (commInfo.countryID === null) {
     dispatch(setCountry(0))
   }
+  if (commInfo.currency === null) {
+    dispatch(setCurrency(0))
+  }
 
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>

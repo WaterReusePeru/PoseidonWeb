@@ -26,7 +26,7 @@ export default function EndUse() {
   const lang = i18next.language
 
   if (endUse.category === null) {
-    dispatch(setEndUseQualityCategory(28))
+    dispatch(setEndUseQualityCategory(29))
   }
 
   return (
@@ -40,7 +40,7 @@ export default function EndUse() {
       <Grid item xs={6}>
         <Autocomplete
           id="category"
-          options={waterQualityCategories}
+          options={waterQualityCategories.filter(category => category.input === false)}
           getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
           getOptionSelected={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setEndUseQualityCategory(newValue.id))}
