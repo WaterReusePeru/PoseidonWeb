@@ -121,6 +121,7 @@ export const caseSlice = createSlice({
         console.log(treatment, index)
         state.solutions[index].treatmentTrain = treatment.treatmentTrain
         state.solutions[index].rating = treatment.rating
+        return null
       })
       //state.solution1.treatmentTrain = action.payload
     }
