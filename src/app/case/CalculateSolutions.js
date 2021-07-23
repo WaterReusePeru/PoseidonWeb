@@ -16,13 +16,12 @@ export default function CalculateSolutions() {
 
   let treatmentFactors = []
 
-  relevantFactors.map(factor => {
+  relevantFactors.forEach(factor => {
     if ((Number(inputQuality[factor]) > Number(endUseQuality[factor])) & (endUseQuality[factor] !== -1)) {
       //Check here if -1 and don't push?
       dispatch(setSolutionNoneNeeded(false))
       treatmentFactors.push(factor)
     }
-    return null
   })
 
   const evaluationCriteria = [
@@ -47,26 +46,22 @@ export default function CalculateSolutions() {
   function findSuitableTreatments(input, endUse, factors) {
     let outputQualities = []
 
-    treatmentTrains.map((treatmentTrain, index) => {
+    treatmentTrains.forEach((treatmentTrain, index) => {
       let suitableTreatmentTrain = true
       let outputQualityPerFactor = []
       let rating = 0
 
-      factors.map((factor, index) => {
+      factors.forEach((factor, index) => {
         let outputQualityStep = Number(input[factor])
-        treatmentTrain.unit_processes.map(unitProcess => {
+        treatmentTrain.unit_processes.forEach(unitProcess => {
           outputQualityStep = outputQualityStep - (outputQualityStep * Number(unitProcesses[unitProcess][factor])) / 100
 
           if (index === 0) {
             //do rating in the unitProcesses loop but not in the factors loop
-            evaluationCriteria.map(criteria => {
+            evaluationCriteria.forEach(criteria => {
               rating = rating + Number(unitProcesses[unitProcess][criteria])
-
-              return null
             })
           }
-
-          return null
         })
 
         outputQualityPerFactor[factor] = outputQualityStep
@@ -74,8 +69,6 @@ export default function CalculateSolutions() {
         if (outputQualityPerFactor[factor] > Number(endUse[factor])) {
           suitableTreatmentTrain = false
         }
-
-        return null
       })
 
       if (suitableTreatmentTrain) {
@@ -92,8 +85,6 @@ export default function CalculateSolutions() {
           rating: rating / treatmentTrain.unit_processes.length / evaluationCriteria.length
         })
       }
-
-      return null
     })
 
     if (outputQualities.length === 0) {
