@@ -117,7 +117,7 @@ export default function PersonalizeSolutions() {
           <Grid item>
             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
               <g>
-                <rect width="10" height="10" fill={theme.palette.primary.main} stroke-width="0"></rect>
+                <rect width="10" height="10" fill={theme.palette.primary.main}></rect>
               </g>
             </svg>
           </Grid>
@@ -130,7 +130,7 @@ export default function PersonalizeSolutions() {
           <Grid item>
             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
               <g>
-                <rect width="10" height="10" fill={theme.palette.error.main} stroke-width="0"></rect>
+                <rect width="10" height="10" fill={theme.palette.error.main}></rect>
               </g>
             </svg>
           </Grid>
@@ -143,7 +143,7 @@ export default function PersonalizeSolutions() {
           <Grid item>
             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
               <g>
-                <rect width="10" height="10" fill={theme.palette.success.main} stroke-width="0"></rect>
+                <rect width="10" height="10" fill={theme.palette.success.main}></rect>
               </g>
             </svg>
           </Grid>

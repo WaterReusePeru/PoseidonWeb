@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import Grid from '@material-ui/core/Grid'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Chip from '@material-ui/core/Chip'
@@ -8,7 +8,9 @@ import { Typography } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 import treatmentTrains from '../data/treatmentTrains.json'
 import unitProcesses from '../data/unitProcesses.json'
+import waterQualities from '../data/waterQualities'
 import Tooltip from '@material-ui/core/Tooltip'
+import CalculateSolutions from '../case/CalculateSolutions'
 
 import i18next from 'i18next'
 
@@ -23,9 +25,18 @@ export default function SolutionsBox() {
   const classes = useStyles()
 
   const caseState = useSelector(state => state.case)
+  const dispatch = useDispatch()
 
   const { t } = useTranslation()
   const lang = i18next.language
+
+  const inputQuality = waterQualities[caseState.inputQuality.qualityClass]
+  const endUseQuality = waterQualities[caseState.endUse.qualityClass]
+  const amount = caseState.quantity.amount
+
+  CalculateSolutions(inputQuality, endUseQuality, amount)
+
+  console.log(caseState)
 
   return (
     <Paper className={classes.paper} elevation={0}>
@@ -52,14 +63,14 @@ export default function SolutionsBox() {
                     <Chip label={index + 1} color="secondary" size="small" />
                   </Grid>
                   <Grid item>
-                    <Typography>{treatmentTrains[solution.treatmentTrain].title}</Typography>
+                    <Typography>{treatmentTrains[solution.treatmentTrain].category}</Typography>
                   </Grid>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography>{t('Category')}:</Typography>
+                  <Typography>{t('Case Study')}:</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography>{treatmentTrains[solution.treatmentTrain].category}</Typography>
+                  <Typography>{treatmentTrains[solution.treatmentTrain].title}</Typography>
                 </Grid>
                 <Grid item xs={6}>
                   <Typography>{t('Rating')}:</Typography>
@@ -71,13 +82,11 @@ export default function SolutionsBox() {
                   <Typography>{t('Unit Processes')}:</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography>
-                    {treatmentTrains[solution.treatmentTrain].unit_processes.map((up, index) => (
-                      <Tooltip title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
-                        <Chip label={up} key={index} size="small" color="primary" style={{ margin: 2 }} />
-                      </Tooltip>
-                    ))}
-                  </Typography>
+                  {treatmentTrains[solution.treatmentTrain].unit_processes.map((up, index) => (
+                    <Tooltip title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
+                      <Chip label={up} key={index} size="small" color="primary" style={{ margin: 2 }} />
+                    </Tooltip>
+                  ))}
                 </Grid>
               </>
             ))}

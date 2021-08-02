@@ -8,13 +8,10 @@ import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import SolutionsBox from './SolutionsBox'
-import CalculateSolutions from '../case/CalculateSolutions'
 
 export default function Quantity() {
   const quantity = useSelector(state => state.case.quantity)
   const dispatch = useDispatch()
-
-  CalculateSolutions()
 
   const { t } = useTranslation()
 

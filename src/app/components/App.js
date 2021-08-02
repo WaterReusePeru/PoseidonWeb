@@ -6,9 +6,11 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import MenuBookIcon from '@material-ui/icons/MenuBook'
 import AddBoxIcon from '@material-ui/icons/AddBox'
+import BarChartIcon from '@material-ui/icons/BarChart'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { Learn } from './Learn'
 import { Case } from './Case'
+import { Results } from './Results'
 import UserMenu from './UserMenu'
 import { useTranslation } from 'react-i18next'
 import OpacityIcon from '@material-ui/icons/Opacity'
@@ -17,7 +19,7 @@ import Grid from '@material-ui/core/Grid'
 const useStyles = makeStyles({
   toolbar: {
     display: 'grid',
-    gridTemplateColumns: 'auto 1fr auto',
+    gridTemplateColumns: '30% auto 30%',
     justifyItems: 'center',
     justifyContent: 'space-between'
   },
@@ -38,7 +40,7 @@ export const App = () => {
       <Router>
         <AppBar elevation={0}>
           <Toolbar className={classes.toolbar}>
-            <div>
+            <Grid container alignItems="flex-start" spacing={1} justify="center">
               <Button
                 aria-controls="simple-menu"
                 aria-haspopup="true"
@@ -59,7 +61,17 @@ export const App = () => {
               >
                 {t('New Case')}
               </Button>
-            </div>
+              <Button
+                aria-controls="simple-menu"
+                aria-haspopup="true"
+                component={Link}
+                to={`${process.env.PUBLIC_URL}/results`}
+                startIcon={<BarChartIcon />}
+                color="inherit"
+              >
+                {t('Results')}
+              </Button>
+            </Grid>{' '}
             <Grid container alignItems="center" spacing={1} justify="center">
               <Grid item>
                 <OpacityIcon />
@@ -73,9 +85,9 @@ export const App = () => {
               <OpacityIcon style={{position: 'relative', top: '8px'}} /> Poseidon Web alpha 0.1
                 </Typography>
             </div> */}
-            <div>
+            <Grid container alignItems="flex-end" spacing={1} justify="center">
               <UserMenu />
-            </div>
+            </Grid>{' '}
             {/* <ThemeSwitch /> */}
           </Toolbar>
         </AppBar>
@@ -85,6 +97,7 @@ export const App = () => {
             <Route exact path={`${process.env.PUBLIC_URL}/`} component={Learn} />
             <Route path={`${process.env.PUBLIC_URL}/learn`} component={Learn} />
             <Route path={`${process.env.PUBLIC_URL}/case`} component={Case} />
+            <Route path={`${process.env.PUBLIC_URL}/results`} component={Results} />
           </Switch>
         </div>
       </Router>

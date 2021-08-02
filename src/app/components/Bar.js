@@ -72,6 +72,7 @@ export const Bar = props => {
         data={data}
         indexBy="name"
         keys={[props.factor]}
+        valueScale={{ type: 'symlog' }}
         margin={{ top: 10, right: 0, bottom: 50, left: 0 }}
         padding={0.3}
         valueScale={{ type: 'linear' }}

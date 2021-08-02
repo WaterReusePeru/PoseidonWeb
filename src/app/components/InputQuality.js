@@ -76,11 +76,11 @@ export default function InputQuality() {
 
       <Grid item container xs={12} justify="space-evenly" alignItems="center">
         {inputQuality.qualityClass !== null
-          ? waterQualityFactors.map(f => {
+          ? waterQualityFactors.map((f, index) => {
               const key = f.name
 
               return (
-                <div style={{ width: 'calc(1/6*80%' }}>
+                <div key={index} style={{ width: 'calc(1/6*80%' }}>
                   <Bar
                     factor={f.name}
                     unit={f.unit}
@@ -96,9 +96,9 @@ export default function InputQuality() {
                 </div>
               )
             })
-          : waterQualityFactors.map(f => {
+          : waterQualityFactors.map((f, index) => {
               return (
-                <div style={{ width: 'calc(1/6*80%' }}>
+                <div key={index} style={{ width: 'calc(1/6*80%' }}>
                   <Bar factor={f.name} unit={f.unit} />
                 </div>
               )
@@ -110,7 +110,7 @@ export default function InputQuality() {
           <Grid item>
             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
               <g>
-                <rect width="10" height="10" fill={theme.palette.primary.main} stroke-width="0"></rect>
+                <rect width="10" height="10" fill={theme.palette.primary.main}></rect>
               </g>
             </svg>
           </Grid>
@@ -123,7 +123,7 @@ export default function InputQuality() {
           <Grid item>
             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
               <g>
-                <rect width="10" height="10" fill={theme.palette.action.disabled} stroke-width="0"></rect>
+                <rect width="10" height="10" fill={theme.palette.action.disabled}></rect>
               </g>
             </svg>
           </Grid>

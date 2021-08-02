@@ -78,7 +78,8 @@ export const resources = {
         'Según su aportación, no es necesario ningún tratamiento porque la calidad de la aportación es mejor que la del uso final.',
       'Based on your input, theres no possible solution': 'Basado en su entrada, no hay solución posible',
       'Based on your input, the following treatment trains are best suited for the case.':
-        'Basándose en sus aportaciones, los siguientes trenes de tratamiento son los más adecuados para el caso.'
+        'Basándose en sus aportaciones, los siguientes trenes de tratamiento son los más adecuados para el caso.',
+      Rating: 'valoración'
     }
   }
 }
