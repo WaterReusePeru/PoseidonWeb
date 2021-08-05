@@ -11,7 +11,7 @@ export const resources = {
       'Water Qualities': 'Cualidades del agua',
 
       Name: 'Nombre',
-      'Pollutant Removal Efficiencies [% removal]': 'Eficiencias de eliminación de contaminantes [% de eliminación]',
+      'Pollutant Removal Efficiencies [% removal]': 'Eficiencia de eliminación de los contaminates [% de eliminación]',
       Turbidity: 'Turbidez',
       Recovery: 'Recuperación',
       'Evaluation Criteria': 'Criterios de evaluación',
@@ -25,7 +25,7 @@ export const resources = {
       'ease of construction': 'facilidad de construcción',
       'ease of demonstration': 'facilidad de demostración',
       'power demand': 'poder de demanda',
-      'chemical demand': 'demanda de químicos',
+      'chemical demand': 'demanda de química',
       'odor generation': 'generación de olores',
       'impact on ground water': 'impacto en aguas subterráneas',
       'land requirements': 'requerimientos de suelo',
@@ -36,7 +36,7 @@ export const resources = {
       'Download CSV': 'Descargar CSV',
       'View Columns': 'Ver columnas',
       'Filter Table': 'Tabla de filtros',
-      'Rows per page': 'Rows per page',
+      'Rows per page': 'Filas por páginas,
 
       Category: 'Categoría',
       Title: 'Título',
@@ -54,15 +54,15 @@ export const resources = {
       Next: 'Próximo',
       Back: 'Volver',
       'Case Overview': 'Resumen del Caso',
-      'Select the Country': 'seleccionar país',
-      'Select the Currency': 'seleccionar moneda',
+      'Select the Country': 'Seleccionar país',
+      'Select the Currency': 'Seleccionar moneda',
       'Land Cost': 'Costo del terreno',
       'Electricity Cost': 'Costo de la electricidad',
       'Personal Cost': 'Costo del personal',
       'Discount Rate': 'Tasa de descuento',
       Country: 'País',
       Currency: 'Moneda',
-      'Select the Category': 'Seleccione la categoría',
+      'Select the Category': 'Seleccione una categoría',
       'Water Quality Class': 'Categoría de calidad de agua',
       'Average Quantity': 'Cantidad promedio',
       day: 'día',
@@ -76,10 +76,10 @@ export const resources = {
       'Personalize Solutions': 'Personalizar soluciones',
       'Based on your input, no treatment is needed because the input quality is better than the end use quality.':
         'Según su aportación, no es necesario ningún tratamiento porque la calidad de la aportación es mejor que la del uso final.',
-      'Based on your input, theres no possible solution': 'Basado en su entrada, no hay solución posible',
+      'Based on your input, theres no possible solution': 'Según su aportación, no hay solución posible',
       'Based on your input, the following treatment trains are best suited for the case.':
-        'Basándose en sus aportaciones, los siguientes trenes de tratamiento son los más adecuados para el caso.',
-      Rating: 'valoración'
+        'Según sus aportaciónes, los siguientes trenes de tratamiento son los más adecuados para el caso.',
+      Rating: 'Valoración'
     }
   }
 }
