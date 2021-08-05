@@ -2,7 +2,7 @@
   {
     "id": 0,
     "name": "Bar screen",
-    "nameEs": "Pantalla de la barra",
+    "nameEs": "barra de limpieza",
     "turbidity": "0",
     "tss": "2",
     "bod": "2",
@@ -76,7 +76,7 @@
   {
     "id": 2,
     "name": "Grit Chamber",
-    "nameEs": "Cámara de arena",
+    "nameEs": "Desarenadores",
     "turbidity": "2",
     "tss": "2",
     "bod": "2",
@@ -113,7 +113,7 @@
   {
     "id": 3,
     "name": "Equalization Basin",
-    "nameEs": "Cuenca de ecualización",
+    "nameEs": "Tanques de homogenización",
     "turbidity": "0",
     "tss": "0",
     "bod": "12",
@@ -297,7 +297,7 @@
   },
   {
     "id": 8,
-    "name": "Low Loaded Activated Sludge w/o de-N + Sec Sedim.",
+    "name": "Low Loaded Activated Sludge w/o de-N + Sec. Sedim.",
     "nameEs": "Lodos activados de baja carga sin de-N + Sedim. Sec.",
     "turbidity": "98",
     "tss": "97",
@@ -594,7 +594,7 @@
   {
     "id": 16,
     "name": "Membrane bioreactor (MBR)",
-    "nameEs": "Biorreactor de membrana (MBR)",
+    "nameEs": "Biorreactores de membrana (MBR)",
     "turbidity": "92",
     "tss": "92",
     "bod": "92",
@@ -668,7 +668,7 @@
   {
     "id": 18,
     "name": "Enhanced biological phosphorus removal (EBPR)",
-    "nameEs": "Eliminación biológica mejorada de fósforo (EBPR)",
+    "nameEs": "Eliminación biológica mejorada del fósforo (EBPR)",
     "turbidity": "0",
     "tss": "0",
     "bod": "0",
@@ -1260,7 +1260,7 @@
   {
     "id": 34,
     "name": "Chlorine gas",
-    "nameEs": "Gas clorado",
+    "nameEs": "Gas de cloro",
     "turbidity": "0",
     "tss": "0",
     "bod": "0",
