@@ -1,7 +1,7 @@
 export const resources = {
   es: {
     translation: {
-      Learn: 'Aprendar',
+      Learn: 'Aprender',
       'New Case': 'Nuevo caso',
 
       'General Reference': 'Referencia general',
