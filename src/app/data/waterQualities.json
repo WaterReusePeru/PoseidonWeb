@@ -64,14 +64,14 @@
     "virus": "-1",
     "helminths": "",
     "note": "Constituents remaining after primary treatment. Primary treatment consisted of a rotary drum screen , followed by disk screens",
-    "noteEs": "Componentes restantes tras el tratamiento primario. El tratamiento primario consistió en una criba de tambor rotativo, seguida de cribas de disco",
+    "noteEs": "los componentes restantes tras el tratamiento primario. El tratamiento primario consistió en una criba de tambor rotativo, seguida de cribas de disco",
     "reference": "Asano et al., 2006 p. 109",
     "referenceEs": "Asano et al., 2006 p. 109"
   },
   {
     "id": 3,
     "name": "Secondary effluent- water hyacinths",
-    "nameEs": "",
+    "nameEs": "Efluente secundario- con jacintos acuáticos (Eichhornia crassipes)",
     "category": 0,
     "turbidity": "14",
     "tss": "9.8",
@@ -87,14 +87,14 @@
     "virus": "-1",
     "helminths": "",
     "note": "Constituents remaining after secondary treatment. Secondary treatment was with water hyacinths",
-    "noteEs": "",
+    "noteEs": "Componentes restantes tras el tratamiento secundario. El tratamiento secundario fue con jacintos acuáticos",
     "reference": "Asano et al., 2006 p. 109",
-    "referenceEs": ""
+    "referenceEs": "Asano et al., 2006 p. 109"
   },
   {
     "id": 4,
     "name": "Secondary effluent- CAS",
-    "nameEs": "",
+    "nameEs": "Efluentes secundarios- CAS",
     "category": 0,
     "turbidity": "2",
     "tss": "5",
@@ -110,14 +110,14 @@
     "virus": "10",
     "helminths": "",
     "note": "Constituents remaining after secondary treatment. Secondary treatment was conventional activated sludge (CAS).",
-    "noteEs": "",
+    "noteEs": "Componentes restantes tras el tratamiento secundario. El tratamiento secundario fue de lodos activados convencionales (CAS).",
     "reference": "Asano et al., 2006 p. 110",
-    "referenceEs": ""
+    "referenceEs": "Asano et al., 2006 p. 110"
   },
   {
     "id": 5,
     "name": "Secondary effluent- CAS + filtration",
-    "nameEs": "",
+    "nameEs": "Efluente secundario - CAS + filtración",
     "category": 0,
     "turbidity": "0.5",
     "tss": "2",
@@ -133,14 +133,14 @@
     "virus": "10",
     "helminths": "",
     "note": "Constituents remaining after secondary treatment. Secondary treatment was conventional activated sludge (CAS) with filtration",
-    "noteEs": "",
+    "noteEs": "Componentes restantes tras el tratamiento secundario. El tratamiento secundario fue de lodos activados convencionales (CAS) con filtración",
     "reference": "Asano et al., 2006 p. 110",
-    "referenceEs": ""
+    "referenceEs": "Asano et al., 2006 p. 110"
   },
   {
     "id": 6,
     "name": "Secondary effluent- activated sludge + BNR",
-    "nameEs": "",
+    "nameEs": "Efluentes secundarios - lodos activados + BNR",
     "category": 0,
     "turbidity": "2",
     "tss": "5",
@@ -156,14 +156,14 @@
     "virus": "10",
     "helminths": "",
     "note": "Constituents remaining after secondary treatment. Secondary treatment was activated sludge with biological nutrient removal for the removal of nitrogen and phosphorus",
-    "noteEs": "",
+    "noteEs": "Componentes restantes tras el tratamiento secundario. El tratamiento secundario fue de lodos activados con eliminación biológica de nutrientes para la eliminación de nitrógeno y fósforo",
     "reference": "Asano et al., 2006 p. 110",
-    "referenceEs": ""
+    "referenceEs": "Asano et al., 2006 p. 110"
   },
   {
     "id": 7,
     "name": "Secondary effluent- activated sludge + BR+ filtration",
-    "nameEs": "",
+    "nameEs": "Efluente secundario - lodos activados + BR + filtración",
     "category": 0,
     "turbidity": "0.3",
     "tss": "01.Apr",
@@ -179,14 +179,14 @@
     "virus": "10",
     "helminths": "",
     "note": "Constituents remaining after secondary treatment. Secondary treatment was activated sludge with biological nutrient removal (for the removal of nitrogen and phosphorus) and filtration",
-    "noteEs": "",
+    "noteEs": "Componentes restantes tras el tratamiento secundario. El tratamiento secundario fue de lodos activados con eliminación biológica de nutrientes (para la eliminación de nitrógeno y fósforo) y filtración",
     "reference": "Asano et al., 2006 p. 110",
-    "referenceEs": ""
+    "referenceEs": "Asano et al., 2006 p. 110"
   },
   {
     "id": 8,
     "name": "Secondary effluent- membrane bioreactor",
-    "nameEs": "",
+    "nameEs": "Biorreactor de membrana para efluentes secundarios",
     "category": 0,
     "turbidity": "1",
     "tss": "2",
@@ -202,14 +202,14 @@
     "virus": "1",
     "helminths": "",
     "note": "Constituents remaining after secondary treatment. Secondary treatment was membrane bioreactor",
-    "noteEs": "",
+    "noteEs": "Componentes restantes tras el tratamiento secundario. El tratamiento secundario fue el biorreactor de membrana",
     "reference": "Asano et al., 2006 p. 110",
-    "referenceEs": ""
+    "referenceEs": "Asano et al., 2006 p. 110"
   },
   {
     "id": 9,
     "name": "Secondary effluent- activated sludge + MF + RO",
-    "nameEs": "",
+    "nameEs": "Efluente secundario - lodos activados + MF + RO",
     "category": 0,
     "turbidity": "0.01",
     "tss": "1",
@@ -225,14 +225,14 @@
     "virus": "0",
     "helminths": "",
     "note": "Constituents remaining after secondary treatment. Secondary treatment was activated sludge with microfiltration and reverse osmosis.",
-    "noteEs": "",
+    "noteEs": "Componentes que quedan después del tratamiento secundario. El tratamiento secundario fue de lodos activados con microfiltración y ósmosis inversa",
     "reference": "Asano et al., 2006 p. 110",
-    "referenceEs": ""
+    "referenceEs": "Asano et al., 2006 p. 110"
   },
   {
     "id": 10,
     "name": "Tertiary effluent",
-    "nameEs": "",
+    "nameEs": "Efluentes terciarios",
     "category": 0,
     "turbidity": "0.5",
     "tss": "1.3",
@@ -248,14 +248,14 @@
     "virus": "-1",
     "helminths": "",
     "note": "Constituents remaining after tertiary treatment. Tertiary treatment consisted of lime precipitation and depth filtration",
-    "noteEs": "",
+    "noteEs": "Componentes restantes tras el tratamiento terciario. El tratamiento terciario consistió en la precipitación de cal y la filtración en profundidad",
     "reference": "Asano et al., 2006 p. 109",
-    "referenceEs": ""
+    "referenceEs": "Asano et al., 2006 p. 109"
   },
   {
     "id": 11,
     "name": "AWT effluent",
-    "nameEs": "",
+    "nameEs": "Efluente AWT",
     "category": 0,
     "turbidity": "0.27",
     "tss": "-1",
@@ -271,14 +271,14 @@
     "virus": "-1",
     "helminths": "",
     "note": "Constituents remaining after advanced wastewater treatment (AWT). ",
-    "noteEs": "",
+    "noteEs": "Constituyentes restantes tras el tratamiento avanzado de las aguas residuales (AWT).",
     "reference": "Asano et al., 2006 p. 109",
-    "referenceEs": ""
+    "referenceEs": "Asano et al., 2006 p. 109"
   },
   {
     "id": 12,
     "name": "Textile Industry-India",
-    "nameEs": "",
+    "nameEs": "Industria textil-India",
     "category": 1,
     "turbidity": "-1",
     "tss": "-1",
@@ -294,14 +294,14 @@
     "virus": "-1",
     "helminths": "",
     "note": "Average Values and (ranges) from six Indian textile industries",
-    "noteEs": "",
+    "noteEs": "Valores medios y (rangos) entre seis industrias textiles indias",
     "reference": "Hussain et al. (2004)",
-    "referenceEs": ""
+    "referenceEs": "Hussain et al. (2004)"
   },
   {
     "id": 13,
     "name": "Textile Industry- Nigeria",
-    "nameEs": "",
+    "nameEs": "Industria textil - Nigeria",
     "category": 1,
     "turbidity": "-1",
     "tss": "400",
@@ -317,14 +317,14 @@
     "virus": "-1",
     "helminths": "",
     "note": "Average Values and (ranges) from five Nigerian textile mills",
-    "noteEs": "",
+    "noteEs": "Valores medios y (rangos) entre cinco fábricas textiles nigerianas",
     "reference": "Yusuff & Sonibare (2004)",
-    "referenceEs": ""
+    "referenceEs": "Yusuff & Sonibare (2004)"
   },
   {
     "id": 14,
     "name": "Dairy- Industry India",
-    "nameEs": "",
+    "nameEs": "Industria láctea de la India",
     "category": 2,
     "turbidity": "15",
     "tss": "250",
@@ -340,14 +340,14 @@
     "virus": "-1",
     "helminths": "",
     "note": "Characteristics of raw dairy wastewater of A.P. Diary in Hyderabad, India",
-    "noteEs": "",
+    "noteEs": "Características de las aguas residuales lácteas crudas de A.P. Diary en Hyderabad, India",
     "reference": "Sarkar, et al. (2006)",
-    "referenceEs": ""
+    "referenceEs": "Sarkar, et al. (2006)"
   },
   {
     "id": 15,
     "name": "Dairy Industry- Cheese",
-    "nameEs": "",
+    "nameEs": "Industria láctea - Queso",
     "category": 2,
     "turbidity": "-1",
     "tss": "500",
@@ -362,15 +362,15 @@
     "toc": "-1",
     "virus": "-1",
     "helminths": "",
-    "note": "Ranges or mean values reported from3 cheese industry examples",
-    "noteEs": "",
+    "note": "Ranges or mean values reported from 3 cheese industry examples",
+    "noteEs": "Rangos o valores medios de 3 ejemplos de la industria quesera",
     "reference": "Demirel, et al. (2005)",
-    "referenceEs": ""
+    "referenceEs": "Demirel, et al. (2005)"
   },
   {
     "id": 16,
     "name": "Dairy Industry- Cheese whey",
-    "nameEs": "",
+    "nameEs": "Industria láctea - Suero de queso",
     "category": 2,
     "turbidity": "-1",
     "tss": "1780.00",
@@ -385,15 +385,15 @@
     "toc": "-1",
     "virus": "-1",
     "helminths": "",
-    "note": "Ranges or mean values reported from2 cheese whey industry examples",
-    "noteEs": "",
+    "note": "Ranges or mean values reported from 2 cheese whey industry examples",
+    "noteEs": "Rangos o valores medios reportados de 2 ejemplos de la industria del suero de queso",
     "reference": "Demirel, et al. (2005)",
-    "referenceEs": ""
+    "referenceEs": "Demirel, et al. (2005)"
   },
   {
     "id": 17,
     "name": "Dairy Industry- Mixed processing",
-    "nameEs": "",
+    "nameEs": "Industria láctea - Procesamiento mixto",
     "category": 2,
     "turbidity": "-1",
     "tss": "340",
@@ -409,14 +409,14 @@
     "virus": "-1",
     "helminths": "",
     "note": "Ranges or mean values reported from2 mixed dairy industry examples",
-    "noteEs": "",
+    "noteEs": "Rangos o valores medios reportados a partir de 2 ejemplos de la industria láctea mixta",
     "reference": "Demirel, et al. (2005)",
-    "referenceEs": ""
+    "referenceEs": "Demirel, et al. (2005)"
   },
   {
     "id": 18,
     "name": "Paper mill",
-    "nameEs": "",
+    "nameEs": "Fábrica de papel",
     "category": 3,
     "turbidity": "-1",
     "tss": "800",
@@ -432,14 +432,14 @@
     "virus": "-1",
     "helminths": "",
     "note": "Typical characteristics of wastewater at paper mill",
-    "noteEs": "",
+    "noteEs": "Características típicas de las aguas residuales de la fábrica de papel",
     "reference": "Pokhrel & Viraraghavan (2004)",
-    "referenceEs": ""
+    "referenceEs": "Pokhrel & Viraraghavan (2004)"
   },
   {
     "id": 19,
     "name": "Brewery (Beer), Typical ranges",
-    "nameEs": "",
+    "nameEs": "Cervecería (cerveza), gamas típicas",
     "category": 4,
     "turbidity": "-1",
     "tss": "200",
@@ -457,12 +457,12 @@
     "note": "",
     "noteEs": "",
     "reference": "Brito, et al. (2007)",
-    "referenceEs": ""
+    "referenceEs": "Brito, et al. (2007)"
   },
   {
     "id": 20,
     "name": "Winery (Production: 3000 m3/year)",
-    "nameEs": "",
+    "nameEs": "Bodega de vinos (Producción: 3000 m3/año)",
     "category": 4,
     "turbidity": "-1",
     "tss": "1060.00",
@@ -478,14 +478,14 @@
     "virus": "-1",
     "helminths": "",
     "note": "Example of one wine producing industry",
-    "noteEs": "",
+    "noteEs": "Ejemplo de una industria vitivinícola",
     "reference": "Brito, et al. (2007)",
-    "referenceEs": ""
+    "referenceEs": "Brito, et al. (2007)"
   },
   {
     "id": 21,
     "name": "Winery (Production: 6000 m3/year)",
-    "nameEs": "",
+    "nameEs": "Bodega de vinos  (Producción: 6000 m3/año)",
     "category": 4,
     "turbidity": "-1",
     "tss": "1960.00",
@@ -501,14 +501,14 @@
     "virus": "-1",
     "helminths": "",
     "note": "Example of one wine producing industry",
-    "noteEs": "",
+    "noteEs": "Ejemplo de una industria vitivinícola",
     "reference": "Brito, et al. (2007)",
-    "referenceEs": ""
+    "referenceEs": "Brito, et al. (2007)"
   },
   {
     "id": 22,
     "name": "EPA: Urban Reuse- unrestricted",
-    "nameEs": "",
+    "nameEs": "EPA: Reutilización urbana - sin restricciones",
     "category": 5,
     "turbidity": "2",
     "tss": "-1",
@@ -524,14 +524,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Definition: Use of reclaimed water in non-potable applications in municipal settings where public access is not restricted. Treatment: Secondary, filtration, disinfection",
-    "noteEs": "",
+    "noteEs": "Definición: Uso de agua regenerada en aplicaciones no potables en entornos municipales en los que el acceso público no está restringido. Tratamiento: Secundario, filtración, desinfección",
     "reference": "Table 4.4, p.4-9",
-    "referenceEs": ""
+    "referenceEs": "Table 4.4, p.4-9"
   },
   {
     "id": 23,
     "name": "EPA: Urban Reuse-restricted",
-    "nameEs": "",
+    "nameEs": "EPA: Reutilización urbana-restringida",
     "category": 5,
     "turbidity": "-1",
     "tss": "30",
@@ -547,14 +547,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Definition: Use of reclaimed water in non-potable applications in municipal settings where public access is restricted by physical/institutional barriers Treatment: Secondary, disinfection",
-    "noteEs": "",
+    "noteEs": "Definición: Uso de agua regenerada en aplicaciones no potables en entornos municipales en los que el acceso del público está restringido por barreras físicas/institucionales Tratamiento: Secundario, desinfección",
     "reference": "Table 4.4, p.4-9",
-    "referenceEs": ""
+    "referenceEs": "Table 4.4, p.4-9"
   },
   {
     "id": 24,
     "name": "EPA: Agricultural Reuse-Food Crops",
-    "nameEs": "",
+    "nameEs": "EPA: Reutilización agrícola-cultivos alimentarios",
     "category": 5,
     "turbidity": "2",
     "tss": "-1",
@@ -570,14 +570,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Definition: Use of reclaimed water for surface or spray irrigation of food crops eaten raw Treatment: Secondary, filtration, disinfection",
-    "noteEs": "",
+    "noteEs": "Definición: Utilización de agua regenerada para el riego por superficie o por aspersión de cultivos alimentarios que se consumen crudos Tratamiento: Secundario, filtración, desinfección",
     "reference": "Table 4.4, p.4-9",
-    "referenceEs": ""
+    "referenceEs": "Table 4.4, p.4-9"
   },
   {
     "id": 25,
     "name": "EPA: Agricultural Reuse-Processed food crops and Non-food crops",
-    "nameEs": "",
+    "nameEs": "EPA: Reutilización agrícola: cultivos alimentarios y no alimentarios procesados",
     "category": 5,
     "turbidity": "-1",
     "tss": "30",
@@ -593,14 +593,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Definition: Use of reclaimed water for surface or spray irrigation of food crops processed prior to consumption and non-food crops like fodder, fiber etc. Treatment: Secondary, disinfection",
-    "noteEs": "",
+    "noteEs": "Definición: Utilización de agua regenerada para el riego superficial o por aspersión de cultivos alimentarios procesados antes del consumo y de cultivos no alimentarios como forrajes, fibras, etc. Tratamiento: Secundario, desinfección",
     "reference": "Table 4.4, p.4-9",
-    "referenceEs": ""
+    "referenceEs": "Table 4.4, p.4-9"
   },
   {
     "id": 26,
     "name": "EPA: Impoundments-unrestricted",
-    "nameEs": "",
+    "nameEs": "EPA: Embalse - sin restricciones",
     "category": 5,
     "turbidity": "2",
     "tss": "-1",
@@ -616,14 +616,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Definition: Use of reclaimed water in an impoundment in which no limitations are imposed on body contact Treatment: Secondary, filtration, disinfection",
-    "noteEs": "",
+    "noteEs": "Definición: Uso de agua regenerada en un embalse en el que no se imponen limitaciones al contacto con el cuerpo Tratamiento: Secundario, filtración, desinfección",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": ""
+    "referenceEs": "Table 4.4, p.4-10"
   },
   {
     "id": 27,
     "name": "EPA: Impoundments-restricted",
-    "nameEs": "",
+    "nameEs": "EPA: Embalse-restringido",
     "category": 5,
     "turbidity": "-1",
     "tss": "30",
@@ -639,14 +639,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Definition: Use of reclaimed water in an impoundment where bod-contact is restricted Treatment: Secondary, disinfection",
-    "noteEs": "",
+    "noteEs": "Definición: Utilización de agua regenerada en un embalse donde el contacto con el cuerpo está restringido Tratamiento: Secundario, desinfección",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": ""
+    "referenceEs": "Table 4.4, p.4-10"
   },
   {
     "id": 28,
     "name": "EPA: Environmental Reuse",
-    "nameEs": "",
+    "nameEs": "EPA: Reutilización medioambiental",
     "category": 5,
     "turbidity": "-1",
     "tss": "30",
@@ -662,14 +662,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Definition: Use of reclaimed water to create wetlands, enhance natural wetlands or sustain stream flows Treatment: Variable, secondary, and disinfection",
-    "noteEs": "",
+    "noteEs": "Definición: Uso de agua regenerada para crear humedales, mejorar los humedales naturales o mantener los caudales de los arroyos Tratamiento: Variable, secundario y desinfección",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": ""
+    "referenceEs": "Table 4.4, p.4-10"
   },
   {
     "id": 29,
     "name": "EPA: Industrial Reuse- Once-through cooling",
-    "nameEs": "",
+    "nameEs": "EPA: Reutilización industrial - Refrigeración sin recirculación",
     "category": 5,
     "turbidity": "-1",
     "tss": "30",
@@ -685,14 +685,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Treatment: Secondary",
-    "noteEs": "",
-    "reference": "",
-    "referenceEs": ""
+    "noteEs": "Tratamiento: Secundaria",
+    "reference": "Table 4.4, p.4-10",
+    "referenceEs": "Table 4.4, p.4-10"
   },
   {
     "id": 30,
     "name": "EPA: Industrial Reuse- Recirculating Cooling Towers",
-    "nameEs": "",
+    "nameEs": "EPA: Reutilización industrial - Torres de refrigeración de recirculación",
     "category": 5,
     "turbidity": "-1",
     "tss": "30",
@@ -708,14 +708,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Treatment: Secondary, disinfection",
-    "noteEs": "",
+    "noteEs": "Tratamiento: Secundario, desinfección",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": ""
+    "referenceEs": "Table 4.4, p.4-10"
   },
   {
     "id": 31,
     "name": "EPA: Groundwater Recharge-Indirect potable re-use",
-    "nameEs": "",
+    "nameEs": "EPA: Recarga de aguas subterráneas-Reutilización potable indirecta",
     "category": 5,
     "turbidity": "2",
     "tss": "-1",
@@ -731,14 +731,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Definition: Groundwater recharge by spreading into potable aquifers or by injection into potable aquifers and augmentation of surface water supply reservoirs Treatment: Secondary, filtration, disinfection, advanced wastewater treatment or soil aquifer treatment",
-    "noteEs": "",
+    "noteEs": "Definición: Recarga de aguas subterráneas mediante la difusión en acuíferos potables o mediante la inyección en acuíferos potables y el aumento de los embalses de suministro de aguas superficiales Tratamiento: Secundario, filtración, desinfección, tratamiento avanzado de aguas residuales o tratamiento de acuíferos del suelo",
     "reference": "Table 4.4, p.4-11",
-    "referenceEs": ""
+    "referenceEs": "Table 4.4, p.4-11"
   },
   {
     "id": 32,
     "name": "Texas EPA: Urban Reuse- unrestricted",
-    "nameEs": "",
+    "nameEs": "EPA de Texas: Reutilización urbana- sin restricciones",
     "category": 6,
     "turbidity": "3",
     "tss": "-1",
@@ -754,14 +754,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Add. Parameter: Enterococci: 4 CFU/100mL (max. 9 CFU/100mL)",
-    "noteEs": "",
+    "noteEs": "Añadir. Parámetro: Enterococos: 4 UFC/100mL (máx. 9 UFC/100mL)",
     "reference": "Table 4.7, p.4-26",
-    "referenceEs": ""
+    "referenceEs": "Table 4.7, p.4-26"
   },
   {
     "id": 33,
     "name": "Texas EPA: Urban Reuse-restricted",
-    "nameEs": "",
+    "nameEs": "EPA de Texas: Reutilización urbana-restringida",
     "category": 6,
     "turbidity": "-1",
     "tss": "-1",
@@ -777,14 +777,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "BOD: 20 mg/L without pond; 30 mg/L with pond Add. Parameter: Enterococci: 35 CFU/100mL (max. 89 CFU/100mL)",
-    "noteEs": "",
+    "noteEs": "DBO: 20 mg/L sin estanque; 30 mg/L con estanque Añadir. Parámetro: Enterococos: 35 UFC/100mL (máx. 89 UFC/100mL)",
     "reference": "Table 4.8, p.4-27",
-    "referenceEs": ""
+    "referenceEs": "Table 4.8, p.4-27"
   },
   {
     "id": 34,
     "name": "Texas EPA: Agricultural Reuse-Food Crops",
-    "nameEs": "",
+    "nameEs": "EPA de Texas: Reutilización agrícola-cultivos alimentarios",
     "category": 6,
     "turbidity": "3",
     "tss": "-1",
@@ -800,14 +800,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Add. Parameter: Enterococci: 4 CFU/100mL (max. 9 CFU/100mL)",
-    "noteEs": "",
+    "noteEs": "Añadir. Parámetro: Enterococos: 4 UFC/100mL (máx. 9 UFC/100mL)",
     "reference": "Table 4.9, p.4-28",
-    "referenceEs": ""
+    "referenceEs": "Table 4.9, p.4-28"
   },
   {
     "id": 35,
     "name": "Texas EPA: Agricultural Reuse-Processed food crops and Non-food crops",
-    "nameEs": "",
+    "nameEs": "EPA de Texas: Reutilización agrícola-Cultivos alimentarios procesados y cultivos no alimentarios",
     "category": 6,
     "turbidity": "-1",
     "tss": "-1",
@@ -823,14 +823,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "BOD: 20 mg/L without pond; 30 mg/L with pond Add. Parameter: Enterococci: 35 CFU/100mL (max. 89 CFU/100mL)",
-    "noteEs": "",
+    "noteEs": "DBO: 20 mg/L sin estanque; 30 mg/L con estanque Añadir. Parámetro: Enterococos: 35 UFC/100mL (máx. 89 UFC/100mL)",
     "reference": "Table 4.10, p.4-29",
-    "referenceEs": ""
+    "referenceEs": "Table 4.10, p.4-29"
   },
   {
     "id": 36,
     "name": "Texas EPA: Impoundments-unrestricted",
-    "nameEs": "",
+    "nameEs": "EPA de Texas: Embalse - sin restricciones",
     "category": 6,
     "turbidity": "3",
     "tss": "-1",
@@ -846,14 +846,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Add. Parameter: Enterococci: 4 CFU/100ml (max. 9 CFU/100mL)",
-    "noteEs": "",
+    "noteEs": "Añadir. Parámetro: Enterococos: 4 UFC/100ml (máx. 9 UFC/100mL)",
     "reference": "Table 4.11, p.4-30",
-    "referenceEs": ""
+    "referenceEs": "Table 4.11, p.4-30"
   },
   {
     "id": 37,
     "name": "Texas EPA: Impoundments-restricted",
-    "nameEs": "",
+    "nameEs": "EPA de Texas: Embalse-restringido",
     "category": 6,
     "turbidity": "-1",
     "tss": "-1",
@@ -869,14 +869,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "BOD: 20 mg/L without pond; 30 mg/L with pond Add. Parameter: Enterococci: 35 CFU/100mL (max. 89 CFU/100mL) ",
-    "noteEs": "",
+    "noteEs": "DBO: 20 mg/L sin estanque; 30 mg/L con estanque Añadir. Parámetro: Enterococos: 35 UFC/100mL (máx. 89 UFC/100mL)",
     "reference": "Table 4.12, p.4-31",
-    "referenceEs": ""
+    "referenceEs": "Table 4.12, p.4-31"
   },
   {
     "id": 38,
     "name": "Texas EPA: Environmental Reuse",
-    "nameEs": "",
+    "nameEs": "EPA de Texas: Reutilización medioambiental",
     "category": 6,
     "turbidity": "-1",
     "tss": "-1",
@@ -892,14 +892,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Not regulated",
-    "noteEs": "",
+    "noteEs": "sin regulacion",
     "reference": "Table 4.13, p.4-32",
-    "referenceEs": ""
+    "referenceEs": "Table 4.13, p.4-32"
   },
   {
     "id": 39,
     "name": "Texas EPA: Industrial Reuse- Recirculating Cooling Towers",
-    "nameEs": "",
+    "nameEs": "EPA de Texas: Reutilización industrial - Torres de refrigeración de recirculación",
     "category": 6,
     "turbidity": "-1",
     "tss": "-1",
@@ -915,14 +915,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "BOD: 20 mg/L without pond; 30 mg/L with pond Add. Parameter: Enterococci: 35 CFU/100mL (max. 89 CFU/100mL)",
-    "noteEs": "",
+    "noteEs": "DBO: 20 mg/L sin estanque; 30 mg/L con estanque Añadir. Parámetro: Enterococos: 35 UFC/100mL (máx. 89 UFC/100mL)",
     "reference": "Table 4.14, p.4-33",
-    "referenceEs": ""
+    "referenceEs": "Table 4.14, p.4-33"
   },
   {
     "id": 40,
     "name": "Texas EPA: Groundwater Recharge-Indirect potable re-use",
-    "nameEs": "",
+    "nameEs": "EPA de Texas: Recarga de aguas subterráneas-Reutilización potable indirecta",
     "category": 6,
     "turbidity": "3",
     "tss": "-1",
@@ -938,14 +938,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Add. Parameter: Enterococci: 4 CFU/100mL (max. 9 CFU/100mL)",
-    "noteEs": "",
+    "noteEs": "Añadir. Parámetro: Enterococos: 4 UFC/100mL (máx. 9 UFC/100mL)",
     "reference": "Table 4.16, p.4-35",
-    "referenceEs": ""
+    "referenceEs": "Table 4.16, p.4-35"
   },
   {
     "id": 41,
     "name": "California EPA: Urban Reuse- unrestricted",
-    "nameEs": "",
+    "nameEs": "EPA de California: Reutilización urbana- sin restricciones",
     "category": 7,
     "turbidity": "2",
     "tss": "-1",
@@ -961,14 +961,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.)",
-    "noteEs": "",
+    "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.)",
     "reference": "Table 4.7, p.4-26",
-    "referenceEs": ""
+    "referenceEs": "Table 4.7, p.4-26"
   },
   {
     "id": 42,
     "name": "California EPA: Urban Reuse-restricted",
-    "nameEs": "",
+    "nameEs": "EPA de California: Reutilización urbana-restringida",
     "category": 7,
     "turbidity": "-1",
     "tss": "-1",
@@ -984,14 +984,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Total coliform: 240/100 ml (max.)",
-    "noteEs": "",
+    "noteEs": "Coliformes totales: 240/100 ml (máx.)",
     "reference": "Table 4.784, p.4-27",
-    "referenceEs": ""
+    "referenceEs": "Table 4.784, p.4-27"
   },
   {
     "id": 43,
     "name": "California EPA: Agricultural Reuse-Food Crops",
-    "nameEs": "",
+    "nameEs": "EPA de California: Reutilización agrícola-cultivos alimentarios",
     "category": 7,
     "turbidity": "2",
     "tss": "-1",
@@ -1007,14 +1007,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.)",
-    "noteEs": "",
+    "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.)",
     "reference": "Table 4.9, p.4-28",
-    "referenceEs": ""
+    "referenceEs": "Table 4.9, p.4-28"
   },
   {
     "id": 44,
     "name": "California EPA: Agricultural Reuse-Processed food crops and Non-food crops",
-    "nameEs": "",
+    "nameEs": "EPA de California: Reutilización agrícola: cultivos alimentarios y no alimentarios procesados",
     "category": 7,
     "turbidity": "-1",
     "tss": "-1",
@@ -1030,14 +1030,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Total coliforms are not specified in the Californian standards.",
-    "noteEs": "",
+    "noteEs": "Los coliformes totales no se especifican en las normas californianas",
     "reference": "Table 4.10, p.4-29",
-    "referenceEs": ""
+    "referenceEs": "Table 4.10, p.4-29"
   },
   {
     "id": 45,
     "name": "California EPA: Impoundments-unrestricted",
-    "nameEs": "",
+    "nameEs": "EPA de California: Embalse - sin restricciones",
     "category": 7,
     "turbidity": "2",
     "tss": "-1",
@@ -1053,14 +1053,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.) Supplemental pathogen monitoring",
-    "noteEs": "",
+    "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.) Control suplementario de patógenos",
     "reference": "Table 4.11, p.4-30",
-    "referenceEs": ""
+    "referenceEs": "Table 4.11, p.4-30"
   },
   {
     "id": 46,
     "name": "California EPA: Impoundments-restricted",
-    "nameEs": "",
+    "nameEs": "EPA de California: Embalse-restringido",
     "category": 7,
     "turbidity": "-1",
     "tss": "-1",
@@ -1076,14 +1076,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Total coliform: 23/100 ml (not more than one sample exceeds this value in 30d)",
-    "noteEs": "",
+    "noteEs": "Coliformes totales: 23/100 ml (no hay más de una muestra que supere este valor en 30 días)",
     "reference": "Table 4.12, p.4-31",
-    "referenceEs": ""
+    "referenceEs": "Table 4.12, p.4-31"
   },
   {
     "id": 47,
     "name": "California EPA: Environmental Reuse",
-    "nameEs": "",
+    "nameEs": "EPA de California: Reutilización medioambiental",
     "category": 7,
     "turbidity": "-1",
     "tss": "-1",
@@ -1099,14 +1099,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "Not regulated",
-    "noteEs": "",
+    "noteEs": "sin regulación",
     "reference": "Table 4.13, p.4-32",
-    "referenceEs": ""
+    "referenceEs": "Table 4.13, p.4-32"
   },
   {
     "id": 48,
     "name": "California EPA: Industrial Reuse- Once-through cooling",
-    "nameEs": "",
+    "nameEs": "EPA de California: Reutilización industrial - Refrigeración sin reciclaje",
     "category": 7,
     "turbidity": "2",
     "tss": "-1",
@@ -1122,14 +1122,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.)",
-    "noteEs": "",
+    "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.)",
     "reference": "Table 4.14, p.4-33",
-    "referenceEs": ""
+    "referenceEs": "Table 4.14, p.4-33"
   },
   {
     "id": 49,
     "name": "California EPA: Groundwater Recharge-Indirect potable re-use",
-    "nameEs": "",
+    "nameEs": "EPA de California: Recarga de aguas subterráneas-Reutilización potable indirecta",
     "category": 7,
     "turbidity": "2",
     "tss": "-1",
@@ -1145,14 +1145,14 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.) Pathogen monitoring is not required but virus removal rates are prescribed by treatment requirements",
-    "noteEs": "",
+    "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.) No es necesario el control de patógenos, pero las tasas de eliminación de virus están prescritas por los requisitos de tratamiento",
     "reference": "Table 4.16, p.4-35",
-    "referenceEs": ""
+    "referenceEs": "Table 4.16, p.4-35"
   },
   {
     "id": 50,
     "name": "WHO: Use of wastewater in agriculture-unrestricted",
-    "nameEs": "",
+    "nameEs": "OMS: Uso de aguas residuales en la agricultura - sin restricciones",
     "category": 30,
     "turbidity": "-1",
     "tss": "-1",
@@ -1168,9 +1168,9 @@
     "virus": "-1",
     "helminths": "1",
     "note": "Definition: Irrigation with wastewater of all agricultural crops Standards for E.coli in CFU/100 mL: Root crops:103 ; Leaf crops: 104 ; Drip irrigation, high growing crops: 105",
-    "noteEs": "",
+    "noteEs": "Definición: Riego con aguas residuales de todos los cultivos agrícolas Normas para E.coli en UFC/100 mL: Cultivos de raíz:103 ; Cultivos de hoja: 104 ; Riego por goteo, cultivos de alto crecimiento: 105",
     "reference": "Vol.2, Chapter 4.2, p.63-67",
-    "referenceEs": ""
+    "referenceEs": "Vol. 2, capítulo 4.2, p. 63-67"
   },
   {
     "id": 51,
