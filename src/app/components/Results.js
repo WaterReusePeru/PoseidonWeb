@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const styles = theme => ({
+/* const styles = theme => ({
   chipContainer: {
     display: 'flex',
     justifyContent: 'left',
@@ -37,7 +37,7 @@ const styles = theme => ({
       margin: 2
     }
   }
-})
+}) */
 
 export const Results = () => {
   const getMuiTheme = theme => ({
