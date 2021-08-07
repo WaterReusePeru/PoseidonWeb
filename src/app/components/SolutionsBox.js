@@ -62,7 +62,11 @@ export default function SolutionsBox() {
                     <Chip label={index + 1} color="secondary" size="small" />
                   </Grid>
                   <Grid item>
-                    <Typography>{treatmentTrains[solution.treatmentTrain].category}</Typography>
+                    <Typography>
+                      {lang === 'en'
+                        ? treatmentTrains[solution.treatmentTrain].category
+                        : treatmentTrains[solution.treatmentTrain].categoryEs}
+                    </Typography>
                   </Grid>
                 </Grid>
                 <Grid item xs={6}>

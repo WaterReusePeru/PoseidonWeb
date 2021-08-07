@@ -30,17 +30,17 @@ export const caseSlice = createSlice({
       {
         treatmentTrain: null,
         rating: null,
-        price: null
+        cost: null
       },
       {
         treatmentTrain: null,
         rating: null,
-        price: null
+        cost: null
       },
       {
         treatmentTrain: null,
         rating: null,
-        price: null
+        cost: null
       }
     ]
   },

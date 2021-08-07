@@ -79,7 +79,9 @@ export const resources = {
       'Based on your input, theres no possible solution': 'Según su aportación, no hay solución posible',
       'Based on your input, the following treatment trains are best suited for the case.':
         'Según sus aportaciónes, los siguientes trenes de tratamiento son los más adecuados para el caso.',
-      Rating: 'Valoración'
+      Rating: 'Valoración',
+      'Treatment Train': 'Trene de tratamiento',
+      Cost: 'Coste'
     }
   }
 }

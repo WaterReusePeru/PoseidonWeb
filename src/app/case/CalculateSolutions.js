@@ -65,8 +65,6 @@ export default function CalculateSolutions(input, enduse, amount) {
               rating = rating + Number(unitProcesses[unitProcess][criteria])
             })
 
-            //Something's wrong here
-
             if (amount !== null) {
               costFactors.forEach((factor, index) => {
                 let outputCostStep = 0
@@ -88,8 +86,6 @@ export default function CalculateSolutions(input, enduse, amount) {
                 outputCostPerFactor[factor] = outputCostStep
               })
             }
-
-            //Until here..
           }
         })
 
@@ -99,22 +95,6 @@ export default function CalculateSolutions(input, enduse, amount) {
           suitableTreatmentTrain = false
         }
       })
-
-      /*       if (amount !== null) {
-        costFactors.forEach((factor, index) => {
-          let outputCostStep = 0
-          treatmentTrain.unit_processes.forEach(unitProcess => {
-            outputCostStep = outputCostStep + (Number(unitProcesses[unitProcess][factor+'_b']) * Number(amount) ** Number(unitProcesses[unitProcess][factor+'_c']))
-
-            if (index === 0) {
-              console.log(treatmentTrain, unitProcess, factor, Number(amount), outputCostStep, Number(unitProcesses[unitProcess][factor+'_b']), Number(unitProcesses[unitProcess][factor+'_c']))
-            }
-
-            outputCostPerFactor[factor] = outputCostStep
-  
-          })
-        })
-      } */
 
       if (suitableTreatmentTrain) {
         outputQualities.push({

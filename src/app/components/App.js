@@ -15,6 +15,7 @@ import UserMenu from './UserMenu'
 import { useTranslation } from 'react-i18next'
 import OpacityIcon from '@material-ui/icons/Opacity'
 import Grid from '@material-ui/core/Grid'
+import { useSelector } from 'react-redux'
 
 const useStyles = makeStyles({
   toolbar: {
@@ -34,6 +35,8 @@ const useStyles = makeStyles({
 export const App = () => {
   const classes = useStyles()
   const { t } = useTranslation()
+
+  const solutionsState = useSelector(state => state.case.solutions)
 
   return (
     <div className="App">
@@ -68,6 +71,7 @@ export const App = () => {
                 to={`${process.env.PUBLIC_URL}/results`}
                 startIcon={<BarChartIcon />}
                 color="inherit"
+                disabled={solutionsState[0].treatmentTrain === null ? true : false}
               >
                 {t('Results')}
               </Button>
@@ -80,15 +84,9 @@ export const App = () => {
                 <Typography variant="h6">Poseidon Web alpha 0.1</Typography>
               </Grid>
             </Grid>
-            {/* <div className={classes.title}>
-              <Typography>
-              <OpacityIcon style={{position: 'relative', top: '8px'}} /> Poseidon Web alpha 0.1
-                </Typography>
-            </div> */}
             <Grid container alignItems="flex-end" spacing={1} justify="center">
               <UserMenu />
             </Grid>{' '}
-            {/* <ThemeSwitch /> */}
           </Toolbar>
         </AppBar>
 

@@ -3,9 +3,11 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
 import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
+import { MuiThemeProvider } from '@material-ui/core/styles'
+import MUIDataTable from 'mui-datatables'
 
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -26,16 +28,77 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
+const styles = theme => ({
+  chipContainer: {
+    display: 'flex',
+    justifyContent: 'left',
+    flexWrap: 'wrap',
+    '& > *': {
+      margin: 2
+    }
+  }
+})
+
 export const Results = () => {
-  const { t } = useTranslation()
+  const getMuiTheme = theme => ({
+    overrides: {
+      MUIDataTable: {
+        paper: {
+          boxShadow: 'none'
+        }
+      }
+    }
+  })
 
   const classes = useStyles()
+
+  const { t } = useTranslation()
+
+  const solutionsState = useSelector(state => state.case.solutions)
+
+  const columns = [
+    {
+      name: 'treatmentTrain',
+      label: t('Treatment Train'),
+      options: {
+        filter: true
+      }
+    },
+    {
+      name: 'rating',
+      label: t('Rating'),
+      options: {
+        filter: true
+      }
+    },
+    {
+      name: 'cost',
+      label: t('Cost'),
+      options: {
+        filter: true
+      }
+    }
+  ]
+
+  const data = solutionsState
+
+  console.log(data)
+
+  const options = {
+    filter: true,
+    filterType: 'dropdown',
+    selectableRows: 'none',
+    rowsPerPage: 20,
+    print: false
+  }
 
   return (
     <div className="App">
       <div className={classes.main}>
         <Paper elevation={0} style={{ padding: 10 }}>
-          <Typography variant="h6">{t('Results')}</Typography>
+          <MuiThemeProvider theme={getMuiTheme()}>
+            <MUIDataTable title={t('Results')} data={data} columns={columns} options={options} />
+          </MuiThemeProvider>
         </Paper>
       </div>
     </div>
