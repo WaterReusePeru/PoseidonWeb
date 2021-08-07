@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import Grid from '@material-ui/core/Grid'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Chip from '@material-ui/core/Chip'
@@ -25,7 +25,6 @@ export default function SolutionsBox() {
   const classes = useStyles()
 
   const caseState = useSelector(state => state.case)
-  const dispatch = useDispatch()
 
   const { t } = useTranslation()
   const lang = i18next.language

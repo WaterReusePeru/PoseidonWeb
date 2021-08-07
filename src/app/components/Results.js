@@ -1,18 +1,10 @@
 import React from 'react'
 
-import { makeStyles, withStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
-import CommInfo from './CommInfo'
-import InputQuality from './InputQuality'
-import EndUse from './EndUse'
-import Quantity from './Quantity'
-import { CaseSummary } from './CaseSummary'
-
-import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 
-import { useSelector, useDispatch } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 
 const useStyles = makeStyles(theme => ({
@@ -36,8 +28,6 @@ const useStyles = makeStyles(theme => ({
 
 export const Results = () => {
   const { t } = useTranslation()
-
-  const dispatch = useDispatch()
 
   const classes = useStyles()
 
