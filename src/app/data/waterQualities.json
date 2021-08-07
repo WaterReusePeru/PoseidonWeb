@@ -526,7 +526,7 @@
     "note": "Definition: Use of reclaimed water in non-potable applications in municipal settings where public access is not restricted. Treatment: Secondary, filtration, disinfection",
     "noteEs": "Definición: Uso de agua regenerada en aplicaciones no potables en entornos municipales en los que el acceso público no está restringido. Tratamiento: Secundario, filtración, desinfección",
     "reference": "Table 4.4, p.4-9",
-    "referenceEs": "Table 4.4, p.4-9"
+    "referenceEs": "Tablas 4.4, p.4-9"
   },
   {
     "id": 23,
@@ -549,7 +549,7 @@
     "note": "Definition: Use of reclaimed water in non-potable applications in municipal settings where public access is restricted by physical/institutional barriers Treatment: Secondary, disinfection",
     "noteEs": "Definición: Uso de agua regenerada en aplicaciones no potables en entornos municipales en los que el acceso del público está restringido por barreras físicas/institucionales Tratamiento: Secundario, desinfección",
     "reference": "Table 4.4, p.4-9",
-    "referenceEs": "Table 4.4, p.4-9"
+    "referenceEs": "Tablas 4.4, p.4-9"
   },
   {
     "id": 24,
@@ -572,7 +572,7 @@
     "note": "Definition: Use of reclaimed water for surface or spray irrigation of food crops eaten raw Treatment: Secondary, filtration, disinfection",
     "noteEs": "Definición: Utilización de agua regenerada para el riego por superficie o por aspersión de cultivos alimentarios que se consumen crudos Tratamiento: Secundario, filtración, desinfección",
     "reference": "Table 4.4, p.4-9",
-    "referenceEs": "Table 4.4, p.4-9"
+    "referenceEs": "Tablas 4.4, p.4-9"
   },
   {
     "id": 25,
@@ -595,7 +595,7 @@
     "note": "Definition: Use of reclaimed water for surface or spray irrigation of food crops processed prior to consumption and non-food crops like fodder, fiber etc. Treatment: Secondary, disinfection",
     "noteEs": "Definición: Utilización de agua regenerada para el riego superficial o por aspersión de cultivos alimentarios procesados antes del consumo y de cultivos no alimentarios como forrajes, fibras, etc. Tratamiento: Secundario, desinfección",
     "reference": "Table 4.4, p.4-9",
-    "referenceEs": "Table 4.4, p.4-9"
+    "referenceEs": "Tablas 4.4, p.4-9"
   },
   {
     "id": 26,
@@ -618,7 +618,7 @@
     "note": "Definition: Use of reclaimed water in an impoundment in which no limitations are imposed on body contact Treatment: Secondary, filtration, disinfection",
     "noteEs": "Definición: Uso de agua regenerada en un embalse en el que no se imponen limitaciones al contacto con el cuerpo Tratamiento: Secundario, filtración, desinfección",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": "Table 4.4, p.4-10"
+    "referenceEs": "Tablas 4.4, p.4-10"
   },
   {
     "id": 27,
@@ -641,7 +641,7 @@
     "note": "Definition: Use of reclaimed water in an impoundment where bod-contact is restricted Treatment: Secondary, disinfection",
     "noteEs": "Definición: Utilización de agua regenerada en un embalse donde el contacto con el cuerpo está restringido Tratamiento: Secundario, desinfección",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": "Table 4.4, p.4-10"
+    "referenceEs": "Tablas 4.4, p.4-10"
   },
   {
     "id": 28,
@@ -664,7 +664,7 @@
     "note": "Definition: Use of reclaimed water to create wetlands, enhance natural wetlands or sustain stream flows Treatment: Variable, secondary, and disinfection",
     "noteEs": "Definición: Uso de agua regenerada para crear humedales, mejorar los humedales naturales o mantener los caudales de los arroyos Tratamiento: Variable, secundario y desinfección",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": "Table 4.4, p.4-10"
+    "referenceEs": "Tablas 4.4, p.4-10"
   },
   {
     "id": 29,
@@ -687,7 +687,7 @@
     "note": "Treatment: Secondary",
     "noteEs": "Tratamiento: Secundaria",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": "Table 4.4, p.4-10"
+    "referenceEs": "Tablas 4.4, p.4-10"
   },
   {
     "id": 30,
@@ -710,7 +710,7 @@
     "note": "Treatment: Secondary, disinfection",
     "noteEs": "Tratamiento: Secundario, desinfección",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": "Table 4.4, p.4-10"
+    "referenceEs": "Tablas 4.4, p.4-10"
   },
   {
     "id": 31,
@@ -733,7 +733,7 @@
     "note": "Definition: Groundwater recharge by spreading into potable aquifers or by injection into potable aquifers and augmentation of surface water supply reservoirs Treatment: Secondary, filtration, disinfection, advanced wastewater treatment or soil aquifer treatment",
     "noteEs": "Definición: Recarga de aguas subterráneas mediante la difusión en acuíferos potables o mediante la inyección en acuíferos potables y el aumento de los embalses de suministro de aguas superficiales Tratamiento: Secundario, filtración, desinfección, tratamiento avanzado de aguas residuales o tratamiento de acuíferos del suelo",
     "reference": "Table 4.4, p.4-11",
-    "referenceEs": "Table 4.4, p.4-11"
+    "referenceEs": "Tablas 4.4, p.4-11"
   },
   {
     "id": 32,
@@ -756,7 +756,7 @@
     "note": "Add. Parameter: Enterococci: 4 CFU/100mL (max. 9 CFU/100mL)",
     "noteEs": "Añadir. Parámetro: Enterococos: 4 UFC/100mL (máx. 9 UFC/100mL)",
     "reference": "Table 4.7, p.4-26",
-    "referenceEs": "Table 4.7, p.4-26"
+    "referenceEs": "Tablas 4.7, p.4-26"
   },
   {
     "id": 33,
@@ -779,7 +779,7 @@
     "note": "BOD: 20 mg/L without pond; 30 mg/L with pond Add. Parameter: Enterococci: 35 CFU/100mL (max. 89 CFU/100mL)",
     "noteEs": "DBO: 20 mg/L sin estanque; 30 mg/L con estanque Añadir. Parámetro: Enterococos: 35 UFC/100mL (máx. 89 UFC/100mL)",
     "reference": "Table 4.8, p.4-27",
-    "referenceEs": "Table 4.8, p.4-27"
+    "referenceEs": "Tablas 4.8, p.4-27"
   },
   {
     "id": 34,
@@ -802,7 +802,7 @@
     "note": "Add. Parameter: Enterococci: 4 CFU/100mL (max. 9 CFU/100mL)",
     "noteEs": "Añadir. Parámetro: Enterococos: 4 UFC/100mL (máx. 9 UFC/100mL)",
     "reference": "Table 4.9, p.4-28",
-    "referenceEs": "Table 4.9, p.4-28"
+    "referenceEs": "Tablas 4.9, p.4-28"
   },
   {
     "id": 35,
@@ -825,7 +825,7 @@
     "note": "BOD: 20 mg/L without pond; 30 mg/L with pond Add. Parameter: Enterococci: 35 CFU/100mL (max. 89 CFU/100mL)",
     "noteEs": "DBO: 20 mg/L sin estanque; 30 mg/L con estanque Añadir. Parámetro: Enterococos: 35 UFC/100mL (máx. 89 UFC/100mL)",
     "reference": "Table 4.10, p.4-29",
-    "referenceEs": "Table 4.10, p.4-29"
+    "referenceEs": "Tablas 4.10, p.4-29"
   },
   {
     "id": 36,
@@ -848,7 +848,7 @@
     "note": "Add. Parameter: Enterococci: 4 CFU/100ml (max. 9 CFU/100mL)",
     "noteEs": "Añadir. Parámetro: Enterococos: 4 UFC/100ml (máx. 9 UFC/100mL)",
     "reference": "Table 4.11, p.4-30",
-    "referenceEs": "Table 4.11, p.4-30"
+    "referenceEs": "Tablas 4.11, p.4-30"
   },
   {
     "id": 37,
@@ -871,7 +871,7 @@
     "note": "BOD: 20 mg/L without pond; 30 mg/L with pond Add. Parameter: Enterococci: 35 CFU/100mL (max. 89 CFU/100mL) ",
     "noteEs": "DBO: 20 mg/L sin estanque; 30 mg/L con estanque Añadir. Parámetro: Enterococos: 35 UFC/100mL (máx. 89 UFC/100mL)",
     "reference": "Table 4.12, p.4-31",
-    "referenceEs": "Table 4.12, p.4-31"
+    "referenceEs": "Tablas 4.12, p.4-31"
   },
   {
     "id": 38,
@@ -894,7 +894,7 @@
     "note": "Not regulated",
     "noteEs": "sin regulacion",
     "reference": "Table 4.13, p.4-32",
-    "referenceEs": "Table 4.13, p.4-32"
+    "referenceEs": "Tablas 4.13, p.4-32"
   },
   {
     "id": 39,
@@ -917,7 +917,7 @@
     "note": "BOD: 20 mg/L without pond; 30 mg/L with pond Add. Parameter: Enterococci: 35 CFU/100mL (max. 89 CFU/100mL)",
     "noteEs": "DBO: 20 mg/L sin estanque; 30 mg/L con estanque Añadir. Parámetro: Enterococos: 35 UFC/100mL (máx. 89 UFC/100mL)",
     "reference": "Table 4.14, p.4-33",
-    "referenceEs": "Table 4.14, p.4-33"
+    "referenceEs": "Tablas 4.14, p.4-33"
   },
   {
     "id": 40,
@@ -940,7 +940,7 @@
     "note": "Add. Parameter: Enterococci: 4 CFU/100mL (max. 9 CFU/100mL)",
     "noteEs": "Añadir. Parámetro: Enterococos: 4 UFC/100mL (máx. 9 UFC/100mL)",
     "reference": "Table 4.16, p.4-35",
-    "referenceEs": "Table 4.16, p.4-35"
+    "referenceEs": "Tablas 4.16, p.4-35"
   },
   {
     "id": 41,
@@ -963,7 +963,7 @@
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.)",
     "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.)",
     "reference": "Table 4.7, p.4-26",
-    "referenceEs": "Table 4.7, p.4-26"
+    "referenceEs": "Tablas 4.7, p.4-26"
   },
   {
     "id": 42,
@@ -986,7 +986,7 @@
     "note": "Total coliform: 240/100 ml (max.)",
     "noteEs": "Coliformes totales: 240/100 ml (máx.)",
     "reference": "Table 4.784, p.4-27",
-    "referenceEs": "Table 4.784, p.4-27"
+    "referenceEs": "Tablas 4.784, p.4-27"
   },
   {
     "id": 43,
@@ -1009,7 +1009,7 @@
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.)",
     "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.)",
     "reference": "Table 4.9, p.4-28",
-    "referenceEs": "Table 4.9, p.4-28"
+    "referenceEs": "Tablas 4.9, p.4-28"
   },
   {
     "id": 44,
@@ -1032,7 +1032,7 @@
     "note": "Total coliforms are not specified in the Californian standards.",
     "noteEs": "Los coliformes totales no se especifican en las normas californianas",
     "reference": "Table 4.10, p.4-29",
-    "referenceEs": "Table 4.10, p.4-29"
+    "referenceEs": "Tablas 4.10, p.4-29"
   },
   {
     "id": 45,
@@ -1055,7 +1055,7 @@
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.) Supplemental pathogen monitoring",
     "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.) Control suplementario de patógenos",
     "reference": "Table 4.11, p.4-30",
-    "referenceEs": "Table 4.11, p.4-30"
+    "referenceEs": "Tablas 4.11, p.4-30"
   },
   {
     "id": 46,
@@ -1078,7 +1078,7 @@
     "note": "Total coliform: 23/100 ml (not more than one sample exceeds this value in 30d)",
     "noteEs": "Coliformes totales: 23/100 ml (no hay más de una muestra que supere este valor en 30 días)",
     "reference": "Table 4.12, p.4-31",
-    "referenceEs": "Table 4.12, p.4-31"
+    "referenceEs": "Tablas 4.12, p.4-31"
   },
   {
     "id": 47,
@@ -1101,7 +1101,7 @@
     "note": "Not regulated",
     "noteEs": "sin regulación",
     "reference": "Table 4.13, p.4-32",
-    "referenceEs": "Table 4.13, p.4-32"
+    "referenceEs": "Tablas 4.13, p.4-32"
   },
   {
     "id": 48,
@@ -1124,7 +1124,7 @@
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.)",
     "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.)",
     "reference": "Table 4.14, p.4-33",
-    "referenceEs": "Table 4.14, p.4-33"
+    "referenceEs": "Tablas 4.14, p.4-33"
   },
   {
     "id": 49,
@@ -1147,7 +1147,7 @@
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.) Pathogen monitoring is not required but virus removal rates are prescribed by treatment requirements",
     "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.) No es necesario el control de patógenos, pero las tasas de eliminación de virus están prescritas por los requisitos de tratamiento",
     "reference": "Table 4.16, p.4-35",
-    "referenceEs": "Table 4.16, p.4-35"
+    "referenceEs": "Tablas 4.16, p.4-35"
   },
   {
     "id": 50,
