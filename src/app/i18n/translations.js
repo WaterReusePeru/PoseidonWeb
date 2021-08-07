@@ -36,7 +36,7 @@ export const resources = {
       'Download CSV': 'Descargar CSV',
       'View Columns': 'Ver columnas',
       'Filter Table': 'Tabla de filtros',
-      'Rows per page': 'Filas por páginas,
+      'Rows per page': 'Filas por páginas',
 
       Category: 'Categoría',
       Title: 'Título',

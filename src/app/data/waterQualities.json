@@ -2784,7 +2784,7 @@
   {
     "id": 121,
     "name": "Cat. A: Unrestricted urban irrigation and agricultural irrigation of food crops consumed raw",
-    "nameEs": "Cat. A: Riego urbano no restringido y riego agrícola de cultivos alimentarios consumidos en crudo"",
+    "nameEs": "Cat. A: Riego urbano no restringido y riego agrícola de cultivos alimentarios consumidos en crudo",
     "category": 19,
     "turbidity": "5",
     "tss": "10",
@@ -4525,7 +4525,7 @@
     "virus": "-1",
     "helminths": "-1",
     "note": "(Elbana et al. 2014) Criteria of treated wastewater for agricultural use / Treatment Level C (agriculture purposes in desert areas)",
-    "noteEs": "(Elbana et al. 2014) Criterios de las aguas residuales tratadas para uso agrícola / Nivel de tratamiento C (riego de jardines en zonas urbanas)"",
+    "noteEs": "(Elbana et al. 2014) Criterios de las aguas residuales tratadas para uso agrícola / Nivel de tratamiento C (riego de jardines en zonas urbanas)",
     "reference": "",
     "referenceEs": ""
   },
