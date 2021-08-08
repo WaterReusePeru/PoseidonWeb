@@ -30,7 +30,7 @@ export default function Quantity() {
   const [validDistance, setValidDistance] = React.useState(true)
 
   const handleChangeDistance = value => {
-    if (value >= 1 && value <= 100000) {
+    if (value >= 1 && value <= 20000) {
       setValidDistance(true)
       dispatch(setDistance(value))
     } else {
@@ -63,7 +63,7 @@ export default function Quantity() {
         <Grid item xs={6}>
           <TextField
             error={!validQuantity}
-            helperText={!validQuantity ? t('Number must be integer and between 1 and 1 million') : ' '}
+            helperText={!validQuantity ? t("Number must be integer and between 1 and 20'000") : ' '}
             id="standard-number"
             type="number"
             variant="outlined"
@@ -91,7 +91,7 @@ export default function Quantity() {
         <Grid item xs={6}>
           <TextField
             error={!validDistance}
-            helperText={!validDistance ? t("Number must be integer and between 1 and 100'000") : ' '}
+            helperText={!validDistance ? t("Number must be integer and between 1 and 20'000") : ' '}
             id="standard-number"
             type="number"
             variant="outlined"

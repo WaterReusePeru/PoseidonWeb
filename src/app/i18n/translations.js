@@ -69,6 +69,7 @@ export const resources = {
 
       'Water Quality Indicators': 'Indicadores de calidad del agua',
       'Number must be integer and between 1 and 1 million': 'El número debe ser entero y estar entre 1 y 1 millón',
+      "Number must be integer and between 1 and 20'000": "El número debe ser entero y estar entre 1 y 20'000",
 
       input: 'entrada',
       output: 'salida',

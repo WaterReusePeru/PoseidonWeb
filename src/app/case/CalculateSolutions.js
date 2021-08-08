@@ -2,11 +2,12 @@ import { useDispatch } from 'react-redux'
 import { setSolutionNoneAvailable, setSolutionNoneNeeded, setSolutions } from './caseSlice'
 import unitProcesses from '../data/unitProcesses'
 import treatmentTrains from '../data/treatmentTrains'
+import communityInfo from '../data/communityInfo.json'
 
-export default function CalculateSolutions(input, enduse, amount) {
+export default function CalculateSolutions(comm, input, enduse, amount) {
   const dispatch = useDispatch()
 
-  const relevantFactors = ['turbidity', 'tss', 'bod', 'cod', 'fc', 'tc']
+  const qualityFactors = ['turbidity', 'tss', 'bod', 'cod', 'fc', 'tc']
 
   const costFactors = [
     'construction_cost',
@@ -18,11 +19,13 @@ export default function CalculateSolutions(input, enduse, amount) {
 
   let treatmentFactors = []
 
-  relevantFactors.forEach(factor => {
-    if ((Number(input[factor]) > Number(enduse[factor])) & (Number(enduse[factor]) !== -1)) {
+  console.log(comm, input, enduse, amount)
+
+  qualityFactors.forEach(qualityFactor => {
+    if ((Number(input[qualityFactor]) > Number(enduse[qualityFactor])) & (Number(enduse[qualityFactor]) !== -1)) {
       //Check here if -1 and don't push?
       dispatch(setSolutionNoneNeeded(false))
-      treatmentFactors.push(factor)
+      treatmentFactors.push(qualityFactor)
     }
   })
 
@@ -43,9 +46,7 @@ export default function CalculateSolutions(input, enduse, amount) {
     'waste'
   ]
 
-  console.log(input, enduse, treatmentFactors)
-
-  function findSuitableTreatments(input, endUse, factors) {
+  function findSuitableTreatments(input, endUse, TreatmentFactors) {
     let outputQualities = []
 
     treatmentTrains.forEach((treatmentTrain, index) => {
@@ -54,44 +55,54 @@ export default function CalculateSolutions(input, enduse, amount) {
       let outputCostPerFactor = []
       let rating = 0
 
-      factors.forEach((factor, index) => {
-        let outputQualityStep = Number(input[factor])
+      TreatmentFactors.forEach((treatmentFactor, index) => {
+        let outputQualityStep = Number(input[treatmentFactor])
+
         treatmentTrain.unit_processes.forEach(unitProcess => {
-          outputQualityStep = outputQualityStep - (outputQualityStep * Number(unitProcesses[unitProcess][factor])) / 100
+          outputQualityStep =
+            outputQualityStep - (outputQualityStep * Number(unitProcesses[unitProcess][treatmentFactor])) / 100
 
           if (index === 0) {
-            //do rating in the unitProcesses loop but not in the factors loop
+            //do rating & cost calculation in the unitProcesses loop but not in the treatmentFactors loop
             evaluationCriteria.forEach(criteria => {
               rating = rating + Number(unitProcesses[unitProcess][criteria])
             })
 
+            const r = Number(communityInfo[comm.countryID]['discountRate'])
+            const n = Number(unitProcesses[unitProcess]['useful_life'])
+
+            let crf = (r * (1 + r) ** n) / ((1 + r) ** n - 1)
+
             if (amount !== null) {
-              costFactors.forEach((factor, index) => {
+              costFactors.forEach(costFactor => {
+                outputCostPerFactor[costFactor] = 0
                 let outputCostStep = 0
                 outputCostStep =
                   outputCostStep +
-                  Number(unitProcesses[unitProcess][factor + '_c']) *
-                    Number(amount) ** Number(unitProcesses[unitProcess][factor + '_b'])
+                  Number(unitProcesses[unitProcess][costFactor + '_c']) *
+                    Number(amount) ** Number(unitProcesses[unitProcess][costFactor + '_b'])
 
                 console.log(
                   treatmentTrain,
                   unitProcess,
-                  factor,
+                  costFactor,
                   Number(amount),
                   outputCostStep,
-                  Number(unitProcesses[unitProcess][factor + '_b']),
-                  Number(unitProcesses[unitProcess][factor + '_c'])
+                  Number(unitProcesses[unitProcess][costFactor + '_b']),
+                  Number(unitProcesses[unitProcess][costFactor + '_c'])
                 )
 
-                outputCostPerFactor[factor] = outputCostStep
+                outputCostPerFactor[costFactor] = outputCostPerFactor[costFactor] + outputCostStep
               })
             }
+
+            console.log(outputCostPerFactor)
           }
         })
 
-        outputQualityPerFactor[factor] = outputQualityStep
+        outputQualityPerFactor[treatmentFactor] = outputQualityStep
 
-        if (outputQualityPerFactor[factor] > Number(endUse[factor])) {
+        if (outputQualityPerFactor[treatmentFactor] > Number(endUse[treatmentFactor])) {
           suitableTreatmentTrain = false
         }
       })
@@ -108,6 +119,7 @@ export default function CalculateSolutions(input, enduse, amount) {
           fc: outputQualityPerFactor['fc'],
           tc: outputQualityPerFactor['tc'],
           construction_cost: outputCostPerFactor['construction_cost'],
+          capex: outputCostPerFactor['construction_cost'] * 1.39 * 1.27,
           land_requirements: outputCostPerFactor['land_requirements'],
           energy_requirements: outputCostPerFactor['energy_requirements'],
           labor_requirements: outputCostPerFactor['labor_requirements'],

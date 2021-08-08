@@ -11,6 +11,7 @@ import unitProcesses from '../data/unitProcesses.json'
 import waterQualities from '../data/waterQualities'
 import Tooltip from '@material-ui/core/Tooltip'
 import CalculateSolutions from '../case/CalculateSolutions'
+import communityInfo from '../data/communityInfo.json'
 
 import i18next from 'i18next'
 
@@ -29,11 +30,12 @@ export default function SolutionsBox() {
   const { t } = useTranslation()
   const lang = i18next.language
 
+  const commInfo = caseState.commInfo
   const inputQuality = waterQualities[caseState.inputQuality.qualityClass]
   const endUseQuality = waterQualities[caseState.endUse.qualityClass]
   const amount = caseState.quantity.amount
 
-  CalculateSolutions(inputQuality, endUseQuality, amount)
+  CalculateSolutions(commInfo, inputQuality, endUseQuality, amount)
 
   console.log(caseState)
 
