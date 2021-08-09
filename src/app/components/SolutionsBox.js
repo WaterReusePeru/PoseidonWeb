@@ -11,7 +11,6 @@ import unitProcesses from '../data/unitProcesses.json'
 import waterQualities from '../data/waterQualities'
 import Tooltip from '@material-ui/core/Tooltip'
 import CalculateSolutions from '../case/CalculateSolutions'
-import communityInfo from '../data/communityInfo.json'
 
 import i18next from 'i18next'
 

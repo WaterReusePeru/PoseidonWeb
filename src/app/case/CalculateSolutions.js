@@ -2,7 +2,6 @@ import { useDispatch } from 'react-redux'
 import { setSolutionNoneAvailable, setSolutionNoneNeeded, setSolutions } from './caseSlice'
 import unitProcesses from '../data/unitProcesses'
 import treatmentTrains from '../data/treatmentTrains'
-import communityInfo from '../data/communityInfo.json'
 
 export default function CalculateSolutions(comm, input, enduse, amount) {
   const dispatch = useDispatch()
@@ -61,49 +60,44 @@ export default function CalculateSolutions(comm, input, enduse, amount) {
         treatmentTrain.unit_processes.forEach(unitProcess => {
           outputQualityStep =
             outputQualityStep - (outputQualityStep * Number(unitProcesses[unitProcess][treatmentFactor])) / 100
-
-          if (index === 0) {
-            //do rating & cost calculation in the unitProcesses loop but not in the treatmentFactors loop
-            evaluationCriteria.forEach(criteria => {
-              rating = rating + Number(unitProcesses[unitProcess][criteria])
-            })
-
-            const r = Number(communityInfo[comm.countryID]['discountRate'])
-            const n = Number(unitProcesses[unitProcess]['useful_life'])
-
-            let crf = (r * (1 + r) ** n) / ((1 + r) ** n - 1)
-
-            if (amount !== null) {
-              costFactors.forEach(costFactor => {
-                outputCostPerFactor[costFactor] = 0
-                let outputCostStep = 0
-                outputCostStep =
-                  outputCostStep +
-                  Number(unitProcesses[unitProcess][costFactor + '_c']) *
-                    Number(amount) ** Number(unitProcesses[unitProcess][costFactor + '_b'])
-
-                console.log(
-                  treatmentTrain,
-                  unitProcess,
-                  costFactor,
-                  Number(amount),
-                  outputCostStep,
-                  Number(unitProcesses[unitProcess][costFactor + '_b']),
-                  Number(unitProcesses[unitProcess][costFactor + '_c'])
-                )
-
-                outputCostPerFactor[costFactor] = outputCostPerFactor[costFactor] + outputCostStep
-              })
-            }
-
-            console.log(outputCostPerFactor)
-          }
         })
 
         outputQualityPerFactor[treatmentFactor] = outputQualityStep
 
         if (outputQualityPerFactor[treatmentFactor] > Number(endUse[treatmentFactor])) {
           suitableTreatmentTrain = false
+        }
+      })
+
+      costFactors.forEach(costFactor => {
+        outputCostPerFactor[costFactor] = 0
+      })
+
+      let annualizedConstructionCost = 0
+
+      treatmentTrain.unit_processes.forEach(unitProcess => {
+        evaluationCriteria.forEach(criteria => {
+          rating = rating + Number(unitProcesses[unitProcess][criteria])
+        })
+
+        /* const r = Number(communityInfo[comm.countryID]['discountRate'])
+        const n = Number(unitProcesses[unitProcess]['useful_life'])
+        let crf = (r * (1 + r) ** n) / ((1 + r) ** n - 1) */
+
+        if (amount !== null) {
+          costFactors.forEach(costFactor => {
+            let outputCostStep = 0
+            outputCostStep =
+              outputCostStep +
+              Number(unitProcesses[unitProcess][costFactor + '_c']) *
+                Number(amount) ** Number(unitProcesses[unitProcess][costFactor + '_b'])
+
+            outputCostPerFactor[costFactor] = outputCostPerFactor[costFactor] + outputCostStep
+
+            if (costFactor === 'construction_cost') {
+              annualizedConstructionCost += outputCostStep / unitProcesses[unitProcess]['useful_life']
+            }
+          })
         }
       })
 
@@ -119,11 +113,13 @@ export default function CalculateSolutions(comm, input, enduse, amount) {
           fc: outputQualityPerFactor['fc'],
           tc: outputQualityPerFactor['tc'],
           construction_cost: outputCostPerFactor['construction_cost'],
-          capex: outputCostPerFactor['construction_cost'] * 1.39 * 1.27,
           land_requirements: outputCostPerFactor['land_requirements'],
           energy_requirements: outputCostPerFactor['energy_requirements'],
           labor_requirements: outputCostPerFactor['labor_requirements'],
           other_om: outputCostPerFactor['other_om'],
+
+          annualizedConstructionCost: annualizedConstructionCost,
+          capex: outputCostPerFactor['construction_cost'] * 1.39 * 1.27,
 
           rating: rating / treatmentTrain.unit_processes.length / evaluationCriteria.length
         })
