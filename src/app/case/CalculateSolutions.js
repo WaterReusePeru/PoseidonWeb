@@ -73,7 +73,7 @@ export default function CalculateSolutions(comm, input, enduse, amount) {
         outputCostPerFactor[costFactor] = 0
       })
 
-      let annualizedConstructionCost = 0
+      let annualizedCapex = 0
 
       treatmentTrain.unit_processes.forEach(unitProcess => {
         evaluationCriteria.forEach(criteria => {
@@ -95,7 +95,7 @@ export default function CalculateSolutions(comm, input, enduse, amount) {
             outputCostPerFactor[costFactor] = outputCostPerFactor[costFactor] + outputCostStep
 
             if (costFactor === 'construction_cost') {
-              annualizedConstructionCost += outputCostStep / unitProcesses[unitProcess]['useful_life']
+              annualizedCapex += (outputCostStep * 1.39 * 1.27) / unitProcesses[unitProcess]['useful_life']
             }
           })
         }
@@ -112,14 +112,14 @@ export default function CalculateSolutions(comm, input, enduse, amount) {
           cod: outputQualityPerFactor['cod'],
           fc: outputQualityPerFactor['fc'],
           tc: outputQualityPerFactor['tc'],
-          construction_cost: outputCostPerFactor['construction_cost'],
-          land_requirements: outputCostPerFactor['land_requirements'],
-          energy_requirements: outputCostPerFactor['energy_requirements'],
-          labor_requirements: outputCostPerFactor['labor_requirements'],
-          other_om: outputCostPerFactor['other_om'],
+          constructionCost: outputCostPerFactor['construction_cost'],
+          landRequirements: outputCostPerFactor['land_requirements'],
+          energyRequirements: outputCostPerFactor['energy_requirements'],
+          laborRequirements: outputCostPerFactor['labor_requirements'],
+          otherOM: outputCostPerFactor['other_om'],
 
-          annualizedConstructionCost: annualizedConstructionCost,
           capex: outputCostPerFactor['construction_cost'] * 1.39 * 1.27,
+          annualizedCapex: annualizedCapex,
 
           rating: rating / treatmentTrain.unit_processes.length / evaluationCriteria.length
         })

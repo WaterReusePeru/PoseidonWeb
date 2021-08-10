@@ -7,6 +7,7 @@ import Paper from '@material-ui/core/Paper'
 import { Typography } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 import treatmentTrains from '../data/treatmentTrains.json'
+import communityInfo from '../data/communityInfo.json'
 import unitProcesses from '../data/unitProcesses.json'
 import waterQualities from '../data/waterQualities'
 import Tooltip from '@material-ui/core/Tooltip'
@@ -82,6 +83,28 @@ export default function SolutionsBox() {
                 <Grid item xs={6}>
                   <Typography>{Math.round(((solution.rating * 10) / 3) * 1000) / 1000}</Typography>
                 </Grid>
+                {solution.annualizedCapex !== 0 ? (
+                  <>
+                    <Grid item xs={6}>
+                      <Typography>{t('Yearly Capital Expenditures')}:</Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Typography>
+                        {commInfo.currency === 0 ? (
+                          <>{Math.round(solution.annualizedCapex * 1000) / 1000} $</>
+                        ) : (
+                          <>
+                            {communityInfo[commInfo.countryID].exchangeToUSD *
+                              (Math.round(solution.annualizedCapex * 1000) / 1000)}{' '}
+                            {communityInfo[commInfo.countryID].currency}
+                          </>
+                        )}
+                      </Typography>
+                    </Grid>
+                  </>
+                ) : (
+                  <div />
+                )}
                 <Grid item xs={6}>
                   <Typography>{t('Unit Processes')}:</Typography>
                 </Grid>

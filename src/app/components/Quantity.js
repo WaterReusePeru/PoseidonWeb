@@ -18,7 +18,7 @@ export default function Quantity() {
   const [validQuantity, setValidQuantity] = React.useState(true)
 
   const handleChangeQuantity = value => {
-    if (value >= 1 && value <= 1000000) {
+    if (value >= 1 && value <= 20000) {
       setValidQuantity(true)
       dispatch(setQuantity(value))
     } else {

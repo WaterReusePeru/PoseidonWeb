@@ -30,17 +30,20 @@ export const caseSlice = createSlice({
       {
         treatmentTrain: null,
         rating: null,
-        cost: null
+        capex: null,
+        annualizedCapex: null
       },
       {
         treatmentTrain: null,
         rating: null,
-        cost: null
+        capex: null,
+        annualizedCapex: null
       },
       {
         treatmentTrain: null,
         rating: null,
-        cost: null
+        capex: null,
+        annualizedCapex: null
       }
     ]
   },
@@ -117,13 +120,13 @@ export const caseSlice = createSlice({
     },
     setSolutions: (state, action) => {
       console.log(action.payload)
-      action.payload.map((treatment, index) => {
+      action.payload.forEach((treatment, index) => {
         console.log(treatment, index)
         state.solutions[index].treatmentTrain = treatment.treatmentTrain
         state.solutions[index].rating = treatment.rating
-        return null
+        state.solutions[index].capex = treatment.capex
+        state.solutions[index].annualizedCapex = treatment.annualizedCapex
       })
-      //state.solution1.treatmentTrain = action.payload
     }
   }
 })

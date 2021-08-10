@@ -72,8 +72,15 @@ export const Results = () => {
       }
     },
     {
-      name: 'cost',
-      label: t('Cost'),
+      name: 'capex',
+      label: t('Total capital expenditure (CAPEX)'),
+      options: {
+        filter: true
+      }
+    },
+    {
+      name: 'annualizedCapex',
+      label: t('Annualized CAPEX'),
       options: {
         filter: true
       }

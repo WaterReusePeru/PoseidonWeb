@@ -31,7 +31,7 @@ export default function EndUse() {
   }
 
   return (
-    <Grid container direction="row" alignItems="center" spacing={3}>
+    <Grid container direction="row" alignItems="flex-start" spacing={3}>
       <Grid item container xs={endUse.qualityClass !== null ? 8 : 12} direction="row" alignItems="center" spacing={3}>
         <Grid item xs={12}>
           <Typography variant="h6">{t('End Use')}</Typography>
