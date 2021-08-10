@@ -108,9 +108,9 @@ export default function InputQuality() {
       <Grid item container xs={12} justify="space-evenly" alignItems="flex-start">
         <Grid item container xs={3} direction="column" alignItems="center" justify="flex-start">
           <Grid item>
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
               <g>
-                <rect width="10" height="10" fill={theme.palette.primary.main}></rect>
+                <rect width="20" height="20" fill={theme.palette.primary.main}></rect>
               </g>
             </svg>
           </Grid>
@@ -121,9 +121,9 @@ export default function InputQuality() {
 
         <Grid item container xs={3} direction="column" alignItems="center" justify="flex-start">
           <Grid item>
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
               <g>
-                <rect width="10" height="10" fill={theme.palette.action.disabled}></rect>
+                <rect width="20" height="20" fill={theme.palette.action.disabled}></rect>
               </g>
             </svg>
           </Grid>

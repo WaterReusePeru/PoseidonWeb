@@ -91,11 +91,13 @@ export default function SolutionsBox() {
                     <Grid item xs={6}>
                       <Typography>
                         {commInfo.currency === 0 ? (
-                          <>{Math.round(solution.annualizedCapex * 1000) / 1000} $</>
+                          <>{Math.round(solution.annualizedCapex * 1000).toLocaleString('de-CH')} $</>
                         ) : (
                           <>
-                            {communityInfo[commInfo.countryID].exchangeToUSD *
-                              (Math.round(solution.annualizedCapex * 1000) / 1000)}{' '}
+                            {(
+                              communityInfo[commInfo.countryID].exchangeToUSD *
+                              Math.round(solution.annualizedCapex * 1000)
+                            ).toLocaleString('de-CH')}{' '}
                             {communityInfo[commInfo.countryID].currency}
                           </>
                         )}

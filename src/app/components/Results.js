@@ -7,7 +7,16 @@ import { MuiThemeProvider } from '@material-ui/core/styles'
 import MUIDataTable from 'mui-datatables'
 
 import { useTranslation } from 'react-i18next'
+import i18next from 'i18next'
+
 import { useSelector } from 'react-redux'
+
+import treatmentTrains from '../data/treatmentTrains.json'
+import unitProcesses from '../data/unitProcesses.json'
+import communityInfo from '../data/communityInfo.json'
+
+import Chip from '@material-ui/core/Chip'
+import Tooltip from '@material-ui/core/Tooltip'
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -54,35 +63,99 @@ export const Results = () => {
 
   const { t } = useTranslation()
 
+  const lang = i18next.language
+
   const solutionsState = useSelector(state => state.case.solutions)
+  const commInfo = useSelector(state => state.case.commInfo)
 
   const columns = [
+    {
+      name: 'Ranking',
+      label: t('Ranking'),
+      options: {
+        filter: true,
+        customBodyRenderLite: dataIndex => {
+          return dataIndex + 1
+        }
+      }
+    },
     {
       name: 'treatmentTrain',
       label: t('Treatment Train'),
       options: {
-        filter: true
+        filter: true,
+        customBodyRenderLite: dataIndex => {
+          return lang === 'en'
+            ? treatmentTrains[data[dataIndex].treatmentTrain].category +
+                ' - ' +
+                treatmentTrains[data[dataIndex].treatmentTrain].title
+            : treatmentTrains[data[dataIndex].treatmentTrain].categoryEs +
+                ' - ' +
+                treatmentTrains[data[dataIndex].treatmentTrain].titleEs
+        }
       }
     },
     {
-      name: 'rating',
-      label: t('Rating'),
+      name: 'unitProcesses',
+      label: t('Unit Processes'),
       options: {
-        filter: true
+        filter: true,
+        customBodyRenderLite: dataIndex => {
+          return treatmentTrains[data[dataIndex].treatmentTrain].unit_processes.map((up, index) => (
+            <Tooltip title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
+              <Chip label={up} key={index} size="small" color="primary" style={{ margin: 2 }} />
+            </Tooltip>
+          ))
+        }
+      }
+    },
+
+    {
+      name: 'rating',
+      label: t('Rating [1-10]'),
+      options: {
+        filter: true,
+        customBodyRenderLite: dataIndex => {
+          return Math.round(((data[dataIndex].rating * 10) / 3) * 1000) / 1000
+        }
       }
     },
     {
       name: 'capex',
       label: t('Total capital expenditure (CAPEX)'),
       options: {
-        filter: true
+        filter: true,
+        customBodyRenderLite: dataIndex => {
+          return commInfo.currency === 0 ? (
+            <>{Math.round(data[dataIndex].capex * 1000).toLocaleString('de-CH')} $</>
+          ) : (
+            <>
+              {(
+                communityInfo[commInfo.countryID].exchangeToUSD * Math.round(data[dataIndex].capex * 1000)
+              ).toLocaleString('de-CH')}{' '}
+              {communityInfo[commInfo.countryID].currency}
+            </>
+          )
+        }
       }
     },
     {
       name: 'annualizedCapex',
       label: t('Annualized CAPEX'),
       options: {
-        filter: true
+        filter: true,
+        customBodyRenderLite: dataIndex => {
+          return commInfo.currency === 0 ? (
+            <>{Math.round(data[dataIndex].annualizedCapex * 1000).toLocaleString('de-CH')} $</>
+          ) : (
+            <>
+              {(
+                communityInfo[commInfo.countryID].exchangeToUSD * Math.round(data[dataIndex].annualizedCapex * 1000)
+              ).toLocaleString('de-CH')}{' '}
+              {communityInfo[commInfo.countryID].currency}
+            </>
+          )
+        }
       }
     }
   ]
@@ -96,7 +169,8 @@ export const Results = () => {
     filterType: 'dropdown',
     selectableRows: 'none',
     rowsPerPage: 20,
-    print: false
+    print: false,
+    fixedHeader: true
   }
 
   return (

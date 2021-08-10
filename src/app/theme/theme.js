@@ -5,7 +5,7 @@ const colors = {
 }
 
 const secondary = {
-  main: '#ef6c00'
+  main: '#2196f3'
 }
 
 export const theme = createMuiTheme({

@@ -86,7 +86,12 @@ export const Case = () => {
   const { t } = useTranslation()
 
   const getSteps = () => {
-    return [t('Community Information'), t('Input Quality'), t('End Use'), t('Quantity'), t('Personalize Solutions')]
+    return [
+      t('Community Information'),
+      t('Input Quality'),
+      t('End Use'),
+      t('Quantity') /* , t('Personalize Solutions') */
+    ]
   }
 
   const count = useSelector(state => state.case.step)

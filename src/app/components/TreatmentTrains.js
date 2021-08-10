@@ -55,28 +55,28 @@ class TreatmentTrains extends React.Component {
       },
       {
         name: categoryCol,
-        label: 'Category',
+        label: t('Category'),
         options: {
           filter: true
         }
       },
       {
         name: titleCol,
-        label: 'Title',
+        label: t('Title'),
         options: {
           filter: true
         }
       },
       {
         name: descriptionCol,
-        label: 'Description',
+        label: t('Description'),
         options: {
           filter: true
         }
       },
       {
         name: caseStudyCol,
-        label: 'Case Study',
+        label: t('Case Study'),
         options: {
           filter: true,
           setCellProps: () => ({ style: { maxWidth: '20vw' } })
@@ -84,7 +84,7 @@ class TreatmentTrains extends React.Component {
       },
       {
         name: 'unit_processes',
-        label: 'Unit Processes',
+        label: t('Unit Processes'),
         options: {
           filter: false,
           customBodyRenderLite: dataIndex => {
@@ -110,7 +110,8 @@ class TreatmentTrains extends React.Component {
       filterType: 'dropdown',
       selectableRows: 'none',
       rowsPerPage: 20,
-      print: false
+      print: false,
+      fixedHeader: true
     }
 
     return (

@@ -60,17 +60,18 @@ export const Learn = () => {
         <Paper className={classes.root} square elevation={3}>
           <Tabs value={menuPoint} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
             <Tab label={t('General Reference')} to={`${process.env.PUBLIC_URL}/general`} component={Link} />
-            <Tab label={t('PESTLE')} to={`${process.env.PUBLIC_URL}/pestle`} component={Link} />
+            {/* <Tab label={t('PESTLE')} to={`${process.env.PUBLIC_URL}/pestle`} component={Link} /> */}
             <Tab label={t('Water Qualities')} to={`${process.env.PUBLIC_URL}/waterqualities`} component={Link} />
             <Tab label={t('Unit Processes')} to={`${process.env.PUBLIC_URL}/unitprocesses`} component={Link} />
             <Tab label={t('Treatment Trains')} to={`${process.env.PUBLIC_URL}/treatmenttrains`} component={Link} />
-            <Tab label={t('Case Studies')} to={`${process.env.PUBLIC_URL}/casestudies`} component={Link} />
+            {/* <Tab label={t('Case Studies')} to={`${process.env.PUBLIC_URL}/casestudies`} component={Link} /> */}
           </Tabs>
         </Paper>
 
         <div className={classes.main}>
           <Switch>
-            <Route exact path={`${process.env.PUBLIC_URL}/learn`} component={GeneralReference} />
+            <Route exact path={`${process.env.PUBLIC_URL}/`} component={GeneralReference} />
+            <Route path={`${process.env.PUBLIC_URL}/learn`} component={GeneralReference} />
             <Route path={`${process.env.PUBLIC_URL}/general`} component={GeneralReference} />
             <Route path={`${process.env.PUBLIC_URL}/pestle`} component={Pestle} />
             <Route path={`${process.env.PUBLIC_URL}/waterqualities`} component={WaterQualities} />
