@@ -38,6 +38,8 @@ export const App = () => {
 
   const solutionsState = useSelector(state => state.case.solutions)
 
+  console.log(navigator.userAgent)
+
   return (
     <div className="App">
       <Router>
@@ -81,7 +83,7 @@ export const App = () => {
                 <OpacityIcon />
               </Grid>
               <Grid item>
-                <Typography variant="h6">Poseidon Web alpha 0.1</Typography>
+                <Typography variant="h6">Poseidon Web beta</Typography>
               </Grid>
             </Grid>
             <Grid container alignItems="flex-end" spacing={1} justify="center">

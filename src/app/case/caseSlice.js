@@ -24,26 +24,30 @@ export const caseSlice = createSlice({
     },
     solution: {
       noneNeeded: true,
-      noneAvailable: false
+      noneAvailable: false,
+      sortByCost: false
     },
     solutions: [
       {
         treatmentTrain: null,
         rating: null,
         capex: null,
-        annualizedCapex: null
+        annualizedCapex: null,
+        annualizedCapexPerCubic: null
       },
       {
         treatmentTrain: null,
         rating: null,
         capex: null,
-        annualizedCapex: null
+        annualizedCapex: null,
+        annualizedCapexPerCubic: null
       },
       {
         treatmentTrain: null,
         rating: null,
         capex: null,
-        annualizedCapex: null
+        annualizedCapex: null,
+        annualizedCapexPerCubic: null
       }
     ]
   },
@@ -126,7 +130,11 @@ export const caseSlice = createSlice({
         state.solutions[index].rating = treatment.rating
         state.solutions[index].capex = treatment.capex
         state.solutions[index].annualizedCapex = treatment.annualizedCapex
+        state.solutions[index].annualizedCapexPerCubic = treatment.annualizedCapexPerCubic
       })
+    },
+    setSolutionSortByCost: (state, action) => {
+      state.solution.sortByCost = action.payload
     }
   }
 })
@@ -149,7 +157,8 @@ export const {
   resetSolutions,
   setSolutionNoneNeeded,
   setSolutionNoneAvailable,
-  setSolutions
+  setSolutions,
+  setSolutionSortByCost
 } = caseSlice.actions
 
 export default caseSlice.reducer

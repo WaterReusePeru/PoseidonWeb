@@ -3,6 +3,7 @@ export const resources = {
     translation: {
       Learn: 'Aprender',
       'New Case': 'Nuevo caso',
+      Results: 'Resultados',
 
       'General Reference': 'Referencia general',
       'Unit Processes': 'Procesos unitarios',
@@ -73,6 +74,7 @@ export const resources = {
 
       input: 'entrada',
       output: 'salida',
+      'avg. input': 'entr. med.',
 
       'Personalize Solutions': 'Personalizar soluciones',
       'Based on your input, no treatment is needed because the input quality is better than the end use quality.':

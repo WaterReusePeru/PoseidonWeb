@@ -1,110 +1,28 @@
-= react-you-do-you image:https://travis-ci.com/netzwerg/react-you-do-you.svg?branch=master["Build Status", link="https://travis-ci.com/netzwerg/react-you-do-you"]
+= Poseidon Web 💧
 
-An example of how I use React + Redux + Material-UI + TypeScript.
+This Poseidon – Web on-line application is an update of the already existing developed Poseidon application based on Microsoft Excel. The scope of the new application is to enhance the older version to a more user-friendly decision support tool, that supports pre-feasibility studies and aims at promoting water reuse and building capacities in the field. The tool developed currently encompasses 37-unit processes combined into 70 benchmark treatment trains. It also contains information on water quality standards and typical wastewater qualities. It estimates the removal performances for 12 parameters and the lifecycle costs including distribution.
 
-Or: The code I wish existed when I got started.
+The tool and all underlying data are open access and under continuous development. The underlying systemic approach of the tool makes it intuitive also for users with limited prior knowledge in the field to identify most adequate solutions based on a multi-criteria assessment. This should help to promote water reuse and spearhead initiates for more detailed feasibility and design commissioning for implementation of water reuse schemes.
 
-This is how I do it – *you do you* 💖
+== Base Application & Libraries
+** The base of the web application is built from an example by @netzwerg: https://github.com/netzwerg/react-you-do-you[react-you-do-you]
+** The following libraries are used:
+*** https://www.npmjs.com/package/react-router-dom[React-Router] for creating and linking routes
+*** https://material-ui.com/[Material-UI] for the design
+*** https://nivo.rocks/[Nivo] for creating data visualisations
+*** https://redux-toolkit.js.org/[Redux-Toolkit] for state management
+*** https://jestjs.io/[Jest] for creating and running tests
+*** https://typicode.github.io/husky/#/[Husky] for static code analysis
+*** https://react.i18next.com/[i18next] for internationalisation
+*** https://github.com/gregnb/mui-datatables[MUI-Datatables] for listing programm data
 
-image:https://codesandbox.io/static/img/play-codesandbox.svg["Edit react-you-do-you", link="https://codesandbox.io/s/github/netzwerg/react-you-do-you/tree/master/?fontsize=14"]
+== Architecture
 
-== Setup & Tooling
-** https://facebook.github.io/create-react-app[create-react-app] for project setup:
-*** Compilation, linting, etc.
-*** Development mode with auto-reloading
-*** Test watcher
-*** Optimized production build
-*** see <<scripts, Available Scripts>>
-** https://prettier.io[Prettier] for formatting, auto-triggered on commit via https://github.com/typicode/husky[Husky]
-** http://extension.remotedev.io/[Redux DevTools] for state management debugging
+The following image visualizes the system architecture that enables the deployment and serving of the application through GitHub Services:
 
-== Structure
-Organize *by feature*:
+image::docs/Architecture.png[]
 
-* Each feature gets its own folder:
-** Defines its own model/actions/reducer
-** Defines its own components, clearly separated into presentation (inside `components` folder) and glue-code/logic (inside `containers` folder)
-** Exports selectively through its `index.ts` file
+This sitemap represents the way the web application is structured:
 
-When using the feature:
+image::docs/Sitemap.png[]
 
-* Only ever import what is officially exported:
-** ✅ `import { Foo } from './feature-x'`
-** 🚫 `import { SecretInternalComponent } from './feature-x/components/SecretInternalComponent'`)
-* Avoid circular dependencies – sooner or later, a `shared` folder will be needed ;-)
-
-== State Management
-
-* Keep state in a *fully typed, immutable* model:
-** Use interfaces or type aliases rather than classes (rule of thumb: prefer interfaces because they give better compile error message, use type aliases for sum type awesomeness)
-** Use TypeScript's `readonly` keyword
-** Use https://github.com/immutable-js/immutable-js[immutable] collections
-* Use https://redux.js.org/[Redux] to store and manage state:
-** Define a `RootState` by composing the various feature-specific models
-** Define a `RootReducer` by composing the feature-specific reducers, each being responsible for the feature-specific state slice.
-** Write container components to connect presentation components to the Redux store. *Why?* Presentation components are more re-usable if they don't know how state is shaped nor how it's managed.
-** Use https://github.com/reduxjs/redux-thunk[redux-thunk] for async actions
-
-== Broad Overview
-
-image::docs/container-vs-component.png[]
-
-== User Interface
-
-Use https://material-ui.com/[Material-UI], a React component library based on https://en.m.wikipedia.org/wiki/Material_Design[Material Design]:
-
-* Huge selection of components, fully customizable
-* Theme support (e.g. light vs dark)
-* CSS in JS (or in TS, actually): Reusable, component-scoped styles
-
-My CSS skills are embarrassing, but https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout[CSS Grid Layout] gives me super powers.
-I use it for everything.
-
-== Testing
-
-I am mostly developing prototypes these days, so I am not an expert when it comes to testing.
-However, this is the minimum I *always* test:
-
-* Root reducer: Making sure each action is handled correctly (~80% of my logic)
-* Error-free rendering of each component
-
-== Usage
-
-```
-git clone https://github.com/netzwerg/react-you-do-you.git
-cd react-you-do-you
-yarn install
-yarn start
-```
-
-_Feel free to use `npm` rather than `yarn` – I have a slight preference for `yarn`, mainly because of https://yarnpkg.com/lang/en/docs/selective-version-resolutions/[resolutions] support_
-
-[[scripts]]
-== Available Scripts
-
-=== `yarn start`
-
-Compiles and runs the app in development mode.
-
-Open http://localhost:3000 to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any compile or lint errors in the console.
-
-=== `yarn test`
-
-Launches the test runner in interactive watch mode.
-
-=== `yarn run build`
-
-Builds the app for production to the `build` folder.
-
-=== `yarn run lint`
-
-Runs ESLint (with TypeScript support) on all `&#42;.ts` or `&#42;.tsx` files in the `src` directory.
-
-=== `yarn run lint:fix`
-
-Runs ESLint (with TypeScript support) on all `&#42;.ts` or `&#42;.tsx` files in the `src` directory, automatically *fixing* problems.
-
-&copy; Rahel Lüthy 2020 – link:LICENSE[MIT License]

@@ -3,7 +3,7 @@ import { setSolutionNoneAvailable, setSolutionNoneNeeded, setSolutions } from '.
 import unitProcesses from '../data/unitProcesses'
 import treatmentTrains from '../data/treatmentTrains'
 
-export default function CalculateSolutions(comm, input, enduse, amount) {
+export default function CalculateSolutions(comm, input, enduse, amount, byCost) {
   const dispatch = useDispatch()
 
   const qualityFactors = ['turbidity', 'tss', 'bod', 'cod', 'fc', 'tc']
@@ -80,10 +80,6 @@ export default function CalculateSolutions(comm, input, enduse, amount) {
           rating = rating + Number(unitProcesses[unitProcess][criteria])
         })
 
-        /* const r = Number(communityInfo[comm.countryID]['discountRate'])
-        const n = Number(unitProcesses[unitProcess]['useful_life'])
-        let crf = (r * (1 + r) ** n) / ((1 + r) ** n - 1) */
-
         if (amount !== null) {
           costFactors.forEach(costFactor => {
             let outputCostStep = 0
@@ -120,6 +116,7 @@ export default function CalculateSolutions(comm, input, enduse, amount) {
 
           capex: outputCostPerFactor['construction_cost'] * 1.39 * 1.27,
           annualizedCapex: annualizedCapex,
+          annualizedCapexPerCubic: annualizedCapex / amount,
 
           rating: rating / treatmentTrain.unit_processes.length / evaluationCriteria.length
         })
@@ -138,7 +135,13 @@ export default function CalculateSolutions(comm, input, enduse, amount) {
   }
 
   function findTopTreatments(outputQualities) {
-    const topThreeTreatments = outputQualities.sort((a, b) => b.rating - a.rating).slice(0, 3)
+    let topThreeTreatments
+
+    if (byCost) {
+      topThreeTreatments = outputQualities.sort((a, b) => a.annualizedCapex - b.annualizedCapex).slice(0, 3)
+    } else {
+      topThreeTreatments = outputQualities.sort((a, b) => b.rating - a.rating).slice(0, 3)
+    }
 
     console.log('top-three', topThreeTreatments)
 

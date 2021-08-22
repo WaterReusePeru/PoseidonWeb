@@ -1,10 +1,12 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import Grid from '@material-ui/core/Grid'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Chip from '@material-ui/core/Chip'
 import Paper from '@material-ui/core/Paper'
 import { Typography } from '@material-ui/core'
+import Switch from '@material-ui/core/Switch'
+
 import { useTranslation } from 'react-i18next'
 import treatmentTrains from '../data/treatmentTrains.json'
 import communityInfo from '../data/communityInfo.json'
@@ -12,6 +14,8 @@ import unitProcesses from '../data/unitProcesses.json'
 import waterQualities from '../data/waterQualities'
 import Tooltip from '@material-ui/core/Tooltip'
 import CalculateSolutions from '../case/CalculateSolutions'
+
+import { setSolutionSortByCost } from '../case/caseSlice'
 
 import i18next from 'i18next'
 
@@ -27,6 +31,8 @@ export default function SolutionsBox() {
 
   const caseState = useSelector(state => state.case)
 
+  const dispatch = useDispatch()
+
   const { t } = useTranslation()
   const lang = i18next.language
 
@@ -34,8 +40,13 @@ export default function SolutionsBox() {
   const inputQuality = waterQualities[caseState.inputQuality.qualityClass]
   const endUseQuality = waterQualities[caseState.endUse.qualityClass]
   const amount = caseState.quantity.amount
+  const sortByCost = caseState.solution.sortByCost
 
-  CalculateSolutions(commInfo, inputQuality, endUseQuality, amount)
+  CalculateSolutions(commInfo, inputQuality, endUseQuality, amount, sortByCost)
+
+  const handleChangePriority = value => {
+    dispatch(setSolutionSortByCost(!sortByCost))
+  }
 
   console.log(caseState)
 
@@ -57,6 +68,21 @@ export default function SolutionsBox() {
 
         {!caseState.solution.noneNeeded & !caseState.solution.noneAvailable ? (
           <Grid item container xs={12} spacing={1} alignItems="center">
+            <Grid item container alignItems="center" spacing={1} xs={12}>
+              <Grid item>
+                <Typography>Priority:</Typography>
+              </Grid>
+              <Grid item>
+                <Typography>rating</Typography>
+              </Grid>
+              <Grid item>
+                <Switch color="default" checked={sortByCost} onChange={event => handleChangePriority(event)} />
+              </Grid>
+              <Grid item>
+                <Typography>cost</Typography>
+              </Grid>
+            </Grid>
+
             {caseState.solutions.map((solution, index) => (
               <>
                 <Grid item container justify="flex-start" spacing={1} xs={12}>
@@ -83,7 +109,7 @@ export default function SolutionsBox() {
                 <Grid item xs={6}>
                   <Typography>{Math.round(((solution.rating * 10) / 3) * 1000) / 1000}</Typography>
                 </Grid>
-                {solution.annualizedCapex !== 0 ? (
+                {!isNaN(solution.annualizedCapexPerCubic) ? (
                   <>
                     <Grid item xs={6}>
                       <Typography>{t('Yearly Capital Expenditures')}:</Typography>
@@ -91,14 +117,14 @@ export default function SolutionsBox() {
                     <Grid item xs={6}>
                       <Typography>
                         {commInfo.currency === 0 ? (
-                          <>{Math.round(solution.annualizedCapex * 1000).toLocaleString('de-CH')} $</>
+                          <>{Math.round(solution.annualizedCapexPerCubic * 1000).toLocaleString('de-CH')} $/m&sup3;</>
                         ) : (
                           <>
                             {(
                               communityInfo[commInfo.countryID].exchangeToUSD *
-                              Math.round(solution.annualizedCapex * 1000)
+                              Math.round(solution.annualizedCapexPerCubic * 1000)
                             ).toLocaleString('de-CH')}{' '}
-                            {communityInfo[commInfo.countryID].currency}
+                            {communityInfo[commInfo.countryID].currency}/m&sup3;
                           </>
                         )}
                       </Typography>

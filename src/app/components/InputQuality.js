@@ -30,7 +30,7 @@ export default function InputQuality() {
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
       <Grid item xs={12}>
-        <Typography variant="h6">{t('Input Quality & Quantity')}</Typography>
+        <Typography variant="h6">{t('Input Quality')}</Typography>
       </Grid>
       <Grid item xs={4}>
         <Typography>{t('Select the Category')}</Typography>

@@ -157,6 +157,26 @@ export const Results = () => {
           )
         }
       }
+    },
+    {
+      name: 'annualizedCapexPerCubic',
+      label: t('Annualized CAPEX per m&sup3;'),
+      options: {
+        filter: true,
+        customBodyRenderLite: dataIndex => {
+          return commInfo.currency === 0 ? (
+            <>{Math.round(data[dataIndex].annualizedCapexPerCubic * 1000).toLocaleString('de-CH')} $</>
+          ) : (
+            <>
+              {(
+                communityInfo[commInfo.countryID].exchangeToUSD *
+                Math.round(data[dataIndex].annualizedCapexPerCubic * 1000)
+              ).toLocaleString('de-CH')}{' '}
+              {communityInfo[commInfo.countryID].currency}
+            </>
+          )
+        }
+      }
     }
   ]
 
