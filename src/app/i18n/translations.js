@@ -98,6 +98,8 @@ export const resources = {
       'The figure on the right shows a simplified flow of how the application works and how the calculations are being made.':
         'La figura de la derecha muestra un flujo simplificado de cómo funciona la aplicación y cómo se realizan los cálculos.',
 
+      'Overview of application and calculations': 'Resumen de la aplicación y los cálculos',
+
       Ranking: 'Clasificación',
       'Annualized CAPEX': 'CAPEX anualizado',
       'Annualized CAPEX per Cubic': 'CAPEX anualizado por cubo',

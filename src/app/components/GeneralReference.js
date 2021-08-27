@@ -60,7 +60,7 @@ export default function GeneralReference() {
             </Typography>
           </Grid>
           <Grid item xs={8}>
-            <img className={classes.img} src={Calculations} />
+            <img className={classes.img} src={Calculations} alt={t('Overview of application and calculations')} />
           </Grid>
         </Grid>
       </Paper>
