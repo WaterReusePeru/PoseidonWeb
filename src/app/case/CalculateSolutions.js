@@ -18,8 +18,6 @@ export default function CalculateSolutions(comm, input, enduse, amount, byCost) 
 
   let treatmentFactors = []
 
-  console.log(comm, input, enduse, amount)
-
   qualityFactors.forEach(qualityFactor => {
     if ((Number(input[qualityFactor]) > Number(enduse[qualityFactor])) & (Number(enduse[qualityFactor]) !== -1)) {
       //Check here if -1 and don't push?
@@ -129,8 +127,6 @@ export default function CalculateSolutions(comm, input, enduse, amount, byCost) 
       dispatch(setSolutionNoneAvailable(false))
     }
 
-    console.log('output qualities', outputQualities)
-
     return outputQualities
   }
 
@@ -142,8 +138,6 @@ export default function CalculateSolutions(comm, input, enduse, amount, byCost) 
     } else {
       topThreeTreatments = outputQualities.sort((a, b) => b.rating - a.rating).slice(0, 3)
     }
-
-    console.log('top-three', topThreeTreatments)
 
     return topThreeTreatments
   }

@@ -48,8 +48,6 @@ export default function SolutionsBox() {
     dispatch(setSolutionSortByCost(!sortByCost))
   }
 
-  console.log(caseState)
-
   return (
     <Paper className={classes.paper} elevation={0}>
       <Grid container spacing={3}>
@@ -70,16 +68,16 @@ export default function SolutionsBox() {
           <Grid item container xs={12} spacing={1} alignItems="center">
             <Grid item container alignItems="center" spacing={1} xs={12}>
               <Grid item>
-                <Typography>Priority:</Typography>
+                <Typography>{t('Priority')}:</Typography>
               </Grid>
               <Grid item>
-                <Typography>rating</Typography>
+                <Typography>{t('rating')}</Typography>
               </Grid>
               <Grid item>
                 <Switch color="default" checked={sortByCost} onChange={event => handleChangePriority(event)} />
               </Grid>
               <Grid item>
-                <Typography>cost</Typography>
+                <Typography>{t('cost')}</Typography>
               </Grid>
             </Grid>
 

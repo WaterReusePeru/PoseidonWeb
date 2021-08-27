@@ -160,7 +160,7 @@ export const Results = () => {
     },
     {
       name: 'annualizedCapexPerCubic',
-      label: t('Annualized CAPEX per m&sup3;'),
+      label: t('Annualized CAPEX per Cubic'),
       options: {
         filter: true,
         customBodyRenderLite: dataIndex => {
@@ -181,8 +181,6 @@ export const Results = () => {
   ]
 
   const data = solutionsState
-
-  console.log(data)
 
   const options = {
     filter: true,

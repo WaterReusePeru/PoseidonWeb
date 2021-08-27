@@ -38,8 +38,6 @@ export const App = () => {
 
   const solutionsState = useSelector(state => state.case.solutions)
 
-  console.log(navigator.userAgent)
-
   return (
     <div className="App">
       <Router>

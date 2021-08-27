@@ -76,6 +76,9 @@ export const resources = {
       output: 'salida',
       'avg. input': 'entr. med.',
 
+      Input: 'Entrada',
+      'Average Input': 'Entrada media',
+
       'Personalize Solutions': 'Personalizar soluciones',
       'Based on your input, no treatment is needed because the input quality is better than the end use quality.':
         'Según su aportación, no es necesario ningún tratamiento porque la calidad de la aportación es mejor que la del uso final.',
@@ -86,11 +89,23 @@ export const resources = {
       'Treatment Train': 'Trene de tratamiento',
       Cost: 'Coste',
 
-      'Ranking [1-10]': 'Clasificación [1-10]',
+      'Rating [1-10]': 'Clasificación [1-10]',
       'This Poseidon – Web on-line application is an update of the already existing developed Poseidon application based on Microsoft Excel. The scope of the new application is to enhance the older version to a more user-friendly decision support tool, that supports pre-feasibility studies and aims at promoting water reuse and building capacities in the field. The tool developed currently encompasses 37-unit processes combined into 70 benchmark treatment trains. It also contains information on water quality standards and typical wastewater qualities. It estimates the removal performances for 12 parameters and the lifecycle costs including distribution.':
         'Esta aplicación Poseidón - Web on-line es una actualización de la aplicación Poseidón ya desarrollada y basada en Microsoft Excel. El objetivo de la nueva aplicación es mejorar la versión anterior para convertirla en una herramienta de apoyo a la toma de decisiones más fácil de usar, que apoye los estudios de prefactibilidad y tenga como objetivo promover la reutilización del agua y la creación de capacidades en el campo. La herramienta desarrollada actualmente abarca 37 procesos de unidades combinadas en 70 trenes de tratamiento de referencia. También contiene información sobre las normas de calidad del agua y las calidades típicas de las aguas residuales. Estima los rendimientos de eliminación de 12 parámetros y los costes del ciclo de vida, incluida la distribución.',
       'The tool and all underlying data are open access and under continuous development. The underlying systemic approach of the tool makes it intuitive also for users with limited prior knowledge in the field to identify most adequate solutions based on a multi-criteria assessment. This should help to promote water reuse and spearhead initiates for more detailed feasibility and design commissioning for implementation of water reuse schemes.':
-        'La herramienta y todos los datos subyacentes son de libre acceso y están en continuo desarrollo. El enfoque sistémico subyacente de la herramienta hace que sea intuitivo también para los usuarios con conocimientos previos limitados en el campo para identificar las soluciones más adecuadas basadas en una evaluación multicriterio. Esto debería ayudar a promover la reutilización del agua y a iniciar una viabilidad más detallada y un encargo de diseño para la aplicación de los planes de reutilización del agua.'
+        'La herramienta y todos los datos subyacentes son de libre acceso y están en continuo desarrollo. El enfoque sistémico subyacente de la herramienta hace que sea intuitivo también para los usuarios con conocimientos previos limitados en el campo para identificar las soluciones más adecuadas basadas en una evaluación multicriterio. Esto debería ayudar a promover la reutilización del agua y a iniciar una viabilidad más detallada y un encargo de diseño para la aplicación de los planes de reutilización del agua.',
+
+      'The figure on the right shows a simplified flow of how the application works and how the calculations are being made.':
+        'La figura de la derecha muestra un flujo simplificado de cómo funciona la aplicación y cómo se realizan los cálculos.',
+
+      Ranking: 'Clasificación',
+      'Annualized CAPEX': 'CAPEX anualizado',
+      'Annualized CAPEX per Cubic': 'CAPEX anualizado por cubo',
+      'Total capital expenditure (CAPEX)': 'Total de gastos de capital (CAPEX)',
+      'Yearly Capital Expenditures': 'Gastos de capital anuales',
+      Priority: 'Prioritat',
+      cost: 'coste',
+      rating: 'valoración'
     }
   }
 }

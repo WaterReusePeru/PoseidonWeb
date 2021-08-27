@@ -123,9 +123,7 @@ export const caseSlice = createSlice({
       state.solution.noneAvailable = action.payload
     },
     setSolutions: (state, action) => {
-      console.log(action.payload)
       action.payload.forEach((treatment, index) => {
-        console.log(treatment, index)
         state.solutions[index].treatmentTrain = treatment.treatmentTrain
         state.solutions[index].rating = treatment.rating
         state.solutions[index].capex = treatment.capex

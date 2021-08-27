@@ -21,6 +21,4 @@ test('Get three good results', () => {
   store.dispatch(setEndUseQualityClass(210))
 
   CalculateSolutions()
-
-  console.log(store.getState())
 })
