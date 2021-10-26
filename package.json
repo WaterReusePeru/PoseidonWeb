@@ -9,12 +9,8 @@
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "lint:fix": "eslint './src/**/*.{ts,tsx}' --fix",
     "start": "react-scripts start",
-    "test": "react-scripts test"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && tsc && yarpm-yarn run lint"
-    }
+    "test": "react-scripts test",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
@@ -51,38 +47,41 @@
     ]
   },
   "dependencies": {
-    "@material-ui/core": "4.10.2",
+    "@material-ui/core": "4.12.3",
     "@material-ui/data-grid": "^4.0.0-alpha.28",
-    "@material-ui/icons": "4.9.1",
+    "@material-ui/icons": "4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.58",
-    "@nivo/bar": "^0.71.0",
-    "@nivo/core": "^0.71.0",
+    "@nivo/bar": "^0.74.0",
+    "@nivo/core": "^0.74.0",
     "@reduxjs/toolkit": "^1.6.0",
-    "@testing-library/react": "10.0.2",
-    "@types/jest": "^26.0.24",
-    "@types/node": "13.11.1",
-    "@types/react": "16.9.34",
-    "@types/react-dom": "16.9.6",
-    "@types/react-redux": "7.1.7",
+    "@testing-library/react": "12.1.2",
+    "@types/jest": "^27.0.2",
+    "@types/node": "16.11.6",
+    "@types/react": "17.0.33",
+    "@types/react-dom": "17.0.10",
+    "@types/react-redux": "7.1.20",
     "@types/react-router-dom": "^5.1.7",
     "@types/redux": "3.6.0",
-    "husky": "4.2.5",
-    "i18next": "^20.3.2",
-    "immutable": "4.0.0-rc.12",
-    "lint-staged": "10.1.3",
-    "mui-datatables": "^3.7.7",
-    "prettier": "1.19.1",
-    "prettier-plugin-packagejson": "2.0.10",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "husky": "^7.0.4",
+    "i18next": "^21.3.3",
+    "immutable": "4.0.0",
+    "lint-staged": "^11.2.5",
+    "mui-datatables": "^3.8.2",
+    "prettier": "2.4.1",
+    "prettier-plugin-packagejson": "2.2.13",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-i18next": "^11.11.0",
-    "react-redux": "7.2.0",
+    "react-redux": "7.2.6",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "redux": "4.0.5",
-    "redux-devtools-extension": "2.13.8",
-    "redux-thunk": "2.3.0",
-    "typescript": "3.8.3",
-    "yarpm": "0.2.1"
+    "react-scripts": "4.0.3",
+    "redux": "4.1.1",
+    "redux-devtools-extension": "2.13.9",
+    "redux-thunk": "2.4.0",
+    "typescript": "4.4.4",
+    "yarpm": "1.1.1"
+  },
+  "devDependencies": {
+    "husky": "^7.0.0"
   }
 }
