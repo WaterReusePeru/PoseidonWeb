@@ -43,7 +43,7 @@ export const App = () => {
       <Router>
         <AppBar elevation={0}>
           <Toolbar className={classes.toolbar}>
-            <Grid container alignItems="flex-start" spacing={1} justify="center">
+            <Grid container alignItems="flex-start" spacing={1} justifyContent="center">
               <Button
                 aria-controls="simple-menu"
                 aria-haspopup="true"
@@ -76,7 +76,7 @@ export const App = () => {
                 {t('Results')}
               </Button>
             </Grid>{' '}
-            <Grid container alignItems="center" spacing={1} justify="center">
+            <Grid container alignItems="center" spacing={1} justifyContent="center">
               <Grid item>
                 <OpacityIcon />
               </Grid>
@@ -84,7 +84,7 @@ export const App = () => {
                 <Typography variant="h6">Poseidon Web beta</Typography>
               </Grid>
             </Grid>
-            <Grid container alignItems="flex-end" spacing={1} justify="center">
+            <Grid container alignItems="flex-end" spacing={1} justifyContent="center">
               <UserMenu />
             </Grid>{' '}
           </Toolbar>

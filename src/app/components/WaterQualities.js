@@ -10,6 +10,9 @@ import Tooltip from '@material-ui/core/Tooltip'
 
 import { withTranslation } from 'react-i18next'
 import i18next from 'i18next'
+import textLabels from '../i18n/textLabels'
+
+console.log(textLabels)
 
 const styles = theme => ({
   chipContainer: {
@@ -117,7 +120,8 @@ class WaterQualities extends React.Component {
       filterType: 'dropdown',
       selectableRows: 'none',
       rowsPerPage: 20,
-      print: false
+      print: false,
+      textLabels: {textLabels}
     }
 
     return (

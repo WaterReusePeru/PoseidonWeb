@@ -105,9 +105,10 @@ export const resources = {
       'Annualized CAPEX per Cubic': 'CAPEX anualizado por cubo',
       'Total capital expenditure (CAPEX)': 'Total de gastos de capital (CAPEX)',
       'Yearly Capital Expenditures': 'Gastos de capital anuales',
-      Priority: 'Prioritat',
-      cost: 'coste',
-      rating: 'valoración'
+      'Sort by cost': 'Ordenar por coste',
+
+      'Sorry, no matching records found': 'Lo sentimos, no se han encontrado registros coincidentes',
+      'Sort': 'Ordenar'
     }
   }
 }

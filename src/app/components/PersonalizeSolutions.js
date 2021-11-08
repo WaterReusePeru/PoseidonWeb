@@ -71,7 +71,7 @@ export default function PersonalizeSolutions() {
         </Tooltip>
       </Grid>
 
-      <Grid item container xs={12} justify="space-evenly" alignItems="center">
+      <Grid item container xs={12} justifyContent="space-evenly" alignItems="center">
         {endUse.qualityClass !== null
           ? waterQualityFactors.map(f => {
               const key = f.name
@@ -112,8 +112,8 @@ export default function PersonalizeSolutions() {
             })}
       </Grid>
 
-      <Grid item container xs={12} justify="space-evenly" alignItems="flex-start">
-        <Grid item container xs={3} direction="column" alignItems="center" justify="flex-start">
+      <Grid item container xs={12} justifyContent="space-evenly" alignItems="flex-start">
+        <Grid item container xs={3} direction="column" alignItems="center" justifyContent="flex-start">
           <Grid item>
             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
               <g>
@@ -126,7 +126,7 @@ export default function PersonalizeSolutions() {
           </Grid>
         </Grid>
 
-        <Grid item container xs={3} direction="column" alignItems="center" justify="flex-start">
+        <Grid item container xs={3} direction="column" alignItems="center" justifyContent="flex-start">
           <Grid item>
             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
               <g>
@@ -139,7 +139,7 @@ export default function PersonalizeSolutions() {
           </Grid>
         </Grid>
 
-        <Grid item container xs={3} direction="column" alignItems="center" justify="flex-start">
+        <Grid item container xs={3} direction="column" alignItems="center" justifyContent="flex-start">
           <Grid item>
             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
               <g>

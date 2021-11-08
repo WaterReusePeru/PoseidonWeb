@@ -18,7 +18,8 @@ export default function Quantity() {
   const [validQuantity, setValidQuantity] = React.useState(true)
 
   const handleChangeQuantity = value => {
-    if (value >= 1 && value <= 20000) {
+    if (value >= 1 && value <= 20000 && Number.isInteger(Number(value))) {
+      console.log(value)
       setValidQuantity(true)
       dispatch(setQuantity(value))
     } else {
@@ -30,7 +31,7 @@ export default function Quantity() {
   const [validDistance, setValidDistance] = React.useState(true)
 
   const handleChangeDistance = value => {
-    if (value >= 1 && value <= 20000) {
+    if (value >= 1 && value <= 20000 && Number.isInteger(Number(value))) {
       setValidDistance(true)
       dispatch(setDistance(value))
     } else {
@@ -42,7 +43,7 @@ export default function Quantity() {
   const [validHeightDifference, setValidHeightDifference] = React.useState(true)
 
   const handleChangeHeightDifference = value => {
-    if (value >= -1000 && value <= 1000) {
+    if (value >= -1000 && value <= 1000 && Number.isInteger(Number(value))) {
       setValidHeightDifference(true)
       dispatch(setHeightDifference(value))
     } else {

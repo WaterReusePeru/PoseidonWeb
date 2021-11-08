@@ -78,7 +78,7 @@ export default function EndUse() {
           </Tooltip>
         </Grid>
 
-        <Grid item container xs={12} justify="space-evenly" alignItems="center">
+        <Grid item container xs={12} justifyContent="space-evenly" alignItems="center">
           {endUse.qualityClass !== null
             ? waterQualityFactors.map((f, index) => {
                 const key = f.name
@@ -119,8 +119,8 @@ export default function EndUse() {
               })}
         </Grid>
 
-        <Grid item container xs={12} justify="space-evenly" alignItems="flex-start">
-          <Grid item container xs={3} direction="column" alignItems="center" justify="flex-start">
+        <Grid item container xs={12} justifyContent="space-evenly" alignItems="flex-start">
+          <Grid item container xs={3} direction="column" alignItems="center" justifyContent="flex-start">
             <Grid item>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                 <g>
@@ -133,7 +133,7 @@ export default function EndUse() {
             </Grid>
           </Grid>
 
-          <Grid item container xs={3} direction="column" alignItems="center" justify="flex-start">
+          <Grid item container xs={3} direction="column" alignItems="center" justifyContent="flex-start">
             <Grid item>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                 <g>
@@ -146,7 +146,7 @@ export default function EndUse() {
             </Grid>
           </Grid>
 
-          <Grid item container xs={3} direction="column" alignItems="center" justify="flex-start">
+          <Grid item container xs={3} direction="column" alignItems="center" justifyContent="flex-start">
             <Grid item>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                 <g>

@@ -139,7 +139,6 @@ export const Case = () => {
                   item
                   container
                   direction="column"
-                  justify="space-between"
                   alignItems="center"
                   className={classes.step}
                 >

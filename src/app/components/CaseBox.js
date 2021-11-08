@@ -35,7 +35,7 @@ export default function CaseBox() {
         </Grid>
 
         <Grid item container xs={12} spacing={1} alignItems="center">
-          <Grid item container justify="flex-start" spacing={1} xs={12} style={{ marginTop: 20 }}>
+          <Grid item container justifyContent="flex-start" spacing={1} xs={12} style={{ marginTop: 20 }}>
             <Grid item>
               <Chip label="1" color="primary" size="small" />
             </Grid>
@@ -73,7 +73,7 @@ export default function CaseBox() {
           ) : (
             <div />
           )}
-          <Grid item container justify="flex-start" spacing={1} xs={12} style={{ marginTop: 20 }}>
+          <Grid item container justifyContent="flex-start" spacing={1} xs={12} style={{ marginTop: 20 }}>
             <Grid item>
               <Chip label="2" color="primary" size="small" />
             </Grid>
@@ -113,7 +113,7 @@ export default function CaseBox() {
           ) : (
             <div />
           )}
-          <Grid item container justify="flex-start" spacing={1} xs={12} style={{ marginTop: 20 }}>
+          <Grid item container justifyContent="flex-start" spacing={1} xs={12} style={{ marginTop: 20 }}>
             <Grid item>
               <Chip label="3" color="primary" size="small" />
             </Grid>
@@ -153,7 +153,7 @@ export default function CaseBox() {
           ) : (
             <div />
           )}
-          <Grid item container justify="flex-start" spacing={1} xs={12} style={{ marginTop: 20 }}>
+          <Grid item container justifyContent="flex-start" spacing={1} xs={12} style={{ marginTop: 20 }}>
             <Grid item>
               <Chip label="4" color="primary" size="small" />
             </Grid>

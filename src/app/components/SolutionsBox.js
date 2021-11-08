@@ -50,7 +50,7 @@ export default function SolutionsBox() {
 
   return (
     <Paper className={classes.paper} elevation={0}>
-      <Grid container spacing={3}>
+      <Grid container spacing={1}>
         <Grid item xs={12}>
           <Typography variant="h6">{t('Solutions')}</Typography>
           <Typography variant="caption">
@@ -66,24 +66,20 @@ export default function SolutionsBox() {
 
         {!caseState.solution.noneNeeded & !caseState.solution.noneAvailable ? (
           <Grid item container xs={12} spacing={1} alignItems="center">
-            <Grid item container alignItems="center" spacing={1} xs={12}>
+
+            {caseState.solutions[0].capex !== 0 ?
+            <Grid item container alignItems="center" spacing={1} xs={12} justifyContent="space-between">
               <Grid item>
-                <Typography>{t('Priority')}:</Typography>
+                <Typography>{t('Sort by cost')}</Typography>
               </Grid>
               <Grid item>
-                <Typography>{t('rating')}</Typography>
+                <Switch color="primary" checked={sortByCost} onChange={event => handleChangePriority(event)} />
               </Grid>
-              <Grid item>
-                <Switch color="default" checked={sortByCost} onChange={event => handleChangePriority(event)} />
-              </Grid>
-              <Grid item>
-                <Typography>{t('cost')}</Typography>
-              </Grid>
-            </Grid>
+            </Grid> : null }
 
             {caseState.solutions.map((solution, index) => (
               <>
-                <Grid item container justify="flex-start" spacing={1} xs={12}>
+                <Grid item container justifyContent="flex-start" spacing={1} xs={12}>
                   <Grid item>
                     <Chip label={index + 1} color="secondary" size="small" />
                   </Grid>
