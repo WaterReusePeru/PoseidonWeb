@@ -132,7 +132,7 @@ export default function SolutionsBox() {
                 </Grid>
                 <Grid item xs={6}>
                   {treatmentTrains[solution.treatmentTrain].unit_processes.map((up, index) => (
-                    <Tooltip title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
+                    <Tooltip key={index} title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
                       <Chip label={up} key={index} size="small" color="primary" style={{ margin: 2 }} />
                     </Tooltip>
                   ))}

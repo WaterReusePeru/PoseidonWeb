@@ -12,9 +12,7 @@ import { withTranslation } from 'react-i18next'
 import i18next from 'i18next'
 import textLabels from '../i18n/textLabels'
 
-console.log(textLabels)
-
-const styles = theme => ({
+  const styles = theme => ({
   chipContainer: {
     display: 'flex',
     justifyContent: 'left',
@@ -85,7 +83,7 @@ class WaterQualities extends React.Component {
             return (
               <div className={classes.chipContainer}>
                 {columns.map((column, index) => (
-                  <Tooltip title={columnTitles[index]}>
+                  <Tooltip key={index} title={columnTitles[index]}>
                     <Chip
                       label={data[dataIndex][column] !== '-1' ? data[dataIndex][column] : '-'}
                       key={index}
@@ -119,7 +117,7 @@ class WaterQualities extends React.Component {
       filter: true,
       filterType: 'dropdown',
       selectableRows: 'none',
-      rowsPerPage: 20,
+      rowsPerPage: 15,
       print: false,
       textLabels: {textLabels}
     }

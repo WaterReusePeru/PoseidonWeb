@@ -13,9 +13,10 @@ import { Case } from './Case'
 import { Results } from './Results'
 import UserMenu from './UserMenu'
 import { useTranslation } from 'react-i18next'
-import OpacityIcon from '@material-ui/icons/Opacity'
 import Grid from '@material-ui/core/Grid'
 import { useSelector } from 'react-redux'
+import { PoseidonWebIcon } from '../images/PoseidonWebIcon'
+
 
 const useStyles = makeStyles({
   toolbar: {
@@ -78,7 +79,7 @@ export const App = () => {
             </Grid>{' '}
             <Grid container alignItems="center" spacing={1} justifyContent="center">
               <Grid item>
-                <OpacityIcon />
+                <PoseidonWebIcon size={24} />
               </Grid>
               <Grid item>
                 <Typography variant="h6">Poseidon Web beta</Typography>

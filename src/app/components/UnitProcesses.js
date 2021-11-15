@@ -66,7 +66,7 @@ class UnitProcesses extends React.Component {
             return (
               <div className={classes.chipContainer}>
                 {columns.map((column, index) => (
-                  <Tooltip title={columnTitles[index]}>
+                  <Tooltip key={index} title={columnTitles[index]}>
                     <Chip label={data[dataIndex][column]} key={index} size="small" />
                   </Tooltip>
                 ))}
@@ -131,7 +131,7 @@ class UnitProcesses extends React.Component {
             return (
               <div className={classes.chipContainer}>
                 {columns.map((column, index) => (
-                  <Tooltip title={columnTitles[index]}>
+                  <Tooltip key={index} title={columnTitles[index]}>
                     <Chip
                       label={data[dataIndex][column]}
                       key={index}
@@ -167,7 +167,7 @@ class UnitProcesses extends React.Component {
       filter: true,
       filterType: 'dropdown',
       selectableRows: 'none',
-      rowsPerPage: 20,
+      rowsPerPage: 15,
       print: false
     }
 
