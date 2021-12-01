@@ -1,11 +1,12 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../hooks'
+
 import Grid from '@material-ui/core/Grid'
 import { Typography } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
-import communityInfo from '../data/communityInfo'
+import communityInfo from '../data/communityInfo.json'
 import waterQualities from '../data/waterQualities.json'
 
 import PublicIcon from '@material-ui/icons/Public'
@@ -16,10 +17,10 @@ import BatteryFullIcon from '@material-ui/icons/BatteryFull'
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt'
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward'
 
-export const CaseSummary = props => {
+export const CaseSummary = (props: { step: any }) => {
   const { step } = props
 
-  const caseState = useSelector(state => state.case)
+  const caseState = useAppSelector((state) => state.case)
 
   const { t } = useTranslation()
   const lang = i18next.language
@@ -30,7 +31,7 @@ export const CaseSummary = props => {
         {step === 0 ? (
           <>
             <Grid item>
-              {caseState.commInfo.countryID !== null ? (
+              {caseState.commInfo.countryID !== undefined ? (
                 <Grid container alignItems="center" direction="row" spacing={0}>
                   <PublicIcon fontSize="small" color="primary" />
 
@@ -63,7 +64,7 @@ export const CaseSummary = props => {
 
         {step === 1 ? (
           <Grid item>
-            {caseState.inputQuality.qualityClass !== null ? (
+            {caseState.inputQuality.qualityClass !== undefined ? (
               <Grid container alignItems="center" direction="row" spacing={0}>
                 <ExitToAppIcon fontSize="small" color="primary" />
                 <Typography variant="caption">
@@ -82,7 +83,7 @@ export const CaseSummary = props => {
 
         {step === 2 ? (
           <Grid item>
-            {caseState.endUse.qualityClass !== null ? (
+            {caseState.endUse.qualityClass !== undefined ? (
               <Grid container alignItems="center" direction="row" spacing={0}>
                 <AutorenewIcon fontSize="small" color="primary" />
                 <Typography variant="caption">

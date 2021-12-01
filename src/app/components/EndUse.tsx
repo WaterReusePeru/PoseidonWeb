@@ -1,12 +1,9 @@
-import React from 'react'
 import { Tooltip, Typography } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { useAppSelector } from '../hooks'
 import Autocomplete from '@material-ui/lab/Autocomplete'
-import waterQualities from '../data/waterQualities.json'
-import waterQualityCategories from '../data/waterQualityCategories.json'
-import waterQualityFactors from '../data/waterQualityFactors.json'
 import { setEndUseQualityCategory, setEndUseQualityClass } from '../case/caseSlice'
 import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
@@ -15,9 +12,11 @@ import { Bar } from './Bar'
 import { useTheme } from '@material-ui/core/styles'
 import SolutionsBox from './SolutionsBox'
 
+import { waterQualityCategories, waterQualities, WaterQuality, waterQualityFactors } from '../data/model'
+
 export default function EndUse() {
-  const endUse = useSelector(state => state.case.endUse)
-  const inputQuality = useSelector(state => state.case.inputQuality)
+  const endUse = useAppSelector(state => state.case.endUse)
+  const inputQuality = useAppSelector(state => state.case.inputQuality)
 
   const dispatch = useDispatch()
 
@@ -47,7 +46,7 @@ export default function EndUse() {
             getOptionSelected={(option, value) => option.name === value.name}
             onChange={(event, newValue) => dispatch(setEndUseQualityCategory(newValue.id))}
             disableClearable
-            value={endUse.category !== null ? waterQualityCategories[endUse.category] : null}
+            value={endUse.category ? waterQualityCategories[endUse.category] : undefined}
             renderInput={params => <TextField {...params} variant="outlined" />}
           />
         </Grid>
@@ -62,12 +61,12 @@ export default function EndUse() {
         <Grid item xs={6}>
           <Autocomplete
             id="quality"
-            options={waterQualities.filter(q => q.category === endUse.category)}
+            options={waterQualities.filter(q => q.category === endUse.category)}  
             getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
             getOptionSelected={(option, value) => option.name === value.name}
             onChange={(event, newValue) => dispatch(setEndUseQualityClass(newValue.id))}
             disableClearable
-            value={endUse.qualityClass !== null ? waterQualities[endUse.qualityClass] : null}
+            value={endUse.qualityClass ? waterQualities[endUse.qualityClass] : undefined}
             renderInput={params => <TextField {...params} variant="outlined" />}
             disabled={endUse.category === null ? true : false}
           />
@@ -79,9 +78,9 @@ export default function EndUse() {
         </Grid>
 
         <Grid item container xs={12} justifyContent="space-evenly" alignItems="center">
-          {endUse.qualityClass !== null
+          {endUse.qualityClass !== undefined
             ? waterQualityFactors.map((f, index) => {
-                const key = f.name
+              const key = f.name as keyof WaterQuality
 
                 return (
                   <div key={index} style={{ width: 'calc(1/6*80%' }}>
@@ -89,19 +88,25 @@ export default function EndUse() {
                       factor={f.name}
                       unit={f.unit}
                       input={
-                        waterQualities[inputQuality.qualityClass][key] < 0
+                        inputQuality.qualityClass === undefined
+                          ? null
+                          : waterQualities[inputQuality.qualityClass][key] < 0
                           ? null
                           : waterQualities[inputQuality.qualityClass][key]
                       }
                       output={
-                        waterQualities[endUse.qualityClass][key] < 0 ? null : waterQualities[endUse.qualityClass][key]
+                        endUse.qualityClass === undefined
+                        ? null
+                        : waterQualities[endUse.qualityClass][key] < 0
+                        ? null
+                        : waterQualities[endUse.qualityClass][key]
                       }
                     />
                   </div>
                 )
               })
             : waterQualityFactors.map((f, index) => {
-                const key = f.name
+              const key = f.name as keyof WaterQuality
 
                 return (
                   <div key={index} style={{ width: 'calc(1/6*80%' }}>
@@ -109,7 +114,9 @@ export default function EndUse() {
                       factor={f.name}
                       unit={f.unit}
                       input={
-                        waterQualities[inputQuality.qualityClass][key] < 0
+                        inputQuality.qualityClass === undefined
+                          ? null
+                          : waterQualities[inputQuality.qualityClass][key] < 0
                           ? null
                           : waterQualities[inputQuality.qualityClass][key]
                       }

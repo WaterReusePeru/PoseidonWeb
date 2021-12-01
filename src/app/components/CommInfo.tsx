@@ -1,17 +1,17 @@
-import React from 'react'
 import { Tooltip, Typography } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { useAppSelector } from '../hooks'
 import Autocomplete from '@material-ui/lab/Autocomplete'
-import communityInfo from '../data/communityInfo'
+import communityInfo from '../data/communityInfo.json'
 import { setCountry, setCurrency } from '../case/caseSlice'
 import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
 export default function CommInfo() {
-  const commInfo = useSelector(state => state.case.commInfo)
+  const commInfo = useAppSelector(state => state.case.commInfo)
   const dispatch = useDispatch()
   const countries = []
   communityInfo.map(country => {
@@ -23,12 +23,14 @@ export default function CommInfo() {
 
   const usdObj = { id: 1000, currency: 'USD' }
 
-  if (commInfo.countryID === null) {
+  if (commInfo.countryID === undefined) {
     dispatch(setCountry(0))
   }
-  if (commInfo.currency === null) {
+  if (commInfo.currency === undefined) {
     dispatch(setCurrency(0))
   }
+
+  console.log(commInfo, communityInfo)
 
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
@@ -42,16 +44,16 @@ export default function CommInfo() {
         <Autocomplete
           id="country"
           options={communityInfo}
-          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : null)}
+          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined! )}
           getOptionSelected={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setCountry(newValue.id))}
           disableClearable
-          value={commInfo.countryID !== null ? communityInfo[commInfo.countryID] : null}
+          value={commInfo.countryID !== undefined ? communityInfo[commInfo.countryID] : undefined}
           renderInput={params => <TextField {...params} variant="outlined" />}
         />
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Tooltip title={t('Information about countries')}>
+        <Tooltip title={t<string>('Information about countries')}>
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>
@@ -67,14 +69,14 @@ export default function CommInfo() {
           onChange={(event, newValue) => dispatch(setCurrency(newValue.id))}
           disableClearable
           value={
-            commInfo.currency !== null ? (commInfo.currency === 0 ? usdObj : communityInfo[commInfo.countryID]) : null
+            commInfo.currency !== null ? (commInfo.currency === 0 ? usdObj : communityInfo[commInfo.countryID]) : undefined
           }
           disabled={commInfo.countryID === null ? true : false}
           renderInput={params => <TextField {...params} variant="outlined" />}
         />
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Tooltip title={t('Information about currencies')}>
+        <Tooltip title={t<string>('Information about currencies')}>
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>

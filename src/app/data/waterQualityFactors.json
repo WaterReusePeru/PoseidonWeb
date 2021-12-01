@@ -2,31 +2,37 @@
   {
     "name": "turbidity",
     "nameLong": "Turbidity",
+    "nameLongEs": "Turbidez",
     "unit": "NTU"
   },
   {
     "name": "tss",
     "nameLong": "Total Suspended Solids",
+    "nameLongEs": "Sólidos suspendidos totales",
     "unit": "mg/L"
   },
   {
     "name": "bod",
     "nameLong": "Biological Oxygen Demand",
+    "nameLongEs": "Demanda biológica de oxígeno",
     "unit": "mg/L"
   },
   {
     "name": "cod",
     "nameLong": "Chemical Oxygen Demand",
+    "nameLongEs": "Demanda química de oxígeno",
     "unit": "mg/L"
   },
   {
     "name": "fc",
     "nameLong": "Faecal Coliform",
+    "nameLongEs": "Coliformes fecales",
     "unit": "CFU/100ml"
   },
   {
     "name": "tc",
     "nameLong": "Total Coliform",
+    "nameLongEs": "Coliformes totales",
     "unit": "CFU/100ml"
   }
 ]

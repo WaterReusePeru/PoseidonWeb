@@ -1,12 +1,10 @@
-import React from 'react'
 import { Tooltip, Typography } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { useAppSelector } from '../hooks'
 import Autocomplete from '@material-ui/lab/Autocomplete'
-import waterQualities from '../data/waterQualities.json'
-import waterQualityCategories from '../data/waterQualityCategories.json'
-import waterQualityFactors from '../data/waterQualityFactors.json'
+import { waterQualityCategories, waterQualities, WaterQuality, waterQualityFactors } from '../data/model'
 import { setInputQualityCategory, setInputQualityClass } from '../case/caseSlice'
 import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
@@ -15,7 +13,7 @@ import { Bar } from './Bar'
 import { useTheme } from '@material-ui/core/styles'
 
 export default function InputQuality() {
-  const inputQuality = useSelector(state => state.case.inputQuality)
+  const inputQuality = useAppSelector(state => state.case.inputQuality)
   const dispatch = useDispatch()
 
   const theme = useTheme()
@@ -23,9 +21,9 @@ export default function InputQuality() {
   const { t } = useTranslation()
   const lang = i18next.language
 
-  if (inputQuality.category === null) {
-    dispatch(setInputQualityCategory(28))
-  }
+  const waterQualityCategoryOptions = waterQualityCategories.filter(category => category.input)
+
+  const waterQualityOptions = waterQualities.filter(q => q.category === inputQuality.category)
 
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
@@ -38,12 +36,12 @@ export default function InputQuality() {
       <Grid item xs={6}>
         <Autocomplete
           id="category"
-          options={waterQualityCategories.filter(category => category.input === true)}
-          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : null)}
+          options={waterQualityCategoryOptions}
+          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined! )}
           getOptionSelected={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setInputQualityCategory(newValue.id))}
           disableClearable
-          value={inputQuality.category !== null ? waterQualityCategories[inputQuality.category] : null} //Peru is default Category
+          value={inputQuality.category !== null ? waterQualityCategories[inputQuality.category] : undefined }
           renderInput={params => <TextField {...params} variant="outlined" />}
         />
       </Grid>
@@ -58,12 +56,12 @@ export default function InputQuality() {
       <Grid item xs={6}>
         <Autocomplete
           id="quality"
-          options={waterQualities.filter(q => q.category === inputQuality.category)}
-          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : null)}
-          getOptionSelected={(option, value) => option.name === value.name}
-          onChange={(event, newValue) => dispatch(setInputQualityClass(newValue.id))}
+          options={waterQualityOptions}
+          getOptionLabel={option => (option ? (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined! ) : "workaround")}
+          getOptionSelected={(option, value) => option !== 0 && value !== 0 && option.name === value.name}
+          onChange={(event, newValue) => newValue && dispatch(setInputQualityClass(newValue.id))}
           disableClearable
-          value={inputQuality.qualityClass !== null ? waterQualities[inputQuality.qualityClass] : null}
+          value={inputQuality.qualityClass && waterQualities[inputQuality.qualityClass]}
           renderInput={params => <TextField {...params} variant="outlined" />}
           disabled={inputQuality.category === null ? true : false}
         />
@@ -75,9 +73,9 @@ export default function InputQuality() {
       </Grid>
 
       <Grid item container xs={12} justifyContent="space-evenly" alignItems="center">
-        {inputQuality.qualityClass !== null
+        {inputQuality.qualityClass !== undefined
           ? waterQualityFactors.map((f, index) => {
-              const key = f.name
+              const key = f.name as keyof WaterQuality
 
               return (
                 <div key={index} style={{ width: 'calc(1/6*80%' }}>
@@ -85,7 +83,7 @@ export default function InputQuality() {
                     factor={f.name}
                     unit={f.unit}
                     input={
-                      inputQuality.qualityClass === null
+                      inputQuality.qualityClass === undefined
                         ? null
                         : waterQualities[inputQuality.qualityClass][key] < 0
                         ? null

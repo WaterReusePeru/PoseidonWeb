@@ -1,0 +1,72 @@
+[
+    {
+      "name": "reliability",
+      "nameLong": "Reliability",
+      "nameLongEs": "Fiabilidad"
+    },
+    {
+        "name": "ease_to_upgrade",
+        "nameLong": "Ease to upgrade",
+        "nameLongEs": "Facilidad de actualización"
+    },
+    {
+        "name": "adaptability_to_varying_flow",
+        "nameLong": "Adaptability to varying flow",
+        "nameLongEs": "Adaptabilidad a la variabilidad del flujo"
+    },
+    {
+        "name": "adaptability_to_varying_quality",
+        "nameLong": "Adaptability to varying quality",
+        "nameLongEs": "Adaptabilidad a la variabilidad de la calidad"
+    },
+    {
+        "name": "ease_of_om",
+        "nameLong": "Ease of O & M",
+        "nameLongEs": "Facilidad de O & M"
+    },
+    {
+        "name": "ease_of_construction",
+        "nameLong": "Ease of construction",
+        "nameLongEs": "Facilidad de construcción"
+    },
+    {
+        "name": "ease_of_demonstration",
+        "nameLong": "Ease of demonstration",
+        "nameLongEs": "Facilidad de demostración"
+    },
+    {
+        "name": "power_demand",
+        "nameLong": "Power demand",
+        "nameLongEs": "Demanda de energía"
+    },
+    {
+        "name": "chemical_demand",
+        "nameLong": "Chemical demand",
+        "nameLongEs": "Demanda de química"
+    },
+    {
+        "name": "odor_generation",
+        "nameLong": "Odor generation",
+        "nameLongEs": "Generación de olores"
+    },
+    {
+        "name": "impact_on_ground_water",
+        "nameLong": "Impact on ground water",
+        "nameLongEs": "Impacto en aguas subterráneas"
+    },
+    {
+        "name": "land_requirements",
+        "nameLong": "Land requirements",
+        "nameLongEs": "Requisitos del terreno"
+    },
+    {
+        "name": "cost_of_treatment",
+        "nameLong": "Cost of treatment",
+        "nameLongEs": "Costo del tratamiento"
+    },
+    {
+        "name": "waste",
+        "nameLong": "waste",
+        "nameLongEs": "Desiduo"
+    }
+]
