@@ -8,7 +8,7 @@ export const Bar = props => {
   const theme = useTheme()
   const { t } = useTranslation()
 
-  var outputColor = theme.palette.primary.main
+  var outputColor = theme.palette.primary.main  
 
   if (Number(props.input) > Number(props.output)) {
     outputColor = theme.palette.error.main

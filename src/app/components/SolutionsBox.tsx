@@ -1,5 +1,6 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { useAppSelector } from '../hooks'
+
 import Grid from '@material-ui/core/Grid'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Chip from '@material-ui/core/Chip'
@@ -11,7 +12,7 @@ import { useTranslation } from 'react-i18next'
 import treatmentTrains from '../data/treatmentTrains.json'
 import communityInfo from '../data/communityInfo.json'
 import unitProcesses from '../data/unitProcesses.json'
-import waterQualities from '../data/waterQualities'
+import { waterQualities } from '../data/model'
 import Tooltip from '@material-ui/core/Tooltip'
 import CalculateSolutions from '../case/CalculateSolutions'
 
@@ -29,7 +30,7 @@ const useStyles = makeStyles(theme => ({
 export default function SolutionsBox() {
   const classes = useStyles()
 
-  const caseState = useSelector(state => state.case)
+  const caseState = useAppSelector(state => state.case)
 
   const dispatch = useDispatch()
 
@@ -37,14 +38,14 @@ export default function SolutionsBox() {
   const lang = i18next.language
 
   const commInfo = caseState.commInfo
-  const inputQuality = waterQualities[caseState.inputQuality.qualityClass]
-  const endUseQuality = waterQualities[caseState.endUse.qualityClass]
+  const inputQuality = waterQualities[caseState.inputQuality.qualityClass!]
+  const endUseQuality = waterQualities[caseState.endUse.qualityClass!]
   const amount = caseState.quantity.amount
   const sortByCost = caseState.solution.sortByCost
 
-  CalculateSolutions(commInfo, inputQuality, endUseQuality, amount, sortByCost)
+  CalculateSolutions(inputQuality, endUseQuality, amount!, sortByCost) //TODO: !
 
-  const handleChangePriority = value => {
+  const handleChangePriority = () => {
     dispatch(setSolutionSortByCost(!sortByCost))
   }
 
@@ -64,7 +65,7 @@ export default function SolutionsBox() {
           </Typography>
         </Grid>
 
-        {!caseState.solution.noneNeeded & !caseState.solution.noneAvailable ? (
+        {!caseState.solution.noneNeeded && !caseState.solution.noneAvailable ? (
           <Grid item container xs={12} spacing={1} alignItems="center">
 
             {caseState.solutions[0].capex !== 0 ?
@@ -73,7 +74,7 @@ export default function SolutionsBox() {
                 <Typography>{t('Sort by cost')}</Typography>
               </Grid>
               <Grid item>
-                <Switch color="primary" checked={sortByCost} onChange={event => handleChangePriority(event)} />
+                <Switch color="primary" checked={sortByCost} onChange={event => handleChangePriority()} />
               </Grid>
             </Grid> : null }
 
@@ -86,8 +87,8 @@ export default function SolutionsBox() {
                   <Grid item>
                     <Typography>
                       {lang === 'en'
-                        ? treatmentTrains[solution.treatmentTrain].category
-                        : treatmentTrains[solution.treatmentTrain].categoryEs}
+                        ? treatmentTrains[solution.treatmentTrain!].category //TODO: !
+                        : treatmentTrains[solution.treatmentTrain!].categoryEs} {/* TODO: ! */}
                     </Typography>
                   </Grid>
                 </Grid>
@@ -95,15 +96,15 @@ export default function SolutionsBox() {
                   <Typography>{t('Case Study')}:</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography>{treatmentTrains[solution.treatmentTrain].title}</Typography>
+                  <Typography>{treatmentTrains[solution.treatmentTrain!].title}</Typography> {/* TODO: ! */}
                 </Grid>
                 <Grid item xs={6}>
                   <Typography>{t('Rating')}:</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography>{Math.round(((solution.rating * 10) / 3) * 1000) / 1000}</Typography>
+                  <Typography>{Math.round(((solution.rating! * 10) / 3) * 1000) / 1000}</Typography> {/* TODO: ! */}
                 </Grid>
-                {!isNaN(solution.annualizedCapexPerCubic) ? (
+                {!isNaN(solution.annualizedCapexPerCubic!) ? ( //TODO: !
                   <>
                     <Grid item xs={6}>
                       <Typography>{t('Yearly Capital Expenditures')}:</Typography>
@@ -111,12 +112,12 @@ export default function SolutionsBox() {
                     <Grid item xs={6}>
                       <Typography>
                         {commInfo.currency === 0 ? (
-                          <>{Math.round(solution.annualizedCapexPerCubic * 1000).toLocaleString('de-CH')} $/m&sup3;</>
+                          <>{Math.round(solution.annualizedCapexPerCubic! * 1000).toLocaleString('de-CH')} $/m&sup3;</> //TODO: !
                         ) : (
                           <>
                             {(
                               communityInfo[commInfo.countryID].exchangeToUSD *
-                              Math.round(solution.annualizedCapexPerCubic * 1000)
+                              Math.round(solution.annualizedCapexPerCubic! * 1000) //TODO: !
                             ).toLocaleString('de-CH')}{' '}
                             {communityInfo[commInfo.countryID].currency}/m&sup3;
                           </>
@@ -131,7 +132,7 @@ export default function SolutionsBox() {
                   <Typography>{t('Unit Processes')}:</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  {treatmentTrains[solution.treatmentTrain].unit_processes.map((up, index) => (
+                  {treatmentTrains[solution.treatmentTrain!].unit_processes.map((up, index) => ( //TODO: !
                     <Tooltip key={index} title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
                       <Chip label={up} key={index} size="small" color="primary" style={{ margin: 2 }} />
                     </Tooltip>

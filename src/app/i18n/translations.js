@@ -37,7 +37,7 @@ export const resources = {
       Quantity: 'Cantidad',
       Personalize: 'Personalizar',
       Finish: 'Terminar',
-      Next: 'Próximo',
+      Next: 'Siguiente',
       Back: 'Volver',
       'Case Overview': 'Resumen del Caso',
       'Select the Country': 'Seleccionar país',

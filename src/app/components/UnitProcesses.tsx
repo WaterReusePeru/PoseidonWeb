@@ -114,6 +114,7 @@ export default function UnitProcesses() {
                       label={value}
                       key={index}
                       size="small"
+                      color="primary"
                       className={classes.chip}
                       style={{ opacity: 0.25 + value / 4 }}
                     />

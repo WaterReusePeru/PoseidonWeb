@@ -22,25 +22,24 @@ type CaseState = {
     heightDifference?: number
   },
   solution: {
-    noneNeeded?: boolean,
-    noneAvailable?: boolean,
-    sortByCost?: boolean
+    noneNeeded: boolean,
+    noneAvailable: boolean,
+    sortByCost: boolean
   },
-  solutions: [
+  solutions: 
     {
       treatmentTrain?: number,
       rating?: number,
       capex?: number,
       annualizedCapex?: number,
       annualizedCapexPerCubic?: number
-    }
-  ]
+    }[]
 }
 
 const initialState: CaseState = {
   step: 0,
   completedSteps: [0, 0, 0, 0],
-  commInfo: { countryID: 0, currency: 1}, //Peru is the defaul country with local currency
+  commInfo: { countryID: 0, currency: 1 }, //Peru is the defaul country with local currency
   inputQuality: { category: 28 }, //Peru is the default category
   endUse: { category: 29 },
   quantity: {},
@@ -49,7 +48,14 @@ const initialState: CaseState = {
     noneAvailable: false,
     sortByCost: false
   },
-  solutions: [{}]
+  solutions:
+    Array(3).fill({
+    treatmentTrain: undefined,
+    rating: undefined,
+    capex: undefined,
+    annualizedCapex: undefined,
+    annualizedCapexPerCubic: undefined
+  })
 }
 
 export const caseSlice = createSlice({
@@ -70,7 +76,7 @@ export const caseSlice = createSlice({
     },
     setCountry: (state, action) => {
       state.commInfo.countryID = action.payload
-      state.commInfo.currency = 0 
+      state.commInfo.currency = 0
       state.completedSteps[0] = 0
     },
     setCurrency: (state, action) => {
@@ -128,6 +134,7 @@ export const caseSlice = createSlice({
     },
     setSolutions: (state, action) => {
       action.payload.forEach((treatment: any, index: any) => {
+        console.log(action.payload)
         state.solutions[index].treatmentTrain = treatment.treatmentTrain
         state.solutions[index].rating = treatment.rating
         state.solutions[index].capex = treatment.capex

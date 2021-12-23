@@ -24,38 +24,38 @@ export interface UnitProcess {
     id: number;
     name: string;
     nameEs: string;
-    turbidity: string;
-    tss: string;
-    bod: string;
-    cod: string;
-    fc: string;
-    tc: string;
-    construction_cost_b: string;
-    construction_cost_c: string;
-    land_requirements_b: string;
-    land_requirements_c: string;
-    energy_requirements_b: string;
-    energy_requirements_c: string;
-    labor_requirements_b: string;
-    labor_requirements_c: string;
-    other_om_b: string;
-    other_om_c: string;
-    recovery: string;
-    reliability: string;
-    ease_to_upgrade: string;
-    adaptability_to_varying_flow: string;
-    adaptability_to_varying_quality: string;
-    ease_of_om: string;
-    ease_of_construction: string;
-    ease_of_demonstration: string;
-    power_demand: string;
-    chemical_demand: string;
-    odor_generation: string;
-    impact_on_ground_water: string;
-    land_requirements: string;
-    cost_of_treatment: string;
-    waste: string;
-    useful_life: string;
+    turbidity: number;
+    tss: number;
+    bod: number;
+    cod: number;
+    fc: number;
+    tc: number;
+    construction_cost_b: number;
+    construction_cost_c: number;
+    land_requirements_b: number;
+    land_requirements_c: number;
+    energy_requirements_b: number;
+    energy_requirements_c: number;
+    labor_requirements_b: number;
+    labor_requirements_c: number;
+    other_om_b: number;
+    other_om_c: number;
+    recovery: number;
+    reliability: number;
+    ease_to_upgrade: number;
+    adaptability_to_varying_flow: number;
+    adaptability_to_varying_quality: number;
+    ease_of_om: number;
+    ease_of_construction: number;
+    ease_of_demonstration: number;
+    power_demand: number;
+    chemical_demand: number;
+    odor_generation: number;
+    impact_on_ground_water: number;
+    land_requirements: number;
+    cost_of_treatment: number;
+    waste: number;
+    useful_life: number;
 }
 
 export const unitProcesses: Array<UnitProcess> = unitProcessesJSON as Array<UnitProcess>
@@ -89,19 +89,19 @@ export interface WaterQuality {
     name: string;
     nameEs: string;
     category: number;
-    turbidity: string;
-    tss: string;
-    bod: string;
-    cod: string;
-    tn: string;
-    tp: string;
-    fc: string;
-    tc: string;
-    tds: string;
-    nitrate: string;
-    toc: string;
-    virus: string;
-    helminths: string;
+    turbidity: number;
+    tss: number;
+    bod: number;
+    cod: number;
+    tn: number;
+    tp: number;
+    fc: number;
+    tc: number;
+    tds: number;
+    nitrate: number;
+    toc: number;
+    virus: number;
+    helminths: number;
     note: string;
     noteEs: string;
     reference: string;
@@ -126,3 +126,25 @@ export interface EvaluationCriterion {
 }
 
 export const evaluationCriteria: ReadonlyArray<EvaluationCriterion> = evaluationCriteriaJSON as ReadonlyArray<EvaluationCriterion>
+
+export interface OutputQuality {
+    id: number,
+    treatmentTrain: number,
+    turbidity: number,
+    tss: number,
+    bod: number,
+    cod: number,
+    fc: number,
+    tc: number,
+    constructionCost: number,
+    landRequirements: number,
+    energyRequirements: number,
+    laborRequirements: number,
+    otherOM: number,
+    capex: number,
+    annualizedCapex: number,
+    annualizedCapexPerCubic: number,
+    rating: number
+}
+
+export type QualityFactor = 'turbidity' | 'tss' | 'bod' | 'cod' | 'fc' | 'tc'

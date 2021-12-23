@@ -7,7 +7,7 @@ import { setQuantity, setDistance, setHeightDifference } from '../case/caseSlice
 import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import SolutionsBox from './SolutionsBox'
+import SolutionsBox from './SolutionsBox.tsx'
 
 export default function Quantity() {
   const quantity = useSelector(state => state.case.quantity)
