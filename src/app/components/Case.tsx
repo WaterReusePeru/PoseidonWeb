@@ -15,7 +15,7 @@ import StepConnector from '@material-ui/core/StepConnector'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 import { useAppSelector } from '../hooks'
 
