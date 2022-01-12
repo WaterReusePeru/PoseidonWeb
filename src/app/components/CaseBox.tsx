@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../hooks'
 import Grid from '@material-ui/core/Grid'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Chip from '@material-ui/core/Chip'
@@ -8,21 +8,21 @@ import { Typography } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
-import communityInfo from '../data/communityInfo'
+import communityInfo from '../data/communityInfo.json'
 import waterQualities from '../data/waterQualities.json'
 import waterQualityCategories from '../data/waterQualityCategories.json'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   paper: {
     backgroundColor: theme.palette.background.default,
-    padding: 10
-  }
+    padding: 10,
+  },
 }))
 
 export default function CaseBox() {
   const classes = useStyles()
 
-  const caseState = useSelector(state => state.case)
+  const caseState = useAppSelector((state) => state.case)
 
   const { t } = useTranslation()
   const lang = i18next.language
@@ -97,7 +97,7 @@ export default function CaseBox() {
           ) : (
             <div />
           )}
-          {caseState.inputQuality.qualityClass !== null ? (
+          {caseState.inputQuality.qualityClass !== undefined ? (
             <>
               <Grid item xs={6} container alignItems="flex-start">
                 <Typography>{t('Quality Class')}:</Typography>
@@ -137,7 +137,7 @@ export default function CaseBox() {
           ) : (
             <div />
           )}
-          {caseState.endUse.qualityClass !== null ? (
+          {caseState.endUse.qualityClass !== undefined ? (
             <>
               <Grid item xs={6} container alignItems="flex-start">
                 <Typography>{t('Quality Class')}:</Typography>

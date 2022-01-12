@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 
 import CommInfo from './CommInfo'
@@ -18,16 +16,19 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
 import { useSelector, useDispatch } from 'react-redux'
+
+import { useAppSelector } from '../hooks'
+
 import { next, previous, reset } from '../case/caseSlice'
 import { theme } from '../theme/theme'
 import { useTranslation } from 'react-i18next'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: 'grid',
     gridTemplateColumns: 'auto 1fr auto',
     justifyItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   main: {
     display: 'grid',
@@ -39,35 +40,35 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     paddingLeft: '10vw',
     paddingRight: '10vw',
-    paddingTop: 50
+    paddingTop: 50,
   },
   step: {
-    minHeight: 'calc(100vh - 300px)'
+    minHeight: 'calc(100vh - 300px)',
   },
   root: {
     flexGrow: 1,
-    paddingTop: 60
+    paddingTop: 60,
   },
   button: {
-    marginRight: theme.spacing(1)
+    marginRight: theme.spacing(1),
   },
   instructions: {
     marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(1)
-  }
+    marginBottom: theme.spacing(1),
+  },
 }))
 
 const CustomConnector = withStyles({
   root: {
     alignSelf: 'flex-start',
-    paddingTop: '13px' //This hardcoded value sets the line in the middle of the stepper icons. It's not optimal.
+    paddingTop: '13px', //This hardcoded value sets the line in the middle of the stepper icons. It's not optimal.
   },
   line: {
-    borderRadius: 1
-  }
+    borderRadius: 1,
+  },
 })(StepConnector)
 
-function getStepContent(step) {
+function getStepContent(step: number) {
   switch (step) {
     case 0:
       return <CommInfo />
@@ -90,12 +91,12 @@ export const Case = () => {
       t('Community Information'),
       t('Input Quality'),
       t('End Use'),
-      t('Quantity') /* , t('Personalize Solutions') */
+      t('Quantity') /* , t('Personalize Solutions') */,
     ]
   }
 
-  const count = useSelector(state => state.case.step)
-  const completedSteps = useSelector(state => state.case.completedSteps)
+  const count = useAppSelector((state) => state.case.step)
+  const completedSteps = useAppSelector((state) => state.case.completedSteps)
 
   const dispatch = useDispatch()
 
@@ -135,13 +136,7 @@ export const Case = () => {
                   </Button>
                 </div>
               ) : (
-                <Grid
-                  item
-                  container
-                  direction="column"
-                  alignItems="center"
-                  className={classes.step}
-                >
+                <Grid item container direction="column" alignItems="center" className={classes.step}>
                   {getStepContent(count)}
 
                   <div style={{ paddingTop: theme.spacing(2) }}>

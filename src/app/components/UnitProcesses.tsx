@@ -13,12 +13,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: 'left',
     flexWrap: 'wrap',
     '& > *': {
-      margin: 2
-    }
+      margin: 2,
+    },
   },
   chip: {
-    backgroundColor: theme.palette.primary.main
-  }
+    backgroundColor: theme.palette.primary.main,
+  },
 }))
 
 export default function UnitProcesses() {
@@ -26,10 +26,10 @@ export default function UnitProcesses() {
     overrides: {
       MUIDataTable: {
         paper: {
-          boxShadow: 'none'
-        }
-      }
-    }
+          boxShadow: 'none',
+        },
+      },
+    },
   })
 
   const classes = useStyles()
@@ -45,15 +45,15 @@ export default function UnitProcesses() {
     {
       name: 'id',
       options: {
-        filter: true
-      }
+        filter: true,
+      },
     },
     {
       name: nameCol,
       label: t('Name'),
       options: {
-        filter: true
-      }
+        filter: true,
+      },
     },
     {
       name: 'pre',
@@ -61,23 +61,24 @@ export default function UnitProcesses() {
       options: {
         filter: false,
         customBodyRenderLite: (dataIndex: number) => {
-
           return (
             <div className={classes.chipContainer}>
               {waterQualityFactors.map((f, index) => {
-
                 const key = f.name as keyof UnitProcess
 
                 return (
-                  <Tooltip key={index} title={lang === 'en' ? waterQualityFactors[index].nameLong : waterQualityFactors[index].nameLongEs}>
+                  <Tooltip
+                    key={index}
+                    title={lang === 'en' ? waterQualityFactors[index].nameLong : waterQualityFactors[index].nameLongEs}
+                  >
                     <Chip label={data[dataIndex][key]} key={index} size="small" />
                   </Tooltip>
                 )
               })}
             </div>
           )
-        }
-      }
+        },
+      },
     },
     {
       name: 'recovery',
@@ -90,8 +91,8 @@ export default function UnitProcesses() {
               <Chip label={data[dataIndex].recovery} size="small" />
             </div>
           )
-        }
-      }
+        },
+      },
     },
     {
       name: 'reliability',
@@ -99,17 +100,17 @@ export default function UnitProcesses() {
       options: {
         filter: false,
         customBodyRenderLite: (dataIndex: number) => {
-
           return (
             <div className={classes.chipContainer}>
               {evaluationCriteria.map((c, index) => {
-
                 const key = c.name as keyof UnitProcess
                 const value = data[dataIndex][key] as number
 
                 return (
-
-                  <Tooltip key={index} title={lang === 'en' ? evaluationCriteria[index].nameLong : evaluationCriteria[index].nameLongEs}>
+                  <Tooltip
+                    key={index}
+                    title={lang === 'en' ? evaluationCriteria[index].nameLong : evaluationCriteria[index].nameLongEs}
+                  >
                     <Chip
                       label={value}
                       key={index}
@@ -119,14 +120,13 @@ export default function UnitProcesses() {
                       style={{ opacity: 0.25 + value / 4 }}
                     />
                   </Tooltip>
-
                 )
               })}
             </div>
           )
         },
-        setCellProps: () => ({ style: { minWidth: '25vw' } })
-      }
+        setCellProps: () => ({ style: { minWidth: '25vw' } }),
+      },
     },
     {
       name: 'useful_life',
@@ -136,12 +136,12 @@ export default function UnitProcesses() {
         customBodyRenderLite: (dataIndex: number) => {
           return (
             <div className={classes.chipContainer}>
-              <Chip label={data[dataIndex].recovery} size="small" />
+              <Chip label={data[dataIndex].useful_life} size="small" />
             </div>
           )
-        }
-      }
-    }
+        },
+      },
+    },
   ]
 
   const options: MUIDataTableOptions = {
@@ -149,7 +149,7 @@ export default function UnitProcesses() {
     filterType: 'dropdown',
     selectableRows: 'none',
     rowsPerPage: 15,
-    print: false
+    print: false,
   }
 
   return (

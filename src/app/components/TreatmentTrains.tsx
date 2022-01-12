@@ -4,7 +4,6 @@ import { makeStyles, MuiThemeProvider, Theme, createTheme } from '@material-ui/c
 
 import { unitProcesses, treatmentTrains } from '../data/model'
 
-
 import Chip from '@material-ui/core/Chip'
 import Tooltip from '@material-ui/core/Tooltip'
 
@@ -17,12 +16,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: 'left',
     flexWrap: 'wrap',
     '& > *': {
-      margin: 2
-    }
+      margin: 2,
+    },
   },
   chip: {
-    backgroundColor: theme.palette.primary.main
-  }
+    backgroundColor: theme.palette.primary.main,
+  },
 }))
 
 export default function TreatmentTrains() {
@@ -30,10 +29,10 @@ export default function TreatmentTrains() {
     overrides: {
       MUIDataTable: {
         paper: {
-          boxShadow: 'none'
-        }
-      }
-    }
+          boxShadow: 'none',
+        },
+      },
+    },
   })
 
   const classes = useStyles()
@@ -54,37 +53,37 @@ export default function TreatmentTrains() {
       name: 'id',
       label: 'ID',
       options: {
-        filter: true
-      }
+        filter: true,
+      },
     },
     {
       name: categoryCol,
       label: t('Category'),
       options: {
-        filter: true
-      }
+        filter: true,
+      },
     },
     {
       name: titleCol,
       label: t('Title'),
       options: {
-        filter: true
-      }
+        filter: true,
+      },
     },
     {
       name: descriptionCol,
       label: t('Description'),
       options: {
-        filter: true
-      }
+        filter: true,
+      },
     },
     {
       name: caseStudyCol,
       label: t('Case Study'),
       options: {
         filter: true,
-        setCellProps: () => ({ style: { maxWidth: '20vw' } })
-      }
+        setCellProps: () => ({ style: { maxWidth: '20vw' } }),
+      },
     },
     {
       name: 'unit_processes',
@@ -96,17 +95,18 @@ export default function TreatmentTrains() {
 
           return (
             <div className={classes.chipContainer}>
-              {UPList && UPList.map((up, index) => (
-                <Tooltip key={index} title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
-                  <Chip label={up} key={index} size="small" color="primary" />
-                </Tooltip>
-              ))}
+              {UPList &&
+                UPList.map((up, index) => (
+                  <Tooltip key={index} title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
+                    <Chip label={up} key={index} size="small" color="primary" className={classes.chip} />
+                  </Tooltip>
+                ))}
             </div>
           )
         },
-        setCellProps: () => ({ style: { minWidth: '15vw' } })
-      }
-    }
+        setCellProps: () => ({ style: { minWidth: '15vw' } }),
+      },
+    },
   ]
 
   const options: MUIDataTableOptions = {
@@ -115,7 +115,7 @@ export default function TreatmentTrains() {
     selectableRows: 'none',
     rowsPerPage: 15,
     print: false,
-    fixedHeader: true
+    fixedHeader: true,
   }
 
   return (
