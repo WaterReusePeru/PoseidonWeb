@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/PoseidonWeb/static/js/main.78059543.chunk.js",
-    "main.js.map": "/PoseidonWeb/static/js/main.78059543.chunk.js.map",
+    "main.js": "/PoseidonWeb/static/js/main.e1bc23fd.chunk.js",
+    "main.js.map": "/PoseidonWeb/static/js/main.e1bc23fd.chunk.js.map",
     "runtime-main.js": "/PoseidonWeb/static/js/runtime-main.8ebf3941.js",
     "runtime-main.js.map": "/PoseidonWeb/static/js/runtime-main.8ebf3941.js.map",
-    "static/js/2.c0b2e0ec.chunk.js": "/PoseidonWeb/static/js/2.c0b2e0ec.chunk.js",
-    "static/js/2.c0b2e0ec.chunk.js.map": "/PoseidonWeb/static/js/2.c0b2e0ec.chunk.js.map",
+    "static/js/2.6ade0d47.chunk.js": "/PoseidonWeb/static/js/2.6ade0d47.chunk.js",
+    "static/js/2.6ade0d47.chunk.js.map": "/PoseidonWeb/static/js/2.6ade0d47.chunk.js.map",
     "index.html": "/PoseidonWeb/index.html",
-    "static/js/2.c0b2e0ec.chunk.js.LICENSE.txt": "/PoseidonWeb/static/js/2.c0b2e0ec.chunk.js.LICENSE.txt",
+    "static/js/2.6ade0d47.chunk.js.LICENSE.txt": "/PoseidonWeb/static/js/2.6ade0d47.chunk.js.LICENSE.txt",
     "static/media/Calculations.5eb5970b.png": "/PoseidonWeb/static/media/Calculations.5eb5970b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8ebf3941.js",
-    "static/js/2.c0b2e0ec.chunk.js",
-    "static/js/main.78059543.chunk.js"
+    "static/js/2.6ade0d47.chunk.js",
+    "static/js/main.e1bc23fd.chunk.js"
   ]
 }
