@@ -1,39 +1,40 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { RootState } from '../store'
+import { treatmentTrains } from '../data/model'
 
 type CaseState = {
-  step: number,
-  completedSteps: [number, number, number, number],
+  step: number
+  completedSteps: [number, number, number, number]
   commInfo: {
-    countryID: number,
+    countryID: number
     currency: number //0 is USD, 1 is local currency
-  },
+  }
   inputQuality: {
-    category: number,
+    category: number
     qualityClass?: number
-  },
+  }
   endUse: {
-    category: number,
+    category: number
     qualityClass?: number
-  },
+  }
   quantity: {
-    amount?: number,
-    distance?: number,
+    amount?: number
+    distance?: number
     heightDifference?: number
-  },
+  }
   solution: {
-    noneNeeded: boolean,
-    noneAvailable: boolean,
+    noneNeeded: boolean
+    count: number
+    noneAvailable: boolean
     sortByCost: boolean
-  },
-  solutions: 
-    {
-      treatmentTrain?: number,
-      rating?: number,
-      capex?: number,
-      annualizedCapex?: number,
-      annualizedCapexPerCubic?: number
-    }[]
+  }
+  solutions: {
+    treatmentTrain?: number
+    rating?: number
+    capex?: number
+    annualizedCapex?: number
+    annualizedCapexPerCubic?: number
+  }[]
 }
 
 const initialState: CaseState = {
@@ -46,29 +47,29 @@ const initialState: CaseState = {
   solution: {
     noneNeeded: true,
     noneAvailable: false,
-    sortByCost: false
+    sortByCost: false,
+    count: 0,
   },
-  solutions:
-    Array(3).fill({
+  solutions: Array(treatmentTrains.length).fill({
     treatmentTrain: undefined,
     rating: undefined,
     capex: undefined,
     annualizedCapex: undefined,
-    annualizedCapexPerCubic: undefined
-  })
+    annualizedCapexPerCubic: undefined,
+  }),
 }
 
 export const caseSlice = createSlice({
   name: 'case',
   initialState,
   reducers: {
-    next: state => {
+    next: (state) => {
       state.step += 1
     },
-    previous: state => {
+    previous: (state) => {
       state.step -= 1
     },
-    reset: state => {
+    reset: (state) => {
       state.step = 0
     },
     setStep: (state, action) => {
@@ -125,12 +126,15 @@ export const caseSlice = createSlice({
     setSolutionNoneNeeded: (state, action) => {
       state.solution.noneNeeded = action.payload
     },
-    resetSolutions: state => {
+    resetSolutions: (state) => {
       state.solution.noneNeeded = false
       state.solution.noneAvailable = false
     },
     setSolutionNoneAvailable: (state, action) => {
       state.solution.noneAvailable = action.payload
+    },
+    setSolutionCount: (state, action) => {
+      state.solution.count = action.payload
     },
     setSolutions: (state, action) => {
       action.payload.forEach((treatment: any, index: any) => {
@@ -144,8 +148,8 @@ export const caseSlice = createSlice({
     },
     setSolutionSortByCost: (state, action) => {
       state.solution.sortByCost = action.payload
-    }
-  }
+    },
+  },
 })
 
 // Action creators are generated for each case reducer function
@@ -166,11 +170,11 @@ export const {
   resetSolutions,
   setSolutionNoneNeeded,
   setSolutionNoneAvailable,
+  setSolutionCount,
   setSolutions,
-  setSolutionSortByCost
+  setSolutionSortByCost,
 } = caseSlice.actions
 
 export const selectCase = (state: RootState) => state.case
-
 
 export default caseSlice.reducer

@@ -9,7 +9,7 @@ import i18next from 'i18next'
 export default function SimpleMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null)
 
-  const handleClick = event => {
+  const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget)
   }
 
@@ -17,7 +17,7 @@ export default function SimpleMenu() {
     setAnchorEl(null)
   }
 
-  const handleChooseLanguage = lang => {
+  const handleChooseLanguage = (lang: 'en' | 'es') => {
     i18next.changeLanguage(lang)
     handleClose()
   }

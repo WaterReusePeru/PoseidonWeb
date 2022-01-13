@@ -95,7 +95,7 @@ export default function UnitProcesses() {
       },
     },
     {
-      name: 'reliability',
+      name: 'evaluationcriteria',
       label: t('Evaluation Criteria') + ' [0-3]',
       options: {
         filter: false,
@@ -150,6 +150,7 @@ export default function UnitProcesses() {
     selectableRows: 'none',
     rowsPerPage: 15,
     print: false,
+    fixedHeader: true,
   }
 
   return (

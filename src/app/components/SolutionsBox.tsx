@@ -20,17 +20,17 @@ import { setSolutionSortByCost } from '../case/caseSlice'
 
 import i18next from 'i18next'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   paper: {
     backgroundColor: theme.palette.background.default,
-    padding: 10
-  }
+    padding: 10,
+  },
 }))
 
 export default function SolutionsBox() {
   const classes = useStyles()
 
-  const caseState = useAppSelector(state => state.case)
+  const caseState = useAppSelector((state) => state.case)
 
   const dispatch = useDispatch()
 
@@ -67,18 +67,18 @@ export default function SolutionsBox() {
 
         {!caseState.solution.noneNeeded && !caseState.solution.noneAvailable ? (
           <Grid item container xs={12} spacing={1} alignItems="center">
-
-            {caseState.solutions[0].capex !== 0 ?
-            <Grid item container alignItems="center" spacing={1} xs={12} justifyContent="space-between">
-              <Grid item>
-                <Typography>{t('Sort by cost')}</Typography>
+            {caseState.solutions[0].capex !== 0 ? (
+              <Grid item container alignItems="center" spacing={1} xs={12} justifyContent="space-between">
+                <Grid item>
+                  <Typography>{t('Sort by cost')}</Typography>
+                </Grid>
+                <Grid item>
+                  <Switch color="primary" checked={sortByCost} onChange={(event) => handleChangePriority()} />
+                </Grid>
               </Grid>
-              <Grid item>
-                <Switch color="primary" checked={sortByCost} onChange={event => handleChangePriority()} />
-              </Grid>
-            </Grid> : null }
+            ) : null}
 
-            {caseState.solutions.map((solution, index) => (
+            {caseState.solutions.slice(0, 3).map((solution, index) => (
               <>
                 <Grid item container justifyContent="flex-start" spacing={1} xs={12}>
                   <Grid item>
@@ -88,7 +88,8 @@ export default function SolutionsBox() {
                     <Typography>
                       {lang === 'en'
                         ? treatmentTrains[solution.treatmentTrain!].category //TODO: !
-                        : treatmentTrains[solution.treatmentTrain!].categoryEs} {/* TODO: ! */}
+                        : treatmentTrains[solution.treatmentTrain!].categoryEs}{' '}
+                      {/* TODO: ! */}
                     </Typography>
                   </Grid>
                 </Grid>
@@ -102,7 +103,7 @@ export default function SolutionsBox() {
                   <Typography>{t('Rating')}:</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography>{Math.round(((solution.rating! * 10) / 3) * 1000) / 1000}</Typography> {/* TODO: ! */}
+                  <Typography>{Math.round(solution.rating! * 1000) / 1000}</Typography> {/* TODO: ! */}
                 </Grid>
                 {!isNaN(solution.annualizedCapexPerCubic!) ? ( //TODO: !
                   <>
@@ -117,8 +118,9 @@ export default function SolutionsBox() {
                           <>
                             {(
                               communityInfo[commInfo.countryID].exchangeToUSD *
-                              Math.round(solution.annualizedCapexPerCubic! * 1000) //TODO: !
-                            ).toLocaleString('de-CH')}{' '}
+                              Math.round(solution.annualizedCapexPerCubic! * 1000)
+                            ) //TODO: !
+                              .toLocaleString('de-CH')}{' '}
                             {communityInfo[commInfo.countryID].currency}/m&sup3;
                           </>
                         )}
@@ -132,11 +134,16 @@ export default function SolutionsBox() {
                   <Typography>{t('Unit Processes')}:</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  {treatmentTrains[solution.treatmentTrain!].unit_processes.map((up, index) => ( //TODO: !
-                    <Tooltip key={index} title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
-                      <Chip label={up} key={index} size="small" color="primary" style={{ margin: 2 }} />
-                    </Tooltip>
-                  ))}
+                  {treatmentTrains[solution.treatmentTrain!].unit_processes.map(
+                    (
+                      up,
+                      index //TODO: !
+                    ) => (
+                      <Tooltip key={index} title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
+                        <Chip label={up} key={index} size="small" color="primary" style={{ margin: 2 }} />
+                      </Tooltip>
+                    )
+                  )}
                 </Grid>
               </>
             ))}

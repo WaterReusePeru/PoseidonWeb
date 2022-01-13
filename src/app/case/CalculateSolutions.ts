@@ -1,8 +1,6 @@
 import { useDispatch } from 'react-redux'
-import { setSolutionNoneAvailable, setSolutionNoneNeeded, setSolutions } from './caseSlice'
-import { WaterQuality } from '../data/model'
-import { OutputQuality } from '../data/model'
-import { QualityFactor } from '../data/model'
+import { setSolutionCount, setSolutionNoneAvailable, setSolutionNoneNeeded, setSolutions } from './caseSlice'
+import { WaterQuality, OutputQuality, QualityFactor } from '../data/model'
 
 import { findSuitableTreatments } from './findSuitableTreatments'
 
@@ -13,35 +11,37 @@ export default function CalculateSolutions(input: WaterQuality, enduse: WaterQua
 
   let treatmentFactors: QualityFactor[] = []
 
-  qualityFactors.forEach(qualityFactor=> {
+  qualityFactors.forEach((qualityFactor) => {
     const key = qualityFactor as keyof WaterQuality
-    if ((input[key] > enduse[key]) && (enduse[key] !== -1)) {
+    if (input[key] > enduse[key] && enduse[key] !== -1) {
       dispatch(setSolutionNoneNeeded(false))
       treatmentFactors.push(qualityFactor as QualityFactor)
     }
   })
 
   function findTopTreatments(outputQualities: OutputQuality[]) {
-    let topThreeTreatments
+    let topTreatments
 
     if (byCost) {
-      topThreeTreatments = outputQualities.sort((a, b) => a.annualizedCapex - b.annualizedCapex).slice(0, 3)
+      topTreatments = outputQualities.sort((a, b) => a.annualizedCapex - b.annualizedCapex)
     } else {
-      topThreeTreatments = outputQualities.sort((a, b) => b.rating - a.rating).slice(0, 3)
+      topTreatments = outputQualities.sort((a, b) => b.rating - a.rating)
     }
 
-    return topThreeTreatments
+    return topTreatments
   }
 
-  const topThreeTreatments = findTopTreatments(findSuitableTreatments(input, enduse, treatmentFactors, amount))
+  const topTreatments = findTopTreatments(findSuitableTreatments(input, enduse, treatmentFactors, amount))
 
-  if (topThreeTreatments.length === 0) { //TODO: !
+  if (topTreatments.length === 0) {
     dispatch(setSolutionNoneAvailable(true))
   } else {
     dispatch(setSolutionNoneAvailable(false))
   }
 
-  console.log(topThreeTreatments)
+  console.log(topTreatments)
 
-  dispatch(setSolutions(topThreeTreatments))
+  dispatch(setSolutionCount(topTreatments.length))
+
+  dispatch(setSolutions(topTreatments))
 }

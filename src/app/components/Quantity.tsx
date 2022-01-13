@@ -2,22 +2,24 @@ import React from 'react'
 import { Tooltip, Typography } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { useAppSelector } from '../hooks'
 import { setQuantity, setDistance, setHeightDifference } from '../case/caseSlice'
 import Chip from '@material-ui/core/Chip'
 import { useTranslation } from 'react-i18next'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import SolutionsBox from './SolutionsBox.tsx'
+import SolutionsBox from './SolutionsBox'
 
 export default function Quantity() {
-  const quantity = useSelector(state => state.case.quantity)
+  const quantity = useAppSelector((state) => state.case.quantity)
+
   const dispatch = useDispatch()
 
   const { t } = useTranslation()
 
   const [validQuantity, setValidQuantity] = React.useState(true)
 
-  const handleChangeQuantity = value => {
+  const handleChangeQuantity = (value: number) => {
     if (value >= 1 && value <= 20000 && Number.isInteger(Number(value))) {
       setValidQuantity(true)
       dispatch(setQuantity(value))
@@ -29,7 +31,7 @@ export default function Quantity() {
 
   const [validDistance, setValidDistance] = React.useState(true)
 
-  const handleChangeDistance = value => {
+  const handleChangeDistance = (value: number) => {
     if (value >= 1 && value <= 20000 && Number.isInteger(Number(value))) {
       setValidDistance(true)
       dispatch(setDistance(value))
@@ -41,7 +43,7 @@ export default function Quantity() {
 
   const [validHeightDifference, setValidHeightDifference] = React.useState(true)
 
-  const handleChangeHeightDifference = value => {
+  const handleChangeHeightDifference = (value: number) => {
     if (value >= -1000 && value <= 1000 && Number.isInteger(Number(value))) {
       setValidHeightDifference(true)
       dispatch(setHeightDifference(value))
@@ -68,12 +70,12 @@ export default function Quantity() {
             type="number"
             variant="outlined"
             InputLabelProps={{
-              shrink: true
+              shrink: true,
             }}
-            onChange={event => handleChangeQuantity(event.target.value)}
+            onChange={(event) => handleChangeQuantity(Number(event.target.value))}
             value={quantity.amount !== null ? quantity.amount : null}
             InputProps={{
-              endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>
+              endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>,
             }}
             fullWidth
           />
@@ -96,12 +98,12 @@ export default function Quantity() {
             type="number"
             variant="outlined"
             InputLabelProps={{
-              shrink: true
+              shrink: true,
             }}
-            onChange={event => handleChangeDistance(event.target.value)}
+            onChange={(event) => handleChangeDistance(Number(event.target.value))}
             value={quantity.distance !== null ? quantity.distance : null}
             InputProps={{
-              endAdornment: <InputAdornment position="end">m</InputAdornment>
+              endAdornment: <InputAdornment position="end">m</InputAdornment>,
             }}
             fullWidth
           />
@@ -124,12 +126,12 @@ export default function Quantity() {
             type="number"
             variant="outlined"
             InputLabelProps={{
-              shrink: true
+              shrink: true,
             }}
-            onChange={event => handleChangeHeightDifference(event.target.value)}
+            onChange={(event) => handleChangeHeightDifference(Number(event.target.value))}
             value={quantity.heightDifference !== null ? quantity.heightDifference : null}
             InputProps={{
-              endAdornment: <InputAdornment position="end">m</InputAdornment>
+              endAdornment: <InputAdornment position="end">m</InputAdornment>,
             }}
             fullWidth
           />

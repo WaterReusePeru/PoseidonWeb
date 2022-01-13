@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography'
 
 import { useTranslation } from 'react-i18next'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   main: {
     display: 'grid',
     height: 'calc(100vh - 200px)',
@@ -19,12 +19,12 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     paddingLeft: '10vw',
     paddingRight: '10vw',
-    paddingTop: 50
+    paddingTop: 50,
   },
   root: {
     flexGrow: 1,
-    paddingTop: 60
-  }
+    paddingTop: 60,
+  },
 }))
 
 export default function Pestle() {

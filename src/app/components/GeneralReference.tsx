@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 import Calculations from '../images/Calculations.png'
 import Grid from '@material-ui/core/Grid'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   main: {
     display: 'grid',
     height: 'calc(100vh - 200px)',
@@ -17,18 +17,18 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     paddingLeft: '10vw',
     paddingRight: '10vw',
-    paddingTop: 50
+    paddingTop: 50,
   },
   root: {
     flexGrow: 1,
-    paddingTop: 60
+    paddingTop: 60,
   },
   img: {
     margin: 'auto',
     display: 'block',
     maxWidth: '100%',
-    maxHeight: '100%'
-  }
+    maxHeight: '100%',
+  },
 }))
 
 export default function GeneralReference() {

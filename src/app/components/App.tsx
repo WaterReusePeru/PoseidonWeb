@@ -14,30 +14,29 @@ import { Results } from './Results'
 import UserMenu from './UserMenu'
 import { useTranslation } from 'react-i18next'
 import Grid from '@material-ui/core/Grid'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../hooks'
 import { PoseidonWebIcon } from '../images/PoseidonWebIcon'
-
 
 const useStyles = makeStyles({
   toolbar: {
     display: 'grid',
     gridTemplateColumns: '30% auto 30%',
     justifyItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   title: {
-    textAlign: 'left'
+    textAlign: 'left',
   },
   root: {
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 })
 
 export const App = () => {
   const classes = useStyles()
   const { t } = useTranslation()
 
-  const solutionsState = useSelector(state => state.case.solutions)
+  const solutionsState = useAppSelector((state) => state.case.solutions)
 
   return (
     <div className="App">
@@ -72,7 +71,7 @@ export const App = () => {
                 to={`${process.env.PUBLIC_URL}/results`}
                 startIcon={<BarChartIcon />}
                 color="inherit"
-                disabled={solutionsState[0].treatmentTrain === null ? true : false}
+                disabled={solutionsState[0].treatmentTrain === undefined ? true : false}
               >
                 {t('Results')}
               </Button>

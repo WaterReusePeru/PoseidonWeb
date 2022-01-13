@@ -93,7 +93,7 @@ export const resources = {
       'Sort by cost': 'Ordenar por coste',
 
       'Sorry, no matching records found': 'Lo sentimos, no se han encontrado registros coincidentes',
-      'Sort': 'Ordenar'
-    }
-  }
+      Sort: 'Ordenar',
+    },
+  },
 }
