@@ -57,7 +57,7 @@ export default function UnitProcesses() {
     },
     {
       name: 'pre',
-      label: t('Pollutant Removal Efficiencies [% removal]'),
+      label: t('Average Pollutant Removal Efficiencies [% removal]'),
       options: {
         filter: false,
         customBodyRenderLite: (dataIndex: number) => {

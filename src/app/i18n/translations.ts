@@ -12,7 +12,8 @@ export const resources = {
       'Water Qualities': 'Cualidades del agua',
 
       Name: 'Nombre',
-      'Pollutant Removal Efficiencies [% removal]': 'Eficiencia de eliminación de los contaminates [% de eliminación]',
+      'Average Pollutant Removal Efficiencies [% removal]':
+        'Eficiencias medias de eliminación de los contaminates [% de eliminación]',
       Turbidity: 'Turbidez',
       Recovery: 'Recuperación',
       'Evaluation Criteria': 'Criterios de evaluación',
@@ -59,10 +60,10 @@ export const resources = {
 
       input: 'entrada',
       output: 'salida',
-      'avg. input': 'entr. med.',
+      'avg. ww.': 'res. med.',
 
-      Input: 'Entrada',
-      'Average Input': 'Entrada media',
+      'Input into Treatment Train': 'Entrada en el tren de tratamiento',
+      'Typical untreated domestic wastewater': 'Aguas residuales domésticas típicas sin tratar',
 
       'Personalize Solutions': 'Personalizar soluciones',
       'Based on your input, no treatment is needed because the input quality is better than the end use quality.':

@@ -102,13 +102,13 @@ export const CaseSummary = (props: { step: any }) => {
 
         {step === 3 ? (
           <Grid item>
-            {caseState.quantity.amount !== null ? (
+            {caseState.quantity.amount !== undefined ? (
               <Grid container alignItems="center" direction="row" spacing={0}>
                 <BatteryFullIcon fontSize="small" color="primary" />
                 <Typography variant="caption">
                   {caseState.quantity.amount}m&sup3;/{t('day')}
                 </Typography>
-                {caseState.quantity.distance !== null ? (
+                {caseState.quantity.distance !== undefined ? (
                   <>
                     <ArrowRightAltIcon fontSize="small" color="primary" />
                     <Typography variant="caption">{caseState.quantity.distance}m</Typography>
@@ -117,7 +117,7 @@ export const CaseSummary = (props: { step: any }) => {
                   <div />
                 )}
 
-                {caseState.quantity.heightDifference !== null ? (
+                {caseState.quantity.heightDifference !== undefined ? (
                   <>
                     <ArrowUpwardIcon fontSize="small" color="primary" />
 

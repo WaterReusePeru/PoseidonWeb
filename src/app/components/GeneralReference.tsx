@@ -15,9 +15,9 @@ const useStyles = makeStyles((theme) => ({
     gridRowGap: 8,
     justifyItems: 'stretch',
     justifyContent: 'center',
-    paddingLeft: '10vw',
-    paddingRight: '10vw',
-    paddingTop: 50,
+    paddingLeft: '5vw',
+    paddingRight: '5vw',
+    paddingTop: 20,
   },
   root: {
     flexGrow: 1,

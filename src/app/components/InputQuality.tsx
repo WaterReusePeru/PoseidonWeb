@@ -13,7 +13,7 @@ import { Bar } from './Bar'
 import { useTheme } from '@material-ui/core/styles'
 
 export default function InputQuality() {
-  const inputQuality = useAppSelector(state => state.case.inputQuality)
+  const inputQuality = useAppSelector((state) => state.case.inputQuality)
   const dispatch = useDispatch()
 
   const theme = useTheme()
@@ -21,9 +21,9 @@ export default function InputQuality() {
   const { t } = useTranslation()
   const lang = i18next.language
 
-  const waterQualityCategoryOptions = waterQualityCategories.filter(category => category.input)
+  const waterQualityCategoryOptions = waterQualityCategories.filter((category) => category.input)
 
-  const waterQualityOptions = waterQualities.filter(q => q.category === inputQuality.category)
+  const waterQualityOptions = waterQualities.filter((q) => q.category === inputQuality.category)
 
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
@@ -37,12 +37,12 @@ export default function InputQuality() {
         <Autocomplete
           id="category"
           options={waterQualityCategoryOptions}
-          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined! )}
+          getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined!)}
           getOptionSelected={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setInputQualityCategory(newValue.id))}
           disableClearable
-          value={inputQuality.category !== null ? waterQualityCategories[inputQuality.category] : undefined }
-          renderInput={params => <TextField {...params} variant="outlined" />}
+          value={inputQuality.category !== null ? waterQualityCategories[inputQuality.category] : undefined}
+          renderInput={(params) => <TextField {...params} variant="outlined" />}
         />
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
@@ -57,12 +57,14 @@ export default function InputQuality() {
         <Autocomplete
           id="quality"
           options={waterQualityOptions}
-          getOptionLabel={option => (option ? (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined! ) : "workaround")}
+          getOptionLabel={(option) =>
+            option ? (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined!) : 'workaround'
+          }
           getOptionSelected={(option, value) => option !== 0 && value !== 0 && option.name === value.name}
           onChange={(event, newValue) => newValue && dispatch(setInputQualityClass(newValue.id))}
           disableClearable
           value={inputQuality.qualityClass && waterQualities[inputQuality.qualityClass]}
-          renderInput={params => <TextField {...params} variant="outlined" />}
+          renderInput={(params) => <TextField {...params} variant="outlined" />}
           disabled={inputQuality.category === null ? true : false}
         />
       </Grid>
@@ -113,7 +115,7 @@ export default function InputQuality() {
             </svg>
           </Grid>
           <Grid item>
-            <Typography variant="caption">{t('Input')}</Typography>
+            <Typography variant="caption">{t('Input into Treatment Train')}</Typography>
           </Grid>
         </Grid>
 
@@ -126,7 +128,7 @@ export default function InputQuality() {
             </svg>
           </Grid>
           <Grid item>
-            <Typography variant="caption">{t('Average Input')}</Typography>
+            <Typography variant="caption">{t('Typical untreated domestic wastewater')}</Typography>
           </Grid>
         </Grid>
       </Grid>

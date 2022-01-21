@@ -38,8 +38,8 @@ const useStyles = makeStyles((theme) => ({
     gridRowGap: 8,
     justifyItems: 'stretch',
     justifyContent: 'center',
-    paddingLeft: '10vw',
-    paddingRight: '10vw',
+    paddingLeft: '5vw',
+    paddingRight: '5vw',
     paddingTop: 50,
   },
   step: {

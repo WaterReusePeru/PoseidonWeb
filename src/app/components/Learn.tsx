@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     display: 'grid',
     gridTemplateColumns: 'auto 1fr auto',
     justifyItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   main: {
     display: 'grid',
@@ -30,17 +30,17 @@ const useStyles = makeStyles({
     gridRowGap: 8,
     justifyItems: 'stretch',
     justifyContent: 'center',
-    paddingLeft: '10vw',
-    paddingRight: '10vw',
-    paddingTop: 20
+    paddingLeft: '5vw',
+    paddingRight: '5vw',
+    paddingTop: 20,
   },
   title: {
-    textAlign: 'left'
+    textAlign: 'left',
   },
   root: {
     flexGrow: 1,
-    paddingTop: 60
-  }
+    paddingTop: 60,
+  },
 })
 
 export const Learn = () => {

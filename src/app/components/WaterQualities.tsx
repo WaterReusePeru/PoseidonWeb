@@ -90,7 +90,7 @@ export default function UnitProcesses() {
 
                 return (
                   <Tooltip key={index} title={columnTitles[index]}>
-                    <Chip label={data[dataIndex][key] !== -1 ? data[dataIndex][key] : '-'} key={index} size="small" />
+                    <Chip label={data[dataIndex][key] !== null ? data[dataIndex][key] : '-'} key={index} size="small" />
                   </Tooltip>
                 )
               })}

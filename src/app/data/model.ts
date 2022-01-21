@@ -109,7 +109,16 @@ export interface WaterQuality {
   referenceEs: string
 }
 
-export const waterQualities: ReadonlyArray<WaterQuality> = waterQualitiesJSON as ReadonlyArray<WaterQuality>
+function NaNifier(value: any) {
+  if (value === null) {
+    return NaN
+  }
+  return value
+}
+
+const waterQualitiesJSONNaNified = NaNifier(waterQualitiesJSON)
+
+export const waterQualities: ReadonlyArray<WaterQuality> = waterQualitiesJSONNaNified as ReadonlyArray<WaterQuality>
 
 export interface WaterQualityFactor {
   name: string
