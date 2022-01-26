@@ -3,7 +3,7 @@ import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import '../../../app/i18n/i18n'
 
-import GeneralReference from '../../../app/components/GeneralReference'
+import GeneralReference from '../../../app/learn/GeneralReference'
 
 let container = null
 beforeEach(() => {

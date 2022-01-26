@@ -17,7 +17,7 @@ export const Bar = (props: { input?: any; output?: any; factor: string; average?
   }
 
   const average = {
-    name: t('avg. input'),
+    name: t('typ. ww.'),
     [props.factor]: props.average,
     color: theme.palette.action.disabled,
   }

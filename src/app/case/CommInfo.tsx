@@ -11,10 +11,10 @@ import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
 export default function CommInfo() {
-  const commInfo = useAppSelector(state => state.case.commInfo)
+  const commInfo = useAppSelector((state) => state.case.commInfo)
   const dispatch = useDispatch()
   const countries = []
-  communityInfo.map(country => {
+  communityInfo.map((country) => {
     return countries.push(country.name)
   })
 
@@ -44,12 +44,12 @@ export default function CommInfo() {
         <Autocomplete
           id="country"
           options={communityInfo}
-          getOptionLabel={option => (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined! )}
+          getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined!)}
           getOptionSelected={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setCountry(newValue.id))}
           disableClearable
           value={commInfo.countryID !== undefined ? communityInfo[commInfo.countryID] : undefined}
-          renderInput={params => <TextField {...params} variant="outlined" />}
+          renderInput={(params) => <TextField {...params} variant="outlined" />}
         />
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
@@ -64,15 +64,19 @@ export default function CommInfo() {
         <Autocomplete
           id="currency"
           options={[communityInfo[commInfo.countryID], usdObj]}
-          getOptionLabel={option => option.currency}
+          getOptionLabel={(option) => option.currency}
           getOptionSelected={(option, value) => option.currency === value.currency}
           onChange={(event, newValue) => dispatch(setCurrency(newValue.id))}
           disableClearable
           value={
-            commInfo.currency !== null ? (commInfo.currency === 0 ? usdObj : communityInfo[commInfo.countryID]) : undefined
+            commInfo.currency !== null
+              ? commInfo.currency === 0
+                ? usdObj
+                : communityInfo[commInfo.countryID]
+              : undefined
           }
           disabled={commInfo.countryID === null ? true : false}
-          renderInput={params => <TextField {...params} variant="outlined" />}
+          renderInput={(params) => <TextField {...params} variant="outlined" />}
         />
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>

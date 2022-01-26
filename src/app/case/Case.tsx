@@ -19,7 +19,7 @@ import { useDispatch } from 'react-redux'
 
 import { useAppSelector } from '../hooks'
 
-import { next, previous, reset } from '../case/caseSlice'
+import { next, previous, reset } from './caseSlice'
 import { theme } from '../theme/theme'
 import { useTranslation } from 'react-i18next'
 

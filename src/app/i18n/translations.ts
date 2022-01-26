@@ -60,7 +60,7 @@ export const resources = {
 
       input: 'entrada',
       output: 'salida',
-      'avg. ww.': 'res. med.',
+      'typ. ww.': 'res. típ.',
 
       'Input into Treatment Train': 'Entrada en el tren de tratamiento',
       'Typical untreated domestic wastewater': 'Aguas residuales domésticas típicas sin tratar',
