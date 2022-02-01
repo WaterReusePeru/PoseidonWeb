@@ -1,13 +1,13 @@
 import React from 'react'
-import { Tooltip, Typography } from '@material-ui/core'
-import Grid from '@material-ui/core/Grid'
-import TextField from '@material-ui/core/TextField'
+import { Tooltip, Typography } from '@mui/material'
+import Grid from '@mui/material/Grid'
+import TextField from '@mui/material/TextField'
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../hooks'
 import { setQuantity, setDistance, setHeightDifference } from './caseSlice'
-import Chip from '@material-ui/core/Chip'
+import Chip from '@mui/material/Chip'
 import { useTranslation } from 'react-i18next'
-import InputAdornment from '@material-ui/core/InputAdornment'
+import InputAdornment from '@mui/material/InputAdornment'
 import SolutionsBox from './SolutionsBox'
 
 export default function Quantity() {

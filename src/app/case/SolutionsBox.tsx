@@ -1,26 +1,26 @@
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../hooks'
 
-import Grid from '@material-ui/core/Grid'
-import makeStyles from '@material-ui/core/styles/makeStyles'
-import Chip from '@material-ui/core/Chip'
-import Paper from '@material-ui/core/Paper'
-import { Typography } from '@material-ui/core'
-import Switch from '@material-ui/core/Switch'
+import Grid from '@mui/material/Grid'
+import makeStyles from '@mui/styles/makeStyles'
+import Chip from '@mui/material/Chip'
+import Paper from '@mui/material/Paper'
+import { Theme, Typography } from '@mui/material'
+import Switch from '@mui/material/Switch'
 
 import { useTranslation } from 'react-i18next'
 import treatmentTrains from '../data/treatmentTrains.json'
 import communityInfo from '../data/communityInfo.json'
 import unitProcesses from '../data/unitProcesses.json'
 import { waterQualities } from '../data/model'
-import Tooltip from '@material-ui/core/Tooltip'
+import Tooltip from '@mui/material/Tooltip'
 import CalculateSolutions from '../case/CalculateSolutions'
 
 import { setSolutionSortByCost } from '../case/caseSlice'
 
 import i18next from 'i18next'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   paper: {
     backgroundColor: theme.palette.background.default,
     padding: 10,

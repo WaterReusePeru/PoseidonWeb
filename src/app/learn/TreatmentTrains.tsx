@@ -1,14 +1,17 @@
 import MUIDataTable from 'mui-datatables'
-import { MUIDataTableOptions } from 'mui-datatables'
-import { makeStyles, MuiThemeProvider, Theme, createTheme } from '@material-ui/core/styles'
+import { options } from '../theme/tables'
+import { ThemeProvider, StyledEngineProvider, Theme } from '@mui/material/styles'
+
+import makeStyles from '@mui/styles/makeStyles'
 
 import { unitProcesses, treatmentTrains } from '../data/model'
 
-import Chip from '@material-ui/core/Chip'
-import Tooltip from '@material-ui/core/Tooltip'
+import Chip from '@mui/material/Chip'
+import Tooltip from '@mui/material/Tooltip'
 
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
+import { theme } from '../theme/theme'
 
 const useStyles = makeStyles((theme: Theme) => ({
   chipContainer: {
@@ -25,16 +28,6 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 export default function TreatmentTrains() {
-  const muiTheme = createTheme({
-    overrides: {
-      MUIDataTable: {
-        paper: {
-          boxShadow: 'none',
-        },
-      },
-    },
-  })
-
   const classes = useStyles()
 
   const { t } = useTranslation()
@@ -109,18 +102,11 @@ export default function TreatmentTrains() {
     },
   ]
 
-  const options: MUIDataTableOptions = {
-    filter: true,
-    filterType: 'dropdown',
-    selectableRows: 'none',
-    rowsPerPage: 15,
-    print: false,
-    fixedHeader: true,
-  }
-
   return (
-    <MuiThemeProvider theme={muiTheme}>
-      <MUIDataTable title={t('Treatment Trains')} data={data} columns={columns} options={options} />
-    </MuiThemeProvider>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <MUIDataTable title={t('Treatment Trains')} data={data} columns={columns} options={options} />
+      </ThemeProvider>
+    </StyledEngineProvider>
   )
 }

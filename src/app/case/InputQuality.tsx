@@ -1,16 +1,16 @@
-import { Tooltip, Typography } from '@material-ui/core'
-import Grid from '@material-ui/core/Grid'
-import TextField from '@material-ui/core/TextField'
+import { Tooltip, Typography } from '@mui/material'
+import Grid from '@mui/material/Grid'
+import TextField from '@mui/material/TextField'
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../hooks'
-import Autocomplete from '@material-ui/lab/Autocomplete'
+import Autocomplete from '@mui/material/Autocomplete'
 import { waterQualityCategories, waterQualities, WaterQuality, waterQualityFactors } from '../data/model'
 import { setInputQualityCategory, setInputQualityClass } from '../case/caseSlice'
-import Chip from '@material-ui/core/Chip'
+import Chip from '@mui/material/Chip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 import { Bar } from './Bar'
-import { useTheme } from '@material-ui/core/styles'
+import { useTheme } from '@mui/material/styles'
 
 export default function InputQuality() {
   const inputQuality = useAppSelector((state) => state.case.inputQuality)
@@ -38,7 +38,7 @@ export default function InputQuality() {
           id="category"
           options={waterQualityCategoryOptions}
           getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined!)}
-          getOptionSelected={(option, value) => option.name === value.name}
+          isOptionEqualToValue={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setInputQualityCategory(newValue.id))}
           disableClearable
           value={inputQuality.category !== null ? waterQualityCategories[inputQuality.category] : undefined}
@@ -60,7 +60,7 @@ export default function InputQuality() {
           getOptionLabel={(option) =>
             option ? (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined!) : 'workaround'
           }
-          getOptionSelected={(option, value) => option !== 0 && value !== 0 && option.name === value.name}
+          isOptionEqualToValue={(option, value) => option !== 0 && value !== 0 && option.name === value.name}
           onChange={(event, newValue) => newValue && dispatch(setInputQualityClass(newValue.id))}
           disableClearable
           value={inputQuality.qualityClass && waterQualities[inputQuality.qualityClass]}

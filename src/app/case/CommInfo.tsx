@@ -1,12 +1,12 @@
-import { Tooltip, Typography } from '@material-ui/core'
-import Grid from '@material-ui/core/Grid'
-import TextField from '@material-ui/core/TextField'
+import { Tooltip, Typography } from '@mui/material'
+import Grid from '@mui/material/Grid'
+import TextField from '@mui/material/TextField'
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../hooks'
-import Autocomplete from '@material-ui/lab/Autocomplete'
+import Autocomplete from '@mui/material/Autocomplete'
 import communityInfo from '../data/communityInfo.json'
 import { setCountry, setCurrency } from '../case/caseSlice'
-import Chip from '@material-ui/core/Chip'
+import Chip from '@mui/material/Chip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
@@ -45,7 +45,7 @@ export default function CommInfo() {
           id="country"
           options={communityInfo}
           getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined!)}
-          getOptionSelected={(option, value) => option.name === value.name}
+          isOptionEqualToValue={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setCountry(newValue.id))}
           disableClearable
           value={commInfo.countryID !== undefined ? communityInfo[commInfo.countryID] : undefined}
@@ -65,7 +65,7 @@ export default function CommInfo() {
           id="currency"
           options={[communityInfo[commInfo.countryID], usdObj]}
           getOptionLabel={(option) => option.currency}
-          getOptionSelected={(option, value) => option.currency === value.currency}
+          isOptionEqualToValue={(option, value) => option.currency === value.currency}
           onChange={(event, newValue) => dispatch(setCurrency(newValue.id))}
           disableClearable
           value={

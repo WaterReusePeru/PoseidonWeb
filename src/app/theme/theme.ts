@@ -1,11 +1,11 @@
-import { createTheme } from '@material-ui/core'
+import { createTheme } from '@mui/material'
 
 const colors = {
-  main: '#00838f',
+  main: '#0097a7',
 }
 
 const secondary = {
-  main: '#2196f3',
+  main: '#1976d2',
 }
 
 export const theme = createTheme({
@@ -19,7 +19,7 @@ export const lightTheme = createTheme({
   palette: {
     primary: colors,
     secondary: secondary,
-    type: 'light',
+    mode: 'light',
   },
 })
 
@@ -27,6 +27,6 @@ export const darkTheme = createTheme({
   palette: {
     primary: colors,
     secondary: secondary,
-    type: 'dark',
+    mode: 'dark',
   },
 })

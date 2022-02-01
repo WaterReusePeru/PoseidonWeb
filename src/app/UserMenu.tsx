@@ -1,9 +1,9 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
-import Menu from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
-import TranslateIcon from '@material-ui/icons/Translate'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import Button from '@mui/material/Button'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import TranslateIcon from '@mui/icons-material/Translate'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import i18next from 'i18next'
 
 export default function SimpleMenu() {

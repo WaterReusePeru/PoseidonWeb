@@ -1,10 +1,10 @@
 import React from 'react'
 import { useAppSelector } from '../hooks'
-import Grid from '@material-ui/core/Grid'
-import makeStyles from '@material-ui/core/styles/makeStyles'
-import Chip from '@material-ui/core/Chip'
-import Paper from '@material-ui/core/Paper'
-import { Typography } from '@material-ui/core'
+import Grid from '@mui/material/Grid'
+import makeStyles from '@mui/styles/makeStyles'
+import Chip from '@mui/material/Chip'
+import Paper from '@mui/material/Paper'
+import { Theme, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
@@ -12,7 +12,7 @@ import communityInfo from '../data/communityInfo.json'
 import waterQualities from '../data/waterQualities.json'
 import waterQualityCategories from '../data/waterQualityCategories.json'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   paper: {
     backgroundColor: theme.palette.background.default,
     padding: 10,

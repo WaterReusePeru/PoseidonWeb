@@ -1,15 +1,15 @@
-import { Tooltip, Typography } from '@material-ui/core'
-import Grid from '@material-ui/core/Grid'
-import TextField from '@material-ui/core/TextField'
+import { Tooltip, Typography } from '@mui/material'
+import Grid from '@mui/material/Grid'
+import TextField from '@mui/material/TextField'
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../hooks'
-import Autocomplete from '@material-ui/lab/Autocomplete'
+import Autocomplete from '@mui/material/Autocomplete'
 import { setEndUseQualityCategory, setEndUseQualityClass } from './caseSlice'
-import Chip from '@material-ui/core/Chip'
+import Chip from '@mui/material/Chip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 import { Bar } from './Bar'
-import { useTheme } from '@material-ui/core/styles'
+import { useTheme } from '@mui/material/styles'
 import SolutionsBox from './SolutionsBox'
 
 import { waterQualityCategories, waterQualities, WaterQuality, waterQualityFactors } from '../data/model'
@@ -50,7 +50,7 @@ export default function EndUse() {
             id="category"
             options={waterQualityCategories.filter((category) => category.input === false)}
             getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
-            getOptionSelected={(option, value) => option.name === value.name}
+            isOptionEqualToValue={(option, value) => option.name === value.name}
             onChange={(event, newValue) => dispatch(setEndUseQualityCategory(newValue.id))}
             disableClearable
             value={endUse.category ? waterQualityCategories[endUse.category] : undefined}
@@ -70,7 +70,7 @@ export default function EndUse() {
             id="quality"
             options={waterQualities.filter((q) => q.category === endUse.category)}
             getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
-            getOptionSelected={(option, value) => option.name === value.name}
+            isOptionEqualToValue={(option, value) => option.name === value.name}
             onChange={(event, newValue) => dispatch(setEndUseQualityClass(newValue.id))}
             disableClearable
             value={endUse.qualityClass ? waterQualities[endUse.qualityClass] : undefined}

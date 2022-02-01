@@ -1,7 +1,7 @@
 import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
-import { useTheme } from '@material-ui/core/styles'
-import { Paper } from '@material-ui/core'
+import { useTheme } from '@mui/material/styles'
+import { Paper } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 
 export const Bar = (props: { input?: any; output?: any; factor: string; average?: any; unit: string }) => {

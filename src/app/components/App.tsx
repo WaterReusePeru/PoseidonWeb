@@ -1,19 +1,19 @@
 import React from 'react'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import makeStyles from '@material-ui/core/styles/makeStyles'
-import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
-import MenuBookIcon from '@material-ui/icons/MenuBook'
-import AddBoxIcon from '@material-ui/icons/AddBox'
-import BarChartIcon from '@material-ui/icons/BarChart'
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import makeStyles from '@mui/styles/makeStyles'
+import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
+import MenuBookIcon from '@mui/icons-material/MenuBook'
+import AddBoxIcon from '@mui/icons-material/AddBox'
+import BarChartIcon from '@mui/icons-material/BarChart'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { Learn } from '../learn/Learn'
 import { Case } from '../case/Case'
 import { Results } from '../results/Results'
 import UserMenu from '../UserMenu'
 import { useTranslation } from 'react-i18next'
-import Grid from '@material-ui/core/Grid'
+import Grid from '@mui/material/Grid'
 import { useAppSelector } from '../hooks'
 import { PoseidonWebIcon } from '../images/PoseidonWebIcon'
 
@@ -31,6 +31,12 @@ const useStyles = makeStyles({
     flexGrow: 1,
   },
 })
+
+declare module '@mui/material/styles' {
+  interface Components {
+    [key: string]: any
+  }
+}
 
 export const App = () => {
   const classes = useStyles()

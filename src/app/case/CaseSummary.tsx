@@ -1,21 +1,21 @@
 import React from 'react'
 import { useAppSelector } from '../hooks'
 
-import Grid from '@material-ui/core/Grid'
-import { Typography } from '@material-ui/core'
+import Grid from '@mui/material/Grid'
+import { Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
 import communityInfo from '../data/communityInfo.json'
 import waterQualities from '../data/waterQualities.json'
 
-import PublicIcon from '@material-ui/icons/Public'
-import AttachMoneyIcon from '@material-ui/icons/AttachMoney'
-import ExitToAppIcon from '@material-ui/icons/ExitToApp'
-import AutorenewIcon from '@material-ui/icons/Autorenew'
-import BatteryFullIcon from '@material-ui/icons/BatteryFull'
-import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt'
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward'
+import PublicIcon from '@mui/icons-material/Public'
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney'
+import ExitToAppIcon from '@mui/icons-material/ExitToApp'
+import AutorenewIcon from '@mui/icons-material/Autorenew'
+import BatteryFullIcon from '@mui/icons-material/BatteryFull'
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 
 export const CaseSummary = (props: { step: any }) => {
   const { step } = props

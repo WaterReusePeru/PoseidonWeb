@@ -1,4 +1,5 @@
-import { makeStyles, withStyles } from '@material-ui/core/styles'
+import makeStyles from '@mui/styles/makeStyles'
+import withStyles from '@mui/styles/withStyles'
 
 import CommInfo from './CommInfo'
 import InputQuality from './InputQuality'
@@ -6,14 +7,14 @@ import EndUse from './EndUse'
 import Quantity from './Quantity'
 import { CaseSummary } from './CaseSummary'
 
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
-import Stepper from '@material-ui/core/Stepper'
-import Step from '@material-ui/core/Step'
-import StepLabel from '@material-ui/core/StepLabel'
-import StepConnector from '@material-ui/core/StepConnector'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
+import Grid from '@mui/material/Grid'
+import Paper from '@mui/material/Paper'
+import Stepper from '@mui/material/Stepper'
+import Step from '@mui/material/Step'
+import StepLabel from '@mui/material/StepLabel'
+import StepConnector from '@mui/material/StepConnector'
+import Button from '@mui/material/Button'
+import Typography from '@mui/material/Typography'
 
 import { useDispatch } from 'react-redux'
 
@@ -22,8 +23,9 @@ import { useAppSelector } from '../hooks'
 import { next, previous, reset } from './caseSlice'
 import { theme } from '../theme/theme'
 import { useTranslation } from 'react-i18next'
+import { Theme } from '@mui/material'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   toolbar: {
     display: 'grid',
     gridTemplateColumns: 'auto 1fr auto',
@@ -47,10 +49,11 @@ const useStyles = makeStyles((theme) => ({
   },
   root: {
     flexGrow: 1,
-    paddingTop: 60,
+    padding: theme.spacing(3),
+    paddingTop: 80,
   },
   button: {
-    marginRight: theme.spacing(1),
+    marginRight: theme.spacing(2),
   },
   instructions: {
     marginTop: theme.spacing(1),

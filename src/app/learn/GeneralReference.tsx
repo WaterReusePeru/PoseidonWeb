@@ -1,10 +1,10 @@
 import React from 'react'
-import makeStyles from '@material-ui/core/styles/makeStyles'
-import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
+import makeStyles from '@mui/styles/makeStyles'
+import Paper from '@mui/material/Paper'
+import Typography from '@mui/material/Typography'
 import { useTranslation } from 'react-i18next'
 import Calculations from '../images/Calculations.png'
-import Grid from '@material-ui/core/Grid'
+import Grid from '@mui/material/Grid'
 
 const useStyles = makeStyles((theme) => ({
   main: {

@@ -1,9 +1,9 @@
-import { makeStyles, createTheme } from '@material-ui/core/styles'
+import makeStyles from '@mui/styles/makeStyles'
 
-import Paper from '@material-ui/core/Paper'
-import { MuiThemeProvider } from '@material-ui/core/styles'
+import Paper from '@mui/material/Paper'
+import { ThemeProvider, Theme, StyledEngineProvider } from '@mui/material/styles'
 import MUIDataTable from 'mui-datatables'
-import { MUIDataTableOptions } from 'mui-datatables'
+import { options } from '../theme/tables'
 
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
@@ -14,10 +14,11 @@ import treatmentTrains from '../data/treatmentTrains.json'
 import unitProcesses from '../data/unitProcesses.json'
 import communityInfo from '../data/communityInfo.json'
 
-import Chip from '@material-ui/core/Chip'
-import Tooltip from '@material-ui/core/Tooltip'
+import Chip from '@mui/material/Chip'
+import Tooltip from '@mui/material/Tooltip'
+import { theme } from '../theme/theme'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   main: {
     display: 'grid',
     height: 'calc(100vh - 200px)',
@@ -26,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
     gridRowGap: 8,
     justifyItems: 'stretch',
     justifyContent: 'center',
-    paddingLeft: '10vw',
-    paddingRight: '10vw',
+    paddingLeft: '5vw',
+    paddingRight: '5vw',
     paddingTop: 110,
   },
   root: {
@@ -48,16 +49,6 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export const Results = () => {
-  const muiTheme = createTheme({
-    overrides: {
-      MUIDataTable: {
-        paper: {
-          boxShadow: 'none',
-        },
-      },
-    },
-  })
-
   const classes = useStyles()
 
   const { t } = useTranslation()
@@ -196,22 +187,15 @@ export const Results = () => {
 
   const data = solutionsState.slice(0, solutionsCount)
 
-  const options: MUIDataTableOptions = {
-    filter: true,
-    filterType: 'dropdown',
-    selectableRows: 'none',
-    rowsPerPage: 20,
-    print: false,
-    fixedHeader: true,
-  }
-
   return (
     <div className="App">
       <div className={classes.main}>
         <Paper elevation={0} style={{ padding: 10 }}>
-          <MuiThemeProvider theme={muiTheme}>
-            <MUIDataTable title={t('Results')} data={data} columns={columns} options={options} />
-          </MuiThemeProvider>
+          <StyledEngineProvider injectFirst>
+            <ThemeProvider theme={theme}>
+              <MUIDataTable title={t('Results')} data={data} columns={columns} options={options} />
+            </ThemeProvider>
+          </StyledEngineProvider>
         </Paper>
       </div>
     </div>

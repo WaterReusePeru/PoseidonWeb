@@ -4,6 +4,10 @@ This Poseidon – Web on-line application is an update of the already existing d
 
 The tool and all underlying data are open access and under continuous development. The underlying systemic approach of the tool makes it intuitive also for users with limited prior knowledge in the field to identify most adequate solutions based on a multi-criteria assessment. This should help to promote water reuse and spearhead initiates for more detailed feasibility and design commissioning for implementation of water reuse schemes.
 
+== Live Application
+
+https://waterreuseperu.github.io/PoseidonWeb/
+
 == Base Application & Libraries
 ** The base of the web application is built from an example by @netzwerg: https://github.com/netzwerg/react-you-do-you[react-you-do-you]
 ** The following libraries are used:
@@ -25,4 +29,3 @@ image::docs/Architecture.png[]
 This sitemap represents the way the web application is structured:
 
 image::docs/Sitemap.png[]
-
