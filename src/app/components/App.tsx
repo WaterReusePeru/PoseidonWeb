@@ -68,7 +68,7 @@ export const App = () => {
                 startIcon={<AddBoxIcon />}
                 color="inherit"
               >
-                {t('New Case')}
+                {t('Case')}
               </Button>
               <Button
                 aria-controls="simple-menu"

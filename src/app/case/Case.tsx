@@ -25,6 +25,8 @@ import { theme } from '../theme/theme'
 import { useTranslation } from 'react-i18next'
 import { Theme } from '@mui/material'
 
+import { Link } from 'react-router-dom'
+
 const useStyles = makeStyles((theme: Theme) => ({
   toolbar: {
     display: 'grid',
@@ -146,15 +148,27 @@ export const Case = () => {
                     <Button disabled={count === 0} onClick={() => dispatch(previous())} className={classes.button}>
                       {t('Back')}
                     </Button>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      onClick={() => dispatch(next())}
-                      className={classes.button}
-                      disabled={completedSteps.includes(count) ? false : true}
-                    >
-                      {count === steps.length - 1 ? t('Finish') : t('Next')}
-                    </Button>
+                    {count === steps.length - 1 ? (
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        component={Link}
+                        className={classes.button}
+                        to={`${process.env.PUBLIC_URL}/results`}
+                      >
+                        {t('Finish')}
+                      </Button>
+                    ) : (
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => dispatch(next())}
+                        className={classes.button}
+                        disabled={completedSteps.includes(count) ? false : true}
+                      >
+                        {t('Next')}
+                      </Button>
+                    )}
                   </div>
                 </Grid>
               )}
