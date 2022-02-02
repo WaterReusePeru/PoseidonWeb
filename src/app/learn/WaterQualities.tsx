@@ -75,15 +75,20 @@ export default function UnitProcesses() {
       options: {
         filter: false,
         customBodyRenderLite: (dataIndex: number) => {
-          const columnTitles = [t('Turbidity'), 'TSS', 'BOD', 'COD', 'FC', 'TC']
-
           return (
             <div className={classes.chipContainer}>
               {waterQualityFactors.map((f, index) => {
                 const key = f.name as keyof WaterQuality
 
                 return (
-                  <Tooltip key={index} title={columnTitles[index]}>
+                  <Tooltip
+                    key={index}
+                    title={
+                      lang === 'en'
+                        ? waterQualityFactors[index].nameLong + ' [' + waterQualityFactors[index].unit + ']'
+                        : waterQualityFactors[index].nameLongEs + ' [' + waterQualityFactors[index].unit + ']'
+                    }
+                  >
                     <Chip label={data[dataIndex][key] !== null ? data[dataIndex][key] : '-'} key={index} size="small" />
                   </Tooltip>
                 )

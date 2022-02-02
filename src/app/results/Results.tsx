@@ -117,7 +117,7 @@ export const Results = () => {
 
     {
       name: 'rating',
-      label: t('Rating [1-10]'),
+      label: t('Rating [0-3]'),
       options: {
         filter: true,
         customBodyRenderLite: (dataIndex: number) => {
