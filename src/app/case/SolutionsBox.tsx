@@ -2,10 +2,9 @@ import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../hooks'
 
 import Grid from '@mui/material/Grid'
-import makeStyles from '@mui/styles/makeStyles'
 import Chip from '@mui/material/Chip'
 import Paper from '@mui/material/Paper'
-import { Theme, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import Switch from '@mui/material/Switch'
 
 import { useTranslation } from 'react-i18next'
@@ -61,7 +60,7 @@ export default function SolutionsBox() {
 
         {!caseState.solution.noneNeeded && !caseState.solution.noneAvailable ? (
           <Grid item container xs={12} spacing={1} alignItems="center">
-            {caseState.solutions[0].capex !== NaN ? (
+            {!isNaN(caseState.solutions[0].capex!) ? (
               <Grid item container alignItems="center" spacing={1} xs={12} justifyContent="space-between">
                 <Grid item>
                   <Typography>{t('Sort by cost')}</Typography>
