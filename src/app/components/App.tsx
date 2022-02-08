@@ -5,7 +5,7 @@ import makeStyles from '@mui/styles/makeStyles'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import MenuBookIcon from '@mui/icons-material/MenuBook'
-import AddBoxIcon from '@mui/icons-material/AddBox'
+import AddCircle from '@material-ui/icons/AddCircle'
 import BarChartIcon from '@mui/icons-material/BarChart'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { Learn } from '../learn/Learn'
@@ -65,7 +65,7 @@ export const App = () => {
                 aria-haspopup="true"
                 component={Link}
                 to={`${process.env.PUBLIC_URL}/case`}
-                startIcon={<AddBoxIcon />}
+                startIcon={<AddCircle />}
                 color="inherit"
               >
                 {t('Case')}

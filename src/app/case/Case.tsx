@@ -6,7 +6,6 @@ import InputQuality from './InputQuality'
 import EndUse from './EndUse'
 import Quantity from './Quantity'
 import { CaseSummary } from './CaseSummary'
-
 import Grid from '@mui/material/Grid'
 import Paper from '@mui/material/Paper'
 import Stepper from '@mui/material/Stepper'
@@ -15,16 +14,12 @@ import StepLabel from '@mui/material/StepLabel'
 import StepConnector from '@mui/material/StepConnector'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
-
 import { useDispatch } from 'react-redux'
-
 import { useAppSelector } from '../hooks'
-
 import { next, previous, reset } from './caseSlice'
 import { theme } from '../theme/theme'
 import { useTranslation } from 'react-i18next'
 import { Theme } from '@mui/material'
-
 import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme: Theme) => ({

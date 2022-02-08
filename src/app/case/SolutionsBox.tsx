@@ -20,16 +20,7 @@ import { setSolutionSortByCost } from '../case/caseSlice'
 
 import i18next from 'i18next'
 
-const useStyles = makeStyles((theme: Theme) => ({
-  paper: {
-    backgroundColor: theme.palette.background.default,
-    padding: 10,
-  },
-}))
-
 export default function SolutionsBox() {
-  const classes = useStyles()
-
   const caseState = useAppSelector((state) => state.case)
 
   const dispatch = useDispatch()
@@ -37,20 +28,23 @@ export default function SolutionsBox() {
   const { t } = useTranslation()
   const lang = i18next.language
 
-  const commInfo = caseState.commInfo
+  const commState = caseState.commInfo
+  const commInfo = communityInfo[caseState.commInfo.countryID!]
   const inputQuality = waterQualities[caseState.inputQuality.qualityClass!]
   const endUseQuality = waterQualities[caseState.endUse.qualityClass!]
   const amount = caseState.quantity.amount
   const sortByCost = caseState.solution.sortByCost
 
-  CalculateSolutions(inputQuality, endUseQuality, amount!, sortByCost) //TODO: !
+  CalculateSolutions(inputQuality, endUseQuality, amount!, sortByCost, commInfo) //TODO: !
 
   const handleChangePriority = () => {
     dispatch(setSolutionSortByCost(!sortByCost))
   }
 
+  console.log(caseState.solutions[0])
+
   return (
-    <Paper className={classes.paper} elevation={0}>
+    <Paper elevation={0}>
       <Grid container spacing={1}>
         <Grid item xs={12}>
           <Typography variant="h6">{t('Solutions')}</Typography>
@@ -67,7 +61,7 @@ export default function SolutionsBox() {
 
         {!caseState.solution.noneNeeded && !caseState.solution.noneAvailable ? (
           <Grid item container xs={12} spacing={1} alignItems="center">
-            {caseState.solutions[0].capex !== 0 ? (
+            {caseState.solutions[0].capex !== NaN ? (
               <Grid item container alignItems="center" spacing={1} xs={12} justifyContent="space-between">
                 <Grid item>
                   <Typography>{t('Sort by cost')}</Typography>
@@ -103,25 +97,25 @@ export default function SolutionsBox() {
                   <Typography>{t('Rating')}:</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography>{Math.round(solution.rating! * 1000) / 1000}</Typography> {/* TODO: ! */}
+                  <Typography>{Math.round(solution.rating! * 100) / 100}</Typography> {/* TODO: ! */}
                 </Grid>
-                {!isNaN(solution.annualizedCapexPerCubic!) ? ( //TODO: !
+                {!isNaN(solution.capexPerCubic!) ? ( //TODO: !
                   <>
                     <Grid item xs={6}>
-                      <Typography>{t('Yearly Capital Expenditures')}:</Typography>
+                      <Typography>{t('Treatment Cost')}:</Typography>
                     </Grid>
                     <Grid item xs={6}>
                       <Typography>
-                        {commInfo.currency === 0 ? (
-                          <>{Math.round(solution.annualizedCapexPerCubic! * 1000).toLocaleString('de-CH')} $/m&sup3;</> //TODO: !
+                        {commState.currency === 0 ? (
+                          <>{(Math.round(solution.capexPerCubic! * 10000) / 10).toLocaleString('de-CH')} $/m&sup3;</> //TODO: !
                         ) : (
                           <>
                             {(
-                              communityInfo[commInfo.countryID].exchangeToUSD *
-                              Math.round(solution.annualizedCapexPerCubic! * 1000)
+                              communityInfo[commState.countryID].exchangeToUSD *
+                              (Math.round(solution.capexPerCubic! * 10000) / 10)
                             ) //TODO: !
                               .toLocaleString('de-CH')}{' '}
-                            {communityInfo[commInfo.countryID].currency}/m&sup3;
+                            {communityInfo[commState.countryID].currency}/m&sup3;
                           </>
                         )}
                       </Typography>

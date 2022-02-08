@@ -33,7 +33,15 @@ type CaseState = {
     rating?: number
     capex?: number
     annualizedCapex?: number
-    annualizedCapexPerCubic?: number
+    capexPerCubic?: number
+    landRequirements?: number
+    annualizedLandCost?: number
+    energyRequirements?: number
+    annualizedEnergyCost?: number
+    laborRequirements?: number
+    annualizedLaborCost?: number
+    otherOM?: number
+    annualizedOMCost: number
   }[]
 }
 
@@ -55,7 +63,7 @@ const initialState: CaseState = {
     rating: undefined,
     capex: undefined,
     annualizedCapex: undefined,
-    annualizedCapexPerCubic: undefined,
+    capexPerCubic: undefined,
   }),
 }
 
@@ -143,7 +151,15 @@ export const caseSlice = createSlice({
         state.solutions[index].rating = treatment.rating
         state.solutions[index].capex = treatment.capex
         state.solutions[index].annualizedCapex = treatment.annualizedCapex
-        state.solutions[index].annualizedCapexPerCubic = treatment.annualizedCapexPerCubic
+        state.solutions[index].capexPerCubic = treatment.capexPerCubic
+        state.solutions[index].landRequirements = treatment.landRequirements
+        state.solutions[index].annualizedLandCost = treatment.annualizedLandCost
+        state.solutions[index].energyRequirements = treatment.energyRequirements
+        state.solutions[index].annualizedEnergyCost = treatment.annualizedEnergyCost
+        state.solutions[index].laborRequirements = treatment.laborRequirements
+        state.solutions[index].annualizedLaborCost = treatment.annualizedLaborCost
+        state.solutions[index].otherOM = treatment.otherOM
+        state.solutions[index].annualizedOMCost = treatment.annualizedOMCost
       })
     },
     setSolutionSortByCost: (state, action) => {

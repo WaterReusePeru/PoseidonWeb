@@ -59,6 +59,17 @@ export const Results = () => {
   const solutionsCount = useAppSelector((state) => state.case.solution.count)
   const commInfo = useAppSelector((state) => state.case.commInfo)
 
+  function showCost(v: number) {
+    return commInfo.currency === 0 ? (
+      <>{Math.round(v * 1000).toLocaleString('de-CH')} $</>
+    ) : (
+      <>
+        {(communityInfo[commInfo.countryID].exchangeToUSD * Math.round(v * 1000)).toLocaleString('de-CH')}{' '}
+        {communityInfo[commInfo.countryID].currency}
+      </>
+    )
+  }
+
   const columns = [
     {
       name: 'Ranking',
@@ -121,10 +132,81 @@ export const Results = () => {
       options: {
         filter: true,
         customBodyRenderLite: (dataIndex: number) => {
-          return Math.round(data[dataIndex].rating! * 1000) / 1000
+          return Math.round(data[dataIndex].rating! * 100) / 100
         },
       },
     },
+    {
+      name: 'landRequirements',
+      label: t('Land Requirements'),
+      options: {
+        filter: true,
+        customBodyRenderLite: (dataIndex: number) => {
+          return Math.round(data[dataIndex].landRequirements! * 100) / 100 + ' ha'
+        },
+      },
+    },
+    {
+      name: 'annualizedLandCost',
+      label: t('Annualized Land Cost'),
+      options: {
+        filter: true,
+        customBodyRenderLite: (dataIndex: number) => {
+          return showCost(data[dataIndex].annualizedLandCost!)
+        },
+      },
+    },
+    {
+      name: 'energyRequirements',
+      label: t('Energy Requirements'),
+      options: {
+        filter: true,
+        customBodyRenderLite: (dataIndex: number) => {
+          return Math.round(data[dataIndex].energyRequirements! * 100) / 100 + ' kWh/y'
+        },
+      },
+    },
+    {
+      name: 'annualizedEnergyCost',
+      label: t('Annualized Energy Cost'),
+      options: {
+        filter: true,
+        customBodyRenderLite: (dataIndex: number) => {
+          return showCost(data[dataIndex].annualizedEnergyCost!)
+        },
+      },
+    },
+    {
+      name: 'laborRequirements',
+      label: t('Labor Requirements'),
+      options: {
+        filter: true,
+        customBodyRenderLite: (dataIndex: number) => {
+          return Math.round(data[dataIndex].laborRequirements! * 100) / 100 + ' person-hour/month'
+        },
+      },
+    },
+    {
+      name: 'annualizedLaborCost',
+      label: t('Annualized Labor Cost'),
+      options: {
+        filter: true,
+        customBodyRenderLite: (dataIndex: number) => {
+          return showCost(data[dataIndex].annualizedLaborCost!)
+        },
+      },
+    },
+    {
+      name: 'otherOM',
+      label: t('Other Operations & Maintenance Cost'),
+      options: {
+        filter: true,
+        customBodyRenderLite: (dataIndex: number) => {
+          return showCost(data[dataIndex].otherOM!)
+        },
+      },
+    },
+
     {
       name: 'capex',
       label: t('Total capital expenditure (CAPEX)'),
@@ -164,18 +246,18 @@ export const Results = () => {
       },
     },
     {
-      name: 'annualizedCapexPerCubic',
-      label: t('Annualized CAPEX per Cubic'),
+      name: 'capexPerCubic',
+      label: t('CAPEX per Cubic'),
       options: {
         filter: true,
         customBodyRenderLite: (dataIndex: number) => {
           return commInfo.currency === 0 ? (
-            <>{Math.round(data[dataIndex].annualizedCapexPerCubic! * 1000).toLocaleString('de-CH')} $</>
+            <>{(Math.round(data[dataIndex].capexPerCubic! * 100000) / 100).toLocaleString('de-CH')} $</>
           ) : (
             <>
               {(
-                communityInfo[commInfo.countryID].exchangeToUSD *
-                Math.round(data[dataIndex].annualizedCapexPerCubic! * 1000)
+                Math.round(data[dataIndex].capexPerCubic! * 100000 * communityInfo[commInfo.countryID].exchangeToUSD) /
+                100
               ).toLocaleString('de-CH')}{' '}
               {communityInfo[commInfo.countryID].currency}
             </>

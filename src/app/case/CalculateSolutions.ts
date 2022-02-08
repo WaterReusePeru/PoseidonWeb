@@ -1,10 +1,16 @@
 import { useDispatch } from 'react-redux'
 import { setSolutionCount, setSolutionNoneAvailable, setSolutionNoneNeeded, setSolutions } from './caseSlice'
-import { WaterQuality, OutputQuality, QualityFactor } from '../data/model'
+import { WaterQuality, OutputQuality, QualityFactor, CommunityInfo } from '../data/model'
 
 import { findSuitableTreatments } from './findSuitableTreatments'
 
-export default function CalculateSolutions(input: WaterQuality, enduse: WaterQuality, amount: number, byCost: boolean) {
+export default function CalculateSolutions(
+  input: WaterQuality,
+  enduse: WaterQuality,
+  amount: number,
+  byCost: boolean,
+  commInfo: CommunityInfo
+) {
   const dispatch = useDispatch()
 
   const qualityFactors = ['turbidity', 'tss', 'bod', 'cod', 'fc', 'tc']
@@ -31,7 +37,7 @@ export default function CalculateSolutions(input: WaterQuality, enduse: WaterQua
     return topTreatments
   }
 
-  const topTreatments = findTopTreatments(findSuitableTreatments(input, enduse, treatmentFactors, amount))
+  const topTreatments = findTopTreatments(findSuitableTreatments(input, enduse, treatmentFactors, amount, commInfo))
 
   if (topTreatments.length === 0) {
     dispatch(setSolutionNoneAvailable(true))

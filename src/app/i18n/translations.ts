@@ -88,9 +88,9 @@ export const resources = {
 
       Ranking: 'Clasificación',
       'Annualized CAPEX': 'CAPEX anualizado',
-      'Annualized CAPEX per Cubic': 'CAPEX anualizado por cubo',
+      'CAPEX per Cubic': 'CAPEX por cubo',
       'Total capital expenditure (CAPEX)': 'Total de gastos de capital (CAPEX)',
-      'Yearly Capital Expenditures': 'Gastos de capital anuales',
+      'Treatment Cost': 'Coste del tratamiento',
       'Sort by cost': 'Ordenar por coste',
 
       'Sorry, no matching records found': 'Lo sentimos, no se han encontrado registros coincidentes',

@@ -1,4 +1,4 @@
-import { UnitProcess, unitProcesses } from '../data/model'
+import { CommunityInfo, UnitProcess, unitProcesses } from '../data/model'
 import { treatmentTrains } from '../data/model'
 import { WaterQuality } from '../data/model'
 import { OutputQuality } from '../data/model'
@@ -18,7 +18,8 @@ export function findSuitableTreatments(
   input: WaterQuality,
   endUse: WaterQuality,
   treatmentFactors: QualityFactor[],
-  amount: number
+  amount: number,
+  commInfo: CommunityInfo
 ) {
   let outputQualities: OutputQuality[] = []
 
@@ -53,6 +54,10 @@ export function findSuitableTreatments(
     })
 
     let annualizedCapex = 0
+    let annualizedLandCost = 0
+    let annualizedEnergyCost = 0
+    let annualizedLaborCost = 0
+    let annualizedOMCost = 0
 
     treatmentTrain.unit_processes!.forEach((unitProcess) => {
       //TODO: !
@@ -76,6 +81,23 @@ export function findSuitableTreatments(
           if (costFactor === 'construction_cost') {
             annualizedCapex += (outputCostStep * 1.39 * 1.27) / unitProcesses[unitProcess]['useful_life']
           }
+
+          if (costFactor === 'land_requirements') {
+            annualizedLandCost += (outputCostStep * commInfo.landCost) / unitProcesses[unitProcess]['useful_life']
+          }
+
+          if (costFactor === 'energy_requirements') {
+            annualizedEnergyCost +=
+              (outputCostStep * commInfo.electricityCost) / unitProcesses[unitProcess]['useful_life']
+          }
+
+          if (costFactor === 'labor_requirements') {
+            annualizedLaborCost += (outputCostStep * commInfo.personalCost) / unitProcesses[unitProcess]['useful_life']
+          }
+
+          if (costFactor === 'other_om') {
+            annualizedOMCost += (outputCostStep * commInfo.personalCost) / unitProcesses[unitProcess]['useful_life']
+          }
         })
       }
     })
@@ -91,15 +113,23 @@ export function findSuitableTreatments(
         cod: outputQualityPerFactor['cod'],
         fc: outputQualityPerFactor['fc'],
         tc: outputQualityPerFactor['tc'],
-        constructionCost: outputCostPerFactor['construction_cost'],
-        landRequirements: outputCostPerFactor['land_requirements'],
-        energyRequirements: outputCostPerFactor['energy_requirements'],
-        laborRequirements: outputCostPerFactor['labor_requirements'],
-        otherOM: outputCostPerFactor['other_om'],
 
+        constructionCost: outputCostPerFactor['construction_cost'],
         capex: outputCostPerFactor['construction_cost'] * 1.39 * 1.27,
         annualizedCapex: annualizedCapex,
-        annualizedCapexPerCubic: annualizedCapex / amount,
+        capexPerCubic: annualizedCapex / (amount * 365),
+
+        landRequirements: outputCostPerFactor['land_requirements'],
+        annualizedLandCost: annualizedLandCost,
+
+        energyRequirements: outputCostPerFactor['energy_requirements'],
+        annualizedEnergyCost: annualizedEnergyCost,
+
+        laborRequirements: outputCostPerFactor['labor_requirements'],
+        annualizedLaborCost: annualizedLaborCost,
+
+        otherOM: outputCostPerFactor['other_om'],
+        annualizedOMCost: annualizedOMCost,
 
         rating: rating / treatmentTrain.unit_processes!.length / evaluationCriteria.length, //TODO: !
       })

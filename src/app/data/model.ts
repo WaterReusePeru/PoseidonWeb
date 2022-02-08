@@ -6,7 +6,7 @@ import treatmentTrainsJSON from './treatmentTrains.json'
 import communityInfosJSON from './communityInfo.json'
 import evaluationCriteriaJSON from './evaluationCriteria.json'
 
-export interface communityInfo {
+export interface CommunityInfo {
   id: number
   name: string
   nameEs: string
@@ -18,7 +18,7 @@ export interface communityInfo {
   discountRate: number
 }
 
-export const communityInfos: ReadonlyArray<communityInfo> = communityInfosJSON as ReadonlyArray<communityInfo>
+export const communityInfos: ReadonlyArray<CommunityInfo> = communityInfosJSON as ReadonlyArray<CommunityInfo>
 
 export interface UnitProcess {
   id: number
@@ -150,12 +150,16 @@ export interface OutputQuality {
   tc: number
   constructionCost: number
   landRequirements: number
+  annualizedLandCost: number
   energyRequirements: number
+  annualizedEnergyCost: number
   laborRequirements: number
+  annualizedLaborCost: number
   otherOM: number
+  annualizedOMCost: number
   capex: number
   annualizedCapex: number
-  annualizedCapexPerCubic: number
+  capexPerCubic: number
   rating: number
 }
 
