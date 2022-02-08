@@ -15,7 +15,7 @@ import { waterQualities } from '../data/model'
 import Tooltip from '@mui/material/Tooltip'
 import CalculateSolutions from '../case/CalculateSolutions'
 
-import { setSolutionSortByCost } from '../case/caseSlice'
+import { setSolutionsortByRating } from '../case/caseSlice'
 
 import i18next from 'i18next'
 
@@ -32,12 +32,12 @@ export default function SolutionsBox() {
   const inputQuality = waterQualities[caseState.inputQuality.qualityClass!]
   const endUseQuality = waterQualities[caseState.endUse.qualityClass!]
   const amount = caseState.quantity.amount
-  const sortByCost = caseState.solution.sortByCost
+  const sortByRating = caseState.solution.sortByRating
 
-  CalculateSolutions(inputQuality, endUseQuality, amount!, sortByCost, commInfo) //TODO: !
+  CalculateSolutions(inputQuality, endUseQuality, amount!, sortByRating, commInfo) //TODO: !
 
   const handleChangePriority = () => {
-    dispatch(setSolutionSortByCost(!sortByCost))
+    dispatch(setSolutionsortByRating(!sortByRating))
   }
 
   console.log(caseState.solutions[0])
@@ -63,10 +63,10 @@ export default function SolutionsBox() {
             {!isNaN(caseState.solutions[0].capex!) ? (
               <Grid item container alignItems="center" spacing={1} xs={12} justifyContent="space-between">
                 <Grid item>
-                  <Typography>{t('Sort by cost')}</Typography>
+                  <Typography>{t('Sort by rating')}</Typography>
                 </Grid>
                 <Grid item>
-                  <Switch color="primary" checked={sortByCost} onChange={(event) => handleChangePriority()} />
+                  <Switch color="primary" checked={sortByRating} onChange={(event) => handleChangePriority()} />
                 </Grid>
               </Grid>
             ) : null}

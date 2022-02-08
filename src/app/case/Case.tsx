@@ -16,11 +16,11 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../hooks'
-import { next, previous, reset } from './caseSlice'
+import { next, previous, reset, setStep } from './caseSlice'
 import { theme } from '../theme/theme'
 import { useTranslation } from 'react-i18next'
-import { Theme } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { Link, Theme } from '@mui/material'
+import { Link as ReactLink } from 'react-router-dom'
 
 const useStyles = makeStyles((theme: Theme) => ({
   toolbar: {
@@ -116,7 +116,18 @@ export const Case = () => {
             const labelProps = {}
             return (
               <Step key={label} {...stepProps} style={{ alignSelf: 'flex-start' }}>
-                <StepLabel {...labelProps}>{label}</StepLabel>
+                <StepLabel {...labelProps}>
+                  <Link
+                    component="button"
+                    variant="caption"
+                    underline="hover"
+                    color="inherit"
+                    disabled={completedSteps.includes(index - 1) || index === 0 ? false : true}
+                    onClick={() => dispatch(setStep(index))}
+                  >
+                    {label}
+                  </Link>
+                </StepLabel>
                 <CaseSummary step={index} />
               </Step>
             )
@@ -147,7 +158,7 @@ export const Case = () => {
                       <Button
                         variant="contained"
                         color="primary"
-                        component={Link}
+                        component={ReactLink}
                         className={classes.button}
                         to={`${process.env.PUBLIC_URL}/results`}
                       >

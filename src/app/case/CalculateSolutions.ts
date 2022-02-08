@@ -8,7 +8,7 @@ export default function CalculateSolutions(
   input: WaterQuality,
   enduse: WaterQuality,
   amount: number,
-  byCost: boolean,
+  byRating: boolean,
   commInfo: CommunityInfo
 ) {
   const dispatch = useDispatch()
@@ -28,10 +28,10 @@ export default function CalculateSolutions(
   function findTopTreatments(outputQualities: OutputQuality[]) {
     let topTreatments
 
-    if (byCost) {
-      topTreatments = outputQualities.sort((a, b) => a.annualizedCapex - b.annualizedCapex)
-    } else {
+    if (byRating) {
       topTreatments = outputQualities.sort((a, b) => b.rating - a.rating)
+    } else {
+      topTreatments = outputQualities.sort((a, b) => a.annualizedCapex - b.annualizedCapex)
     }
 
     return topTreatments

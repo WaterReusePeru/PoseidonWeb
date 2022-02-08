@@ -26,7 +26,7 @@ type CaseState = {
     noneNeeded: boolean
     count: number
     noneAvailable: boolean
-    sortByCost: boolean
+    sortByRating: boolean
   }
   solutions: {
     treatmentTrain?: number
@@ -55,7 +55,7 @@ const initialState: CaseState = {
   solution: {
     noneNeeded: true,
     noneAvailable: false,
-    sortByCost: false,
+    sortByRating: false,
     count: 0,
   },
   solutions: Array(treatmentTrains.length).fill({
@@ -162,8 +162,8 @@ export const caseSlice = createSlice({
         state.solutions[index].annualizedOMCost = treatment.annualizedOMCost
       })
     },
-    setSolutionSortByCost: (state, action) => {
-      state.solution.sortByCost = action.payload
+    setSolutionsortByRating: (state, action) => {
+      state.solution.sortByRating = action.payload
     },
   },
 })
@@ -188,7 +188,7 @@ export const {
   setSolutionNoneAvailable,
   setSolutionCount,
   setSolutions,
-  setSolutionSortByCost,
+  setSolutionsortByRating,
 } = caseSlice.actions
 
 export const selectCase = (state: RootState) => state.case

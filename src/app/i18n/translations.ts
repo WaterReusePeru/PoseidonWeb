@@ -71,7 +71,7 @@ export const resources = {
       'Based on your input, theres no possible solution': 'Según su aportación, no hay solución posible',
       'Based on your input, the following treatment trains are best suited for the case.':
         'Según sus aportaciónes, los siguientes trenes de tratamiento son los más adecuados para el caso.',
-      Rating: 'Valoración',
+      Rating: 'Clasificación',
       'Treatment Train': 'Trene de tratamiento',
       Cost: 'Coste',
 
@@ -91,7 +91,7 @@ export const resources = {
       'CAPEX per Cubic': 'CAPEX por cubo',
       'Total capital expenditure (CAPEX)': 'Total de gastos de capital (CAPEX)',
       'Treatment Cost': 'Coste del tratamiento',
-      'Sort by cost': 'Ordenar por coste',
+      'Sort by rating': 'Ordenar por clasificación',
 
       'Sorry, no matching records found': 'Lo sentimos, no se han encontrado registros coincidentes',
       Sort: 'Ordenar',
