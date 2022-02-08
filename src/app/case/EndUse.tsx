@@ -8,19 +8,15 @@ import { setEndUseQualityCategory, setEndUseQualityClass } from './caseSlice'
 import Chip from '@mui/material/Chip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
-import { Bar } from './Bar'
-import { useTheme } from '@mui/material/styles'
 import SolutionsBox from './SolutionsBox'
+import QualityCompare from './QualityCompare'
 
-import { waterQualityCategories, waterQualities, WaterQuality, waterQualityFactors } from '../data/model'
+import { waterQualityCategories, waterQualities } from '../data/model'
 
 export default function EndUse() {
   const endUse = useAppSelector((state) => state.case.endUse)
-  const inputQuality = useAppSelector((state) => state.case.inputQuality)
 
   const dispatch = useDispatch()
-
-  const theme = useTheme()
 
   const { t } = useTranslation()
   const lang = i18next.language
@@ -84,95 +80,7 @@ export default function EndUse() {
           </Tooltip>
         </Grid>
 
-        <Grid item container xs={12} justifyContent="space-evenly" alignItems="center">
-          {endUse.qualityClass !== undefined
-            ? waterQualityFactors.map((f, index) => {
-                const key = f.name as keyof WaterQuality
-
-                return (
-                  <div key={index} style={{ width: 'calc(1/6*80%' }}>
-                    <Bar
-                      factor={f.name}
-                      unit={f.unit}
-                      input={
-                        inputQuality.qualityClass === undefined
-                          ? null
-                          : waterQualities[inputQuality.qualityClass][key] < 0
-                          ? null
-                          : waterQualities[inputQuality.qualityClass][key]
-                      }
-                      output={
-                        endUse.qualityClass === undefined
-                          ? null
-                          : waterQualities[endUse.qualityClass][key] < 0
-                          ? null
-                          : waterQualities[endUse.qualityClass][key]
-                      }
-                    />
-                  </div>
-                )
-              })
-            : waterQualityFactors.map((f, index) => {
-                const key = f.name as keyof WaterQuality
-
-                return (
-                  <div key={index} style={{ width: 'calc(1/6*80%' }}>
-                    <Bar
-                      factor={f.name}
-                      unit={f.unit}
-                      input={
-                        inputQuality.qualityClass === undefined
-                          ? null
-                          : waterQualities[inputQuality.qualityClass][key] < 0
-                          ? null
-                          : waterQualities[inputQuality.qualityClass][key]
-                      }
-                    />
-                  </div>
-                )
-              })}
-        </Grid>
-
-        <Grid item container xs={12} justifyContent="space-evenly" alignItems="flex-start">
-          <Grid item container xs={3} direction="column" alignItems="center" justifyContent="flex-start">
-            <Grid item>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                <g>
-                  <rect width="20" height="20" fill={theme.palette.primary.main}></rect>
-                </g>
-              </svg>
-            </Grid>
-            <Grid item>
-              <Typography variant="caption">{t('Input')}</Typography>
-            </Grid>
-          </Grid>
-
-          <Grid item container xs={3} direction="column" alignItems="center" justifyContent="flex-start">
-            <Grid item>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                <g>
-                  <rect width="20" height="20" fill={theme.palette.error.main}></rect>
-                </g>
-              </svg>
-            </Grid>
-            <Grid item>
-              <Typography variant="caption">{t('End use, needs treatment')}</Typography>
-            </Grid>
-          </Grid>
-
-          <Grid item container xs={3} direction="column" alignItems="center" justifyContent="flex-start">
-            <Grid item>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                <g>
-                  <rect width="20" height="20" fill={theme.palette.success.main}></rect>
-                </g>
-              </svg>
-            </Grid>
-            <Grid item>
-              <Typography variant="caption">{t('End use, no treatment needed')}</Typography>
-            </Grid>
-          </Grid>
-        </Grid>
+        <QualityCompare />
       </Grid>
       {endUse.qualityClass !== undefined ? (
         <Grid item container xs={4}>
