@@ -33,11 +33,11 @@ export const resources = {
       Reference: 'Referencia',
 
       'Community Information': 'Información Comunitaria',
-      'Input Quality': 'Introducir Calidad',
+      Input: 'Introducir',
       'End Use': 'Uso Final',
       Quantity: 'Cantidad',
       Personalize: 'Personalizar',
-      Finish: 'Terminar',
+      'See Results': 'Ver Resultados',
       Next: 'Siguiente',
       Back: 'Volver',
       'Case Overview': 'Resumen del Caso',

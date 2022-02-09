@@ -29,12 +29,12 @@ export default function SolutionsBox() {
 
   const commState = caseState.commInfo
   const commInfo = communityInfo[caseState.commInfo.countryID!]
-  const inputQuality = waterQualities[caseState.inputQuality.qualityClass!]
+  const inputQuality = waterQualities[caseState.input.qualityClass!]
   const endUseQuality = waterQualities[caseState.endUse.qualityClass!]
-  const amount = caseState.quantity.amount
+  const quantity = caseState.input.quantity
   const sortByRating = caseState.solution.sortByRating
 
-  CalculateSolutions(inputQuality, endUseQuality, amount!, sortByRating, commInfo) //TODO: !
+  CalculateSolutions(inputQuality, endUseQuality, quantity!, sortByRating, commInfo) //TODO: !
 
   const handleChangePriority = () => {
     dispatch(setSolutionsortByRating(!sortByRating))
@@ -44,10 +44,10 @@ export default function SolutionsBox() {
 
   return (
     <Paper elevation={0}>
-      <Grid container spacing={1}>
+      <Grid container spacing={0}>
         <Grid item xs={12}>
           <Typography variant="h6">{t('Solutions')}</Typography>
-          <Typography variant="caption">
+          <Typography variant="body2">
             {caseState.solution.noneNeeded
               ? t(
                   'Based on your input, no treatment is needed because the input quality is better than the end use quality.'
@@ -63,7 +63,7 @@ export default function SolutionsBox() {
             {!isNaN(caseState.solutions[0].capex!) ? (
               <Grid item container alignItems="center" spacing={1} xs={12} justifyContent="space-between">
                 <Grid item>
-                  <Typography>{t('Sort by rating')}</Typography>
+                  <Typography variant="body2">{t('Sort by rating')}</Typography>
                 </Grid>
                 <Grid item>
                   <Switch color="primary" checked={sortByRating} onChange={(event) => handleChangePriority()} />
@@ -87,24 +87,25 @@ export default function SolutionsBox() {
                   </Grid>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography>{t('Case Study')}:</Typography>
+                  <Typography variant="body2">{t('Case Study')}:</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography>{treatmentTrains[solution.treatmentTrain!].title}</Typography> {/* TODO: ! */}
+                  <Typography variant="body2">{treatmentTrains[solution.treatmentTrain!].title}</Typography>{' '}
+                  {/* TODO: ! */}
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography>{t('Rating')}:</Typography>
+                  <Typography variant="body2">{t('Rating')}:</Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography>{Math.round(solution.rating! * 100) / 100}</Typography> {/* TODO: ! */}
+                  <Typography variant="body2">{Math.round(solution.rating! * 100) / 100}</Typography> {/* TODO: ! */}
                 </Grid>
                 {!isNaN(solution.capexPerCubic!) ? ( //TODO: !
                   <>
                     <Grid item xs={6}>
-                      <Typography>{t('Treatment Cost')}:</Typography>
+                      <Typography variant="body2">{t('Treatment Cost')}:</Typography>
                     </Grid>
                     <Grid item xs={6}>
-                      <Typography>
+                      <Typography variant="body2">
                         {commState.currency === 0 ? (
                           <>{(Math.round(solution.capexPerCubic! * 10000) / 10).toLocaleString('de-CH')} $/m&sup3;</> //TODO: !
                         ) : (
@@ -124,7 +125,7 @@ export default function SolutionsBox() {
                   <div />
                 )}
                 <Grid item xs={6}>
-                  <Typography>{t('Unit Processes')}:</Typography>
+                  <Typography variant="body2">{t('Unit Processes')}:</Typography>
                 </Grid>
                 <Grid item xs={6}>
                   {treatmentTrains[solution.treatmentTrain!].unit_processes.map(

@@ -1,11 +1,10 @@
-import { Tooltip, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../hooks'
 import Autocomplete from '@mui/material/Autocomplete'
 import { setEndUseQualityCategory, setEndUseQualityClass } from './caseSlice'
-import Chip from '@mui/material/Chip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 import SolutionsBox from './SolutionsBox'
@@ -44,6 +43,7 @@ export default function EndUse() {
         <Grid item xs={6}>
           <Autocomplete
             id="category"
+            size="small"
             options={waterQualityCategories.filter((category) => category.input === false)}
             getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
             isOptionEqualToValue={(option, value) => option.name === value.name}
@@ -53,17 +53,14 @@ export default function EndUse() {
             renderInput={(params) => <TextField {...params} variant="outlined" />}
           />
         </Grid>
-        <Grid item xs={2} style={{ textAlign: 'center' }}>
-          <Tooltip title="Information about categories">
-            <Chip label="?" size="small" />
-          </Tooltip>
-        </Grid>
+
         <Grid item xs={4}>
           <Typography>{t('Water Quality Class')}</Typography>
         </Grid>
         <Grid item xs={6}>
           <Autocomplete
             id="quality"
+            size="small"
             options={waterQualities.filter((q) => q.category === endUse.category)}
             getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
             isOptionEqualToValue={(option, value) => option.name === value.name}
@@ -74,11 +71,8 @@ export default function EndUse() {
             disabled={endUse.category === null ? true : false}
           />
         </Grid>
-        <Grid item xs={2} style={{ textAlign: 'center' }}>
-          <Tooltip title="Information about water quality classes">
-            <Chip label="?" size="small" />
-          </Tooltip>
-        </Grid>
+
+        <Grid item xs={12} />
 
         <QualityCompare />
       </Grid>

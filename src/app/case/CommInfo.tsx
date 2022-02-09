@@ -43,6 +43,7 @@ export default function CommInfo() {
       <Grid item xs={6}>
         <Autocomplete
           id="country"
+          size="small"
           options={communityInfo}
           getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined!)}
           isOptionEqualToValue={(option, value) => option.name === value.name}
@@ -63,6 +64,7 @@ export default function CommInfo() {
       <Grid item xs={6}>
         <Autocomplete
           id="currency"
+          size="small"
           options={[communityInfo[commInfo.countryID], usdObj]}
           getOptionLabel={(option) => option.currency}
           isOptionEqualToValue={(option, value) => option.currency === value.currency}

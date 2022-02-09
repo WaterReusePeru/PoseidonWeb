@@ -9,7 +9,7 @@ import { waterQualities, WaterQuality, waterQualityFactors } from '../data/model
 
 export default function QualityCompare() {
   const endUse = useAppSelector((state) => state.case.endUse)
-  const inputQuality = useAppSelector((state) => state.case.inputQuality)
+  const input = useAppSelector((state) => state.case.input)
 
   const theme = useTheme()
 
@@ -18,7 +18,7 @@ export default function QualityCompare() {
   return (
     <>
       <Grid item container xs={12} justifyContent="space-evenly" alignItems="center">
-        {inputQuality.qualityClass !== undefined && endUse.qualityClass === undefined
+        {input.qualityClass !== undefined && endUse.qualityClass === undefined
           ? waterQualityFactors.map((f, index) => {
               const key = f.name as keyof WaterQuality
 
@@ -28,11 +28,11 @@ export default function QualityCompare() {
                     factor={f.name}
                     unit={f.unit}
                     input={
-                      inputQuality.qualityClass === undefined
+                      input.qualityClass === undefined
                         ? null
-                        : waterQualities[inputQuality.qualityClass][key] < 0
+                        : waterQualities[input.qualityClass][key] < 0
                         ? null
-                        : waterQualities[inputQuality.qualityClass][key]
+                        : waterQualities[input.qualityClass][key]
                     }
                     average={waterQualities[0][key]}
                   />
@@ -48,11 +48,11 @@ export default function QualityCompare() {
                     factor={f.name}
                     unit={f.unit}
                     input={
-                      inputQuality.qualityClass === undefined
+                      input.qualityClass === undefined
                         ? null
-                        : waterQualities[inputQuality.qualityClass][key] < 0
+                        : waterQualities[input.qualityClass][key] < 0
                         ? null
-                        : waterQualities[inputQuality.qualityClass][key]
+                        : waterQualities[input.qualityClass][key]
                     }
                     output={
                       endUse.qualityClass === undefined

@@ -9,18 +9,14 @@ type CaseState = {
     countryID: number
     currency: number //0 is USD, 1 is local currency
   }
-  inputQuality: {
+  input: {
     category: number
     qualityClass?: number
+    quantity?: number
   }
   endUse: {
     category: number
     qualityClass?: number
-  }
-  quantity: {
-    amount?: number
-    distance?: number
-    heightDifference?: number
   }
   solution: {
     noneNeeded: boolean
@@ -49,9 +45,8 @@ const initialState: CaseState = {
   step: 0,
   completedSteps: [0, 0, 0, 0],
   commInfo: { countryID: 0, currency: 1 }, //Peru is the defaul country with local currency
-  inputQuality: { category: 28 }, //Peru is the default category
+  input: { category: 28 }, //Peru is the default category
   endUse: { category: 29 },
-  quantity: {},
   solution: {
     noneNeeded: true,
     noneAvailable: false,
@@ -93,13 +88,22 @@ export const caseSlice = createSlice({
       state.completedSteps[0] = 0
     },
     setInputQualityCategory: (state, action) => {
-      state.inputQuality.category = action.payload
-      state.inputQuality.qualityClass = undefined
+      state.input.category = action.payload
+      state.input.qualityClass = undefined
       state.completedSteps[1] = 0
     },
     setInputQualityClass: (state, action) => {
-      state.inputQuality.qualityClass = action.payload
-      state.completedSteps[1] = 1
+      state.input.qualityClass = action.payload
+      if (state.input.quantity) {
+        state.completedSteps[1] = 1
+      }
+    },
+    setInputQuantity: (state, action) => {
+      state.input.quantity = action.payload
+      if (!action.payload) {
+        state.completedSteps[1] = 0
+      }
+      if (action.payload && state.input.qualityClass) state.completedSteps[1] = 1
     },
     setEndUseQualityCategory: (state, action) => {
       state.endUse.category = action.payload
@@ -109,27 +113,6 @@ export const caseSlice = createSlice({
     setEndUseQualityClass: (state, action) => {
       state.endUse.qualityClass = action.payload
       state.completedSteps[2] = 2
-    },
-    setQuantity: (state, action) => {
-      state.quantity.amount = action.payload
-      if (action.payload === null) {
-        state.completedSteps[3] = 0
-      }
-      if (action.payload !== null && state.quantity.distance !== null) {
-        state.completedSteps[3] = 3
-      }
-    },
-    setDistance: (state, action) => {
-      state.quantity.distance = action.payload
-      if (action.payload === null) {
-        state.completedSteps[3] = 0
-      }
-      if (action.payload !== null && state.quantity.amount !== null) {
-        state.completedSteps[3] = 3
-      }
-    },
-    setHeightDifference: (state, action) => {
-      state.quantity.heightDifference = action.payload
     },
     setSolutionNoneNeeded: (state, action) => {
       state.solution.noneNeeded = action.payload
@@ -178,11 +161,9 @@ export const {
   setCurrency,
   setInputQualityCategory,
   setInputQualityClass,
+  setInputQuantity,
   setEndUseQualityCategory,
   setEndUseQualityClass,
-  setQuantity,
-  setDistance,
-  setHeightDifference,
   resetSolutions,
   setSolutionNoneNeeded,
   setSolutionNoneAvailable,

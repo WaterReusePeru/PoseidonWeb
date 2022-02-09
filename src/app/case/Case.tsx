@@ -2,9 +2,8 @@ import makeStyles from '@mui/styles/makeStyles'
 import withStyles from '@mui/styles/withStyles'
 
 import CommInfo from './CommInfo'
-import InputQuality from './InputQuality'
+import Input from './Input'
 import EndUse from './EndUse'
-import Quantity from './Quantity'
 import { CaseSummary } from './CaseSummary'
 import Grid from '@mui/material/Grid'
 import Paper from '@mui/material/Paper'
@@ -39,14 +38,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: 'center',
     paddingLeft: '5vw',
     paddingRight: '5vw',
-    paddingTop: 50,
+    paddingTop: 30,
   },
   step: {
     minHeight: 'calc(100vh - 300px)',
   },
   root: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    padding: theme.spacing(1),
     paddingTop: 80,
   },
   button: {
@@ -73,11 +72,9 @@ function getStepContent(step: number) {
     case 0:
       return <CommInfo />
     case 1:
-      return <InputQuality />
+      return <Input />
     case 2:
       return <EndUse />
-    case 3:
-      return <Quantity />
     default:
       return 'Unknown step'
   }
@@ -87,12 +84,7 @@ export const Case = () => {
   const { t } = useTranslation()
 
   const getSteps = () => {
-    return [
-      t('Community Information'),
-      t('Input Quality'),
-      t('End Use'),
-      t('Quantity') /* , t('Personalize Solutions') */,
-    ]
+    return [t('Community Information'), t('Input'), t('End Use')]
   }
 
   const count = useAppSelector((state) => state.case.step)
@@ -162,7 +154,7 @@ export const Case = () => {
                         className={classes.button}
                         to={`${process.env.PUBLIC_URL}/results`}
                       >
-                        {t('Finish')}
+                        {t('See Results')}
                       </Button>
                     ) : (
                       <Button
