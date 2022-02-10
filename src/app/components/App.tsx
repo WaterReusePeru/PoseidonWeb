@@ -8,7 +8,10 @@ import MenuBookIcon from '@mui/icons-material/MenuBook'
 import AddCircle from '@material-ui/icons/AddCircle'
 import BarChartIcon from '@mui/icons-material/BarChart'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
-import { Learn } from '../learn/Learn'
+import WaterQualities from '../learn/WaterQualities'
+import UnitProcesses from '../learn/UnitProcesses'
+import GeneralReference from '../learn//GeneralReference'
+import TreatmentTrains from '../learn/TreatmentTrains'
 import { Case } from '../case/Case'
 import { Results } from '../results/Results'
 import UserMenu from '../UserMenu'
@@ -16,6 +19,8 @@ import { useTranslation } from 'react-i18next'
 import Grid from '@mui/material/Grid'
 import { useAppSelector } from '../hooks'
 import { PoseidonWebIcon } from '../images/PoseidonWebIcon'
+import { CaseStepper } from '../case/CaseStepper'
+import { LearnMenu } from '../learn/LearnMenu'
 
 const useStyles = makeStyles({
   toolbar: {
@@ -24,11 +29,23 @@ const useStyles = makeStyles({
     justifyItems: 'center',
     justifyContent: 'space-between',
   },
+  caseToolbar: {
+    backgroundColor: '#fff',
+  },
   title: {
     textAlign: 'left',
   },
   root: {
     flexGrow: 1,
+  },
+  main: {
+    height: '100vh',
+    width: '100vw',
+    justifyItems: 'stretch',
+    justifyContent: 'center',
+    paddingTop: 150,
+    paddingLeft: '5vw',
+    paddingRight: '5vw',
   },
 })
 
@@ -47,14 +64,14 @@ export const App = () => {
   return (
     <div className="App">
       <Router>
-        <AppBar elevation={0}>
+        <AppBar elevation={3}>
           <Toolbar className={classes.toolbar}>
             <Grid container alignItems="flex-start" spacing={1} justifyContent="center">
               <Button
                 aria-controls="simple-menu"
                 aria-haspopup="true"
                 component={Link}
-                to={`${process.env.PUBLIC_URL}/learn`}
+                to={`${process.env.PUBLIC_URL}/general`}
                 startIcon={<MenuBookIcon />}
                 color="inherit"
               >
@@ -94,14 +111,25 @@ export const App = () => {
               <UserMenu />
             </Grid>{' '}
           </Toolbar>
+
+          <Switch>
+            <Route path={`${process.env.PUBLIC_URL}/case`} component={CaseStepper} />
+            <Route path={`${process.env.PUBLIC_URL}/general`} component={LearnMenu} />
+            <Route path={`${process.env.PUBLIC_URL}/waterqualities`} component={LearnMenu} />
+            <Route path={`${process.env.PUBLIC_URL}/unitprocesses`} component={LearnMenu} />
+            <Route path={`${process.env.PUBLIC_URL}/treatmenttrains`} component={LearnMenu} />
+          </Switch>
         </AppBar>
 
-        <div>
+        <div className={classes.main}>
           <Switch>
-            <Route exact path={`${process.env.PUBLIC_URL}/`} component={Learn} />
-            <Route path={`${process.env.PUBLIC_URL}/learn`} component={Learn} />
+            <Route exact path={`${process.env.PUBLIC_URL}/`} component={GeneralReference} />
             <Route path={`${process.env.PUBLIC_URL}/case`} component={Case} />
             <Route path={`${process.env.PUBLIC_URL}/results`} component={Results} />
+            <Route path={`${process.env.PUBLIC_URL}/general`} component={GeneralReference} />
+            <Route path={`${process.env.PUBLIC_URL}/waterqualities`} component={WaterQualities} />
+            <Route path={`${process.env.PUBLIC_URL}/unitprocesses`} component={UnitProcesses} />
+            <Route path={`${process.env.PUBLIC_URL}/treatmenttrains`} component={TreatmentTrains} />
           </Switch>
         </div>
       </Router>

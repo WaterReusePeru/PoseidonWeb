@@ -1,6 +1,5 @@
 import makeStyles from '@mui/styles/makeStyles'
 
-import Paper from '@mui/material/Paper'
 import { ThemeProvider, Theme, StyledEngineProvider } from '@mui/material/styles'
 import MUIDataTable from 'mui-datatables'
 import { options } from '../theme/tables'
@@ -19,21 +18,8 @@ import Tooltip from '@mui/material/Tooltip'
 import { theme } from '../theme/theme'
 
 const useStyles = makeStyles((theme: Theme) => ({
-  main: {
-    display: 'grid',
-    height: 'calc(100vh - 200px)',
-    width: '100vw',
-    gridTemplateColumns: '1fr',
-    gridRowGap: 8,
-    justifyItems: 'stretch',
-    justifyContent: 'center',
-    paddingLeft: '5vw',
-    paddingRight: '5vw',
-    paddingTop: 110,
-  },
   root: {
     flexGrow: 1,
-    paddingTop: 120,
   },
   chipContainer: {
     display: 'flex',
@@ -271,15 +257,11 @@ export const Results = () => {
 
   return (
     <div className="App">
-      <div className={classes.main}>
-        <Paper elevation={0} style={{ padding: 10 }}>
-          <StyledEngineProvider injectFirst>
-            <ThemeProvider theme={theme}>
-              <MUIDataTable title={t('Results')} data={data} columns={columns} options={options} />
-            </ThemeProvider>
-          </StyledEngineProvider>
-        </Paper>
-      </div>
+      <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={theme}>
+          <MUIDataTable title={t('Results')} data={data} columns={columns} options={options} />
+        </ThemeProvider>
+      </StyledEngineProvider>
     </div>
   )
 }

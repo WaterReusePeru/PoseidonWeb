@@ -1,24 +1,16 @@
 import makeStyles from '@mui/styles/makeStyles'
-import withStyles from '@mui/styles/withStyles'
-
 import CommInfo from './CommInfo'
 import Input from './Input'
 import EndUse from './EndUse'
-import { CaseSummary } from './CaseSummary'
 import Grid from '@mui/material/Grid'
 import Paper from '@mui/material/Paper'
-import Stepper from '@mui/material/Stepper'
-import Step from '@mui/material/Step'
-import StepLabel from '@mui/material/StepLabel'
-import StepConnector from '@mui/material/StepConnector'
 import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../hooks'
-import { next, previous, reset, setStep } from './caseSlice'
+import { next, previous } from './caseSlice'
 import { theme } from '../theme/theme'
 import { useTranslation } from 'react-i18next'
-import { Link, Theme } from '@mui/material'
+import { Theme } from '@mui/material'
 import { Link as ReactLink } from 'react-router-dom'
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -28,25 +20,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyItems: 'center',
     justifyContent: 'space-between',
   },
-  main: {
-    display: 'grid',
-    height: 'calc(100vh - 200px)',
-    width: '100vw',
-    gridTemplateColumns: '1fr',
-    gridRowGap: 8,
-    justifyItems: 'stretch',
-    justifyContent: 'center',
-    paddingLeft: '5vw',
-    paddingRight: '5vw',
-    paddingTop: 30,
-  },
   step: {
-    minHeight: 'calc(100vh - 300px)',
+    minHeight: 'calc(100vh - 150px)',
   },
   root: {
     flexGrow: 1,
     padding: theme.spacing(1),
-    paddingTop: 80,
+    paddingTop: 130,
   },
   button: {
     marginRight: theme.spacing(2),
@@ -56,16 +36,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginBottom: theme.spacing(1),
   },
 }))
-
-const CustomConnector = withStyles({
-  root: {
-    alignSelf: 'flex-start',
-    paddingTop: '13px', //This hardcoded value sets the line in the middle of the stepper icons. It's not optimal.
-  },
-  line: {
-    borderRadius: 1,
-  },
-})(StepConnector)
 
 function getStepContent(step: number) {
   switch (step) {
@@ -95,85 +65,44 @@ export const Case = () => {
   const classes = useStyles()
   const steps = getSteps()
 
-  const handleReset = () => {
-    dispatch(reset())
-  }
-
   return (
     <div className="App">
-      <Paper className={classes.root} square elevation={3}>
-        <Stepper activeStep={count} connector={<CustomConnector />}>
-          {steps.map((label, index) => {
-            const stepProps = {}
-            const labelProps = {}
-            return (
-              <Step key={label} {...stepProps} style={{ alignSelf: 'flex-start' }}>
-                <StepLabel {...labelProps}>
-                  <Link
-                    component="button"
-                    variant="caption"
-                    underline="hover"
-                    color="inherit"
-                    disabled={completedSteps.includes(index - 1) || index === 0 ? false : true}
-                    onClick={() => dispatch(setStep(index))}
+      <Paper elevation={0}>
+        <Grid container spacing={3}>
+          <Grid item container xs={12}>
+            <Grid item container direction="column" alignItems="center" className={classes.step}>
+              {getStepContent(count)}
+
+              <div style={{ paddingTop: theme.spacing(2) }}>
+                <Button disabled={count === 0} onClick={() => dispatch(previous())} className={classes.button}>
+                  {t('Back')}
+                </Button>
+                {count === steps.length - 1 ? (
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    component={ReactLink}
+                    className={classes.button}
+                    to={`${process.env.PUBLIC_URL}/results`}
                   >
-                    {label}
-                  </Link>
-                </StepLabel>
-                <CaseSummary step={index} />
-              </Step>
-            )
-          })}
-        </Stepper>
-      </Paper>
-
-      <div className={classes.main}>
-        <Paper elevation={0} style={{ padding: 10 }}>
-          <Grid container spacing={3}>
-            <Grid item container xs={12}>
-              {count === steps.length ? (
-                <div>
-                  <Typography className={classes.instructions}>All steps completed - you&apos;re finished</Typography>
-                  <Button onClick={handleReset} className={classes.button}>
-                    Reset
+                    {t('See Results')}
                   </Button>
-                </div>
-              ) : (
-                <Grid item container direction="column" alignItems="center" className={classes.step}>
-                  {getStepContent(count)}
-
-                  <div style={{ paddingTop: theme.spacing(2) }}>
-                    <Button disabled={count === 0} onClick={() => dispatch(previous())} className={classes.button}>
-                      {t('Back')}
-                    </Button>
-                    {count === steps.length - 1 ? (
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        component={ReactLink}
-                        className={classes.button}
-                        to={`${process.env.PUBLIC_URL}/results`}
-                      >
-                        {t('See Results')}
-                      </Button>
-                    ) : (
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={() => dispatch(next())}
-                        className={classes.button}
-                        disabled={completedSteps.includes(count) ? false : true}
-                      >
-                        {t('Next')}
-                      </Button>
-                    )}
-                  </div>
-                </Grid>
-              )}
+                ) : (
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={() => dispatch(next())}
+                    className={classes.button}
+                    disabled={completedSteps.includes(count) ? false : true}
+                  >
+                    {t('Next')}
+                  </Button>
+                )}
+              </div>
             </Grid>
           </Grid>
-        </Paper>
-      </div>
+        </Grid>
+      </Paper>
     </div>
   )
 }
