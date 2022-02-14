@@ -6,8 +6,7 @@ import TextField from '@mui/material/TextField'
 import { useAppSelector } from '../hooks'
 //import { setCustomInput } from './caseSlice'
 import { useTranslation } from 'react-i18next'
-import { WaterQuality, waterQualityFactors } from '../data/model'
-import { stringify } from 'querystring'
+import { waterQualityFactors } from '../data/model'
 
 export default function InputCustomValues() {
   const input = useAppSelector((state) => state.case.input)
@@ -17,7 +16,7 @@ export default function InputCustomValues() {
   const { t } = useTranslation()
 
   var validQuantityState = waterQualityFactors.map((f, index) => {
-    const key = f.name as keyof WaterQuality
+    //const key = f.name as keyof WaterQuality
     return { id: f.id, name: f.name, validity: true }
   })
 
@@ -40,7 +39,7 @@ export default function InputCustomValues() {
   return (
     <>
       {waterQualityFactors.map((f, index) => {
-        const key = f.name as keyof WaterQuality
+        //const key = f.name as keyof WaterQuality
 
         return (
           <>

@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { RootState } from '../store'
-import { waterQualityFactors, treatmentTrains } from '../data/model'
+import { treatmentTrains } from '../data/model'
 
 type CaseState = {
   step: number
