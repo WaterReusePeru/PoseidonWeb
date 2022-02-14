@@ -1,38 +1,62 @@
 [
   {
+    "id": 0,
     "name": "turbidity",
+    "nameShort": "Turbidity",
+    "nameShortEs": "Turbidez",
     "nameLong": "Turbidity",
     "nameLongEs": "Turbidez",
-    "unit": "NTU"
+    "unit": "NTU",
+    "maxValue": 100
   },
   {
+    "id": 1,
     "name": "tss",
+    "nameShort": "TSS",
+    "nameShortEs": "TSS",
     "nameLong": "Total Suspended Solids",
     "nameLongEs": "Sólidos suspendidos totales",
-    "unit": "mg/L"
+    "unit": "mg/L",
+    "maxValue": 2000
   },
   {
+    "id": 2,
     "name": "bod",
+    "nameShort": "BOD",
+    "nameShortEs": "DBO",
     "nameLong": "Biological Oxygen Demand",
     "nameLongEs": "Demanda biológica de oxígeno",
-    "unit": "mg/L"
+    "unit": "mg/L",
+    "maxValue": 10000
   },
   {
+    "id": 3,
     "name": "cod",
+    "nameShort": "COD",
+    "nameShortEs": "DQO",
     "nameLong": "Chemical Oxygen Demand",
     "nameLongEs": "Demanda química de oxígeno",
-    "unit": "mg/L"
+    "unit": "mg/L",
+    "maxValue": 100000
   },
   {
+    "id": 4,
     "name": "fc",
+    "nameShort": "FC",
+    "nameShortEs": "CF",
     "nameLong": "Faecal Coliform",
     "nameLongEs": "Coliformes fecales",
-    "unit": "CFU/100ml"
+    "unit": "CFU/100ml",
+    "maxValue": 100000
   },
   {
+    "id": 5,
     "name": "tc",
+    "nameShort": "TC",
+    "nameShortEs": "CT",
     "nameLong": "Total Coliform",
     "nameLongEs": "Coliformes totales",
-    "unit": "CFU/100ml"
+    "unit": "CFU/100ml",
+    "maxValue": 1000000000
   }
 ]

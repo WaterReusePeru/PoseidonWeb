@@ -24,7 +24,7 @@ export const LearnMenu = () => {
   }
 
   return (
-    <Paper className={classes.root} square elevation={3}>
+    <Paper className={classes.root} square elevation={0}>
       <Tabs value={menuPoint} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
         <Tab label={t('General Reference')} to={`${process.env.PUBLIC_URL}/general`} component={Link} />
         <Tab label={t('Water Qualities')} to={`${process.env.PUBLIC_URL}/waterqualities`} component={Link} />

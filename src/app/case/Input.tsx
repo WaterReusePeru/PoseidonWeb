@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '../hooks'
-import { setInputQuantity } from './caseSlice'
+import { setInputQuantity, setCustomInput } from './caseSlice'
 import { useTranslation } from 'react-i18next'
 import InputAdornment from '@mui/material/InputAdornment'
 import SolutionsBox from './SolutionsBox'
@@ -20,10 +20,12 @@ export default function Input() {
 
   const { t } = useTranslation()
 
-  const [customInput, setCustomInput] = React.useState(false)
+  const [customInputState, setCustomInputState] = React.useState(false)
 
   const handleSetCustomInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCustomInput(event.target.value === 'true' ? true : false)
+    const newState = event.target.value === 'true' ? true : false
+    setCustomInputState(newState)
+    setCustomInput(newState)
   }
 
   const [validQuantity, setValidQuantity] = React.useState(true)
@@ -58,7 +60,7 @@ export default function Input() {
                 value="female"
                 control={
                   <Radio
-                    checked={customInput === false}
+                    checked={customInputState === false}
                     onChange={handleSetCustomInput}
                     value={false}
                     name="radio-buttons"
@@ -71,7 +73,7 @@ export default function Input() {
                 value="male"
                 control={
                   <Radio
-                    checked={customInput === true}
+                    checked={customInputState === true}
                     onChange={handleSetCustomInput}
                     value={true}
                     name="radio-buttons"
@@ -84,7 +86,7 @@ export default function Input() {
           </FormControl>
         </Grid>
 
-        {!customInput ? <InputPresets /> : <InputCustomValues />}
+        {!customInputState ? <InputPresets /> : <InputCustomValues />}
 
         <Grid item xs={4}>
           <Typography style={{ marginBottom: 20 }}>{t('Average Quantity')}</Typography>

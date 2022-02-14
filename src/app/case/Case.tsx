@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   root: {
     flexGrow: 1,
-    padding: theme.spacing(1),
     paddingTop: 130,
   },
   button: {

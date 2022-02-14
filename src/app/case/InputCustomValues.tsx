@@ -6,6 +6,8 @@ import TextField from '@mui/material/TextField'
 import { useAppSelector } from '../hooks'
 //import { setCustomInput } from './caseSlice'
 import { useTranslation } from 'react-i18next'
+import { WaterQuality, waterQualityFactors } from '../data/model'
+import { stringify } from 'querystring'
 
 export default function InputCustomValues() {
   const input = useAppSelector((state) => state.case.input)
@@ -14,157 +16,61 @@ export default function InputCustomValues() {
 
   const { t } = useTranslation()
 
-  //const [validQuantity, setValidQuantity] = React.useState(true)
+  var validQuantityState = waterQualityFactors.map((f, index) => {
+    const key = f.name as keyof WaterQuality
+    return { id: f.id, name: f.name, validity: true }
+  })
 
-  /*   const handleChangeQuantity = (value: number) => {
-    if (value >= 1 && value <= 20000 && Number.isInteger(Number(value))) {
-      setValidQuantity(true)
-      dispatch(setInputQuantity(value))
+  const [validQuantity, setValidQuantity] = React.useState(validQuantityState)
+
+  const handleChangeQuantity = (id: number, value: number, maxValue: number) => {
+    console.log(validQuantity)
+    const objIndex = validQuantityState.findIndex((quality) => quality.id === id)
+    if (value >= 1 && value <= maxValue && Number.isInteger(Number(value))) {
+      validQuantityState[objIndex].validity = true
+      setValidQuantity(validQuantityState)
+      //dispatch(setInputQuantity(value))
     } else {
-      setValidQuantity(false)
-      dispatch(setInputQuantity(null))
+      validQuantityState[objIndex].validity = false
+      setValidQuantity(validQuantityState)
+      //dispatch(setInputQuantity(null))
     }
-  } */
+  }
 
   return (
     <>
-      <Grid item xs={1}>
-        <Typography>{t('Turbidity')}</Typography>
-      </Grid>
-      <Grid item xs={3}>
-        <TextField
-          //error={!validQuantity}
-          size="small"
-          //helperText={!validQuantity ? t("Number must be integer and between 1 and 20'000") : ' '}
-          id="standard-number"
-          type="number"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          //onChange={(event) => handleChangeQuantity(Number(event.target.value))}
-          value={input.quantity !== null ? input.quantity : null}
-          InputProps={{
-            endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>,
-          }}
-          fullWidth
-        />
-      </Grid>
+      {waterQualityFactors.map((f, index) => {
+        const key = f.name as keyof WaterQuality
 
-      <Grid item xs={1}>
-        <Typography>{t('TSS')}</Typography>
-      </Grid>
-      <Grid item xs={3}>
-        <TextField
-          //error={!validQuantity}
-          size="small"
-          //helperText={!validQuantity ? t("Number must be integer and between 1 and 20'000") : ' '}
-          id="standard-number"
-          type="number"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          //onChange={(event) => handleChangeQuantity(Number(event.target.value))}
-          value={input.quantity !== null ? input.quantity : null}
-          InputProps={{
-            endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>,
-          }}
-          fullWidth
-        />
-      </Grid>
-
-      <Grid item xs={1}>
-        <Typography>{t('BOD')}</Typography>
-      </Grid>
-      <Grid item xs={3}>
-        <TextField
-          //error={!validQuantity}
-          size="small"
-          //helperText={!validQuantity ? t("Number must be integer and between 1 and 20'000") : ' '}
-          id="standard-number"
-          type="number"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          //onChange={(event) => handleChangeQuantity(Number(event.target.value))}
-          value={input.quantity !== null ? input.quantity : null}
-          InputProps={{
-            endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>,
-          }}
-          fullWidth
-        />
-      </Grid>
-
-      <Grid item xs={1}>
-        <Typography>{t('COD')}</Typography>
-      </Grid>
-      <Grid item xs={3}>
-        <TextField
-          //error={!validQuantity}
-          size="small"
-          //helperText={!validQuantity ? t("Number must be integer and between 1 and 20'000") : ' '}
-          id="standard-number"
-          type="number"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          //onChange={(event) => handleChangeQuantity(Number(event.target.value))}
-          value={input.quantity !== null ? input.quantity : null}
-          InputProps={{
-            endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>,
-          }}
-          fullWidth
-        />
-      </Grid>
-
-      <Grid item xs={1}>
-        <Typography>{t('FC')}</Typography>
-      </Grid>
-      <Grid item xs={3}>
-        <TextField
-          //error={!validQuantity}
-          size="small"
-          //helperText={!validQuantity ? t("Number must be integer and between 1 and 20'000") : ' '}
-          id="standard-number"
-          type="number"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          //onChange={(event) => handleChangeQuantity(Number(event.target.value))}
-          value={input.quantity !== null ? input.quantity : null}
-          InputProps={{
-            endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>,
-          }}
-          fullWidth
-        />
-      </Grid>
-
-      <Grid item xs={1}>
-        <Typography>{t('TC')}</Typography>
-      </Grid>
-      <Grid item xs={3}>
-        <TextField
-          //error={!validQuantity}
-          size="small"
-          //helperText={!validQuantity ? t("Number must be integer and between 1 and 20'000") : ' '}
-          id="standard-number"
-          type="number"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          //onChange={(event) => handleChangeQuantity(Number(event.target.value))}
-          value={input.quantity !== null ? input.quantity : null}
-          InputProps={{
-            endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>,
-          }}
-          fullWidth
-        />
-      </Grid>
+        return (
+          <>
+            <Grid item xs={1}>
+              <Typography>{f.nameShort}</Typography>
+            </Grid>
+            <Grid item xs={3}>
+              <TextField
+                error={!validQuantity[f.id].validity}
+                size="small"
+                helperText={
+                  !validQuantity[f.id].validity ? t('Number must be integer and between 1 and') + ' ' + f.maxValue : ' '
+                }
+                id={f.name}
+                type="number"
+                variant="outlined"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                onChange={(event) => handleChangeQuantity(f.id, Number(event.target.value), Number(f.maxValue))}
+                value={input.quantity !== null ? input.quantity : null}
+                InputProps={{
+                  endAdornment: <InputAdornment position="end">{f.unit}</InputAdornment>,
+                }}
+                fullWidth
+              />
+            </Grid>
+          </>
+        )
+      })}
     </>
   )
 }

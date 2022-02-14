@@ -121,10 +121,14 @@ const waterQualitiesJSONNaNified = NaNifier(waterQualitiesJSON)
 export const waterQualities: ReadonlyArray<WaterQuality> = waterQualitiesJSONNaNified as ReadonlyArray<WaterQuality>
 
 export interface WaterQualityFactor {
+  id: number
   name: string
+  nameShort: string
+  nameShortEs: string
   nameLong: string
   nameLongEs: string
   unit: string
+  maxValue: number
 }
 
 export const waterQualityFactors: ReadonlyArray<WaterQualityFactor> =
