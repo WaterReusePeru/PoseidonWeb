@@ -108,7 +108,7 @@ export const Results = () => {
             </div>
           )
         },
-        setCellProps: () => ({ style: { minWidth: '15vw' } }),
+        setCellProps: () => ({ style: { minWidth: '10vw' } }),
       },
     },
 
