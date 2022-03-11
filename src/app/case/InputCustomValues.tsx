@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next'
 import { waterQualityFactors } from '../data/model'
 
 export default function InputCustomValues() {
-  const input = useAppSelector((state) => state.case.input)
+  //const input = useAppSelector((state) => state.case.input)
   //const endUse = useAppSelector((state) => state.case.endUse)
   //const dispatch = useDispatch()
 
