@@ -66,7 +66,7 @@ const initialState: CaseState = {
 
 export const caseSlice = createSlice({
   name: 'case',
-  initialState,
+  initialState: initialState,
   reducers: {
     next: (state) => {
       state.step += 1

@@ -57,7 +57,7 @@ export default function Input() {
           <FormControl>
             <RadioGroup row aria-labelledby="demo-row-radio-buttons-group-label" name="row-radio-buttons-group">
               <FormControlLabel
-                value="female"
+                value="false"
                 control={
                   <Radio
                     checked={customInputState === false}
@@ -70,7 +70,7 @@ export default function Input() {
                 label="Presets"
               />
               <FormControlLabel
-                value="male"
+                value="true"
                 control={
                   <Radio
                     checked={customInputState === true}
@@ -80,7 +80,8 @@ export default function Input() {
                     inputProps={{ 'aria-label': 'B' }}
                   />
                 }
-                label="Custom (Under construction)"
+                label="Custom"
+                disabled
               />
             </RadioGroup>
           </FormControl>

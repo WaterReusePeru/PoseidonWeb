@@ -130,6 +130,7 @@ export const Results = () => {
         customBodyRenderLite: (dataIndex: number) => {
           return Math.round(data[dataIndex].landRequirements! * 100) / 100 + ' ha'
         },
+        display: false,
       },
     },
     {
@@ -150,6 +151,7 @@ export const Results = () => {
         customBodyRenderLite: (dataIndex: number) => {
           return Math.round(data[dataIndex].energyRequirements! * 100) / 100 + ' kWh/y'
         },
+        display: false,
       },
     },
     {
@@ -170,6 +172,7 @@ export const Results = () => {
         customBodyRenderLite: (dataIndex: number) => {
           return Math.round(data[dataIndex].laborRequirements! * 100) / 100 + ' person-hour/month'
         },
+        display: false,
       },
     },
     {
@@ -190,6 +193,7 @@ export const Results = () => {
         customBodyRenderLite: (dataIndex: number) => {
           return showCost(data[dataIndex].otherOM!)
         },
+        display: false,
       },
     },
 

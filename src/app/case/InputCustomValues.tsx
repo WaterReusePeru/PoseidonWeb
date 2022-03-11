@@ -51,7 +51,9 @@ export default function InputCustomValues() {
                 error={!validQuantity[f.id].validity}
                 size="small"
                 helperText={
-                  !validQuantity[f.id].validity ? t('Number must be integer and between 1 and') + ' ' + f.maxValue : ' '
+                  !validQuantity[f.id].validity
+                    ? t('Number should be integer and between 1 and') + ' ' + f.maxValue
+                    : ' '
                 }
                 id={f.name}
                 type="number"
@@ -60,7 +62,7 @@ export default function InputCustomValues() {
                   shrink: true,
                 }}
                 onChange={(event) => handleChangeQuantity(f.id, Number(event.target.value), Number(f.maxValue))}
-                value={input.quantity !== null ? input.quantity : null}
+                value={null}
                 InputProps={{
                   endAdornment: <InputAdornment position="end">{f.unit}</InputAdornment>,
                 }}
