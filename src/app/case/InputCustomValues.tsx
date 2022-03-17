@@ -13,7 +13,7 @@ export default function InputCustomValues() {
   const { t } = useTranslation()
 
   var validQuantityState = waterQualityFactors.map((f, index) => {
-    const key = f.name as keyof WaterQuality
+    //const key = f.name as keyof WaterQuality
     return { id: f.id, name: f.name, validity: true }
   })
 
