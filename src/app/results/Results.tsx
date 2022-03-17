@@ -85,6 +85,7 @@ export const Results = () => {
     },
     {
       name: 'unitProcesses',
+      sort: false,
       label: t('Unit Processes'),
       options: {
         filter: true,
@@ -246,8 +247,8 @@ export const Results = () => {
           ) : (
             <>
               {(
-                Math.round(data[dataIndex].capexPerCubic! * 100000 * communityInfo[commInfo.countryID].exchangeToUSD) /
-                100
+                (Math.round(data[dataIndex].capexPerCubic! * 100000) / 100) *
+                communityInfo[commInfo.countryID].exchangeToUSD
               ).toLocaleString('de-CH')}{' '}
               {communityInfo[commInfo.countryID].currency}
             </>

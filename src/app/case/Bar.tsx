@@ -29,7 +29,7 @@ export const Bar = (props: { input?: any; output?: any; factor: string; average?
   }
 
   const output = {
-    name: t('output'),
+    name: t('end use'),
     [props.factor]: props.output,
     color: outputColor,
   }

@@ -107,12 +107,12 @@ export default function SolutionsBox() {
                     <Grid item xs={6}>
                       <Typography variant="body2">
                         {commState.currency === 0 ? (
-                          <>{(Math.round(solution.capexPerCubic! * 10000) / 10).toLocaleString('de-CH')} $/m&sup3;</> //TODO: !
+                          <>{(Math.round(solution.capexPerCubic! * 100000) / 100).toLocaleString('de-CH')} $/m&sup3;</> //TODO: !
                         ) : (
                           <>
                             {(
-                              communityInfo[commState.countryID].exchangeToUSD *
-                              (Math.round(solution.capexPerCubic! * 10000) / 10)
+                              (Math.round(solution.capexPerCubic! * 100000) / 100) *
+                              communityInfo[commState.countryID].exchangeToUSD
                             ) //TODO: !
                               .toLocaleString('de-CH')}{' '}
                             {communityInfo[commState.countryID].currency}/m&sup3;

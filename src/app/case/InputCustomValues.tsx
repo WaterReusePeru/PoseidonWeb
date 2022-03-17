@@ -2,21 +2,18 @@ import React from 'react'
 import { InputAdornment, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
-//import { useDispatch } from 'react-redux'
-//import { useAppSelector } from '../hooks'
-//import { setCustomInput } from './caseSlice'
+import { useDispatch } from 'react-redux'
+import { setCustomInput } from './caseSlice'
 import { useTranslation } from 'react-i18next'
-import { waterQualityFactors } from '../data/model'
+import { WaterQuality, waterQualityFactors } from '../data/model'
 
 export default function InputCustomValues() {
-  //const input = useAppSelector((state) => state.case.input)
-  //const endUse = useAppSelector((state) => state.case.endUse)
-  //const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   const { t } = useTranslation()
 
   var validQuantityState = waterQualityFactors.map((f, index) => {
-    //const key = f.name as keyof WaterQuality
+    const key = f.name as keyof WaterQuality
     return { id: f.id, name: f.name, validity: true }
   })
 
@@ -28,25 +25,25 @@ export default function InputCustomValues() {
     if (value >= 1 && value <= maxValue && Number.isInteger(Number(value))) {
       validQuantityState[objIndex].validity = true
       setValidQuantity(validQuantityState)
-      //dispatch(setInputQuantity(value))
+      dispatch(setCustomInput(value))
     } else {
       validQuantityState[objIndex].validity = false
       setValidQuantity(validQuantityState)
-      //dispatch(setInputQuantity(null))
+      dispatch(setCustomInput(null))
     }
   }
 
   return (
     <>
       {waterQualityFactors.map((f, index) => {
-        //const key = f.name as keyof WaterQuality
+        const key = f.name as keyof WaterQuality
 
         return (
           <>
-            <Grid item xs={1}>
+            <Grid item xs={1} key={key + '1'}>
               <Typography>{f.nameShort}</Typography>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={3} key={key + '2'}>
               <TextField
                 error={!validQuantity[f.id].validity}
                 size="small"
@@ -62,7 +59,7 @@ export default function InputCustomValues() {
                   shrink: true,
                 }}
                 onChange={(event) => handleChangeQuantity(f.id, Number(event.target.value), Number(f.maxValue))}
-                value={null}
+                value={undefined}
                 InputProps={{
                   endAdornment: <InputAdornment position="end">{f.unit}</InputAdornment>,
                 }}

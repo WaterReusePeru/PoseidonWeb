@@ -30,8 +30,6 @@ export default function CommInfo() {
     dispatch(setCurrency(0))
   }
 
-  console.log(commInfo, communityInfo)
-
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
       <Grid item xs={12}>

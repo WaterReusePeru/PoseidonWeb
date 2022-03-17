@@ -4594,10 +4594,10 @@
     "toc": null,
     "virus": null,
     "helminths": null,
-    "note": "All food crops, including root crops consumed raw and food crops where the edible portion is in direct contact with reclaimed water. The European Commission proposed on May 2018 new rules to stimulate and facilitate water reuse in the EU for agricultural irrigation. (Alcalde-Sanz and Gawilk 2017)",
-    "noteEs": "Todos los cultivos alimentarios, incluidos los cultivos de raíces que se consumen crudos y los cultivos alimentarios en los que la parte comestible está en contacto directo con el agua regenerada. La Comisión Europea propuso en mayo de 2018 nuevas normas para estimular y facilitar la reutilización del agua en la UE para el riego agrícola. (Alcalde-Sanz y Gawilk 2017)",
-    "reference": "",
-    "referenceEs": ""
+    "note": "All food crops consumed raw where the edible part is in direct contact with reclaimed water and root crops consumed raw",
+    "noteEs": "Todos los cultivos alimentarios que se consumen crudos cuando la parte comestible está en contacto directo con el agua regenerada y los cultivos de raíces que se consumen crudos",
+    "reference": "Regulation (EU) 2020/741",
+    "referenceEs": "Regulation (EU) 2020/741"
   },
   {
     "id": 200,
@@ -4617,10 +4617,10 @@
     "toc": null,
     "virus": null,
     "helminths": null,
-    "note": "Food crops consumed raw where the edible portion is produced above ground and is not in direct contact with reclaimed water / Processed food crops / Non-food crops including crops to feed milk- or meat-producing animals. The European Commission proposed on May 2018 new rules to stimulate and facilitate water reuse in the EU for agricultural irrigation. (Alcalde-Sanz and Gawilk 2017)",
-    "noteEs": "Cultivos alimentarios consumidos en crudo cuando la parte comestible se produce en la superficie y no está en contacto directo con el agua regenerada / Cultivos alimentarios transformados / Cultivos no alimentarios, incluidos los destinados a la alimentación de animales productores de leche o carne. La Comisión Europea propuso en mayo de 2018 nuevas normas para estimular y facilitar la reutilización del agua en la UE para el riego agrícola. (Alcalde-Sanz y Gawilk 2017)",
-    "reference": "",
-    "referenceEs": ""
+    "note": "Food crops consumed raw where the edible part is produced above ground and is not in direct contact with reclaimed water, processed food crops and non-food crops including crops used to feed milk- or meat-producing animals",
+    "noteEs": "Los cultivos alimentarios que se consumen crudos cuando la parte comestible se produce en la superficie y no está en contacto directo con el agua regenerada, los cultivos alimentarios transformados y los cultivos no alimentarios, incluidos los utilizados para alimentar a los animales productores de leche o carne",
+    "reference": "Regulation (EU) 2020/741",
+    "referenceEs": "Regulation (EU) 2020/741"
   },
   {
     "id": 201,
@@ -4640,10 +4640,10 @@
     "toc": null,
     "virus": null,
     "helminths": null,
-    "note": "Food crops consumed raw where the edible portion is produced above ground and is not in direct contact with reclaimed water / Processed food crops / Non-food crops including crops to feed milk- or meat-producing animals. The European Commission proposed on May 2018 new rules to stimulate and facilitate water reuse in the EU for agricultural irrigation. (Alcalde-Sanz and Gawilk 2017)",
-    "noteEs": "Cultivos alimentarios consumidos en crudo cuando la parte comestible se produce en la superficie y no está en contacto directo con el agua regenerada / Cultivos alimentarios transformados / Cultivos no alimentarios, incluidos los destinados a la alimentación de animales productores de leche o carne. La Comisión Europea propuso en mayo de 2018 nuevas normas para estimular y facilitar la reutilización del agua en la UE para el riego agrícola. (Alcalde-Sanz y Gawilk 2017)",
-    "reference": "",
-    "referenceEs": ""
+    "note": "Food crops consumed raw where the edible part is produced above ground and is not in direct contact with reclaimed water, processed food crops and non-food crops including crops used to feed milk- or meat-producing animals",
+    "noteEs": "Los cultivos alimentarios que se consumen crudos cuando la parte comestible se produce en la superficie y no está en contacto directo con el agua regenerada, los cultivos alimentarios transformados y los cultivos no alimentarios, incluidos los utilizados para alimentar a los animales productores de leche o carne",
+    "reference": "Regulation (EU) 2020/741",
+    "referenceEs": "Regulation (EU) 2020/741"
   },
   {
     "id": 202,
@@ -4663,10 +4663,10 @@
     "toc": null,
     "virus": null,
     "helminths": null,
-    "note": "Industrial, energy, and seeded crops. The European Commission proposed on May 2018 new rules to stimulate and facilitate water reuse in the EU for agricultural irrigation. (Alcalde-Sanz and Gawilk 2017)",
-    "noteEs": "Cultivos industriales, energéticos y de siembra. La Comisión Europea propuso en mayo de 2018 nuevas normas para estimular y facilitar la reutilización del agua en la UE para el riego agrícola. (Alcalde-Sanz y Gawilk 2017)",
-    "reference": "",
-    "referenceEs": ""
+    "note": "Industrial, energy, and seeded crops",
+    "noteEs": "Cultivos industriales, energéticos y de semillas",
+    "reference": "Regulation (EU) 2020/741",
+    "referenceEs": "Regulation (EU) 2020/741"
   },
   {
     "id": 203,
