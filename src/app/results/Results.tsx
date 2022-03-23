@@ -1,6 +1,6 @@
 import makeStyles from '@mui/styles/makeStyles'
 
-import { ThemeProvider, Theme, StyledEngineProvider } from '@mui/material/styles'
+import { Theme, StyledEngineProvider } from '@mui/material/styles'
 import MUIDataTable from 'mui-datatables'
 import { options } from '../theme/tables'
 
@@ -15,7 +15,6 @@ import communityInfo from '../data/communityInfo.json'
 
 import Chip from '@mui/material/Chip'
 import Tooltip from '@mui/material/Tooltip'
-import { theme } from '../theme/theme'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -263,9 +262,7 @@ export const Results = () => {
   return (
     <div className="App">
       <StyledEngineProvider injectFirst>
-        <ThemeProvider theme={theme}>
-          <MUIDataTable title={t('Results')} data={data} columns={columns} options={options} />
-        </ThemeProvider>
+        <MUIDataTable title={t('Results')} data={data} columns={columns} options={options} />
       </StyledEngineProvider>
     </div>
   )

@@ -2,7 +2,8 @@ import React from 'react'
 import { useAppSelector } from '../hooks'
 
 import Grid from '@mui/material/Grid'
-import { Typography } from '@mui/material'
+import makeStyles from '@mui/styles/makeStyles'
+import { Theme, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
@@ -15,6 +16,12 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp'
 import AutorenewIcon from '@mui/icons-material/Autorenew'
 import BatteryFullIcon from '@mui/icons-material/BatteryFull'
 
+const useStyles = makeStyles((theme: Theme) => ({
+  root: {
+    paddingTop: theme.spacing(1),
+  },
+}))
+
 export const CaseSummary = (props: { step: any }) => {
   const { step } = props
 
@@ -23,8 +30,10 @@ export const CaseSummary = (props: { step: any }) => {
   const { t } = useTranslation()
   const lang = i18next.language
 
+  const classes = useStyles()
+
   return (
-    <div style={{ paddingTop: 5 }}>
+    <div className={classes.root}>
       <Grid item container spacing={1} alignItems="flex-start">
         {step === 0 ? (
           <>

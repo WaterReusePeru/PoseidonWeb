@@ -5,7 +5,7 @@ import makeStyles from '@mui/styles/makeStyles'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import MenuBookIcon from '@mui/icons-material/MenuBook'
-import AddCircle from '@material-ui/icons/AddCircle'
+import AddCircle from '@mui/icons-material/AddCircle'
 import BarChartIcon from '@mui/icons-material/BarChart'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import WaterQualities from '../learn/WaterQualities'
@@ -114,6 +114,7 @@ export const App = () => {
 
           <Switch>
             <Route path={`${process.env.PUBLIC_URL}/case`} component={CaseStepper} />
+            <Route path={`${process.env.PUBLIC_URL}/`} component={LearnMenu} />
             <Route path={`${process.env.PUBLIC_URL}/general`} component={LearnMenu} />
             <Route path={`${process.env.PUBLIC_URL}/waterqualities`} component={LearnMenu} />
             <Route path={`${process.env.PUBLIC_URL}/unitprocesses`} component={LearnMenu} />
