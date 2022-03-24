@@ -9,7 +9,7 @@ import { WaterQuality, waterQualityFactors } from '../data/model'
 import { useAppSelector } from '../hooks'
 
 export default function InputCustomValues() {
-  const input = useAppSelector((state) => state.case.input)
+  //const input = useAppSelector((state) => state.case.input)
 
   const dispatch = useDispatch()
 
