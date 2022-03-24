@@ -92,7 +92,7 @@ export const caseSlice = createSlice({
     setCustomInput: (state, action) => {
       state.input.custom = action.payload
     },
-    setCustomValues: (state, action) => {
+    setCustomInputValues: (state, action) => {
       state.input.customValues = action.payload
     },
     setInputQualityCategory: (state, action) => {
@@ -171,6 +171,7 @@ export const {
   setInputQualityClass,
   setInputQuantity,
   setCustomInput,
+  setCustomInputValues,
   setEndUseQualityCategory,
   setEndUseQualityClass,
   resetSolutions,

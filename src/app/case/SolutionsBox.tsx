@@ -40,8 +40,6 @@ export default function SolutionsBox() {
     dispatch(setSolutionsortByRating(!sortByRating))
   }
 
-  console.log(caseState.solutions[0])
-
   return (
     <Paper elevation={0}>
       <Grid container spacing={0}>

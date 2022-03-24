@@ -18,15 +18,16 @@ export default function Input() {
   const endUse = useAppSelector((state) => state.case.endUse)
   const dispatch = useDispatch()
 
-  const { t } = useTranslation()
+  const caseState = useAppSelector((state) => state.case)
 
-  const [customInputState, setCustomInputState] = React.useState(false)
+  const { t } = useTranslation()
 
   const handleSetCustomInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newState = event.target.value === 'true' ? true : false
-    setCustomInputState(newState)
-    setCustomInput(newState)
+    dispatch(setCustomInput(newState))
   }
+
+  console.log(caseState)
 
   const [validQuantity, setValidQuantity] = React.useState(true)
 
@@ -60,7 +61,7 @@ export default function Input() {
                 value="false"
                 control={
                   <Radio
-                    checked={customInputState === false}
+                    checked={input.custom === false}
                     onChange={handleSetCustomInput}
                     value={false}
                     name="radio-buttons"
@@ -73,7 +74,7 @@ export default function Input() {
                 value="true"
                 control={
                   <Radio
-                    checked={customInputState === true}
+                    checked={input.custom === true}
                     onChange={handleSetCustomInput}
                     value={true}
                     name="radio-buttons"
@@ -81,13 +82,12 @@ export default function Input() {
                   />
                 }
                 label="Custom"
-                disabled
               />
             </RadioGroup>
           </FormControl>
         </Grid>
 
-        {!customInputState ? <InputPresets /> : <InputCustomValues />}
+        {!input.custom ? <InputPresets /> : <InputCustomValues />}
 
         <Grid item xs={4}>
           <Typography style={{ marginBottom: 20 }}>{t('Average Quantity')}</Typography>

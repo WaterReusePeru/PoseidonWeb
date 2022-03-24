@@ -3,35 +3,39 @@ import { InputAdornment, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import { useDispatch } from 'react-redux'
-import { setCustomInput } from './caseSlice'
+import { setCustomInputValues } from './caseSlice'
 import { useTranslation } from 'react-i18next'
 import { WaterQuality, waterQualityFactors } from '../data/model'
+import { useAppSelector } from '../hooks'
 
 export default function InputCustomValues() {
+  const input = useAppSelector((state) => state.case.input)
+
   const dispatch = useDispatch()
 
   const { t } = useTranslation()
 
   var validQuantityState = waterQualityFactors.map((f, index) => {
-    //const key = f.name as keyof WaterQuality
-    return { id: f.id, name: f.name, validity: true }
+    return { id: f.id, name: f.name, validity: true, value: 0 }
   })
 
   const [validQuantity, setValidQuantity] = React.useState(validQuantityState)
 
   const handleChangeQuantity = (id: number, value: number, maxValue: number) => {
-    console.log(validQuantity)
     const objIndex = validQuantityState.findIndex((quality) => quality.id === id)
     if (value >= 1 && value <= maxValue && Number.isInteger(Number(value))) {
       validQuantityState[objIndex].validity = true
+      validQuantityState[objIndex].value = value
       setValidQuantity(validQuantityState)
-      dispatch(setCustomInput(value))
+      dispatch(setCustomInputValues(value))
     } else {
       validQuantityState[objIndex].validity = false
       setValidQuantity(validQuantityState)
-      dispatch(setCustomInput(null))
+      dispatch(setCustomInputValues(null))
     }
   }
+
+  console.log(validQuantityState)
 
   return (
     <>
