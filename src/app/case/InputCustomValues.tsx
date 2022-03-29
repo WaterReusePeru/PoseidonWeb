@@ -6,11 +6,8 @@ import { useDispatch } from 'react-redux'
 import { setCustomInputValues } from './caseSlice'
 import { useTranslation } from 'react-i18next'
 import { WaterQuality, waterQualityFactors } from '../data/model'
-import { useAppSelector } from '../hooks'
 
 export default function InputCustomValues() {
-  const input = useAppSelector((state) => state.case.input)
-
   const dispatch = useDispatch()
 
   const { t } = useTranslation()

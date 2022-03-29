@@ -32,7 +32,7 @@ export default function QualityCompare() {
                       input.customValues![key] : */
                       input.qualityClass === undefined
                         ? null
-                        : waterQualities[input.qualityClass][key] === NaN
+                        : isNaN(Number(waterQualities[input.qualityClass][key]))
                         ? null
                         : waterQualities[input.qualityClass][key]
                     }
@@ -52,14 +52,14 @@ export default function QualityCompare() {
                     input={
                       input.qualityClass === undefined
                         ? null
-                        : waterQualities[input.qualityClass][key] === NaN
+                        : isNaN(Number(waterQualities[input.qualityClass][key]))
                         ? null
                         : waterQualities[input.qualityClass][key]
                     }
                     output={
                       endUse.qualityClass === undefined
                         ? null
-                        : waterQualities[endUse.qualityClass][key] === NaN
+                        : isNaN(Number(waterQualities[endUse.qualityClass][key]))
                         ? null
                         : waterQualities[endUse.qualityClass][key]
                     }
