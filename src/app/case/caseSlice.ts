@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { RootState } from '../store'
-import { treatmentTrains } from '../data/model'
+import { treatmentTrains, WaterQuality, waterQualityFactors } from '../data/model'
 
 type CaseState = {
   step: number
@@ -13,7 +13,7 @@ type CaseState = {
     custom: boolean
     category: number
     qualityClass?: number
-    customValues?: {}[]
+    customValues: {}
     quantity?: number
   }
   endUse: {
@@ -47,7 +47,27 @@ const initialState: CaseState = {
   step: 0,
   completedSteps: [0, 0, 0, 0],
   commInfo: { countryID: 0, currency: 1 }, //Peru is the defaul country with local currency
-  input: { custom: false, category: 28 }, //Peru is the default category
+  input: {
+    custom: false,
+    category: 28,
+    customValues: {
+      //Peru is the default category
+      name: 'custom',
+      turbidity: NaN,
+      tss: NaN,
+      bod: NaN,
+      cod: NaN,
+      tn: NaN,
+      tp: NaN,
+      fc: NaN,
+      tc: NaN,
+      tds: NaN,
+      nitrate: NaN,
+      toc: NaN,
+      virus: NaN,
+      helminths: NaN,
+    },
+  },
   endUse: { category: 29 },
   solution: {
     noneNeeded: true,
@@ -94,6 +114,7 @@ export const caseSlice = createSlice({
     },
     setCustomInputValues: (state, action) => {
       state.input.customValues = action.payload
+      console.log(action.payload)
     },
     setInputQualityCategory: (state, action) => {
       state.input.category = action.payload

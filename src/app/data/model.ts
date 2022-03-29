@@ -85,7 +85,7 @@ export interface WaterQualityCategory {
 export const waterQualityCategories: Array<WaterQualityCategory> =
   waterQualityCategoriesJSON as Array<WaterQualityCategory>
 
-export interface WaterQuality {
+export interface PresetWaterQuality {
   id: number
   name: string
   nameEs: string
@@ -108,6 +108,25 @@ export interface WaterQuality {
   reference: string
   referenceEs: string
 }
+
+export interface CustomWaterQuality {
+  name: string
+  turbidity?: number
+  tss?: number
+  bod?: number
+  cod?: number
+  tn?: number
+  tp?: number
+  fc?: number
+  tc?: number
+  tds?: number
+  nitrate?: number
+  toc?: number
+  virus?: number
+  helminths?: number
+}
+
+export type WaterQuality = PresetWaterQuality // | CustomWaterQuality
 
 function NaNifier(value: any) {
   if (value === null) {

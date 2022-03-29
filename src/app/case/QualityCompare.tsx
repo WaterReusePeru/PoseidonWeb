@@ -18,7 +18,7 @@ export default function QualityCompare() {
   return (
     <>
       <Grid item container xs={12} justifyContent="space-evenly" alignItems="center">
-        {input.qualityClass !== undefined && endUse.qualityClass === undefined
+        {input.qualityClass && !endUse.qualityClass
           ? waterQualityFactors.map((f, index) => {
               const key = f.name as keyof WaterQuality
 
@@ -28,9 +28,11 @@ export default function QualityCompare() {
                     factor={f.name}
                     unit={f.unit}
                     input={
+                      /* input.custom ?
+                      input.customValues![key] : */
                       input.qualityClass === undefined
                         ? null
-                        : waterQualities[input.qualityClass][key] < 0
+                        : waterQualities[input.qualityClass][key] === NaN
                         ? null
                         : waterQualities[input.qualityClass][key]
                     }
@@ -50,14 +52,14 @@ export default function QualityCompare() {
                     input={
                       input.qualityClass === undefined
                         ? null
-                        : waterQualities[input.qualityClass][key] < 0
+                        : waterQualities[input.qualityClass][key] === NaN
                         ? null
                         : waterQualities[input.qualityClass][key]
                     }
                     output={
                       endUse.qualityClass === undefined
                         ? null
-                        : waterQualities[endUse.qualityClass][key] < 0
+                        : waterQualities[endUse.qualityClass][key] === NaN
                         ? null
                         : waterQualities[endUse.qualityClass][key]
                     }
