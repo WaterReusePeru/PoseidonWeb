@@ -34,7 +34,7 @@ export default function InputPresets() {
           isOptionEqualToValue={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setInputQualityCategory(newValue.id))}
           disableClearable
-          value={input.category !== null ? waterQualityCategories[input.category] : undefined}
+          value={input.category ? waterQualityCategories[input.category] : undefined}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
         />
       </Grid>

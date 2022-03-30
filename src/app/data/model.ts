@@ -110,7 +110,7 @@ export interface PresetWaterQuality {
 }
 
 export interface CustomWaterQuality {
-  name: string
+  id: number
   turbidity?: number
   tss?: number
   bod?: number
@@ -126,7 +126,7 @@ export interface CustomWaterQuality {
   helminths?: number
 }
 
-export type WaterQuality = PresetWaterQuality // | CustomWaterQuality
+export type WaterQuality = PresetWaterQuality | CustomWaterQuality
 
 function NaNifier(value: any) {
   if (value === null) {
@@ -137,7 +137,8 @@ function NaNifier(value: any) {
 
 const waterQualitiesJSONNaNified = NaNifier(waterQualitiesJSON)
 
-export const waterQualities: ReadonlyArray<WaterQuality> = waterQualitiesJSONNaNified as ReadonlyArray<WaterQuality>
+export const waterQualities: ReadonlyArray<PresetWaterQuality> =
+  waterQualitiesJSONNaNified as ReadonlyArray<PresetWaterQuality>
 
 export interface WaterQualityFactor {
   id: number

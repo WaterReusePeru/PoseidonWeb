@@ -64,6 +64,18 @@ export const Bar = (props: { input?: any; output?: any; factor: string; average?
     }
   }
 
+  var logarithmic
+
+  if (data[0] && data[1]) {
+    if (
+      data[0][props.factor].toString().length - data[1][props.factor].toString().length >= 3 ||
+      data[0][props.factor].toString().length - data[1][props.factor].toString().length <= -3
+    ) {
+      logarithmic = true
+      console.log('loggy')
+    }
+  }
+
   return (
     <div style={{ height: 250, width: 100 }}>
       <ResponsiveBar
@@ -72,7 +84,7 @@ export const Bar = (props: { input?: any; output?: any; factor: string; average?
         keys={[props.factor]}
         margin={{ top: 10, right: 0, bottom: 50, left: 0 }}
         padding={0.3}
-        valueScale={{ type: 'linear' }}
+        valueScale={{ type: logarithmic !== undefined ? 'symlog' : 'linear' }}
         indexScale={{ type: 'band', round: true }}
         colors={(d) => d.data.color}
         colorBy="id"

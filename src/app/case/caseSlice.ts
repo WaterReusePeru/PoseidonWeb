@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { RootState } from '../store'
-import { treatmentTrains } from '../data/model'
+import { CustomWaterQuality, treatmentTrains } from '../data/model'
 
 type CaseState = {
   step: number
@@ -13,7 +13,8 @@ type CaseState = {
     custom: boolean
     category: number
     qualityClass?: number
-    customValues: {}
+    customValues: CustomWaterQuality
+    customValueEntered: boolean
     quantity?: number
   }
   endUse: {
@@ -49,10 +50,9 @@ const initialState: CaseState = {
   commInfo: { countryID: 0, currency: 1 }, //Peru is the defaul country with local currency
   input: {
     custom: false,
-    category: 28,
+    category: 28, //Peru is the default category
     customValues: {
-      //Peru is the default category
-      name: 'custom',
+      id: 100,
       turbidity: NaN,
       tss: NaN,
       bod: NaN,
@@ -67,6 +67,7 @@ const initialState: CaseState = {
       virus: NaN,
       helminths: NaN,
     },
+    customValueEntered: false,
   },
   endUse: { category: 29 },
   solution: {
@@ -114,7 +115,10 @@ export const caseSlice = createSlice({
     },
     setCustomInputValues: (state, action) => {
       state.input.customValues = action.payload
-      console.log(action.payload)
+      state.input.customValueEntered = true
+      if (state.input.quantity) {
+        state.completedSteps[1] = 1
+      }
     },
     setInputQualityCategory: (state, action) => {
       state.input.category = action.payload
@@ -132,7 +136,7 @@ export const caseSlice = createSlice({
       if (!action.payload) {
         state.completedSteps[1] = 0
       }
-      if (action.payload && state.input.qualityClass) state.completedSteps[1] = 1
+      if (action.payload && (state.input.qualityClass || state.input.customValueEntered)) state.completedSteps[1] = 1
     },
     setEndUseQualityCategory: (state, action) => {
       state.endUse.category = action.payload
@@ -158,7 +162,7 @@ export const caseSlice = createSlice({
     },
     setSolutions: (state, action) => {
       action.payload.forEach((treatment: any, index: any) => {
-        console.log(action.payload)
+        console.log('Solutions: ', action.payload)
         state.solutions[index].treatmentTrain = treatment.treatmentTrain
         state.solutions[index].rating = treatment.rating
         state.solutions[index].capex = treatment.capex

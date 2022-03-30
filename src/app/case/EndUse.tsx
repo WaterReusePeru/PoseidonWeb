@@ -10,7 +10,7 @@ import i18next from 'i18next'
 import SolutionsBox from './SolutionsBox'
 import QualityCompare from './QualityCompare'
 
-import { waterQualityCategories, waterQualities } from '../data/model'
+import { waterQualityCategories, waterQualities, PresetWaterQuality } from '../data/model'
 
 export default function EndUse() {
   const endUse = useAppSelector((state) => state.case.endUse)
@@ -62,7 +62,7 @@ export default function EndUse() {
             id="quality"
             size="small"
             options={waterQualities.filter((q) => q.category === endUse.category)}
-            getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
+            getOptionLabel={(option) => (option.name! ? (lang === 'en' ? option.name : option.nameEs) : '')}
             isOptionEqualToValue={(option, value) => option.name === value.name}
             onChange={(event, newValue) => dispatch(setEndUseQualityClass(newValue.id))}
             disableClearable

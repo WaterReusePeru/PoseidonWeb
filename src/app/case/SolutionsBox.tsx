@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next'
 import treatmentTrains from '../data/treatmentTrains.json'
 import communityInfo from '../data/communityInfo.json'
 import unitProcesses from '../data/unitProcesses.json'
-import { waterQualities } from '../data/model'
+import { CustomWaterQuality, waterQualities } from '../data/model'
 import Tooltip from '@mui/material/Tooltip'
 import CalculateSolutions from '../case/CalculateSolutions'
 
@@ -29,12 +29,19 @@ export default function SolutionsBox() {
 
   const commState = caseState.commInfo
   const commInfo = communityInfo[caseState.commInfo.countryID!]
-  const inputQuality = waterQualities[caseState.input.qualityClass!]
+  const presetInputQuality = waterQualities[caseState.input.qualityClass!]
+  const customInputQuality = caseState.input.customValues
   const endUseQuality = waterQualities[caseState.endUse.qualityClass!]
   const quantity = caseState.input.quantity
   const sortByRating = caseState.solution.sortByRating
 
-  CalculateSolutions(inputQuality, endUseQuality, quantity!, sortByRating, commInfo) //TODO: !
+  CalculateSolutions(
+    caseState.input.custom ? customInputQuality : presetInputQuality,
+    endUseQuality,
+    quantity!,
+    sortByRating,
+    commInfo
+  ) //TODO: !
 
   const handleChangePriority = () => {
     dispatch(setSolutionsortByRating(!sortByRating))

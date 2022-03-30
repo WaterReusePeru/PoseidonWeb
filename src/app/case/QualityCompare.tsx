@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { Bar } from './Bar'
 import { useTheme } from '@mui/material/styles'
 
-import { waterQualities, WaterQuality, waterQualityFactors } from '../data/model'
+import { CustomWaterQuality, waterQualities, WaterQuality, waterQualityFactors } from '../data/model'
 
 export default function QualityCompare() {
   const endUse = useAppSelector((state) => state.case.endUse)
@@ -18,7 +18,55 @@ export default function QualityCompare() {
   return (
     <>
       <Grid item container xs={12} justifyContent="space-evenly" alignItems="center">
-        {input.qualityClass && !endUse.qualityClass
+        {input.custom
+          ? !endUse.qualityClass
+            ? waterQualityFactors.map((f, index) => {
+                const key = f.name as keyof WaterQuality
+
+                return (
+                  <div key={index} style={{ width: 'calc(1/6*80%' }}>
+                    <Bar
+                      factor={f.name}
+                      unit={f.unit}
+                      input={
+                        input.customValues === undefined
+                          ? null
+                          : isNaN(Number(input.customValues[key]))
+                          ? null
+                          : input.customValues[key]
+                      }
+                      average={waterQualities[0][key]}
+                    />
+                  </div>
+                )
+              })
+            : waterQualityFactors.map((f, index) => {
+                const key = f.name as keyof WaterQuality
+
+                return (
+                  <div key={index} style={{ width: 'calc(1/6*80%' }}>
+                    <Bar
+                      factor={f.name}
+                      unit={f.unit}
+                      input={
+                        input.customValues === undefined
+                          ? null
+                          : isNaN(Number(input.customValues[key]))
+                          ? null
+                          : input.customValues[key]
+                      }
+                      output={
+                        endUse.qualityClass === undefined
+                          ? null
+                          : isNaN(Number(waterQualities[endUse.qualityClass][key]))
+                          ? null
+                          : waterQualities[endUse.qualityClass][key]
+                      }
+                    />
+                  </div>
+                )
+              })
+          : input.qualityClass && !endUse.qualityClass
           ? waterQualityFactors.map((f, index) => {
               const key = f.name as keyof WaterQuality
 
@@ -28,8 +76,6 @@ export default function QualityCompare() {
                     factor={f.name}
                     unit={f.unit}
                     input={
-                      /* input.custom ?
-                      input.customValues![key] : */
                       input.qualityClass === undefined
                         ? null
                         : isNaN(Number(waterQualities[input.qualityClass][key]))

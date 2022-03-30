@@ -5,10 +5,12 @@ import TextField from '@mui/material/TextField'
 import { useDispatch } from 'react-redux'
 import { setCustomInputValues } from './caseSlice'
 import { useTranslation } from 'react-i18next'
-import { WaterQuality, waterQualityFactors } from '../data/model'
+import { CustomWaterQuality, WaterQuality, waterQualityFactors } from '../data/model'
+import { useAppSelector } from '../hooks'
 
 export default function InputCustomValues() {
   const dispatch = useDispatch()
+  const input = useAppSelector((state) => state.case.input)
 
   const { t } = useTranslation()
 
@@ -16,11 +18,11 @@ export default function InputCustomValues() {
     id: number
     name: string
     validity: boolean
-    value: number
+    value: number | undefined
   }
 
   var customInputState = waterQualityFactors.map((f, index) => {
-    return { id: f.id, name: f.name, validity: true, value: NaN }
+    return { id: f.id, name: f.name, validity: true, value: input.customValues[f.name as keyof WaterQuality] }
   })
 
   const [customInput, setCustomInput] = React.useState(customInputState)
@@ -30,17 +32,16 @@ export default function InputCustomValues() {
     let tempCustomInput: Array<CustomInput> = []
     customInput.forEach((val) => tempCustomInput.push(Object.assign({}, val)))
 
+    tempCustomInput[objIndex].value = value
+
+    setCustomInput(tempCustomInput)
+
+    const customInputObject = tempCustomInput.reduce((obj, item) => Object.assign(obj, { [item.name]: item.value }), {})
+
+    dispatch(setCustomInputValues(customInputObject))
+
     if (value >= 1 && value <= maxValue && Number.isInteger(Number(value))) {
       tempCustomInput[objIndex].validity = true
-      tempCustomInput[objIndex].value = value
-      setCustomInput(tempCustomInput)
-
-      const customInputObject = tempCustomInput.reduce(
-        (obj, item) => Object.assign(obj, { [item.name]: item.value }),
-        {}
-      )
-
-      dispatch(setCustomInputValues(customInputObject))
     } else {
       tempCustomInput[objIndex].validity = false
       setCustomInput(tempCustomInput)
@@ -61,9 +62,7 @@ export default function InputCustomValues() {
               <TextField
                 error={!customInput[f.id].validity}
                 size="small"
-                helperText={
-                  !customInput[f.id].validity ? t('Number should be integer and between 1 and') + ' ' + f.maxValue : ' '
-                }
+                helperText={!customInput[f.id].validity ? t('Should be between 1 and') + ' ' + f.maxValue : ' '}
                 id={f.name}
                 type="number"
                 variant="outlined"
@@ -71,7 +70,7 @@ export default function InputCustomValues() {
                   shrink: true,
                 }}
                 onChange={(event) => handleChangeQuantity(f.id, Number(event.target.value), Number(f.maxValue))}
-                value={undefined}
+                value={input.customValues[key] ? input.customValues[key] : ''}
                 InputProps={{
                   endAdornment: <InputAdornment position="end">{f.unit}</InputAdornment>,
                 }}

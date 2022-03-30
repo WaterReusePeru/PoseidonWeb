@@ -37,7 +37,7 @@ export default function Input() {
       dispatch(setInputQuantity(value))
     } else {
       setValidQuantity(false)
-      dispatch(setInputQuantity(null))
+      dispatch(setInputQuantity(value))
     }
   }
 
@@ -96,7 +96,7 @@ export default function Input() {
           <TextField
             error={!validQuantity}
             size="small"
-            helperText={!validQuantity ? t("Number must be integer and between 1 and 20'000") : ' '}
+            helperText={!validQuantity ? t('Should be between 1 and') + " 20'000" : ''}
             id="standard-number"
             type="number"
             variant="outlined"
@@ -104,7 +104,7 @@ export default function Input() {
               shrink: true,
             }}
             onChange={(event) => handleChangeQuantity(Number(event.target.value))}
-            value={input.quantity !== null ? input.quantity : null}
+            value={input.quantity != null ? input.quantity : ''}
             InputProps={{
               endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>,
             }}
