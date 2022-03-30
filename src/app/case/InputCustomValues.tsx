@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField'
 import { useDispatch } from 'react-redux'
 import { setCustomInputValues } from './caseSlice'
 import { useTranslation } from 'react-i18next'
-import { CustomWaterQuality, WaterQuality, waterQualityFactors } from '../data/model'
+import { WaterQuality, waterQualityFactors } from '../data/model'
 import { useAppSelector } from '../hooks'
 
 export default function InputCustomValues() {

@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next'
 import treatmentTrains from '../data/treatmentTrains.json'
 import communityInfo from '../data/communityInfo.json'
 import unitProcesses from '../data/unitProcesses.json'
-import { CustomWaterQuality, waterQualities } from '../data/model'
+import { waterQualities } from '../data/model'
 import Tooltip from '@mui/material/Tooltip'
 import CalculateSolutions from '../case/CalculateSolutions'
 

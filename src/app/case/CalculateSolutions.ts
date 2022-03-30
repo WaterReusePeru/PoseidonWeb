@@ -1,13 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { setSolutionCount, setSolutionNoneAvailable, setSolutionNoneNeeded, setSolutions } from './caseSlice'
-import {
-  WaterQuality,
-  OutputQuality,
-  QualityFactor,
-  CommunityInfo,
-  waterQualityFactors,
-  CustomWaterQuality,
-} from '../data/model'
+import { WaterQuality, OutputQuality, QualityFactor, CommunityInfo, waterQualityFactors } from '../data/model'
 
 import { findSuitableTreatments } from './findSuitableTreatments'
 

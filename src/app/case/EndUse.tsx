@@ -10,7 +10,7 @@ import i18next from 'i18next'
 import SolutionsBox from './SolutionsBox'
 import QualityCompare from './QualityCompare'
 
-import { waterQualityCategories, waterQualities, PresetWaterQuality } from '../data/model'
+import { waterQualityCategories, waterQualities } from '../data/model'
 
 export default function EndUse() {
   const endUse = useAppSelector((state) => state.case.endUse)
