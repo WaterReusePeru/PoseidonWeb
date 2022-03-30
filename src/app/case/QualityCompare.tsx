@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { Bar } from './Bar'
 import { useTheme } from '@mui/material/styles'
 
-import { CustomWaterQuality, waterQualities, WaterQuality, waterQualityFactors } from '../data/model'
+import { waterQualities, WaterQuality, waterQualityFactors } from '../data/model'
 
 export default function QualityCompare() {
   const endUse = useAppSelector((state) => state.case.endUse)
