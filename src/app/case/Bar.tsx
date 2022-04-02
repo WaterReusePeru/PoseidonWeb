@@ -100,7 +100,7 @@ export const Bar = (props: { input?: any; output?: any; factor: string; average?
         }}
         labelSkipHeight={36}
         label={(d) => getLabel(d)}
-        enableGridY={false}
+        enableGridY={true}
         animate={true}
         //motionStiffness={115}
         //motionDamping={15}

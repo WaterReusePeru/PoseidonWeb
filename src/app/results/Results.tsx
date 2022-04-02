@@ -196,6 +196,22 @@ export const Results = () => {
         display: false,
       },
     },
+    {
+      name: 'OPEX',
+      label: t('Annualized OPEX'),
+      options: {
+        filter: true,
+        customBodyRenderLite: (dataIndex: number) => {
+          return showCost(
+            data[dataIndex].annualizedOMCost! +
+              data[dataIndex].annualizedEnergyCost! +
+              data[dataIndex].annualizedLaborCost! +
+              data[dataIndex].annualizedLandCost!
+          )
+        },
+        display: true,
+      },
+    },
 
     {
       name: 'capex',
