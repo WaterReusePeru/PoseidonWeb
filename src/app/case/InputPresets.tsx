@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import { useDispatch } from 'react-redux'
-import { useAppSelector } from '../hooks'
+import { compare, useAppSelector } from '../hooks'
 import Autocomplete from '@mui/material/Autocomplete'
 import { waterQualityCategories, waterQualities } from '../data/model'
 import { setInputQualityCategory, setInputQualityClass } from './caseSlice'
@@ -16,8 +16,6 @@ export default function InputPresets() {
   const { t } = useTranslation()
   const lang = i18next.language
 
-  const waterQualityCategoryOptions = waterQualityCategories.filter((category) => category.input)
-
   const waterQualityOptions = waterQualities.filter((q) => q.category === input.category)
 
   return (
@@ -29,7 +27,7 @@ export default function InputPresets() {
         <Autocomplete
           id="category"
           size="small"
-          options={waterQualityCategoryOptions}
+          options={waterQualityCategories.filter((category) => category.input).sort(compare)}
           getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined!)}
           isOptionEqualToValue={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setInputQualityCategory(newValue.id))}

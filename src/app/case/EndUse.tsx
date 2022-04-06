@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import { useDispatch } from 'react-redux'
-import { useAppSelector } from '../hooks'
+import { compare, useAppSelector } from '../hooks'
 import Autocomplete from '@mui/material/Autocomplete'
 import { setEndUseQualityCategory, setEndUseQualityClass } from './caseSlice'
 import { useTranslation } from 'react-i18next'
@@ -44,7 +44,7 @@ export default function EndUse() {
           <Autocomplete
             id="category"
             size="small"
-            options={waterQualityCategories.filter((category) => category.input === false)}
+            options={waterQualityCategories.filter((category) => category.input === false).sort(compare)}
             getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
             isOptionEqualToValue={(option, value) => option.name === value.name}
             onChange={(event, newValue) => dispatch(setEndUseQualityCategory(newValue.id))}

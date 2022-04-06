@@ -62,7 +62,7 @@ export default function InputCustomValues() {
               <TextField
                 error={!customInput[f.id].validity}
                 size="small"
-                helperText={!customInput[f.id].validity ? t('Should be between 1 and') + ' ' + f.maxValue : ' '}
+                helperText={!customInput[f.id].validity ? t('Expected between 1 and') + ' ' + f.maxValue : ' '}
                 id={f.name}
                 type="number"
                 variant="outlined"

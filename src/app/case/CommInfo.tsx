@@ -2,9 +2,10 @@ import { Tooltip, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import { useDispatch } from 'react-redux'
-import { useAppSelector } from '../hooks'
+import { compare, useAppSelector } from '../hooks'
 import Autocomplete from '@mui/material/Autocomplete'
 import communityInfo from '../data/communityInfo.json'
+import { communityInfos } from '../data/model'
 import { setCountry, setCurrency } from '../case/caseSlice'
 import Chip from '@mui/material/Chip'
 import { useTranslation } from 'react-i18next'
@@ -13,10 +14,6 @@ import i18next from 'i18next'
 export default function CommInfo() {
   const commInfo = useAppSelector((state) => state.case.commInfo)
   const dispatch = useDispatch()
-  const countries = []
-  communityInfo.map((country) => {
-    return countries.push(country.name)
-  })
 
   const { t } = useTranslation()
   const lang = i18next.language
@@ -42,7 +39,7 @@ export default function CommInfo() {
         <Autocomplete
           id="country"
           size="small"
-          options={communityInfo}
+          options={communityInfos.filter(() => true).sort(compare)} //Nonsense filter because TS doesn't find manage .sort() otherwise
           getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined!)}
           isOptionEqualToValue={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setCountry(newValue.id))}

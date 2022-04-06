@@ -276,10 +276,8 @@ export const Results = () => {
   const data = solutionsState.slice(0, solutionsCount)
 
   return (
-    <div className="App">
-      <StyledEngineProvider injectFirst>
-        <MUIDataTable title={t('Results')} data={data} columns={columns} options={options} />
-      </StyledEngineProvider>
-    </div>
+    <StyledEngineProvider injectFirst>
+      <MUIDataTable title={t('Results')} data={data} columns={columns} options={options} />
+    </StyledEngineProvider>
   )
 }

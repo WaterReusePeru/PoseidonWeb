@@ -58,7 +58,7 @@ export const resources = {
       day: 'día',
 
       'Water Quality Indicators': 'Indicadores de calidad del agua',
-      'Should be between 1 and': 'Debe estar entre 1 y',
+      'Expected between 1 and': 'Se espera entre 1 y',
 
       input: 'entrada',
       output: 'salida',

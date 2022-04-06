@@ -96,7 +96,7 @@ export default function Input() {
           <TextField
             error={!validQuantity}
             size="small"
-            helperText={!validQuantity ? t('Should be between 1 and') + " 20'000" : ''}
+            helperText={!validQuantity ? t('Expected between 1 and') + " 20'000" : ''}
             id="standard-number"
             type="number"
             variant="outlined"
