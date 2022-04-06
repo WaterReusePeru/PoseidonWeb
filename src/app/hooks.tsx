@@ -1,7 +1,6 @@
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
-import { CommunityInfo, PresetWaterQuality, WaterQuality, WaterQualityCategory } from './data/model'
+import { CommunityInfo, PresetWaterQuality, WaterQualityCategory } from './data/model'
 import type { RootState, AppDispatch } from './store'
-import i18next from 'i18next'
 
 // Use throughout your app instead of plain `useDispatch` and `useSelector`
 export const useAppDispatch = () => useDispatch<AppDispatch>()
