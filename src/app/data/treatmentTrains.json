@@ -619,44 +619,44 @@
     "categoryEs": "Emisario submarino",
     "description": "",
     "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
+    "case_study": "Sunass, Peru 2006",
+    "case_studyEs": "Sunass, Peru 2006",
     "unit_processes": [0, 2]
   },
   {
     "id": 52,
     "title": "Peru Type 2, 4 & 5",
     "titleEs": "Tipo Perú 2, 4 & 5",
-    "category": "Stabilization pond",
+    "category": "Stabilization Pond",
     "categoryEs": "Balsa de estabilización",
     "description": "",
     "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
+    "case_study": "Sunass, Peru 2006",
+    "case_studyEs": "Sunass, Peru 2006",
     "unit_processes": [0, 2, 15, 30]
   },
   {
     "id": 53,
     "title": "Peru Type 3",
     "titleEs": "Tipo Perú 3",
-    "category": "Stabilization pond",
+    "category": "Stabilization Pond",
     "categoryEs": "Balsa de estabilización",
     "description": "",
     "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
+    "case_study": "Sunass, Peru 2006",
+    "case_studyEs": "Sunass, Peru 2006",
     "unit_processes": [0, 2, 6, 15, 30]
   },
   {
     "id": 54,
     "title": "Peru Type 6",
     "titleEs": "Tipo Perú 6",
-    "category": "Stabilization pond",
+    "category": "Stabilization Pond",
     "categoryEs": "Balsa de estabilización",
     "description": "",
     "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
+    "case_study": "Sunass, Peru 2006",
+    "case_studyEs": "Sunass, Peru 2006",
     "unit_processes": [0, 2, 6, 15, 34]
   },
   {
@@ -667,8 +667,8 @@
     "categoryEs": "Laguna aireada",
     "description": "",
     "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
+    "case_study": "Sunass, Peru 2006",
+    "case_studyEs": "Sunass, Peru 2006",
     "unit_processes": [0, 2, 14, 4, 34]
   },
   {
@@ -679,8 +679,8 @@
     "categoryEs": "Laguna aireada",
     "description": "",
     "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
+    "case_study": "Sunass, Peru 2006",
+    "case_studyEs": "Sunass, Peru 2006",
     "unit_processes": [0, 2, 6, 14, 4, 34]
   },
   {
@@ -691,8 +691,8 @@
     "categoryEs": "Filtro percolador",
     "description": "",
     "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
+    "case_study": "Sunass, Peru 2006",
+    "case_studyEs": "Sunass, Peru 2006",
     "unit_processes": [0, 2, 4, 12, 34]
   },
   {
@@ -703,8 +703,8 @@
     "categoryEs": "Filtro percolador",
     "description": "",
     "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
+    "case_study": "Sunass, Peru 2006",
+    "case_studyEs": "Sunass, Peru 2006",
     "unit_processes": [0, 2, 12, 34]
   },
   {
@@ -715,8 +715,8 @@
     "categoryEs": "Filtro percolador",
     "description": "",
     "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
+    "case_study": "Sunass, Peru 2006",
+    "case_studyEs": "Sunass, Peru 2006",
     "unit_processes": [0, 2, 6, 12, 34]
   },
   {
@@ -727,8 +727,8 @@
     "categoryEs": "Lodos activados",
     "description": "",
     "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
+    "case_study": "Sunass, Peru 2006",
+    "case_studyEs": "Sunass, Peru 2006",
     "unit_processes": [0, 2, 4, 7, 4, 34]
   },
   {
@@ -739,8 +739,8 @@
     "categoryEs": "Lodos activados",
     "description": "",
     "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
+    "case_study": "Sunass, Peru 2006",
+    "case_studyEs": "Sunass, Peru 2006",
     "unit_processes": [0, 2, 7, 4, 34]
   },
   {
@@ -751,8 +751,8 @@
     "categoryEs": "Lodos activados",
     "description": "",
     "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
+    "case_study": "Sunass, Peru 2006",
+    "case_studyEs": "Sunass, Peru 2006",
     "unit_processes": [0, 2, 6, 7, 4, 34]
   }
 ]

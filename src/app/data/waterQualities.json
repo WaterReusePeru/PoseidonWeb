@@ -4670,7 +4670,7 @@
   },
   {
     "id": 203,
-    "name": "Untreated Wastewater (Bad Quality)",
+    "name": "Untreated Wastewater (Heavily Polluted)",
     "nameEs": "Efluente de la PTAR (calidad pobre)",
     "category": 28,
     "turbidity": null,
@@ -4693,7 +4693,7 @@
   },
   {
     "id": 204,
-    "name": "Untreated Wastewater (Good Quality)",
+    "name": "Untreated Wastewater (Slightly Polluted)",
     "nameEs": "PTAR Influente (mejor calidad)",
     "category": 28,
     "turbidity": null,
@@ -4716,7 +4716,7 @@
   },
   {
     "id": 205,
-    "name": "Untreated Wastewater (Average Quality)",
+    "name": "Untreated Wastewater (Typically Polluted)",
     "nameEs": "PTAR Influente (media calidad)",
     "category": 28,
     "turbidity": null,

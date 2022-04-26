@@ -50,7 +50,7 @@ export const CaseStepper = () => {
   return (
     <Toolbar className={classes.caseToolbar}>
       <Paper className={classes.root} square elevation={0}>
-        <Stepper activeStep={count} connector={<CustomConnector />}>
+        <Stepper activeStep={count}>
           {steps.map((label, index) => {
             const stepProps = {}
             const labelProps = {}

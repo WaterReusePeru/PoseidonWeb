@@ -2,16 +2,16 @@ import makeStyles from '@mui/styles/makeStyles'
 
 import { Theme, StyledEngineProvider } from '@mui/material/styles'
 import MUIDataTable from 'mui-datatables'
-import { options } from '../theme/tables'
+import { options } from '../../theme/tables'
 
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
-import { useAppSelector } from '../hooks'
+import { useAppSelector } from '../../hooks'
 
-import treatmentTrains from '../data/treatmentTrains.json'
-import unitProcesses from '../data/unitProcesses.json'
-import communityInfo from '../data/communityInfo.json'
+import treatmentTrains from '../../data/treatmentTrains.json'
+import unitProcesses from '../../data/unitProcesses.json'
+import communityInfo from '../../data/communityInfo.json'
 
 import Chip from '@mui/material/Chip'
 import Tooltip from '@mui/material/Tooltip'
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export const Results = () => {
+export const ResultsTable = () => {
   const classes = useStyles()
 
   const { t } = useTranslation()
@@ -111,7 +111,6 @@ export const Results = () => {
         setCellProps: () => ({ style: { minWidth: '10vw' } }),
       },
     },
-
     {
       name: 'rating',
       label: t('Rating [0-3]'),
@@ -197,17 +196,12 @@ export const Results = () => {
       },
     },
     {
-      name: 'OPEX',
+      name: 'annualizedOpex',
       label: t('Annualized OPEX'),
       options: {
         filter: true,
         customBodyRenderLite: (dataIndex: number) => {
-          return showCost(
-            data[dataIndex].annualizedOMCost! +
-              data[dataIndex].annualizedEnergyCost! +
-              data[dataIndex].annualizedLaborCost! +
-              data[dataIndex].annualizedLandCost!
-          )
+          return showCost(data[dataIndex].annualizedOpex!)
         },
         display: true,
       },
@@ -219,16 +213,7 @@ export const Results = () => {
       options: {
         filter: true,
         customBodyRenderLite: (dataIndex: number) => {
-          return commInfo.currency === 0 ? (
-            <>{Math.round(data[dataIndex].capex! * 1000).toLocaleString('de-CH')} $</>
-          ) : (
-            <>
-              {(
-                communityInfo[commInfo.countryID].exchangeToUSD * Math.round(data[dataIndex].capex! * 1000)
-              ).toLocaleString('de-CH')}{' '}
-              {communityInfo[commInfo.countryID].currency}
-            </>
-          )
+          return showCost(data[dataIndex].capex!)
         },
       },
     },
@@ -238,36 +223,27 @@ export const Results = () => {
       options: {
         filter: true,
         customBodyRenderLite: (dataIndex: number) => {
-          return commInfo.currency === 0 ? (
-            <>{Math.round(data[dataIndex].annualizedCapex! * 1000).toLocaleString('de-CH')} $</>
-          ) : (
-            <>
-              {(
-                communityInfo[commInfo.countryID].exchangeToUSD * Math.round(data[dataIndex].annualizedCapex! * 1000)
-              ).toLocaleString('de-CH')}{' '}
-              {communityInfo[commInfo.countryID].currency}
-            </>
-          )
+          return showCost(data[dataIndex].annualizedCapex!)
         },
       },
     },
     {
-      name: 'capexPerCubic',
-      label: t('CAPEX per Cubic'),
+      name: 'annualizedCost',
+      label: t('Annualized Total Cost'),
       options: {
         filter: true,
         customBodyRenderLite: (dataIndex: number) => {
-          return commInfo.currency === 0 ? (
-            <>{(Math.round(data[dataIndex].capexPerCubic! * 100000) / 100).toLocaleString('de-CH')} $</>
-          ) : (
-            <>
-              {(
-                (Math.round(data[dataIndex].capexPerCubic! * 100000) / 100) *
-                communityInfo[commInfo.countryID].exchangeToUSD
-              ).toLocaleString('de-CH')}{' '}
-              {communityInfo[commInfo.countryID].currency}
-            </>
-          )
+          return showCost(data[dataIndex].annualizedCapex! + data[dataIndex].annualizedOpex!)
+        },
+      },
+    },
+    {
+      name: 'costPerCubic',
+      label: t('Cost per Cubic'),
+      options: {
+        filter: true,
+        customBodyRenderLite: (dataIndex: number) => {
+          return showCost(data[dataIndex].costPerCubic!)
         },
       },
     },

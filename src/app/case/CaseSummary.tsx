@@ -75,10 +75,14 @@ export const CaseSummary = (props: { step: any }) => {
               <Grid container alignItems="center" direction="row" spacing={0}>
                 <ExitToAppIcon fontSize="small" color="primary" />
                 <Typography variant="caption">{t('Custom')}</Typography>
-                <BatteryFullIcon fontSize="small" color="primary" />
-                <Typography variant="caption">
-                  {caseState.input.quantity}m&sup3;/{t('day')}
-                </Typography>
+                {caseState.input.quantity ? (
+                  <div>
+                    <BatteryFullIcon fontSize="small" color="primary" />
+                    <Typography variant="caption">
+                      {caseState.input.quantity}m&sup3;/{t('day')}
+                    </Typography>
+                  </div>
+                ) : null}
               </Grid>
             ) : caseState.input.qualityClass ? (
               <Grid container alignItems="center" direction="row" spacing={0}>

@@ -41,6 +41,8 @@ type CaseState = {
     annualizedLaborCost?: number
     otherOM?: number
     annualizedOMCost: number
+    annualizedOpex: number
+    costPerCubic: number
   }[]
 }
 
@@ -82,6 +84,8 @@ const initialState: CaseState = {
     capex: undefined,
     annualizedCapex: undefined,
     capexPerCubic: undefined,
+    annualizedOpex: undefined,
+    costPerCubic: undefined,
   }),
 }
 
@@ -176,6 +180,8 @@ export const caseSlice = createSlice({
         state.solutions[index].annualizedLaborCost = treatment.annualizedLaborCost
         state.solutions[index].otherOM = treatment.otherOM
         state.solutions[index].annualizedOMCost = treatment.annualizedOMCost
+        state.solutions[index].annualizedOpex = treatment.annualizedOpex
+        state.solutions[index].costPerCubic = treatment.costPerCubic
       })
     },
     setSolutionsortByRating: (state, action) => {

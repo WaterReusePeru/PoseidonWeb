@@ -131,6 +131,12 @@ export function findSuitableTreatments(
         otherOM: outputCostPerFactor['other_om'],
         annualizedOMCost: annualizedOMCost,
 
+        annualizedOpex: annualizedLandCost + annualizedEnergyCost + annualizedLaborCost + annualizedOMCost,
+
+        costPerCubic:
+          (annualizedCapex + annualizedLandCost + annualizedEnergyCost + annualizedLaborCost + annualizedOMCost) /
+          (amount * 365),
+
         rating: rating / treatmentTrain.unit_processes!.length / evaluationCriteria.length, //TODO: !
       })
     }

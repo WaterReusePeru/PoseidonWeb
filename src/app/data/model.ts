@@ -183,8 +183,10 @@ export interface OutputQuality {
   annualizedOMCost: number
   capex: number
   annualizedCapex: number
-  capexPerCubic: number
+  capexPerCubic: number //not needed
   rating: number
+  costPerCubic: number
+  annualizedOpex: number
 }
 
 export type QualityFactor = 'turbidity' | 'tss' | 'bod' | 'cod' | 'fc' | 'tc'
