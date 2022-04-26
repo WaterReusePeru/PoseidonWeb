@@ -1,30 +1,6 @@
-import makeStyles from '@mui/styles/makeStyles'
-
-import { Theme } from '@mui/material/styles'
-
-import { useTranslation } from 'react-i18next'
-import i18next from 'i18next'
-
-import { useAppSelector } from '../../hooks'
+//import { useAppSelector } from '../../hooks'
 
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
-
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  chipContainer: {
-    display: 'flex',
-    justifyContent: 'left',
-    flexWrap: 'wrap',
-    '& > *': {
-      margin: 2,
-    },
-  },
-  chip: {
-    backgroundColor: theme.palette.primary.main,
-  },
-}))
 
 export const ResultsGraph = () => {
   //const solutionsState = useAppSelector((state) => state.case.solutions)

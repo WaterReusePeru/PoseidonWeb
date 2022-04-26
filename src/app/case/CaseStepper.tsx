@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-const CustomConnector = withStyles({
+/* const CustomConnector = withStyles({
   root: {
     alignSelf: 'flex-start',
     paddingTop: '13px', //This hardcoded value sets the line in the middle of the stepper icons. It's not optimal.
@@ -30,7 +30,7 @@ const CustomConnector = withStyles({
   line: {
     borderRadius: 1,
   },
-})(StepConnector)
+})(StepConnector) */
 
 export const CaseStepper = () => {
   const { t } = useTranslation()
