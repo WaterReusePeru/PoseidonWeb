@@ -28,11 +28,9 @@ export const ResultsGraph = () => {
   let factorsArray = Object.keys(obj).map((key) => {
     if (obj[key] !== undefined) {
       return [key, obj[key]]
+    } else {
+      return null
     }
-  })
-
-  const result = Object.keys(obj).map(function (key) {
-    return [key, obj[key]]
   })
 
   console.log('Factors: ' + factorsArray)
