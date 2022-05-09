@@ -142,7 +142,5 @@ export function findSuitableTreatments(
     }
   })
 
-  console.log(outputQualities)
-
   return outputQualities!
 }

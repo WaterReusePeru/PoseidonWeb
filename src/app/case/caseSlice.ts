@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { RootState } from '../store'
-import { CustomWaterQuality, treatmentTrains } from '../data/model'
+import { treatmentTrains, ValueWaterQuality } from '../data/model'
 
 type CaseState = {
   step: number
@@ -13,7 +13,7 @@ type CaseState = {
     custom: boolean
     category: number
     qualityClass?: number
-    customValues: CustomWaterQuality
+    customValues: ValueWaterQuality
     customValueEntered: boolean
     quantity?: number
   }
@@ -40,9 +40,11 @@ type CaseState = {
     laborRequirements?: number
     annualizedLaborCost?: number
     otherOM?: number
+    outputValues?: ValueWaterQuality
     annualizedOMCost: number
     annualizedOpex: number
     costPerCubic: number
+    values: ValueWaterQuality
   }[]
 }
 
@@ -86,6 +88,15 @@ const initialState: CaseState = {
     capexPerCubic: undefined,
     annualizedOpex: undefined,
     costPerCubic: undefined,
+    values: {
+      id: 100,
+      turbidity: NaN,
+      tss: NaN,
+      bod: NaN,
+      cod: NaN,
+      fc: NaN,
+      tc: NaN,
+    },
   }),
 }
 
@@ -166,7 +177,6 @@ export const caseSlice = createSlice({
     },
     setSolutions: (state, action) => {
       action.payload.forEach((treatment: any, index: any) => {
-        console.log('Solutions: ', action.payload)
         state.solutions[index].treatmentTrain = treatment.treatmentTrain
         state.solutions[index].rating = treatment.rating
         state.solutions[index].capex = treatment.capex
@@ -182,6 +192,12 @@ export const caseSlice = createSlice({
         state.solutions[index].annualizedOMCost = treatment.annualizedOMCost
         state.solutions[index].annualizedOpex = treatment.annualizedOpex
         state.solutions[index].costPerCubic = treatment.costPerCubic
+        state.solutions[index].values.turbidity = treatment.turbidity
+        state.solutions[index].values.tss = treatment.tss
+        state.solutions[index].values.bod = treatment.bod
+        state.solutions[index].values.cod = treatment.cod
+        state.solutions[index].values.fc = treatment.fc
+        state.solutions[index].values.tc = treatment.tc
       })
     },
     setSolutionsortByRating: (state, action) => {
