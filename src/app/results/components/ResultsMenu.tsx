@@ -27,7 +27,7 @@ export const ResultsMenu = () => {
     <Paper className={classes.root} square elevation={0}>
       <Tabs value={menuPoint} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
         <Tab label={t('Table')} to={`${process.env.PUBLIC_URL}/results`} component={Link} />
-        <Tab label={t('Graphic')} to={`${process.env.PUBLIC_URL}/results`} component={Link} />
+        <Tab label={t('Graph')} to={`${process.env.PUBLIC_URL}/results`} component={Link} />
       </Tabs>
     </Paper>
   )

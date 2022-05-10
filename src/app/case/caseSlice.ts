@@ -88,15 +88,7 @@ const initialState: CaseState = {
     capexPerCubic: undefined,
     annualizedOpex: undefined,
     costPerCubic: undefined,
-    values: {
-      id: 100,
-      turbidity: NaN,
-      tss: NaN,
-      bod: NaN,
-      cod: NaN,
-      fc: NaN,
-      tc: NaN,
-    },
+    values: {},
   }),
 }
 
@@ -192,12 +184,24 @@ export const caseSlice = createSlice({
         state.solutions[index].annualizedOMCost = treatment.annualizedOMCost
         state.solutions[index].annualizedOpex = treatment.annualizedOpex
         state.solutions[index].costPerCubic = treatment.costPerCubic
-        state.solutions[index].values.turbidity = treatment.turbidity
-        state.solutions[index].values.tss = treatment.tss
-        state.solutions[index].values.bod = treatment.bod
-        state.solutions[index].values.cod = treatment.cod
-        state.solutions[index].values.fc = treatment.fc
-        state.solutions[index].values.tc = treatment.tc
+        if (treatment.turbidity) {
+          state.solutions[index].values.turbidity = treatment.turbidity
+        }
+        if (treatment.tss) {
+          state.solutions[index].values.tss = treatment.tss
+        }
+        if (treatment.bod) {
+          state.solutions[index].values.bod = treatment.bod
+        }
+        if (treatment.cod) {
+          state.solutions[index].values.cod = treatment.cod
+        }
+        if (treatment.fc) {
+          state.solutions[index].values.fc = treatment.fc
+        }
+        if (treatment.tc) {
+          state.solutions[index].values.tc = treatment.tc
+        }
       })
     },
     setSolutionsortByRating: (state, action) => {
