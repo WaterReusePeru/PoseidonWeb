@@ -35,6 +35,8 @@ export default function SolutionsBox() {
   const quantity = caseState.input.quantity
   const sortByRating = caseState.solution.sortByRating
 
+  console.log(caseState.solutions)
+
   CalculateSolutions(
     caseState.input.custom ? customInputQuality : presetInputQuality,
     endUseQuality,
@@ -76,76 +78,88 @@ export default function SolutionsBox() {
               </Grid>
             ) : null}
 
-            {caseState.solutions.slice(0, 3).map((solution, index) => (
-              <>
-                <Grid item container justifyContent="flex-start" spacing={1} xs={12}>
-                  <Grid item>
-                    <Chip label={index + 1} color="secondary" size="small" />
-                  </Grid>
-                  <Grid item>
-                    <Typography>
-                      {lang === 'en'
-                        ? treatmentTrains[solution.treatmentTrain!].category //TODO: !
-                        : treatmentTrains[solution.treatmentTrain!].categoryEs}{' '}
-                      {/* TODO: ! */}
-                    </Typography>
-                  </Grid>
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body2">{t('Case Study')}:</Typography>
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body2">{treatmentTrains[solution.treatmentTrain!].title}</Typography>{' '}
-                  {/* TODO: ! */}
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body2">{t('Rating')}:</Typography>
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body2">{Math.round(solution.rating! * 100) / 100}</Typography> {/* TODO: ! */}
-                </Grid>
-                {!isNaN(solution.capexPerCubic!) ? ( //TODO: !
+            {caseState.solutions.slice(0, 3).map((solution, index) => {
+              if (solution.treatmentTrain) {
+                return (
                   <>
-                    <Grid item xs={6}>
-                      <Typography variant="body2">{t('Treatment Cost')}:</Typography>
+                    <Grid item container justifyContent="flex-start" spacing={1} xs={12}>
+                      <Grid item>
+                        <Chip label={index + 1} color="secondary" size="small" />
+                      </Grid>
+                      <Grid item>
+                        <Typography>
+                          {lang === 'en'
+                            ? treatmentTrains[solution.treatmentTrain!].category //TODO: !
+                            : treatmentTrains[solution.treatmentTrain!].categoryEs}{' '}
+                          {/* TODO: ! */}
+                        </Typography>
+                      </Grid>
                     </Grid>
                     <Grid item xs={6}>
-                      <Typography variant="body2">
-                        {commState.currency === 0 ? (
-                          <>{(Math.round(solution.capexPerCubic! * 100000) / 100).toLocaleString('de-CH')} $/m&sup3;</> //TODO: !
-                        ) : (
-                          <>
-                            {(
-                              (Math.round(solution.capexPerCubic! * 100000) / 100) *
-                              communityInfo[commState.countryID].exchangeToUSD
-                            ) //TODO: !
-                              .toLocaleString('de-CH')}{' '}
-                            {communityInfo[commState.countryID].currency}/m&sup3;
-                          </>
-                        )}
-                      </Typography>
+                      <Typography variant="body2">{t('Case Study')}:</Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Typography variant="body2">{treatmentTrains[solution.treatmentTrain!].title}</Typography>{' '}
+                      {/* TODO: ! */}
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Typography variant="body2">{t('Rating')}:</Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Typography variant="body2">{Math.round(solution.rating! * 100) / 100}</Typography>{' '}
+                      {/* TODO: ! */}
+                    </Grid>
+                    {!isNaN(solution.capexPerCubic!) ? ( //TODO: !
+                      <>
+                        <Grid item xs={6}>
+                          <Typography variant="body2">{t('Treatment Cost')}:</Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          <Typography variant="body2">
+                            {commState.currency === 0 ? (
+                              <>
+                                {(Math.round(solution.capexPerCubic! * 100000) / 100).toLocaleString('de-CH')} $/m&sup3;
+                              </> //TODO: !
+                            ) : (
+                              <>
+                                {(
+                                  (Math.round(solution.capexPerCubic! * 100000) / 100) *
+                                  communityInfo[commState.countryID].exchangeToUSD
+                                ) //TODO: !
+                                  .toLocaleString('de-CH')}{' '}
+                                {communityInfo[commState.countryID].currency}/m&sup3;
+                              </>
+                            )}
+                          </Typography>
+                        </Grid>
+                      </>
+                    ) : (
+                      <div />
+                    )}
+                    <Grid item xs={6}>
+                      <Typography variant="body2">{t('Unit Processes')}:</Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                      {treatmentTrains[solution.treatmentTrain!].unit_processes.map(
+                        (
+                          up,
+                          index //TODO: !
+                        ) => (
+                          <Tooltip
+                            key={index}
+                            title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}
+                          >
+                            <Chip label={up} key={index} size="small" color="primary" style={{ margin: 2 }} />
+                          </Tooltip>
+                        )
+                      )}
                     </Grid>
                   </>
-                ) : (
-                  <div />
-                )}
-                <Grid item xs={6}>
-                  <Typography variant="body2">{t('Unit Processes')}:</Typography>
-                </Grid>
-                <Grid item xs={6}>
-                  {treatmentTrains[solution.treatmentTrain!].unit_processes.map(
-                    (
-                      up,
-                      index //TODO: !
-                    ) => (
-                      <Tooltip key={index} title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
-                        <Chip label={up} key={index} size="small" color="primary" style={{ margin: 2 }} />
-                      </Tooltip>
-                    )
-                  )}
-                </Grid>
-              </>
-            ))}
+                )
+              } else {
+                return null
+              }
+            })}
           </Grid>
         ) : (
           <div />

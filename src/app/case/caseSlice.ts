@@ -23,7 +23,6 @@ type CaseState = {
   }
   solution: {
     noneNeeded: boolean
-    count: number
     noneAvailable: boolean
     sortByRating: boolean
   }
@@ -78,7 +77,6 @@ const initialState: CaseState = {
     noneNeeded: true,
     noneAvailable: false,
     sortByRating: false,
-    count: 0,
   },
   solutions: Array(treatmentTrains.length).fill({
     treatmentTrain: undefined,
@@ -158,14 +156,12 @@ export const caseSlice = createSlice({
       state.solution.noneNeeded = action.payload
     },
     resetSolutions: (state) => {
+      state.solutions = initialState.solutions
       state.solution.noneNeeded = false
       state.solution.noneAvailable = false
     },
     setSolutionNoneAvailable: (state, action) => {
       state.solution.noneAvailable = action.payload
-    },
-    setSolutionCount: (state, action) => {
-      state.solution.count = action.payload
     },
     setSolutions: (state, action) => {
       action.payload.forEach((treatment: any, index: any) => {
@@ -203,6 +199,9 @@ export const caseSlice = createSlice({
           state.solutions[index].values.tc = treatment.tc
         }
       })
+      for (let i = action.payload.length; i < treatmentTrains.length; i++) {
+        state.solutions[i].treatmentTrain = undefined
+      }
     },
     setSolutionsortByRating: (state, action) => {
       state.solution.sortByRating = action.payload
@@ -228,7 +227,6 @@ export const {
   resetSolutions,
   setSolutionNoneNeeded,
   setSolutionNoneAvailable,
-  setSolutionCount,
   setSolutions,
   setSolutionsortByRating,
 } = caseSlice.actions

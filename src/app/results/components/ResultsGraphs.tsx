@@ -1,23 +1,19 @@
 import { useAppSelector } from '../../hooks'
 
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
-import { BasicTooltip } from '@nivo/tooltip'
 
-import { communityInfos, treatmentTrains, waterQualities, WaterQuality } from '../../data/model'
+import { communityInfos, treatmentTrains, waterQualities, WaterQuality, waterQualityFactors } from '../../data/model'
 
 export const ResultsGraph = () => {
   const solutionsState = useAppSelector((state) => state.case.solutions)
-  const commState = useAppSelector((state) => state.case.commInfo)
+  const commInfoState = useAppSelector((state) => state.case.commInfo)
   const endUseState = useAppSelector((state) => state.case.endUse)
 
-  console.log(solutionsState)
-
-  const currency = commState.currency === 1 ? communityInfos[commState.countryID].currency : 'USD'
+  const currency = commInfoState.currency === 1 ? communityInfos[commInfoState.countryID].currency : 'USD'
 
   const endUseQuality = waterQualities[endUseState.qualityClass!]
 
   const solutions = solutionsState.filter((solution) => {
-    console.log(solution)
     if (Object.keys(solution).length !== 0 && solution.treatmentTrain !== undefined) {
       return true
     }
@@ -28,13 +24,16 @@ export const ResultsGraph = () => {
 
   data = solutions.map((solution) => {
     const solutionData = Object.keys(solution.values).map((key) => {
+      const factor = waterQualityFactors.find((quality) => quality.name === key)
       return {
-        factor: key,
-        x: solution.costPerCubic * 1000,
-        y:
-          solution.values[key] === (NaN || undefined) && endUseQuality[key as keyof WaterQuality] === (NaN || undefined)
-            ? 100
-            : 100 * (solution.values[key] / Number(endUseQuality[key as keyof WaterQuality])),
+        factor: factor?.nameShort,
+        value: solution.values[key],
+        unit: factor?.unit,
+        x:
+          commInfoState.currency === 0
+            ? solution.costPerCubic * 1000
+            : solution.costPerCubic * communityInfos[commInfoState.countryID].exchangeToUSD * 1000,
+        y: 100 * (solution.values[key] / Number(endUseQuality[key as keyof WaterQuality])),
       }
     })
     return {
@@ -43,12 +42,10 @@ export const ResultsGraph = () => {
     }
   })
 
-  console.log(data)
-
   return (
     <ResponsiveScatterPlot
       data={data}
-      margin={{ top: 60, right: 140, bottom: 70, left: 90 }}
+      margin={{ top: 60, right: 90, bottom: 60, left: 90 }}
       xScale={{ type: 'linear', min: 0, max: 'auto' }}
       xFormat=">-.2f"
       yScale={{ type: 'linear', min: 0, max: 'auto' }}
@@ -72,50 +69,46 @@ export const ResultsGraph = () => {
         legendPosition: 'middle',
         legendOffset: -60,
       }}
-      legends={[
-        {
-          anchor: 'bottom-right',
-          direction: 'column',
-          justify: false,
-          translateX: 130,
-          translateY: 0,
-          itemWidth: 100,
-          itemHeight: 12,
-          itemsSpacing: 5,
-          itemDirection: 'left-to-right',
-          symbolSize: 12,
-          symbolShape: 'circle',
-          effects: [
-            {
-              on: 'hover',
-              style: {
-                itemOpacity: 1,
-              },
-            },
-          ],
-        },
-      ]}
-      tooltip={({ node }) => (
-        <BasicTooltip
-          id={node.serieId}
-          value={`Factor: ${node.data.factor}, x:  ${node.formattedX} ${currency}, y: ${node.formattedY} %`}
-          enableChip={true}
-          color={node.color}
-        />
-      )}
-      /* tooltip1={function ({ node }) {
-        console.log(node)
+      colors={{ scheme: 'paired' }}
+      tooltip={function ({ node }) {
         return (
-          <div>
-            <br />
-            {`Factor: ${node.data.factor}`}
-            <br />
-            {`Cost per Cubic: ${node.formattedX} ${currency}`}
-            <br />
-            {`min. Requirements met: ${node.formattedY} %`}
+          <div
+            style={{
+              background: node.color,
+              padding: '12px 16px',
+            }}
+          >
+            <table>
+              <tbody>
+                <tr>
+                  <td>Treatment Train:</td>
+                  <td>{node.serieId}</td>
+                </tr>
+                <tr>
+                  <td>Factor:</td>
+                  <td>{node.data.factor}</td>
+                </tr>
+                <tr>
+                  <td>Output Value:</td>
+                  <td>
+                    {node.data.value} {node.data.unit}
+                  </td>
+                </tr>
+                <tr>
+                  <td>Min. Requirements Met:</td>
+                  <td>{node.formattedY} %</td>
+                </tr>
+                <tr>
+                  <td>Cost Per Cubic:</td>
+                  <td>
+                    {node.formattedX} {currency}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         )
-      }} */
+      }}
     />
   )
 }

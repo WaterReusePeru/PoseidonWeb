@@ -7,14 +7,13 @@ import { options } from '../../theme/tables'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
-import { useAppSelector } from '../../hooks'
-
 import treatmentTrains from '../../data/treatmentTrains.json'
 import unitProcesses from '../../data/unitProcesses.json'
-import communityInfo from '../../data/communityInfo.json'
 
 import Chip from '@mui/material/Chip'
 import Tooltip from '@mui/material/Tooltip'
+import { communityInfos } from '../../data/model'
+import { useAppSelector } from '../../hooks'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -41,16 +40,16 @@ export const ResultsTable = () => {
   const lang = i18next.language
 
   const solutionsState = useAppSelector((state) => state.case.solutions)
-  const solutionsCount = useAppSelector((state) => state.case.solution.count)
-  const commInfo = useAppSelector((state) => state.case.commInfo)
+
+  const commInfoState = useAppSelector((state) => state.case.commInfo)
 
   function showCost(v: number) {
-    return commInfo.currency === 0 ? (
+    return commInfoState.currency === 0 ? (
       <>{Math.round(v * 1000).toLocaleString('de-CH')} $</>
     ) : (
       <>
-        {(communityInfo[commInfo.countryID].exchangeToUSD * Math.round(v * 1000)).toLocaleString('de-CH')}{' '}
-        {communityInfo[commInfo.countryID].currency}
+        {(communityInfos[commInfoState.countryID].exchangeToUSD * Math.round(v * 1000)).toLocaleString('de-CH')}{' '}
+        {communityInfos[commInfoState.countryID].currency}
       </>
     )
   }
@@ -249,7 +248,12 @@ export const ResultsTable = () => {
     },
   ]
 
-  const data = solutionsState.slice(0, solutionsCount)
+  const data = solutionsState.filter((solution) => {
+    if (Object.keys(solution).length !== 0 && solution.treatmentTrain !== undefined) {
+      return true
+    }
+    return false
+  })
 
   return (
     <StyledEngineProvider injectFirst>
