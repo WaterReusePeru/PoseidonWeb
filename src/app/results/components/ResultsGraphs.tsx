@@ -75,14 +75,18 @@ export const ResultsGraph = () => {
           <div
             style={{
               background: node.color,
-              padding: '12px 16px',
+              padding: '3px 3px',
             }}
           >
             <table>
               <tbody>
                 <tr>
-                  <td>Treatment Train:</td>
-                  <td>{node.serieId}</td>
+                  <td>
+                    <b>Treatment Train:</b>
+                  </td>
+                  <td>
+                    <b>{node.serieId}</b>
+                  </td>
                 </tr>
                 <tr>
                   <td>Factor:</td>

@@ -201,6 +201,7 @@ export const caseSlice = createSlice({
       })
       for (let i = action.payload.length; i < treatmentTrains.length; i++) {
         state.solutions[i].treatmentTrain = undefined
+        state.solutions[i].rating = undefined
       }
     },
     setSolutionsortByRating: (state, action) => {
