@@ -21,6 +21,7 @@ import { useAppSelector } from '../hooks'
 import { PoseidonWebIcon } from '../images/PoseidonWebIcon'
 import { CaseStepper } from '../case/CaseStepper'
 import { LearnMenu } from '../learn/LearnMenu'
+import { ResultsMenu } from '../results/components/ResultsMenu'
 
 const useStyles = makeStyles({
   toolbar: {
@@ -114,11 +115,12 @@ export const App = () => {
 
           <Switch>
             <Route path={`${process.env.PUBLIC_URL}/case`} component={CaseStepper} />
-            <Route path={`${process.env.PUBLIC_URL}/`} component={LearnMenu} />
             <Route path={`${process.env.PUBLIC_URL}/general`} component={LearnMenu} />
             <Route path={`${process.env.PUBLIC_URL}/waterqualities`} component={LearnMenu} />
             <Route path={`${process.env.PUBLIC_URL}/unitprocesses`} component={LearnMenu} />
             <Route path={`${process.env.PUBLIC_URL}/treatmenttrains`} component={LearnMenu} />
+            <Route path={`${process.env.PUBLIC_URL}/results`} component={ResultsMenu} />
+            <Route path={`${process.env.PUBLIC_URL}/`} component={LearnMenu} />
           </Switch>
         </AppBar>
 

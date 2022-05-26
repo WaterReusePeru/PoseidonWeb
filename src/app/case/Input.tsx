@@ -18,16 +18,12 @@ export default function Input() {
   const endUse = useAppSelector((state) => state.case.endUse)
   const dispatch = useDispatch()
 
-  const caseState = useAppSelector((state) => state.case)
-
   const { t } = useTranslation()
 
   const handleSetCustomInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newState = event.target.value === 'true' ? true : false
     dispatch(setCustomInput(newState))
   }
-
-  console.log(caseState)
 
   const [validQuantity, setValidQuantity] = React.useState(true)
 

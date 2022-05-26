@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { setSolutionCount, setSolutionNoneAvailable, setSolutionNoneNeeded, setSolutions } from './caseSlice'
+import { setSolutionNoneAvailable, setSolutionNoneNeeded, setSolutions } from './caseSlice'
 import { WaterQuality, OutputQuality, QualityFactor, CommunityInfo, waterQualityFactors } from '../data/model'
 
 import { findSuitableTreatments } from './findSuitableTreatments'
@@ -46,10 +46,6 @@ export default function CalculateSolutions(
   } else {
     dispatch(setSolutionNoneAvailable(false))
   }
-
-  console.log(topTreatments)
-
-  dispatch(setSolutionCount(topTreatments.length))
 
   dispatch(setSolutions(topTreatments))
 }

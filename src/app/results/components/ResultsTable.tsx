@@ -1,20 +1,19 @@
 import makeStyles from '@mui/styles/makeStyles'
 
 import { Theme, StyledEngineProvider } from '@mui/material/styles'
-import MUIDataTable from 'mui-datatables'
-import { options } from '../../theme/tables'
+import MUIDataTable, { MUIDataTableOptions } from 'mui-datatables'
 
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
-import { useAppSelector } from '../../hooks'
-
 import treatmentTrains from '../../data/treatmentTrains.json'
 import unitProcesses from '../../data/unitProcesses.json'
-import communityInfo from '../../data/communityInfo.json'
 
 import Chip from '@mui/material/Chip'
 import Tooltip from '@mui/material/Tooltip'
+import { communityInfos } from '../../data/model'
+import { useAppSelector } from '../../hooks'
+import { CustomToolbar } from './CustomToolbar'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -41,16 +40,16 @@ export const ResultsTable = () => {
   const lang = i18next.language
 
   const solutionsState = useAppSelector((state) => state.case.solutions)
-  const solutionsCount = useAppSelector((state) => state.case.solution.count)
-  const commInfo = useAppSelector((state) => state.case.commInfo)
+
+  const commInfoState = useAppSelector((state) => state.case.commInfo)
 
   function showCost(v: number) {
-    return commInfo.currency === 0 ? (
+    return commInfoState.currency === 0 ? (
       <>{Math.round(v * 1000).toLocaleString('de-CH')} $</>
     ) : (
       <>
-        {(communityInfo[commInfo.countryID].exchangeToUSD * Math.round(v * 1000)).toLocaleString('de-CH')}{' '}
-        {communityInfo[commInfo.countryID].currency}
+        {(communityInfos[commInfoState.countryID].exchangeToUSD * Math.round(v * 1000)).toLocaleString('de-CH')}{' '}
+        {communityInfos[commInfoState.countryID].currency}
       </>
     )
   }
@@ -243,17 +242,44 @@ export const ResultsTable = () => {
       options: {
         filter: true,
         customBodyRenderLite: (dataIndex: number) => {
-          return showCost(data[dataIndex].costPerCubic!)
+          return commInfoState.currency === 0 ? (
+            <>{Math.round(data[dataIndex].costPerCubic! * 1000).toLocaleString('de-CH')} $</>
+          ) : (
+            <>
+              {(
+                communityInfos[commInfoState.countryID].exchangeToUSD * Math.round(data[dataIndex].costPerCubic! * 1000)
+              ).toPrecision(3)}{' '}
+              {communityInfos[commInfoState.countryID].currency}
+            </>
+          )
         },
       },
     },
   ]
 
-  const data = solutionsState.slice(0, solutionsCount)
+  const data = solutionsState.filter((solution) => {
+    if (Object.keys(solution).length !== 0 && solution.treatmentTrain !== undefined) {
+      return true
+    }
+    return false
+  })
+
+  const options: MUIDataTableOptions = {
+    filter: true,
+    filterType: 'dropdown',
+    selectableRows: 'none',
+    rowsPerPage: 20,
+    print: false,
+    fixedHeader: true,
+    elevation: 0,
+    customToolbar: () => {
+      return <CustomToolbar />
+    },
+  }
 
   return (
     <StyledEngineProvider injectFirst>
-      <MUIDataTable title={t('Results')} data={data} columns={columns} options={options} />
+      <MUIDataTable title={null} data={data} columns={columns} options={options} />
     </StyledEngineProvider>
   )
 }

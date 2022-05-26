@@ -109,7 +109,8 @@ export interface PresetWaterQuality {
   referenceEs: string
 }
 
-export interface CustomWaterQuality {
+export interface ValueWaterQuality {
+  [x: string]: any
   id: number
   turbidity?: number
   tss?: number
@@ -126,7 +127,7 @@ export interface CustomWaterQuality {
   helminths?: number
 }
 
-export type WaterQuality = PresetWaterQuality | CustomWaterQuality
+export type WaterQuality = PresetWaterQuality | ValueWaterQuality
 
 function NaNifier(value: any) {
   if (value === null) {

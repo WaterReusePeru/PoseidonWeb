@@ -72,12 +72,11 @@ export const Bar = (props: { input?: any; output?: any; factor: string; average?
       data[0][props.factor].toString().length - data[1][props.factor].toString().length <= -3
     ) {
       logarithmic = true
-      console.log('loggy')
     }
   }
 
   return (
-    <div style={{ height: 250, width: 100 }}>
+    <div style={{ height: 250, width: 120 }}>
       <ResponsiveBar
         data={data}
         indexBy="name"

@@ -17,3 +17,14 @@ export function compare(a: Comparable, b: Comparable) {
   }
   return 0
 }
+
+export function showCost(v: number, commInfo: any, communityInfos: any) {
+  return commInfo.currency === 0 ? (
+    <>{Math.round(v * 1000).toLocaleString('de-CH')} $</>
+  ) : (
+    <>
+      {(communityInfos[commInfo.countryID].exchangeToUSD * Math.round(v * 1000)).toLocaleString('de-CH')}{' '}
+      {communityInfos[commInfo.countryID].currency}
+    </>
+  )
+}
