@@ -264,10 +264,6 @@ export const ResultsTable = () => {
     return false
   })
 
-  const handleClick = () => {
-    console.log('clicked on icon!')
-  }
-
   const options: MUIDataTableOptions = {
     filter: true,
     filterType: 'dropdown',

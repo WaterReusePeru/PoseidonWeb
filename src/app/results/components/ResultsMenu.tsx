@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 export const ResultsMenu = () => {
-  const { t } = useTranslation()
+  //const { t } = useTranslation()
 
   const classes = useStyles()
 
