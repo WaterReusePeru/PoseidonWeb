@@ -102,6 +102,8 @@ export function findSuitableTreatments(
       }
     })
 
+    console.log(treatmentTrain.title, outputQualityPerFactor)
+
     if (suitableTreatmentTrain && outputQualityPerFactor! && outputCostPerFactor!) {
       //TODO: !
       outputQualities.push({
@@ -142,5 +144,7 @@ export function findSuitableTreatments(
     }
   })
 
-  return outputQualities!
+  console.log(outputQualities)
+
+  return outputQualities
 }

@@ -1,8 +1,7 @@
 import React from 'react'
 
 import makeStyles from '@mui/styles/makeStyles'
-import { Link } from 'react-router-dom'
-import { Paper, Theme, Tabs, Tab } from '@mui/material'
+import { Paper, Theme, Tabs } from '@mui/material'
 
 import { useTranslation } from 'react-i18next'
 
@@ -26,8 +25,10 @@ export const ResultsMenu = () => {
   return (
     <Paper className={classes.root} square elevation={0}>
       <Tabs value={menuPoint} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
+        {/*
         <Tab label={t('Table')} to={`${process.env.PUBLIC_URL}/results`} component={Link} />
         <Tab label={t('Graph')} to={`${process.env.PUBLIC_URL}/results`} component={Link} />
+        */}
       </Tabs>
     </Paper>
   )

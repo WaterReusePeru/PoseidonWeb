@@ -76,7 +76,7 @@ export const Bar = (props: { input?: any; output?: any; factor: string; average?
   }
 
   return (
-    <div style={{ height: 250, width: 100 }}>
+    <div style={{ height: 250, width: 120 }}>
       <ResponsiveBar
         data={data}
         indexBy="name"

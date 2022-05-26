@@ -57,7 +57,7 @@ export const ResultsGraph = () => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'Cost Cer Cubic [' + currency + ']',
+        legend: 'Cost per Cubic [' + currency + ']',
         legendPosition: 'middle',
         legendOffset: 46,
       }}
@@ -76,6 +76,7 @@ export const ResultsGraph = () => {
             style={{
               background: node.color,
               padding: '3px 3px',
+              fontSize: '12px',
             }}
           >
             <table>
@@ -95,7 +96,7 @@ export const ResultsGraph = () => {
                 <tr>
                   <td>Output Value:</td>
                   <td>
-                    {node.data.value} {node.data.unit}
+                    {node.data.value.toPrecision(3)} {node.data.unit}
                   </td>
                 </tr>
                 <tr>

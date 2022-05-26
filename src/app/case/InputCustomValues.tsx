@@ -40,7 +40,7 @@ export default function InputCustomValues() {
 
     dispatch(setCustomInputValues(customInputObject))
 
-    if (value >= 1 && value <= maxValue && Number.isInteger(Number(value))) {
+    if (value > 0 && value <= maxValue) {
       tempCustomInput[objIndex].validity = true
     } else {
       tempCustomInput[objIndex].validity = false
