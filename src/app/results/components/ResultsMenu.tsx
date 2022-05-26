@@ -3,7 +3,7 @@ import React from 'react'
 import makeStyles from '@mui/styles/makeStyles'
 import { Paper, Theme, Tabs } from '@mui/material'
 
-import { useTranslation } from 'react-i18next'
+//import { useTranslation } from 'react-i18next'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
