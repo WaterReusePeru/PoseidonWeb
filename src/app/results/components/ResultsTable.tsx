@@ -39,8 +39,6 @@ export const ResultsTable = () => {
 
   const lang = i18next.language
 
-  const inputState = useAppSelector((state) => state.case.input)
-
   const solutionsState = useAppSelector((state) => state.case.solutions)
 
   const commInfoState = useAppSelector((state) => state.case.commInfo)
