@@ -48,7 +48,7 @@ export const ResultsTable = () => {
       <>{Math.round(v * 1000).toLocaleString('de-CH')} $</>
     ) : (
       <>
-        {(communityInfos[commInfoState.countryID].exchangeToUSD * Math.round(v * 1000)).toLocaleString('de-CH')}{' '}
+        {(communityInfos[commInfoState.countryID].exchangeToUSD * Math.round(v * 10) * 100).toLocaleString('de-CH')}{' '}
         {communityInfos[commInfoState.countryID].currency}
       </>
     )
@@ -243,11 +243,12 @@ export const ResultsTable = () => {
         filter: true,
         customBodyRenderLite: (dataIndex: number) => {
           return commInfoState.currency === 0 ? (
-            <>{Math.round(data[dataIndex].costPerCubic! * 1000).toLocaleString('de-CH')} $</>
+            <>{(data[dataIndex].costPerCubic! * 1000).toLocaleString('de-CH')} $</>
           ) : (
             <>
               {(
-                communityInfos[commInfoState.countryID].exchangeToUSD * Math.round(data[dataIndex].costPerCubic! * 1000)
+                communityInfos[commInfoState.countryID].exchangeToUSD *
+                (data[dataIndex].costPerCubic! * 1000)
               ).toPrecision(3)}{' '}
               {communityInfos[commInfoState.countryID].currency}
             </>
