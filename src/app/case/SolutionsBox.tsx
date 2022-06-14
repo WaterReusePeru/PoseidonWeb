@@ -27,7 +27,7 @@ export default function SolutionsBox() {
   const { t } = useTranslation()
   const lang = i18next.language
 
-  const commState = caseState.commInfo
+  const commInfoState = caseState.commInfo
   const commInfo = communityInfo[caseState.commInfo.countryID!]
   const presetInputQuality = waterQualities[caseState.input.qualityClass!]
   const customInputQuality = caseState.input.customValues
@@ -116,18 +116,15 @@ export default function SolutionsBox() {
                         </Grid>
                         <Grid item xs={6}>
                           <Typography variant="body2">
-                            {commState.currency === 0 ? (
-                              <>
-                                {(Math.round(solution.capexPerCubic! * 100000) / 100).toLocaleString('de-CH')} $/m&sup3;
-                              </> //TODO: !
+                            {commInfoState.currency === 0 ? (
+                              <>{(solution.costPerCubic! * 1000).toLocaleString('de-CH')} $</>
                             ) : (
                               <>
                                 {(
-                                  (Math.round(solution.capexPerCubic! * 100000) / 100) *
-                                  communityInfo[commState.countryID].exchangeToUSD
-                                ) //TODO: !
-                                  .toLocaleString('de-CH')}{' '}
-                                {communityInfo[commState.countryID].currency}/m&sup3;
+                                  communityInfo[commInfoState.countryID].exchangeToUSD *
+                                  (solution.costPerCubic! * 1000)
+                                ).toPrecision(3)}{' '}
+                                {communityInfo[commInfoState.countryID].currency}
                               </>
                             )}
                           </Typography>

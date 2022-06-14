@@ -33,7 +33,7 @@ export default function CalculateSolutions(
     if (byRating) {
       topTreatments = outputQualities.sort((a, b) => b.rating - a.rating)
     } else {
-      topTreatments = outputQualities.sort((a, b) => a.annualizedCapex - b.annualizedCapex)
+      topTreatments = outputQualities.sort((a, b) => a.costPerCubic - b.costPerCubic)
     }
 
     return topTreatments
