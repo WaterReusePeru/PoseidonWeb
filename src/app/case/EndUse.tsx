@@ -49,7 +49,7 @@ export default function EndUse() {
             isOptionEqualToValue={(option, value) => option.name === value.name}
             onChange={(event, newValue) => dispatch(setEndUseQualityCategory(newValue.id))}
             disableClearable
-            value={endUse.category ? waterQualityCategories[endUse.category] : undefined}
+            value={endUse.category || endUse.category === 0 ? waterQualityCategories[endUse.category] : undefined}
             renderInput={(params) => <TextField {...params} variant="outlined" />}
           />
         </Grid>

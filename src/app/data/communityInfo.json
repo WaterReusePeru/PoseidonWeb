@@ -97,6 +97,6 @@
     "landCost": 10000,
     "electricityCost": 0.07,
     "personalCost": 183.66,
-    "discountRate": 0.4
+    "discountRate": 0.04
   }
 ]
