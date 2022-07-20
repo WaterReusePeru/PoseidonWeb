@@ -1,10 +1,13 @@
 import { useAppSelector } from '../../hooks'
 
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
+import { useTranslation } from 'react-i18next'
 
 import { communityInfos, treatmentTrains, waterQualities, WaterQuality, waterQualityFactors } from '../../data/model'
 
 export const ResultsGraph = () => {
+  const { t } = useTranslation()
+
   const solutionsState = useAppSelector((state) => state.case.solutions)
   const commInfoState = useAppSelector((state) => state.case.commInfo)
   const endUseState = useAppSelector((state) => state.case.endUse)
@@ -57,7 +60,7 @@ export const ResultsGraph = () => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'Cost per Cubic [' + currency + ']',
+        legend: t('Cost per Cubic') + ' [' + currency + ']',
         legendPosition: 'middle',
         legendOffset: 46,
       }}

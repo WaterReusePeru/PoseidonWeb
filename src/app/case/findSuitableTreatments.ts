@@ -65,6 +65,11 @@ export function findSuitableTreatments(
         const UpKey = criteria.name as keyof UnitProcess
         rating = rating + Number(unitProcesses[unitProcess][UpKey])
       })
+      let crf =
+        (commInfo.discountRate *
+          (1 + commInfo.discountRate) ** Number(unitProcesses[unitProcess]['useful_life' as keyof UnitProcess])) /
+        ((1 + commInfo.discountRate) ** Number(unitProcesses[unitProcess]['useful_life' as keyof UnitProcess]) - 1)
+      console.log(crf)
 
       if (amount !== null) {
         Object.keys(outputCostPerFactor).forEach((costFactor: keyof CostFactors) => {
@@ -79,24 +84,23 @@ export function findSuitableTreatments(
           outputCostPerFactor[costFactor] = outputCostPerFactor[costFactor] + outputCostStep
 
           if (costFactor === 'construction_cost') {
-            annualizedCapex += (outputCostStep * 1.39 * 1.27) / unitProcesses[unitProcess]['useful_life']
+            annualizedCapex += outputCostStep * 1.39 * 1.27 * crf
           }
 
           if (costFactor === 'land_requirements') {
-            annualizedLandCost += (outputCostStep * commInfo.landCost) / unitProcesses[unitProcess]['useful_life']
+            annualizedLandCost += outputCostStep * commInfo.landCost * crf
           }
 
           if (costFactor === 'energy_requirements') {
-            annualizedEnergyCost +=
-              (outputCostStep * commInfo.electricityCost) / unitProcesses[unitProcess]['useful_life']
+            annualizedEnergyCost += outputCostStep * commInfo.electricityCost * crf
           }
 
           if (costFactor === 'labor_requirements') {
-            annualizedLaborCost += (outputCostStep * commInfo.personalCost) / unitProcesses[unitProcess]['useful_life']
+            annualizedLaborCost += outputCostStep * commInfo.personalCost * crf
           }
 
           if (costFactor === 'other_om') {
-            annualizedOMCost += (outputCostStep * commInfo.personalCost) / unitProcesses[unitProcess]['useful_life']
+            annualizedOMCost += outputCostStep * commInfo.personalCost * crf
           }
         })
       }

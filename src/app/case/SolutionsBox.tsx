@@ -79,9 +79,10 @@ export default function SolutionsBox() {
             ) : null}
 
             {caseState.solutions.slice(0, 3).map((solution, index) => {
-              if (solution.treatmentTrain) {
+              console.log(caseState.solutions)
+              if (solution.treatmentTrain || solution.treatmentTrain === 0) {
                 return (
-                  <>
+                  <Grid item container key={index} spacing={1}>
                     <Grid item container justifyContent="flex-start" spacing={1} xs={12}>
                       <Grid item>
                         <Chip label={index + 1} color="secondary" size="small" />
@@ -124,7 +125,7 @@ export default function SolutionsBox() {
                                   communityInfo[commInfoState.countryID].exchangeToUSD *
                                   (solution.costPerCubic! * 1000)
                                 ).toPrecision(3)}{' '}
-                                {communityInfo[commInfoState.countryID].currency}
+                                {communityInfo[commInfoState.countryID].currency + '/'}m&sup3;
                               </>
                             )}
                           </Typography>
@@ -151,7 +152,7 @@ export default function SolutionsBox() {
                         )
                       )}
                     </Grid>
-                  </>
+                  </Grid>
                 )
               } else {
                 return null

@@ -90,13 +90,19 @@ export const resources = {
 
       Ranking: 'Clasificación',
       'Annualized CAPEX': 'CAPEX anualizado',
-      'CAPEX per Cubic': 'CAPEX por cubo',
+      'Annualized Land Cost': 'Coste anualizado del terreno',
+      'Annualized Energy Cost': 'Coste energético anualizado',
+      'Annualized Labor Cost': 'Coste laboral anualizado',
+      'Annualized OPEX': 'OPEX anualizado',
+      'Annualized Total Cost': 'Coste total anualizado',
+      'Cost per Cubic': 'Coste por cubo',
       'Total capital expenditure (CAPEX)': 'Total de gastos de capital (CAPEX)',
       'Treatment Cost': 'Coste del tratamiento',
       'Sort by rating': 'Ordenar por clasificación',
 
       'Sorry, no matching records found': 'Lo sentimos, no se han encontrado registros coincidentes',
       Sort: 'Ordenar',
+      'Outflow Values / Limit Values': 'Valores de salida / Valores límite',
     },
   },
 }
