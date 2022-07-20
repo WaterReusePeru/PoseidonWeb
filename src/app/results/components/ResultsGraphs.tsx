@@ -68,7 +68,7 @@ export const ResultsGraph = () => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'Outflow Values / Limit Values [%]',
+        legend: t('Outflow Values / Limit Values') + ' [%]',
         legendPosition: 'middle',
         legendOffset: -60,
       }}

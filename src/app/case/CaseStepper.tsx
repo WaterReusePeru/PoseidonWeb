@@ -5,8 +5,7 @@ import Stepper from '@mui/material/Stepper'
 import Step from '@mui/material/Step'
 import StepLabel from '@mui/material/StepLabel'
 //import StepConnector from '@mui/material/StepConnector'
-import { useDispatch } from 'react-redux'
-import { useAppSelector } from '../hooks'
+import { useAppDispatch, useAppSelector } from '../hooks'
 import { setStep } from './caseSlice'
 import { useTranslation } from 'react-i18next'
 import { Link, Paper, Theme, Toolbar } from '@mui/material'
@@ -42,7 +41,7 @@ export const CaseStepper = () => {
   const count = useAppSelector((state) => state.case.step)
   const completedSteps = useAppSelector((state) => state.case.completedSteps)
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const classes = useStyles()
   const steps = getSteps()

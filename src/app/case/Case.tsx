@@ -5,8 +5,7 @@ import EndUse from './EndUse'
 import Grid from '@mui/material/Grid'
 import Paper from '@mui/material/Paper'
 import Button from '@mui/material/Button'
-import { useDispatch } from 'react-redux'
-import { useAppSelector } from '../hooks'
+import { useAppDispatch, useAppSelector } from '../hooks'
 import { next, previous } from './caseSlice'
 import { theme } from '../theme/theme'
 import { useTranslation } from 'react-i18next'
@@ -59,7 +58,7 @@ export const Case = () => {
   const count = useAppSelector((state) => state.case.step)
   const completedSteps = useAppSelector((state) => state.case.completedSteps)
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const classes = useStyles()
   const steps = getSteps()

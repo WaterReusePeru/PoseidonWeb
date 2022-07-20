@@ -2,13 +2,12 @@ import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney'
 import MoneyOffIcon from '@mui/icons-material/MoneyOff'
-import { useAppSelector } from '../../hooks'
-import { useDispatch } from 'react-redux'
+import { useAppDispatch, useAppSelector } from '../../hooks'
 import { setCurrency } from '../../case/caseSlice'
 
 export const CustomToolbar = () => {
   const currency = useAppSelector((state) => state.case.commInfo.currency)
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const handleClick = () => {
     dispatch(setCurrency(currency === 1 ? 1000 : 0))

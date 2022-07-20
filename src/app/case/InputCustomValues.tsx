@@ -2,14 +2,13 @@ import React from 'react'
 import { InputAdornment, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
-import { useDispatch } from 'react-redux'
 import { setCustomInputValues } from './caseSlice'
 import { useTranslation } from 'react-i18next'
 import { WaterQuality, waterQualityFactors } from '../data/model'
-import { useAppSelector } from '../hooks'
+import { useAppDispatch, useAppSelector } from '../hooks'
 
 export default function InputCustomValues() {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const input = useAppSelector((state) => state.case.input)
 
   const { t } = useTranslation()

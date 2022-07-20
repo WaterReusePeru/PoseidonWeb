@@ -1,5 +1,4 @@
-import { useDispatch } from 'react-redux'
-import { useAppSelector } from '../hooks'
+import { useAppDispatch, useAppSelector } from '../hooks'
 
 import Grid from '@mui/material/Grid'
 import Chip from '@mui/material/Chip'
@@ -22,7 +21,7 @@ import i18next from 'i18next'
 export default function SolutionsBox() {
   const caseState = useAppSelector((state) => state.case)
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const { t } = useTranslation()
   const lang = i18next.language

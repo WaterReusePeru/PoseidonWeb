@@ -1,8 +1,7 @@
 import { Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
-import { useDispatch } from 'react-redux'
-import { compare, useAppSelector } from '../hooks'
+import { compare, useAppDispatch, useAppSelector } from '../hooks'
 import Autocomplete from '@mui/material/Autocomplete'
 import { setEndUseQualityCategory, setEndUseQualityClass } from './caseSlice'
 import { useTranslation } from 'react-i18next'
@@ -15,7 +14,7 @@ import { waterQualityCategories, waterQualities } from '../data/model'
 export default function EndUse() {
   const endUse = useAppSelector((state) => state.case.endUse)
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const { t } = useTranslation()
   const lang = i18next.language

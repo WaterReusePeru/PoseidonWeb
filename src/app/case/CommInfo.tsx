@@ -1,8 +1,7 @@
 import { Tooltip, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
-import { useDispatch } from 'react-redux'
-import { compare, useAppSelector } from '../hooks'
+import { compare, useAppDispatch, useAppSelector } from '../hooks'
 import Autocomplete from '@mui/material/Autocomplete'
 import communityInfo from '../data/communityInfo.json'
 import { communityInfos } from '../data/model'
@@ -13,7 +12,7 @@ import i18next from 'i18next'
 
 export default function CommInfo() {
   const commInfo = useAppSelector((state) => state.case.commInfo)
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const { t } = useTranslation()
   const lang = i18next.language

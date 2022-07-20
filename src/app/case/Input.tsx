@@ -2,8 +2,7 @@ import React from 'react'
 import { FormControl, FormControlLabel, RadioGroup, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
-import { useDispatch } from 'react-redux'
-import { useAppSelector } from '../hooks'
+import { useAppDispatch, useAppSelector } from '../hooks'
 import { setInputQuantity, setCustomInput } from './caseSlice'
 import { useTranslation } from 'react-i18next'
 import InputAdornment from '@mui/material/InputAdornment'
@@ -16,7 +15,7 @@ import InputCustomValues from './InputCustomValues'
 export default function Input() {
   const input = useAppSelector((state) => state.case.input)
   const endUse = useAppSelector((state) => state.case.endUse)
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const { t } = useTranslation()
 

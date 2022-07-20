@@ -1,8 +1,7 @@
 import { Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
-import { useDispatch } from 'react-redux'
-import { compare, useAppSelector } from '../hooks'
+import { compare, useAppDispatch, useAppSelector } from '../hooks'
 import Autocomplete from '@mui/material/Autocomplete'
 import { waterQualityCategories, waterQualities } from '../data/model'
 import { setInputQualityCategory, setInputQualityClass } from './caseSlice'
@@ -11,7 +10,7 @@ import i18next from 'i18next'
 
 export default function InputPresets() {
   const input = useAppSelector((state) => state.case.input)
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const { t } = useTranslation()
   const lang = i18next.language
