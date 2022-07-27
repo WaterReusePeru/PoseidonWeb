@@ -1,8 +1,8 @@
-import { useDispatch } from 'react-redux'
 import { setSolutionNoneAvailable, setSolutionNoneNeeded, setSolutions } from './caseSlice'
 import { WaterQuality, OutputQuality, QualityFactor, CommunityInfo, waterQualityFactors } from '../data/model'
 
 import { findSuitableTreatments } from './findSuitableTreatments'
+import { useAppDispatch } from '../hooks'
 
 export default function CalculateSolutions(
   input: WaterQuality,
@@ -11,7 +11,7 @@ export default function CalculateSolutions(
   byRating: boolean,
   commInfo: CommunityInfo
 ) {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const qualityFactors = waterQualityFactors.map((f) => {
     return f.name

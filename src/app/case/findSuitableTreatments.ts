@@ -69,7 +69,8 @@ export function findSuitableTreatments(
         (commInfo.discountRate *
           (1 + commInfo.discountRate) ** Number(unitProcesses[unitProcess]['useful_life' as keyof UnitProcess])) /
         ((1 + commInfo.discountRate) ** Number(unitProcesses[unitProcess]['useful_life' as keyof UnitProcess]) - 1)
-      console.log(crf)
+
+      let crf30 = (commInfo.discountRate * (1 + commInfo.discountRate) ** 30) / ((1 + commInfo.discountRate) ** 30 - 1)
 
       if (amount !== null) {
         Object.keys(outputCostPerFactor).forEach((costFactor: keyof CostFactors) => {
@@ -83,24 +84,28 @@ export function findSuitableTreatments(
 
           outputCostPerFactor[costFactor] = outputCostPerFactor[costFactor] + outputCostStep
 
+          //console.log("Output cost:" + outputCostStep + " Unit Process: " + unitProcess + " Cost Factor: " + costFactor)
+
           if (costFactor === 'construction_cost') {
-            annualizedCapex += outputCostStep * 1.39 * 1.27 * crf
+            annualizedCapex += outputCostStep * 1.39 * 1.27 * crf * 1000
           }
 
           if (costFactor === 'land_requirements') {
-            annualizedLandCost += outputCostStep * commInfo.landCost * crf
+            annualizedLandCost += outputCostStep * commInfo.landCost * crf30
           }
 
+          console.log('vorher: ' + annualizedLandCost)
+
           if (costFactor === 'energy_requirements') {
-            annualizedEnergyCost += outputCostStep * commInfo.electricityCost * crf
+            annualizedEnergyCost += outputCostStep * commInfo.electricityCost
           }
 
           if (costFactor === 'labor_requirements') {
-            annualizedLaborCost += outputCostStep * commInfo.personalCost * crf
+            annualizedLaborCost += outputCostStep * commInfo.personalCost * 12
           }
 
           if (costFactor === 'other_om') {
-            annualizedOMCost += outputCostStep * commInfo.personalCost * crf
+            annualizedOMCost += outputCostStep * 1000
           }
         })
       }
@@ -121,7 +126,7 @@ export function findSuitableTreatments(
         tc: outputQualityPerFactor['tc'],
 
         constructionCost: outputCostPerFactor['construction_cost'],
-        capex: outputCostPerFactor['construction_cost'] * 1.39 * 1.27,
+        capex: outputCostPerFactor['construction_cost'] * 1.39 * 1.27 * 1000,
         annualizedCapex: annualizedCapex,
         capexPerCubic: annualizedCapex / (amount * 365),
 
@@ -145,6 +150,7 @@ export function findSuitableTreatments(
 
         rating: rating / treatmentTrain.unit_processes!.length / evaluationCriteria.length, //TODO: !
       })
+      console.log('nachher: ' + annualizedLandCost)
     }
   })
 

@@ -32,7 +32,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export const ResultsTable = () => {
+/* export interface ResultsTableProps {
+  solutions
+} */
+
+export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTableProps */) => {
   const classes = useStyles()
 
   const { t } = useTranslation()
@@ -40,15 +44,14 @@ export const ResultsTable = () => {
   const lang = i18next.language
 
   const solutionsState = useAppSelector((state) => state.case.solutions)
-
   const commInfoState = useAppSelector((state) => state.case.commInfo)
 
   function showCost(v: number) {
     return commInfoState.currency === 0 ? (
-      <>{Math.round(v * 1000).toLocaleString('de-CH')} $</>
+      <>{Math.round(v).toLocaleString('de-CH')} $</>
     ) : (
       <>
-        {(communityInfos[commInfoState.countryID].exchangeToUSD * Math.round(v * 10) * 100).toLocaleString('de-CH')}{' '}
+        {(communityInfos[commInfoState.countryID].exchangeToUSD * Math.round(v)).toLocaleString('de-CH')}{' '}
         {communityInfos[commInfoState.countryID].currency}
       </>
     )
@@ -184,12 +187,12 @@ export const ResultsTable = () => {
       },
     },
     {
-      name: 'otherOM',
-      label: t('Other Operations & Maintenance Cost'),
+      name: 'annualizedOMCost',
+      label: t('Annualized Other O&M Cost'),
       options: {
         filter: true,
         customBodyRenderLite: (dataIndex: number) => {
-          return showCost(data[dataIndex].otherOM!)
+          return showCost(data[dataIndex].annualizedOMCost!)
         },
         display: false,
       },
@@ -243,13 +246,10 @@ export const ResultsTable = () => {
         filter: true,
         customBodyRenderLite: (dataIndex: number) => {
           return commInfoState.currency === 0 ? (
-            <>{(data[dataIndex].costPerCubic! * 1000).toLocaleString('de-CH')} $</>
+            <>{data[dataIndex].costPerCubic!.toLocaleString('de-CH')} $</>
           ) : (
             <>
-              {(
-                communityInfos[commInfoState.countryID].exchangeToUSD *
-                (data[dataIndex].costPerCubic! * 1000)
-              ).toPrecision(3)}{' '}
+              {(communityInfos[commInfoState.countryID].exchangeToUSD * data[dataIndex].costPerCubic!).toPrecision(3)}{' '}
               {communityInfos[commInfoState.countryID].currency}
             </>
           )
