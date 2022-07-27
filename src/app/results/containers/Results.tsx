@@ -7,8 +7,8 @@ import { useAppSelector } from '../../hooks'
 export const Results = () => {
   const { t } = useTranslation()
 
-  const solutionsState = useAppSelector((state) => state.case.solutions)
-  const commInfoState = useAppSelector((state) => state.case.commInfo)
+  //const solutionsState = useAppSelector((state) => state.case.solutions)
+  //const commInfoState = useAppSelector((state) => state.case.commInfo)
 
   return (
     <div>
