@@ -141,7 +141,8 @@ export const caseSlice = createSlice({
       if (!action.payload) {
         state.completedSteps[1] = 0
       }
-      if (action.payload && (state.input.qualityClass || state.input.customValueEntered)) state.completedSteps[1] = 1
+      if (action.payload && (typeof state.input.qualityClass === 'number' || state.input.customValueEntered))
+        state.completedSteps[1] = 1
     },
     setEndUseQualityCategory: (state, action) => {
       state.endUse.category = action.payload
