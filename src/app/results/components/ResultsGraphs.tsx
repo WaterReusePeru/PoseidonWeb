@@ -34,8 +34,8 @@ export const ResultsGraph = () => {
         unit: factor?.unit,
         x:
           commInfoState.currency === 0
-            ? solution.costPerCubic * 1000
-            : solution.costPerCubic * communityInfos[commInfoState.countryID].exchangeToUSD * 1000,
+            ? solution.costPerCubic
+            : solution.costPerCubic * communityInfos[commInfoState.countryID].exchangeToUSD,
         y: 100 * (solution.values[key] / Number(endUseQuality[key as keyof WaterQuality])),
       }
     })
