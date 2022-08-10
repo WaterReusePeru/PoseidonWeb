@@ -18,8 +18,11 @@ type CaseState = {
     quantity?: number
   }
   endUse: {
+    custom: boolean
     category: number
     qualityClass?: number
+    customValues: ValueWaterQuality
+    customValueEntered: boolean
   }
   solution: {
     noneNeeded: boolean
@@ -72,7 +75,27 @@ const initialState: CaseState = {
     },
     customValueEntered: false,
   },
-  endUse: { category: 29 },
+  endUse: {
+    custom: false,
+    category: 29,
+    customValues: {
+      id: 100,
+      turbidity: NaN,
+      tss: NaN,
+      bod: NaN,
+      cod: NaN,
+      tn: NaN,
+      tp: NaN,
+      fc: NaN,
+      tc: NaN,
+      tds: NaN,
+      nitrate: NaN,
+      toc: NaN,
+      virus: NaN,
+      helminths: NaN,
+    },
+    customValueEntered: false,
+  },
   solution: {
     noneNeeded: true,
     noneAvailable: false,
@@ -143,6 +166,13 @@ export const caseSlice = createSlice({
       }
       if (action.payload && (typeof state.input.qualityClass === 'number' || state.input.customValueEntered))
         state.completedSteps[1] = 1
+    },
+    setCustomEndUse: (state, action) => {
+      state.endUse.custom = action.payload
+    },
+    setCustomEndUseValues: (state, action) => {
+      state.endUse.customValues = action.payload
+      state.endUse.customValueEntered = true
     },
     setEndUseQualityCategory: (state, action) => {
       state.endUse.category = action.payload
@@ -226,6 +256,8 @@ export const {
   setCustomInputValues,
   setEndUseQualityCategory,
   setEndUseQualityClass,
+  setCustomEndUse,
+  setCustomEndUseValues,
   resetSolutions,
   setSolutionNoneNeeded,
   setSolutionNoneAvailable,
