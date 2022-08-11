@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/PoseidonWeb/static/js/main.6d90b8d4.js",
+    "main.js": "/PoseidonWeb/static/js/main.34a24f30.js",
     "static/media/Calculations.png": "/PoseidonWeb/static/media/Calculations.5eb5970b85dad03d7e0c.png",
     "index.html": "/PoseidonWeb/index.html",
-    "main.6d90b8d4.js.map": "/PoseidonWeb/static/js/main.6d90b8d4.js.map"
+    "main.34a24f30.js.map": "/PoseidonWeb/static/js/main.34a24f30.js.map"
   },
   "entrypoints": [
-    "static/js/main.6d90b8d4.js"
+    "static/js/main.34a24f30.js"
   ]
 }
