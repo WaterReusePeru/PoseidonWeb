@@ -19,7 +19,7 @@ export default function QualityCompare() {
     <>
       <Grid item container xs={12} justifyContent="space-evenly" alignItems="center">
         {input.custom
-          ? !endUse.qualityClass
+          ? !endUse.qualityClass && !endUse.customValueEntered
             ? waterQualityFactors.map((f, index) => {
                 const key = f.name as keyof WaterQuality
 
@@ -56,7 +56,13 @@ export default function QualityCompare() {
                           : input.customValues[key]
                       }
                       output={
-                        endUse.qualityClass === undefined
+                        endUse.custom
+                          ? endUse.customValues === undefined
+                            ? null
+                            : isNaN(Number(endUse.customValues[key]))
+                            ? null
+                            : endUse.customValues[key]
+                          : endUse.qualityClass === undefined
                           ? null
                           : isNaN(Number(waterQualities[endUse.qualityClass][key]))
                           ? null
@@ -66,7 +72,7 @@ export default function QualityCompare() {
                   </div>
                 )
               })
-          : input.qualityClass && !endUse.qualityClass
+          : input.qualityClass && !endUse.qualityClass && !endUse.customValueEntered
           ? waterQualityFactors.map((f, index) => {
               const key = f.name as keyof WaterQuality
 
@@ -103,7 +109,13 @@ export default function QualityCompare() {
                         : waterQualities[input.qualityClass][key]
                     }
                     output={
-                      endUse.qualityClass === undefined
+                      endUse.custom
+                        ? endUse.customValues === undefined
+                          ? null
+                          : isNaN(Number(endUse.customValues[key]))
+                          ? null
+                          : endUse.customValues[key]
+                        : endUse.qualityClass === undefined
                         ? null
                         : isNaN(Number(waterQualities[endUse.qualityClass][key]))
                         ? null
@@ -129,7 +141,7 @@ export default function QualityCompare() {
           </Grid>
         </Grid>
 
-        {endUse.qualityClass === undefined ? (
+        {endUse.qualityClass === undefined && !endUse.customValueEntered ? (
           <>
             <Grid item container xs={3} direction="column" alignItems="center" justifyContent="flex-start">
               <Grid item>

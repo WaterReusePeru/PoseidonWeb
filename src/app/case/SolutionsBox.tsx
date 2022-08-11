@@ -30,7 +30,8 @@ export default function SolutionsBox() {
   const commInfo = communityInfo[caseState.commInfo.countryID!]
   const presetInputQuality = waterQualities[caseState.input.qualityClass!]
   const customInputQuality = caseState.input.customValues
-  const endUseQuality = waterQualities[caseState.endUse.qualityClass!]
+  const presetEndUseQuality = waterQualities[caseState.endUse.qualityClass!]
+  const customEndUseQuality = caseState.endUse.customValues
   const quantity = caseState.input.quantity
   const sortByRating = caseState.solution.sortByRating
 
@@ -38,7 +39,7 @@ export default function SolutionsBox() {
 
   CalculateSolutions(
     caseState.input.custom ? customInputQuality : presetInputQuality,
-    endUseQuality,
+    caseState.endUse.custom ? customEndUseQuality : presetEndUseQuality,
     quantity!,
     sortByRating,
     commInfo

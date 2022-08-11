@@ -94,8 +94,6 @@ export function findSuitableTreatments(
             annualizedLandCost += outputCostStep * commInfo.landCost * crf30
           }
 
-          console.log('vorher: ' + annualizedLandCost)
-
           if (costFactor === 'energy_requirements') {
             annualizedEnergyCost += outputCostStep * commInfo.electricityCost
           }
@@ -110,8 +108,6 @@ export function findSuitableTreatments(
         })
       }
     })
-
-    console.log(treatmentTrain.title, outputQualityPerFactor)
 
     if (suitableTreatmentTrain && outputQualityPerFactor! && outputCostPerFactor!) {
       //TODO: !
@@ -150,7 +146,6 @@ export function findSuitableTreatments(
 
         rating: rating / treatmentTrain.unit_processes!.length / evaluationCriteria.length, //TODO: !
       })
-      console.log('nachher: ' + annualizedLandCost)
     }
   })
 

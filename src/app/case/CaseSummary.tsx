@@ -107,7 +107,12 @@ export const CaseSummary = (props: { step: any }) => {
 
         {step === 2 ? (
           <Grid item>
-            {caseState.endUse.qualityClass !== undefined ? (
+            {caseState.endUse.custom ? (
+              <Grid container alignItems="center" direction="row" spacing={0}>
+                <ExitToAppIcon fontSize="small" color="primary" />
+                <Typography variant="caption">{t('Custom')}</Typography>
+              </Grid>
+            ) : caseState.endUse.qualityClass ? (
               <Grid container alignItems="center" direction="row" spacing={0}>
                 <AutorenewIcon fontSize="small" color="primary" />
                 <Typography variant="caption">

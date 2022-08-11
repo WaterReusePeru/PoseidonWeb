@@ -173,6 +173,7 @@ export const caseSlice = createSlice({
     setCustomEndUseValues: (state, action) => {
       state.endUse.customValues = action.payload
       state.endUse.customValueEntered = true
+      state.completedSteps[2] = 2
     },
     setEndUseQualityCategory: (state, action) => {
       state.endUse.category = action.payload

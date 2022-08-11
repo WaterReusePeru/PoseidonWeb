@@ -109,7 +109,7 @@ export default function Input() {
 
         <QualityCompare />
       </Grid>
-      {endUse.qualityClass !== undefined ? (
+      {endUse.qualityClass || endUse.customValueEntered ? (
         <Grid item container xs={4}>
           <SolutionsBox />
         </Grid>
