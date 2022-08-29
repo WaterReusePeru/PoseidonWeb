@@ -1,9 +1,18 @@
 import React from 'react'
-import { FormControl, FormControlLabel, RadioGroup, Typography } from '@mui/material'
+import {
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  ListItemText,
+  MenuItem,
+  RadioGroup,
+  Select,
+  Typography,
+} from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import { useAppDispatch, useAppSelector } from '../hooks'
-import { setInputQuantity, setCustomInput } from './caseSlice'
+import { setInputQuantity, setCustomInput, setCutomInputQualityFactors } from './caseSlice'
 import { useTranslation } from 'react-i18next'
 import InputAdornment from '@mui/material/InputAdornment'
 import SolutionsBox from './SolutionsBox'
@@ -11,6 +20,7 @@ import QualityCompare from './QualityCompare'
 import Radio from '@mui/material/Radio'
 import InputPresets from './InputPresets'
 import InputCustomValues from './InputCustomValues'
+import { waterQualityFactors } from '../data/model'
 
 export default function Input() {
   const input = useAppSelector((state) => state.case.input)
@@ -49,7 +59,7 @@ export default function Input() {
         <Grid item xs={4}>
           <Typography variant="h6">{t('Input')}</Typography>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={input.custom ? 4 : 8}>
           <FormControl>
             <RadioGroup row aria-labelledby="demo-row-radio-buttons-group-label" name="row-radio-buttons-group">
               <FormControlLabel
@@ -81,6 +91,27 @@ export default function Input() {
             </RadioGroup>
           </FormControl>
         </Grid>
+        {input.custom ? (
+          <Grid item xs={4}>
+            <FormControl sx={{ m: 1, width: 300 }}>
+              <Select
+                labelId="demo-multiple-checkbox-label"
+                id="demo-multiple-checkbox"
+                multiple
+                value={input.customQualityFactors}
+                onChange={dispatch(setCutomInputQualityFactors)}
+                renderValue={(selected) => selected.join(', ')}
+              >
+                {waterQualityFactors.map((factor) => (
+                  <MenuItem key={factor.id} value={factor.nameShort}>
+                    <Checkbox checked={input.customQualityFactors.indexOf(factor.nameLong) > -1} />
+                    <ListItemText primary={factor.nameLong} />
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Grid>
+        ) : null}
 
         {!input.custom ? <InputPresets /> : <InputCustomValues />}
 

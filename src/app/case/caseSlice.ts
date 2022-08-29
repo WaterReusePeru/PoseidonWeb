@@ -16,6 +16,7 @@ type CaseState = {
     customValues: ValueWaterQuality
     customValueEntered: boolean
     quantity?: number
+    customQualityFactors: string[]
   }
   endUse: {
     custom: boolean
@@ -74,6 +75,7 @@ const initialState: CaseState = {
       helminths: NaN,
     },
     customValueEntered: false,
+    customQualityFactors: ['tss', 'bod', 'cod', 'tc'],
   },
   endUse: {
     custom: false,
@@ -147,6 +149,9 @@ export const caseSlice = createSlice({
       if (state.input.quantity) {
         state.completedSteps[1] = 1
       }
+    },
+    setCutomInputQualityFactors: (state, action) => {
+      state.input.customQualityFactors = ['tss']
     },
     setInputQualityCategory: (state, action) => {
       state.input.category = action.payload
@@ -255,6 +260,7 @@ export const {
   setInputQuantity,
   setCustomInput,
   setCustomInputValues,
+  setCutomInputQualityFactors,
   setEndUseQualityCategory,
   setEndUseQualityClass,
   setCustomEndUse,
