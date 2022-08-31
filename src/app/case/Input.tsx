@@ -7,6 +7,7 @@ import {
   MenuItem,
   RadioGroup,
   Select,
+  SelectChangeEvent,
   Typography,
 } from '@mui/material'
 import Grid from '@mui/material/Grid'
@@ -44,6 +45,18 @@ export default function Input() {
       setValidQuantity(false)
       dispatch(setInputQuantity(value))
     }
+  }
+
+  const [customQualityFactor, setCustomQualityFactor] = React.useState<string[]>([])
+
+  const handleSetCustomQualityFactors = (event: SelectChangeEvent<typeof customQualityFactor>) => {
+    console.log(event.target.value)
+    dispatch(
+      setCutomInputQualityFactors(
+        typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value
+      )
+    )
+    setCustomQualityFactor(typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value)
   }
 
   return (
@@ -98,13 +111,13 @@ export default function Input() {
                 labelId="demo-multiple-checkbox-label"
                 id="demo-multiple-checkbox"
                 multiple
-                value={input.customQualityFactors}
-                onChange={dispatch(setCutomInputQualityFactors)}
+                value={customQualityFactor}
+                onChange={handleSetCustomQualityFactors}
                 renderValue={(selected) => selected.join(', ')}
               >
                 {waterQualityFactors.map((factor) => (
                   <MenuItem key={factor.id} value={factor.nameShort}>
-                    <Checkbox checked={input.customQualityFactors.indexOf(factor.nameLong) > -1} />
+                    <Checkbox checked={input.customQualityFactors.indexOf(factor.nameShort) > -1} />
                     <ListItemText primary={factor.nameLong} />
                   </MenuItem>
                 ))}

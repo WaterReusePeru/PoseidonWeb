@@ -151,7 +151,7 @@ export const caseSlice = createSlice({
       }
     },
     setCutomInputQualityFactors: (state, action) => {
-      state.input.customQualityFactors = ['tss']
+      state.input.customQualityFactors = action.payload
     },
     setInputQualityCategory: (state, action) => {
       state.input.category = action.payload
@@ -273,5 +273,7 @@ export const {
 } = caseSlice.actions
 
 export const selectCase = (state: RootState) => state.case
+
+console.log(caseSlice)
 
 export default caseSlice.reducer
