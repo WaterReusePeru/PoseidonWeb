@@ -21,7 +21,7 @@ import QualityCompare from './QualityCompare'
 import Radio from '@mui/material/Radio'
 import InputPresets from './InputPresets'
 import InputCustomValues from './InputCustomValues'
-import { waterQualityFactors } from '../data/model'
+import { QualityFactor, waterQualityFactors } from '../data/model'
 
 export default function Input() {
   const input = useAppSelector((state) => state.case.input)
@@ -47,17 +47,25 @@ export default function Input() {
     }
   }
 
-  const [customQualityFactor, setCustomQualityFactor] = React.useState<string[]>([])
+  const [customQualityFactor, setCustomQualityFactor] = React.useState<string[]>(input.customQualityFactors)
 
   const handleSetCustomQualityFactors = (event: SelectChangeEvent<typeof customQualityFactor>) => {
     console.log(event.target.value)
+    const isQualityFactor = (x: any): x is QualityFactor => event.target.value.includes(x)
+
     dispatch(
       setCutomInputQualityFactors(
-        typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value
+        isQualityFactor(event.target.value) ? event.target.value.split(',') : event.target.value
       )
     )
-    setCustomQualityFactor(typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value)
+    if (event.target.value.length > 0) {
+      setCustomQualityFactor(
+        typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value
+      )
+    }
   }
+
+  console.log(input)
 
   return (
     <Grid container direction="row" alignItems="flex-start" spacing={3}>
@@ -108,6 +116,7 @@ export default function Input() {
           <Grid item xs={4}>
             <FormControl sx={{ m: 1, width: 300 }}>
               <Select
+                style={{ marginTop: 20 }}
                 labelId="demo-multiple-checkbox-label"
                 id="demo-multiple-checkbox"
                 multiple
@@ -128,29 +137,30 @@ export default function Input() {
 
         {!input.custom ? <InputPresets /> : <InputCustomValues />}
 
-        <Grid item xs={4}>
-          <Typography style={{ marginBottom: 20 }}>{t('Average Quantity')}</Typography>
+        <Grid item container>
+          <Grid item xs={3}>
+            <Typography style={{ marginBottom: 20 }}>{t('Average Quantity')}</Typography>
+          </Grid>
+          <Grid item xs={8}>
+            <TextField
+              error={!validQuantity}
+              size="small"
+              helperText={!validQuantity ? t('Expected between 1 and') + " 20'000" : ''}
+              id="standard-number"
+              type="number"
+              variant="outlined"
+              InputLabelProps={{
+                shrink: true,
+              }}
+              onChange={(event) => handleChangeQuantity(Number(event.target.value))}
+              value={input.quantity != null ? input.quantity : ''}
+              InputProps={{
+                endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>,
+              }}
+              fullWidth
+            />
+          </Grid>
         </Grid>
-        <Grid item xs={8}>
-          <TextField
-            error={!validQuantity}
-            size="small"
-            helperText={!validQuantity ? t('Expected between 1 and') + " 20'000" : ''}
-            id="standard-number"
-            type="number"
-            variant="outlined"
-            InputLabelProps={{
-              shrink: true,
-            }}
-            onChange={(event) => handleChangeQuantity(Number(event.target.value))}
-            value={input.quantity != null ? input.quantity : ''}
-            InputProps={{
-              endAdornment: <InputAdornment position="end">m&sup3;/{t('day')}</InputAdornment>,
-            }}
-            fullWidth
-          />
-        </Grid>
-
         <QualityCompare />
       </Grid>
       {endUse.qualityClass || endUse.customValueEntered ? (

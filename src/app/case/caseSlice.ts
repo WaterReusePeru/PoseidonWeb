@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { RootState } from '../store'
-import { treatmentTrains, ValueWaterQuality } from '../data/model'
+import { treatmentTrains, ValueWaterQuality, waterQualityFactors } from '../data/model'
 
 type CaseState = {
   step: number
@@ -75,7 +75,7 @@ const initialState: CaseState = {
       helminths: NaN,
     },
     customValueEntered: false,
-    customQualityFactors: ['tss', 'bod', 'cod', 'tc'],
+    customQualityFactors: ['TSS', 'BOD', 'COD', 'TC'],
   },
   endUse: {
     custom: false,
@@ -151,7 +151,9 @@ export const caseSlice = createSlice({
       }
     },
     setCutomInputQualityFactors: (state, action) => {
-      state.input.customQualityFactors = action.payload
+      if (action.payload.length > 0) {
+        state.input.customQualityFactors = action.payload
+      }
     },
     setInputQualityCategory: (state, action) => {
       state.input.category = action.payload
@@ -217,7 +219,13 @@ export const caseSlice = createSlice({
         state.solutions[index].annualizedOMCost = treatment.annualizedOMCost
         state.solutions[index].annualizedOpex = treatment.annualizedOpex
         state.solutions[index].costPerCubic = treatment.costPerCubic
-        if (treatment.turbidity) {
+
+        waterQualityFactors.forEach((f) => {
+          if (treatment[f.name]) {
+            state.solutions[index].values[f.name] = treatment[f.name]
+          }
+        })
+        /* if (treatment.turbidity) {
           state.solutions[index].values.turbidity = treatment.turbidity
         }
         if (treatment.tss) {
@@ -234,7 +242,7 @@ export const caseSlice = createSlice({
         }
         if (treatment.tc) {
           state.solutions[index].values.tc = treatment.tc
-        }
+        } */
       })
       for (let i = action.payload.length; i < treatmentTrains.length; i++) {
         state.solutions[i].treatmentTrain = undefined

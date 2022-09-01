@@ -52,32 +52,40 @@ export default function InputCustomValues() {
       {waterQualityFactors.map((f) => {
         const key = f.name as keyof WaterQuality
 
-        return (
-          <Grid item container direction="row" xs={4} key={key}>
-            <Grid item xs={3}>
-              <Typography>{f.nameShort}</Typography>
+        if (input.customQualityFactors.includes(f.nameShort)) {
+          const length = input.customQualityFactors.length
+
+          const inputWidth = length === 1 || length === 2 || length === 4 ? 6 : 4
+
+          return (
+            <Grid item container direction="row" xs={inputWidth} key={key}>
+              <Grid item xs={3}>
+                <Typography>{f.nameShort}</Typography>
+              </Grid>
+              <Grid item xs={9}>
+                <TextField
+                  error={!customInput[f.id].validity}
+                  size="small"
+                  helperText={!customInput[f.id].validity ? t('Expected between 1 and') + ' ' + f.maxValue : ' '}
+                  id={f.name}
+                  type="number"
+                  variant="outlined"
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                  onChange={(event) => handleChangeQuantity(f.id, Number(event.target.value), Number(f.maxValue))}
+                  value={input.customValues[key] ? input.customValues[key] : ''}
+                  InputProps={{
+                    endAdornment: <InputAdornment position="end">{f.unit}</InputAdornment>,
+                  }}
+                  fullWidth
+                />
+              </Grid>
             </Grid>
-            <Grid item xs={9}>
-              <TextField
-                error={!customInput[f.id].validity}
-                size="small"
-                helperText={!customInput[f.id].validity ? t('Expected between 1 and') + ' ' + f.maxValue : ' '}
-                id={f.name}
-                type="number"
-                variant="outlined"
-                InputLabelProps={{
-                  shrink: true,
-                }}
-                onChange={(event) => handleChangeQuantity(f.id, Number(event.target.value), Number(f.maxValue))}
-                value={input.customValues[key] ? input.customValues[key] : ''}
-                InputProps={{
-                  endAdornment: <InputAdornment position="end">{f.unit}</InputAdornment>,
-                }}
-                fullWidth
-              />
-            </Grid>
-          </Grid>
-        )
+          )
+        } else {
+          return null
+        }
       })}
     </>
   )

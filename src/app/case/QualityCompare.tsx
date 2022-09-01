@@ -23,37 +23,103 @@ export default function QualityCompare() {
             ? waterQualityFactors.map((f, index) => {
                 const key = f.name as keyof WaterQuality
 
+                if (input.customQualityFactors.includes(f.nameShort)) {
+                  return (
+                    <div key={index} style={{ width: 'calc(1/6*80%' }}>
+                      <Bar
+                        factor={f.name}
+                        unit={f.unit}
+                        input={
+                          input.customValues === undefined
+                            ? null
+                            : isNaN(Number(input.customValues[key]))
+                            ? null
+                            : input.customValues[key]
+                        }
+                        average={waterQualities[0][key]}
+                      />
+                    </div>
+                  )
+                } else {
+                  return null
+                }
+              })
+            : waterQualityFactors.map((f, index) => {
+                const key = f.name as keyof WaterQuality
+
+                if (input.customQualityFactors.includes(f.nameShort)) {
+                  return (
+                    <div key={index} style={{ width: 'calc(1/6*80%' }}>
+                      <Bar
+                        factor={f.name}
+                        unit={f.unit}
+                        input={
+                          input.customValues === undefined
+                            ? null
+                            : isNaN(Number(input.customValues[key]))
+                            ? null
+                            : input.customValues[key]
+                        }
+                        output={
+                          endUse.custom
+                            ? endUse.customValues === undefined
+                              ? null
+                              : isNaN(Number(endUse.customValues[key]))
+                              ? null
+                              : endUse.customValues[key]
+                            : endUse.qualityClass === undefined
+                            ? null
+                            : isNaN(Number(waterQualities[endUse.qualityClass][key]))
+                            ? null
+                            : waterQualities[endUse.qualityClass][key]
+                        }
+                      />
+                    </div>
+                  )
+                } else {
+                  return null
+                }
+              })
+          : input.qualityClass && !endUse.qualityClass && !endUse.customValueEntered
+          ? waterQualityFactors.map((f, index) => {
+              const key = f.name as keyof WaterQuality
+
+              if (input.customQualityFactors.includes(f.nameShort)) {
                 return (
                   <div key={index} style={{ width: 'calc(1/6*80%' }}>
                     <Bar
                       factor={f.name}
                       unit={f.unit}
                       input={
-                        input.customValues === undefined
+                        input.qualityClass === undefined
                           ? null
-                          : isNaN(Number(input.customValues[key]))
+                          : isNaN(Number(waterQualities[input.qualityClass][key]))
                           ? null
-                          : input.customValues[key]
+                          : waterQualities[input.qualityClass][key]
                       }
                       average={waterQualities[0][key]}
                     />
                   </div>
                 )
-              })
-            : waterQualityFactors.map((f, index) => {
-                const key = f.name as keyof WaterQuality
+              } else {
+                return null
+              }
+            })
+          : waterQualityFactors.map((f, index) => {
+              const key = f.name as keyof WaterQuality
 
+              if (input.customQualityFactors.includes(f.nameShort)) {
                 return (
                   <div key={index} style={{ width: 'calc(1/6*80%' }}>
                     <Bar
                       factor={f.name}
                       unit={f.unit}
                       input={
-                        input.customValues === undefined
+                        input.qualityClass === undefined
                           ? null
-                          : isNaN(Number(input.customValues[key]))
+                          : isNaN(Number(waterQualities[input.qualityClass][key]))
                           ? null
-                          : input.customValues[key]
+                          : waterQualities[input.qualityClass][key]
                       }
                       output={
                         endUse.custom
@@ -71,59 +137,9 @@ export default function QualityCompare() {
                     />
                   </div>
                 )
-              })
-          : input.qualityClass && !endUse.qualityClass && !endUse.customValueEntered
-          ? waterQualityFactors.map((f, index) => {
-              const key = f.name as keyof WaterQuality
-
-              return (
-                <div key={index} style={{ width: 'calc(1/6*80%' }}>
-                  <Bar
-                    factor={f.name}
-                    unit={f.unit}
-                    input={
-                      input.qualityClass === undefined
-                        ? null
-                        : isNaN(Number(waterQualities[input.qualityClass][key]))
-                        ? null
-                        : waterQualities[input.qualityClass][key]
-                    }
-                    average={waterQualities[0][key]}
-                  />
-                </div>
-              )
-            })
-          : waterQualityFactors.map((f, index) => {
-              const key = f.name as keyof WaterQuality
-
-              return (
-                <div key={index} style={{ width: 'calc(1/6*80%' }}>
-                  <Bar
-                    factor={f.name}
-                    unit={f.unit}
-                    input={
-                      input.qualityClass === undefined
-                        ? null
-                        : isNaN(Number(waterQualities[input.qualityClass][key]))
-                        ? null
-                        : waterQualities[input.qualityClass][key]
-                    }
-                    output={
-                      endUse.custom
-                        ? endUse.customValues === undefined
-                          ? null
-                          : isNaN(Number(endUse.customValues[key]))
-                          ? null
-                          : endUse.customValues[key]
-                        : endUse.qualityClass === undefined
-                        ? null
-                        : isNaN(Number(waterQualities[endUse.qualityClass][key]))
-                        ? null
-                        : waterQualities[endUse.qualityClass][key]
-                    }
-                  />
-                </div>
-              )
+              } else {
+                return null
+              }
             })}
       </Grid>
 
