@@ -42,6 +42,7 @@ export default function UnitProcesses() {
   var nameCol = lang === 'en' ? 'name' : 'nameEs'
   var noteCol = lang === 'en' ? 'note' : 'noteEs'
   var referenceCol = lang === 'en' ? 'reference' : 'referenceEs'
+  var tagsCol = lang === 'en' ? 'tags' : 'tagsEs'
 
   const columns = [
     {
@@ -108,6 +109,13 @@ export default function UnitProcesses() {
     {
       name: referenceCol,
       label: t('Reference'),
+      options: {
+        filter: true,
+      },
+    },
+    {
+      name: tagsCol,
+      label: t('Tags'),
       options: {
         filter: true,
       },

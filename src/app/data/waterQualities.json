@@ -20,7 +20,9 @@
     "note": "Typical composition of untreated domestic wastewater. Note: there is no typical wastewater, values should only be used as guide! Data presented are for medium-strengths wastewater based on average flow of 460 L/cap*day and include constituents added by commercial institutional, and industrial sources.",
     "noteEs": "Composición típica de las aguas residuales domésticas no tratadas. Nota: no existe un agua residual típica, ¡los valores sólo deben utilizarse como guía! Los datos presentados son para aguas residuales de intensidad media, basados en un caudal medio de 460 L/cap*día, e incluyen los componentes añadidos por fuentes comerciales, institucionales e industriales.",
     "reference": "Asano et al., 2006 p. 107. Value for Turbidity: Asano et al., 2006, p.109. Viruses: Asano et al., 2006, p.110",
-    "referenceEs": "Asano et al., 2006 p. 107. Valor de la turbidez: Asano et al., 2006, p.109. Virus: Asano et al., 2006, p.110"
+    "referenceEs": "Asano et al., 2006 p. 107. Valor de la turbidez: Asano et al., 2006, p.109. Virus: Asano et al., 2006, p.110",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 1,
@@ -43,7 +45,9 @@
     "note": "",
     "noteEs": "",
     "reference": "Asano et al., 2006 p. 107",
-    "referenceEs": "Asano et al., 2006 p. 107"
+    "referenceEs": "Asano et al., 2006 p. 107",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 2,
@@ -66,7 +70,9 @@
     "note": "Constituents remaining after primary treatment. Primary treatment consisted of a rotary drum screen , followed by disk screens",
     "noteEs": "los componentes restantes tras el tratamiento primario. El tratamiento primario consistió en una criba de tambor rotativo, seguida de cribas de disco",
     "reference": "Asano et al., 2006 p. 109",
-    "referenceEs": "Asano et al., 2006 p. 109"
+    "referenceEs": "Asano et al., 2006 p. 109",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 3,
@@ -89,7 +95,9 @@
     "note": "Constituents remaining after secondary treatment. Secondary treatment was with water hyacinths",
     "noteEs": "Componentes restantes tras el tratamiento secundario. El tratamiento secundario fue con jacintos acuáticos",
     "reference": "Asano et al., 2006 p. 109",
-    "referenceEs": "Asano et al., 2006 p. 109"
+    "referenceEs": "Asano et al., 2006 p. 109",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 4,
@@ -112,7 +120,9 @@
     "note": "Constituents remaining after secondary treatment. Secondary treatment was conventional activated sludge (CAS).",
     "noteEs": "Componentes restantes tras el tratamiento secundario. El tratamiento secundario fue de lodos activados convencionales (CAS).",
     "reference": "Asano et al., 2006 p. 110",
-    "referenceEs": "Asano et al., 2006 p. 110"
+    "referenceEs": "Asano et al., 2006 p. 110",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 5,
@@ -135,7 +145,9 @@
     "note": "Constituents remaining after secondary treatment. Secondary treatment was conventional activated sludge (CAS) with filtration",
     "noteEs": "Componentes restantes tras el tratamiento secundario. El tratamiento secundario fue de lodos activados convencionales (CAS) con filtración",
     "reference": "Asano et al., 2006 p. 110",
-    "referenceEs": "Asano et al., 2006 p. 110"
+    "referenceEs": "Asano et al., 2006 p. 110",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 6,
@@ -158,7 +170,9 @@
     "note": "Constituents remaining after secondary treatment. Secondary treatment was activated sludge with biological nutrient removal for the removal of nitrogen and phosphorus",
     "noteEs": "Componentes restantes tras el tratamiento secundario. El tratamiento secundario fue de lodos activados con eliminación biológica de nutrientes para la eliminación de nitrógeno y fósforo",
     "reference": "Asano et al., 2006 p. 110",
-    "referenceEs": "Asano et al., 2006 p. 110"
+    "referenceEs": "Asano et al., 2006 p. 110",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 7,
@@ -181,7 +195,9 @@
     "note": "Constituents remaining after secondary treatment. Secondary treatment was activated sludge with biological nutrient removal (for the removal of nitrogen and phosphorus) and filtration",
     "noteEs": "Componentes restantes tras el tratamiento secundario. El tratamiento secundario fue de lodos activados con eliminación biológica de nutrientes (para la eliminación de nitrógeno y fósforo) y filtración",
     "reference": "Asano et al., 2006 p. 110",
-    "referenceEs": "Asano et al., 2006 p. 110"
+    "referenceEs": "Asano et al., 2006 p. 110",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 8,
@@ -204,7 +220,9 @@
     "note": "Constituents remaining after secondary treatment. Secondary treatment was membrane bioreactor",
     "noteEs": "Componentes restantes tras el tratamiento secundario. El tratamiento secundario fue el biorreactor de membrana",
     "reference": "Asano et al., 2006 p. 110",
-    "referenceEs": "Asano et al., 2006 p. 110"
+    "referenceEs": "Asano et al., 2006 p. 110",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 9,
@@ -227,7 +245,9 @@
     "note": "Constituents remaining after secondary treatment. Secondary treatment was activated sludge with microfiltration and reverse osmosis.",
     "noteEs": "Componentes que quedan después del tratamiento secundario. El tratamiento secundario fue de lodos activados con microfiltración y ósmosis inversa",
     "reference": "Asano et al., 2006 p. 110",
-    "referenceEs": "Asano et al., 2006 p. 110"
+    "referenceEs": "Asano et al., 2006 p. 110",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 10,
@@ -250,7 +270,9 @@
     "note": "Constituents remaining after tertiary treatment. Tertiary treatment consisted of lime precipitation and depth filtration",
     "noteEs": "Componentes restantes tras el tratamiento terciario. El tratamiento terciario consistió en la precipitación de cal y la filtración en profundidad",
     "reference": "Asano et al., 2006 p. 109",
-    "referenceEs": "Asano et al., 2006 p. 109"
+    "referenceEs": "Asano et al., 2006 p. 109",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 11,
@@ -273,7 +295,9 @@
     "note": "Constituents remaining after advanced wastewater treatment (AWT). ",
     "noteEs": "Constituyentes restantes tras el tratamiento avanzado de las aguas residuales (AWT).",
     "reference": "Asano et al., 2006 p. 109",
-    "referenceEs": "Asano et al., 2006 p. 109"
+    "referenceEs": "Asano et al., 2006 p. 109",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 12,
@@ -296,7 +320,9 @@
     "note": "Average Values and (ranges) from six Indian textile industries",
     "noteEs": "Valores medios y (rangos) entre seis industrias textiles indias",
     "reference": "Hussain et al. (2004)",
-    "referenceEs": "Hussain et al. (2004)"
+    "referenceEs": "Hussain et al. (2004)",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 13,
@@ -319,7 +345,9 @@
     "note": "Average Values and (ranges) from five Nigerian textile mills",
     "noteEs": "Valores medios y (rangos) entre cinco fábricas textiles nigerianas",
     "reference": "Yusuff & Sonibare (2004)",
-    "referenceEs": "Yusuff & Sonibare (2004)"
+    "referenceEs": "Yusuff & Sonibare (2004)",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 14,
@@ -342,7 +370,9 @@
     "note": "Characteristics of raw dairy wastewater of A.P. Diary in Hyderabad, India",
     "noteEs": "Características de las aguas residuales lácteas crudas de A.P. Diary en Hyderabad, India",
     "reference": "Sarkar, et al. (2006)",
-    "referenceEs": "Sarkar, et al. (2006)"
+    "referenceEs": "Sarkar, et al. (2006)",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 15,
@@ -365,7 +395,9 @@
     "note": "Ranges or mean values reported from 3 cheese industry examples",
     "noteEs": "Rangos o valores medios de 3 ejemplos de la industria quesera",
     "reference": "Demirel, et al. (2005)",
-    "referenceEs": "Demirel, et al. (2005)"
+    "referenceEs": "Demirel, et al. (2005)",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 16,
@@ -388,7 +420,9 @@
     "note": "Ranges or mean values reported from 2 cheese whey industry examples",
     "noteEs": "Rangos o valores medios reportados de 2 ejemplos de la industria del suero de queso",
     "reference": "Demirel, et al. (2005)",
-    "referenceEs": "Demirel, et al. (2005)"
+    "referenceEs": "Demirel, et al. (2005)",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 17,
@@ -411,7 +445,9 @@
     "note": "Ranges or mean values reported from2 mixed dairy industry examples",
     "noteEs": "Rangos o valores medios reportados a partir de 2 ejemplos de la industria láctea mixta",
     "reference": "Demirel, et al. (2005)",
-    "referenceEs": "Demirel, et al. (2005)"
+    "referenceEs": "Demirel, et al. (2005)",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 18,
@@ -434,7 +470,9 @@
     "note": "Typical characteristics of wastewater at paper mill",
     "noteEs": "Características típicas de las aguas residuales de la fábrica de papel",
     "reference": "Pokhrel & Viraraghavan (2004)",
-    "referenceEs": "Pokhrel & Viraraghavan (2004)"
+    "referenceEs": "Pokhrel & Viraraghavan (2004)",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 19,
@@ -457,7 +495,9 @@
     "note": "",
     "noteEs": "",
     "reference": "Brito, et al. (2007)",
-    "referenceEs": "Brito, et al. (2007)"
+    "referenceEs": "Brito, et al. (2007)",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 20,
@@ -480,7 +520,9 @@
     "note": "Example of one wine producing industry",
     "noteEs": "Ejemplo de una industria vitivinícola",
     "reference": "Brito, et al. (2007)",
-    "referenceEs": "Brito, et al. (2007)"
+    "referenceEs": "Brito, et al. (2007)",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 21,
@@ -503,7 +545,9 @@
     "note": "Example of one wine producing industry",
     "noteEs": "Ejemplo de una industria vitivinícola",
     "reference": "Brito, et al. (2007)",
-    "referenceEs": "Brito, et al. (2007)"
+    "referenceEs": "Brito, et al. (2007)",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 22,
@@ -526,7 +570,9 @@
     "note": "Definition: Use of reclaimed water in non-potable applications in municipal settings where public access is not restricted. Treatment: Secondary, filtration, disinfection",
     "noteEs": "Definición: Uso de agua regenerada en aplicaciones no potables en entornos municipales en los que el acceso público no está restringido. Tratamiento: Secundario, filtración, desinfección",
     "reference": "Table 4.4, p.4-9",
-    "referenceEs": "Tablas 4.4, p.4-9"
+    "referenceEs": "Tablas 4.4, p.4-9",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 23,
@@ -549,7 +595,9 @@
     "note": "Definition: Use of reclaimed water in non-potable applications in municipal settings where public access is restricted by physical/institutional barriers Treatment: Secondary, disinfection",
     "noteEs": "Definición: Uso de agua regenerada en aplicaciones no potables en entornos municipales en los que el acceso del público está restringido por barreras físicas/institucionales Tratamiento: Secundario, desinfección",
     "reference": "Table 4.4, p.4-9",
-    "referenceEs": "Tablas 4.4, p.4-9"
+    "referenceEs": "Tablas 4.4, p.4-9",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 24,
@@ -572,7 +620,9 @@
     "note": "Definition: Use of reclaimed water for surface or spray irrigation of food crops eaten raw Treatment: Secondary, filtration, disinfection",
     "noteEs": "Definición: Utilización de agua regenerada para el riego por superficie o por aspersión de cultivos alimentarios que se consumen crudos Tratamiento: Secundario, filtración, desinfección",
     "reference": "Table 4.4, p.4-9",
-    "referenceEs": "Tablas 4.4, p.4-9"
+    "referenceEs": "Tablas 4.4, p.4-9",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 25,
@@ -595,7 +645,9 @@
     "note": "Definition: Use of reclaimed water for surface or spray irrigation of food crops processed prior to consumption and non-food crops like fodder, fiber etc. Treatment: Secondary, disinfection",
     "noteEs": "Definición: Utilización de agua regenerada para el riego superficial o por aspersión de cultivos alimentarios procesados antes del consumo y de cultivos no alimentarios como forrajes, fibras, etc. Tratamiento: Secundario, desinfección",
     "reference": "Table 4.4, p.4-9",
-    "referenceEs": "Tablas 4.4, p.4-9"
+    "referenceEs": "Tablas 4.4, p.4-9",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 26,
@@ -618,7 +670,9 @@
     "note": "Definition: Use of reclaimed water in an impoundment in which no limitations are imposed on body contact Treatment: Secondary, filtration, disinfection",
     "noteEs": "Definición: Uso de agua regenerada en un embalse en el que no se imponen limitaciones al contacto con el cuerpo Tratamiento: Secundario, filtración, desinfección",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": "Tablas 4.4, p.4-10"
+    "referenceEs": "Tablas 4.4, p.4-10",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 27,
@@ -641,7 +695,9 @@
     "note": "Definition: Use of reclaimed water in an impoundment where bod-contact is restricted Treatment: Secondary, disinfection",
     "noteEs": "Definición: Utilización de agua regenerada en un embalse donde el contacto con el cuerpo está restringido Tratamiento: Secundario, desinfección",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": "Tablas 4.4, p.4-10"
+    "referenceEs": "Tablas 4.4, p.4-10",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 28,
@@ -664,7 +720,9 @@
     "note": "Definition: Use of reclaimed water to create wetlands, enhance natural wetlands or sustain stream flows Treatment: Variable, secondary, and disinfection",
     "noteEs": "Definición: Uso de agua regenerada para crear humedales, mejorar los humedales naturales o mantener los caudales de los arroyos Tratamiento: Variable, secundario y desinfección",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": "Tablas 4.4, p.4-10"
+    "referenceEs": "Tablas 4.4, p.4-10",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 29,
@@ -687,7 +745,9 @@
     "note": "Treatment: Secondary",
     "noteEs": "Tratamiento: Secundaria",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": "Tablas 4.4, p.4-10"
+    "referenceEs": "Tablas 4.4, p.4-10",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 30,
@@ -710,7 +770,9 @@
     "note": "Treatment: Secondary, disinfection",
     "noteEs": "Tratamiento: Secundario, desinfección",
     "reference": "Table 4.4, p.4-10",
-    "referenceEs": "Tablas 4.4, p.4-10"
+    "referenceEs": "Tablas 4.4, p.4-10",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 31,
@@ -733,7 +795,9 @@
     "note": "Definition: Groundwater recharge by spreading into potable aquifers or by injection into potable aquifers and augmentation of surface water supply reservoirs Treatment: Secondary, filtration, disinfection, advanced wastewater treatment or soil aquifer treatment",
     "noteEs": "Definición: Recarga de aguas subterráneas mediante la difusión en acuíferos potables o mediante la inyección en acuíferos potables y el aumento de los embalses de suministro de aguas superficiales Tratamiento: Secundario, filtración, desinfección, tratamiento avanzado de aguas residuales o tratamiento de acuíferos del suelo",
     "reference": "Table 4.4, p.4-11",
-    "referenceEs": "Tablas 4.4, p.4-11"
+    "referenceEs": "Tablas 4.4, p.4-11",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 32,
@@ -756,7 +820,9 @@
     "note": "Add. Parameter: Enterococci: 4 CFU/100mL (max. 9 CFU/100mL)",
     "noteEs": "Añadir. Parámetro: Enterococos: 4 UFC/100mL (máx. 9 UFC/100mL)",
     "reference": "Table 4.7, p.4-26",
-    "referenceEs": "Tablas 4.7, p.4-26"
+    "referenceEs": "Tablas 4.7, p.4-26",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 33,
@@ -779,7 +845,9 @@
     "note": "BOD: 20 mg/L without pond; 30 mg/L with pond Add. Parameter: Enterococci: 35 CFU/100mL (max. 89 CFU/100mL)",
     "noteEs": "DBO: 20 mg/L sin estanque; 30 mg/L con estanque Añadir. Parámetro: Enterococos: 35 UFC/100mL (máx. 89 UFC/100mL)",
     "reference": "Table 4.8, p.4-27",
-    "referenceEs": "Tablas 4.8, p.4-27"
+    "referenceEs": "Tablas 4.8, p.4-27",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 34,
@@ -802,7 +870,9 @@
     "note": "Add. Parameter: Enterococci: 4 CFU/100mL (max. 9 CFU/100mL)",
     "noteEs": "Añadir. Parámetro: Enterococos: 4 UFC/100mL (máx. 9 UFC/100mL)",
     "reference": "Table 4.9, p.4-28",
-    "referenceEs": "Tablas 4.9, p.4-28"
+    "referenceEs": "Tablas 4.9, p.4-28",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 35,
@@ -825,7 +895,9 @@
     "note": "BOD: 20 mg/L without pond; 30 mg/L with pond Add. Parameter: Enterococci: 35 CFU/100mL (max. 89 CFU/100mL)",
     "noteEs": "DBO: 20 mg/L sin estanque; 30 mg/L con estanque Añadir. Parámetro: Enterococos: 35 UFC/100mL (máx. 89 UFC/100mL)",
     "reference": "Table 4.10, p.4-29",
-    "referenceEs": "Tablas 4.10, p.4-29"
+    "referenceEs": "Tablas 4.10, p.4-29",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 36,
@@ -848,7 +920,9 @@
     "note": "Add. Parameter: Enterococci: 4 CFU/100ml (max. 9 CFU/100mL)",
     "noteEs": "Añadir. Parámetro: Enterococos: 4 UFC/100ml (máx. 9 UFC/100mL)",
     "reference": "Table 4.11, p.4-30",
-    "referenceEs": "Tablas 4.11, p.4-30"
+    "referenceEs": "Tablas 4.11, p.4-30",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 37,
@@ -871,7 +945,9 @@
     "note": "BOD: 20 mg/L without pond; 30 mg/L with pond Add. Parameter: Enterococci: 35 CFU/100mL (max. 89 CFU/100mL) ",
     "noteEs": "DBO: 20 mg/L sin estanque; 30 mg/L con estanque Añadir. Parámetro: Enterococos: 35 UFC/100mL (máx. 89 UFC/100mL)",
     "reference": "Table 4.12, p.4-31",
-    "referenceEs": "Tablas 4.12, p.4-31"
+    "referenceEs": "Tablas 4.12, p.4-31",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 38,
@@ -894,7 +970,9 @@
     "note": "Not regulated",
     "noteEs": "sin regulacion",
     "reference": "Table 4.13, p.4-32",
-    "referenceEs": "Tablas 4.13, p.4-32"
+    "referenceEs": "Tablas 4.13, p.4-32",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 39,
@@ -917,7 +995,9 @@
     "note": "BOD: 20 mg/L without pond; 30 mg/L with pond Add. Parameter: Enterococci: 35 CFU/100mL (max. 89 CFU/100mL)",
     "noteEs": "DBO: 20 mg/L sin estanque; 30 mg/L con estanque Añadir. Parámetro: Enterococos: 35 UFC/100mL (máx. 89 UFC/100mL)",
     "reference": "Table 4.14, p.4-33",
-    "referenceEs": "Tablas 4.14, p.4-33"
+    "referenceEs": "Tablas 4.14, p.4-33",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 40,
@@ -940,7 +1020,9 @@
     "note": "Add. Parameter: Enterococci: 4 CFU/100mL (max. 9 CFU/100mL)",
     "noteEs": "Añadir. Parámetro: Enterococos: 4 UFC/100mL (máx. 9 UFC/100mL)",
     "reference": "Table 4.16, p.4-35",
-    "referenceEs": "Tablas 4.16, p.4-35"
+    "referenceEs": "Tablas 4.16, p.4-35",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 41,
@@ -963,7 +1045,9 @@
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.)",
     "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.)",
     "reference": "Table 4.7, p.4-26",
-    "referenceEs": "Tablas 4.7, p.4-26"
+    "referenceEs": "Tablas 4.7, p.4-26",
+    "tags": "california, usa",
+    "tagsEs": ""
   },
   {
     "id": 42,
@@ -986,7 +1070,9 @@
     "note": "Total coliform: 240/100 ml (max.)",
     "noteEs": "Coliformes totales: 240/100 ml (máx.)",
     "reference": "Table 4.784, p.4-27",
-    "referenceEs": "Tablas 4.784, p.4-27"
+    "referenceEs": "Tablas 4.784, p.4-27",
+    "tags": "california, usa",
+    "tagsEs": ""
   },
   {
     "id": 43,
@@ -1009,7 +1095,9 @@
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.)",
     "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.)",
     "reference": "Table 4.9, p.4-28",
-    "referenceEs": "Tablas 4.9, p.4-28"
+    "referenceEs": "Tablas 4.9, p.4-28",
+    "tags": "california, usa",
+    "tagsEs": ""
   },
   {
     "id": 44,
@@ -1032,7 +1120,9 @@
     "note": "Total coliforms are not specified in the Californian standards.",
     "noteEs": "Los coliformes totales no se especifican en las normas californianas",
     "reference": "Table 4.10, p.4-29",
-    "referenceEs": "Tablas 4.10, p.4-29"
+    "referenceEs": "Tablas 4.10, p.4-29",
+    "tags": "california, usa",
+    "tagsEs": ""
   },
   {
     "id": 45,
@@ -1055,7 +1145,9 @@
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.) Supplemental pathogen monitoring",
     "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.) Control suplementario de patógenos",
     "reference": "Table 4.11, p.4-30",
-    "referenceEs": "Tablas 4.11, p.4-30"
+    "referenceEs": "Tablas 4.11, p.4-30",
+    "tags": "california, usa",
+    "tagsEs": ""
   },
   {
     "id": 46,
@@ -1078,7 +1170,9 @@
     "note": "Total coliform: 23/100 ml (not more than one sample exceeds this value in 30d)",
     "noteEs": "Coliformes totales: 23/100 ml (no hay más de una muestra que supere este valor en 30 días)",
     "reference": "Table 4.12, p.4-31",
-    "referenceEs": "Tablas 4.12, p.4-31"
+    "referenceEs": "Tablas 4.12, p.4-31",
+    "tags": "california, usa",
+    "tagsEs": ""
   },
   {
     "id": 47,
@@ -1101,7 +1195,9 @@
     "note": "Not regulated",
     "noteEs": "sin regulación",
     "reference": "Table 4.13, p.4-32",
-    "referenceEs": "Tablas 4.13, p.4-32"
+    "referenceEs": "Tablas 4.13, p.4-32",
+    "tags": "california, usa",
+    "tagsEs": ""
   },
   {
     "id": 48,
@@ -1124,7 +1220,9 @@
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.)",
     "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.)",
     "reference": "Table 4.14, p.4-33",
-    "referenceEs": "Tablas 4.14, p.4-33"
+    "referenceEs": "Tablas 4.14, p.4-33",
+    "tags": "california, usa",
+    "tagsEs": ""
   },
   {
     "id": 49,
@@ -1147,7 +1245,9 @@
     "note": "For media filters: 2 NTU (avg.)/ 10 NTU (max.) For membrane filters: 0.2 NTU (avg.)/ 0.5 NTU (max.) Total coliform: 240/100 ml (max.) Pathogen monitoring is not required but virus removal rates are prescribed by treatment requirements",
     "noteEs": "Para filtros de medios: 2 NTU (promedio)/ 10 NTU (máximo) Para filtros de membrana: 0,2 NTU (promedio)/ 0,5 NTU (máximo) Coliformes totales: 240/100 ml (máx.) No es necesario el control de patógenos, pero las tasas de eliminación de virus están prescritas por los requisitos de tratamiento",
     "reference": "Table 4.16, p.4-35",
-    "referenceEs": "Tablas 4.16, p.4-35"
+    "referenceEs": "Tablas 4.16, p.4-35",
+    "tags": "california, usa",
+    "tagsEs": ""
   },
   {
     "id": 50,
@@ -1170,7 +1270,9 @@
     "note": "Definition: Irrigation with wastewater of all agricultural crops Standards for E.coli in CFU/100 mL: Root crops:103 ; Leaf crops: 104 ; Drip irrigation, high growing crops: 105",
     "noteEs": "Definición: Riego con aguas residuales de todos los cultivos agrícolas Normas para E.coli en UFC/100 mL: Cultivos de raíz:103 ; Cultivos de hoja: 104 ; Riego por goteo, cultivos de alto crecimiento: 105",
     "reference": "Vol.2, Chapter 4.2, p.63-67",
-    "referenceEs": "Vol. 2, capítulo 4.2, p. 63-67"
+    "referenceEs": "Vol. 2, capítulo 4.2, p. 63-67",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 51,
@@ -1193,7 +1295,9 @@
     "note": "Definition: Irrigation with wastewater of all agricultural crops except crops eaten unprocessed/raw (like lettuce). Standards for E.coli in CFU/100 mL: Labour-intensive irrigation: 104 ; High mechanized agriculture: 105 ; Drip irrigation, high growing crops: 105",
     "noteEs": "Definición: Riego con aguas residuales de todos los cultivos agrícolas, excepto los que se consumen sin procesar/crudos (como la lechuga). Normas para E.coli en UFC/100 mL: Riego intensivo: 104 ; Agricultura altamente mecanizada: 105 ; Riego por goteo, cultivos de alto crecimiento: 105",
     "reference": "Vol.2, Chapter 4.2, p.67-69",
-    "referenceEs": "Vol. 2, capítulo 4.2, p. 67-69"
+    "referenceEs": "Vol. 2, capítulo 4.2, p. 67-69",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 52,
@@ -1216,7 +1320,9 @@
     "note": "Definition: Irrigation of all agricultural crops except crops eaten unprocessed/raw (like lettuce). Standards for E.coli in CFU/100 mL: Labour-intensive irrigation: 104 ; High mechanized agriculture: 105",
     "noteEs": "Definición: Riego de todos los cultivos agrícolas, excepto los que se consumen sin procesar/crudos (como la lechuga). Normas para E.coli en UFC/100 mL: Riego intensivo: 104 ; Agricultura altamente mecanizada: 105",
     "reference": "Vol.2, Chapter 4.2, p.67-69",
-    "referenceEs": "Vol. 2, capítulo 4.2, p. 67-69"
+    "referenceEs": "Vol. 2, capítulo 4.2, p. 67-69",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 53,
@@ -1239,7 +1345,9 @@
     "note": "Standards for E.coli in CFU/100 mL: Consumers: 105 ;Workers: 104 No trematode eggs detectable",
     "noteEs": "Normas para E.coli en UFC/100 mL: Consumidores: 105 ;Trabajadores: 104 No se detectan huevos de trematodos",
     "reference": "Vol.3, Table 4.1, p.41",
-    "referenceEs": "Vol.3, cuadro 4.1, p.41"
+    "referenceEs": "Vol.3, cuadro 4.1, p.41",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 54,
@@ -1262,7 +1370,9 @@
     "note": "Definition: Irrigation with grey water of all agricultural crops Standards for E.coli in CFU/100 mL: High growing crops or Drip irrigation: 104",
     "noteEs": "Definición: Riego con aguas grises de todos los cultivos agrícolas Normas para E.coli en UFC/100 mL: Cultivos de alto crecimiento o riego por goteo: 104",
     "reference": "Vol.4. Table 4.2, p.63",
-    "referenceEs": "Vol.4. Tabla 4.2, p.63"
+    "referenceEs": "Vol.4. Tabla 4.2, p.63",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 55,
@@ -1285,7 +1395,9 @@
     "note": "Definition: Irrigation with grey water of all agricultural crops except crops eaten unprocessed/raw (like lettuce).",
     "noteEs": "inición: Riego con aguas grises de todos los cultivos agrícolas, excepto los que se consumen sin procesar/crudos (como la lechuga)",
     "reference": "Vol.4. Table 4.2, p.63",
-    "referenceEs": "Vol.4. Tabla 4.2, p.63"
+    "referenceEs": "Vol.4. Tabla 4.2, p.63",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 56,
@@ -1308,7 +1420,9 @@
     "note": "Definition: Irrigation with wastewater of vegetable and salad crops eaten uncooked, sport fields, public parks Irrigation technique: any Exposed group: Workers, consumers, public",
     "noteEs": "Definición: Riego con aguas residuales de cultivos de hortalizas y ensaladas que se consumen sin cocinar, campos deportivos, parques públicos Técnica de riego: cualquiera Grupo expuesto: Trabajadores, consumidores, público",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "mediterranean, europe",
+    "tagsEs": "mediterráneo, europa"
   },
   {
     "id": 57,
@@ -1331,7 +1445,9 @@
     "note": "Definition: Irrigation with wastewater of cereal crops, industrial crops, fodder crops, pasture and trees Irrigation technique: spray or sprinkler (105 E.coli CFU/mL); Flood or furrow (103 E.coli CFU/mL) Exposed group: Workers, nearby communities",
     "noteEs": "Definición: Riego con aguas residuales de cultivos de cereales, cultivos industriales, cultivos forrajeros, pastos y árboles Técnica de riego: pulverización o aspersión (105 UFC/mL de E.coli); Inundación o surco (103 UFC/mL de E.coli) Grupo expuesto: Trabajadores, comunidades cercanas",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "mediterranean, europe",
+    "tagsEs": "mediterráneo, europa"
   },
   {
     "id": 58,
@@ -1354,7 +1470,9 @@
     "note": "Definition: Localized irrigation with wastewater of crops in category B if exposure of workers and the public does not occur. Irrigation technique: Trickle, drip or bubbler. Exposed group: None No water quality measures have to be met",
     "noteEs": "Definición: Riego localizado con aguas residuales de los cultivos de la categoría B si no se produce la exposición de los trabajadores y del público. Técnica de riego: Goteo, chorreado o burbujeo. Grupo expuesto: Ninguno No hay que cumplir ninguna medida de calidad del agua",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "mediterranean, europe",
+    "tagsEs": "mediterráneo, europa"
   },
   {
     "id": 59,
@@ -1377,7 +1495,9 @@
     "note": "Definition: Irrigation with greywater of ornamental fruit trees and fodder crops",
     "noteEs": "Definición: Riego con aguas grises de árboles frutales ornamentales y cultivos forrajeros",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "mediterranean, europe",
+    "tagsEs": "mediterráneo, europa"
   },
   {
     "id": 60,
@@ -1400,7 +1520,9 @@
     "note": "Definition: Irrigation with greywater of vegetables likely to be eaten uncooked.",
     "noteEs": "Definición: Riego con aguas grises de hortalizas susceptibles de ser consumidas sin cocinar",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "mediterranean, europe",
+    "tagsEs": "mediterráneo, europa"
   },
   {
     "id": 61,
@@ -1423,7 +1545,9 @@
     "note": "Definition: Greywater used for toilet flushing",
     "noteEs": "Definición: Aguas grises utilizadas para la descarga de los inodoros",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "mediterranean, europe",
+    "tagsEs": "mediterráneo, europa"
   },
   {
     "id": 62,
@@ -1446,7 +1570,9 @@
     "note": "Definition: Discharge of wastewater to streams, wadis and water storage area E.coli counts (FC) are given in MPN/100mL",
     "noteEs": "Definición: Vertido de aguas residuales en arroyos, ramblas y zonas de almacenamiento de agua Los recuentos de E.coli (FC) se indican en MPN/100mL",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "jordan",
+    "tagsEs": "jordan"
   },
   {
     "id": 63,
@@ -1469,7 +1595,9 @@
     "note": "Definition: Wastewater used for groundwater recharge E.coli counts (FC) are given in MPN/100mL",
     "noteEs": "Definición: Las aguas residuales utilizadas para la recarga de aguas subterráneas Los recuentos de E.coli (FC) se indican en MPN/100mL",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "jordan",
+    "tagsEs": "jordan"
   },
   {
     "id": 64,
@@ -1492,7 +1620,9 @@
     "note": "Definition: Irrigation with wastewater for cooked vegetables, parking areas, playgrounds and side of roads inside cities E.coli counts (FC) are given in MPN/100mL",
     "noteEs": "Definición: Riego con aguas residuales para verduras cocidas, zonas de aparcamiento, parques infantiles y bordes de carreteras dentro de las ciudades Los recuentos de E.coli (FC) se indican en MPN/100mL",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "jordan",
+    "tagsEs": "jordan"
   },
   {
     "id": 65,
@@ -1515,7 +1645,9 @@
     "note": "Definition: Irrigation with wastewater for plenteous trees and green areas, side of roads outside cities E.coli counts (FC) are given in MPN/100mL",
     "noteEs": "Definición: Riego con aguas residuales para árboles frondosos y zonas verdes, al lado de las carreteras fuera de las ciudades Los recuentos de E.coli (FC) se dan en MPN/100mL",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "jordan",
+    "tagsEs": "jordan"
   },
   {
     "id": 66,
@@ -1538,7 +1670,9 @@
     "note": "Definition: Irrigation with wastewater for field crops, industrial crops and forestry",
     "noteEs": "Definición: Riego con aguas residuales para cultivos de campo, industriales y forestales",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "jordan",
+    "tagsEs": "jordan"
   },
   {
     "id": 67,
@@ -1561,7 +1695,9 @@
     "note": "Specific final uses (according to microbial categories): I: Residential uses II: Bathing water III: Urban uses (irrigation of landscape areas, street cleaning, fire-fighting) and unrestricted irrigation IV: Irrigation of industrial crops  and animal fodder, restricted irrigation V: Irrigation of forested areas and restricted access areas Additional Total Kjeldahl N: 15-20 mg/L",
     "noteEs": "nes finales específicas (según las categorías microbianas): I: Usos residenciales II: Aguas de baño III: Usos urbanos (riego de zonas ajardinadas, limpieza de calles, extinción de incendios) y riego no restringido IV: Riego de cultivos industriales y forrajes, riego restringido V: Riego de zonas forestales y zonas de acceso restringido Adicional N total Kjeldahl: 15-20 mg/L",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 68,
@@ -1584,7 +1720,9 @@
     "note": "Specific final uses (according to microbial categories): IV: Impoundments, water bodies and streams for recreational use with access (except bathing) V: Impoundments, water bodies and streams for recreational use with access (except bathing) VI: Surface water quality, water bodies and streams for recreational use with restricted access Total Kjeldahl N: 10-20 mg/L",
     "noteEs": "Usos finales específicos (según categorías microbianas): IV: Embalses, masas de agua y arroyos para uso recreativo con acceso (excepto baño) V: Embalses, masas de agua y arroyos para uso recreativo con acceso (excepto baño) VI: Calidad de las aguas superficiales, masas de agua y arroyos para uso recreativo con acceso restringido N total Kjeldahl: 10-20 mg/L",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 69,
@@ -1607,7 +1745,9 @@
     "note": "Specific final uses (according to microbial categories): V: Aquifer recharge by localized percolation through the soil",
     "noteEs": "Usos finales específicos (según categorías microbianas): V: Recarga del acuífero por percolación localizada a través del suelo",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 70,
@@ -1630,7 +1770,9 @@
     "note": "Specific final uses (according to microbial categories): VII: Industrial cooling except for the food industry Total Kjeldahl N: 10 mg/L",
     "noteEs": "Usos finales específicos (según categorías microbianas): VII: Refrigeración industrial, excepto para la industria alimentaria N total Kjeldahl: 10 mg/L",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 71,
@@ -1653,7 +1795,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "brasil",
+    "tagsEs": "brasil"
   },
   {
     "id": 72,
@@ -1676,7 +1820,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "brasil",
+    "tagsEs": "brasil"
   },
   {
     "id": 73,
@@ -1699,7 +1845,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "brasil",
+    "tagsEs": "brasil"
   },
   {
     "id": 74,
@@ -1722,7 +1870,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "brasil",
+    "tagsEs": "brasil"
   },
   {
     "id": 75,
@@ -1745,7 +1895,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "brasil",
+    "tagsEs": "brasil"
   },
   {
     "id": 76,
@@ -1768,7 +1920,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "brasil",
+    "tagsEs": "brasil"
   },
   {
     "id": 77,
@@ -1791,7 +1945,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "brasil",
+    "tagsEs": "brasil"
   },
   {
     "id": 78,
@@ -1814,7 +1970,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "chile",
+    "tagsEs": "chile"
   },
   {
     "id": 79,
@@ -1837,7 +1995,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "chile",
+    "tagsEs": "chile"
   },
   {
     "id": 80,
@@ -1860,7 +2020,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "chile",
+    "tagsEs": "chile"
   },
   {
     "id": 81,
@@ -1883,7 +2045,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "argentina",
+    "tagsEs": "argentina"
   },
   {
     "id": 82,
@@ -1906,7 +2070,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "argentina",
+    "tagsEs": "argentina"
   },
   {
     "id": 83,
@@ -1929,7 +2095,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "mexico",
+    "tagsEs": "mexico"
   },
   {
     "id": 84,
@@ -1952,7 +2120,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "mexico",
+    "tagsEs": "mexico"
   },
   {
     "id": 85,
@@ -1975,7 +2145,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "mexico",
+    "tagsEs": "mexico"
   },
   {
     "id": 86,
@@ -1998,7 +2170,9 @@
     "note": "A = Water quality is very low.  Water cannot be reused for any purpose nor discharged and needs treatment. ",
     "noteEs": "A = La calidad del agua es muy baja.  El agua no puede ser reutilizada para ningún fin ni vertida y necesita tratamiento.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 87,
@@ -2021,7 +2195,9 @@
     "note": "B = Water quality is low.  Water cannot be reused for any purpose but can be discharged according to the national regulations. ",
     "noteEs": "B = La calidad del agua es baja.  El agua no se puede reutilizar para ningún fin, pero se puede verter de acuerdo con la normativa nacional.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 88,
@@ -2044,7 +2220,9 @@
     "note": "C = Water quality is medium. Water could be reused for restricted agricultural (food crops not consumed uncooked) and/or industrial purposes. ",
     "noteEs": "C = La calidad del agua es media. El agua podría reutilizarse para fines agrícolas restringidos (cultivos alimentarios no consumidos sin cocinar) y/o industriales. ",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 89,
@@ -2067,7 +2245,9 @@
     "note": "D = Water quality is good. Water could be reused for agriculture and other non-potable uses in industry or in the urban network. ",
     "noteEs": "D = La calidad del agua es buena. El agua podría reutilizarse para la agricultura y otros usos no potables en la industria o en la red urbana.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 90,
@@ -2090,7 +2270,9 @@
     "note": "E = Water quality is excellent. Water could be reused for potable uses.",
     "noteEs": "E = La calidad del agua es excelente. El agua podría reutilizarse para usos potables.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 91,
@@ -2113,7 +2295,9 @@
     "note": "A = Water quality is very low.  Water cannot be reused for any purpose nor discharged and needs treatment. ",
     "noteEs": "A = La calidad del agua es muy baja.  El agua no puede ser reutilizada para ningún fin ni vertida y necesita tratamiento.",
     "reference": "Yourself",
-    "referenceEs": "propia"
+    "referenceEs": "propia",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 92,
@@ -2136,7 +2320,9 @@
     "note": "B = Water quality is low.  Water cannot be reused for any purpose but can be discharged according to the national regulations. ",
     "noteEs": "B = La calidad del agua es baja.  El agua no se puede reutilizar para ningún fin, pero se puede verter de acuerdo con la normativa nacional.",
     "reference": "Yourself",
-    "referenceEs": "propia"
+    "referenceEs": "propia",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 93,
@@ -2159,7 +2345,9 @@
     "note": "C = Water quality is medium. Water could be reused for restricted agricultural (food crops not consumed uncooked) and/or industrial purposes. ",
     "noteEs": "C = La calidad del agua es media. El agua podría reutilizarse para fines agrícolas restringidos (cultivos alimentarios no consumidos sin cocinar) y/o industriales.",
     "reference": "Yourself",
-    "referenceEs": "propia"
+    "referenceEs": "propia",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 94,
@@ -2182,7 +2370,9 @@
     "note": "D = Water quality is good. Water could be reused for agriculture and other non-potable uses in industry or in the urban network. ",
     "noteEs": "D = La calidad del agua es buena. El agua podría reutilizarse para la agricultura y otros usos no potables en la industria o en la red urbana.",
     "reference": "Yourself",
-    "referenceEs": "propia"
+    "referenceEs": "propia",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 95,
@@ -2205,7 +2395,9 @@
     "note": "E = Water quality is excellent. Water could be reused for potable uses.",
     "noteEs": "E = La calidad del agua es excelente. El agua podría reutilizarse para usos potables.",
     "reference": "Yourself",
-    "referenceEs": "propia"
+    "referenceEs": "propia",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 96,
@@ -2228,7 +2420,9 @@
     "note": "Discharge to water bodies with a function of drinking water supply (Class A)  .QCVN 40:2011",
     "noteEs": "Vertido a masas de agua con función de suministro de agua potable (Clase A) .QCVN 40:2011",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam",
+    "tagsEs": "vietnam"
   },
   {
     "id": 97,
@@ -2251,7 +2445,9 @@
     "note": "Discharge to water bodies without function of drinking water supply (Class B)  QCVN 40:2011",
     "noteEs": "Vertido a masas de agua no para el suministro de agua potable (Clase B) QCVN 40:2011",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam",
+    "tagsEs": "vietnam"
   },
   {
     "id": 98,
@@ -2274,7 +2470,9 @@
     "note": "National technical regulation on water quality for irrigation (QCVN 39: 2011/BTNMT)",
     "noteEs": "Reglamento técnico nacional sobre la calidad del agua de riego (QCVN 39: 2011/BTNMT)",
     "reference": "National technical regulation on water quality for irrigation (QCVN 39: 2011/BTNMT)",
-    "referenceEs": "Reglamento técnico nacional sobre la calidad del agua de riego (QCVN 39: 2011/BTNMT)"
+    "referenceEs": "Reglamento técnico nacional sobre la calidad del agua de riego (QCVN 39: 2011/BTNMT)",
+    "tags": "vietnam",
+    "tagsEs": "vietnam"
   },
   {
     "id": 99,
@@ -2297,7 +2495,9 @@
     "note": "Estimated, based on (World Bank 2013) and own estimations.",
     "noteEs": "Estimado, basado en (Banco Mundial 2013) y estimaciones propias.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 100,
@@ -2320,7 +2520,9 @@
     "note": "Estimated, based on (World Bank 2013) and own estimations.",
     "noteEs": "Estimado, basado en (Banco Mundial 2013) y estimaciones propias",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 101,
@@ -2343,7 +2545,9 @@
     "note": "Thuan Dao Industrial Zone, The People’s Commitee of Long An Province. 2011. The Preparatory Survey on Utility Management of Environment-Friendly Industrial Parks in Vietnam.",
     "noteEs": "Zona industrial de Thuan Dao, Comité Popular de la provincia de Long An. 2011. La encuesta preparatoria sobre la gestión de servicios públicos de los parques industriales respetuosos con el medio ambiente en Vietnam.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 102,
@@ -2366,7 +2570,9 @@
     "note": "Thuan Dao Industrial Zone, The People’s Commitee of Long An Province. 2011. The Preparatory Survey on Utility Management of Environment-Friendly Industrial Parks in Vietnam.",
     "noteEs": "Zona industrial de Thuan Dao, Comité Popular de la provincia de Long An. 2011. The Preparatory Survey on Utility Management of Environment-Friendly Industrial Parks in Vietnam.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 103,
@@ -2389,7 +2595,9 @@
     "note": "(World Bank 2013)",
     "noteEs": "(Banco Mundial 2013)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 104,
@@ -2412,7 +2620,9 @@
     "note": "(World Bank 2013)",
     "noteEs": "(Banco Mundial 2013)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 105,
@@ -2435,7 +2645,9 @@
     "note": "(World Bank 2013)",
     "noteEs": "(Banco Mundial 2013)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 106,
@@ -2458,7 +2670,9 @@
     "note": "(World Bank 2013)",
     "noteEs": "(Banco Mundial 2013)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 107,
@@ -2481,7 +2695,9 @@
     "note": "(World Bank 2013)",
     "noteEs": "(Banco Mundial 2013)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 108,
@@ -2504,7 +2720,9 @@
     "note": "(World Bank 2013)",
     "noteEs": "(Banco Mundial 2013)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 109,
@@ -2527,7 +2745,9 @@
     "note": "(World Bank 2013)",
     "noteEs": "(Banco Mundial 2013)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 110,
@@ -2550,7 +2770,9 @@
     "note": "(World Bank 2013)",
     "noteEs": "(Banco Mundial 2013)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 111,
@@ -2573,7 +2795,9 @@
     "note": "(Nguyen 2007)",
     "noteEs": "(Nguyen 2007)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 112,
@@ -2596,7 +2820,9 @@
     "note": "",
     "noteEs": "",
     "reference": "(World Bank 2013)",
-    "referenceEs": "(Banco Mundial 2013)"
+    "referenceEs": "(Banco Mundial 2013)",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 113,
@@ -2619,7 +2845,9 @@
     "note": "",
     "noteEs": "",
     "reference": "(World Bank 2013)",
-    "referenceEs": "(Banco Mundial 2013)"
+    "referenceEs": "(Banco Mundial 2013)",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 114,
@@ -2642,7 +2870,9 @@
     "note": "",
     "noteEs": "",
     "reference": "(World Bank 2013)",
-    "referenceEs": "(Banco Mundial 2013)"
+    "referenceEs": "(Banco Mundial 2013)",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 115,
@@ -2665,7 +2895,9 @@
     "note": "",
     "noteEs": "",
     "reference": "(World Bank 2013)",
-    "referenceEs": "(Banco Mundial 2013)"
+    "referenceEs": "(Banco Mundial 2013)",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 116,
@@ -2688,7 +2920,9 @@
     "note": "",
     "noteEs": "",
     "reference": "(World Bank 2013)",
-    "referenceEs": "(Banco Mundial 2013)"
+    "referenceEs": "(Banco Mundial 2013)",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 117,
@@ -2711,7 +2945,9 @@
     "note": "",
     "noteEs": "",
     "reference": "(World Bank 2013)",
-    "referenceEs": "(Banco Mundial 2013)"
+    "referenceEs": "(Banco Mundial 2013)",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 118,
@@ -2734,7 +2970,9 @@
     "note": "",
     "noteEs": "",
     "reference": "(World Bank 2013)",
-    "referenceEs": "(Banco Mundial 2013)"
+    "referenceEs": "(Banco Mundial 2013)",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 119,
@@ -2757,7 +2995,9 @@
     "note": "",
     "noteEs": "",
     "reference": "(World Bank 2013)",
-    "referenceEs": "(Banco Mundial 2013)"
+    "referenceEs": "(Banco Mundial 2013)",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 120,
@@ -2780,7 +3020,9 @@
     "note": "",
     "noteEs": "",
     "reference": "(Nguyen 2007)",
-    "referenceEs": "(Nguyen 2007)"
+    "referenceEs": "(Nguyen 2007)",
+    "tags": "vietnam, wastewater",
+    "tagsEs": "vietnam, aguas residuales"
   },
   {
     "id": 121,
@@ -2803,7 +3045,9 @@
     "note": "Cat. A: Very high quality treated wastewater",
     "noteEs": "Cat. A: Aguas residuales tratadas de muy alta calidad",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "iso",
+    "tagsEs": "iso"
   },
   {
     "id": 122,
@@ -2826,7 +3070,9 @@
     "note": "Cat. B: High quality treated wastewater",
     "noteEs": "Cat. B: Aguas residuales tratadas de alta calidad",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "iso",
+    "tagsEs": "iso"
   },
   {
     "id": 123,
@@ -2849,7 +3095,9 @@
     "note": "Cat. C: Good quality treated wastewater",
     "noteEs": "Cat. C: Aguas residuales tratadas de buena calidad",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "iso",
+    "tagsEs": "iso"
   },
   {
     "id": 124,
@@ -2872,7 +3120,9 @@
     "note": "Cat. D: Medium quality treated wastewater",
     "noteEs": "Cat. D: Aguas residuales tratadas de calidad media",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "iso",
+    "tagsEs": "iso"
   },
   {
     "id": 125,
@@ -2895,7 +3145,9 @@
     "note": "Cat. E: Extensively quality treated wastewater",
     "noteEs": "Cat. E: Aguas residuales de gran calidad tratadas",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "iso",
+    "tagsEs": "iso"
   },
   {
     "id": 126,
@@ -2918,7 +3170,9 @@
     "note": "(S.E.E.E. 2007) Quality standards of water for irrigation, crops to be eaten raw (category A)",
     "noteEs": "(S.E.E. 2007) Normas de calidad del agua de riego, cultivos para consumo en crudo (categoría A)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "morocco",
+    "tagsEs": "marruecos"
   },
   {
     "id": 127,
@@ -2941,7 +3195,9 @@
     "note": "(S.E.E.E. 2007) Quality standards of water for irrigation, other crops (categories B&C)",
     "noteEs": "(S.E.E. 2007) Normas de calidad del agua de riego, otros cultivos (categorías B&C)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "morocco",
+    "tagsEs": "marruecos"
   },
   {
     "id": 128,
@@ -2964,7 +3220,9 @@
     "note": "National reports of the MED POL programme: 2005, 2010 and 2012., (European Environment Agency 2014)",
     "noteEs": "Informes nacionales del programa MED POL: 2005, 2010 y 2012, (Agencia Europea de Medio Ambiente 2014)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "morocco",
+    "tagsEs": "marruecos"
   },
   {
     "id": 129,
@@ -2987,7 +3245,9 @@
     "note": "National reports of the MED POL programme: 2005, 2010 and 2012., (European Environment Agency 2014)",
     "noteEs": "Informes nacionales del programa MED POL: 2005, 2010 y 2012, (Agencia Europea de Medio Ambiente 2014)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "morocco",
+    "tagsEs": "marruecos"
   },
   {
     "id": 130,
@@ -3010,7 +3270,9 @@
     "note": "National reports of the MED POL programme: 2005, 2010 and 2012., (European Environment Agency 2014)",
     "noteEs": "Informes nacionales del programa MED POL: 2005, 2010 y 2012, (Agencia Europea de Medio Ambiente 2014)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "morocco",
+    "tagsEs": "marruecos"
   },
   {
     "id": 131,
@@ -3033,7 +3295,9 @@
     "note": "National reports of the MED POL programme: 2005, 2010 and 2012., (European Environment Agency 2014)",
     "noteEs": "Informes nacionales del programa MED POL: 2005, 2010 y 2012, (Agencia Europea de Medio Ambiente 2014)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "morocco",
+    "tagsEs": "marruecos"
   },
   {
     "id": 132,
@@ -3056,7 +3320,9 @@
     "note": "National reports of the MED POL programme: 2005, 2010 and 2012., (European Environment Agency 2014)",
     "noteEs": "Informes nacionales del programa MED POL: 2005, 2010 y 2012, (Agencia Europea de Medio Ambiente 2014)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "morocco",
+    "tagsEs": "marruecos"
   },
   {
     "id": 133,
@@ -3079,7 +3345,9 @@
     "note": "National reports of the MED POL programme: 2005, 2010 and 2012., (European Environment Agency 2014)",
     "noteEs": "Informes nacionales del programa MED POL: 2005, 2010 y 2012, (Agencia Europea de Medio Ambiente 2014)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "morocco",
+    "tagsEs": "marruecos"
   },
   {
     "id": 134,
@@ -3102,7 +3370,9 @@
     "note": "National reports of the MED POL programme: 2005, 2010 and 2012., (European Environment Agency 2014)",
     "noteEs": "Informes nacionales del programa MED POL: 2005, 2010 y 2012, (Agencia Europea de Medio Ambiente 2014)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "morocco",
+    "tagsEs": "marruecos"
   },
   {
     "id": 135,
@@ -3125,7 +3395,9 @@
     "note": "National reports of the MED POL programme: 2005, 2010 and 2012., (European Environment Agency 2014)",
     "noteEs": "Informes nacionales del programa MED POL: 2005, 2010 y 2012, (Agencia Europea de Medio Ambiente 2014)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "morocco",
+    "tagsEs": "marruecos"
   },
   {
     "id": 136,
@@ -3148,7 +3420,9 @@
     "note": "National reports of the MED POL programme: 2005, 2010 and 2012., (European Environment Agency 2014)",
     "noteEs": "Informes nacionales del programa MED POL: 2005, 2010 y 2012, (Agencia Europea de Medio Ambiente 2014)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "morocco",
+    "tagsEs": "marruecos"
   },
   {
     "id": 137,
@@ -3171,7 +3445,9 @@
     "note": "National reports of the MED POL programme: 2005, 2010 and 2012., (European Environment Agency 2014)",
     "noteEs": "Informes nacionales del programa MED POL: 2005, 2010 y 2012, (Agencia Europea de Medio Ambiente 2014)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "morocco",
+    "tagsEs": "marruecos"
   },
   {
     "id": 138,
@@ -3194,7 +3470,9 @@
     "note": "(WHO 2006) Tunisian Standard of wastewater reuse for irrigation (1989), NT 106–03 standard. There are many other measurements that are not included in this table",
     "noteEs": "(OMS 2006) Norma tunecina de reutilización de aguas residuales para el riego (1989), norma NT 106-03. Hay muchas otras medidas que no están incluidas en esta tabla",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 139,
@@ -3217,7 +3495,9 @@
     "note": "(Food and Agricultural Organisation of the United Nations 2013) Use of treated wastewater for agricultural purposes.",
     "noteEs": "(Organización de las Naciones Unidas para la Agricultura y la Alimentación 2013) Uso de aguas residuales tratadas para fines agrícolas.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 140,
@@ -3240,7 +3520,9 @@
     "note": "(Food and Agricultural Organisation of the United Nations 2013) Irrigation of golf courses, urban parks and green spaces in urban areas.",
     "noteEs": "(Organización de las Naciones Unidas para la Agricultura y la Alimentación 2013) Riego de campos de golf, parques urbanos y espacios verdes en zonas urbanas.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 141,
@@ -3263,7 +3545,9 @@
     "note": "(Food and Agricultural Organisation of the United Nations 2013) Recharge by infiltration of groundwater intended solely for agricultural use",
     "noteEs": "(Organización de las Naciones Unidas para la Agricultura y la Alimentación 2013) Recarga por infiltración de aguas subterráneas destinadas exclusivamente a uso agrícola",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 142,
@@ -3286,7 +3570,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available. Rejet dans le Domaine public maritime (DPM)",
     "noteEs": "(Ministerio de Comercio y Ministerio de Asuntos Locales y Medio Ambiente 2018) Los valores enumerados son una selección de todas las medidas disponibles. Vertido en el dominio público marítimo (DPM)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 143,
@@ -3309,7 +3595,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available. Rejet dans le Domaine public hydraulique (DPH)",
     "noteEs": "(Ministerio de Comercio y Ministerio de Asuntos Locales y Medio Ambiente 2018) Los valores enumerados son una selección de todas las mediciones disponibles. Vertido en el Dominio Público Hidráulico (DAP)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 144,
@@ -3332,7 +3620,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available. Rejet dans le Domaine réseau public d’assainissement (RPA)",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available. Rejet dans le Domaine réseau public d’assainissement (RPA)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "",
+    "tagsEs": ""
   },
   {
     "id": 145,
@@ -3355,7 +3645,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 146,
@@ -3378,7 +3670,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 147,
@@ -3401,7 +3695,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 148,
@@ -3424,7 +3720,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 149,
@@ -3447,7 +3745,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 150,
@@ -3470,7 +3770,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 151,
@@ -3493,7 +3795,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 152,
@@ -3516,7 +3820,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 153,
@@ -3539,7 +3845,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 154,
@@ -3562,7 +3870,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 155,
@@ -3585,7 +3895,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 156,
@@ -3608,7 +3920,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 157,
@@ -3631,7 +3945,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 158,
@@ -3654,7 +3970,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 159,
@@ -3677,7 +3995,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 160,
@@ -3700,7 +4020,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 161,
@@ -3723,7 +4045,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 162,
@@ -3746,7 +4070,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 163,
@@ -3769,7 +4095,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 164,
@@ -3792,7 +4120,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 165,
@@ -3815,7 +4145,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 166,
@@ -3838,7 +4170,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 167,
@@ -3861,7 +4195,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 168,
@@ -3884,7 +4220,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 169,
@@ -3907,7 +4245,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 170,
@@ -3930,7 +4270,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 171,
@@ -3953,7 +4295,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 172,
@@ -3976,7 +4320,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 173,
@@ -3999,7 +4345,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 174,
@@ -4022,7 +4370,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 175,
@@ -4045,7 +4395,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 176,
@@ -4068,7 +4420,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 177,
@@ -4091,7 +4445,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 178,
@@ -4114,7 +4470,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 179,
@@ -4137,7 +4495,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 180,
@@ -4160,7 +4520,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 181,
@@ -4183,7 +4545,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 182,
@@ -4206,7 +4570,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 183,
@@ -4229,7 +4595,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 184,
@@ -4252,7 +4620,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 185,
@@ -4275,7 +4645,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 186,
@@ -4298,7 +4670,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 187,
@@ -4321,7 +4695,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 188,
@@ -4344,7 +4720,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 189,
@@ -4367,7 +4745,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 190,
@@ -4390,7 +4770,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 191,
@@ -4413,7 +4795,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 192,
@@ -4436,7 +4820,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 193,
@@ -4459,7 +4845,9 @@
     "note": "(Ministere du Commerce et Ministere des Affaires Locales et de l’environment 2018) The listed values are a selection of all measurements available.",
     "noteEs": "(Ministere du Commerce et Ministere des Affaires Locales et de l'environment 2018) Los valores enumerados son una selección de todas las mediciones disponibles.",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "tunisia",
+    "tagsEs": "tunez"
   },
   {
     "id": 194,
@@ -4482,7 +4870,9 @@
     "note": "(Elbana et al. 2014) Criteria of treated wastewater for agricultural use / Treatment Level A (landscape irrigation in urban areas)",
     "noteEs": "(Elbana et al. 2014) Criterios de las aguas residuales tratadas para uso agrícola / Nivel de tratamiento A (riego de jardines en zonas urbanas)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "egypt",
+    "tagsEs": "egipto"
   },
   {
     "id": 195,
@@ -4505,7 +4895,9 @@
     "note": "(Elbana et al. 2014) Criteria of treated wastewater for agricultural use / Treatment Level B (agriculture purposes in desert areas)",
     "noteEs": "(Elbana et al. 2014) Criterios de las aguas residuales tratadas para uso agrícola / Nivel de tratamiento B (riego de jardines en zonas urbanas)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "egypt",
+    "tagsEs": "egipto"
   },
   {
     "id": 196,
@@ -4528,7 +4920,9 @@
     "note": "(Elbana et al. 2014) Criteria of treated wastewater for agricultural use / Treatment Level C (agriculture purposes in desert areas)",
     "noteEs": "(Elbana et al. 2014) Criterios de las aguas residuales tratadas para uso agrícola / Nivel de tratamiento C (riego de jardines en zonas urbanas)",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "egypt",
+    "tagsEs": "egipto"
   },
   {
     "id": 197,
@@ -4551,7 +4945,9 @@
     "note": "",
     "noteEs": "",
     "reference": "(Abdel-Satar, Ali, and Goher 2017)",
-    "referenceEs": "(Abdel-Satar, Ali, and Goher 2017)"
+    "referenceEs": "(Abdel-Satar, Ali, and Goher 2017)",
+    "tags": "egypt",
+    "tagsEs": "egipto"
   },
   {
     "id": 198,
@@ -4574,7 +4970,9 @@
     "note": "",
     "noteEs": "",
     "reference": "(El Bouraie et al. 2011) Egyptian Law for protection of the River Nile and water ways from pollution",
-    "referenceEs": "Ley 48/1982: Protección del río Nilo y de las vías fluviales"
+    "referenceEs": "Ley 48/1982: Protección del río Nilo y de las vías fluviales",
+    "tags": "egypt",
+    "tagsEs": "egipto"
   },
   {
     "id": 199,
@@ -4597,7 +4995,9 @@
     "note": "All food crops consumed raw where the edible part is in direct contact with reclaimed water and root crops consumed raw",
     "noteEs": "Todos los cultivos alimentarios que se consumen crudos cuando la parte comestible está en contacto directo con el agua regenerada y los cultivos de raíces que se consumen crudos",
     "reference": "Regulation (EU) 2020/741",
-    "referenceEs": "Regulation (EU) 2020/741"
+    "referenceEs": "Regulation (EU) 2020/741",
+    "tags": "europe",
+    "tagsEs": "europa"
   },
   {
     "id": 200,
@@ -4620,7 +5020,9 @@
     "note": "Food crops consumed raw where the edible part is produced above ground and is not in direct contact with reclaimed water, processed food crops and non-food crops including crops used to feed milk- or meat-producing animals",
     "noteEs": "Los cultivos alimentarios que se consumen crudos cuando la parte comestible se produce en la superficie y no está en contacto directo con el agua regenerada, los cultivos alimentarios transformados y los cultivos no alimentarios, incluidos los utilizados para alimentar a los animales productores de leche o carne",
     "reference": "Regulation (EU) 2020/741",
-    "referenceEs": "Regulation (EU) 2020/741"
+    "referenceEs": "Regulation (EU) 2020/741",
+    "tags": "europe",
+    "tagsEs": "europa"
   },
   {
     "id": 201,
@@ -4643,7 +5045,9 @@
     "note": "Food crops consumed raw where the edible part is produced above ground and is not in direct contact with reclaimed water, processed food crops and non-food crops including crops used to feed milk- or meat-producing animals",
     "noteEs": "Los cultivos alimentarios que se consumen crudos cuando la parte comestible se produce en la superficie y no está en contacto directo con el agua regenerada, los cultivos alimentarios transformados y los cultivos no alimentarios, incluidos los utilizados para alimentar a los animales productores de leche o carne",
     "reference": "Regulation (EU) 2020/741",
-    "referenceEs": "Regulation (EU) 2020/741"
+    "referenceEs": "Regulation (EU) 2020/741",
+    "tags": "europe",
+    "tagsEs": "europa"
   },
   {
     "id": 202,
@@ -4666,7 +5070,9 @@
     "note": "Industrial, energy, and seeded crops",
     "noteEs": "Cultivos industriales, energéticos y de semillas",
     "reference": "Regulation (EU) 2020/741",
-    "referenceEs": "Regulation (EU) 2020/741"
+    "referenceEs": "Regulation (EU) 2020/741",
+    "tags": "europe",
+    "tagsEs": "europa"
   },
   {
     "id": 203,
@@ -4689,7 +5095,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "peru",
+    "tagsEs": "peru"
   },
   {
     "id": 204,
@@ -4712,7 +5120,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "peru",
+    "tagsEs": "peru"
   },
   {
     "id": 205,
@@ -4735,7 +5145,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "peru",
+    "tagsEs": "peru"
   },
   {
     "id": 206,
@@ -4758,7 +5170,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "peru",
+    "tagsEs": "peru"
   },
   {
     "id": 207,
@@ -4781,7 +5195,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "peru",
+    "tagsEs": "peru"
   },
   {
     "id": 208,
@@ -4804,7 +5220,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "peru",
+    "tagsEs": "peru"
   },
   {
     "id": 209,
@@ -4827,7 +5245,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "peru",
+    "tagsEs": "peru"
   },
   {
     "id": 210,
@@ -4850,7 +5270,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "peru",
+    "tagsEs": "peru"
   },
   {
     "id": 211,
@@ -4873,7 +5295,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "peru",
+    "tagsEs": "peru"
   },
   {
     "id": 212,
@@ -4896,7 +5320,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "peru",
+    "tagsEs": "peru"
   },
   {
     "id": 213,
@@ -4919,7 +5345,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "peru",
+    "tagsEs": "peru"
   },
   {
     "id": 214,
@@ -4942,7 +5370,9 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "peru",
+    "tagsEs": "peru"
   },
   {
     "id": 215,
@@ -4965,6 +5395,8 @@
     "note": "",
     "noteEs": "",
     "reference": "",
-    "referenceEs": ""
+    "referenceEs": "",
+    "tags": "peru",
+    "tagsEs": "peru"
   }
 ]
