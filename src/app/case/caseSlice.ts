@@ -142,6 +142,9 @@ export const caseSlice = createSlice({
     },
     setCustomInput: (state, action) => {
       state.input.custom = action.payload
+      if (action.payload === false) {
+        state.input.customQualityFactors = initialState.input.customQualityFactors
+      }
     },
     setCustomInputValues: (state, action) => {
       state.input.customValues = action.payload
