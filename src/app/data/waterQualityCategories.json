@@ -182,5 +182,11 @@
     "name": "WHO guidelines, 2006; Vol. 2-4",
     "nameEs": "Directrices de la OMS, 2006; Vol. 2-4",
     "input": false
+  },
+  {
+    "id": 31,
+    "name": "Typical Beamhouse Wastewater from Tannery Industry",
+    "nameEs": "Agua residual de Ribera en la Industria de la Curtiembre",
+    "input": true
   }
 ]
