@@ -118,5 +118,45 @@
     "nameLongEs": "Virus",
     "unit": "PFU/100ml",
     "maxValue": 100
+  },
+  {
+    "id": 12,
+    "name": "an",
+    "nameShort": "AN",
+    "nameShortEs": "AN",
+    "nameLong": "AN",
+    "nameLongEs": "AN",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 13,
+    "name": "fo",
+    "nameShort": "FO",
+    "nameShortEs": "GA",
+    "nameLong": "Fat & Oil",
+    "nameLongEs": "Grasa & Aceite",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 14,
+    "name": "sulphate",
+    "nameShort": "Sulphate",
+    "nameShortEs": "sulfato",
+    "nameLong": "Sulphate",
+    "nameLongEs": "Sulfato",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 15,
+    "name": "sulphide",
+    "nameShort": "Sulphide",
+    "nameShortEs": "Sulfuro",
+    "nameLong": "Sulphide",
+    "nameLongEs": "Sulfuro",
+    "unit": "mg/L",
+    "maxValue": 10000
   }
 ]
