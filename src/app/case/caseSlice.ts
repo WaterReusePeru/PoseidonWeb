@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { RootState } from '../store'
-import { treatmentTrains, ValueWaterQuality } from '../data/model'
+import { treatmentTrains, ValueWaterQuality, waterQualityFactors } from '../data/model'
 
 type CaseState = {
   step: number
@@ -16,6 +16,7 @@ type CaseState = {
     customValues: ValueWaterQuality
     customValueEntered: boolean
     quantity?: number
+    customQualityFactors: string[]
   }
   endUse: {
     custom: boolean
@@ -74,6 +75,7 @@ const initialState: CaseState = {
       helminths: NaN,
     },
     customValueEntered: false,
+    customQualityFactors: ['TSS', 'BOD', 'COD', 'TC'],
   },
   endUse: {
     custom: false,
@@ -140,12 +142,20 @@ export const caseSlice = createSlice({
     },
     setCustomInput: (state, action) => {
       state.input.custom = action.payload
+      if (action.payload === false) {
+        state.input.customQualityFactors = initialState.input.customQualityFactors
+      }
     },
     setCustomInputValues: (state, action) => {
       state.input.customValues = action.payload
       state.input.customValueEntered = true
       if (state.input.quantity) {
         state.completedSteps[1] = 1
+      }
+    },
+    setCutomInputQualityFactors: (state, action) => {
+      if (action.payload.length > 0) {
+        state.input.customQualityFactors = action.payload
       }
     },
     setInputQualityCategory: (state, action) => {
@@ -212,7 +222,13 @@ export const caseSlice = createSlice({
         state.solutions[index].annualizedOMCost = treatment.annualizedOMCost
         state.solutions[index].annualizedOpex = treatment.annualizedOpex
         state.solutions[index].costPerCubic = treatment.costPerCubic
-        if (treatment.turbidity) {
+
+        waterQualityFactors.forEach((f) => {
+          if (treatment[f.name]) {
+            state.solutions[index].values[f.name] = treatment[f.name]
+          }
+        })
+        /* if (treatment.turbidity) {
           state.solutions[index].values.turbidity = treatment.turbidity
         }
         if (treatment.tss) {
@@ -229,7 +245,7 @@ export const caseSlice = createSlice({
         }
         if (treatment.tc) {
           state.solutions[index].values.tc = treatment.tc
-        }
+        } */
       })
       for (let i = action.payload.length; i < treatmentTrains.length; i++) {
         state.solutions[i].treatmentTrain = undefined
@@ -255,6 +271,7 @@ export const {
   setInputQuantity,
   setCustomInput,
   setCustomInputValues,
+  setCutomInputQualityFactors,
   setEndUseQualityCategory,
   setEndUseQualityClass,
   setCustomEndUse,
@@ -267,5 +284,7 @@ export const {
 } = caseSlice.actions
 
 export const selectCase = (state: RootState) => state.case
+
+console.log(caseSlice)
 
 export default caseSlice.reducer

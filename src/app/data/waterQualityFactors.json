@@ -58,5 +58,65 @@
     "nameLongEs": "Coliformes totales",
     "unit": "CFU/100ml",
     "maxValue": 1000000000
+  },
+  {
+    "id": 6,
+    "name": "tn",
+    "nameShort": "TN",
+    "nameShortEs": "NT",
+    "nameLong": "Total Nitrogen",
+    "nameLongEs": "Nitrogen totales",
+    "unit": "mg/L",
+    "maxValue": 1000
+  },
+  {
+    "id": 7,
+    "name": "tp",
+    "nameShort": "TP",
+    "nameShortEs": "FT",
+    "nameLong": "Total Phosphorus",
+    "nameLongEs": "Fósforo totales",
+    "unit": "mg/L",
+    "maxValue": 50000
+  },
+  {
+    "id": 8,
+    "name": "tds",
+    "nameShort": "TDS",
+    "nameShortEs": "SDT",
+    "nameLong": "Total Dissolved Solids",
+    "nameLongEs": "Sólidos disueltos totales",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 9,
+    "name": "nitrate",
+    "nameShort": "Nitrate",
+    "nameShortEs": "Nitrato",
+    "nameLong": "Nitrate",
+    "nameLongEs": "Nitrato",
+    "unit": "mg N/L",
+    "maxValue": 1000
+  },
+  {
+    "id": 10,
+    "name": "toc",
+    "nameShort": "TOC",
+    "nameShortEs": "SDT",
+    "nameLong": "Total Organic Carbon",
+    "nameLongEs": "Carbono orgánico total",
+    "unit": "mg/L",
+    "maxValue": 1000
+  },
+  {
+    "id": 11,
+    "name": "virus",
+    "nameShort": "Virus",
+    "nameShortEs": "Virus",
+    "nameLong": "Virus",
+    "nameLongEs": "Virus",
+    "unit": "PFU/100ml",
+    "maxValue": 100
   }
 ]
