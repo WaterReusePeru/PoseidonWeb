@@ -120,6 +120,20 @@ export default function UnitProcesses() {
         filter: true,
       },
     },
+    {
+      name: 'category',
+      label: t('Type'),
+      options: {
+        filter: true,
+        customBodyRender: (value: number) => {
+          if (qualities[value].input) {
+            return t('Wastewater')
+          } else {
+            return t('Quality Standard')
+          }
+        },
+      },
+    },
   ]
 
   return (

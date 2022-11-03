@@ -103,6 +103,8 @@ export const resources = {
       'Sorry, no matching records found': 'Lo sentimos, no se han encontrado registros coincidentes',
       Sort: 'Ordenar',
       'Outflow Values / Limit Values': 'Valores de salida / Valores límite',
+      Wastewater: 'Aguas residuales',
+      'Quality Standard': 'Norma de calidad',
     },
   },
 }
