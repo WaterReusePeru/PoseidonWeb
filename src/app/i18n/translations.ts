@@ -95,7 +95,7 @@ export const resources = {
       'Annualized Labor Cost': 'Coste laboral anualizado',
       'Annualized OPEX': 'OPEX anualizado',
       'Annualized Total Cost': 'Coste total anualizado',
-      'Cost per Cubic': 'Coste por cubo',
+      'Cost per Cubic': 'Costo por m3',
       'Total capital expenditure (CAPEX)': 'Total de gastos de capital (CAPEX)',
       'Treatment Cost': 'Coste del tratamiento',
       'Sort by rating': 'Ordenar por clasificación',
