@@ -60,7 +60,7 @@ export const ResultsGraph = () => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: t('Cost per Cubic') + ' [' + currency + ']',
+        legend: t('Cost per m3') + ' [' + currency + ']',
         legendPosition: 'middle',
         legendOffset: 46,
       }}
