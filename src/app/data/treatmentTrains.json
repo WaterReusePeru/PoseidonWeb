@@ -754,5 +754,17 @@
     "case_study": "Sunass, Peru 2006",
     "case_studyEs": "Sunass, Peru 2006",
     "unit_processes": [0, 2, 6, 7, 4, 34]
+  },
+  {
+    "id": 63,
+    "title": "Chemical Treatment Peru",
+    "titleEs": "Tratamiento químico",
+    "category": "Chemical Treatment",
+    "categoryEs": "Chemical Treatment",
+    "description": "",
+    "descriptionEs": "",
+    "case_study": "",
+    "case_studyEs": "",
+    "unit_processes": [37]
   }
 ]
