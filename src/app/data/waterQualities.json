@@ -6265,7 +6265,7 @@
   },
   {
     "id": 216,
-    "name": "Average Wastewater from Tannery stage",
+    "name": "Average Wastewater from Tanning stage",
     "nameEs": "Promedio de aguas residuales de la etapa de curtido",
     "category": 31,
     "turbidity": null,
@@ -6292,5 +6292,35 @@
     "referenceEs": "",
     "tags": "peru, america",
     "tagsEs": "peru, america"
+  },
+  {
+    "id": 217,
+    "name": "Average Wastewater from post tanning and finishing stage",
+    "nameEs": "Promedio de aguas residuales de la etapa de post curtido y acabado",
+    "category": 31,
+    "turbidity": null,
+    "tss": 780,
+    "bod": 1020,
+    "cod": 2820,
+    "tn": null,
+    "tp": null,
+    "fc": null,
+    "tc": null,
+    "tds": null,
+    "nitrate": null,
+    "toc": null,
+    "virus": null,
+    "helminths": null,
+    "an": 80,
+    "fo": 190,
+    "sulphate": 1450,
+    "sulphide": 1,
+    "chrome": 100,
+    "note": "",
+    "noteEs": "",
+    "reference": "",
+    "referenceEs": "",
+    "tags": "peru, america",
+    "tagsEs": "peru, america"
   }
-]
+  ]
