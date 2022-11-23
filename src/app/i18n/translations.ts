@@ -105,6 +105,8 @@ export const resources = {
       'Outflow Values / Limit Values': 'Valores de salida / Valores límite',
       Wastewater: 'Aguas residuales',
       'Quality Standard': 'Norma de calidad',
+
+      Solutions: 'Soluciones',
     },
   },
 }
