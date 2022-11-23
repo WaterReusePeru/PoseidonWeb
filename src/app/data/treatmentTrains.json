@@ -766,5 +766,53 @@
     "case_study": "",
     "case_studyEs": "",
     "unit_processes": [37]
+  },
+  {
+    "id": 64,
+    "title": "Preliminary Treatment (Filtration)",
+    "titleEs": "Tratamiento preliminar (Filtración)",
+    "category": "Physical Treatment",
+    "categoryEs": "Tratamiento físico",
+    "description": "",
+    "descriptionEs": "",
+    "case_study": "",
+    "case_studyEs": "",
+    "unit_processes": [37]
+  },
+   {
+    "id": 65,
+    "title": "Primary Sedimentation",
+    "titleEs": "Sedimentación primaria",
+    "category": "Physical Treatment",
+    "categoryEs": "Tratamiento físico",
+    "description": "",
+    "descriptionEs": "",
+    "case_study": "",
+    "case_studyEs": "",
+    "unit_processes": [37]
+  },
+  {
+    "id": 66,
+    "title": "Sulphide Oxidation Tank",
+    "titleEs": "Tanque de oxidación de sulfuros",
+    "category": "Physical Treatment",
+    "categoryEs": "Tratamiento físico",
+    "description": "",
+    "descriptionEs": "",
+    "case_study": "",
+    "case_studyEs": "",
+    "unit_processes": [37]
+  },
+  {
+    "id": 67,
+    "title": "Sulphate removal tank",
+    "titleEs": "Tanque de remoción de sulfuros",
+    "category": "Physical Treatment",
+    "categoryEs": "Tratamiento físico",
+    "description": "",
+    "descriptionEs": "",
+    "case_study": "",
+    "case_studyEs": "",
+    "unit_processes": [37]
   }
 ]
