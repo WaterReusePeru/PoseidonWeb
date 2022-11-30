@@ -158,5 +158,165 @@
     "nameLongEs": "Sulfuro",
     "unit": "mg/L",
     "maxValue": 10000
+  },
+  {
+    "id": 16,
+    "name": "al",
+    "nameShort": "Al",
+    "nameShortEs": "Al",
+    "nameLong": "Aluminum",
+    "nameLongEs": "Aluminio",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 17,
+    "name": "ar",
+    "nameShort": "Ar",
+    "nameShortEs": "Ar",
+    "nameLong": "Arsenic",
+    "nameLongEs": "Arsénico",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 18,
+    "name": "b",
+    "nameShort": "B",
+    "nameShortEs": "B",
+    "nameLong": "Boron",
+    "nameLongEs": "Boro",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 19,
+    "name": "cd",
+    "nameShort": "Cd",
+    "nameShortEs": "Cd",
+    "nameLong": "Cadmium",
+    "nameLongEs": "Cadmio",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 20,
+    "name": "cn",
+    "nameShort": "Cn",
+    "nameShortEs": "Cn",
+    "nameLong": "Cyanide",
+    "nameLongEs": "Cianuro",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 21,
+    "name": "cu",
+    "nameShort": "Cu",
+    "nameShortEs": "Cu",
+    "nameLong": "Copper",
+    "nameLongEs": "Cobre",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 22,
+    "name": "cr+6",
+    "nameShort": "Cr+6",
+    "nameShortEs": "Cr+6",
+    "nameLong": "Hexavalent Chromium",
+    "nameLongEs": "Cromo Hexavalente",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 23,
+    "name": "mn",
+    "nameShort": "Mn",
+    "nameShortEs": "Mn",
+    "nameLong": "Manganese",
+    "nameLongEs": "Manganeso",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 24,
+    "name": "hg",
+    "nameShort": "Hg",
+    "nameShortEs": "Hg",
+    "nameLong": "Mercury",
+    "nameLongEs": "Mercurio",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 25,
+    "name": "ni",
+    "nameShort": "Ni",
+    "nameShortEs": "Ni",
+    "nameLong": "Nickel",
+    "nameLongEs": "Níquel",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 26,
+    "name": "ni",
+    "nameShort": "Ni",
+    "nameShortEs": "Ni",
+    "nameLong": "Nickel",
+    "nameLongEs": "Níquel",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 27,
+    "name": "pb",
+    "nameShort": "Pb",
+    "nameShortEs": "Pb",
+    "nameLong": "Lead",
+    "nameLongEs": "Plomo",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 28,
+    "name": "zn",
+    "nameShort": "Zn",
+    "nameShortEs": "Zn",
+    "nameLong": "Zinc",
+    "nameLongEs": "Zinc",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 29,
+    "name": "ph",
+    "nameShort": "Ph",
+    "nameShortEs": "Ph",
+    "nameLong": "Hydrogen Potential",
+    "nameLongEs": "Potencial de Hidrógeno",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 30,
+    "name": "ss",
+    "nameShort": "SS",
+    "nameShortEs": "SS",
+    "nameLong": "Settleable Solids",
+    "nameLongEs": "sólidos sedimentables",
+    "unit": "ml/L/h",
+    "maxValue": 10000
+  },
+  {
+    "id": 31,
+    "name": "temp",
+    "nameShort": "Temp",
+    "nameShortEs": "Temp",
+    "nameLong": "Temperature",
+    "nameLongEs": "Temperatura",
+    "unit": "°C",
+    "maxValue": 1000
   }
 ]

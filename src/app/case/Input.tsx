@@ -24,6 +24,7 @@ import InputCustomValues from './InputCustomValues'
 import { QualityFactor, waterQualityFactors } from '../data/model'
 
 export default function Input() {
+  const caseState = useAppSelector((state) => state.case)
   const input = useAppSelector((state) => state.case.input)
   const endUse = useAppSelector((state) => state.case.endUse)
   const dispatch = useAppDispatch()
@@ -47,7 +48,7 @@ export default function Input() {
     }
   }
 
-  const [customQualityFactor, setCustomQualityFactor] = React.useState<string[]>(input.customQualityFactors)
+  const [customQualityFactor, setCustomQualityFactor] = React.useState<string[]>(caseState.customQualityFactors)
 
   const handleSetCustomQualityFactors = (event: SelectChangeEvent<typeof customQualityFactor>) => {
     console.log(event.target.value)
@@ -126,7 +127,7 @@ export default function Input() {
               >
                 {waterQualityFactors.map((factor) => (
                   <MenuItem key={factor.id} value={factor.nameShort}>
-                    <Checkbox checked={input.customQualityFactors.indexOf(factor.nameShort) > -1} />
+                    <Checkbox checked={caseState.customQualityFactors.indexOf(factor.nameShort) > -1} />
                     <ListItemText primary={factor.nameLong} />
                   </MenuItem>
                 ))}

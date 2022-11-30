@@ -9,8 +9,8 @@ import { useAppDispatch, useAppSelector } from '../hooks'
 
 export default function EndUseCustomValues() {
   const dispatch = useAppDispatch()
+  const caseState = useAppSelector((state) => state.case)
   const endUse = useAppSelector((state) => state.case.endUse)
-  const input = useAppSelector((state) => state.case.input)
 
   const { t } = useTranslation()
 
@@ -56,8 +56,8 @@ export default function EndUseCustomValues() {
       {waterQualityFactors.map((f) => {
         const key = f.name as keyof WaterQuality
 
-        if (input.customQualityFactors.includes(f.nameShort)) {
-          const length = input.customQualityFactors.length
+        if (caseState.customQualityFactors.includes(f.nameShort)) {
+          const length = caseState.customQualityFactors.length
 
           const inputWidth = length === 1 || length === 2 || length === 4 ? 6 : 4
 

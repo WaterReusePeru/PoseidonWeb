@@ -9,6 +9,8 @@ type CaseState = {
     countryID: number
     currency: number //0 is USD, 1 is local currency
   }
+  qualityFactors: string[]
+  customQualityFactors: string[]
   input: {
     custom: boolean
     category: number
@@ -16,7 +18,6 @@ type CaseState = {
     customValues: ValueWaterQuality
     customValueEntered: boolean
     quantity?: number
-    customQualityFactors: string[]
   }
   endUse: {
     custom: boolean
@@ -55,6 +56,8 @@ const initialState: CaseState = {
   step: 0,
   completedSteps: [0, 0, 0, 0],
   commInfo: { countryID: 0, currency: 1 }, //Peru is the defaul country with local currency
+  qualityFactors: [],
+  customQualityFactors: ['TSS', 'BOD', 'COD', 'TC'],
   input: {
     custom: false,
     category: 28, //Peru is the default category
@@ -75,7 +78,6 @@ const initialState: CaseState = {
       helminths: NaN,
     },
     customValueEntered: false,
-    customQualityFactors: ['TSS', 'BOD', 'COD', 'TC'],
   },
   endUse: {
     custom: false,
@@ -143,7 +145,7 @@ export const caseSlice = createSlice({
     setCustomInput: (state, action) => {
       state.input.custom = action.payload
       if (action.payload === false) {
-        state.input.customQualityFactors = initialState.input.customQualityFactors
+        state.customQualityFactors = initialState.customQualityFactors
       }
     },
     setCustomInputValues: (state, action) => {
@@ -155,7 +157,7 @@ export const caseSlice = createSlice({
     },
     setCutomInputQualityFactors: (state, action) => {
       if (action.payload.length > 0) {
-        state.input.customQualityFactors = action.payload
+        state.customQualityFactors = action.payload
       }
     },
     setInputQualityCategory: (state, action) => {

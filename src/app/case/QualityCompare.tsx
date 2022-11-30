@@ -8,8 +8,9 @@ import { useTheme } from '@mui/material/styles'
 import { waterQualities, WaterQuality, waterQualityFactors } from '../data/model'
 
 export default function QualityCompare() {
-  const endUse = useAppSelector((state) => state.case.endUse)
+  const caseState = useAppSelector((state) => state.case)
   const input = useAppSelector((state) => state.case.input)
+  const endUse = useAppSelector((state) => state.case.endUse)
 
   const theme = useTheme()
 
@@ -23,7 +24,7 @@ export default function QualityCompare() {
             ? waterQualityFactors.map((f, index) => {
                 const key = f.name as keyof WaterQuality
 
-                if (input.customQualityFactors.includes(f.nameShort)) {
+                if (caseState.customQualityFactors.includes(f.nameShort)) {
                   return (
                     <div key={index} style={{ width: 'calc(1/6*80%' }}>
                       <Bar
@@ -47,7 +48,7 @@ export default function QualityCompare() {
             : waterQualityFactors.map((f, index) => {
                 const key = f.name as keyof WaterQuality
 
-                if (input.customQualityFactors.includes(f.nameShort)) {
+                if (caseState.customQualityFactors.includes(f.nameShort)) {
                   return (
                     <div key={index} style={{ width: 'calc(1/6*80%' }}>
                       <Bar
@@ -84,7 +85,7 @@ export default function QualityCompare() {
           ? waterQualityFactors.map((f, index) => {
               const key = f.name as keyof WaterQuality
 
-              if (input.customQualityFactors.includes(f.nameShort)) {
+              if (caseState.customQualityFactors.includes(f.nameShort)) {
                 return (
                   <div key={index} style={{ width: 'calc(1/6*80%' }}>
                     <Bar
@@ -108,7 +109,7 @@ export default function QualityCompare() {
           : waterQualityFactors.map((f, index) => {
               const key = f.name as keyof WaterQuality
 
-              if (input.customQualityFactors.includes(f.nameShort)) {
+              if (caseState.customQualityFactors.includes(f.nameShort)) {
                 return (
                   <div key={index} style={{ width: 'calc(1/6*80%' }}>
                     <Bar
