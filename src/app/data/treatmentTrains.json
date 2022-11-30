@@ -757,62 +757,26 @@
   },
   {
     "id": 63,
-    "title": "Physical-chemical Treatment",
-    "titleEs": "Tratamiento físico-químico",
-    "category": "Physical-chemical Treatment",
-    "categoryEs": "Tratamiento físico-químico",
-    "description": "",
-    "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
-    "unit_processes": [37]
+    "title": "Peru Type 17",
+    "titleEs": "Tipo Perú 17",
+    "category": "Treatment of tannery wastewater",
+    "categoryEs": "Tratamiento de agua residual de curtiembre",
+    "description": "This treatment train brings together simple and economical techniques that make it possible to achieve values for the discharge of treated wastewater from tanneries into the Peruvian sewage system. This treatment train must be accompanied by the implementation of good practices in the production process, otherwise it is very difficult to comply with Peruvian regulations.",
+    "descriptionEs": "Este tren de tratamiento reúne técnicas sencillas y económicas que permiten alcanzar valores de vertido de las aguas residuales tratadas de las tenerías al sistema de alcantarillado peruano. Este tren de tratamiento debe ir acompañado de la implementación de buenas prácticas en el proceso productivo, de lo contrario es muy difícil cumplir con la normativa peruana.",
+    "case_study": "Example for Technical Guide on cleaner production and wastewater treatment in tanneries. Authors:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
+    "case_studyEs": "Guía Técnica de Producción limpia y tratamiento de aguas residuales en curtiembres. Autores:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
+    "unit_processes": [37, 38, 39, 40, 41]
   },
-  {
+    {
     "id": 64,
-    "title": "Preliminary Treatment (Filtration)",
-    "titleEs": "Tratamiento preliminar (Filtración)",
-    "category": "Physical Treatment",
-    "categoryEs": "Tratamiento físico",
-    "description": "",
-    "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
-    "unit_processes": [37]
-  },
-   {
-    "id": 65,
-    "title": "Primary Sedimentation",
-    "titleEs": "Sedimentación primaria",
-    "category": "Physical Treatment",
-    "categoryEs": "Tratamiento físico",
-    "description": "",
-    "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
-    "unit_processes": [37]
-  },
-  {
-    "id": 66,
-    "title": "Sulphide Oxidation Tank",
-    "titleEs": "Tanque de oxidación de sulfuros",
-    "category": "Physical Treatment",
-    "categoryEs": "Tratamiento físico",
-    "description": "",
-    "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
-    "unit_processes": [37]
-  },
-  {
-    "id": 67,
-    "title": "Sulphate removal tank",
-    "titleEs": "Tanque de remoción de sulfuros",
-    "category": "Physical Treatment",
-    "categoryEs": "Tratamiento físico",
-    "description": "",
-    "descriptionEs": "",
-    "case_study": "",
-    "case_studyEs": "",
-    "unit_processes": [37]
+    "title": "Peru Type 18",
+    "titleEs": "Tipo Perú 18",
+    "category": "Treatment of tannery wastewater",
+    "categoryEs": "Tratamiento de agua residual de curtiembre",
+    "description": "This treatment train brings together simple and economical techniques that make it possible to achieve values for the discharge of treated wastewater from tanneries into the Peruvian sewage system. This treatment train must be accompanied by the implementation of good practices in the production process, otherwise it is very difficult to comply with Peruvian regulations.",
+    "descriptionEs": "Este tren de tratamiento reúne técnicas sencillas y económicas que permiten alcanzar valores de vertido de las aguas residuales tratadas de las tenerías al sistema de alcantarillado peruano. Este tren de tratamiento debe ir acompañado de la implementación de buenas prácticas en el proceso productivo, de lo contrario es muy difícil cumplir con la normativa peruana.",
+    "case_study": "Example of the Technical Guide on cleaner production and wastewater treatment in tanneries. Authors:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
+    "case_studyEs": "Ejemplo de la Guía Técnica de Producción limpia y tratamiento de aguas residuales en curtiembres. Autores:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
+    "unit_processes": [37, 38, 39, 41]
   }
 ]
