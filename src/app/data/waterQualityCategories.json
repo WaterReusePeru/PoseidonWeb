@@ -188,5 +188,11 @@
     "name": "Typical Wastewater from Leather Industry",
     "nameEs": "Agua residual típica en la Industria de la Curtiembre",
     "input": true
+  },
+  {
+    "id": 32,
+    "name": "Typical Wastewater from Textile Industry",
+    "nameEs": "Agua residual típica en la Industria Textil",
+    "input": true
   }
 ]
