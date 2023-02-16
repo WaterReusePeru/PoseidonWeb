@@ -59,7 +59,7 @@ export default function InputCustomValues() {
           const inputWidth = length === 1 || length === 2 || length === 4 ? 6 : 4
 
           return (
-            <Grid item container direction="row" xs={inputWidth} key={key}>
+            <Grid item container direction="row" xs={inputWidth} key={key} spacing={3}>
               <Grid item xs={3}>
                 <Typography>{f.nameShort}</Typography>
               </Grid>

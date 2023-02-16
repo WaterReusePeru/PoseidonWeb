@@ -18,7 +18,7 @@ export default function InputPresets() {
   const waterQualityOptions = waterQualities.filter((q) => q.category === input.category)
 
   return (
-    <>
+    <Grid item container spacing={3}>
       <Grid item xs={4}>
         <Typography>{t('Select the Category')}</Typography>
       </Grid>
@@ -54,6 +54,6 @@ export default function InputPresets() {
           renderInput={(params) => <TextField {...params} variant="outlined" />}
         />
       </Grid>
-    </>
+    </Grid>
   )
 }

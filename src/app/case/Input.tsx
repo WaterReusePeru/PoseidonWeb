@@ -138,8 +138,8 @@ export default function Input() {
 
         {!input.custom ? <InputPresets /> : <InputCustomValues />}
 
-        <Grid item container>
-          <Grid item xs={3}>
+        <Grid item container spacing={3}>
+          <Grid item xs={4}>
             <Typography style={{ marginBottom: 20 }}>{t('Average Quantity')}</Typography>
           </Grid>
           <Grid item xs={8}>
