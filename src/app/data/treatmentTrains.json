@@ -767,7 +767,7 @@
     "case_studyEs": "Guía Técnica de Producción limpia y tratamiento de aguas residuales en curtiembres. Autores:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
     "unit_processes": [37, 38, 39, 40, 41, 42]
   },
-    {
+  {
     "id": 64,
     "title": "Treatment of Leather Wastewater",
     "titleEs": "Tratamiento de las aguas residuales de curtiembre",
@@ -778,5 +778,5 @@
     "case_study": "Example of the Technical Guide on cleaner production and wastewater treatment in tanneries. Authors:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
     "case_studyEs": "Ejemplo de la Guía Técnica de Producción limpia y tratamiento de aguas residuales en curtiembres. Autores:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
     "unit_processes": [37, 38, 39, 43, 41, 42]
-  },
+  }
 ]
