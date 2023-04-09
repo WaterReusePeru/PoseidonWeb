@@ -757,50 +757,26 @@
   },
   {
     "id": 63,
-    "title": "Treatment of industrial wastewater",
-    "titleEs": "Tratamiento de agua residual industrial",
-    "category": "Treatment of Tannery Wastewater",
-    "categoryEs": "Tratamiento de las aguas residuales de curtiembre",
-    "description": "This treatment train brings together simple and economical techniques that make it possible to achieve values for the discharge of treated wastewater from tanneries into the Peruvian sewage system. It´s a suggested treatment train for wastewater generated at the Beamhouse stage and must be accompanied by the application of best practices in the production process, otherwise it is very difficult to comply with Peruvian regulations.",
-    "descriptionEs": "Este tren de tratamiento reúne técnicas sencillas y económicas que permiten alcanzar valores de vertido de las aguas residuales tratadas de las tenerías al sistema de alcantarillado peruano. Es un tren de tratamiento sugerido para las aguas residuales generadas en la etapa de Ribera y debe ir acompañado de la aplicación de las mejores prácticas en el proceso productivo, de lo contrario es muy difícil cumplir con la normativa peruana.",
+    "title": "Treatment of Leather Wastewater",
+    "titleEs": "Tratamiento de las aguas residuales de curtiembre",
+    "category": "Treatment of industrial wastewater",
+    "categoryEs": "Tratamiento de agua residual industrial",
+    "description": "This treatment train brings together simple and economical techniques that make it possible to achieve values for the discharge of treated wastewater from Leather Industries into the Peruvian sewage system. It´s a suggested treatment train for average wastewater generated from Beamhouse, Tanning, Retanning and Finishing stages and must be accompanied by the application of best practices in the production process, otherwise it is very difficult to comply with Peruvian regulations.",
+    "descriptionEs": "Este tren de tratamiento reúne técnicas sencillas y económicas que permiten alcanzar valores para la descarga de las aguas residuales tratadas de las Industrias del Cuero al sistema de alcantarillado peruano. Es un tren de tratamiento sugerido para las aguas residuales promedio generadas en las etapas de Ribera, Curtición, Recurtición y Acabado y debe ir acompañado de la aplicación de las mejores prácticas en el proceso productivo, de lo contrario es muy difícil cumplir con la normativa peruana.",
     "case_study": "Example for Technical Guide on cleaner production and wastewater treatment in tanneries. Authors:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
     "case_studyEs": "Guía Técnica de Producción limpia y tratamiento de aguas residuales en curtiembres. Autores:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
-    "unit_processes": [37, 38, 39, 40, 42]
-  },
-    {
-    "id": 64,
-    "title": "Treatment of industrial wastewater",
-    "titleEs": "Tratamiento de agua residual industrial",
-    "category": "Treatment of tannery wastewater",
-    "categoryEs": "Tratamiento de agua residual de curtiembre",
-    "description": "This treatment train brings together simple and economical techniques that make it possible to achieve values for the discharge of treated wastewater from tanneries into the Peruvian sewage system. It´s a suggested treatment train for wastewater generated at the Tanning stage or Post Tanning and Finishing stage and must be accompanied by the application of best practices in the production process, otherwise it is very difficult to comply with Peruvian regulations.",
-    "descriptionEs": "Este tren de tratamiento reúne técnicas sencillas y económicas que permiten alcanzar valores de vertido de las aguas residuales tratadas de las tenerías al sistema de alcantarillado peruano. Es un tren de tratamiento sugerido para las aguas residuales generadas en la etapa de Curtido o la etapa de Post Curtido y Acabado y debe ir acompañado de la aplicación de las mejores prácticas en el proceso productivo, de lo contrario es muy difícil cumplir con la normativa peruana.",
-    "case_study": "Example of the Technical Guide on cleaner production and wastewater treatment in tanneries. Authors:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
-    "case_studyEs": "Ejemplo de la Guía Técnica de Producción limpia y tratamiento de aguas residuales en curtiembres. Autores:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
-    "unit_processes": [37, 38, 40, 41, 42]
+    "unit_processes": [37, 38, 39, 40, 41, 42]
   },
   {
-    "id": 65,
-    "title": "Treatment of industrial wastewater",
-    "titleEs": "Tratamiento de agua residual industrial",
-    "category": "Treatment of Tannery Wastewater",
-    "categoryEs": "Tratamiento de las aguas residuales de curtiembre",
-    "description": "This treatment train brings together sophisticated techniques that make it possible to achieve values for the discharge of treated wastewater from tanneries into the Peruvian sewage system. It´s a suggested treatment train for wastewater generated at the Beamhouse stage and must be accompanied by the application of best practices in the production process, otherwise it is very difficult to comply with Peruvian regulations.",
-    "descriptionEs": "Este tren de tratamiento reúne técnicas sofisticadas que permiten alcanzar valores de vertido de las aguas residuales tratadas de las tenerías al sistema de alcantarillado peruano. Es un tren de tratamiento sugerido para las aguas residuales generadas en la etapa de Ribera y debe ir acompañado de la aplicación de las mejores prácticas en el proceso productivo, de lo contrario es muy difícil cumplir con la normativa peruana.",
-    "case_study": "Example for Technical Guide on cleaner production and wastewater treatment in tanneries. Authors:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
-    "case_studyEs": "Guía Técnica de Producción limpia y tratamiento de aguas residuales en curtiembres. Autores:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
-    "unit_processes": [37, 38, 39, 43, 42]
-  },
-    {
-    "id": 66,
-    "title": "Treatment of industrial wastewater",
-    "titleEs": "Tratamiento de agua residual industrial",
-    "category": "Treatment of tannery wastewater",
-    "categoryEs": "Tratamiento de agua residual de curtiembre",
-    "description": "This treatment train brings together sophisticated techniques that make it possible to achieve values for the discharge of treated wastewater from tanneries into the Peruvian sewage system. It´s a suggested treatment train for wastewater generated at the Tanning stage or Post Tanning and Finishing stage and must be accompanied by the application of best practices in the production process, otherwise it is very difficult to comply with Peruvian regulations.",
-    "descriptionEs": "Este tren de tratamiento reúne técnicas sofisticadas que permiten alcanzar valores de vertido de las aguas residuales tratadas de las tenerías al sistema de alcantarillado peruano. Es un tren de tratamiento sugerido para las aguas residuales generadas en la etapa de Curtido o la etapa de Post Curtido y Acabado y debe ir acompañado de la aplicación de las mejores prácticas en el proceso productivo, de lo contrario es muy difícil cumplir con la normativa peruana.",
+    "id": 64,
+    "title": "Treatment of Leather Wastewater",
+    "titleEs": "Tratamiento de las aguas residuales de curtiembre",
+    "category": "Treatment of industrial wastewater",
+    "categoryEs": "Tratamiento de agua residual industrial",
+    "description": "This treatment train brings together sophisticated techniques that make it possible to achieve values for the discharge of treated wastewater from Leather Industries into the Peruvian sewage system. It´s a suggested treatment train for average wastewater generated from Beamhouse, Tanning, Retanning and Finishing stages and must be accompanied by the application of best practices in the production process, otherwise it is very difficult to comply with Peruvian regulations.",
+    "descriptionEs": "Este tren de tratamiento reúne técnicas sofisticadas que permiten alcanzar valores para la descarga de las aguas residuales tratadas de las Industrias del Cuero al sistema de alcantarillado peruano. Es un tren de tratamiento sugerido para las aguas residuales promedio generadas en las etapas de Ribera, Curtición, Recurtición y Acabado y debe ir acompañado de la aplicación de las mejores prácticas en el proceso productivo, de lo contrario es muy difícil cumplir con la normativa peruana.",
     "case_study": "Example of the Technical Guide on cleaner production and wastewater treatment in tanneries. Authors:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
     "case_studyEs": "Ejemplo de la Guía Técnica de Producción limpia y tratamiento de aguas residuales en curtiembres. Autores:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
-    "unit_processes": [37, 38, 43, 41, 42]
-    }
+    "unit_processes": [37, 38, 39, 43, 41, 42]
+  }
 ]
