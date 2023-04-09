@@ -14,6 +14,8 @@ export default function QualityCompare() {
 
   const theme = useTheme()
 
+  const barWidth = 'calc(1/' + caseState.qualityFactors.length + '*80%)'
+
   const { t } = useTranslation()
 
   return (
@@ -24,9 +26,9 @@ export default function QualityCompare() {
             ? waterQualityFactors.map((f, index) => {
                 const key = f.name as keyof WaterQuality
 
-                if (caseState.customQualityFactors.includes(f.nameShort)) {
+                if (caseState.qualityFactors.includes(f.name)) {
                   return (
-                    <div key={index} style={{ width: 'calc(1/6*80%' }}>
+                    <div key={index} style={{ width: barWidth }}>
                       <Bar
                         factor={f.name}
                         unit={f.unit}
@@ -48,9 +50,9 @@ export default function QualityCompare() {
             : waterQualityFactors.map((f, index) => {
                 const key = f.name as keyof WaterQuality
 
-                if (caseState.customQualityFactors.includes(f.nameShort)) {
+                if (caseState.qualityFactors.includes(f.name)) {
                   return (
-                    <div key={index} style={{ width: 'calc(1/6*80%' }}>
+                    <div key={index} style={{ width: barWidth }}>
                       <Bar
                         factor={f.name}
                         unit={f.unit}
@@ -85,9 +87,9 @@ export default function QualityCompare() {
           ? waterQualityFactors.map((f, index) => {
               const key = f.name as keyof WaterQuality
 
-              if (caseState.customQualityFactors.includes(f.nameShort)) {
+              if (caseState.qualityFactors.includes(f.name)) {
                 return (
-                  <div key={index} style={{ width: 'calc(1/6*80%' }}>
+                  <div key={index} style={{ width: barWidth }}>
                     <Bar
                       factor={f.name}
                       unit={f.unit}
@@ -109,9 +111,9 @@ export default function QualityCompare() {
           : waterQualityFactors.map((f, index) => {
               const key = f.name as keyof WaterQuality
 
-              if (caseState.customQualityFactors.includes(f.nameShort)) {
+              if (caseState.qualityFactors.includes(f.name)) {
                 return (
-                  <div key={index} style={{ width: 'calc(1/6*80%' }}>
+                  <div key={index} style={{ width: barWidth }}>
                     <Bar
                       factor={f.name}
                       unit={f.unit}

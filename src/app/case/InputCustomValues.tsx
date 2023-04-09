@@ -53,8 +53,8 @@ export default function InputCustomValues() {
       {waterQualityFactors.map((f) => {
         const key = f.name as keyof WaterQuality
 
-        if (caseState.customQualityFactors.includes(f.nameShort)) {
-          const length = caseState.customQualityFactors.length
+        if (caseState.qualityFactors.includes(f.name)) {
+          const length = caseState.qualityFactors.length
 
           const inputWidth = length === 1 || length === 2 || length === 4 ? 6 : 4
 

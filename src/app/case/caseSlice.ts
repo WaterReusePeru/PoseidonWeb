@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { RootState } from '../store'
-import { treatmentTrains, ValueWaterQuality, waterQualityFactors } from '../data/model'
+import { treatmentTrains, ValueWaterQuality, waterQualities, WaterQuality, waterQualityFactors } from '../data/model'
 
 type CaseState = {
   step: number
@@ -10,7 +10,6 @@ type CaseState = {
     currency: number //0 is USD, 1 is local currency
   }
   qualityFactors: string[]
-  customQualityFactors: string[]
   input: {
     custom: boolean
     category: number
@@ -57,7 +56,6 @@ const initialState: CaseState = {
   completedSteps: [0, 0, 0, 0],
   commInfo: { countryID: 0, currency: 1 }, //Peru is the defaul country with local currency
   qualityFactors: [],
-  customQualityFactors: ['TSS', 'BOD', 'COD', 'TC'],
   input: {
     custom: false,
     category: 28, //Peru is the default category
@@ -145,7 +143,7 @@ export const caseSlice = createSlice({
     setCustomInput: (state, action) => {
       state.input.custom = action.payload
       if (action.payload === false) {
-        state.customQualityFactors = initialState.customQualityFactors
+        state.qualityFactors = initialState.qualityFactors
       }
     },
     setCustomInputValues: (state, action) => {
@@ -157,7 +155,7 @@ export const caseSlice = createSlice({
     },
     setCutomInputQualityFactors: (state, action) => {
       if (action.payload.length > 0) {
-        state.customQualityFactors = action.payload
+        state.qualityFactors = action.payload
       }
     },
     setInputQualityCategory: (state, action) => {
@@ -167,6 +165,15 @@ export const caseSlice = createSlice({
     },
     setInputQualityClass: (state, action) => {
       state.input.qualityClass = action.payload
+      var qualityClassFactors: string[] = []
+      console.log(waterQualities[action.payload][waterQualityFactors[1].name as keyof WaterQuality])
+      waterQualityFactors.map((f) => {
+        if (waterQualities[action.payload][f.name as keyof WaterQuality] !== null) {
+          qualityClassFactors.push(f.name)
+        }
+      })
+      state.qualityFactors = qualityClassFactors
+      console.log(qualityClassFactors)
       if (state.input.quantity) {
         state.completedSteps[1] = 1
       }

@@ -6,6 +6,7 @@ import { setCustomEndUseValues } from './caseSlice'
 import { useTranslation } from 'react-i18next'
 import { WaterQuality, waterQualityFactors } from '../data/model'
 import { useAppDispatch, useAppSelector } from '../hooks'
+import i18next from 'i18next'
 
 export default function EndUseCustomValues() {
   const dispatch = useAppDispatch()
@@ -13,6 +14,7 @@ export default function EndUseCustomValues() {
   const endUse = useAppSelector((state) => state.case.endUse)
 
   const { t } = useTranslation()
+  const lang = i18next.language
 
   interface CustomEndUse {
     id: number
@@ -56,15 +58,15 @@ export default function EndUseCustomValues() {
       {waterQualityFactors.map((f) => {
         const key = f.name as keyof WaterQuality
 
-        if (caseState.customQualityFactors.includes(f.nameShort)) {
-          const length = caseState.customQualityFactors.length
+        if (caseState.qualityFactors.includes(f.name)) {
+          const length = caseState.qualityFactors.length
 
           const inputWidth = length === 1 || length === 2 || length === 4 ? 6 : 4
 
           return (
             <Grid item container direction="row" xs={inputWidth} key={key}>
               <Grid item xs={3}>
-                <Typography>{f.nameShort}</Typography>
+                <Typography>{lang === 'en' ? f.nameShort : f.nameShortEs}</Typography>
               </Grid>
               <Grid item xs={9}>
                 <TextField

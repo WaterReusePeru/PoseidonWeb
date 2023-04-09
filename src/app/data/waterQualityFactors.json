@@ -151,6 +151,16 @@
   },
   {
     "id": 15,
+    "name": "cr",
+    "nameShort": "Chromium",
+    "nameShortEs": "Cromo",
+    "nameLong": "Chromium",
+    "nameLongEs": "Cromo",
+    "unit": "mg/L",
+    "maxValue": 10000
+  },
+  {
+    "id": 16,
     "name": "sulphide",
     "nameShort": "Sulphide",
     "nameShortEs": "Sulfuro",
@@ -160,22 +170,12 @@
     "maxValue": 10000
   },
   {
-    "id": 16,
+    "id": 17,
     "name": "al",
     "nameShort": "Al",
     "nameShortEs": "Al",
     "nameLong": "Aluminum",
     "nameLongEs": "Aluminio",
-    "unit": "mg/L",
-    "maxValue": 10000
-  },
-  {
-    "id": 17,
-    "name": "ar",
-    "nameShort": "Ar",
-    "nameShortEs": "Ar",
-    "nameLong": "Arsenic",
-    "nameLongEs": "Arsénico",
     "unit": "mg/L",
     "maxValue": 10000
   },

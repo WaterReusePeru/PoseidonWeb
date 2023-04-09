@@ -22,6 +22,7 @@ import Radio from '@mui/material/Radio'
 import InputPresets from './InputPresets'
 import InputCustomValues from './InputCustomValues'
 import { QualityFactor, waterQualityFactors } from '../data/model'
+import i18next from 'i18next'
 
 export default function Input() {
   const caseState = useAppSelector((state) => state.case)
@@ -30,10 +31,12 @@ export default function Input() {
   const dispatch = useAppDispatch()
 
   const { t } = useTranslation()
+  const lang = i18next.language
 
   const handleSetCustomInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newState = event.target.value === 'true' ? true : false
     dispatch(setCustomInput(newState))
+    setQualityFactor(caseState.qualityFactors)
   }
 
   const [validQuantity, setValidQuantity] = React.useState(true)
@@ -48,10 +51,9 @@ export default function Input() {
     }
   }
 
-  const [customQualityFactor, setCustomQualityFactor] = React.useState<string[]>(caseState.customQualityFactors)
+  const [qualityFactor, setQualityFactor] = React.useState<string[]>(caseState.qualityFactors)
 
-  const handleSetCustomQualityFactors = (event: SelectChangeEvent<typeof customQualityFactor>) => {
-    console.log(event.target.value)
+  const handleSetQualityFactors = (event: SelectChangeEvent<typeof qualityFactor>) => {
     const isQualityFactor = (x: any): x is QualityFactor => event.target.value.includes(x)
 
     dispatch(
@@ -60,9 +62,7 @@ export default function Input() {
       )
     )
     if (event.target.value.length > 0) {
-      setCustomQualityFactor(
-        typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value
-      )
+      setQualityFactor(typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value)
     }
   }
 
@@ -121,14 +121,14 @@ export default function Input() {
                 labelId="demo-multiple-checkbox-label"
                 id="demo-multiple-checkbox"
                 multiple
-                value={customQualityFactor}
-                onChange={handleSetCustomQualityFactors}
+                value={qualityFactor}
+                onChange={handleSetQualityFactors}
                 renderValue={(selected) => selected.join(', ')}
               >
                 {waterQualityFactors.map((factor) => (
-                  <MenuItem key={factor.id} value={factor.nameShort}>
-                    <Checkbox checked={caseState.customQualityFactors.indexOf(factor.nameShort) > -1} />
-                    <ListItemText primary={factor.nameLong} />
+                  <MenuItem key={factor.name} value={factor.name}>
+                    <Checkbox checked={caseState.qualityFactors.indexOf(factor.name) > -1} />
+                    <ListItemText primary={lang === 'en' ? factor.nameLong : factor.nameLongEs} />
                   </MenuItem>
                 ))}
               </Select>
