@@ -167,7 +167,7 @@ export const caseSlice = createSlice({
       state.input.qualityClass = action.payload
       var qualityClassFactors: string[] = []
       console.log(waterQualities[action.payload][waterQualityFactors[1].name as keyof WaterQuality])
-      waterQualityFactors.map((f) => {
+      waterQualityFactors.forEach((f) => {
         if (waterQualities[action.payload][f.name as keyof WaterQuality] !== null) {
           qualityClassFactors.push(f.name)
         }
