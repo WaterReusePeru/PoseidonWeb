@@ -6,7 +6,7 @@ import { useAppDispatch } from '../hooks'
 
 export default function CalculateSolutions(
   input: WaterQuality,
-  enduse: WaterQuality,
+  endUse: WaterQuality,
   amount: number,
   byRating: boolean,
   commInfo: CommunityInfo
@@ -21,7 +21,7 @@ export default function CalculateSolutions(
 
   qualityFactors.forEach((qualityFactor) => {
     const key = qualityFactor as keyof WaterQuality
-    if (input[key]! > enduse[key]! && enduse[key] !== null) {
+    if (input[key]! > endUse[key]! && endUse[key] !== null) {
       dispatch(setSolutionNoneNeeded(false))
       treatmentFactors.push(qualityFactor as QualityFactor)
     }
@@ -39,7 +39,7 @@ export default function CalculateSolutions(
     return topTreatments
   }
 
-  const topTreatments = findTopTreatments(findSuitableTreatments(input, enduse, treatmentFactors, amount, commInfo))
+  const topTreatments = findTopTreatments(findSuitableTreatments(input, endUse, treatmentFactors, amount, commInfo))
 
   if (topTreatments.length === 0) {
     dispatch(setSolutionNoneAvailable(true))
