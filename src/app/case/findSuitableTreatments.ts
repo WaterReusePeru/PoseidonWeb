@@ -110,7 +110,6 @@ export function findSuitableTreatments(
     })
 
     if (suitableTreatmentTrain && outputQualityPerFactor && outputCostPerFactor) {
-      // TODO: !
       const outputQuality: any = {
         id: index,
         treatmentTrain: treatmentTrain.id,
@@ -130,7 +129,7 @@ export function findSuitableTreatments(
         costPerCubic:
           (annualizedCapex + annualizedLandCost + annualizedEnergyCost + annualizedLaborCost + annualizedOMCost) /
           (amount * 365),
-        rating: rating / treatmentTrain.unit_processes!.length / evaluationCriteria.length, //TODO: !
+        rating: rating / treatmentTrain.unit_processes!.length / evaluationCriteria.length,
       }
 
       // Dynamically add quality factors from outputQualityPerFactor to outputQuality
