@@ -109,49 +109,40 @@ export function findSuitableTreatments(
       }
     })
 
-    console.log(outputQualityPerFactor)
-
-    if (suitableTreatmentTrain && outputQualityPerFactor! && outputCostPerFactor!) {
-      //TODO: !
-      outputQualities.push({
+    if (suitableTreatmentTrain && outputQualityPerFactor && outputCostPerFactor) {
+      // TODO: !
+      const outputQuality: any = {
         id: index,
         treatmentTrain: treatmentTrain.id,
-        turbidity: outputQualityPerFactor['turbidity'],
-        tss: outputQualityPerFactor['tss'],
-        bod: outputQualityPerFactor['bod'],
-        cod: outputQualityPerFactor['cod'],
-        fc: outputQualityPerFactor['fc'],
-        tc: outputQualityPerFactor['tc'],
-
         constructionCost: outputCostPerFactor['construction_cost'],
         capex: outputCostPerFactor['construction_cost'] * 1.39 * 1.27 * 1000,
         annualizedCapex: annualizedCapex,
         capexPerCubic: annualizedCapex / (amount * 365),
-
         landRequirements: outputCostPerFactor['land_requirements'],
         annualizedLandCost: annualizedLandCost,
-
         energyRequirements: outputCostPerFactor['energy_requirements'],
         annualizedEnergyCost: annualizedEnergyCost,
-
         laborRequirements: outputCostPerFactor['labor_requirements'],
         annualizedLaborCost: annualizedLaborCost,
-
         otherOM: outputCostPerFactor['other_om'],
         annualizedOMCost: annualizedOMCost,
-
         annualizedOpex: annualizedLandCost + annualizedEnergyCost + annualizedLaborCost + annualizedOMCost,
-
         costPerCubic:
           (annualizedCapex + annualizedLandCost + annualizedEnergyCost + annualizedLaborCost + annualizedOMCost) /
           (amount * 365),
-
         rating: rating / treatmentTrain.unit_processes!.length / evaluationCriteria.length, //TODO: !
-      })
+      }
+
+      // Dynamically add quality factors from outputQualityPerFactor to outputQuality
+      for (const factor in outputQualityPerFactor) {
+        if (Object.prototype.hasOwnProperty.call(outputQualityPerFactor, factor)) {
+          outputQuality[factor] = outputQualityPerFactor[factor]
+        }
+      }
+
+      outputQualities.push(outputQuality)
     }
   })
-
-  console.log(outputQualities)
 
   return outputQualities
 }

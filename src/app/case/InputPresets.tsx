@@ -47,7 +47,12 @@ export default function InputPresets() {
           getOptionLabel={(option) =>
             option ? (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined!) : ''
           }
-          isOptionEqualToValue={(option, value) => option !== 0 && value !== 0 && option.name === value.name}
+          isOptionEqualToValue={(option, value) => {
+            if (option === 0 || value === 0) {
+              return option === value
+            }
+            return option?.name === value?.name
+          }}
           onChange={(event, newValue) => newValue && dispatch(setInputQualityClass(newValue.id))}
           disableClearable
           value={input.qualityClass && waterQualities[input.qualityClass]}
