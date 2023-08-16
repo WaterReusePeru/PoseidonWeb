@@ -778,5 +778,29 @@
     "case_study": "Example of the Technical Guide on cleaner production and wastewater treatment in tanneries. Authors:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
     "case_studyEs": "Ejemplo de la Guía Técnica de Producción limpia y tratamiento de aguas residuales en curtiembres. Autores:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
     "unit_processes": [37, 38, 39, 43, 41, 42]
+  },
+  {
+    "id": 65,
+    "title": "Textile Wastewater Treatment by Coagulation and Ultrafiltration",
+    "titleEs": "Tratamiento de las aguas residuales textiles por Coagulación y Ultrafiltración",
+    "category": "Industrial wastewater Treatment",
+    "categoryEs": "Tratamiento de agua residual industrial",
+    "description": "This treatment train brings together sophisticated techniques that make it possible to achieve values (in short period of time and high efficiency) for the discharge of treated wastewater from Textile Industries into the Peruvian sewage system.",
+    "descriptionEs": "Este tren de tratamiento reúne técnicas sofisticadas que permiten alcanzar valores (en poco tiempo y alta eficiencia) para la descarga de las aguas residuales tratadas de las Industrias del Cuero al sistema de alcantarillado peruano.",
+    "case_study": "Test Labs by and Scientific articles.2022.",
+    "case_studyEs": "Pruebas de laboratorio y artículos científicos.2022.",
+    "unit_processes": [44, 45, 46]
+  },
+  {
+    "id": 65,
+    "title": "Textile Wastewater Treatment by Coagulation and Nanofiltration",
+    "titleEs": "Tratamiento de las aguas residuales textiles por Coagulación y Nanofiltración",
+    "category": "Industrial wastewater Treatment",
+    "categoryEs": "Tratamiento de agua residual industrial",
+    "description": "This treatment train brings together sophisticated techniques that make it possible to achieve values (in short period of time and high efficiency) to reuse in the proccess the treated wastewater from Textile Industries in the process.",
+    "descriptionEs": "Este tren de tratamiento reúne técnicas sofisticadas que permiten alcanzar valores (en poco tiempo y alta eficiencia) para el reuso en el proceso las aguas residuales tratadas de las Industrias textiles.",
+    "case_study": "Test Labs by and Scientific articles.2022.",
+    "case_studyEs": "Pruebas de laboratorio y artículos científicos.2022.",
+    "unit_processes": [44, 45, 47]
   }
 ]
