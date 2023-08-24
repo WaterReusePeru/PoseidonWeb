@@ -9811,9 +9811,9 @@
   },
   {
     "id": 218,
-    "name": "Average Wastewater from Textile Industry",
-    "nameEs": "Promedio de aguas residuales de la Industria Textil",
-    "category": 32,
+    "name": "Textile Industry-Peru",
+    "nameEs": "Industria Textil-Perú",
+    "category": 1,
     "turbidity": 364,
     "tss": 110,
     "bod": 455,
