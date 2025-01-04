@@ -40,7 +40,7 @@ const useStyles = makeStyles({
     flexGrow: 1,
   },
   main: {
-    height: '100vh',
+    height: '100vh-100',
     width: '100vw',
     justifyItems: 'stretch',
     justifyContent: 'center',
