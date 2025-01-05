@@ -172,7 +172,7 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
       renderCell: (params: GridRenderCellParams) => {
         const rowId = params.id as number
 
-        return Math.round(data[rowId].laborRequirements! * 100) / 100 + ' person-hour/month'
+        return Math.round(data[rowId].laborRequirements! * 100) / 100 + ' ' + t('person-hour/month')
       },
     },
     {

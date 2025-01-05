@@ -100,6 +100,7 @@ export const resources = {
       'Total capital expenditure (CAPEX)': 'Total de gastos de capital (CAPEX)',
       'Treatment Cost': 'Coste del tratamiento',
       'Sort by rating': 'Ordenar por clasificación',
+      'person-hour/month': 'persona-hora/mes',
 
       'Sorry, no matching records found': 'Lo sentimos, no se han encontrado registros coincidentes',
       Sort: 'Ordenar',
