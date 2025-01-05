@@ -1,5 +1,3 @@
-import MUIDataTable from 'mui-datatables'
-import { options } from '../theme/tables'
 import { StyledEngineProvider, Theme } from '@mui/material/styles'
 
 import makeStyles from '@mui/styles/makeStyles'
@@ -12,6 +10,9 @@ import Tooltip from '@mui/material/Tooltip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
+import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid'
+import { Typography } from '@mui/material'
+
 const useStyles = makeStyles((theme: Theme) => ({
   chipContainer: {
     display: 'flex',
@@ -23,6 +24,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   chip: {
     backgroundColor: theme.palette.primary.main,
+  },
+  dataGridCell: {
+    display: 'flex',
+    alignItems: 'center',
+    whiteSpace: 'normal',
+    wordWrap: 'break-word',
+    textAlign: 'center',
   },
 }))
 
@@ -40,70 +48,81 @@ export default function TreatmentTrains() {
   var descriptionCol = lang === 'en' ? 'description' : 'descriptionEs'
   var caseStudyCol = lang === 'en' ? 'case_study' : 'case_studyEs'
 
-  const columns = [
+  const dataGridColumns: GridColDef[] = [
     {
-      name: 'id',
-      label: 'ID',
-      options: {
-        filter: true,
-      },
+      field: 'id',
+      headerName: 'ID',
+      minWidth: 50,
     },
     {
-      name: categoryCol,
-      label: t('Category'),
-      options: {
-        filter: true,
-      },
+      field: categoryCol,
+      headerName: t('Category'),
+      minWidth: 200,
     },
     {
-      name: titleCol,
-      label: t('Title'),
-      options: {
-        filter: true,
-      },
+      field: titleCol,
+      headerName: t('Title'),
+      minWidth: 150,
     },
     {
-      name: descriptionCol,
-      label: t('Description'),
-      options: {
-        filter: true,
-      },
+      field: descriptionCol,
+      headerName: t('Description'),
+      minWidth: 300,
+      flex: 2,
+      renderCell: (params: GridRenderCellParams) => (
+        <div
+          style={{
+            whiteSpace: 'normal',
+            lineHeight: 1.5,
+          }}
+        >
+          {params.value}
+        </div>
+      ),
     },
     {
-      name: caseStudyCol,
-      label: t('Case Study'),
-      options: {
-        filter: true,
-        setCellProps: () => ({ style: { maxWidth: '20vw' } }),
-      },
+      field: caseStudyCol,
+      headerName: t('Case Study'),
+      minWidth: 300,
+      renderCell: (params: GridRenderCellParams) => (
+        <div
+          style={{
+            whiteSpace: 'normal',
+            lineHeight: 1.5,
+          }}
+        >
+          {params.value}
+        </div>
+      ),
     },
     {
-      name: 'unit_processes',
-      label: t('Unit Processes'),
-      options: {
-        filter: false,
-        customBodyRenderLite: (dataIndex: number) => {
-          const UPList = data[dataIndex].unit_processes
+      field: 'recovery',
+      headerName: t('Recovery') + ' [%]',
+      minWidth: 150,
+      flex: 1,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
 
-          return (
-            <div className={classes.chipContainer}>
-              {UPList &&
-                UPList.map((up, index) => (
-                  <Tooltip key={index} title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
-                    <Chip label={up} key={index} size="small" color="primary" className={classes.chip} />
-                  </Tooltip>
-                ))}
-            </div>
-          )
-        },
-        setCellProps: () => ({ style: { minWidth: '15vw' } }),
+        const UPList = data[rowId].unit_processes
+
+        return (
+          <div className={classes.chipContainer}>
+            {UPList &&
+              UPList.map((up, index) => (
+                <Tooltip key={index} title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
+                  <Chip label={up} key={index} size="small" color="primary" className={classes.chip} />
+                </Tooltip>
+              ))}
+          </div>
+        )
       },
     },
   ]
 
   return (
     <StyledEngineProvider injectFirst>
-      <MUIDataTable title={t('Treatment Trains')} data={data} columns={columns} options={options} />
+      <Typography variant="h6">{t('Treatment Trains')}</Typography>
+      <DataGrid rows={data} columns={dataGridColumns} rowHeight={150} classes={{ cell: classes.dataGridCell }} />
     </StyledEngineProvider>
   )
 }

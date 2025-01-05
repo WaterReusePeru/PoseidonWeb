@@ -1,7 +1,6 @@
 import makeStyles from '@mui/styles/makeStyles'
 
 import { Theme, StyledEngineProvider } from '@mui/material/styles'
-import MUIDataTable, { MUIDataTableOptions } from 'mui-datatables'
 
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
@@ -14,6 +13,8 @@ import Tooltip from '@mui/material/Tooltip'
 import { communityInfos } from '../../data/model'
 import { useAppSelector } from '../../hooks'
 import { CustomToolbar } from './CustomToolbar'
+
+import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -30,11 +31,14 @@ const useStyles = makeStyles((theme: Theme) => ({
   chip: {
     backgroundColor: theme.palette.primary.main,
   },
+  dataGridCell: {
+    display: 'flex',
+    alignItems: 'center',
+    whiteSpace: 'normal',
+    wordWrap: 'break-word',
+    textAlign: 'center',
+  },
 }))
-
-/* export interface ResultsTableProps {
-  solutions
-} */
 
 export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTableProps */) => {
   const classes = useStyles()
@@ -57,203 +61,195 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
     )
   }
 
-  const columns = [
+  const dataGridColumns: GridColDef[] = [
     {
-      name: 'Ranking',
-      label: t('Ranking'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return dataIndex + 1
-        },
-      },
-    },
-    {
-      name: 'treatmentTrain',
-      label: t('Treatment Train'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return lang === 'en'
-            ? treatmentTrains[data[dataIndex].treatmentTrain!].category +
-                ' - ' +
-                treatmentTrains[data[dataIndex].treatmentTrain!].title
-            : treatmentTrains[data[dataIndex].treatmentTrain!].categoryEs +
-                ' - ' +
-                treatmentTrains[data[dataIndex].treatmentTrain!].titleEs
-        },
-      },
-    },
-    {
-      name: 'unitProcesses',
-      sort: false,
-      label: t('Unit Processes'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return (
-            <div className={classes.chipContainer}>
-              {treatmentTrains[data[dataIndex].treatmentTrain!].unit_processes.map((up, index) => {
-                return (
-                  <Tooltip title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
-                    <Chip
-                      label={up}
-                      key={index}
-                      size="small"
-                      color="primary"
-                      style={{ margin: 2 }}
-                      className={classes.chip}
-                    />
-                  </Tooltip>
-                )
-              })}
-            </div>
-          )
-        },
-        setCellProps: () => ({ style: { minWidth: '10vw' } }),
-      },
-    },
-    {
-      name: 'rating',
-      label: t('Rating [0-3]'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return Math.round(data[dataIndex].rating! * 100) / 100
-        },
-      },
-    },
-    {
-      name: 'landRequirements',
-      label: t('Land Requirements'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return Math.round(data[dataIndex].landRequirements! * 100) / 100 + ' ha'
-        },
-        display: false,
-      },
-    },
-    {
-      name: 'annualizedLandCost',
-      label: t('Annualized Land Cost'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return showCost(data[dataIndex].annualizedLandCost!)
-        },
-      },
-    },
-    {
-      name: 'energyRequirements',
-      label: t('Energy Requirements'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return Math.round(data[dataIndex].energyRequirements! * 100) / 100 + ' kWh/y'
-        },
-        display: false,
-      },
-    },
-    {
-      name: 'annualizedEnergyCost',
-      label: t('Annualized Energy Cost'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return showCost(data[dataIndex].annualizedEnergyCost!)
-        },
-      },
-    },
-    {
-      name: 'laborRequirements',
-      label: t('Labor Requirements'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return Math.round(data[dataIndex].laborRequirements! * 100) / 100 + ' person-hour/month'
-        },
-        display: false,
-      },
-    },
-    {
-      name: 'annualizedLaborCost',
-      label: t('Annualized Labor Cost'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return showCost(data[dataIndex].annualizedLaborCost!)
-        },
-      },
-    },
-    {
-      name: 'annualizedOMCost',
-      label: t('Annualized Other O&M Cost'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return showCost(data[dataIndex].annualizedOMCost!)
-        },
-        display: false,
-      },
-    },
-    {
-      name: 'annualizedOpex',
-      label: t('Annualized OPEX'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return showCost(data[dataIndex].annualizedOpex!)
-        },
-        display: true,
-      },
-    },
+      field: 'ranking',
+      headerName: t('Ranking'),
+      minWidth: 50,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
 
-    {
-      name: 'capex',
-      label: t('Total capital expenditure (CAPEX)'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return showCost(data[dataIndex].capex!)
-        },
+        return rowId + 1
       },
     },
     {
-      name: 'annualizedCapex',
-      label: t('Annualized CAPEX'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return showCost(data[dataIndex].annualizedCapex!)
-        },
+      field: 'treatmentTrain',
+      headerName: t('Treatment Train'),
+      minWidth: 250,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return lang === 'en'
+          ? treatmentTrains[data[rowId].treatmentTrain!].category +
+              ' - ' +
+              treatmentTrains[data[rowId].treatmentTrain!].title
+          : treatmentTrains[data[rowId].treatmentTrain!].categoryEs +
+              ' - ' +
+              treatmentTrains[data[rowId].treatmentTrain!].titleEs
       },
     },
     {
-      name: 'annualizedCost',
-      label: t('Annualized Total Cost'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return showCost(data[dataIndex].annualizedCapex! + data[dataIndex].annualizedOpex!)
-        },
+      field: 'unitProcesses',
+      headerName: t('Unit Processes'),
+      minWidth: 200,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return (
+          <div className={classes.chipContainer}>
+            {treatmentTrains[data[rowId].treatmentTrain!].unit_processes.map((up, index) => {
+              return (
+                <Tooltip title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
+                  <Chip
+                    label={up}
+                    key={index}
+                    size="small"
+                    color="primary"
+                    style={{ margin: 2 }}
+                    className={classes.chip}
+                  />
+                </Tooltip>
+              )
+            })}
+          </div>
+        )
       },
     },
     {
-      name: 'costPerCubic',
-      label: t('Cost per Cubic'),
-      options: {
-        filter: true,
-        customBodyRenderLite: (dataIndex: number) => {
-          return commInfoState.currency === 0 ? (
-            <>{data[dataIndex].costPerCubic!.toLocaleString('de-CH')} $</>
-          ) : (
-            <>
-              {(communityInfos[commInfoState.countryID].exchangeToUSD * data[dataIndex].costPerCubic!).toPrecision(3)}{' '}
-              {communityInfos[commInfoState.countryID].currency}
-            </>
-          )
-        },
+      field: 'rating',
+      headerName: t('Rating [0-3]'),
+      minWidth: 100,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return Math.round(data[rowId].rating! * 100) / 100
+      },
+    },
+    {
+      field: 'landRequirements',
+      headerName: t('Land Requirements'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return Math.round(data[rowId].landRequirements! * 100) / 100 + ' ha'
+      },
+    },
+    {
+      field: 'annualizedLandCost',
+      headerName: t('Annualized Land Cost'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return showCost(data[rowId].annualizedLandCost!)
+      },
+    },
+    {
+      field: 'energyRequirements',
+      headerName: t('Energy Requirements'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return Math.round(data[rowId].energyRequirements! * 100) / 100 + ' kWh/y'
+      },
+    },
+    {
+      field: 'annualizedEnergyCost',
+      headerName: t('Annualized Energy Cost'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return showCost(data[rowId].annualizedEnergyCost!)
+      },
+    },
+    {
+      field: 'laborRequirements',
+      headerName: t('Labor Requirements'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return Math.round(data[rowId].laborRequirements! * 100) / 100 + ' ' + t('person-hour/month')
+      },
+    },
+    {
+      field: 'annualizedLaborCost',
+      headerName: t('Annualized Labor Cost'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return showCost(data[rowId].annualizedLaborCost!)
+      },
+    },
+    {
+      field: 'annualizedOMCost',
+      headerName: t('Annualized Other O&M Cost'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return showCost(data[rowId].annualizedOMCost!)
+      },
+    },
+    {
+      field: 'annualizedOpex',
+      headerName: t('Annualized OPEX'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return showCost(data[rowId].annualizedOpex!)
+      },
+    },
+    {
+      field: 'capex',
+      headerName: t('Total capital expenditure (CAPEX)'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return showCost(data[rowId].capex!)
+      },
+    },
+    {
+      field: 'annualizedCapex',
+      headerName: t('Annualized CAPEX'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return showCost(data[rowId].annualizedCapex!)
+      },
+    },
+    {
+      field: 'annualizedCost',
+      headerName: t('Annualized Total Cost'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return showCost(data[rowId].annualizedCapex! + data[rowId].annualizedOpex!)
+      },
+    },
+    {
+      field: 'costPerCubic',
+      headerName: t('Cost per Cubic'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return commInfoState.currency === 0 ? (
+          <>{data[rowId].costPerCubic!.toLocaleString('de-CH')} $</>
+        ) : (
+          <>
+            {(communityInfos[commInfoState.countryID].exchangeToUSD * data[rowId].costPerCubic!).toPrecision(3)}{' '}
+            {communityInfos[commInfoState.countryID].currency}
+          </>
+        )
       },
     },
   ]
@@ -265,22 +261,22 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
     return false
   })
 
-  const options: MUIDataTableOptions = {
-    filter: true,
-    filterType: 'dropdown',
-    selectableRows: 'none',
-    rowsPerPage: 20,
-    print: false,
-    fixedHeader: true,
-    elevation: 0,
-    customToolbar: () => {
-      return <CustomToolbar />
-    },
-  }
+  const processedData = data.map((row, index) => ({ ...row, id: index }))
+
+  console.log(data)
 
   return (
     <StyledEngineProvider injectFirst>
-      <MUIDataTable title={null} data={data} columns={columns} options={options} />
+      <div style={{ textAlign: 'right' }}>
+        <CustomToolbar />
+      </div>
+      <DataGrid
+        rows={processedData}
+        columns={dataGridColumns}
+        rowHeight={90}
+        classes={{ cell: classes.dataGridCell }}
+        getRowId={(row) => row.id}
+      />
     </StyledEngineProvider>
   )
 }

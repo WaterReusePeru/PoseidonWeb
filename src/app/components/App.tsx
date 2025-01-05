@@ -7,7 +7,7 @@ import Button from '@mui/material/Button'
 import MenuBookIcon from '@mui/icons-material/MenuBook'
 import AddCircle from '@mui/icons-material/AddCircle'
 import BarChartIcon from '@mui/icons-material/BarChart'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
 import WaterQualities from '../learn/WaterQualities'
 import UnitProcesses from '../learn/UnitProcesses'
 import GeneralReference from '../learn//GeneralReference'
@@ -40,7 +40,7 @@ const useStyles = makeStyles({
     flexGrow: 1,
   },
   main: {
-    height: '100vh',
+    height: '100vh-100',
     width: '100vw',
     justifyItems: 'stretch',
     justifyContent: 'center',
@@ -113,27 +113,27 @@ export const App = () => {
             </Grid>{' '}
           </Toolbar>
 
-          <Switch>
-            <Route path={`${process.env.PUBLIC_URL}/case`} component={CaseStepper} />
-            <Route path={`${process.env.PUBLIC_URL}/general`} component={LearnMenu} />
-            <Route path={`${process.env.PUBLIC_URL}/waterqualities`} component={LearnMenu} />
-            <Route path={`${process.env.PUBLIC_URL}/unitprocesses`} component={LearnMenu} />
-            <Route path={`${process.env.PUBLIC_URL}/treatmenttrains`} component={LearnMenu} />
-            <Route path={`${process.env.PUBLIC_URL}/results`} component={ResultsMenu} />
-            <Route path={`${process.env.PUBLIC_URL}/`} component={LearnMenu} />
-          </Switch>
+          <Routes>
+            <Route path={`${process.env.PUBLIC_URL}/case`} element={<CaseStepper />} />
+            <Route path={`${process.env.PUBLIC_URL}/general`} element={<LearnMenu />} />
+            <Route path={`${process.env.PUBLIC_URL}/waterqualities`} element={<LearnMenu />} />
+            <Route path={`${process.env.PUBLIC_URL}/unitprocesses`} element={<LearnMenu />} />
+            <Route path={`${process.env.PUBLIC_URL}/treatmenttrains`} element={<LearnMenu />} />
+            <Route path={`${process.env.PUBLIC_URL}/results`} element={<ResultsMenu />} />
+            <Route path={`${process.env.PUBLIC_URL}/`} element={<LearnMenu />} />
+          </Routes>
         </AppBar>
 
         <div className={classes.main}>
-          <Switch>
-            <Route exact path={`${process.env.PUBLIC_URL}/`} component={GeneralReference} />
-            <Route path={`${process.env.PUBLIC_URL}/case`} component={Case} />
-            <Route path={`${process.env.PUBLIC_URL}/results`} component={Results} />
-            <Route path={`${process.env.PUBLIC_URL}/general`} component={GeneralReference} />
-            <Route path={`${process.env.PUBLIC_URL}/waterqualities`} component={WaterQualities} />
-            <Route path={`${process.env.PUBLIC_URL}/unitprocesses`} component={UnitProcesses} />
-            <Route path={`${process.env.PUBLIC_URL}/treatmenttrains`} component={TreatmentTrains} />
-          </Switch>
+          <Routes>
+            <Route path={`${process.env.PUBLIC_URL}/`} element={<GeneralReference />} />
+            <Route path={`${process.env.PUBLIC_URL}/case`} element={<Case />} />
+            <Route path={`${process.env.PUBLIC_URL}/results`} element={<Results />} />
+            <Route path={`${process.env.PUBLIC_URL}/general`} element={<GeneralReference />} />
+            <Route path={`${process.env.PUBLIC_URL}/waterqualities`} element={<WaterQualities />} />
+            <Route path={`${process.env.PUBLIC_URL}/unitprocesses`} element={<UnitProcesses />} />
+            <Route path={`${process.env.PUBLIC_URL}/treatmenttrains`} element={<TreatmentTrains />} />
+          </Routes>
         </div>
       </Router>
     </div>

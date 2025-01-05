@@ -1,6 +1,3 @@
-import MUIDataTable from 'mui-datatables'
-import { options } from '../theme/tables'
-
 import { StyledEngineProvider, Theme } from '@mui/material/styles'
 
 import makeStyles from '@mui/styles/makeStyles'
@@ -15,6 +12,9 @@ import Tooltip from '@mui/material/Tooltip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 
+import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid'
+import { Typography } from '@mui/material'
+
 const useStyles = makeStyles((theme: Theme) => ({
   chipContainer: {
     display: 'flex',
@@ -27,9 +27,16 @@ const useStyles = makeStyles((theme: Theme) => ({
   chip: {
     backgroundColor: theme.palette.primary.main,
   },
+  dataGridCell: {
+    display: 'flex',
+    alignItems: 'center',
+    whiteSpace: 'normal',
+    wordWrap: 'break-word',
+    textAlign: 'center',
+  },
 }))
 
-export default function UnitProcesses() {
+export default function WaterQualities() {
   const classes = useStyles()
 
   const { t } = useTranslation()
@@ -44,101 +51,121 @@ export default function UnitProcesses() {
   var referenceCol = lang === 'en' ? 'reference' : 'referenceEs'
   var tagsCol = lang === 'en' ? 'tags' : 'tagsEs'
 
-  const columns = [
+  const dataGridColumns: GridColDef[] = [
     {
-      name: 'id',
-      label: 'ID',
-      options: {
-        filter: true,
+      field: 'id',
+      headerName: 'ID',
+      minWidth: 50,
+    },
+    {
+      field: 'category',
+      headerName: t('Category'),
+      minWidth: 150,
+      valueGetter: (value: number) => {
+        return lang === 'en' ? qualities[value].name : qualities[value].nameEs
       },
     },
     {
-      name: 'category',
-      label: t('Category'),
-      options: {
-        filter: true,
-        customBodyRender: (value: number) => {
-          return <div>{lang === 'en' ? qualities[value].name : qualities[value].nameEs}</div>
-        },
-      },
+      field: nameCol,
+      minWidth: 150,
+      headerName: t('Name'),
+      renderCell: (params: GridRenderCellParams) => (
+        <div
+          style={{
+            whiteSpace: 'normal',
+            lineHeight: 1.5,
+          }}
+        >
+          {params.value}
+        </div>
+      ),
     },
     {
-      name: nameCol,
-      label: t('Name'),
-      options: {
-        filter: true,
-      },
-    },
-    {
-      name: 'wqi',
-      label: t('Water Quality Indicators'),
-      options: {
-        filter: false,
-        customBodyRenderLite: (dataIndex: number) => {
-          return (
-            <div className={classes.chipContainer}>
-              {waterQualityFactors.map((f, index) => {
-                const key = f.name as keyof WaterQuality
+      field: 'wqi',
+      headerName: t('Water Quality Indicators'),
+      minWidth: 300,
+      flex: 1,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
 
-                return (
-                  <Tooltip
-                    key={index}
-                    title={
-                      lang === 'en'
-                        ? waterQualityFactors[index].nameLong + ' [' + waterQualityFactors[index].unit + ']'
-                        : waterQualityFactors[index].nameLongEs + ' [' + waterQualityFactors[index].unit + ']'
-                    }
-                  >
-                    <Chip label={data[dataIndex][key] !== null ? data[dataIndex][key] : '-'} key={index} size="small" />
-                  </Tooltip>
-                )
-              })}
-            </div>
-          )
-        },
-        setCellProps: () => ({ style: { minWidth: '20vw' } }),
+        return (
+          <div className={classes.chipContainer}>
+            {waterQualityFactors.map((f, index) => {
+              const key = f.name as keyof WaterQuality
+
+              return (
+                <Tooltip
+                  key={index}
+                  title={
+                    lang === 'en'
+                      ? waterQualityFactors[index].nameLong + ' [' + waterQualityFactors[index].unit + ']'
+                      : waterQualityFactors[index].nameLongEs + ' [' + waterQualityFactors[index].unit + ']'
+                  }
+                >
+                  <Chip label={data[rowId][key] !== null ? data[rowId][key] : '-'} key={index} size="small" />
+                </Tooltip>
+              )
+            })}
+          </div>
+        )
+        // return null
       },
     },
     {
-      name: noteCol,
-      label: t('Note'),
-      options: {
-        filter: true,
-      },
+      field: noteCol,
+      headerName: t('Note'),
+      minWidth: 300,
+      flex: 1,
+      renderCell: (params: GridRenderCellParams) => (
+        <div
+          style={{
+            whiteSpace: 'normal',
+            lineHeight: 1.5,
+          }}
+        >
+          {params.value}
+        </div>
+      ),
     },
     {
-      name: referenceCol,
-      label: t('Reference'),
-      options: {
-        filter: true,
-      },
+      field: referenceCol,
+      headerName: t('Reference'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => (
+        <div
+          style={{
+            whiteSpace: 'normal',
+            lineHeight: 1.5,
+          }}
+        >
+          {params.value}
+        </div>
+      ),
     },
     {
-      name: tagsCol,
-      label: t('Tags'),
-      options: {
-        filter: true,
-      },
+      field: tagsCol,
+      headerName: t('Tags'),
     },
     {
-      name: 'category',
-      label: t('Type'),
-      options: {
-        filter: true,
-        customBodyRender: (value: number) => {
-          if (qualities[value].input) {
-            return t('Wastewater')
-          } else {
-            return t('Quality Standard')
-          }
-        },
+      field: 'type',
+      headerName: t('Type'),
+      minWidth: 150,
+      renderCell: (params: any) => {
+        if (qualities[data[params.id].category].input) {
+          return t('Wastewater')
+        } else {
+          return t('Quality Standard')
+        }
       },
     },
   ]
 
   return (
-    <StyledEngineProvider injectFirst>
-      <MUIDataTable title={t('Water Qualities')} data={data} columns={columns} options={options} />
-    </StyledEngineProvider>
+    <>
+      <StyledEngineProvider injectFirst>
+        <Typography variant="h6">{t('Water Qualities')}</Typography>
+        <DataGrid rows={data} columns={dataGridColumns} rowHeight={120} classes={{ cell: classes.dataGridCell }} />
+      </StyledEngineProvider>
+    </>
   )
 }

@@ -48,7 +48,7 @@ export default function CommInfo() {
         />
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Tooltip title={t<string>('Information about countries')}>
+        <Tooltip title={t('Information about countries')}>
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>
@@ -76,7 +76,7 @@ export default function CommInfo() {
         />
       </Grid>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Tooltip title={t<string>('Information about currencies')}>
+        <Tooltip title={t('Information about currencies')}>
           <Chip label="?" size="small" />
         </Tooltip>
       </Grid>
