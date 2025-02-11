@@ -51,15 +51,23 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
   const commInfoState = useAppSelector((state) => state.case.commInfo)
 
   function showCost(v: number) {
-    return commInfoState.currency === 0 ? (
-      <>{Math.round(v).toLocaleString('de-CH')} $</>
-    ) : (
+    // Convert to the correct currency
+    const convertedValue =
+      commInfoState.currency === 0
+        ? v
+        : communityInfos[commInfoState.countryID].exchangeToUSD * v
+  
+    // Format with 3 significant figures
+    const formattedValue = Number(convertedValue.toPrecision(3)).toLocaleString('de-CH')
+  
+    return (
       <>
-        {(communityInfos[commInfoState.countryID].exchangeToUSD * Math.round(v)).toLocaleString('de-CH')}{' '}
-        {communityInfos[commInfoState.countryID].currency}
+        {formattedValue}{' '}
+        {commInfoState.currency === 0 ? '$' : communityInfos[commInfoState.countryID].currency}
       </>
     )
   }
+  
 
   const dataGridColumns: GridColDef[] = [
     {
@@ -152,7 +160,7 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
       renderCell: (params: GridRenderCellParams) => {
         const rowId = params.id as number
 
-        return Math.round(data[rowId].energyRequirements! * 100) / 100 + ' kWh/y'
+        return Number(data[rowId].energyRequirements!.toPrecision(3)) + ' kWh/y'
       },
     },
     {
@@ -172,7 +180,7 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
       renderCell: (params: GridRenderCellParams) => {
         const rowId = params.id as number
 
-        return Math.round(data[rowId].laborRequirements! * 100) / 100 + ' ' + t('person-hour/month')
+        return Number(data[rowId].laborRequirements!.toPrecision(3)) + ' ' + t('p-h/mo')
       },
     },
     {
