@@ -58,22 +58,20 @@ export default function Input() {
 
     dispatch(
       setCutomInputQualityFactors(
-        isQualityFactor(event.target.value) ? event.target.value.split(',') : event.target.value
-      )
+        isQualityFactor(event.target.value) ? event.target.value.split(',') : event.target.value,
+      ),
     )
     if (event.target.value.length > 0) {
       setQualityFactor(typeof event.target.value === 'string' ? event.target.value.split(',') : event.target.value)
     }
   }
 
-  console.log(input)
-
   return (
     <Grid container direction="row" alignItems="flex-start" spacing={3}>
       <Grid
         item
         container
-        xs={endUse.qualityClass !== undefined ? 8 : 12}
+        xs={input.qualityClass && endUse.qualityClass !== undefined ? 8 : 12}
         direction="row"
         alignItems="center"
         spacing={3}
@@ -164,7 +162,7 @@ export default function Input() {
         </Grid>
         <QualityCompare />
       </Grid>
-      {endUse.qualityClass || endUse.customValueEntered ? (
+      {input.qualityClass /*  || input.customValueEntered */ && (endUse.qualityClass || endUse.customValueEntered) ? (
         <Grid item container xs={4}>
           <SolutionsBox />
         </Grid>

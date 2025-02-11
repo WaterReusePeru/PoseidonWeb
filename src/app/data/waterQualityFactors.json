@@ -261,16 +261,6 @@
   },
   {
     "id": 26,
-    "name": "ni",
-    "nameShort": "Ni",
-    "nameShortEs": "Ni",
-    "nameLong": "Nickel",
-    "nameLongEs": "Níquel",
-    "unit": "mg/L",
-    "maxValue": 10000
-  },
-  {
-    "id": 27,
     "name": "pb",
     "nameShort": "Pb",
     "nameShortEs": "Pb",
@@ -280,7 +270,7 @@
     "maxValue": 10000
   },
   {
-    "id": 28,
+    "id": 27,
     "name": "zn",
     "nameShort": "Zn",
     "nameShortEs": "Zn",
@@ -290,7 +280,7 @@
     "maxValue": 10000
   },
   {
-    "id": 29,
+    "id": 28,
     "name": "ph",
     "nameShort": "Ph",
     "nameShortEs": "Ph",
@@ -300,7 +290,7 @@
     "maxValue": 10000
   },
   {
-    "id": 30,
+    "id": 29,
     "name": "ss",
     "nameShort": "SS",
     "nameShortEs": "SS",
@@ -310,7 +300,7 @@
     "maxValue": 10000
   },
   {
-    "id": 31,
+    "id": 30,
     "name": "temp",
     "nameShort": "Temp",
     "nameShortEs": "Temp",

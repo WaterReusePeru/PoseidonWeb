@@ -19,7 +19,7 @@ export function findSuitableTreatments(
   endUse: WaterQuality,
   treatmentFactors: QualityFactor[],
   amount: number,
-  commInfo: CommunityInfo
+  commInfo: CommunityInfo,
 ) {
   let outputQualities: OutputQuality[] = []
 
@@ -83,8 +83,6 @@ export function findSuitableTreatments(
             Number(unitProcesses[unitProcess][UpKeyC]) * Number(amount) ** Number(unitProcesses[unitProcess][UpKeyB])
 
           outputCostPerFactor[costFactor] = outputCostPerFactor[costFactor] + outputCostStep
-
-          //console.log("Output cost:" + outputCostStep + " Unit Process: " + unitProcess + " Cost Factor: " + costFactor)
 
           if (costFactor === 'construction_cost') {
             annualizedCapex += outputCostStep * 1.39 * 1.27 * crf * 1000

@@ -140,14 +140,12 @@ export const caseSlice = createSlice({
     setInputQualityClass: (state, action) => {
       state.input.qualityClass = action.payload
       var qualityClassFactors: string[] = []
-      console.log(waterQualities[action.payload][waterQualityFactors[1].name as keyof WaterQuality])
       waterQualityFactors.forEach((f) => {
         if (waterQualities[action.payload][f.name as keyof WaterQuality] !== null) {
           qualityClassFactors.push(f.name)
         }
       })
       state.qualityFactors = qualityClassFactors
-      console.log(qualityClassFactors)
       if (state.input.quantity) {
         state.completedSteps[1] = 1
       }
@@ -267,7 +265,5 @@ export const {
 } = caseSlice.actions
 
 export const selectCase = (state: RootState) => state.case
-
-console.log(caseSlice)
 
 export default caseSlice.reducer

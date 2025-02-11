@@ -9,7 +9,7 @@ export default function CalculateSolutions(
   endUse: WaterQuality,
   amount: number,
   byRating: boolean,
-  commInfo: CommunityInfo
+  commInfo: CommunityInfo,
 ) {
   const dispatch = useAppDispatch()
 
@@ -19,13 +19,22 @@ export default function CalculateSolutions(
 
   let treatmentFactors: QualityFactor[] = []
 
-  qualityFactors.forEach((qualityFactor) => {
-    const key = qualityFactor as keyof WaterQuality
-    if (key in input && key in endUse && input[key] > endUse[key] && endUse[key] !== null) {
-      dispatch(setSolutionNoneNeeded(false))
-      treatmentFactors.push(qualityFactor as QualityFactor)
-    }
-  })
+  if (!input || !endUse) {
+    dispatch(setSolutionNoneNeeded(true))
+  } else {
+    qualityFactors.forEach((qualityFactor) => {
+      const key = qualityFactor as keyof WaterQuality
+
+      if (key in input && key in endUse && input[key] > endUse[key] && endUse[key] !== null) {
+        dispatch(setSolutionNoneNeeded(false))
+        treatmentFactors.push(qualityFactor as QualityFactor)
+      }
+    })
+  }
+
+  if (!treatmentFactors || treatmentFactors.length === 0) {
+    dispatch(setSolutionNoneNeeded(true))
+  }
 
   function findTopTreatments(outputQualities: OutputQuality[]) {
     let topTreatments
@@ -39,7 +48,11 @@ export default function CalculateSolutions(
     return topTreatments
   }
 
-  const topTreatments = findTopTreatments(findSuitableTreatments(input, endUse, treatmentFactors, amount, commInfo))
+  // const topTreatments = findTopTreatments(findSuitableTreatments(input, endUse, treatmentFactors, amount, commInfo))
+
+  let topTreatments = [] // Reset to empty array
+
+  topTreatments = findTopTreatments(findSuitableTreatments(input, endUse, treatmentFactors, amount, commInfo))
 
   if (topTreatments.length === 0) {
     dispatch(setSolutionNoneAvailable(true))

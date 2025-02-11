@@ -31,6 +31,8 @@ export const resources = {
       'Case Study': 'Estudio de caso',
       Note: 'Nota',
       Reference: 'Referencia',
+      Tags: 'Etiquetas',
+      Type: 'Tipo',
 
       'Community Information': 'Información Comunitaria',
       Input: 'Introducir',

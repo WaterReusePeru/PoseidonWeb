@@ -263,8 +263,6 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
 
   const processedData = data.map((row, index) => ({ ...row, id: index }))
 
-  console.log(data)
-
   return (
     <StyledEngineProvider injectFirst>
       <div style={{ textAlign: 'right' }}>

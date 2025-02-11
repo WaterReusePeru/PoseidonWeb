@@ -35,15 +35,15 @@ export default function SolutionsBox() {
   const quantity = caseState.input.quantity
   const sortByRating = caseState.solution.sortByRating
 
-  console.log(caseState.solutions)
-
   CalculateSolutions(
     caseState.input.custom ? customInputQuality : presetInputQuality,
     caseState.endUse.custom ? customEndUseQuality : presetEndUseQuality,
     quantity!,
     sortByRating,
-    commInfo
+    commInfo,
   ) //TODO: !
+
+  console.log(caseState.solutions)
 
   const handleChangePriority = () => {
     dispatch(setSolutionsortByRating(!sortByRating))
@@ -53,15 +53,17 @@ export default function SolutionsBox() {
     <Paper elevation={0}>
       <Grid container spacing={0}>
         <Grid item xs={12}>
-          <Typography variant="h6">{t('Solutions')}</Typography>
+          <Typography variant="h6">
+            {t('Solutions')} ({caseState.solutions.filter((obj) => obj.treatmentTrain !== undefined).length})
+          </Typography>
           <Typography variant="body2">
             {caseState.solution.noneNeeded
               ? t(
-                  'Based on your input, no treatment is needed because the input quality is better than the end use quality.'
+                  'Based on your input, no treatment is needed because the input quality is better than the end use quality.',
                 )
               : caseState.solution.noneAvailable
-              ? t('Based on your input, theres no possible solution')
-              : t('Based on your input, the following treatment trains are best suited for the case.')}
+                ? t('Based on your input, theres no possible solution')
+                : t('Based on your input, the following treatment trains are best suited for the case.')}
           </Typography>
         </Grid>
 
@@ -79,7 +81,6 @@ export default function SolutionsBox() {
             ) : null}
 
             {caseState.solutions.slice(0, 3).map((solution, index) => {
-              console.log(caseState.solutions)
               if (solution.treatmentTrain || solution.treatmentTrain === 0) {
                 return (
                   <Grid item container key={index} spacing={1}>
@@ -100,7 +101,11 @@ export default function SolutionsBox() {
                       <Typography variant="body2">{t('Case Study')}:</Typography>
                     </Grid>
                     <Grid item xs={6}>
-                      <Typography variant="body2">{treatmentTrains[solution.treatmentTrain!].title}</Typography>{' '}
+                      <Typography variant="body2">
+                        {lang === 'en'
+                          ? treatmentTrains[solution.treatmentTrain!].title
+                          : treatmentTrains[solution.treatmentTrain!].titleEs}
+                      </Typography>{' '}
                       {/* TODO: ! */}
                     </Grid>
                     <Grid item xs={6}>
@@ -140,7 +145,7 @@ export default function SolutionsBox() {
                       {treatmentTrains[solution.treatmentTrain!].unit_processes.map(
                         (
                           up,
-                          index //TODO: !
+                          index, //TODO: !
                         ) => (
                           <Tooltip
                             key={index}
@@ -148,7 +153,7 @@ export default function SolutionsBox() {
                           >
                             <Chip label={up} key={index} size="small" color="primary" style={{ margin: 2 }} />
                           </Tooltip>
-                        )
+                        ),
                       )}
                     </Grid>
                   </Grid>
