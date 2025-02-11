@@ -26,19 +26,21 @@ export const ResultsGraph = () => {
   let data = []
 
   data = solutions.map((solution) => {
-    const solutionData = Object.keys(solution.values).map((key) => {
-      const factor = waterQualityFactors.find((quality) => quality.name === key)
-      return {
-        factor: factor?.nameShort,
-        value: solution.values[key],
-        unit: factor?.unit,
-        x:
-          commInfoState.currency === 0
-            ? solution.costPerCubic
-            : solution.costPerCubic * communityInfos[commInfoState.countryID].exchangeToUSD,
-        y: 100 * (solution.values[key] / Number(endUseQuality[key as keyof WaterQuality])),
-      }
-    })
+    const solutionData = Object.keys(solution.values)
+      .filter((key) => endUseQuality[key as keyof WaterQuality] !== null)
+      .map((key) => {
+        const factor = waterQualityFactors.find((quality) => quality.name === key)
+        return {
+          factor: factor?.nameShort,
+          value: solution.values[key],
+          unit: factor?.unit,
+          x:
+            commInfoState.currency === 0
+              ? solution.costPerCubic
+              : solution.costPerCubic * communityInfos[commInfoState.countryID].exchangeToUSD,
+          y: 100 * (solution.values[key] / Number(endUseQuality[key as keyof WaterQuality])),
+        }
+      })
     return {
       id: treatmentTrains[solution.treatmentTrain!].category + ' - ' + treatmentTrains[solution.treatmentTrain!].title,
       data: solutionData,
