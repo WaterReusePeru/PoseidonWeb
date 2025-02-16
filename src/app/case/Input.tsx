@@ -93,7 +93,7 @@ export default function Input() {
                     inputProps={{ 'aria-label': 'A' }}
                   />
                 }
-                label="Presets"
+                label={t('Presets')}
               />
               <FormControlLabel
                 value="true"
@@ -106,7 +106,7 @@ export default function Input() {
                     inputProps={{ 'aria-label': 'B' }}
                   />
                 }
-                label="Custom"
+                label={t('Custom')}
               />
             </RadioGroup>
           </FormControl>

@@ -33,6 +33,8 @@ export const resources = {
       Reference: 'Referencia',
       Tags: 'Etiquetas',
       Type: 'Tipo',
+      Presets: 'Preestablecidos',
+      Custom: 'Personalizados',
 
       'Community Information': 'Información Comunitaria',
       Input: 'Introducir',
@@ -104,6 +106,7 @@ export const resources = {
       'Sort by rating': 'Ordenar por clasificación',
       'p-h/mo': 'p-h/mes',
       'kWh/y': 'kWh/año',
+      'Output Values': 'Valores de salida',
 
       'Sorry, no matching records found': 'Lo sentimos, no se han encontrado registros coincidentes',
       Sort: 'Ordenar',
