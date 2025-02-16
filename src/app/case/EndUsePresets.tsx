@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Chip, Tooltip, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import { compare, useAppDispatch, useAppSelector } from '../hooks'
@@ -26,7 +26,7 @@ export default function EndUse() {
       <Grid item xs={4}>
         <Typography>{t('Select the Category')}</Typography>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={8}>
         <Autocomplete
           id="category"
           size="small"
@@ -43,7 +43,7 @@ export default function EndUse() {
       <Grid item xs={4}>
         <Typography>{t('Water Quality Class')}</Typography>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={7}>
         <Autocomplete
           id="quality"
           size="small"
@@ -56,6 +56,17 @@ export default function EndUse() {
           renderInput={(params) => <TextField {...params} variant="outlined" />}
           disabled={endUse.category === null ? true : false}
         />
+      </Grid>
+      <Grid item xs={1} style={{ textAlign: 'center' }}>
+        {endUse.qualityClass !== undefined && waterQualities[endUse.qualityClass].note ? (
+          <Tooltip
+            title={
+              lang === 'en' ? waterQualities[endUse.qualityClass].note : waterQualities[endUse.qualityClass].noteEs
+            }
+          >
+            <Chip label={'?'} key={waterQualities[endUse.qualityClass].id} size="small" style={{ margin: 2 }} />
+          </Tooltip>
+        ) : null}
       </Grid>
     </>
   )

@@ -10,7 +10,7 @@ import unitProcesses from '../../data/unitProcesses.json'
 
 import Chip from '@mui/material/Chip'
 import Tooltip from '@mui/material/Tooltip'
-import { communityInfos } from '../../data/model'
+import { communityInfos, waterQualityFactors } from '../../data/model'
 import { useAppSelector } from '../../hooks'
 import { CustomToolbar } from './CustomToolbar'
 
@@ -52,22 +52,17 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
 
   function showCost(v: number) {
     // Convert to the correct currency
-    const convertedValue =
-      commInfoState.currency === 0
-        ? v
-        : communityInfos[commInfoState.countryID].exchangeToUSD * v
-  
+    const convertedValue = commInfoState.currency === 0 ? v : communityInfos[commInfoState.countryID].exchangeToUSD * v
+
     // Format with 3 significant figures
     const formattedValue = Number(convertedValue.toPrecision(3)).toLocaleString('de-CH')
-  
+
     return (
       <>
-        {formattedValue}{' '}
-        {commInfoState.currency === 0 ? '$' : communityInfos[commInfoState.countryID].currency}
+        {formattedValue} {commInfoState.currency === 0 ? '$' : communityInfos[commInfoState.countryID].currency}
       </>
     )
   }
-  
 
   const dataGridColumns: GridColDef[] = [
     {
@@ -124,6 +119,34 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
       },
     },
     {
+      field: 'values',
+      headerName: t('Output Values'),
+      minWidth: 200,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return (
+          <div className={classes.chipContainer}>
+            {Object.entries(data[rowId].values).map(([key, value]: [string, number]) => {
+              const quality = waterQualityFactors.find((wq) => wq.name === key)
+              return (
+                <Tooltip title={quality ? (lang === 'en' ? quality.nameLong : quality.nameLongEs) : key}>
+                  <Chip
+                    label={Number(value.toPrecision(2))}
+                    key={key}
+                    size="small"
+                    //color="primary"
+                    style={{ margin: 2 }}
+                    //className={classes.chip}
+                  />
+                </Tooltip>
+              )
+            })}
+          </div>
+        )
+      },
+    },
+    {
       field: 'rating',
       headerName: t('Rating [0-3]'),
       minWidth: 100,
@@ -160,7 +183,7 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
       renderCell: (params: GridRenderCellParams) => {
         const rowId = params.id as number
 
-        return Number(data[rowId].energyRequirements!.toPrecision(3)) + ' kWh/y'
+        return Number(data[rowId].energyRequirements!.toPrecision(3)) + ' ' + t('kWh/y')
       },
     },
     {

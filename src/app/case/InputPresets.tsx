@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Chip, Tooltip, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import { compare, useAppDispatch, useAppSelector } from '../hooks'
@@ -16,6 +16,8 @@ export default function InputPresets() {
   const lang = i18next.language
 
   const waterQualityOptions = waterQualities.filter((q) => q.category === input.category)
+
+  console.log(input.qualityClass ? waterQualities[input.qualityClass] : null)
 
   return (
     <Grid item container spacing={3}>
@@ -39,7 +41,7 @@ export default function InputPresets() {
       <Grid item xs={4}>
         <Typography>{t('Water Quality Class')}</Typography>
       </Grid>
-      <Grid item xs={8}>
+      <Grid item xs={7}>
         <Autocomplete
           id="quality"
           size="small"
@@ -58,6 +60,15 @@ export default function InputPresets() {
           value={input.qualityClass && waterQualities[input.qualityClass]}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
         />
+      </Grid>
+      <Grid item xs={1} style={{ textAlign: 'center' }}>
+        {input.qualityClass !== undefined && waterQualities[input.qualityClass].note ? (
+          <Tooltip
+            title={lang === 'en' ? waterQualities[input.qualityClass].note : waterQualities[input.qualityClass].noteEs}
+          >
+            <Chip label={'?'} key={waterQualities[input.qualityClass].id} size="small" style={{ margin: 2 }} />
+          </Tooltip>
+        ) : null}
       </Grid>
     </Grid>
   )
