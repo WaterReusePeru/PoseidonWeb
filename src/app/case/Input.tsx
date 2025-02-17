@@ -59,7 +59,7 @@ export default function Input() {
 
     dispatch(
       setCutomInputQualityFactors(
-        isQualityFactor(event.target.value) ? event.target.value.split(',') : event.target.value,
+        isQualityFactor(event.target.value) ? event.target.value.split(',') : event.target.value
       ),
     )
     if (event.target.value.length > 0) {
@@ -134,8 +134,8 @@ export default function Input() {
                 }                
               >
                 {waterQualityFactors.map((factor) => (
-                  <MenuItem key={getLocalisedValue(factor, lang, 'nameShort')} value={getLocalisedValue(factor, lang, 'nameShort')}>
-                    <Checkbox checked={caseState.qualityFactors.indexOf(getLocalisedValue(factor, lang, 'nameShort')) > -1} />
+                  <MenuItem key={factor.name} value={factor.name}>
+                    <Checkbox checked={caseState.qualityFactors.indexOf(factor.name) > -1} />
                     <ListItemText primary={getLocalisedValue(factor, lang, 'nameLong')} />
                   </MenuItem>
                 ))}

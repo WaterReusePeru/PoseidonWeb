@@ -80,7 +80,6 @@ export const ResultsGraph = () => {
       }}
       colors={{ scheme: 'paired' }}
       tooltip={function ({ node }) {
-        console.log(node)
         return (
           <div
             style={{
