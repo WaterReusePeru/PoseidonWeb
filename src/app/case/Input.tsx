@@ -72,7 +72,7 @@ export default function Input() {
       <Grid
         item
         container
-        xs={input.qualityClass && endUse.qualityClass !== undefined ? 8 : 12}
+        xs={input.qualityClass && (endUse.qualityClass || endUse.customValueEntered) ? 8 : 12}
         direction="row"
         alignItems="center"
         spacing={3}
@@ -172,7 +172,7 @@ export default function Input() {
         </Grid>
         <QualityCompare />
       </Grid>
-      {input.qualityClass /*  || input.customValueEntered */ && (endUse.qualityClass || endUse.customValueEntered) ? (
+      {input.qualityClass && (endUse.qualityClass || endUse.customValueEntered) ? (
         <Grid item container xs={4}>
           <SolutionsBox />
         </Grid>
