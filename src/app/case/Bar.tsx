@@ -48,14 +48,6 @@ export const Bar = (props: { input?: any; output?: any; factor: string; average?
     data.push(average)
   }
 
-  var legend
-
-  if (props.factor === 'turbidity') {
-    legend = t('Turbidity') + ' [' + props.unit + ']'
-  } else {
-    legend = props.factor.toUpperCase() + ' [' + props.unit + ']'
-  }
-
   function getLabel(d: any) {
     if (props.factor === 'tc' || props.factor === 'fc') {
       return Number(d.value).toExponential().toLocaleString() //TODO: Supposed to be toLocaleString('de-CH')
