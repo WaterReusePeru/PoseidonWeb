@@ -8,7 +8,8 @@
     "landCost": 2000,
     "electricityCost": 0.06,
     "personalCost": 3.5,
-    "discountRate": 0.05
+    "discountRate": 0.05,
+    "nameJa": "ペルー"
   },
   {
     "id": 1,
@@ -19,7 +20,8 @@
     "landCost": 15000,
     "electricityCost": 0.05,
     "personalCost": 20,
-    "discountRate": 0.08
+    "discountRate": 0.08,
+    "nameJa": "アルゼンチン"
   },
   {
     "id": 2,
@@ -30,9 +32,9 @@
     "landCost": 10000,
     "electricityCost": 0.15,
     "personalCost": 20,
-    "discountRate": 0.08
+    "discountRate": 0.08,
+    "nameJa": "チリ"
   },
-
   {
     "id": 3,
     "name": "Brazil",
@@ -42,7 +44,8 @@
     "landCost": 12004,
     "electricityCost": 0.12,
     "personalCost": 20,
-    "discountRate": 0.08
+    "discountRate": 0.08,
+    "nameJa": "ブラジル"
   },
   {
     "id": 4,
@@ -53,7 +56,8 @@
     "landCost": 10000,
     "electricityCost": 0.13,
     "personalCost": 20,
-    "discountRate": 0.08
+    "discountRate": 0.08,
+    "nameJa": "メキシコ"
   },
   {
     "id": 5,
@@ -64,7 +68,8 @@
     "landCost": 10000,
     "electricityCost": 0.02,
     "personalCost": 2.67,
-    "discountRate": 0.19
+    "discountRate": 0.19,
+    "nameJa": "エジプト"
   },
   {
     "id": 6,
@@ -75,7 +80,8 @@
     "landCost": 10000,
     "electricityCost": 0.11,
     "personalCost": 2.11,
-    "discountRate": 0.07
+    "discountRate": 0.07,
+    "nameJa": "モロッコ"
   },
   {
     "id": 7,
@@ -86,7 +92,8 @@
     "landCost": 10000,
     "electricityCost": 0.07,
     "personalCost": 8.15,
-    "discountRate": 0.06
+    "discountRate": 0.06,
+    "nameJa": "チュニジア"
   },
   {
     "id": 8,
@@ -96,18 +103,20 @@
     "exchangeToUSD": 20418.07,
     "landCost": 10000,
     "electricityCost": 0.07,
-    "personalCost": 20.00,
-    "discountRate": 0.04
+    "personalCost": 20,
+    "discountRate": 0.04,
+    "nameJa": "ベトナム"
   },
   {
     "id": 9,
     "name": "Japan2024",
     "nameEs": "Japan2024",
     "currency": "YEN",
-    "exchangeToUSD": 150.00,
-    "landCost": 2200000,			
-    "electricityCost": 0.18,			
-    "personalCost": 20,			
-    "discountRate": 0.008
-  } 
+    "exchangeToUSD": 150,
+    "landCost": 2200000,
+    "electricityCost": 0.18,
+    "personalCost": 20,
+    "discountRate": 0.008,
+    "nameJa": "日本2024"
+  }
 ]

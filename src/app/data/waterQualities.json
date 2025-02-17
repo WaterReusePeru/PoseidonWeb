@@ -42,7 +42,11 @@
     "reference": "Asano et al., 2006 p. 107. Value for Turbidity: Asano et al., 2006, p.109. Viruses: Asano et al., 2006, p.110",
     "referenceEs": "Asano et al., 2006 p. 107. Valor de la turbidez: Asano et al., 2006, p.109. Virus: Asano et al., 2006, p.110",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "典型的な未処理の国内廃水",
+    "noteJa": "未処理の国内廃水の典型的な組成。 注：典型的な廃水はありません。値はガイドとしてのみ使用する必要があります！ 提示されたデータは、平均460 l/cap*日の平均流量に基づく中強度廃水に関するものであり、商業機関、および産業源によって追加された成分が含まれます。",
+    "referenceJa": "Asano et al。、2006 p。 107。濁度の価値：Asano et al。、2006、p.109。 ウイルス：Asano et al。、2006、p.110",
+    "tagsJa": "他の"
   },
   {
     "id": 1,
@@ -87,7 +91,11 @@
     "reference": "Asano et al., 2006 p. 107",
     "referenceEs": "Asano et al., 2006 p. 107",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "未処理の国内廃水（範囲）",
+    "noteJa": "",
+    "referenceJa": "Asano et al。、2006 p。 107",
+    "tagsJa": "他の"
   },
   {
     "id": 2,
@@ -132,7 +140,11 @@
     "reference": "Asano et al., 2006 p. 109",
     "referenceEs": "Asano et al., 2006 p. 109",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "一次排水",
+    "noteJa": "一次治療後に残っている成分。 一次治療はロータリードラム画面で構成され、その後にディスク画面が続きました",
+    "referenceJa": "Asano et al。、2006 p。 109",
+    "tagsJa": "他の"
   },
   {
     "id": 3,
@@ -177,7 +189,11 @@
     "reference": "Asano et al., 2006 p. 109",
     "referenceEs": "Asano et al., 2006 p. 109",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "二次排水 - 水hyacints",
+    "noteJa": "二次治療後に残っている成分。 二次治療は水のヒアシンスによるものでした",
+    "referenceJa": "Asano et al。、2006 p。 109",
+    "tagsJa": "他の"
   },
   {
     "id": 4,
@@ -222,7 +238,11 @@
     "reference": "Asano et al., 2006 p. 110",
     "referenceEs": "Asano et al., 2006 p. 110",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "二次排水-CAS",
+    "noteJa": "二次治療後に残っている成分。 二次治療は、従来の活性汚泥（CAS）でした。",
+    "referenceJa": "Asano et al。、2006 p。 110",
+    "tagsJa": "他の"
   },
   {
     "id": 5,
@@ -267,7 +287,11 @@
     "reference": "Asano et al., 2006 p. 110",
     "referenceEs": "Asano et al., 2006 p. 110",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "二次排水-CAS +ろ過",
+    "noteJa": "二次治療後に残っている成分。 二次治療は、ろ過を伴う従来の活性汚泥（CAS）でした",
+    "referenceJa": "Asano et al。、2006 p。 110",
+    "tagsJa": "他の"
   },
   {
     "id": 6,
@@ -312,7 +336,11 @@
     "reference": "Asano et al., 2006 p. 110",
     "referenceEs": "Asano et al., 2006 p. 110",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "二次排水活性化スラッジ + BNR",
+    "noteJa": "二次治療後に残っている成分。 二次治療は、窒素とリンの除去のために生物学的栄養素除去を伴うスラッジを活性化した",
+    "referenceJa": "Asano et al。、2006 p。 110",
+    "tagsJa": "他の"
   },
   {
     "id": 7,
@@ -357,7 +385,11 @@
     "reference": "Asano et al., 2006 p. 110",
     "referenceEs": "Asano et al., 2006 p. 110",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "二次排水活性化スラッジ + BR +ろ過",
+    "noteJa": "二次治療後に残っている成分。 二次治療は、生物学的栄養素除去（窒素とリンの除去のため）およびろ過を伴うスラッジを活性化した。",
+    "referenceJa": "Asano et al。、2006 p。 110",
+    "tagsJa": "他の"
   },
   {
     "id": 8,
@@ -402,7 +434,11 @@
     "reference": "Asano et al., 2006 p. 110",
     "referenceEs": "Asano et al., 2006 p. 110",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "二次排水 - 膜バイオリアクター",
+    "noteJa": "二次治療後に残っている成分。 二次治療は膜バイオリアクターでした",
+    "referenceJa": "Asano et al。、2006 p。 110",
+    "tagsJa": "他の"
   },
   {
     "id": 9,
@@ -447,7 +483,11 @@
     "reference": "Asano et al., 2006 p. 110",
     "referenceEs": "Asano et al., 2006 p. 110",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "二次排水 - 活性汚泥 + MF + RO",
+    "noteJa": "二次治療後に残っている成分。 二次治療は、微小ろ過と逆浸透を伴うスラッジを活性化しました。",
+    "referenceJa": "Asano et al。、2006 p。 110",
+    "tagsJa": "他の"
   },
   {
     "id": 10,
@@ -492,7 +532,11 @@
     "reference": "Asano et al., 2006 p. 109",
     "referenceEs": "Asano et al., 2006 p. 109",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "三次排水",
+    "noteJa": "三次治療後に残っている成分。 三次治療は、石灰の沈殿と深さろ過で構成されていました",
+    "referenceJa": "Asano et al。、2006 p。 109",
+    "tagsJa": "他の"
   },
   {
     "id": 11,
@@ -537,7 +581,11 @@
     "reference": "Asano et al., 2006 p. 109",
     "referenceEs": "Asano et al., 2006 p. 109",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "awt effluent",
+    "noteJa": "高度な廃水処理（AWT）後に残っている成分。",
+    "referenceJa": "Asano et al。、2006 p。 109",
+    "tagsJa": "他の"
   },
   {
     "id": 12,
@@ -547,12 +595,12 @@
     "turbidity": null,
     "tss": null,
     "bod": 713,
-    "cod": 2125.0,
+    "cod": 2125,
     "tn": null,
     "tp": null,
     "fc": null,
     "tc": null,
-    "tds": 5738.0,
+    "tds": 5738,
     "nitrate": 354,
     "toc": null,
     "virus": null,
@@ -582,7 +630,11 @@
     "reference": "Hussain et al. (2004)",
     "referenceEs": "Hussain et al. (2004)",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "テキスタイル産業インド",
+    "noteJa": "6つのインドのテキスタイル産業からの平均値と（範囲）",
+    "referenceJa": "Hussain et al。 （2004）",
+    "tagsJa": "他の"
   },
   {
     "id": 13,
@@ -592,12 +644,12 @@
     "turbidity": null,
     "tss": 400,
     "bod": 332,
-    "cod": 1891.0,
+    "cod": 1891,
     "tn": null,
     "tp": null,
     "fc": null,
     "tc": null,
-    "tds": 1181.0,
+    "tds": 1181,
     "nitrate": 4.4,
     "toc": null,
     "virus": null,
@@ -627,7 +679,11 @@
     "reference": "Yusuff & Sonibare (2004)",
     "referenceEs": "Yusuff & Sonibare (2004)",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "テキスタイル産業 - ナイジェリア",
+    "noteJa": "5つのナイジェリアの繊維工場からの平均値と（範囲）",
+    "referenceJa": "Yusuff＆Sonibare（2004）",
+    "tagsJa": "他の"
   },
   {
     "id": 14,
@@ -637,7 +693,7 @@
     "turbidity": 15,
     "tss": 250,
     "bod": 350,
-    "cod": 1500.0,
+    "cod": 1500,
     "tn": null,
     "tp": null,
     "fc": null,
@@ -672,7 +728,11 @@
     "reference": "Sarkar, et al. (2006)",
     "referenceEs": "Sarkar, et al. (2006)",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "酪農産業インド",
+    "noteJa": "インド、ハイデラバードのA.P.日記の生乳製品廃水の特徴",
+    "referenceJa": "Sarkar、et al。 （2006）",
+    "tagsJa": "他の"
   },
   {
     "id": 15,
@@ -682,7 +742,7 @@
     "turbidity": null,
     "tss": 500,
     "bod": 588,
-    "cod": 1000.0,
+    "cod": 1000,
     "tn": 830,
     "tp": 280,
     "fc": null,
@@ -717,7 +777,11 @@
     "reference": "Demirel, et al. (2005)",
     "referenceEs": "Demirel, et al. (2005)",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "乳業 - チーズ",
+    "noteJa": "3つのチーズ業界の例から報告されている範囲または平均値",
+    "referenceJa": "デミレル他 （2005）",
+    "tagsJa": "他の"
   },
   {
     "id": 16,
@@ -725,9 +789,9 @@
     "nameEs": "Industria láctea - Suero de queso",
     "category": 2,
     "turbidity": null,
-    "tss": 1780.0,
+    "tss": 1780,
     "bod": null,
-    "cod": 61000.0,
+    "cod": 61000,
     "tn": 980,
     "tp": 510,
     "fc": null,
@@ -762,7 +826,11 @@
     "reference": "Demirel, et al. (2005)",
     "referenceEs": "Demirel, et al. (2005)",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "酪農産業 - チーズホエイ",
+    "noteJa": "2つのチーズホエイ業界の例から報告されている範囲または平均値",
+    "referenceJa": "デミレル他 （2005）",
+    "tagsJa": "他の"
   },
   {
     "id": 17,
@@ -772,9 +840,9 @@
     "turbidity": null,
     "tss": 340,
     "bod": null,
-    "cod": 1150.0,
+    "cod": 1150,
     "tn": 14,
-    "tp": 25051.0,
+    "tp": 25051,
     "fc": null,
     "tc": null,
     "tds": null,
@@ -807,7 +875,11 @@
     "reference": "Demirel, et al. (2005)",
     "referenceEs": "Demirel, et al. (2005)",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "乳業 - 混合処理",
+    "noteJa": "混合乳業の例から報告されている範囲または平均値の例",
+    "referenceJa": "デミレル他 （2005）",
+    "tagsJa": "他の"
   },
   {
     "id": 18,
@@ -816,8 +888,8 @@
     "category": 3,
     "turbidity": null,
     "tss": 800,
-    "bod": 1600.0,
-    "cod": 5020.0,
+    "bod": 1600,
+    "cod": 5020,
     "tn": 11,
     "tp": 0.6,
     "fc": null,
@@ -852,7 +924,11 @@
     "reference": "Pokhrel & Viraraghavan (2004)",
     "referenceEs": "Pokhrel & Viraraghavan (2004)",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "製紙工場",
+    "noteJa": "製紙工場での廃水の典型的な特性",
+    "referenceJa": "Pokhrel＆Viraraghavan（2004）",
+    "tagsJa": "他の"
   },
   {
     "id": 19,
@@ -861,10 +937,10 @@
     "category": 4,
     "turbidity": null,
     "tss": 200,
-    "bod": 1200.0,
-    "cod": 2000.0,
+    "bod": 1200,
+    "cod": 2000,
     "tn": 25,
-    "tp": 18537.0,
+    "tp": 18537,
     "fc": null,
     "tc": null,
     "tds": null,
@@ -897,7 +973,11 @@
     "reference": "Brito, et al. (2007)",
     "referenceEs": "Brito, et al. (2007)",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "醸造所（ビール）、典型的な範囲",
+    "noteJa": "",
+    "referenceJa": "Brito、et al。 （2007）",
+    "tagsJa": "他の"
   },
   {
     "id": 20,
@@ -905,9 +985,9 @@
     "nameEs": "Bodega de vinos (Producción: 3000 m3/año)",
     "category": 4,
     "turbidity": null,
-    "tss": 1060.0,
-    "bod": 8100.0,
-    "cod": 14150.0,
+    "tss": 1060,
+    "bod": 8100,
+    "cod": 14150,
     "tn": 48.2,
     "tp": 5.5,
     "fc": null,
@@ -942,7 +1022,11 @@
     "reference": "Brito, et al. (2007)",
     "referenceEs": "Brito, et al. (2007)",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "ワイナリー（生産：3000m3/年）",
+    "noteJa": "1つのワイン生産産業の例",
+    "referenceJa": "Brito、et al。 （2007）",
+    "tagsJa": "他の"
   },
   {
     "id": 21,
@@ -950,9 +1034,9 @@
     "nameEs": "Bodega de vinos  (Producción: 6000 m3/año)",
     "category": 4,
     "turbidity": null,
-    "tss": 1960.0,
-    "bod": 5540.0,
-    "cod": 9240.0,
+    "tss": 1960,
+    "bod": 5540,
+    "cod": 9240,
     "tn": 74,
     "tp": 16,
     "fc": null,
@@ -987,7 +1071,11 @@
     "reference": "Brito, et al. (2007)",
     "referenceEs": "Brito, et al. (2007)",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "ワイナリー（生産：6000 m3/年）",
+    "noteJa": "1つのワイン生産産業の例",
+    "referenceJa": "Brito、et al。 （2007）",
+    "tagsJa": "他の"
   },
   {
     "id": 22,
@@ -1032,7 +1120,11 @@
     "reference": "Table 4.4, p.4-9",
     "referenceEs": "Tablas 4.4, p.4-9",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "EPA：都市の再利用 - 無制限",
+    "noteJa": "定義：パブリックアクセスが制限されていない地方自治体の設定では、摂取不能なアプリケーションでの再生水の使用。 治療：二次、ろ過、消毒",
+    "referenceJa": "表4.4、p.4-9",
+    "tagsJa": "他の"
   },
   {
     "id": 23,
@@ -1077,7 +1169,11 @@
     "reference": "Table 4.4, p.4-9",
     "referenceEs": "Tablas 4.4, p.4-9",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "EPA：都市の再利用制限",
+    "noteJa": "定義：物理的/制度的障壁によってパブリックアクセスが制限されている地方自治体の設定での無量用途での再生水の使用：二次、消毒",
+    "referenceJa": "表4.4、p.4-9",
+    "tagsJa": "他の"
   },
   {
     "id": 24,
@@ -1122,7 +1218,11 @@
     "reference": "Table 4.4, p.4-9",
     "referenceEs": "Tablas 4.4, p.4-9",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "EPA：農業再利用食品",
+    "noteJa": "定義：表面またはスプレーの食用作物の灌漑用の再生水の使用生の治療を食べる：二次、ろ過、消毒",
+    "referenceJa": "表4.4、p.4-9",
+    "tagsJa": "他の"
   },
   {
     "id": 25,
@@ -1167,7 +1267,11 @@
     "reference": "Table 4.4, p.4-9",
     "referenceEs": "Tablas 4.4, p.4-9",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "EPA：農業再利用処理された食用作物と非食品作物",
+    "noteJa": "定義：消費前に加工された食用作物や飼料、繊維などの非食料作物の表面またはスプレー灌漑のための再生水の使用。治療：二次、消毒",
+    "referenceJa": "表4.4、p.4-9",
+    "tagsJa": "他の"
   },
   {
     "id": 26,
@@ -1212,7 +1316,11 @@
     "reference": "Table 4.4, p.4-10",
     "referenceEs": "Tablas 4.4, p.4-10",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "EPA：貯水池のない",
+    "noteJa": "定義：身体接触治療に制限が課されない貯水池での再生水の使用：二次、ろ過、消毒",
+    "referenceJa": "表4.4、p.4-10",
+    "tagsJa": "他の"
   },
   {
     "id": 27,
@@ -1257,7 +1365,11 @@
     "reference": "Table 4.4, p.4-10",
     "referenceEs": "Tablas 4.4, p.4-10",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "EPA：貯水池が制限されています",
+    "noteJa": "定義：BOD接触が制限された治療である貯水池での再生水の使用：二次、消毒",
+    "referenceJa": "表4.4、p.4-10",
+    "tagsJa": "他の"
   },
   {
     "id": 28,
@@ -1302,7 +1414,11 @@
     "reference": "Table 4.4, p.4-10",
     "referenceEs": "Tablas 4.4, p.4-10",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "EPA：環境の再利用",
+    "noteJa": "定義：湿地の作成、天然の湿地の強化、または河川流量の維持処理：可変、二次、および消毒",
+    "referenceJa": "表4.4、p.4-10",
+    "tagsJa": "他の"
   },
   {
     "id": 29,
@@ -1347,7 +1463,11 @@
     "reference": "Table 4.4, p.4-10",
     "referenceEs": "Tablas 4.4, p.4-10",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "EPA：産業の再利用 -  1回の冷却",
+    "noteJa": "治療：二次",
+    "referenceJa": "表4.4、p.4-10",
+    "tagsJa": "他の"
   },
   {
     "id": 30,
@@ -1392,7 +1512,11 @@
     "reference": "Table 4.4, p.4-10",
     "referenceEs": "Tablas 4.4, p.4-10",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "EPA：産業の再利用 - 冷却塔の再循環",
+    "noteJa": "治療：二次、消毒",
+    "referenceJa": "表4.4、p.4-10",
+    "tagsJa": "他の"
   },
   {
     "id": 31,
@@ -1437,7 +1561,11 @@
     "reference": "Table 4.4, p.4-11",
     "referenceEs": "Tablas 4.4, p.4-11",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "EPA：地下水リチャージインデレクト飲料の再利用",
+    "noteJa": "定義：飲料帯水層に拡散するか、飲料帯水層への注入と地表水供給貯留層の増強による地下水充電処理：二次、ろ過、消毒、進行廃水処理または土壌帯水層処理",
+    "referenceJa": "表4.4、p.4-11",
+    "tagsJa": "他の"
   },
   {
     "id": 32,
@@ -1482,7 +1610,11 @@
     "reference": "Table 4.7, p.4-26",
     "referenceEs": "Tablas 4.7, p.4-26",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "テキサスEPA：都市の再利用 - 無制限",
+    "noteJa": "追加。 パラメーター：腸球菌：4 cfu/100ml（最大9 cfu/100ml）",
+    "referenceJa": "表4.7、p.4-26",
+    "tagsJa": "他の"
   },
   {
     "id": 33,
@@ -1527,7 +1659,11 @@
     "reference": "Table 4.8, p.4-27",
     "referenceEs": "Tablas 4.8, p.4-27",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "テキサスEPA：都市の再利用制限",
+    "noteJa": "BOD：池のない20 mg/L。 池を追加した30 mg/l。 パラメーター：腸球菌：35 CFU/100ml（最大89 CFU/100ml）",
+    "referenceJa": "表4.8、p.4-27",
+    "tagsJa": "他の"
   },
   {
     "id": 34,
@@ -1572,7 +1708,11 @@
     "reference": "Table 4.9, p.4-28",
     "referenceEs": "Tablas 4.9, p.4-28",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "テキサスEPA：農業再利用食品作物",
+    "noteJa": "追加。 パラメーター：腸球菌：4 cfu/100ml（最大9 cfu/100ml）",
+    "referenceJa": "表4.9、p.4-28",
+    "tagsJa": "他の"
   },
   {
     "id": 35,
@@ -1617,7 +1757,11 @@
     "reference": "Table 4.10, p.4-29",
     "referenceEs": "Tablas 4.10, p.4-29",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "テキサスEPA：農業の再利用処理された食用作物と非食品作物",
+    "noteJa": "BOD：池のない20 mg/L。 池を追加した30 mg/l。 パラメーター：腸球菌：35 CFU/100ml（最大89 CFU/100ml）",
+    "referenceJa": "表4.10、p.4-29",
+    "tagsJa": "他の"
   },
   {
     "id": 36,
@@ -1662,7 +1806,11 @@
     "reference": "Table 4.11, p.4-30",
     "referenceEs": "Tablas 4.11, p.4-30",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "テキサスEPA：貯水池にはありません",
+    "noteJa": "追加。 パラメーター：腸球菌：4 cfu/100ml（最大9 cfu/100ml）",
+    "referenceJa": "表4.11、p.4-30",
+    "tagsJa": "他の"
   },
   {
     "id": 37,
@@ -1707,7 +1855,11 @@
     "reference": "Table 4.12, p.4-31",
     "referenceEs": "Tablas 4.12, p.4-31",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "テキサスEPA：貯水池制限",
+    "noteJa": "BOD：池のない20 mg/L。 池を追加した30 mg/l。 パラメーター：腸球菌：35 CFU/100ml（最大89 CFU/100ml）",
+    "referenceJa": "表4.12、p.4-31",
+    "tagsJa": "他の"
   },
   {
     "id": 38,
@@ -1752,7 +1904,11 @@
     "reference": "Table 4.13, p.4-32",
     "referenceEs": "Tablas 4.13, p.4-32",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "テキサスEPA：環境の再利用",
+    "noteJa": "規制されていません",
+    "referenceJa": "表4.13、p.4-32",
+    "tagsJa": "他の"
   },
   {
     "id": 39,
@@ -1797,7 +1953,11 @@
     "reference": "Table 4.14, p.4-33",
     "referenceEs": "Tablas 4.14, p.4-33",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "テキサスEPA：産業の再利用 - 冷却塔の再循環",
+    "noteJa": "BOD：池のない20 mg/L。 池を追加した30 mg/l。 パラメーター：腸球菌：35 CFU/100ml（最大89 CFU/100ml）",
+    "referenceJa": "表4.14、p.4-33",
+    "tagsJa": "他の"
   },
   {
     "id": 40,
@@ -1842,7 +2002,11 @@
     "reference": "Table 4.16, p.4-35",
     "referenceEs": "Tablas 4.16, p.4-35",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "テキサスEPA：地下水充電誘導飲料の再利用",
+    "noteJa": "追加。 パラメーター：腸球菌：4 cfu/100ml（最大9 cfu/100ml）",
+    "referenceJa": "表4.16、p.4-35",
+    "tagsJa": "他の"
   },
   {
     "id": 41,
@@ -1887,7 +2051,11 @@
     "reference": "Table 4.7, p.4-26",
     "referenceEs": "Tablas 4.7, p.4-26",
     "tags": "california, usa",
-    "tagsEs": "california, usa"
+    "tagsEs": "california, usa",
+    "nameJa": "カリフォルニアEPA：都市の再利用 - 無制限",
+    "noteJa": "メディアフィルターの場合：2 NTU（Avg。）/ 10 NTU（Max。）膜フィルター用：0.2 NTU（Avg。）/ 0.5 NTU（最大）合計大腸菌：240/100 mL（最大）",
+    "referenceJa": "表4.7、p.4-26",
+    "tagsJa": "米国カリフォルニア"
   },
   {
     "id": 42,
@@ -1932,7 +2100,11 @@
     "reference": "Table 4.784, p.4-27",
     "referenceEs": "Tablas 4.784, p.4-27",
     "tags": "california, usa",
-    "tagsEs": "california, usa"
+    "tagsEs": "california, usa",
+    "nameJa": "カリフォルニアEPA：都市の再利用制限",
+    "noteJa": "合計大腸菌：240/100 ml（最大）",
+    "referenceJa": "表4.784、p.4-27",
+    "tagsJa": "米国カリフォルニア"
   },
   {
     "id": 43,
@@ -1977,7 +2149,11 @@
     "reference": "Table 4.9, p.4-28",
     "referenceEs": "Tablas 4.9, p.4-28",
     "tags": "california, usa",
-    "tagsEs": "california, usa"
+    "tagsEs": "california, usa",
+    "nameJa": "カリフォルニアEPA：農業再利用食品作物",
+    "noteJa": "メディアフィルターの場合：2 NTU（Avg。）/ 10 NTU（Max。）膜フィルター用：0.2 NTU（Avg。）/ 0.5 NTU（最大）合計大腸菌：240/100 mL（最大）",
+    "referenceJa": "表4.9、p.4-28",
+    "tagsJa": "米国カリフォルニア"
   },
   {
     "id": 44,
@@ -2022,7 +2198,11 @@
     "reference": "Table 4.10, p.4-29",
     "referenceEs": "Tablas 4.10, p.4-29",
     "tags": "california, usa",
-    "tagsEs": "california, usa"
+    "tagsEs": "california, usa",
+    "nameJa": "カリフォルニアEPA：農業の再利用処理された食用作物と非食品作物",
+    "noteJa": "総大腸菌は、カリフォルニアの基準では指定されていません。",
+    "referenceJa": "表4.10、p.4-29",
+    "tagsJa": "米国カリフォルニア"
   },
   {
     "id": 45,
@@ -2067,7 +2247,11 @@
     "reference": "Table 4.11, p.4-30",
     "referenceEs": "Tablas 4.11, p.4-30",
     "tags": "california, usa",
-    "tagsEs": "california, usa"
+    "tagsEs": "california, usa",
+    "nameJa": "California EPA：貯水池のない",
+    "noteJa": "メディアフィルターの場合：2 NTU（Avg。）/ 10 NTU（Max。）膜フィルター用：0.2 NTU（Avg。）/ 0.5 NTU（最大）合計大腸菌：240/100 mL（最大）補足病原体モニタリング",
+    "referenceJa": "表4.11、p.4-30",
+    "tagsJa": "米国カリフォルニア"
   },
   {
     "id": 46,
@@ -2112,7 +2296,11 @@
     "reference": "Table 4.12, p.4-31",
     "referenceEs": "Tablas 4.12, p.4-31",
     "tags": "california, usa",
-    "tagsEs": "california, usa"
+    "tagsEs": "california, usa",
+    "nameJa": "カリフォルニアEPA：貯水池制限",
+    "noteJa": "合計大腸菌：23/100 ml（30Dでこの値を超えるサンプルを超えていません）",
+    "referenceJa": "表4.12、p.4-31",
+    "tagsJa": "米国カリフォルニア"
   },
   {
     "id": 47,
@@ -2157,7 +2345,11 @@
     "reference": "Table 4.13, p.4-32",
     "referenceEs": "Tablas 4.13, p.4-32",
     "tags": "california, usa",
-    "tagsEs": "california, usa"
+    "tagsEs": "california, usa",
+    "nameJa": "カリフォルニアEPA：環境の再利用",
+    "noteJa": "規制されていません",
+    "referenceJa": "表4.13、p.4-32",
+    "tagsJa": "米国カリフォルニア"
   },
   {
     "id": 48,
@@ -2202,7 +2394,11 @@
     "reference": "Table 4.14, p.4-33",
     "referenceEs": "Tablas 4.14, p.4-33",
     "tags": "california, usa",
-    "tagsEs": "california, usa"
+    "tagsEs": "california, usa",
+    "nameJa": "カリフォルニアEPA：産業の再利用 -  1回スルー冷却",
+    "noteJa": "メディアフィルターの場合：2 NTU（Avg。）/ 10 NTU（Max。）膜フィルター用：0.2 NTU（Avg。）/ 0.5 NTU（最大）合計大腸菌：240/100 mL（最大）",
+    "referenceJa": "表4.14、p.4-33",
+    "tagsJa": "米国カリフォルニア"
   },
   {
     "id": 49,
@@ -2247,7 +2443,11 @@
     "reference": "Table 4.16, p.4-35",
     "referenceEs": "Tablas 4.16, p.4-35",
     "tags": "california, usa",
-    "tagsEs": "california, usa"
+    "tagsEs": "california, usa",
+    "nameJa": "カリフォルニアEPA：地下水リチャージ誘導飲料の再利用",
+    "noteJa": "メディアフィルターの場合：2 NTU（Avg。）/ 10 NTU（最大）膜フィルター用：0.2 NTU（Avg。）/ 0.5 NTU（最大）総大腸菌：240/ 100mL（最大）病原体モニタリングは必要ありません しかし、ウイルス除去率は治療要件によって規定されています",
+    "referenceJa": "表4.16、p.4-35",
+    "tagsJa": "米国カリフォルニア"
   },
   {
     "id": 50,
@@ -2260,7 +2460,7 @@
     "cod": null,
     "tn": null,
     "tp": null,
-    "fc": 1000.0,
+    "fc": 1000,
     "tc": null,
     "tds": null,
     "nitrate": null,
@@ -2292,7 +2492,11 @@
     "reference": "Vol.2, Chapter 4.2, p.63-67",
     "referenceEs": "Vol. 2, capítulo 4.2, p. 63-67",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "WHO：農業における廃水の使用",
+    "noteJa": "定義：CFU/100 mlのE.coliのすべての農作物の廃水基準の排水を伴う灌漑：根作物：103; 葉の作物：104; 点滴灌漑、高成長作物：105",
+    "referenceJa": "Vol.2、第4.2章、p.63-67",
+    "tagsJa": "他の"
   },
   {
     "id": 51,
@@ -2305,7 +2509,7 @@
     "cod": null,
     "tn": null,
     "tp": null,
-    "fc": 100000.0,
+    "fc": 100000,
     "tc": null,
     "tds": null,
     "nitrate": null,
@@ -2337,7 +2541,11 @@
     "reference": "Vol.2, Chapter 4.2, p.67-69",
     "referenceEs": "Vol. 2, capítulo 4.2, p. 67-69",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "WHO：農業制限された高機械化灌漑における廃水の使用",
+    "noteJa": "定義：未処理/生の作物を除くすべての農作物の廃水による灌漑（レタスのような）。 CFU/100 mlのE.coliの基準：労働集約型灌漑：104; 高機械化農業：105; 点滴灌漑、高成長作物：105",
+    "referenceJa": "Vol.2、第4.2章、p.67-69",
+    "tagsJa": "他の"
   },
   {
     "id": 52,
@@ -2350,7 +2558,7 @@
     "cod": null,
     "tn": null,
     "tp": null,
-    "fc": 1000.0,
+    "fc": 1000,
     "tc": null,
     "tds": null,
     "nitrate": null,
@@ -2382,7 +2590,11 @@
     "reference": "Vol.2, Chapter 4.2, p.67-69",
     "referenceEs": "Vol. 2, capítulo 4.2, p. 67-69",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "WHO：農業における廃水の使用 - 制限付き労働集中灌漑",
+    "noteJa": "定義：未処理/生の作物を除くすべての農業作物の灌漑（レタスのような）。 CFU/100 mlのE.coliの基準：労働集約型灌漑：104; 高機械化農業：105",
+    "referenceJa": "Vol.2、第4.2章、p.67-69",
+    "tagsJa": "他の"
   },
   {
     "id": 53,
@@ -2395,7 +2607,7 @@
     "cod": null,
     "tn": null,
     "tp": null,
-    "fc": 10000.0,
+    "fc": 10000,
     "tc": null,
     "tds": null,
     "nitrate": null,
@@ -2427,7 +2639,11 @@
     "reference": "Vol.3, Table 4.1, p.41",
     "referenceEs": "Vol.3, cuadro 4.1, p.41",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "WHO：水産養殖における廃水の使用",
+    "noteJa": "CFU/100 mlのE.coliの標準：消費者：105;労働者：104トレミトード卵は検出できません",
+    "referenceJa": "Vol.3、表4.1、p.41",
+    "tagsJa": "他の"
   },
   {
     "id": 54,
@@ -2440,7 +2656,7 @@
     "cod": null,
     "tn": null,
     "tp": null,
-    "fc": 1000.0,
+    "fc": 1000,
     "tc": null,
     "tds": null,
     "nitrate": null,
@@ -2472,7 +2688,11 @@
     "reference": "Vol.4. Table 4.2, p.63",
     "referenceEs": "Vol.4. Tabla 4.2, p.63",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "WHO：農業における灰色の水の使用",
+    "noteJa": "定義：すべての農業作物の灰色の灌漑CFU/100 mlのE.coliの基準：高成長作物または点滴灌漑：104",
+    "referenceJa": "Vol.4。 表4.2、p.63",
+    "tagsJa": "他の"
   },
   {
     "id": 55,
@@ -2485,7 +2705,7 @@
     "cod": null,
     "tn": null,
     "tp": null,
-    "fc": 100000.0,
+    "fc": 100000,
     "tc": null,
     "tds": null,
     "nitrate": null,
@@ -2517,7 +2737,11 @@
     "reference": "Vol.4. Table 4.2, p.63",
     "referenceEs": "Vol.4. Tabla 4.2, p.63",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "WHO：農業制限における灰色の水の使用",
+    "noteJa": "定義：未処理/生の作物を除くすべての農業作物の灰色の水による灌漑（レタスのような）。",
+    "referenceJa": "Vol.4。 表4.2、p.63",
+    "tagsJa": "他の"
   },
   {
     "id": 56,
@@ -2530,7 +2754,7 @@
     "cod": null,
     "tn": null,
     "tp": null,
-    "fc": 1000.0,
+    "fc": 1000,
     "tc": null,
     "tds": null,
     "nitrate": null,
@@ -2562,7 +2786,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "mediterranean, europe",
-    "tagsEs": "mediterráneo, europa"
+    "tagsEs": "mediterráneo, europa",
+    "nameJa": "廃水：カテゴリAは抑制されていない灌漑",
+    "noteJa": "定義：野菜とサラダの作物の廃水による灌漑は、未調理、スポーツフィールド、公園灌漑技術を食べる：露出したグループ：労働者、消費者、公共",
+    "referenceJa": "",
+    "tagsJa": "地中海、ヨーロッパ"
   },
   {
     "id": 57,
@@ -2575,7 +2803,7 @@
     "cod": null,
     "tn": null,
     "tp": null,
-    "fc": 1000.0,
+    "fc": 1000,
     "tc": null,
     "tds": null,
     "nitrate": null,
@@ -2607,7 +2835,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "mediterranean, europe",
-    "tagsEs": "mediterráneo, europa"
+    "tagsEs": "mediterráneo, europa",
+    "nameJa": "廃水：カテゴリB制限付き灌漑",
+    "noteJa": "定義：穀物作物、工業作物、飼料、飼料、牧草地、樹木の廃水による灌漑灌漑技術：スプレーまたはスプリンクラー（105 E.COLI CFU/ML）; 洪水または溝（103 E.COLI CFU/ML）暴露グループ：労働者、近くのコミュニティ",
+    "referenceJa": "",
+    "tagsJa": "地中海、ヨーロッパ"
   },
   {
     "id": 58,
@@ -2652,7 +2884,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "mediterranean, europe",
-    "tagsEs": "mediterráneo, europa"
+    "tagsEs": "mediterráneo, europa",
+    "nameJa": "廃水：カテゴリc",
+    "noteJa": "定義：労働者と一般の人々の暴露が発生しない場合、カテゴリBの作物の廃水による局所灌漑。 灌漑技術：トリクル、ドリップ、またはバブラー。 露出グループ：なし水質対策は満たす必要はありません",
+    "referenceJa": "",
+    "tagsJa": "地中海、ヨーロッパ"
   },
   {
     "id": 59,
@@ -2665,7 +2901,7 @@
     "cod": null,
     "tn": null,
     "tp": null,
-    "fc": 1000.0,
+    "fc": 1000,
     "tc": null,
     "tds": null,
     "nitrate": null,
@@ -2697,7 +2933,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "mediterranean, europe",
-    "tagsEs": "mediterráneo, europa"
+    "tagsEs": "mediterráneo, europa",
+    "nameJa": "グレイウォーター：カテゴリa",
+    "noteJa": "定義：装飾用の果樹と飼料作物のグレイウォーターによる灌漑",
+    "referenceJa": "",
+    "tagsJa": "地中海、ヨーロッパ"
   },
   {
     "id": 60,
@@ -2742,7 +2982,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "mediterranean, europe",
-    "tagsEs": "mediterráneo, europa"
+    "tagsEs": "mediterráneo, europa",
+    "nameJa": "グレイウォーター：カテゴリb",
+    "noteJa": "定義：野菜の緑色の灌漑は、調理されていない可能性があります。",
+    "referenceJa": "",
+    "tagsJa": "地中海、ヨーロッパ"
   },
   {
     "id": 61,
@@ -2787,7 +3031,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "mediterranean, europe",
-    "tagsEs": "mediterráneo, europa"
+    "tagsEs": "mediterráneo, europa",
+    "nameJa": "グレイウォーター：カテゴリc",
+    "noteJa": "定義：トイレフラッシングに使用されるグレイウォーター",
+    "referenceJa": "",
+    "tagsJa": "地中海、ヨーロッパ"
   },
   {
     "id": 62,
@@ -2800,9 +3048,9 @@
     "cod": 150,
     "tn": 70,
     "tp": null,
-    "fc": 1000.0,
+    "fc": 1000,
     "tc": null,
-    "tds": 1500.0,
+    "tds": 1500,
     "nitrate": 45,
     "toc": null,
     "virus": null,
@@ -2832,7 +3080,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "jordan, asia",
-    "tagsEs": "jordan, asia"
+    "tagsEs": "jordan, asia",
+    "nameJa": "ストリームへの放電",
+    "noteJa": "定義：小川、ワディ、貯水エリアへの廃水の排出E.coliカウント（FC）は、MPN/100mlで与えられています",
+    "referenceJa": "",
+    "tagsJa": "ヨルダン、アジア"
   },
   {
     "id": 63,
@@ -2847,7 +3099,7 @@
     "tp": null,
     "fc": 2.2,
     "tc": null,
-    "tds": 1500.0,
+    "tds": 1500,
     "nitrate": 30,
     "toc": null,
     "virus": null,
@@ -2877,7 +3129,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "jordan, asia",
-    "tagsEs": "jordan, asia"
+    "tagsEs": "jordan, asia",
+    "nameJa": "地下水充電",
+    "noteJa": "定義：地下水リチャージE.coliカウント（FC）に使用される廃水は、MPN/100mlで与えられています",
+    "referenceJa": "",
+    "tagsJa": "ヨルダン、アジア"
   },
   {
     "id": 64,
@@ -2922,7 +3178,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "jordan, asia",
-    "tagsEs": "jordan, asia"
+    "tagsEs": "jordan, asia",
+    "nameJa": "農業灌漑グループa",
+    "noteJa": "定義：調理済み野菜、駐車場、遊び場、都市内の道路の側面の廃水を備えた灌漑E.coliカウント（FC）は、MPN/100mlで与えられています",
+    "referenceJa": "",
+    "tagsJa": "ヨルダン、アジア"
   },
   {
     "id": 65,
@@ -2935,7 +3195,7 @@
     "cod": 500,
     "tn": 70,
     "tp": null,
-    "fc": 1000.0,
+    "fc": 1000,
     "tc": null,
     "tds": null,
     "nitrate": 45,
@@ -2967,7 +3227,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "jordan, asia",
-    "tagsEs": "jordan, asia"
+    "tagsEs": "jordan, asia",
+    "nameJa": "農業灌漑グループb",
+    "noteJa": "定義：豊富な木と緑地の廃水を伴う灌漑E.coliカウント（FC）はMPN/100mlで与えられています",
+    "referenceJa": "",
+    "tagsJa": "ヨルダン、アジア"
   },
   {
     "id": 66,
@@ -3012,7 +3276,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "jordan, asia",
-    "tagsEs": "jordan, asia"
+    "tagsEs": "jordan, asia",
+    "nameJa": "農業灌漑グループc",
+    "noteJa": "定義：畑作物、工業作物、林業のための廃水による灌漑",
+    "referenceJa": "",
+    "tagsJa": "ヨルダン、アジア"
   },
   {
     "id": 67,
@@ -3057,7 +3325,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "Aquarec：私的、都市灌漑カテゴリ1",
+    "noteJa": "特定の最終用途（微生物カテゴリによる）：I：住宅用使用II：入浴水III：都市の使用（景観エリアの灌漑、路上清掃、消防）および無制限の灌漑IV：工業作物と動物の飼料の灌漑、制限された灌漑 V：森林地帯と制限付きアクセスエリアの灌漑追加合計Kjeldahl n：15-20 mg/l",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 68,
@@ -3102,7 +3374,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "Aquarec：環境および養殖カテゴリー2",
+    "noteJa": "特定の最終用途（微生物カテゴリによる）：IV：アクセスを伴うレクリエーション用の貯水池、水域、小川（入浴を除く）V：アクセス付きレクリエーション用の貯水池、水域、小川（入浴を除く）VI：表面の水質、 制限付きアクセス付きレクリエーション用の水域と小川合計Kjeldahl n：10-20 mg/l",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 69,
@@ -3147,7 +3423,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "Aquarec：間接帯水層充電カテゴリ3",
+    "noteJa": "特定の最終用途（微生物カテゴリによる）：V：土壌を通る局所的な浸透による帯水層充電",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 70,
@@ -3192,7 +3472,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "Aquarec：産業冷却カテゴリ4",
+    "noteJa": "特定の最終用途（微生物カテゴリによる）：VII：食品業界を除く産業冷却総kjeldahl n：10 mg/l",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 71,
@@ -3237,7 +3521,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "brasil, america",
-    "tagsEs": "brasil, america"
+    "tagsEs": "brasil, america",
+    "nameJa": "ブラジャー - 淡水クラスi",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ブラジル、アメリカ"
   },
   {
     "id": 72,
@@ -3282,7 +3570,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "brasil, america",
-    "tagsEs": "brasil, america"
+    "tagsEs": "brasil, america",
+    "nameJa": "ブラジャー - 淡水クラスII",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ブラジル、アメリカ"
   },
   {
     "id": 73,
@@ -3327,7 +3619,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "brasil, america",
-    "tagsEs": "brasil, america"
+    "tagsEs": "brasil, america",
+    "nameJa": "ブラジャー - 淡水クラスIII",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ブラジル、アメリカ"
   },
   {
     "id": 74,
@@ -3372,7 +3668,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "brasil, america",
-    "tagsEs": "brasil, america"
+    "tagsEs": "brasil, america",
+    "nameJa": "ブラジャー - 水のクラス1を再利用します",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ブラジル、アメリカ"
   },
   {
     "id": 75,
@@ -3417,7 +3717,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "brasil, america",
-    "tagsEs": "brasil, america"
+    "tagsEs": "brasil, america",
+    "nameJa": "ブラジャー - 水のクラス2を再利用します",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ブラジル、アメリカ"
   },
   {
     "id": 76,
@@ -3462,7 +3766,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "brasil, america",
-    "tagsEs": "brasil, america"
+    "tagsEs": "brasil, america",
+    "nameJa": "ブラジャー - 水のクラス3を再利用します",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ブラジル、アメリカ"
   },
   {
     "id": 77,
@@ -3471,12 +3779,12 @@
     "category": 11,
     "turbidity": null,
     "tss": null,
-    "bod": 5000.0,
+    "bod": 5000,
     "cod": null,
     "tn": null,
     "tp": null,
     "fc": null,
-    "tc": 5000.0,
+    "tc": 5000,
     "tds": null,
     "nitrate": null,
     "toc": null,
@@ -3507,7 +3815,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "brasil, america",
-    "tagsEs": "brasil, america"
+    "tagsEs": "brasil, america",
+    "nameJa": "ブラジャー - 水のクラス4を再利用します",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ブラジル、アメリカ"
   },
   {
     "id": 78,
@@ -3552,7 +3864,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "chile, america",
-    "tagsEs": "chile, america"
+    "tagsEs": "chile, america",
+    "nameJa": "CHL-人間の消費のための飲料水",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "チリ、アメリカ"
   },
   {
     "id": 79,
@@ -3566,8 +3882,8 @@
     "tn": null,
     "tp": null,
     "fc": null,
-    "tc": 1000.0,
-    "tds": 5000.0,
+    "tc": 1000,
+    "tds": 5000,
     "nitrate": null,
     "toc": null,
     "virus": null,
@@ -3597,7 +3913,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "chile, america",
-    "tagsEs": "chile, america"
+    "tagsEs": "chile, america",
+    "nameJa": "CHL-農業灌漑用の水",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "チリ、アメリカ"
   },
   {
     "id": 80,
@@ -3642,7 +3962,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "chile, america",
-    "tagsEs": "chile, america"
+    "tagsEs": "chile, america",
+    "nameJa": "CHL-地表水または地下水の充電用の水",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "チリ、アメリカ"
   },
   {
     "id": 81,
@@ -3657,7 +3981,7 @@
     "tp": null,
     "fc": 0,
     "tc": null,
-    "tds": 1000.0,
+    "tds": 1000,
     "nitrate": null,
     "toc": null,
     "virus": null,
@@ -3687,7 +4011,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "argentina, america",
-    "tagsEs": "argentina, america"
+    "tagsEs": "argentina, america",
+    "nameJa": "Arg-人間の消費のための飲料水",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "アルゼンチン、アメリカ"
   },
   {
     "id": 82,
@@ -3732,7 +4060,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "argentina, america",
-    "tagsEs": "argentina, america"
+    "tagsEs": "argentina, america",
+    "nameJa": "Arg-農業灌漑用の水（非食品作物）",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "アルゼンチン、アメリカ"
   },
   {
     "id": 83,
@@ -3747,7 +4079,7 @@
     "tp": null,
     "fc": null,
     "tc": 2,
-    "tds": 1000.0,
+    "tds": 1000,
     "nitrate": 10,
     "toc": null,
     "virus": null,
@@ -3777,7 +4109,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "mexico, america",
-    "tagsEs": "mexico, america"
+    "tagsEs": "mexico, america",
+    "nameJa": "Mex-人間の消費のための飲料水",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "メキシコ、アメリカ"
   },
   {
     "id": 84,
@@ -3822,7 +4158,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "mexico, america",
-    "tagsEs": "mexico, america"
+    "tagsEs": "mexico, america",
+    "nameJa": "MEX-直接連絡した公共サービス用の水",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "メキシコ、アメリカ"
   },
   {
     "id": 85,
@@ -3835,7 +4175,7 @@
     "cod": null,
     "tn": null,
     "tp": null,
-    "fc": 1000.0,
+    "fc": 1000,
     "tc": null,
     "tds": null,
     "nitrate": null,
@@ -3867,7 +4207,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "mexico, america",
-    "tagsEs": "mexico, america"
+    "tagsEs": "mexico, america",
+    "nameJa": "MEX-直接接触せずに公共サービス用の水",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "メキシコ、アメリカ"
   },
   {
     "id": 86,
@@ -3912,7 +4256,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "PO -Class A-非常に低い",
+    "noteJa": "A =水質は非常に低いです。 水をいかなる目的でも排出されたり、排出されたりすることはできず、治療が必要です。",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 87,
@@ -3926,7 +4274,7 @@
     "tn": null,
     "tp": null,
     "fc": null,
-    "tc": 1000.0,
+    "tc": 1000,
     "tds": 30,
     "nitrate": 50,
     "toc": null,
@@ -3957,7 +4305,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "POSクラスB-低い",
+    "noteJa": "B =水質は低い。 どんな目的でも水を再利用することはできませんが、国家規制に従って排出することができます。",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 88,
@@ -4002,7 +4354,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "PO -Class C-中程度",
+    "noteJa": "C =水質は中程度です。 制限された農業（未調理されていない食用作物）および/または産業目的で水を再利用することができます。",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 89,
@@ -4047,7 +4403,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "POSクラスD-良い",
+    "noteJa": "D =水質は良いです。 農業やその他の産業や都市ネットワークでは、農業やその他の飲用不能な使用のために水を再利用することができます。",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 90,
@@ -4092,7 +4452,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "POS -Class E-優れています",
+    "noteJa": "E =水質は優れています。 飲料用の使用のために水を再利用できます。",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 91,
@@ -4137,7 +4501,11 @@
     "reference": "Yourself",
     "referenceEs": "propia",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "クラスA-非常に低い",
+    "noteJa": "A =水質は非常に低いです。 水をいかなる目的でも排出されたり、排出されたりすることはできず、治療が必要です。",
+    "referenceJa": "自分自身",
+    "tagsJa": "他の"
   },
   {
     "id": 92,
@@ -4182,7 +4550,11 @@
     "reference": "Yourself",
     "referenceEs": "propia",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "クラスB-低い",
+    "noteJa": "B =水質は低い。 どんな目的でも水を再利用することはできませんが、国家規制に従って排出することができます。",
+    "referenceJa": "自分自身",
+    "tagsJa": "他の"
   },
   {
     "id": 93,
@@ -4227,7 +4599,11 @@
     "reference": "Yourself",
     "referenceEs": "propia",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "クラスC-メディア",
+    "noteJa": "C =水質は中程度です。 制限された農業（未調理されていない食用作物）および/または産業目的で水を再利用することができます。",
+    "referenceJa": "自分自身",
+    "tagsJa": "他の"
   },
   {
     "id": 94,
@@ -4272,7 +4648,11 @@
     "reference": "Yourself",
     "referenceEs": "propia",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "クラスD-良い",
+    "noteJa": "D =水質は良いです。 農業やその他の産業や都市ネットワークでは、農業やその他の飲用不能な使用のために水を再利用することができます。",
+    "referenceJa": "自分自身",
+    "tagsJa": "他の"
   },
   {
     "id": 95,
@@ -4317,7 +4697,11 @@
     "reference": "Yourself",
     "referenceEs": "propia",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "クラスE-優れています",
+    "noteJa": "E =水質は優れています。 飲料用の使用のために水を再利用できます。",
+    "referenceJa": "自分自身",
+    "tagsJa": "他の"
   },
   {
     "id": 96,
@@ -4334,7 +4718,7 @@
     "tc": null,
     "tds": null,
     "nitrate": 5,
-    "toc": 3000.0,
+    "toc": 3000,
     "virus": null,
     "helminths": null,
     "an": null,
@@ -4362,7 +4746,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia",
-    "tagsEs": "vietnam, asia"
+    "tagsEs": "vietnam, asia",
+    "nameJa": "クラスA-飲料水機能を伴う排出",
+    "noteJa": "飲料水供給の関数を備えた水域への排出（クラスA）.QCVN 40：2011",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア"
   },
   {
     "id": 97,
@@ -4379,7 +4767,7 @@
     "tc": null,
     "tds": null,
     "nitrate": 10,
-    "toc": 5000.0,
+    "toc": 5000,
     "virus": null,
     "helminths": null,
     "an": null,
@@ -4407,7 +4795,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia",
-    "tagsEs": "vietnam, asia"
+    "tagsEs": "vietnam, asia",
+    "nameJa": "クラスB-飲料水機能なしで排出します",
+    "noteJa": "飲料水供給の機能なしに水域への排出（クラスB）QCVN 40：2011",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア"
   },
   {
     "id": 98,
@@ -4422,7 +4814,7 @@
     "tp": null,
     "fc": 200,
     "tc": null,
-    "tds": 2000.0,
+    "tds": 2000,
     "nitrate": null,
     "toc": null,
     "virus": null,
@@ -4452,7 +4844,11 @@
     "reference": "National technical regulation on water quality for irrigation (QCVN 39: 2011/BTNMT)",
     "referenceEs": "Reglamento técnico nacional sobre la calidad del agua de riego (QCVN 39: 2011/BTNMT)",
     "tags": "vietnam, asia",
-    "tagsEs": "vietnam, asia"
+    "tagsEs": "vietnam, asia",
+    "nameJa": "灌漑",
+    "noteJa": "灌漑用水質に関する国家技術規制（QCVN 39：2011/btnmt）",
+    "referenceJa": "灌漑用水質に関する国家技術規制（QCVN 39：2011/btnmt）",
+    "tagsJa": "ベトナム、アジア"
   },
   {
     "id": 99,
@@ -4497,7 +4893,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "典型的な未処理のMWWベトナム",
+    "noteJa": "（世界銀行2013年）および独自の推定に基づいて推定されます。",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 100,
@@ -4542,7 +4942,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "典型的な治療を受けたWWベトナム",
+    "noteJa": "（世界銀行2013年）および独自の推定に基づいて推定されます。",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 101,
@@ -4587,7 +4991,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "典型的なEIP排水 - 治療前",
+    "noteJa": "長い州の人々の司会者であるThuan Dao工業地帯。 2011年。ベトナムの環境に優しい産業公園のユーティリティ管理に関する準備調査。",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 102,
@@ -4632,7 +5040,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "典型的なEIP排水 - 治療後",
+    "noteJa": "長い州の人々の司会者であるThuan Dao工業地帯。 2011年。ベトナムの環境に優しい産業公園のユーティリティ管理に関する準備調査。",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 103,
@@ -4677,7 +5089,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "ハノイ、流入（最高品質）",
+    "noteJa": "（世界銀行2013）",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 104,
@@ -4722,7 +5138,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "ハノイ、排水（最高品質）",
+    "noteJa": "（世界銀行2013）",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 105,
@@ -4767,7 +5187,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "ホーチミン市、インフルエント（最高品質）",
+    "noteJa": "（世界銀行2013）",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 106,
@@ -4812,7 +5236,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "ホーチミン市、排水（最高品質）",
+    "noteJa": "（世界銀行2013）",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 107,
@@ -4857,7 +5285,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "ダナン、流入（最高品質）",
+    "noteJa": "（世界銀行2013）",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 108,
@@ -4902,7 +5334,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "ダナン、排水（最高品質）",
+    "noteJa": "（世界銀行2013）",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 109,
@@ -4947,7 +5383,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "Quang Ninh、インフルエント（最高品質）",
+    "noteJa": "（世界銀行2013）",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 110,
@@ -4992,7 +5432,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "Quang Ninh、排水（最高品質）",
+    "noteJa": "（世界銀行2013）",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 111,
@@ -5037,7 +5481,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "川",
+    "noteJa": "（Nguyen 2007）",
+    "referenceJa": "",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 112,
@@ -5082,7 +5530,11 @@
     "reference": "(World Bank 2013)",
     "referenceEs": "(Banco Mundial 2013)",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "ハノイ、インフルエント（最悪の品質）",
+    "noteJa": "",
+    "referenceJa": "（世界銀行2013）",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 113,
@@ -5127,7 +5579,11 @@
     "reference": "(World Bank 2013)",
     "referenceEs": "(Banco Mundial 2013)",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "ハノイ、排水（最悪の品質）",
+    "noteJa": "",
+    "referenceJa": "（世界銀行2013）",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 114,
@@ -5172,7 +5628,11 @@
     "reference": "(World Bank 2013)",
     "referenceEs": "(Banco Mundial 2013)",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "ホーチミン市、インフルエント（最悪の品質）",
+    "noteJa": "",
+    "referenceJa": "（世界銀行2013）",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 115,
@@ -5217,7 +5677,11 @@
     "reference": "(World Bank 2013)",
     "referenceEs": "(Banco Mundial 2013)",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "ホーチミン市、排水（最悪の品質）",
+    "noteJa": "",
+    "referenceJa": "（世界銀行2013）",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 116,
@@ -5262,7 +5726,11 @@
     "reference": "(World Bank 2013)",
     "referenceEs": "(Banco Mundial 2013)",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "ダナン、インフルエント（最悪の品質）",
+    "noteJa": "",
+    "referenceJa": "（世界銀行2013）",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 117,
@@ -5307,7 +5775,11 @@
     "reference": "(World Bank 2013)",
     "referenceEs": "(Banco Mundial 2013)",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "ダナン、排水（最悪の品質）",
+    "noteJa": "",
+    "referenceJa": "（世界銀行2013）",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 118,
@@ -5352,7 +5824,11 @@
     "reference": "(World Bank 2013)",
     "referenceEs": "(Banco Mundial 2013)",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "Quang Ninh、インフルエント（最悪の品質）",
+    "noteJa": "",
+    "referenceJa": "（世界銀行2013）",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 119,
@@ -5397,7 +5873,11 @@
     "reference": "(World Bank 2013)",
     "referenceEs": "(Banco Mundial 2013)",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "Quang Ninh、排水（最悪の品質）",
+    "noteJa": "",
+    "referenceJa": "（世界銀行2013）",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 120,
@@ -5442,7 +5922,11 @@
     "reference": "(Nguyen 2007)",
     "referenceEs": "(Nguyen 2007)",
     "tags": "vietnam, asia, wastewater",
-    "tagsEs": "vietnam, asia, aguas residuales"
+    "tagsEs": "vietnam, asia, aguas residuales",
+    "nameJa": "川",
+    "noteJa": "",
+    "referenceJa": "（Nguyen 2007）",
+    "tagsJa": "ベトナム、アジア、廃水"
   },
   {
     "id": 121,
@@ -5487,7 +5971,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "猫。 A：無制限の都市灌漑と生産作物の農業灌漑",
+    "noteJa": "猫。 A：非常に高品質の処理廃水",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 122,
@@ -5532,7 +6020,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "猫。 B：加工された食用作物の都市灌漑と農業灌漑制限",
+    "noteJa": "猫。 B：高品質の処理廃水",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 123,
@@ -5577,7 +6069,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "猫。 C：非食品作物の農業灌漑",
+    "noteJa": "猫。 C：高品質の扱いされた廃水",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 124,
@@ -5622,7 +6118,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "猫。 D：工業用作物と種まきの灌漑制限",
+    "noteJa": "猫。 D：中程度の処理廃水",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 125,
@@ -5667,7 +6167,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "猫。 E：工業用作物と種まきの灌漑制限",
+    "noteJa": "猫。 E：大量に扱われた廃水",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 126,
@@ -5712,7 +6216,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "morocco, africa",
-    "tagsEs": "marruecos, africa"
+    "tagsEs": "marruecos, africa",
+    "nameJa": "猫A：生で食べられる作物の灌漑",
+    "noteJa": "（S.E.E.E. 2007）灌漑用の水の品質基準、生で食べる作物（カテゴリーA）",
+    "referenceJa": "",
+    "tagsJa": "モロッコ、アフリカ"
   },
   {
     "id": 127,
@@ -5757,7 +6265,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "morocco, africa",
-    "tagsEs": "marruecos, africa"
+    "tagsEs": "marruecos, africa",
+    "nameJa": "CAT B＆C：他の作物の灌漑",
+    "noteJa": "（S.E.E.E. 2007）灌漑用の水の品質基準、その他の作物（カテゴリーB＆C）",
+    "referenceJa": "",
+    "tagsJa": "モロッコ、アフリカ"
   },
   {
     "id": 128,
@@ -5802,7 +6314,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "morocco, africa",
-    "tagsEs": "marruecos, africa"
+    "tagsEs": "marruecos, africa",
+    "nameJa": "優れた（地表水）",
+    "noteJa": "Med Pol Programの全国レポート：2005、2010、2012。、（欧州環境庁2014）",
+    "referenceJa": "",
+    "tagsJa": "モロッコ、アフリカ"
   },
   {
     "id": 129,
@@ -5847,7 +6363,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "morocco, africa",
-    "tagsEs": "marruecos, africa"
+    "tagsEs": "marruecos, africa",
+    "nameJa": "良い（地表水）",
+    "noteJa": "Med Pol Programの全国レポート：2005、2010、2012。、（欧州環境庁2014）",
+    "referenceJa": "",
+    "tagsJa": "モロッコ、アフリカ"
   },
   {
     "id": 130,
@@ -5892,7 +6412,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "morocco, africa",
-    "tagsEs": "marruecos, africa"
+    "tagsEs": "marruecos, africa",
+    "nameJa": "平均（地表水）",
+    "noteJa": "Med Pol Programの全国レポート：2005、2010、2012。、（欧州環境庁2014）",
+    "referenceJa": "",
+    "tagsJa": "モロッコ、アフリカ"
   },
   {
     "id": 131,
@@ -5937,7 +6461,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "morocco, africa",
-    "tagsEs": "marruecos, africa"
+    "tagsEs": "marruecos, africa",
+    "nameJa": "貧しい（地表水）",
+    "noteJa": "Med Pol Programの全国レポート：2005、2010、2012。、（欧州環境庁2014）",
+    "referenceJa": "",
+    "tagsJa": "モロッコ、アフリカ"
   },
   {
     "id": 132,
@@ -5982,7 +6510,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "morocco, africa",
-    "tagsEs": "marruecos, africa"
+    "tagsEs": "marruecos, africa",
+    "nameJa": "非常に貧しい（地表水）",
+    "noteJa": "Med Pol Programの全国レポート：2005、2010、2012。、（欧州環境庁2014）",
+    "referenceJa": "",
+    "tagsJa": "モロッコ、アフリカ"
   },
   {
     "id": 133,
@@ -6027,7 +6559,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "morocco, africa",
-    "tagsEs": "marruecos, africa"
+    "tagsEs": "marruecos, africa",
+    "nameJa": "優れた（地下水）",
+    "noteJa": "Med Pol Programの全国レポート：2005、2010、2012。、（欧州環境庁2014）",
+    "referenceJa": "",
+    "tagsJa": "モロッコ、アフリカ"
   },
   {
     "id": 134,
@@ -6072,7 +6608,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "morocco, africa",
-    "tagsEs": "marruecos, africa"
+    "tagsEs": "marruecos, africa",
+    "nameJa": "良い（groudwater）",
+    "noteJa": "Med Pol Programの全国レポート：2005、2010、2012。、（欧州環境庁2014）",
+    "referenceJa": "",
+    "tagsJa": "モロッコ、アフリカ"
   },
   {
     "id": 135,
@@ -6117,7 +6657,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "morocco, africa",
-    "tagsEs": "marruecos, africa"
+    "tagsEs": "marruecos, africa",
+    "nameJa": "平均（groudwater）",
+    "noteJa": "Med Pol Programの全国レポート：2005、2010、2012。、（欧州環境庁2014）",
+    "referenceJa": "",
+    "tagsJa": "モロッコ、アフリカ"
   },
   {
     "id": 136,
@@ -6162,7 +6706,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "morocco, africa",
-    "tagsEs": "marruecos, africa"
+    "tagsEs": "marruecos, africa",
+    "nameJa": "貧しい（groudwater）",
+    "noteJa": "Med Pol Programの全国レポート：2005、2010、2012。、（欧州環境庁2014）",
+    "referenceJa": "",
+    "tagsJa": "モロッコ、アフリカ"
   },
   {
     "id": 137,
@@ -6207,7 +6755,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "morocco, africa",
-    "tagsEs": "marruecos, africa"
+    "tagsEs": "marruecos, africa",
+    "nameJa": "非常に貧しい（地下水）",
+    "noteJa": "Med Pol Programの全国レポート：2005、2010、2012。、（欧州環境庁2014）",
+    "referenceJa": "",
+    "tagsJa": "モロッコ、アフリカ"
   },
   {
     "id": 138,
@@ -6252,7 +6804,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "NT 106.03標準：灌漑",
+    "noteJa": "（WHO 2006）灌漑のための廃水再利用のチュニジアの標準（1989）、NT 106–03 Standard。 この表に含まれていない他の多くの測定値があります",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 139,
@@ -6297,7 +6853,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "Norm 106.03改訂、CAT I：農業用",
+    "noteJa": "（2013年の食品および農業機関2013）農業目的で治療された廃水の使用。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 140,
@@ -6342,7 +6902,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "Norm 106.03改訂、CAT II：ゴルフプレイス、都会のパーク、グリーンゾーン",
+    "noteJa": "（2013年の食品および農業機関2013）都市部のゴルフコース、都市公園、緑地の灌漑。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 141,
@@ -6387,7 +6951,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "Norm 106.03改訂、CAT III：農業用の地下水の浸潤",
+    "noteJa": "（2013年の食品および農業機関2013）農業のみを目的とした地下水の浸潤による充電",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 142,
@@ -6432,7 +7000,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "海上パブリックドメイン（DPM）への排出",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。 海事パブリックドメイン（DPM）での拒否",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 143,
@@ -6477,7 +7049,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "油圧のパブリックドメイン（DPH）への排出",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。 油圧パブリックドメイン（DPH）での拒否",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 144,
@@ -6522,7 +7098,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "other",
-    "tagsEs": "otros"
+    "tagsEs": "otros",
+    "nameJa": "公共下水道システムドメイン（RPA）への退院",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。 パブリック衛生ネットワーク（RPA）での拒否",
+    "referenceJa": "",
+    "tagsJa": "他の"
   },
   {
     "id": 145,
@@ -6567,7 +7147,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "果物と野菜産業（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 146,
@@ -6612,7 +7196,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "果物と野菜産業（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 147,
@@ -6657,7 +7245,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "果物と野菜産業（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 148,
@@ -6702,7 +7294,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "牛乳および乳製品産業（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 149,
@@ -6747,7 +7343,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "牛乳および乳製品産業（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 150,
@@ -6792,7 +7392,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "牛乳および乳製品産業（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 151,
@@ -6837,7 +7441,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "肉と屠殺場産業（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 152,
@@ -6882,7 +7490,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "肉と屠殺場産業（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 153,
@@ -6927,7 +7539,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "肉と屠殺場産業（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 154,
@@ -6972,7 +7588,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "石油と脂肪産業（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 155,
@@ -7017,7 +7637,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "石油と脂肪産業（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 156,
@@ -7062,7 +7686,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "石油と脂肪産業（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 157,
@@ -7107,7 +7735,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "魚とシーフード産業（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 158,
@@ -7152,7 +7784,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "魚とシーフード産業（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 159,
@@ -7197,7 +7833,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "魚類およびシーフード産業（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 160,
@@ -7242,7 +7882,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "飲料業界（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 161,
@@ -7287,7 +7931,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "飲料業界（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 162,
@@ -7332,7 +7980,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "飲料業界（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 163,
@@ -7377,7 +8029,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "酵母産業（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 164,
@@ -7422,7 +8078,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "酵母産業（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 165,
@@ -7467,7 +8127,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "酵母産業（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 166,
@@ -7512,7 +8176,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "砂糖産業（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 167,
@@ -7557,7 +8225,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "砂糖産業（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 168,
@@ -7602,7 +8274,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "砂糖産業（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 169,
@@ -7647,7 +8323,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "機械的および冶金産業（鉄鋼、鋳造、非鉄金属）（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 170,
@@ -7692,7 +8372,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "機械的および冶金産業（鉄鋼、鋳造、非鉄金属）（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 171,
@@ -7737,7 +8421,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "機械的および冶金産業（鉄鋼、鋳造、非鉄金属）（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 172,
@@ -7782,7 +8470,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "電気、電子機器、家電産業（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 173,
@@ -7827,7 +8519,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "電気、電子機器、家電産業（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 174,
@@ -7872,7 +8568,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "電気、電子機器、家電産業（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 175,
@@ -7917,7 +8617,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "バッテリー産業（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 176,
@@ -7962,7 +8666,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "バッテリー産業（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 177,
@@ -8007,7 +8715,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "バッテリー産業（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 178,
@@ -8052,7 +8764,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "化学および製薬産業（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 179,
@@ -8097,7 +8813,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "化学および製薬産業（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 180,
@@ -8142,7 +8862,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "化学および製薬産業（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 181,
@@ -8187,7 +8911,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "テキスタイルおよび衣料品産業（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 182,
@@ -8232,7 +8960,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "テキスタイルおよび衣料品産業（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 183,
@@ -8277,7 +9009,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "テキスタイルおよび衣料品産業（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 184,
@@ -8322,7 +9058,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "革と靴産業（皮なめしやシャンティタウン）（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 185,
@@ -8367,7 +9107,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "革と履物の産業（皮なめしやシャンティタウン）（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 186,
@@ -8412,7 +9156,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "革と履物の産業（皮なめしやシャンティタウン）（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 187,
@@ -8457,7 +9205,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "パルプ、紙、段ボール産業（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 188,
@@ -8502,7 +9254,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "パルプ、紙、段ボール産業（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 189,
@@ -8547,7 +9303,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "パルプ、紙、段ボール産業（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 190,
@@ -8592,7 +9352,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "建築材料、陶器、ガラス産業（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 191,
@@ -8637,7 +9401,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "建築材料、陶器、ガラス産業（DPH）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 192,
@@ -8682,7 +9450,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "建築材料、陶器、ガラス産業（RPA）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 193,
@@ -8727,7 +9499,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "tunisia, africa",
-    "tagsEs": "tunez, africa"
+    "tagsEs": "tunez, africa",
+    "nameJa": "海水と汽水淡水化ユニット（DPM）",
+    "noteJa": "（市商務省および地方問題環境省2018）リストされた値は、利用可能なすべての測定値の選択です。",
+    "referenceJa": "",
+    "tagsJa": "チュニジア、アフリカ"
   },
   {
     "id": 194,
@@ -8772,7 +9548,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "egypt, africa",
-    "tagsEs": "egipto, africa"
+    "tagsEs": "egipto, africa",
+    "nameJa": "レベルA：都市部の景観灌漑",
+    "noteJa": "（Elbana etal。2014）農業用使用 /治療レベルAの治療済み廃水の基準（都市部の景観灌漑）",
+    "referenceJa": "",
+    "tagsJa": "エジプト、アフリカ"
   },
   {
     "id": 195,
@@ -8817,7 +9597,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "egypt, africa",
-    "tagsEs": "egipto, africa"
+    "tagsEs": "egipto, africa",
+    "nameJa": "レベルB：砂漠地域の農業目的",
+    "noteJa": "（Elbana etal。2014）農業用使用 /治療レベルB（砂漠地域の農業目的）の治療済み廃水の基準）",
+    "referenceJa": "",
+    "tagsJa": "エジプト、アフリカ"
   },
   {
     "id": 196,
@@ -8862,7 +9646,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "egypt, africa",
-    "tagsEs": "egipto, africa"
+    "tagsEs": "egipto, africa",
+    "nameJa": "レベルC：砂漠地域の農業目的",
+    "noteJa": "（Elbana etal。2014）農業用使用 /治療レベルC（砂漠地域の農業目的）の治療済み廃水の基準）",
+    "referenceJa": "",
+    "tagsJa": "エジプト、アフリカ"
   },
   {
     "id": 197,
@@ -8907,7 +9695,11 @@
     "reference": "(Abdel-Satar, Ali, and Goher 2017)",
     "referenceEs": "(Abdel-Satar, Ali, and Goher 2017)",
     "tags": "egypt, africa",
-    "tagsEs": "egipto, africa"
+    "tagsEs": "egipto, africa",
+    "nameJa": "エジプトの飲料水質基準（EWQ）",
+    "noteJa": "",
+    "referenceJa": "（Abdel-Stad、Ali、およびBeauty 2017）",
+    "tagsJa": "エジプト、アフリカ"
   },
   {
     "id": 198,
@@ -8952,7 +9744,11 @@
     "reference": "(El Bouraie et al. 2011) Egyptian Law for protection of the River Nile and water ways from pollution",
     "referenceEs": "Ley 48/1982: Protección del río Nilo y de las vías fluviales",
     "tags": "egypt, africa",
-    "tagsEs": "egipto, africa"
+    "tagsEs": "egipto, africa",
+    "nameJa": "法律48/1982：ナイル川と水道の保護",
+    "noteJa": "",
+    "referenceJa": "（El Bouraie etal。2011）ナイル川の保護と汚染からの水道の方法に関するエジプトの法律",
+    "tagsJa": "エジプト、アフリカ"
   },
   {
     "id": 199,
@@ -8997,7 +9793,11 @@
     "reference": "Regulation (EU) 2020/741",
     "referenceEs": "Regulation (EU) 2020/741",
     "tags": "europe",
-    "tagsEs": "europa"
+    "tagsEs": "europa",
+    "nameJa": "クラスA：すべての食用作物",
+    "noteJa": "すべての食用作物は、食用部品が再生水と根の作物と直接接触している場所で生で消費されました。",
+    "referenceJa": "規制（EU）2020/741",
+    "tagsJa": "ヨーロッパ"
   },
   {
     "id": 200,
@@ -9042,7 +9842,11 @@
     "reference": "Regulation (EU) 2020/741",
     "referenceEs": "Regulation (EU) 2020/741",
     "tags": "europe",
-    "tagsEs": "europa"
+    "tagsEs": "europa",
+    "nameJa": "クラスB：再生水、加工食物作物、非食品と直接接触していない食用作物",
+    "noteJa": "食用作物は生で消費され、食用部品が地上で生産され、再生水、加工された食用作物、牛乳や肉生産動物を養うために使用される作物を含む非食品作物と直接接触していない",
+    "referenceJa": "規制（EU）2020/741",
+    "tagsJa": "ヨーロッパ"
   },
   {
     "id": 201,
@@ -9087,7 +9891,11 @@
     "reference": "Regulation (EU) 2020/741",
     "referenceEs": "Regulation (EU) 2020/741",
     "tags": "europe",
-    "tagsEs": "europa"
+    "tagsEs": "europa",
+    "nameJa": "クラスC：再生水、加工食物作物、非食品と直接接触していない食用作物",
+    "noteJa": "食用作物は生で消費され、食用部品が地上で生産され、再生水、加工された食用作物、牛乳や肉生産動物を養うために使用される作物を含む非食品作物と直接接触していない",
+    "referenceJa": "規制（EU）2020/741",
+    "tagsJa": "ヨーロッパ"
   },
   {
     "id": 202,
@@ -9132,7 +9940,11 @@
     "reference": "Regulation (EU) 2020/741",
     "referenceEs": "Regulation (EU) 2020/741",
     "tags": "europe",
-    "tagsEs": "europa"
+    "tagsEs": "europa",
+    "nameJa": "クラスD：産業、エネルギー、播種作物",
+    "noteJa": "産業、エネルギー、種子の作物",
+    "referenceJa": "規制（EU）2020/741",
+    "tagsJa": "ヨーロッパ"
   },
   {
     "id": 203,
@@ -9177,7 +9989,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "未処理の廃水（重く汚染）",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 204,
@@ -9222,7 +10038,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "未処理の廃水（わずかに汚染）",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 205,
@@ -9267,7 +10087,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "未処理の廃水（通常、汚染）",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 206,
@@ -9312,7 +10136,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "wwtp effluent（品質が悪い）",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 207,
@@ -9357,7 +10185,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "wwtp effluent（良質）",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 208,
@@ -9402,7 +10234,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "wwtp effluent（平均品質）",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 209,
@@ -9447,7 +10283,11 @@
     "reference": "Peruvian Standard (D.S N°003-2010-MINAM)",
     "referenceEs": "Norma Peruana (D.S N°003-2010-MINAM)",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "国内または市の治療プラントの最大退院値",
+    "noteJa": "PH：6.5-8.5; 温度：<35°C",
+    "referenceJa": "ペルー標準（D.S n°003-2010-minam）",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 210,
@@ -9492,7 +10332,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "規制草案：野菜と果樹の灌漑",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 211,
@@ -9537,7 +10381,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "規制草案：森林灌漑",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 212,
@@ -9582,7 +10430,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "規制草案：緑地の灌漑と直接接触庭園",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 213,
@@ -9627,7 +10479,11 @@
     "reference": "",
     "referenceEs": "",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "規制草案：緑地と庭園の間接的な接触灌漑",
+    "noteJa": "",
+    "referenceJa": "",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 214,
@@ -9672,7 +10528,11 @@
     "reference": "National Environmental Regulations",
     "referenceEs": "Normativa Nacional Ambiental (Decreto Supremo N°010-2019-VIVIENDA)",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "革産業の下水システムへの最大排出値",
+    "noteJa": "PH：6-9を考慮してください。 堆積可能な固体：8.5 ml/l/h; 温度：<35°CおよびCr+6：0.5 mg/l",
+    "referenceJa": "国家環境規制",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 215,
@@ -9717,7 +10577,11 @@
     "reference": "Technical Guide on cleaner production and wastewater treatment in tanneries. Authors:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
     "referenceEs": "Guía Técnica de Producción limpia y tratamiento de aguas residuales en curtiembres. Autores:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "革産業の平均廃水",
+    "noteJa": "水の消費：塩辛い生の肌の45 m3/t; 生成された廃水：塩辛い生の肌の41 m3/t",
+    "referenceJa": "皮なめし工場のクリーナー生産と廃水処理に関する技術ガイド。 著者：D.Hengevoss、P.Eckert、D.Liviac。 2022。",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 216,
@@ -9762,7 +10626,11 @@
     "reference": "Technical Guide on cleaner production and wastewater treatment in tanneries. Authors:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
     "referenceEs": "Guía Técnica de Producción limpia y tratamiento de aguas residuales en curtiembres. Autores:D.Hengevoss,P.Eckert and D.Liviac. 2022.",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "革産業からの平均廃水は、その過程でベストプラクティスを備えています",
+    "noteJa": "水の消費：塩辛い生の肌の29.3 m3/t; 生成された廃水：27 m3/tの塩辛い生の肌",
+    "referenceJa": "皮なめし工場のクリーナー生産と廃水処理に関する技術ガイド。 著者：D.Hengevoss、P.Eckert、D.Liviac。 2022。",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 217,
@@ -9807,7 +10675,11 @@
     "reference": "National Environmental Regulations",
     "referenceEs": "Normativa Nacional Ambiental (Decreto Supremo N°010-2019-VIVIENDA)",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "繊維産業の下水システムへの最大排出値",
+    "noteJa": "PH：6-9を考慮してください。 堆積可能な固体：8.5 ml/l/hおよび温度：<35°C",
+    "referenceJa": "国家環境規制",
+    "tagsJa": "ペルー、アメリカ"
   },
   {
     "id": 218,
@@ -9837,7 +10709,7 @@
     "b": null,
     "cd": null,
     "cn": null,
-    "cu": 0.020,
+    "cu": 0.02,
     "cr+6": null,
     "mn": null,
     "hg": null,
@@ -9852,6 +10724,10 @@
     "reference": "Case study in Peru, 2022.",
     "referenceEs": "Caso de estudio en Peru, 2022.",
     "tags": "peru, america",
-    "tagsEs": "peru, america"
+    "tagsEs": "peru, america",
+    "nameJa": "テキスタイル産業の平均廃水",
+    "noteJa": "色（PT-CO）：500",
+    "referenceJa": "2022年のペルーのケーススタディ。",
+    "tagsJa": "ペルー、アメリカ"
   }
 ]

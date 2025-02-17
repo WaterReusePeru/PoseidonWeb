@@ -54,7 +54,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 1,
     "waste": 2,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "バー画面"
   },
   {
     "id": 1,
@@ -111,7 +112,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 1,
     "waste": 2,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "粗い画面"
   },
   {
     "id": 2,
@@ -168,7 +170,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 1,
     "waste": 2,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "グリットチャンバー"
   },
   {
     "id": 3,
@@ -225,7 +228,8 @@
     "land_requirements": 2,
     "cost_of_treatment": 1,
     "waste": 1,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "イコライゼーション盆地"
   },
   {
     "id": 4,
@@ -260,7 +264,7 @@
     "construction_cost_b": 0.5146,
     "construction_cost_c": 16.16125,
     "land_requirements_b": 0.947658,
-    "land_requirements_c": 5.17e-6,
+    "land_requirements_c": 0.00000517,
     "energy_requirements_b": 0.998126,
     "energy_requirements_c": 1.303594,
     "labor_requirements_b": 0,
@@ -282,7 +286,8 @@
     "land_requirements": 3,
     "cost_of_treatment": 1,
     "waste": 1,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "凝固剤なしの堆積"
   },
   {
     "id": 5,
@@ -317,7 +322,7 @@
     "construction_cost_b": 0.468,
     "construction_cost_c": 29.05172,
     "land_requirements_b": 1.018748,
-    "land_requirements_c": 1.42e-6,
+    "land_requirements_c": 0.00000142,
     "energy_requirements_b": 0.998126,
     "energy_requirements_c": 1.303594,
     "labor_requirements_b": 0.054688,
@@ -339,7 +344,8 @@
     "land_requirements": 2,
     "cost_of_treatment": 2,
     "waste": 2,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "凝固剤による沈降"
   },
   {
     "id": 6,
@@ -396,7 +402,8 @@
     "land_requirements": 3,
     "cost_of_treatment": 1,
     "waste": 1,
-    "useful_life": 15
+    "useful_life": 15,
+    "nameJa": "嫌気性安定化池"
   },
   {
     "id": 7,
@@ -453,7 +460,8 @@
     "land_requirements": 2,
     "cost_of_treatment": 2,
     "waste": 3,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "活性汚泥"
   },
   {
     "id": 8,
@@ -488,7 +496,7 @@
     "construction_cost_b": 0.7209,
     "construction_cost_c": 7.787028,
     "land_requirements_b": 0.987576,
-    "land_requirements_c": 3.05e-5,
+    "land_requirements_c": 0.0000305,
     "energy_requirements_b": 0.985572,
     "energy_requirements_c": 181.3654,
     "labor_requirements_b": 0.144917,
@@ -510,7 +518,8 @@
     "land_requirements": 2,
     "cost_of_treatment": 2,
     "waste": 3,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "de-n + secを備えた低負荷活性汚泥。 セディム。"
   },
   {
     "id": 9,
@@ -545,7 +554,7 @@
     "construction_cost_b": 0.7205,
     "construction_cost_c": 8.217256,
     "land_requirements_b": 1.003578,
-    "land_requirements_c": 3.21e-5,
+    "land_requirements_c": 0.0000321,
     "energy_requirements_b": 1.000008,
     "energy_requirements_c": 183.3218,
     "labor_requirements_b": 0.144917,
@@ -567,7 +576,8 @@
     "land_requirements": 2,
     "cost_of_treatment": 2,
     "waste": 3,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "低負荷の活性汚泥w de-n + sec。 セディム。"
   },
   {
     "id": 10,
@@ -602,7 +612,7 @@
     "construction_cost_b": 0.75104,
     "construction_cost_c": 4.859582,
     "land_requirements_b": 1.06568,
-    "land_requirements_c": 1.91e-5,
+    "land_requirements_c": 0.0000191,
     "energy_requirements_b": 0.999984,
     "energy_requirements_c": 91.67819,
     "labor_requirements_b": 0.190664,
@@ -624,7 +634,8 @@
     "land_requirements": 2,
     "cost_of_treatment": 2,
     "waste": 3,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "高負荷の活性汚泥 +秒。 セディム。"
   },
   {
     "id": 11,
@@ -659,7 +670,7 @@
     "construction_cost_b": 0.75104,
     "construction_cost_c": 4.859582,
     "land_requirements_b": 1.06568,
-    "land_requirements_c": 1.91e-5,
+    "land_requirements_c": 0.0000191,
     "energy_requirements_b": 0.999984,
     "energy_requirements_c": 91.67819,
     "labor_requirements_b": 0.190664,
@@ -681,7 +692,8 @@
     "land_requirements": 2,
     "cost_of_treatment": 2,
     "waste": 3,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "拡張曝気"
   },
   {
     "id": 12,
@@ -716,7 +728,7 @@
     "construction_cost_b": 0.7361,
     "construction_cost_c": 5.055175,
     "land_requirements_b": 0.98438,
-    "land_requirements_c": 1.38e-5,
+    "land_requirements_c": 0.0000138,
     "energy_requirements_b": 1,
     "energy_requirements_c": 55,
     "labor_requirements_b": 0.190664,
@@ -738,7 +750,8 @@
     "land_requirements": 3,
     "cost_of_treatment": 2,
     "waste": 3,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "二次堆積を伴うトリクリングフィルター"
   },
   {
     "id": 13,
@@ -773,7 +786,7 @@
     "construction_cost_b": 0.7135,
     "construction_cost_c": 4.56597,
     "land_requirements_b": 0.984624,
-    "land_requirements_c": 2.09e-6,
+    "land_requirements_c": 0.00000209,
     "energy_requirements_b": 1,
     "energy_requirements_c": 55,
     "labor_requirements_b": 0.19172,
@@ -795,7 +808,8 @@
     "land_requirements": 2,
     "cost_of_treatment": 1,
     "waste": 3,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "回転生物コンタクタ（RBC）"
   },
   {
     "id": 14,
@@ -830,7 +844,7 @@
     "construction_cost_b": 0.813302,
     "construction_cost_c": 1.108493,
     "land_requirements_b": 1.365297,
-    "land_requirements_c": 5.56e-5,
+    "land_requirements_c": 0.0000556,
     "energy_requirements_b": 0,
     "energy_requirements_c": 0,
     "labor_requirements_b": 0.416493,
@@ -852,7 +866,8 @@
     "land_requirements": 3,
     "cost_of_treatment": 1,
     "waste": 1,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "安定化池：好気性"
   },
   {
     "id": 15,
@@ -909,7 +924,8 @@
     "land_requirements": 3,
     "cost_of_treatment": 1,
     "waste": 1,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "安定化池：個人"
   },
   {
     "id": 16,
@@ -944,7 +960,7 @@
     "construction_cost_b": 0.75,
     "construction_cost_c": 8.193527,
     "land_requirements_b": 0.972166,
-    "land_requirements_c": 7.5e-6,
+    "land_requirements_c": 0.0000075,
     "energy_requirements_b": 1,
     "energy_requirements_c": 219,
     "labor_requirements_b": 0.715122,
@@ -966,7 +982,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 3,
     "waste": 2,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "膜バイオリアクター（MBR）"
   },
   {
     "id": 17,
@@ -1023,7 +1040,8 @@
     "land_requirements": 3,
     "cost_of_treatment": 2,
     "waste": 1,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "建設された湿地"
   },
   {
     "id": 18,
@@ -1058,7 +1076,7 @@
     "construction_cost_b": 0.522899,
     "construction_cost_c": 1.700555,
     "land_requirements_b": 0.964509,
-    "land_requirements_c": 4.92e-6,
+    "land_requirements_c": 0.00000492,
     "energy_requirements_b": 1.000815,
     "energy_requirements_c": 1.821608,
     "labor_requirements_b": 0,
@@ -1080,7 +1098,8 @@
     "land_requirements": 3,
     "cost_of_treatment": 2,
     "waste": 2,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "強化された生物リン除去（EBPR）"
   },
   {
     "id": 19,
@@ -1137,7 +1156,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 1,
     "waste": 2,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "p沈着"
   },
   {
     "id": 20,
@@ -1194,7 +1214,8 @@
     "land_requirements": 2,
     "cost_of_treatment": 2,
     "waste": 1,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "脱窒"
   },
   {
     "id": 21,
@@ -1251,7 +1272,8 @@
     "land_requirements": 2,
     "cost_of_treatment": 2,
     "waste": 1,
-    "useful_life": 20
+    "useful_life": 20,
+    "nameJa": "デュアルメディアフィルター"
   },
   {
     "id": 22,
@@ -1308,7 +1330,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 3,
     "waste": 1,
-    "useful_life": 20
+    "useful_life": 20,
+    "nameJa": "マイクロフィルトレーション"
   },
   {
     "id": 23,
@@ -1365,7 +1388,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 3,
     "waste": 1,
-    "useful_life": 20
+    "useful_life": 20,
+    "nameJa": "限外ろ過"
   },
   {
     "id": 24,
@@ -1422,7 +1446,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 3,
     "waste": 1,
-    "useful_life": 20
+    "useful_life": 20,
+    "nameJa": "ナノフィルトレーション"
   },
   {
     "id": 25,
@@ -1479,7 +1504,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 3,
     "waste": 0,
-    "useful_life": 20
+    "useful_life": 20,
+    "nameJa": "逆浸透"
   },
   {
     "id": 26,
@@ -1514,7 +1540,7 @@
     "construction_cost_b": 0.880302,
     "construction_cost_c": 1.520823,
     "land_requirements_b": 0.981242,
-    "land_requirements_c": 2.68e-6,
+    "land_requirements_c": 0.00000268,
     "energy_requirements_b": 1,
     "energy_requirements_c": 182.5,
     "labor_requirements_b": 0.342606,
@@ -1536,7 +1562,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 2,
     "waste": 1,
-    "useful_life": 20
+    "useful_life": 20,
+    "nameJa": "活性炭"
   },
   {
     "id": 27,
@@ -1571,7 +1598,7 @@
     "construction_cost_b": 0.999991,
     "construction_cost_c": 0.177783,
     "land_requirements_b": 1.000271,
-    "land_requirements_c": 7.27e-6,
+    "land_requirements_c": 0.00000727,
     "energy_requirements_b": 0.950291,
     "energy_requirements_c": 147.7337,
     "labor_requirements_b": 0.236782,
@@ -1593,7 +1620,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 2,
     "waste": 3,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "イオン交換"
   },
   {
     "id": 28,
@@ -1628,7 +1656,7 @@
     "construction_cost_b": 0.650751,
     "construction_cost_c": 1.541952,
     "land_requirements_b": 1.00844,
-    "land_requirements_c": 1.43e-6,
+    "land_requirements_c": 0.00000143,
     "energy_requirements_b": 0.888885,
     "energy_requirements_c": 1873.141,
     "labor_requirements_b": 0.264711,
@@ -1650,7 +1678,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 3,
     "waste": 1,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "高度な酸化プロセス"
   },
   {
     "id": 29,
@@ -1685,7 +1714,7 @@
     "construction_cost_b": 0.99993,
     "construction_cost_c": 0.024184,
     "land_requirements_b": 0.913122,
-    "land_requirements_c": 6.95e-6,
+    "land_requirements_c": 0.00000695,
     "energy_requirements_b": 1,
     "energy_requirements_c": 87.6,
     "labor_requirements_b": 0.054727,
@@ -1707,7 +1736,8 @@
     "land_requirements": 3,
     "cost_of_treatment": 1,
     "waste": 0,
-    "useful_life": 40
+    "useful_life": 40,
+    "nameJa": "土壌容量治療（SAT）"
   },
   {
     "id": 30,
@@ -1764,7 +1794,8 @@
     "land_requirements": 3,
     "cost_of_treatment": 1,
     "waste": 1,
-    "useful_life": 15
+    "useful_life": 15,
+    "nameJa": "成熟池"
   },
   {
     "id": 31,
@@ -1821,7 +1852,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 1,
     "waste": 1,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "凝集（国内廃水）"
   },
   {
     "id": 32,
@@ -1856,7 +1888,7 @@
     "construction_cost_b": 0.999991,
     "construction_cost_c": 0.177783,
     "land_requirements_b": 1.000271,
-    "land_requirements_c": 7.27e-6,
+    "land_requirements_c": 0.00000727,
     "energy_requirements_b": 1,
     "energy_requirements_c": 1058.5,
     "labor_requirements_b": 0.236782,
@@ -1878,7 +1910,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 3,
     "waste": 0,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "Electrodiallsis"
   },
   {
     "id": 33,
@@ -1913,7 +1946,7 @@
     "construction_cost_b": 0.732601,
     "construction_cost_c": 2.481176,
     "land_requirements_b": 0.495343,
-    "land_requirements_c": 6.56e-5,
+    "land_requirements_c": 0.0000656,
     "energy_requirements_b": 0.999974,
     "energy_requirements_c": 208.0859,
     "labor_requirements_b": 0.264711,
@@ -1935,7 +1968,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 3,
     "waste": 1,
-    "useful_life": 15
+    "useful_life": 15,
+    "nameJa": "オゾン化"
   },
   {
     "id": 34,
@@ -1992,7 +2026,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 3,
     "waste": 1,
-    "useful_life": 15
+    "useful_life": 15,
+    "nameJa": "塩素ガス"
   },
   {
     "id": 35,
@@ -2049,7 +2084,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 3,
     "waste": 1,
-    "useful_life": 15
+    "useful_life": 15,
+    "nameJa": "二酸化塩素"
   },
   {
     "id": 36,
@@ -2084,7 +2120,7 @@
     "construction_cost_b": 0.739904,
     "construction_cost_c": 1.946311,
     "land_requirements_b": 0.876243,
-    "land_requirements_c": 2.72e-5,
+    "land_requirements_c": 0.0000272,
     "energy_requirements_b": 1,
     "energy_requirements_c": 87.6,
     "labor_requirements_b": 0.303461,
@@ -2106,7 +2142,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 3,
     "waste": 1,
-    "useful_life": 15
+    "useful_life": 15,
+    "nameJa": "紫外線消毒"
   },
   {
     "id": 37,
@@ -2163,7 +2200,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 1,
     "waste": 2,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "粗くて細かいスクリーニングマシン（革廃水）"
   },
   {
     "id": 38,
@@ -2198,7 +2236,7 @@
     "construction_cost_b": 0.5146,
     "construction_cost_c": 16.16125,
     "land_requirements_b": 0.947658,
-    "land_requirements_c": 5.17e-6,
+    "land_requirements_c": 0.00000517,
     "energy_requirements_b": 0.998126,
     "energy_requirements_c": 1.303594,
     "labor_requirements_b": 0,
@@ -2220,7 +2258,8 @@
     "land_requirements": 3,
     "cost_of_treatment": 1,
     "waste": 1,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "グリーストラップ付きの主要な沈降タンク（革廃水）"
   },
   {
     "id": 39,
@@ -2255,7 +2294,7 @@
     "construction_cost_b": 0.468,
     "construction_cost_c": 29.05172,
     "land_requirements_b": 1.018748,
-    "land_requirements_c": 1.42e-6,
+    "land_requirements_c": 0.00000142,
     "energy_requirements_b": 0.998126,
     "energy_requirements_c": 1.303594,
     "labor_requirements_b": 0.054688,
@@ -2277,7 +2316,8 @@
     "land_requirements": 2,
     "cost_of_treatment": 2,
     "waste": 2,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "硫化物酸化タンク（革廃水）"
   },
   {
     "id": 40,
@@ -2334,7 +2374,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 1,
     "waste": 1,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "均質化、凝集、凝集、堆積（革廃水）"
   },
   {
     "id": 41,
@@ -2369,7 +2410,7 @@
     "construction_cost_b": 0.468,
     "construction_cost_c": 29.05172,
     "land_requirements_b": 1.018748,
-    "land_requirements_c": 1.42e-6,
+    "land_requirements_c": 0.00000142,
     "energy_requirements_b": 0.998126,
     "energy_requirements_c": 1.303594,
     "labor_requirements_b": 0.054688,
@@ -2391,7 +2432,8 @@
     "land_requirements": 2,
     "cost_of_treatment": 2,
     "waste": 2,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "クロム除去タンク（革廃水）"
   },
   {
     "id": 42,
@@ -2426,7 +2468,7 @@
     "construction_cost_b": 0.468,
     "construction_cost_c": 29.05172,
     "land_requirements_b": 1.018748,
-    "land_requirements_c": 1.42e-6,
+    "land_requirements_c": 0.00000142,
     "energy_requirements_b": 0.998126,
     "energy_requirements_c": 1.303594,
     "labor_requirements_b": 0.054688,
@@ -2448,7 +2490,8 @@
     "land_requirements": 2,
     "cost_of_treatment": 2,
     "waste": 2,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "硫酸塩除去タンク（革廃水）"
   },
   {
     "id": 43,
@@ -2505,7 +2548,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 1,
     "waste": 1,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "均質化、凝集、凝集、浮選（革廃水）"
   },
   {
     "id": 44,
@@ -2562,7 +2606,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 1,
     "waste": 2,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "細かいスクリーニングマシン（繊維廃水）"
   },
   {
     "id": 45,
@@ -2619,7 +2664,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 1,
     "waste": 1,
-    "useful_life": 30
+    "useful_life": 30,
+    "nameJa": "均質化、凝固、凝集（繊維廃水）"
   },
   {
     "id": 46,
@@ -2676,7 +2722,8 @@
     "land_requirements": 1,
     "cost_of_treatment": 3,
     "waste": 1,
-    "useful_life": 20
+    "useful_life": 20,
+    "nameJa": "限外ろ過（テキスタイル廃水）"
   },
   {
     "id": 47,
@@ -2733,6 +2780,7 @@
     "land_requirements": 1,
     "cost_of_treatment": 3,
     "waste": 1,
-    "useful_life": 20
+    "useful_life": 20,
+    "nameJa": "ナノフィルトレーション（テキスタイル廃水）"
   }
 ]
