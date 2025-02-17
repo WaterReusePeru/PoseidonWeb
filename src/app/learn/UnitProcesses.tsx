@@ -4,6 +4,7 @@ import Chip from '@mui/material/Chip'
 import Tooltip from '@mui/material/Tooltip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
+import { Language, getFieldKey, getLocalisedValue } from '../i18n/languageFunctions'
 import { evaluationCriteria, UnitProcess, unitProcesses, waterQualityFactors } from '../data/model'
 import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid'
 import { Typography } from '@mui/material'
@@ -35,9 +36,9 @@ export default function UnitProcesses() {
   const { t } = useTranslation()
 
   const data = unitProcesses
-  const lang = i18next.language
+  const lang = i18next.language as Language
 
-  var nameCol = lang === 'en' ? 'name' : 'nameEs'
+  var nameCol = getFieldKey('name', lang)
 
   const dataGridColumns: GridColDef[] = [
     {
@@ -66,7 +67,7 @@ export default function UnitProcesses() {
               return (
                 <Tooltip
                   key={index}
-                  title={lang === 'en' ? waterQualityFactors[index].nameLong : waterQualityFactors[index].nameLongEs}
+                  title={getLocalisedValue(waterQualityFactors[index], lang, 'nameLong')}
                 >
                   <Chip label={data[rowId][key]} key={index} size="small" />
                 </Tooltip>
@@ -107,7 +108,7 @@ export default function UnitProcesses() {
               return (
                 <Tooltip
                   key={index}
-                  title={lang === 'en' ? evaluationCriteria[index].nameLong : evaluationCriteria[index].nameLongEs}
+                  title={getLocalisedValue(evaluationCriteria[index], lang, 'nameLong')}
                 >
                   <Chip
                     label={value}

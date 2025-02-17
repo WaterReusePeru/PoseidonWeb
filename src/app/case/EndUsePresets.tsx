@@ -6,6 +6,7 @@ import Autocomplete from '@mui/material/Autocomplete'
 import { setEndUseQualityCategory, setEndUseQualityClass } from './caseSlice'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
+import { getLocalisedValue, Language } from '../i18n/languageFunctions'
 
 import { waterQualityCategories, waterQualities } from '../data/model'
 
@@ -15,7 +16,7 @@ export default function EndUse() {
   const dispatch = useAppDispatch()
 
   const { t } = useTranslation()
-  const lang = i18next.language
+  const lang = i18next.language as Language
 
   if (endUse.category === null) {
     dispatch(setEndUseQualityCategory(29))
@@ -31,7 +32,7 @@ export default function EndUse() {
           id="category"
           size="small"
           options={waterQualityCategories.filter((category) => category.input === false).sort(compare)}
-          getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : '')}
+          getOptionLabel={(option) => (option.name ? (getLocalisedValue(option, lang, 'name')) : '')}
           isOptionEqualToValue={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setEndUseQualityCategory(newValue.id))}
           disableClearable
@@ -48,7 +49,7 @@ export default function EndUse() {
           id="quality"
           size="small"
           options={waterQualities.filter((q) => q.category === endUse.category)}
-          getOptionLabel={(option) => (option.name! ? (lang === 'en' ? option.name : option.nameEs) : '')}
+          getOptionLabel={(option) => (option.name ? (getLocalisedValue(option, lang, 'name')) : '')}
           isOptionEqualToValue={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setEndUseQualityClass(newValue.id))}
           disableClearable
@@ -60,9 +61,7 @@ export default function EndUse() {
       <Grid item xs={1} style={{ textAlign: 'center' }}>
         {endUse.qualityClass !== undefined && waterQualities[endUse.qualityClass].note ? (
           <Tooltip
-            title={
-              lang === 'en' ? waterQualities[endUse.qualityClass].note : waterQualities[endUse.qualityClass].noteEs
-            }
+            title={getLocalisedValue(waterQualities[endUse.qualityClass], lang, 'note')}
           >
             <Chip label={'?'} key={waterQualities[endUse.qualityClass].id} size="small" style={{ margin: 2 }} />
           </Tooltip>

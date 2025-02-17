@@ -5,6 +5,8 @@ import MenuItem from '@mui/material/MenuItem'
 import TranslateIcon from '@mui/icons-material/Translate'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import i18next from 'i18next'
+import { Language } from './i18n/languageFunctions'
+import { useTranslation } from 'react-i18next'
 
 export default function SimpleMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null)
@@ -17,7 +19,9 @@ export default function SimpleMenu() {
     setAnchorEl(null)
   }
 
-  const handleChooseLanguage = (lang: 'en' | 'es') => {
+  const { t } = useTranslation()
+
+  const handleChooseLanguage = (lang: Language) => {
     i18next.changeLanguage(lang)
     handleClose()
   }
@@ -32,7 +36,7 @@ export default function SimpleMenu() {
         endIcon={<ExpandMoreIcon />}
         color="inherit"
       >
-        {i18next.language === 'en' ? 'English' : 'Español'}
+        {t('English')}
       </Button>
       <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
         <MenuItem value="en" onClick={() => handleChooseLanguage('en')}>
@@ -40,6 +44,9 @@ export default function SimpleMenu() {
         </MenuItem>
         <MenuItem value="es" onClick={() => handleChooseLanguage('es')}>
           Español
+        </MenuItem>
+        <MenuItem value="es" onClick={() => handleChooseLanguage('ja')}>
+          日本語
         </MenuItem>
       </Menu>
     </div>

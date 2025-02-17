@@ -7,17 +7,16 @@ import { waterQualityCategories, waterQualities } from '../data/model'
 import { setInputQualityCategory, setInputQualityClass } from './caseSlice'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
+import { getLocalisedValue, Language } from '../i18n/languageFunctions'
 
 export default function InputPresets() {
   const input = useAppSelector((state) => state.case.input)
   const dispatch = useAppDispatch()
 
   const { t } = useTranslation()
-  const lang = i18next.language
+  const lang = i18next.language as Language
 
   const waterQualityOptions = waterQualities.filter((q) => q.category === input.category)
-
-  console.log(input.qualityClass ? waterQualities[input.qualityClass] : null)
 
   return (
     <Grid item container spacing={3}>
@@ -29,7 +28,7 @@ export default function InputPresets() {
           id="category"
           size="small"
           options={waterQualityCategories.filter((category) => category.input).sort(compare)}
-          getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined!)}
+          getOptionLabel={(option) => (option.name ? (getLocalisedValue(option, lang, 'name')) : undefined!)}
           isOptionEqualToValue={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setInputQualityCategory(newValue.id))}
           disableClearable
@@ -47,7 +46,7 @@ export default function InputPresets() {
           size="small"
           options={waterQualityOptions}
           getOptionLabel={(option) =>
-            option ? (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined!) : ''
+            option ? (option.name ? (getLocalisedValue(option, lang, 'name')) : undefined!) : ''
           }
           isOptionEqualToValue={(option, value) => {
             if (option === 0 || value === 0) {
@@ -64,8 +63,7 @@ export default function InputPresets() {
       <Grid item xs={1} style={{ textAlign: 'center' }}>
         {input.qualityClass !== undefined && waterQualities[input.qualityClass].note ? (
           <Tooltip
-            title={lang === 'en' ? waterQualities[input.qualityClass].note : waterQualities[input.qualityClass].noteEs}
-          >
+            title={getLocalisedValue(waterQualities[input.qualityClass], lang, 'note')}>
             <Chip label={'?'} key={waterQualities[input.qualityClass].id} size="small" style={{ margin: 2 }} />
           </Tooltip>
         ) : null}

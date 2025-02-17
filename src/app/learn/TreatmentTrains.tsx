@@ -9,6 +9,7 @@ import Tooltip from '@mui/material/Tooltip'
 
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
+import { Language, getFieldKey, getLocalisedValue } from '../i18n/languageFunctions'
 
 import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid'
 import { Typography } from '@mui/material'
@@ -41,12 +42,12 @@ export default function TreatmentTrains() {
 
   const data = treatmentTrains
 
-  const lang = i18next.language
+  const lang = i18next.language as Language
 
-  var categoryCol = lang === 'en' ? 'category' : 'categoryEs'
-  var titleCol = lang === 'en' ? 'title' : 'titleEs'
-  var descriptionCol = lang === 'en' ? 'description' : 'descriptionEs'
-  var caseStudyCol = lang === 'en' ? 'case_study' : 'case_studyEs'
+  var categoryCol = getFieldKey('category', lang)
+  var titleCol = getFieldKey('title', lang)
+  var descriptionCol = getFieldKey('description', lang)
+  var caseStudyCol = getFieldKey('case_study', lang)
 
   const dataGridColumns: GridColDef[] = [
     {
@@ -57,7 +58,7 @@ export default function TreatmentTrains() {
     {
       field: categoryCol,
       headerName: t('Category'),
-      minWidth: 200,
+      minWidth: 250,
     },
     {
       field: titleCol,
@@ -109,7 +110,7 @@ export default function TreatmentTrains() {
           <div className={classes.chipContainer}>
             {UPList &&
               UPList.map((up, index) => (
-                <Tooltip key={index} title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
+                <Tooltip key={index} title={getLocalisedValue(unitProcesses[up], lang, 'name')}>
                   <Chip label={up} key={index} size="small" color="primary" className={classes.chip} />
                 </Tooltip>
               ))}

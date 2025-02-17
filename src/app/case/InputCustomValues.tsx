@@ -4,8 +4,10 @@ import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import { setCustomInputValues } from './caseSlice'
 import { useTranslation } from 'react-i18next'
+import { getLocalisedValue, Language } from '../i18n/languageFunctions'
 import { WaterQuality, waterQualityFactors } from '../data/model'
 import { useAppDispatch, useAppSelector } from '../hooks'
+import i18next from 'i18next'
 
 export default function InputCustomValues() {
   const dispatch = useAppDispatch()
@@ -13,6 +15,9 @@ export default function InputCustomValues() {
   const input = useAppSelector((state) => state.case.input)
 
   const { t } = useTranslation()
+
+  const lang = i18next.language as Language
+
 
   interface CustomInput {
     id: number
@@ -61,7 +66,7 @@ export default function InputCustomValues() {
           return (
             <Grid item container direction="row" xs={inputWidth} key={key} spacing={3}>
               <Grid item xs={3}>
-                <Typography>{f.nameShort}</Typography>
+                <Typography>{getLocalisedValue(f, lang, 'nameShort')}</Typography>
               </Grid>
               <Grid item xs={9}>
                 <TextField

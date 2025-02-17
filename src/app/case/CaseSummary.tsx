@@ -15,6 +15,7 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney'
 import ExitToAppIcon from '@mui/icons-material/ExitToApp'
 import AutorenewIcon from '@mui/icons-material/Autorenew'
 import BatteryFullIcon from '@mui/icons-material/BatteryFull'
+import { getLocalisedValue, Language } from '../i18n/languageFunctions'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -28,7 +29,7 @@ export const CaseSummary = (props: { step: any }) => {
   const caseState = useAppSelector((state) => state.case)
 
   const { t } = useTranslation()
-  const lang = i18next.language
+  const lang = i18next.language as Language
 
   const classes = useStyles()
 
@@ -43,9 +44,7 @@ export const CaseSummary = (props: { step: any }) => {
                   <PublicIcon fontSize="small" color="primary" />
 
                   <Typography variant="caption">
-                    {lang === 'en'
-                      ? communityInfo[caseState.commInfo.countryID].name
-                      : communityInfo[caseState.commInfo.countryID].nameEs}
+                    {getLocalisedValue(communityInfo[caseState.commInfo.countryID], lang, 'name')}
                   </Typography>
                   {caseState.commInfo.currency !== null ? (
                     <>
@@ -88,9 +87,7 @@ export const CaseSummary = (props: { step: any }) => {
               <Grid container alignItems="center" direction="row" spacing={0}>
                 <ExitToAppIcon fontSize="small" color="primary" />
                 <Typography variant="caption">
-                  {lang === 'en'
-                    ? waterQualities[caseState.input.qualityClass].name
-                    : waterQualities[caseState.input.qualityClass].nameEs}
+                  {getLocalisedValue(waterQualities[caseState.input.qualityClass], lang, 'name')}
                 </Typography>
                 <BatteryFullIcon fontSize="small" color="primary" />
                 <Typography variant="caption">
@@ -116,9 +113,7 @@ export const CaseSummary = (props: { step: any }) => {
               <Grid container alignItems="center" direction="row" spacing={0}>
                 <AutorenewIcon fontSize="small" color="primary" />
                 <Typography variant="caption">
-                  {lang === 'en'
-                    ? waterQualities[caseState.endUse.qualityClass].name
-                    : waterQualities[caseState.endUse.qualityClass].nameEs}
+                {getLocalisedValue(waterQualities[caseState.endUse.qualityClass], lang, 'name')}
                 </Typography>
               </Grid>
             ) : (

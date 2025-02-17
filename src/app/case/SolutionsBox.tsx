@@ -17,6 +17,7 @@ import CalculateSolutions from '../case/CalculateSolutions'
 import { setSolutionsortByRating } from '../case/caseSlice'
 
 import i18next from 'i18next'
+import { getLocalisedValue, Language } from '../i18n/languageFunctions'
 
 export default function SolutionsBox() {
   const caseState = useAppSelector((state) => state.case)
@@ -24,7 +25,7 @@ export default function SolutionsBox() {
   const dispatch = useAppDispatch()
 
   const { t } = useTranslation()
-  const lang = i18next.language
+  const lang = i18next.language as Language
 
   const commInfoState = caseState.commInfo
   const commInfo = communityInfo[caseState.commInfo.countryID!]
@@ -90,9 +91,7 @@ export default function SolutionsBox() {
                       </Grid>
                       <Grid item>
                         <Typography>
-                          {lang === 'en'
-                            ? treatmentTrains[solution.treatmentTrain!].category //TODO: !
-                            : treatmentTrains[solution.treatmentTrain!].categoryEs}{' '}
+                          {getLocalisedValue(treatmentTrains[solution.treatmentTrain!], lang, 'category')}
                           {/* TODO: ! */}
                         </Typography>
                       </Grid>
@@ -102,10 +101,8 @@ export default function SolutionsBox() {
                     </Grid>
                     <Grid item xs={6}>
                       <Typography variant="body2">
-                        {lang === 'en'
-                          ? treatmentTrains[solution.treatmentTrain!].title
-                          : treatmentTrains[solution.treatmentTrain!].titleEs}
-                      </Typography>{' '}
+                        {getLocalisedValue(treatmentTrains[solution.treatmentTrain!], lang, 'title')}
+                      </Typography>
                       {/* TODO: ! */}
                     </Grid>
                     <Grid item xs={6}>
@@ -149,7 +146,7 @@ export default function SolutionsBox() {
                         ) => (
                           <Tooltip
                             key={index}
-                            title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}
+                            title={getLocalisedValue(unitProcesses[up], lang, 'name')}
                           >
                             <Chip label={up} key={index} size="small" color="primary" style={{ margin: 2 }} />
                           </Tooltip>

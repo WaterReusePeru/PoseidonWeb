@@ -2,11 +2,15 @@ import { useAppSelector } from '../../hooks'
 
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
 import { useTranslation } from 'react-i18next'
+import { Language, getLocalisedValue } from '../../i18n/languageFunctions'
 
 import { communityInfos, treatmentTrains, waterQualities, WaterQuality, waterQualityFactors } from '../../data/model'
+import i18next from 'i18next'
 
 export const ResultsGraph = () => {
   const { t } = useTranslation()
+
+  const lang = i18next.language as Language
 
   const solutionsState = useAppSelector((state) => state.case.solutions)
   const commInfoState = useAppSelector((state) => state.case.commInfo)
@@ -31,7 +35,7 @@ export const ResultsGraph = () => {
       .map((key) => {
         const factor = waterQualityFactors.find((quality) => quality.name === key)
         return {
-          factor: factor?.nameShort,
+          factor: factor ? getLocalisedValue(factor, lang, 'nameShort') : '',
           value: solution.values[key],
           unit: factor?.unit,
           x:
@@ -42,7 +46,7 @@ export const ResultsGraph = () => {
         }
       })
     return {
-      id: treatmentTrains[solution.treatmentTrain!].category + ' - ' + treatmentTrains[solution.treatmentTrain!].title,
+      id: getLocalisedValue(treatmentTrains[solution.treatmentTrain!], lang, 'category') + ' - ' + getLocalisedValue(treatmentTrains[solution.treatmentTrain!], lang, 'title'),
       data: solutionData,
     }
   })
@@ -76,6 +80,7 @@ export const ResultsGraph = () => {
       }}
       colors={{ scheme: 'paired' }}
       tooltip={function ({ node }) {
+        console.log(node)
         return (
           <div
             style={{
@@ -88,28 +93,28 @@ export const ResultsGraph = () => {
               <tbody>
                 <tr>
                   <td>
-                    <b>Treatment Train:</b>
+                    <b>{t('Treatment Train')}:</b>
                   </td>
                   <td>
                     <b>{node.serieId}</b>
                   </td>
                 </tr>
                 <tr>
-                  <td>Factor:</td>
+                  <td>{t('Factor')}:</td>
                   <td>{node.data.factor}</td>
                 </tr>
                 <tr>
-                  <td>Output Value:</td>
+                  <td>{t('Output Value')}:</td>
                   <td>
                     {node.data.value.toPrecision(3)} {node.data.unit}
                   </td>
                 </tr>
                 <tr>
-                  <td>Min. Requirements Met:</td>
+                  <td>{t('Min. Requirements Met')}:</td>
                   <td>{node.formattedY} %</td>
                 </tr>
                 <tr>
-                  <td>Cost Per Cubic:</td>
+                  <td>{t('Cost per Cubic')}:</td>
                   <td>
                     {node.formattedX} {currency}
                   </td>

@@ -23,6 +23,7 @@ import InputPresets from './InputPresets'
 import InputCustomValues from './InputCustomValues'
 import { QualityFactor, waterQualityFactors } from '../data/model'
 import i18next from 'i18next'
+import { getLocalisedValue, Language } from '../i18n/languageFunctions'
 
 export default function Input() {
   const caseState = useAppSelector((state) => state.case)
@@ -31,7 +32,7 @@ export default function Input() {
   const dispatch = useAppDispatch()
 
   const { t } = useTranslation()
-  const lang = i18next.language
+  const lang = i18next.language as Language
 
   const handleSetCustomInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newState = event.target.value === 'true' ? true : false
@@ -51,9 +52,9 @@ export default function Input() {
     }
   }
 
-  const [qualityFactor, setQualityFactor] = React.useState<string[]>(caseState.qualityFactors)
+  const [qualityFactors, setQualityFactor] = React.useState<string[]>(caseState.qualityFactors)
 
-  const handleSetQualityFactors = (event: SelectChangeEvent<typeof qualityFactor>) => {
+  const handleSetQualityFactors = (event: SelectChangeEvent<typeof qualityFactors>) => {
     const isQualityFactor = (x: any): x is QualityFactor => event.target.value.includes(x)
 
     dispatch(
@@ -119,14 +120,23 @@ export default function Input() {
                 labelId="demo-multiple-checkbox-label"
                 id="demo-multiple-checkbox"
                 multiple
-                value={qualityFactor}
+                value={qualityFactors}
                 onChange={handleSetQualityFactors}
-                renderValue={(selected) => selected.join(', ')}
+                renderValue={(selected) =>
+                  selected
+                    .map((val: string) => {
+                      const factor = waterQualityFactors.find(
+                        (f) => getLocalisedValue(f, lang, 'nameShort') === val || f.name === val
+                      )
+                      return factor ? getLocalisedValue(factor, lang, 'nameShort') : val
+                    })
+                    .join(', ')
+                }                
               >
                 {waterQualityFactors.map((factor) => (
-                  <MenuItem key={factor.name} value={factor.name}>
-                    <Checkbox checked={caseState.qualityFactors.indexOf(factor.name) > -1} />
-                    <ListItemText primary={lang === 'en' ? factor.nameLong : factor.nameLongEs} />
+                  <MenuItem key={getLocalisedValue(factor, lang, 'nameShort')} value={getLocalisedValue(factor, lang, 'nameShort')}>
+                    <Checkbox checked={caseState.qualityFactors.indexOf(getLocalisedValue(factor, lang, 'nameShort')) > -1} />
+                    <ListItemText primary={getLocalisedValue(factor, lang, 'nameLong')} />
                   </MenuItem>
                 ))}
               </Select>

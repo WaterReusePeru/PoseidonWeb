@@ -9,13 +9,14 @@ import { setCountry, setCurrency } from '../case/caseSlice'
 import Chip from '@mui/material/Chip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
+import { Language, getLocalisedValue } from '../i18n/languageFunctions'
 
 export default function CommInfo() {
   const commInfo = useAppSelector((state) => state.case.commInfo)
   const dispatch = useAppDispatch()
 
   const { t } = useTranslation()
-  const lang = i18next.language
+  const lang = i18next.language as Language
 
   const usdObj = { id: 1000, currency: 'USD' }
 
@@ -39,7 +40,7 @@ export default function CommInfo() {
           id="country"
           size="small"
           options={communityInfos.filter(() => true).sort(compare)} //Nonsense filter because TS doesn't find manage .sort() otherwise
-          getOptionLabel={(option) => (option.name ? (lang === 'en' ? option.name : option.nameEs) : undefined!)}
+          getOptionLabel={(option) => (option.name ? (getLocalisedValue(option, lang, 'name')) : undefined!)}
           isOptionEqualToValue={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setCountry(newValue.id))}
           disableClearable

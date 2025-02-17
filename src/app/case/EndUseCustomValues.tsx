@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next'
 import { WaterQuality, waterQualityFactors } from '../data/model'
 import { useAppDispatch, useAppSelector } from '../hooks'
 import i18next from 'i18next'
+import { getLocalisedValue, Language } from '../i18n/languageFunctions'
 
 export default function EndUseCustomValues() {
   const dispatch = useAppDispatch()
@@ -14,8 +15,7 @@ export default function EndUseCustomValues() {
   const endUse = useAppSelector((state) => state.case.endUse)
 
   const { t } = useTranslation()
-  const lang = i18next.language
-
+  const lang = i18next.language as Language
   interface CustomEndUse {
     id: number
     name: string
@@ -66,7 +66,7 @@ export default function EndUseCustomValues() {
           return (
             <Grid item container direction="row" xs={inputWidth} key={key}>
               <Grid item xs={3}>
-                <Typography>{lang === 'en' ? f.nameShort : f.nameShortEs}</Typography>
+                <Typography>{getLocalisedValue(f, lang, 'name')}</Typography>
               </Grid>
               <Grid item xs={9}>
                 <TextField

@@ -20,8 +20,8 @@
     "nameLongEs": "Sólidos suspendidos totales",
     "unit": "mg/L",
     "maxValue": 2000,
-    "nameShortJa": "TSS",
-    "nameLongJa": "総懸濁固体"
+    "nameShortJa": "懸固",
+    "nameLongJa": "懸固"
   },
   {
     "id": 2,
@@ -32,8 +32,8 @@
     "nameLongEs": "Demanda biológica de oxígeno",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "BOD",
-    "nameLongJa": "生物学的酸素需要"
+    "nameShortJa": "生酸需",
+    "nameLongJa": "生酸需"
   },
   {
     "id": 3,
@@ -44,8 +44,8 @@
     "nameLongEs": "Demanda química de oxígeno",
     "unit": "mg/L",
     "maxValue": 100000,
-    "nameShortJa": "タラ",
-    "nameLongJa": "化学酸素需要"
+    "nameShortJa": "化酸需",
+    "nameLongJa": "化酸需"
   },
   {
     "id": 4,
@@ -56,7 +56,7 @@
     "nameLongEs": "Coliformes fecales",
     "unit": "CFU/100ml",
     "maxValue": 100000,
-    "nameShortJa": "FC",
+    "nameShortJa": "糞大腸菌",
     "nameLongJa": "糞便中の大腸菌"
   },
   {
@@ -68,7 +68,7 @@
     "nameLongEs": "Coliformes totales",
     "unit": "CFU/100ml",
     "maxValue": 1000000000,
-    "nameShortJa": "TC",
+    "nameShortJa": "総大腸菌",
     "nameLongJa": "総大腸菌"
   },
   {
@@ -80,7 +80,7 @@
     "nameLongEs": "Nitrogen totales",
     "unit": "mg/L",
     "maxValue": 1000,
-    "nameShortJa": "TN",
+    "nameShortJa": "総窒素",
     "nameLongJa": "総窒素"
   },
   {
@@ -92,7 +92,7 @@
     "nameLongEs": "Fósforo totales",
     "unit": "mg/L",
     "maxValue": 50000,
-    "nameShortJa": "TP",
+    "nameShortJa": "総リン",
     "nameLongJa": "総リン"
   },
   {
@@ -104,8 +104,8 @@
     "nameLongEs": "Sólidos disueltos totales",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "TDS",
-    "nameLongJa": "総溶存固体"
+    "nameShortJa": "溶存固体",
+    "nameLongJa": "溶存固体"
   },
   {
     "id": 9,
@@ -128,8 +128,8 @@
     "nameLongEs": "Carbono orgánico total",
     "unit": "mg/L",
     "maxValue": 1000,
-    "nameShortJa": "TOC",
-    "nameLongJa": "総有機炭素"
+    "nameShortJa": "有機炭素",
+    "nameLongJa": "有機炭素"
   },
   {
     "id": 11,
@@ -152,8 +152,8 @@
     "nameLongEs": "Nitrogen Ammoniacal (N-NH3)",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "NH3-N",
-    "nameLongJa": "アンモニア窒素（NH3-N）"
+    "nameShortJa": "アンモニア窒素",
+    "nameLongJa": "アンモニア窒素"
   },
   {
     "id": 13,
@@ -164,8 +164,8 @@
     "nameLongEs": "Grasa & Aceite",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "FO",
-    "nameLongJa": "脂肪とオイル"
+    "nameShortJa": "油脂",
+    "nameLongJa": "油脂"
   },
   {
     "id": 14,
@@ -212,7 +212,7 @@
     "nameLongEs": "Aluminio",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "アル",
+    "nameShortJa": "アルミニウム",
     "nameLongJa": "アルミニウム"
   },
   {
@@ -224,7 +224,7 @@
     "nameLongEs": "Boro",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "B",
+    "nameShortJa": "ボロン",
     "nameLongJa": "ボロン"
   },
   {
@@ -236,7 +236,7 @@
     "nameLongEs": "Cadmio",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "Cd",
+    "nameShortJa": "カドミウム",
     "nameLongJa": "カドミウム"
   },
   {
@@ -248,7 +248,7 @@
     "nameLongEs": "Cianuro",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "Cn",
+    "nameShortJa": "シアン化物",
     "nameLongJa": "シアン化物"
   },
   {
@@ -260,7 +260,7 @@
     "nameLongEs": "Cobre",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "Cu",
+    "nameShortJa": "銅",
     "nameLongJa": "銅"
   },
   {
@@ -272,8 +272,8 @@
     "nameLongEs": "Cromo Hexavalente",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "Cr+6",
-    "nameLongJa": "ヘキサバレントクロム"
+    "nameShortJa": "六価クロム",
+    "nameLongJa": "六価クロム"
   },
   {
     "id": 23,
@@ -284,7 +284,7 @@
     "nameLongEs": "Manganeso",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "Mn",
+    "nameShortJa": "マンガン",
     "nameLongJa": "マンガン"
   },
   {
@@ -296,7 +296,7 @@
     "nameLongEs": "Mercurio",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "Hg",
+    "nameShortJa": "水銀",
     "nameLongJa": "水銀"
   },
   {
@@ -308,7 +308,7 @@
     "nameLongEs": "Níquel",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "で",
+    "nameShortJa": "ニッケル",
     "nameLongJa": "ニッケル"
   },
   {
@@ -320,7 +320,7 @@
     "nameLongEs": "Plomo",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "Pb",
+    "nameShortJa": "鉛",
     "nameLongJa": "鉛"
   },
   {
@@ -332,7 +332,7 @@
     "nameLongEs": "Zinc",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "Zn",
+    "nameShortJa": "亜鉛",
     "nameLongJa": "亜鉛"
   },
   {
@@ -344,8 +344,8 @@
     "nameLongEs": "Potencial de Hidrógeno",
     "unit": "mg/L",
     "maxValue": 10000,
-    "nameShortJa": "Ph",
-    "nameLongJa": "水素の可能性"
+    "nameShortJa": "酸性度",
+    "nameLongJa": "酸性度"
   },
   {
     "id": 29,
@@ -356,8 +356,8 @@
     "nameLongEs": "sólidos sedimentables",
     "unit": "ml/L/h",
     "maxValue": 10000,
-    "nameShortJa": "SS",
-    "nameLongJa": "入植可能な固体"
+    "nameShortJa": "沈固",
+    "nameLongJa": "沈固"
   },
   {
     "id": 30,

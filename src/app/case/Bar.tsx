@@ -93,7 +93,7 @@ export const Bar = (props: { input?: any; output?: any; factor: string; average?
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: legend,
+          legend: props.factor,
           legendPosition: 'middle',
           legendOffset: 40,
         }}

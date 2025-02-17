@@ -4,6 +4,7 @@ import { Theme, StyledEngineProvider } from '@mui/material/styles'
 
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
+import { Language, getLocalisedValue } from '../../i18n/languageFunctions'
 
 import treatmentTrains from '../../data/treatmentTrains.json'
 import unitProcesses from '../../data/unitProcesses.json'
@@ -45,7 +46,7 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
 
   const { t } = useTranslation()
 
-  const lang = i18next.language
+  const lang = i18next.language as Language
 
   const solutionsState = useAppSelector((state) => state.case.solutions)
   const commInfoState = useAppSelector((state) => state.case.commInfo)
@@ -82,13 +83,7 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
       renderCell: (params: GridRenderCellParams) => {
         const rowId = params.id as number
 
-        return lang === 'en'
-          ? treatmentTrains[data[rowId].treatmentTrain!].category +
-              ' - ' +
-              treatmentTrains[data[rowId].treatmentTrain!].title
-          : treatmentTrains[data[rowId].treatmentTrain!].categoryEs +
-              ' - ' +
-              treatmentTrains[data[rowId].treatmentTrain!].titleEs
+        return getLocalisedValue(treatmentTrains[data[rowId].treatmentTrain!], lang, 'category')  + ' - ' + getLocalisedValue(treatmentTrains[data[rowId].treatmentTrain!], lang, 'title')
       },
     },
     {
@@ -102,7 +97,7 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
           <div className={classes.chipContainer}>
             {treatmentTrains[data[rowId].treatmentTrain!].unit_processes.map((up, index) => {
               return (
-                <Tooltip title={lang === 'en' ? unitProcesses[up].name : unitProcesses[up].nameEs}>
+                <Tooltip title={getLocalisedValue(unitProcesses[up], lang, 'name')}>
                   <Chip
                     label={up}
                     key={index}
@@ -130,7 +125,7 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
             {Object.entries(data[rowId].values).map(([key, value]: [string, number]) => {
               const quality = waterQualityFactors.find((wq) => wq.name === key)
               return (
-                <Tooltip title={quality ? (lang === 'en' ? quality.nameLong : quality.nameLongEs) + ' [' + quality.unit + ']': key}>
+                <Tooltip title={quality ? (getLocalisedValue(quality, lang, 'name')) + ' [' + quality.unit + ']': key}>
                   <Chip
                     label={Number(value.toPrecision(2))}
                     key={key}

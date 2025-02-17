@@ -4,6 +4,8 @@ import { useAppSelector } from '../hooks'
 import { useTranslation } from 'react-i18next'
 import { Bar } from './Bar'
 import { useTheme } from '@mui/material/styles'
+import i18next from 'i18next'
+import { getLocalisedValue, Language } from '../i18n/languageFunctions'
 
 import { waterQualities, WaterQuality, waterQualityFactors } from '../data/model'
 
@@ -11,6 +13,8 @@ export default function QualityCompare() {
   const caseState = useAppSelector((state) => state.case)
   const input = useAppSelector((state) => state.case.input)
   const endUse = useAppSelector((state) => state.case.endUse)
+
+  const lang = i18next.language as Language
 
   const theme = useTheme()
 
@@ -30,7 +34,7 @@ export default function QualityCompare() {
                   return (
                     <div key={index} style={{ width: barWidth }}>
                       <Bar
-                        factor={f.name}
+                        factor={getLocalisedValue(f, lang, 'nameShort')}
                         unit={f.unit}
                         input={
                           input.customValues === undefined
@@ -54,7 +58,7 @@ export default function QualityCompare() {
                   return (
                     <div key={index} style={{ width: barWidth }}>
                       <Bar
-                        factor={f.name}
+                        factor={getLocalisedValue(f, lang, 'nameShort')}
                         unit={f.unit}
                         input={
                           input.customValues === undefined
@@ -91,7 +95,7 @@ export default function QualityCompare() {
                 return (
                   <div key={index} style={{ width: barWidth }}>
                     <Bar
-                      factor={f.name}
+                      factor={getLocalisedValue(f, lang, 'nameShort')}
                       unit={f.unit}
                       input={
                         input.qualityClass === undefined
@@ -115,7 +119,7 @@ export default function QualityCompare() {
                 return (
                   <div key={index} style={{ width: barWidth }}>
                     <Bar
-                      factor={f.name}
+                      factor={getLocalisedValue(f, lang, 'nameShort')}
                       unit={f.unit}
                       input={
                         input.qualityClass === undefined

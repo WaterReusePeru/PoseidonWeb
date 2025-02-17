@@ -11,6 +11,7 @@ import Tooltip from '@mui/material/Tooltip'
 
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
+import { Language, getFieldKey, getLocalisedValue } from '../i18n/languageFunctions'
 
 import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid'
 import { Typography } from '@mui/material'
@@ -42,14 +43,14 @@ export default function WaterQualities() {
   const { t } = useTranslation()
 
   const data = waterQualities
-  const qualities = waterQualityCategories
+  const categories = waterQualityCategories
 
-  const lang = i18next.language
+  const lang = i18next.language as Language
 
-  var nameCol = lang === 'en' ? 'name' : 'nameEs'
-  var noteCol = lang === 'en' ? 'note' : 'noteEs'
-  var referenceCol = lang === 'en' ? 'reference' : 'referenceEs'
-  var tagsCol = lang === 'en' ? 'tags' : 'tagsEs'
+  var nameCol = getFieldKey('name', lang)
+  var noteCol = getFieldKey('note', lang)
+  var referenceCol = getFieldKey('reference', lang)
+  var tagsCol = getFieldKey('tags', lang)
 
   const dataGridColumns: GridColDef[] = [
     {
@@ -62,7 +63,7 @@ export default function WaterQualities() {
       headerName: t('Category'),
       minWidth: 150,
       valueGetter: (value: number) => {
-        return lang === 'en' ? qualities[value].name : qualities[value].nameEs
+        return getLocalisedValue(categories[value], lang, 'name')
       },
     },
     {
@@ -96,11 +97,7 @@ export default function WaterQualities() {
               return (
                 <Tooltip
                   key={index}
-                  title={
-                    lang === 'en'
-                      ? waterQualityFactors[index].nameLong + ' [' + waterQualityFactors[index].unit + ']'
-                      : waterQualityFactors[index].nameLongEs + ' [' + waterQualityFactors[index].unit + ']'
-                  }
+                  title={getLocalisedValue(waterQualityFactors[index], lang, 'nameLong') + ' [' + waterQualityFactors[index].unit + ']'}
                 >
                   <Chip label={data[rowId][key] !== null ? data[rowId][key] : '-'} key={index} size="small" />
                 </Tooltip>
@@ -151,7 +148,7 @@ export default function WaterQualities() {
       headerName: t('Type'),
       minWidth: 150,
       renderCell: (params: any) => {
-        if (qualities[data[params.id].category].input) {
+        if (categories[data[params.id].category].input) {
           return t('Wastewater')
         } else {
           return t('Quality Standard')
