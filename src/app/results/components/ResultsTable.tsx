@@ -125,14 +125,12 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
             {Object.entries(data[rowId].values).map(([key, value]: [string, number]) => {
               const quality = waterQualityFactors.find((wq) => wq.name === key)
               return (
-                <Tooltip title={quality ? (getLocalisedValue(quality, lang, 'name')) + ' [' + quality.unit + ']': key}>
+                <Tooltip title={quality ? (getLocalisedValue(quality, lang, 'nameShort')) + ' [' + quality.unit + ']': key}>
                   <Chip
                     label={Number(value.toPrecision(2))}
                     key={key}
                     size="small"
-                    //color="primary"
                     style={{ margin: 2 }}
-                    //className={classes.chip}
                   />
                 </Tooltip>
               )
