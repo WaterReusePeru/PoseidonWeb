@@ -108,6 +108,7 @@ export const resources = {
       'Min. Requirements Met': 'Requisitos mínimos cumplidos',
       'Output Value': 'Valor de salida',
       'Cost per Cubic': 'Costo por metro cúbico',
+      'Regression Coefficients': 'Coeficientes de regresión',
     },
   },
   ja: {
@@ -213,6 +214,7 @@ export const resources = {
       'Min. Requirements Met': '最小要件を満たしています',
       'Output Value': '出力値',
       'Cost per Cubic': '立方メートルあたりのコスト',
+      'Regression Coefficients': '回帰係数',
     }
   }
 }
