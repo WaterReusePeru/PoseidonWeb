@@ -190,7 +190,7 @@ export const resources = {
       'Annualized Land Cost': '年間の土地費用',
       'Annualized Energy Cost': '年間エネルギーコスト',
       'Annualized Labor Cost': '年間人件費',
-      'Annualized Other O&M Cost': '年間のその他の運営管理費',
+      'Annualized Other O&M Cost': 'その他の年間運営費および保守費',
       'Energy Requirements': 'エネルギー要件',
       'Labor Requirements': '労働要件',
       'Annualized OPEX': '運用コスト年率',

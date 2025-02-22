@@ -5,7 +5,7 @@ import Tooltip from '@mui/material/Tooltip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 import { Language, getFieldKey, getLocalisedValue } from '../i18n/languageFunctions'
-import { evaluationCriteria, UnitProcess, unitProcesses, waterQualityFactors } from '../data/model'
+import { evaluationCriteria, UnitProcess, unitProcesses, waterQualityFactors, costComponents } from '../data/model'
 import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid'
 import { Typography } from '@mui/material'
 
@@ -55,7 +55,7 @@ export default function UnitProcesses() {
       field: 'pre',
       headerName: t('Average Pollutant Removal Efficiencies [% removal]'),
       minWidth: 300,
-      flex: 2,
+      flex: 1.5,
       renderCell: (params: GridRenderCellParams) => {
         const rowId = params.id as number
 
@@ -71,6 +71,40 @@ export default function UnitProcesses() {
                 >
                   <Chip label={data[rowId][key]} key={index} size="small" />
                 </Tooltip>
+              )
+            })}
+          </div>
+        )
+      },
+    },
+    {
+      field: 'coefficients',
+      headerName: t('Regression Coefficients'),
+      minWidth: 300,
+      flex: 1.5,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return (
+          <div className={classes.chipContainer}>
+            {costComponents.map((c, index) => {
+              const bKey = (c.name + '_b') as keyof UnitProcess
+              const cKey = (c.name + '_c') as keyof UnitProcess
+              console.log(data[rowId])
+
+              return (
+                <>
+                  <Tooltip
+                    title={getLocalisedValue(costComponents[index], lang, 'nameLong') + ' (B)'}
+                  >
+                    <Chip label={typeof data[rowId][bKey] === 'number' ? Number(data[rowId][bKey].toPrecision(3)) : data[rowId][bKey]} size="small" />
+                  </Tooltip>
+                  <Tooltip
+                    title={getLocalisedValue(costComponents[index], lang, 'nameLong') + ' (C)'}
+                  >
+                    <Chip label={typeof data[rowId][cKey] === 'number' ? Number(data[rowId][cKey].toPrecision(3)) : data[rowId][cKey]} size="small" />
+                  </Tooltip>
+                </>
               )
             })}
           </div>

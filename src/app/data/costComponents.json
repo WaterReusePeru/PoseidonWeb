@@ -1,0 +1,32 @@
+[
+    {
+        "name": "construction_cost",
+        "nameLong": "Construction Cost",
+        "nameLongEs": "Costo de construcción",
+        "nameLongJa": "建設費"
+    },
+    {
+        "name": "land_requirements",
+        "nameLong": "Land Requirements",
+        "nameLongEs": "Requisitos de tierra",
+        "nameLongJa": "土地要件"
+    },
+    {
+        "name": "energy_requirements",
+        "nameLong": "Energy Requirements",
+        "nameLongEs": "Requisitos de energía",
+        "nameLongJa": "エネルギー要件"
+    },
+    {
+        "name": "labor_requirements",
+        "nameLong": "Labor Requirements",
+        "nameLongEs": "Requisitos de mano de obra",
+        "nameLongJa": "労働要件"
+    },
+    {
+        "name": "other_om",
+        "nameLong": "Other O&M",
+        "nameLongEs": "Otro O&M",
+        "nameLongJa": "その他の運用および保守コスト"
+    }
+]

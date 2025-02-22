@@ -5,6 +5,7 @@ import unitProcessesJSON from './unitProcesses.json'
 import treatmentTrainsJSON from './treatmentTrains.json'
 import communityInfosJSON from './communityInfo.json'
 import evaluationCriteriaJSON from './evaluationCriteria.json'
+import costComponentsJSON from './costComponents.json'
 
 export interface CommunityInfo {
   id: number
@@ -164,6 +165,16 @@ export interface EvaluationCriterion {
 export const evaluationCriteria: ReadonlyArray<EvaluationCriterion> =
   evaluationCriteriaJSON as ReadonlyArray<EvaluationCriterion>
 
+export interface CostComponent {
+  name: string
+  nameLong: string
+  nameLongEs: string
+  nameLongJa: string
+}
+
+export const costComponents: ReadonlyArray<CostComponent> =
+  costComponentsJSON as ReadonlyArray<CostComponent>
+
 export interface OutputQuality {
   id: number
   treatmentTrain: number
@@ -193,5 +204,3 @@ export interface OutputQuality {
 type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (k: infer I) => void ? I : never
 
 export type QualityFactor = UnionToIntersection<typeof waterQualityFactorsJSON[number]['name']>
-
-//export type QualityFactor = 'turbidity' | 'tss' | 'bod' | 'cod' | 'fc' | 'tc'
