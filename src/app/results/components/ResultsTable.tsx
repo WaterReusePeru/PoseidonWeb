@@ -150,6 +150,63 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
       },
     },
     {
+      field: 'costPerCubic',
+      headerName: t('Cost per Cubic'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return commInfoState.currency === 0 ? (
+          <>{data[rowId].costPerCubic!.toLocaleString('de-CH')} $</>
+        ) : (
+          <>
+            {(communityInfos[commInfoState.countryID].exchangeToUSD * data[rowId].costPerCubic!).toPrecision(3)}{' '}
+            {communityInfos[commInfoState.countryID].currency}
+          </>
+        )
+      },
+    },
+    {
+      field: 'capex',
+      headerName: t('Total capital expenditure (CAPEX)'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return showCost(data[rowId].capex!)
+      },
+    },
+    {
+      field: 'annualizedOpex',
+      headerName: t('Annualized OPEX'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return showCost(data[rowId].annualizedOpex!)
+      },
+    },
+    {
+      field: 'annualizedCapex',
+      headerName: t('Annualized CAPEX'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return showCost(data[rowId].annualizedCapex!)
+      },
+    },
+    {
+      field: 'annualizedCost',
+      headerName: t('Annualized Total Cost'),
+      minWidth: 150,
+      renderCell: (params: GridRenderCellParams) => {
+        const rowId = params.id as number
+
+        return showCost(data[rowId].annualizedCapex! + data[rowId].annualizedOpex!)
+      },
+    },
+    {
       field: 'landRequirements',
       headerName: t('Land Requirements'),
       minWidth: 150,
@@ -217,63 +274,6 @@ export const ResultsTable = (/* {solutionsState, commInfoState}: ResultsTablePro
         const rowId = params.id as number
 
         return showCost(data[rowId].annualizedOMCost!)
-      },
-    },
-    {
-      field: 'annualizedOpex',
-      headerName: t('Annualized OPEX'),
-      minWidth: 150,
-      renderCell: (params: GridRenderCellParams) => {
-        const rowId = params.id as number
-
-        return showCost(data[rowId].annualizedOpex!)
-      },
-    },
-    {
-      field: 'capex',
-      headerName: t('Total capital expenditure (CAPEX)'),
-      minWidth: 150,
-      renderCell: (params: GridRenderCellParams) => {
-        const rowId = params.id as number
-
-        return showCost(data[rowId].capex!)
-      },
-    },
-    {
-      field: 'annualizedCapex',
-      headerName: t('Annualized CAPEX'),
-      minWidth: 150,
-      renderCell: (params: GridRenderCellParams) => {
-        const rowId = params.id as number
-
-        return showCost(data[rowId].annualizedCapex!)
-      },
-    },
-    {
-      field: 'annualizedCost',
-      headerName: t('Annualized Total Cost'),
-      minWidth: 150,
-      renderCell: (params: GridRenderCellParams) => {
-        const rowId = params.id as number
-
-        return showCost(data[rowId].annualizedCapex! + data[rowId].annualizedOpex!)
-      },
-    },
-    {
-      field: 'costPerCubic',
-      headerName: t('Cost per Cubic'),
-      minWidth: 150,
-      renderCell: (params: GridRenderCellParams) => {
-        const rowId = params.id as number
-
-        return commInfoState.currency === 0 ? (
-          <>{data[rowId].costPerCubic!.toLocaleString('de-CH')} $</>
-        ) : (
-          <>
-            {(communityInfos[commInfoState.countryID].exchangeToUSD * data[rowId].costPerCubic!).toPrecision(3)}{' '}
-            {communityInfos[commInfoState.countryID].currency}
-          </>
-        )
       },
     },
   ]
