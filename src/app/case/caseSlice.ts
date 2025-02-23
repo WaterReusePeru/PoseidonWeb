@@ -204,8 +204,12 @@ export const caseSlice = createSlice({
         state.solutions[index].annualizedOpex = treatment.annualizedOpex
         state.solutions[index].costPerCubic = treatment.costPerCubic
 
+        if (treatment.treatmentTrain === 60) {
+          console.log(`Assigning values for treatment train ${treatment.treatmentTrain}:`, treatment)
+        }
+
         waterQualityFactors.forEach((f) => {
-          if (treatment[f.name]) {
+          if (treatment[f.name] !== undefined) {
             state.solutions[index].values[f.name] = treatment[f.name]
           }
         })
