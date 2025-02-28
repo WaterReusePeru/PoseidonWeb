@@ -1516,5 +1516,23 @@
     "categoryJa": "産業廃水処理",
     "descriptionJa": "この治療列車は、（短期間と高効率で）価値を達成することを可能にする洗練されたテクニックをまとめて、その過程で繊維産業から処理された廃水を再利用します。",
     "case_studyJa": "プリンシパル：Patrik Eckert（2022）および記事によるラボテスト：1。TextilesIndustry（2023）の最良の手法（BAT）参照文書。 著者：Roth、J.、Zerger、B.、De Geeter、D.、GómezBenavides、J。and Roudier、S。2。 著者：アーメド・カラム、エマド・S・バホーム、カレド・ザハー。 3.最小面積フットプリント（2022）を使用した繊維染料バス排出物の治療と再利用のための物理的および高度な酸化プロセスの統合。 著者：Rameesha Tanveer、Abdullah Yasar、Abdul-Sattar Nizami、Amtul Bari Tabinda。 4。繊維工業用廃水処理の最近の技術：レビュー（2022）; 著者：Dipti Christian、Aakanksharaje Gaekwad、Hetvi Dani、Shabiimam M.A.、Anurag Kandya。"
+  },
+   {
+    "id": 67,
+    "title": "WOTA BOX a portable water reuse plant",
+    "titleEs": "WOTA BOX, una planta portátil de reutilización de agua",
+    "category": "Hand and shower water reused",
+    "categoryEs": "Tratamiento de agua residual industrial",
+    "description": "WOTA BOX is a portable water reuse plant that enables you to use water in places with no water infrastructure. Even in places like desert, the forest, or disaster affected area that has limited access to water, you can use water freely, anytime, anywhere.",
+    "descriptionEs": "WOTA BOX es una planta portátil de reutilización de agua que le permite utilizarla en lugares sin infraestructura de agua. Incluso en lugares como el desierto, el bosque o zonas afectadas por desastres que tienen acceso limitado al agua, puede utilizarla libremente, en cualquier momento y en cualquier lugar.",
+    "case_study": "-",
+    "case_studyEs": "-",
+    "unit_processes": [
+      48
+    ],
+    "titleJa": "WOTA BOX ポータブル水再利用プラント",
+    "categoryJa": "手洗いおよびシャワーの水の再利用",
+    "descriptionJa": "WOTA BOXは、水インフラのない場所でも水を使えるようにするポータブル水再利用プラントです。砂漠や森林、災害被災地など、水の入手が困難な場所でも、いつでもどこでも自由に水を使えます。",
+    "case_studyJa": "-"
   }
 ]
