@@ -30,7 +30,7 @@ export default function GeneralReference() {
       <Grid item xs={4}>
         <Typography>
           {t(
-            'This Poseidon – Web on-line application is an update of the already existing developed Poseidon application based on Microsoft Excel. The scope of the new application is to enhance the older version to a more user-friendly decision support tool, that supports pre-feasibility studies and aims at promoting water reuse and building capacities in the field. The tool developed currently encompasses 37-unit processes combined into 70 benchmark treatment trains. It also contains information on water quality standards and typical wastewater qualities. It estimates the removal performances for 12 parameters and the lifecycle costs including distribution.'
+            'This Poseidon – Web on-line application is an update of the already existing developed Poseidon application based on Microsoft Excel. The scope of the new application is to enhance the older version to a more user-friendly decision support tool, that supports pre-feasibility studies and aims at promoting water reuse and building capacities in the field. The tool developed currently encompasses >40-unit processes combined into >60 benchmark treatment trains. It also contains information on water quality standards and typical wastewater qualities. It estimates the removal performances for key parameters and the lifecycle costs of the additional treatment train.'
           )}
         </Typography>
         <Typography>
