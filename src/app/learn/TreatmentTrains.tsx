@@ -98,7 +98,7 @@ export default function TreatmentTrains() {
     },
     {
       field: 'recovery',
-      headerName: t('Recovery') + ' [%]',
+      headerName: t('Unit Processes'),
       minWidth: 150,
       flex: 1,
       renderCell: (params: GridRenderCellParams) => {
