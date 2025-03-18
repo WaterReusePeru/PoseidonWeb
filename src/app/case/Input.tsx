@@ -13,7 +13,7 @@ import {
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import { useAppDispatch, useAppSelector } from '../hooks'
-import { setInputQuantity, setCustomInput, setCutomInputQualityFactors } from './caseSlice'
+import { setInputQuantity, setCustomInput, setCustomQualityFactors } from './caseSlice'
 import { useTranslation } from 'react-i18next'
 import InputAdornment from '@mui/material/InputAdornment'
 import SolutionsBox from './SolutionsBox'
@@ -58,7 +58,7 @@ export default function Input() {
     const isQualityFactor = (x: any): x is QualityFactor => event.target.value.includes(x)
 
     dispatch(
-      setCutomInputQualityFactors(
+      setCustomQualityFactors(
         isQualityFactor(event.target.value) ? event.target.value.split(',') : event.target.value
       ),
     )

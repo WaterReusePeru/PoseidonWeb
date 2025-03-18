@@ -127,25 +127,37 @@ export const caseSlice = createSlice({
         state.completedSteps[1] = 1
       }
     },
-    setCutomInputQualityFactors: (state, action) => {
+    setCustomQualityFactors: (state, action) => {
       if (action.payload.length > 0) {
         state.qualityFactors = action.payload
+
+        // Unset values for any water quality factor not in the new state.qualityFactors
+        Object.keys(state.input.customValues).forEach((factor) => {
+          if (!state.qualityFactors.includes(factor)) {
+            state.input.customValues[factor as keyof ValueWaterQuality] = undefined
+          }
+        })
+        Object.keys(state.endUse.customValues).forEach((factor) => {
+          if (!state.qualityFactors.includes(factor)) {
+            state.endUse.customValues[factor as keyof ValueWaterQuality] = undefined
+          }
+        })
       }
     },
     setInputQualityCategory: (state, action) => {
-      state.input.category = action.payload
+      state.input.category = action.payload 
       state.input.qualityClass = undefined
       state.completedSteps[1] = 0
     },
     setInputQualityClass: (state, action) => {
       state.input.qualityClass = action.payload
-      var qualityClassFactors: string[] = []
-      waterQualityFactors.forEach((f) => {
-        if (waterQualities[action.payload][f.name as keyof WaterQuality] !== null) {
-          qualityClassFactors.push(f.name)
-        }
-      })
-      state.qualityFactors = qualityClassFactors
+      // var qualityClassFactors: string[] = []
+      // waterQualityFactors.forEach((f) => {
+      //   if (waterQualities[action.payload][f.name as keyof WaterQuality] !== null) {
+      //     qualityClassFactors.push(f.name)
+      //   }
+      // })
+      // state.qualityFactors = qualityClassFactors
       if (state.input.quantity) {
         state.completedSteps[1] = 1
       }
@@ -173,6 +185,13 @@ export const caseSlice = createSlice({
     },
     setEndUseQualityClass: (state, action) => {
       state.endUse.qualityClass = action.payload
+      var qualityClassFactors: string[] = []
+      waterQualityFactors.forEach((f) => {
+        if (waterQualities[action.payload][f.name as keyof WaterQuality] !== null) {
+          qualityClassFactors.push(f.name)
+        }
+      })
+      state.qualityFactors = qualityClassFactors
       state.completedSteps[2] = 2
     },
     setSolutionNoneNeeded: (state, action) => {
@@ -203,10 +222,6 @@ export const caseSlice = createSlice({
         state.solutions[index].annualizedOMCost = treatment.annualizedOMCost
         state.solutions[index].annualizedOpex = treatment.annualizedOpex
         state.solutions[index].costPerCubic = treatment.costPerCubic
-
-        if (treatment.treatmentTrain === 60) {
-          console.log(`Assigning values for treatment train ${treatment.treatmentTrain}:`, treatment)
-        }
 
         waterQualityFactors.forEach((f) => {
           if (treatment[f.name] !== undefined) {
@@ -256,7 +271,7 @@ export const {
   setInputQuantity,
   setCustomInput,
   setCustomInputValues,
-  setCutomInputQualityFactors,
+  setCustomQualityFactors,
   setEndUseQualityCategory,
   setEndUseQualityClass,
   setCustomEndUse,

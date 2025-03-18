@@ -48,7 +48,7 @@ export function findSuitableTreatments(
 
       outputQualityPerFactor[TfKey] = outputQualityStep
 
-      if (outputQualityPerFactor[treatmentFactor] > Number(endUse[TfKey])) {
+      if (outputQualityPerFactor[treatmentFactor] > Number(endUse[TfKey]) || input[TfKey] === null || input[TfKey] === undefined) {
         suitableTreatmentTrain = false
       }
     })

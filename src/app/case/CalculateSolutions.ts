@@ -25,7 +25,15 @@ export default function CalculateSolutions(
     qualityFactors.forEach((qualityFactor) => {
       const key = qualityFactor as keyof WaterQuality
 
-      if (key in input && key in endUse && input[key] > endUse[key] && endUse[key] !== null) {
+      // Ensure both input and endUse have values for the factor
+      if (
+        key in input &&
+        key in endUse &&
+        //input[key] !== undefined &&
+        endUse[key] !== undefined &&
+        //input[key] > endUse[key] &&
+        endUse[key] !== null
+      ) {
         dispatch(setSolutionNoneNeeded(false))
         treatmentFactors.push(qualityFactor as QualityFactor)
       }

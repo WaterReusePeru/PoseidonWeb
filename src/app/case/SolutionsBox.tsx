@@ -44,6 +44,8 @@ export default function SolutionsBox() {
     commInfo,
   ) //TODO: !
 
+  console.log(caseState)
+
   console.log(caseState.solutions)
 
   const handleChangePriority = () => {
