@@ -18,7 +18,7 @@ export const ResultsGraph = () => {
 
   const currency = commInfoState.currency === 1 ? communityInfos[commInfoState.countryID].currency : 'USD'
 
-  const endUseQuality = waterQualities[endUseState.qualityClass!]
+  const endUseQuality = waterQualities[endUseState.qualityClass!] // Use custom values!
 
   const solutions = solutionsState.filter((solution) => {
     if (Object.keys(solution).length !== 0 && solution.treatmentTrain !== undefined) {
@@ -46,7 +46,10 @@ export const ResultsGraph = () => {
         }
       })
     return {
-      id: getLocalisedValue(treatmentTrains[solution.treatmentTrain!], lang, 'category') + ' - ' + getLocalisedValue(treatmentTrains[solution.treatmentTrain!], lang, 'title'),
+      id:
+        getLocalisedValue(treatmentTrains[solution.treatmentTrain!], lang, 'category') +
+        ' - ' +
+        getLocalisedValue(treatmentTrains[solution.treatmentTrain!], lang, 'title'),
       data: solutionData,
     }
   })
