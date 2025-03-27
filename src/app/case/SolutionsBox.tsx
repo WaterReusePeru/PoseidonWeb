@@ -65,12 +65,14 @@ export default function SolutionsBox() {
                   'Based on your input, no treatment is needed because the input quality is better than the end use quality.',
                 )
               : caseState.solution.noneAvailable
-                ? t('Based on your input, theres no possible solution')
-                : t('Based on your input, the following treatment trains are best suited for the case.')}
+                ? t('Based on your input, there is no possible solution.')
+                : caseState.solution.noneCalculable
+                  ? t('The solution cannot be calculated because there is no input for a defined end use.')
+                  : t('Based on your input, the following treatment trains are best suited for the case.')}
           </Typography>
         </Grid>
 
-        {!caseState.solution.noneNeeded && !caseState.solution.noneAvailable ? (
+        {!caseState.solution.noneNeeded && !caseState.solution.noneAvailable && !caseState.solution.noneCalculable ? (
           <Grid item container xs={12} spacing={1} alignItems="center">
             {!isNaN(caseState.solutions[0].capex!) ? (
               <Grid item container alignItems="center" spacing={1} xs={12} justifyContent="space-between">
@@ -146,10 +148,7 @@ export default function SolutionsBox() {
                           up,
                           index, //TODO: !
                         ) => (
-                          <Tooltip
-                            key={index}
-                            title={getLocalisedValue(unitProcesses[up], lang, 'name')}
-                          >
+                          <Tooltip key={index} title={getLocalisedValue(unitProcesses[up], lang, 'name')}>
                             <Chip label={up} key={index} size="small" color="primary" style={{ margin: 2 }} />
                           </Tooltip>
                         ),

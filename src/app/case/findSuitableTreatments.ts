@@ -41,6 +41,8 @@ export function findSuitableTreatments(
       const UpKey = treatmentFactor as keyof UnitProcess
       let outputQualityStep = Number(input[TfKey])
 
+      console.log('Calculating ' + TfKey + '. Value: ' + outputQualityStep)
+
       treatmentTrain.unit_processes!.forEach((unitProcess) => {
         //TODO: !
         outputQualityStep = outputQualityStep - (outputQualityStep * Number(unitProcesses[unitProcess][UpKey])) / 100
@@ -48,7 +50,11 @@ export function findSuitableTreatments(
 
       outputQualityPerFactor[TfKey] = outputQualityStep
 
-      if (outputQualityPerFactor[treatmentFactor] > Number(endUse[TfKey]) || input[TfKey] === null || input[TfKey] === undefined) {
+      if (
+        outputQualityPerFactor[treatmentFactor] > Number(endUse[TfKey]) ||
+        input[TfKey] === null ||
+        input[TfKey] === undefined
+      ) {
         suitableTreatmentTrain = false
       }
     })

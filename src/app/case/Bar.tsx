@@ -10,7 +10,7 @@ export const Bar = (props: { input?: any; output?: any; factor: string; average?
 
   var outputColor = theme.palette.primary.main
 
-  if (Number(props.input) > Number(props.output) || !props.input ) {
+  if (Number(props.input) > Number(props.output) || props.input === null || props.input === undefined) {
     outputColor = theme.palette.error.main
   } else {
     outputColor = theme.palette.success.main
@@ -36,15 +36,15 @@ export const Bar = (props: { input?: any; output?: any; factor: string; average?
 
   let data = []
 
-  if (props.input) {
+  if (props.input || props.input === 0) {
     data.push(input)
   }
 
-  if (props.output) {
+  if (props.output || props.output === 0) {
     data.push(output)
   }
 
-  if (props.average & props.input) {
+  if (props.average & (props.input || props.input === 0)) {
     data.push(average)
   }
 

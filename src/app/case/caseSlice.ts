@@ -28,6 +28,7 @@ type CaseState = {
   solution: {
     noneNeeded: boolean
     noneAvailable: boolean
+    noneCalculable: boolean
     sortByRating: boolean
   }
   solutions: {
@@ -75,6 +76,7 @@ const initialState: CaseState = {
   solution: {
     noneNeeded: true,
     noneAvailable: false,
+    noneCalculable: false,
     sortByRating: false,
   },
   solutions: Array(treatmentTrains.length).fill({
@@ -145,7 +147,7 @@ export const caseSlice = createSlice({
       }
     },
     setInputQualityCategory: (state, action) => {
-      state.input.category = action.payload 
+      state.input.category = action.payload
       state.input.qualityClass = undefined
       state.completedSteps[1] = 0
     },
@@ -197,9 +199,13 @@ export const caseSlice = createSlice({
     setSolutionNoneNeeded: (state, action) => {
       state.solution.noneNeeded = action.payload
     },
+    setSolutionNoneCalculable: (state, action) => {
+      state.solution.noneCalculable = action.payload
+    },
     resetSolutions: (state) => {
       state.solutions = initialState.solutions
       state.solution.noneNeeded = false
+      state.solution.noneCalculable = false
       state.solution.noneAvailable = false
     },
     setSolutionNoneAvailable: (state, action) => {
@@ -278,6 +284,7 @@ export const {
   setCustomEndUseValues,
   resetSolutions,
   setSolutionNoneNeeded,
+  setSolutionNoneCalculable,
   setSolutionNoneAvailable,
   setSolutions,
   setSolutionsortByRating,

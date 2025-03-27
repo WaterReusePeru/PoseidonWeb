@@ -20,7 +20,7 @@ export default function EndUseCustomValues() {
     id: number
     name: string
     validity: boolean
-    value: number | undefined
+    value: number | null
   }
 
   var customEndUseState = waterQualityFactors.map((f, index) => {
@@ -29,23 +29,25 @@ export default function EndUseCustomValues() {
 
   const [customEndUse, setCustomEndUse] = React.useState(customEndUseState)
 
-  const handleChangeQuantity = (id: number, value: number, maxValue: number) => {
+  const handleChangeQuantity = (id: number, value: string, maxValue: number) => {
     const objIndex = customEndUseState.findIndex((quality) => quality.id === id)
     let tempCustomEndUse: Array<CustomEndUse> = []
     customEndUse.forEach((val) => tempCustomEndUse.push(Object.assign({}, val)))
 
-    tempCustomEndUse[objIndex].value = value
+    const parsedValue = value === '' ? null : Number(value)
+
+    tempCustomEndUse[objIndex].value = parsedValue
 
     setCustomEndUse(tempCustomEndUse)
 
     const customEndUseObject = tempCustomEndUse.reduce(
       (obj, item) => Object.assign(obj, { [item.name]: item.value }),
-      {}
+      {},
     )
 
     dispatch(setCustomEndUseValues(customEndUseObject))
 
-    if (value > 0 && value <= maxValue) {
+    if (parsedValue !== null && parsedValue >= 0 && parsedValue <= maxValue) {
       tempCustomEndUse[objIndex].validity = true
     } else {
       tempCustomEndUse[objIndex].validity = false
@@ -72,15 +74,19 @@ export default function EndUseCustomValues() {
                 <TextField
                   error={!customEndUse[f.id].validity}
                   size="small"
-                  helperText={!customEndUse[f.id].validity ? t('Expected between 1 and') + ' ' + f.maxValue : ' '}
+                  helperText={!customEndUse[f.id].validity ? t('Expected between 0 and') + ' ' + f.maxValue : ' '}
                   id={f.name}
                   type="number"
                   variant="outlined"
                   InputLabelProps={{
                     shrink: true,
                   }}
-                  onChange={(event) => handleChangeQuantity(f.id, Number(event.target.value), Number(f.maxValue))}
-                  value={endUse.customValues[key] ? endUse.customValues[key] : ''}
+                  onChange={(event) => handleChangeQuantity(f.id, event.target.value, Number(f.maxValue))}
+                  value={
+                    endUse.customValues[key] !== undefined && endUse.customValues[key] !== null
+                      ? endUse.customValues[key]
+                      : ''
+                  }
                   InputProps={{
                     endAdornment: <InputAdornment position="end">{f.unit}</InputAdornment>,
                   }}

@@ -1,4 +1,4 @@
-import { setSolutionNoneAvailable, setSolutionNoneNeeded, setSolutions } from './caseSlice'
+import { setSolutionNoneAvailable, setSolutionNoneCalculable, setSolutionNoneNeeded, setSolutions } from './caseSlice'
 import { WaterQuality, OutputQuality, QualityFactor, CommunityInfo, waterQualityFactors } from '../data/model'
 
 import { findSuitableTreatments } from './findSuitableTreatments'
@@ -19,6 +19,16 @@ export default function CalculateSolutions(
 
   let treatmentFactors: QualityFactor[] = []
 
+  const hasMissingInputForDefinedEndUse = qualityFactors.some((qualityFactor) => {
+    const key = qualityFactor as keyof WaterQuality
+    return (input[key] === null || input[key] === undefined) && endUse[key] !== null && endUse[key] !== undefined
+  })
+
+  if (hasMissingInputForDefinedEndUse) {
+    dispatch(setSolutionNoneCalculable(true))
+    return
+  }
+
   if (!input || !endUse) {
     dispatch(setSolutionNoneNeeded(true))
   } else {
@@ -26,15 +36,9 @@ export default function CalculateSolutions(
       const key = qualityFactor as keyof WaterQuality
 
       // Ensure both input and endUse have values for the factor
-      if (
-        key in input &&
-        key in endUse &&
-        //input[key] !== undefined &&
-        endUse[key] !== undefined &&
-        //input[key] > endUse[key] &&
-        endUse[key] !== null
-      ) {
+      if (key in input && key in endUse && endUse[key] !== undefined && endUse[key] !== null) {
         dispatch(setSolutionNoneNeeded(false))
+        dispatch(setSolutionNoneCalculable(false))
         treatmentFactors.push(qualityFactor as QualityFactor)
       }
     })
@@ -55,8 +59,6 @@ export default function CalculateSolutions(
 
     return topTreatments
   }
-
-  // const topTreatments = findTopTreatments(findSuitableTreatments(input, endUse, treatmentFactors, amount, commInfo))
 
   let topTreatments = [] // Reset to empty array
 

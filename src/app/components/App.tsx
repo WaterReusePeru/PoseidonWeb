@@ -60,7 +60,7 @@ export const App = () => {
   const classes = useStyles()
   const { t } = useTranslation()
 
-  const solutionsState = useAppSelector((state) => state.case.solutions)
+  const solutionsState = useAppSelector((state) => state.case.solution)
 
   return (
     <div className="App">
@@ -95,7 +95,11 @@ export const App = () => {
                 to={`${process.env.PUBLIC_URL}/results`}
                 startIcon={<BarChartIcon />}
                 color="inherit"
-                disabled={solutionsState[0].treatmentTrain === undefined ? true : false}
+                disabled={
+                  solutionsState.noneAvailable === true ||
+                  solutionsState.noneCalculable === true ||
+                  solutionsState.noneNeeded === true
+                }
               >
                 {t('Results')}
               </Button>

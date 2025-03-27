@@ -18,12 +18,11 @@ export default function InputCustomValues() {
 
   const lang = i18next.language as Language
 
-
   interface CustomInput {
     id: number
     name: string
     validity: boolean
-    value: number | undefined
+    value: number | null
   }
 
   var customInputState = waterQualityFactors.map((f, index) => {
@@ -32,12 +31,15 @@ export default function InputCustomValues() {
 
   const [customInput, setCustomInput] = React.useState(customInputState)
 
-  const handleChangeQuantity = (id: number, value: number, maxValue: number) => {
+  const handleChangeQuantity = (id: number, value: string, maxValue: number) => {
     const objIndex = customInputState.findIndex((quality) => quality.id === id)
     let tempCustomInput: Array<CustomInput> = []
     customInput.forEach((val) => tempCustomInput.push(Object.assign({}, val)))
 
-    tempCustomInput[objIndex].value = value
+    // Handle empty input as null
+    const parsedValue = value === '' ? null : Number(value)
+
+    tempCustomInput[objIndex].value = parsedValue
 
     setCustomInput(tempCustomInput)
 
@@ -45,7 +47,7 @@ export default function InputCustomValues() {
 
     dispatch(setCustomInputValues(customInputObject))
 
-    if (value > 0 && value <= maxValue) {
+    if (parsedValue !== null && parsedValue >= 0 && parsedValue <= maxValue) {
       tempCustomInput[objIndex].validity = true
     } else {
       tempCustomInput[objIndex].validity = false
@@ -72,15 +74,19 @@ export default function InputCustomValues() {
                 <TextField
                   error={!customInput[f.id].validity}
                   size="small"
-                  helperText={!customInput[f.id].validity ? t('Expected between 1 and') + ' ' + f.maxValue : ' '}
+                  helperText={!customInput[f.id].validity ? t('Expected between 0 and') + ' ' + f.maxValue : ' '}
                   id={f.name}
                   type="number"
                   variant="outlined"
                   InputLabelProps={{
                     shrink: true,
                   }}
-                  onChange={(event) => handleChangeQuantity(f.id, Number(event.target.value), Number(f.maxValue))}
-                  value={input.customValues[key] ? input.customValues[key] : ''}
+                  onChange={(event) => handleChangeQuantity(f.id, event.target.value, Number(f.maxValue))}
+                  value={
+                    input.customValues[key] !== undefined && input.customValues[key] !== null
+                      ? input.customValues[key]
+                      : ''
+                  }
                   InputProps={{
                     endAdornment: <InputAdornment position="end">{f.unit}</InputAdornment>,
                   }}

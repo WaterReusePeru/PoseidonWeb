@@ -18,7 +18,7 @@ export const ResultsGraph = () => {
 
   const currency = commInfoState.currency === 1 ? communityInfos[commInfoState.countryID].currency : 'USD'
 
-  const endUseQuality = waterQualities[endUseState.qualityClass!] // Use custom values!
+  const endUseQuality = endUseState.custom ? endUseState.customValues : waterQualities[endUseState.qualityClass!] // Use custom values!
 
   const solutions = solutionsState.filter((solution) => {
     if (Object.keys(solution).length !== 0 && solution.treatmentTrain !== undefined) {
