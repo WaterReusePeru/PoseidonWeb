@@ -1534,5 +1534,41 @@
     "categoryJa": "手洗いおよびシャワーの水の再利用",
     "descriptionJa": "WOTA BOXは、水インフラのない場所でも水を使えるようにするポータブル水再利用プラントです。砂漠や森林、災害被災地など、水の入手が困難な場所でも、いつでもどこでも自由に水を使えます。",
     "case_studyJa": "-"
+  },
+  {
+    "id": 68,
+    "title": "UF and UV post treatment for reuse in Okinawa",
+    "titleEs": "Postratamiento UF y UV para reutilización en Okinawa",
+    "category": "Secondary wastewater post treatment for reuse",
+    "categoryEs": "Tratamiento secundario de aguas residuales para su reutilización.",
+    "description": "Secondary wastewater treatment effluent is post-treated for reuse.",
+    "descriptionEs": "Las aguas residuales secundarias se someten a un tratamiento posterior para su reutilización.": "-",
+    "case_studyEs": "-",
+    "unit_processes": [
+      23,
+      36
+    ],
+    "titleJa": "UF（超濾過）とUV（紫外線）処理後の再利用に関する研究（沖縄）",
+    "categoryJa": "再利用のための二次排水の最終処理",
+    "descriptionJa": "二次処理排水は再利用のため、さらに後処理されます。",
+    "case_studyJa": "-"
+  },
+  {
+    "id": 69,
+    "title": "Ozone and UF post treatment for reuse in Tokyo",
+    "titleEs": "Postratamiento con ozono y UF para reutilización en Tokio",
+    "category": "Secondary wastewater post treatment for reuse",
+    "categoryEs": "Tratamiento secundario de aguas residuales para su reutilización.",
+    "description": "Secondary wastewater treatment effluent is post-treated for reuse.",
+    "descriptionEs": "Las aguas residuales secundarias se someten a un tratamiento posterior para su reutilización.": "-",
+    "case_studyEs": "-",
+    "unit_processes": [
+      33,
+      23
+    ],
+    "titleJa": "オゾンとUF処理後の再利用のための処理（東京）",
+    "categoryJa": "再利用のための二次排水の最終処理",
+    "descriptionJa": "二次処理排水は再利用のため、さらに後処理されます。",
+    "case_studyJa": "-"
   }
 ]
