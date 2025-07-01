@@ -40,7 +40,7 @@ export default function CommInfo() {
           id="country"
           size="small"
           options={communityInfos.filter(() => true).sort(compare)} //Nonsense filter because TS doesn't find manage .sort() otherwise
-          getOptionLabel={(option) => (option.name ? (getLocalisedValue(option, lang, 'name')) : undefined!)}
+          getOptionLabel={(option) => (option.name ? getLocalisedValue(option, lang, 'name') : undefined!)}
           isOptionEqualToValue={(option, value) => option.name === value.name}
           onChange={(event, newValue) => dispatch(setCountry(newValue.id))}
           disableClearable
@@ -84,14 +84,14 @@ export default function CommInfo() {
       {commInfo.currency !== null ? (
         <>
           <Grid item xs={4}>
-            <Typography>{t('Land Cost')}</Typography>
+            <Typography>{t('Land Cost per Hectare')}</Typography>
           </Grid>
           <Grid item xs={8}>
             <Typography>
               {commInfo.currency === 0
                 ? Math.round(communityInfo[commInfo.countryID].landCost * 100) / 100 + ' ' + usdObj.currency
                 : Math.round(
-                    communityInfo[commInfo.countryID].landCost * communityInfo[commInfo.countryID].exchangeToUSD * 100
+                    communityInfo[commInfo.countryID].landCost * communityInfo[commInfo.countryID].exchangeToUSD * 100,
                   ) /
                     100 +
                   ' ' +
@@ -99,7 +99,7 @@ export default function CommInfo() {
             </Typography>
           </Grid>
           <Grid item xs={4}>
-            <Typography>{t('Electricity Cost')}</Typography>
+            <Typography>{t('Electricity Cost per kWh')}</Typography>
           </Grid>
           <Grid item xs={8}>
             <Typography>
@@ -108,7 +108,7 @@ export default function CommInfo() {
                 : Math.round(
                     communityInfo[commInfo.countryID].electricityCost *
                       communityInfo[commInfo.countryID].exchangeToUSD *
-                      100
+                      100,
                   ) /
                     100 +
                   ' ' +
@@ -116,7 +116,7 @@ export default function CommInfo() {
             </Typography>
           </Grid>
           <Grid item xs={4}>
-            <Typography>{t('Personal Cost')}</Typography>
+            <Typography>{t('Average Staff Cost per Hour')}</Typography>
           </Grid>
           <Grid item xs={8}>
             <Typography>
@@ -125,7 +125,7 @@ export default function CommInfo() {
                 : Math.round(
                     communityInfo[commInfo.countryID].personalCost *
                       communityInfo[commInfo.countryID].exchangeToUSD *
-                      100
+                      100,
                   ) /
                     100 +
                   ' ' +
@@ -133,7 +133,7 @@ export default function CommInfo() {
             </Typography>
           </Grid>
           <Grid item xs={4}>
-            <Typography>{t('Discount Rate')}</Typography>
+            <Typography>{t('Discount Rate per Annum')}</Typography>
           </Grid>
           <Grid item xs={8}>
             <Typography>{communityInfo[commInfo.countryID].discountRate * 100 + '%'}</Typography>
