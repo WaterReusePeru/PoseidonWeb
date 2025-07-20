@@ -1,5 +1,12 @@
 import { setSolutionNoneAvailable, setSolutionNoneCalculable, setSolutionNoneNeeded, setSolutions } from './caseSlice'
-import { WaterQuality, OutputQuality, QualityFactor, CommunityInfo, waterQualityFactors } from '../data/model'
+import {
+  WaterQuality,
+  OutputQuality,
+  QualityFactor,
+  CommunityInfo,
+  CommunityInfoState,
+  waterQualityFactors,
+} from '../data/model'
 
 import { findSuitableTreatments } from './findSuitableTreatments'
 import { useAppDispatch } from '../hooks'
@@ -10,6 +17,7 @@ export default function CalculateSolutions(
   amount: number,
   byRating: boolean,
   commInfo: CommunityInfo,
+  commInfoState: CommunityInfoState,
 ) {
   const dispatch = useAppDispatch()
 
@@ -62,7 +70,9 @@ export default function CalculateSolutions(
 
   let topTreatments = [] // Reset to empty array
 
-  topTreatments = findTopTreatments(findSuitableTreatments(input, endUse, treatmentFactors, amount, commInfo))
+  topTreatments = findTopTreatments(
+    findSuitableTreatments(input, endUse, treatmentFactors, amount, commInfo, commInfoState),
+  )
 
   if (topTreatments.length === 0) {
     dispatch(setSolutionNoneAvailable(true))

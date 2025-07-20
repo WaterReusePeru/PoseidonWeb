@@ -7,7 +7,11 @@ type CaseState = {
   completedSteps: [number, number, number, number]
   commInfo: {
     countryID: number
-    currency: number //0 is USD, 1 is local currency
+    currency: number
+    landCost?: number
+    electricityCost?: number
+    staffCost?: number
+    discountRate?: number
   }
   qualityFactors: string[]
   input: {
@@ -55,7 +59,10 @@ type CaseState = {
 const initialState: CaseState = {
   step: 0,
   completedSteps: [0, 0, 0, 0],
-  commInfo: { countryID: 0, currency: 1 }, //Peru is the defaul country with local currency
+  commInfo: {
+    countryID: 0,
+    currency: 1, //Peru is the defaul country with local currency
+  },
   qualityFactors: [],
   input: {
     custom: false,
@@ -115,6 +122,19 @@ export const caseSlice = createSlice({
     setCurrency: (state, action) => {
       action.payload === 1000 ? (state.commInfo.currency = 0) : (state.commInfo.currency = 1)
       state.completedSteps[0] = 0
+    },
+    setLandCost: (state, action) => {
+      state.commInfo.landCost = action.payload
+      state.completedSteps[0] = 0
+    },
+    setElectricityCost: (state, action) => {
+      state.commInfo.electricityCost = action.payload
+    },
+    setStaffCost: (state, action) => {
+      state.commInfo.staffCost = action.payload
+    },
+    setDictountRate: (state, action) => {
+      state.commInfo.discountRate = action.payload
     },
     setCustomInput: (state, action) => {
       state.input.custom = action.payload
@@ -272,6 +292,10 @@ export const {
   setStep,
   setCountry,
   setCurrency,
+  setLandCost,
+  setElectricityCost,
+  setStaffCost,
+  setDictountRate,
   setInputQualityCategory,
   setInputQualityClass,
   setInputQuantity,

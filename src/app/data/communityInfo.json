@@ -7,8 +7,8 @@
     "exchangeToUSD": 3.75,
     "landCost": 2000,
     "electricityCost": 0.06,
-    "personalCost": 3.5,
-    "discountRate": 0.05,
+    "staffCost": 3.5,
+    "discountRate": 5,
     "nameJa": "ペルー"
   },
   {
@@ -19,8 +19,8 @@
     "exchangeToUSD": 3.07,
     "landCost": 15000,
     "electricityCost": 0.05,
-    "personalCost": 20,
-    "discountRate": 0.08,
+    "staffCost": 20,
+    "discountRate": 8,
     "nameJa": "アルゼンチン"
   },
   {
@@ -31,8 +31,8 @@
     "exchangeToUSD": 525.51,
     "landCost": 10000,
     "electricityCost": 0.15,
-    "personalCost": 20,
-    "discountRate": 0.08,
+    "staffCost": 20,
+    "discountRate": 8,
     "nameJa": "チリ"
   },
   {
@@ -43,8 +43,8 @@
     "exchangeToUSD": 2.41,
     "landCost": 12004,
     "electricityCost": 0.12,
-    "personalCost": 20,
-    "discountRate": 0.08,
+    "staffCost": 20,
+    "discountRate": 8,
     "nameJa": "ブラジル"
   },
   {
@@ -55,8 +55,8 @@
     "exchangeToUSD": 10.77,
     "landCost": 10000,
     "electricityCost": 0.13,
-    "personalCost": 20,
-    "discountRate": 0.08,
+    "staffCost": 20,
+    "discountRate": 8,
     "nameJa": "メキシコ"
   },
   {
@@ -67,8 +67,8 @@
     "exchangeToUSD": 7.32,
     "landCost": 10000,
     "electricityCost": 0.02,
-    "personalCost": 2.67,
-    "discountRate": 0.19,
+    "staffCost": 2.67,
+    "discountRate": 19,
     "nameJa": "エジプト"
   },
   {
@@ -79,8 +79,8 @@
     "exchangeToUSD": 11.72,
     "landCost": 10000,
     "electricityCost": 0.11,
-    "personalCost": 2.11,
-    "discountRate": 0.07,
+    "staffCost": 2.11,
+    "discountRate": 7,
     "nameJa": "モロッコ"
   },
   {
@@ -91,8 +91,8 @@
     "exchangeToUSD": 1.73,
     "landCost": 10000,
     "electricityCost": 0.07,
-    "personalCost": 8.15,
-    "discountRate": 0.06,
+    "staffCost": 8.15,
+    "discountRate": 6,
     "nameJa": "チュニジア"
   },
   {
@@ -103,8 +103,8 @@
     "exchangeToUSD": 20418.07,
     "landCost": 10000,
     "electricityCost": 0.07,
-    "personalCost": 20,
-    "discountRate": 0.04,
+    "staffCost": 20,
+    "discountRate": 4,
     "nameJa": "ベトナム"
   },
   {
@@ -115,8 +115,8 @@
     "exchangeToUSD": 150,
     "landCost": 2200000,
     "electricityCost": 0.18,
-    "personalCost": 20,
-    "discountRate": 0.008,
+    "staffCost": 20,
+    "discountRate": 0.8,
     "nameJa": "日本2024"
   }
 ]

@@ -42,6 +42,7 @@ export default function SolutionsBox() {
     quantity!,
     sortByRating,
     commInfo,
+    commInfoState,
   ) //TODO: !
 
   console.log(caseState)

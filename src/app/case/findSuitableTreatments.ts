@@ -1,4 +1,4 @@
-import { CommunityInfo, UnitProcess, unitProcesses } from '../data/model'
+import { CommunityInfo, CommunityInfoState, UnitProcess, unitProcesses } from '../data/model'
 import { treatmentTrains } from '../data/model'
 import { WaterQuality } from '../data/model'
 import { OutputQuality } from '../data/model'
@@ -20,6 +20,7 @@ export function findSuitableTreatments(
   treatmentFactors: QualityFactor[],
   amount: number,
   commInfo: CommunityInfo,
+  commInfoState: CommunityInfoState,
 ) {
   let outputQualities: OutputQuality[] = []
 
@@ -40,8 +41,6 @@ export function findSuitableTreatments(
       const TfKey = treatmentFactor as keyof WaterQuality
       const UpKey = treatmentFactor as keyof UnitProcess
       let outputQualityStep = Number(input[TfKey])
-
-      console.log('Calculating ' + TfKey + '. Value: ' + outputQualityStep)
 
       treatmentTrain.unit_processes!.forEach((unitProcess) => {
         //TODO: !
@@ -65,6 +64,13 @@ export function findSuitableTreatments(
     let annualizedLaborCost = 0
     let annualizedOMCost = 0
 
+    console.log('commInfoState', commInfoState)
+
+    const staffCost = commInfoState.staffCost ? commInfoState.staffCost : commInfo.staffCost
+    const landCost = commInfoState.landCost ? commInfoState.landCost : commInfo.landCost
+    const electricityCost = commInfoState.electricityCost ? commInfoState.electricityCost : commInfo.electricityCost
+    const discountRate = commInfoState.discountRate ? commInfoState.discountRate : commInfo.discountRate
+
     treatmentTrain.unit_processes!.forEach((unitProcess) => {
       //TODO: !
       evaluationCriteria.forEach((criteria) => {
@@ -72,11 +78,11 @@ export function findSuitableTreatments(
         rating = rating + Number(unitProcesses[unitProcess][UpKey])
       })
       let crf =
-        (commInfo.discountRate *
-          (1 + commInfo.discountRate) ** Number(unitProcesses[unitProcess]['useful_life' as keyof UnitProcess])) /
-        ((1 + commInfo.discountRate) ** Number(unitProcesses[unitProcess]['useful_life' as keyof UnitProcess]) - 1)
+        ((discountRate / 100) *
+          (1 + discountRate / 100) ** Number(unitProcesses[unitProcess]['useful_life' as keyof UnitProcess])) /
+        ((1 + discountRate / 100) ** Number(unitProcesses[unitProcess]['useful_life' as keyof UnitProcess]) - 1)
 
-      let crf30 = (commInfo.discountRate * (1 + commInfo.discountRate) ** 30) / ((1 + commInfo.discountRate) ** 30 - 1)
+      let crf30 = ((discountRate / 100) * (1 + discountRate / 100) ** 30) / ((1 + discountRate / 100) ** 30 - 1)
 
       if (amount !== null) {
         Object.keys(outputCostPerFactor).forEach((costFactor: keyof CostFactors) => {
@@ -95,15 +101,15 @@ export function findSuitableTreatments(
           }
 
           if (costFactor === 'land_requirements') {
-            annualizedLandCost += outputCostStep * commInfo.landCost * crf30
+            annualizedLandCost += outputCostStep * landCost * crf30
           }
 
           if (costFactor === 'energy_requirements') {
-            annualizedEnergyCost += outputCostStep * commInfo.electricityCost
+            annualizedEnergyCost += outputCostStep * electricityCost
           }
 
           if (costFactor === 'labor_requirements') {
-            annualizedLaborCost += outputCostStep * commInfo.personalCost * 12
+            annualizedLaborCost += outputCostStep * staffCost * 12
           }
 
           if (costFactor === 'other_om') {

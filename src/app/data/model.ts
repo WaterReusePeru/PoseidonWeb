@@ -15,8 +15,17 @@ export interface CommunityInfo {
   exchangeToUSD: number
   landCost: number
   electricityCost: number
-  personalCost: number
+  staffCost: number
   discountRate: number
+}
+
+export interface CommunityInfoState {
+  countryID: number
+  currency: number
+  landCost?: number
+  electricityCost?: number
+  staffCost?: number
+  discountRate?: number
 }
 
 export const communityInfos: ReadonlyArray<CommunityInfo> = communityInfosJSON as ReadonlyArray<CommunityInfo>
@@ -172,8 +181,7 @@ export interface CostComponent {
   nameLongJa: string
 }
 
-export const costComponents: ReadonlyArray<CostComponent> =
-  costComponentsJSON as ReadonlyArray<CostComponent>
+export const costComponents: ReadonlyArray<CostComponent> = costComponentsJSON as ReadonlyArray<CostComponent>
 
 export interface OutputQuality {
   id: number
@@ -203,4 +211,4 @@ export interface OutputQuality {
 
 type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (k: infer I) => void ? I : never
 
-export type QualityFactor = UnionToIntersection<typeof waterQualityFactorsJSON[number]['name']>
+export type QualityFactor = UnionToIntersection<(typeof waterQualityFactorsJSON)[number]['name']>
