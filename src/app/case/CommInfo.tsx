@@ -102,11 +102,6 @@ export default function CommInfo() {
           renderInput={(params) => <TextField {...params} variant="outlined" />}
         />
       </Grid>
-      <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Tooltip title={t('Information about countries')}>
-          <Chip label="?" size="small" />
-        </Tooltip>
-      </Grid>
       <Grid item xs={4}>
         <Typography>{t('Select the Currency')}</Typography>
       </Grid>
@@ -129,11 +124,6 @@ export default function CommInfo() {
           disabled={commInfo.countryID === null ? true : false}
           renderInput={(params) => <TextField {...params} variant="outlined" />}
         />
-      </Grid>
-      <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Tooltip title={t('Information about currencies')}>
-          <Chip label="?" size="small" />
-        </Tooltip>
       </Grid>
       {commInfo.currency !== null ? (
         <>
