@@ -91,7 +91,7 @@ export const Case = () => {
                     color="primary"
                     onClick={() => dispatch(next())}
                     className={classes.button}
-                    disabled={completedSteps.includes(count) ? false : true}
+                    disabled={completedSteps[count] ? false : true}
                   >
                     {t('Next')}
                   </Button>

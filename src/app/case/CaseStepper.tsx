@@ -61,7 +61,7 @@ export const CaseStepper = () => {
                     variant="caption"
                     underline="hover"
                     color="inherit"
-                    disabled={completedSteps.includes(index - 1) || index === 0 ? false : true}
+                    disabled={completedSteps[count - 1] || index === 0 ? false : true}
                     onClick={() => dispatch(setStep(index))}
                   >
                     {label}

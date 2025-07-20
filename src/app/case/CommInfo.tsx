@@ -13,6 +13,7 @@ import {
   setElectricityCost,
   setStaffCost,
   setDictountRate,
+  setValidCommInfo,
 } from '../case/caseSlice'
 import Chip from '@mui/material/Chip'
 import { useTranslation } from 'react-i18next'
@@ -46,19 +47,19 @@ export default function CommInfo() {
   const handleChangeCost = (cost: 'land' | 'electricity' | 'staff' | 'discount', value: number) => {
     switch (cost) {
       case 'land':
-        setValidLandCost(value >= 0 && value <= 1000000000)
+        setValidLandCost(value > 0 && value <= 1000000000)
         dispatch(setLandCost(value))
         break
       case 'electricity':
-        setValidElectricityCost(value >= 0 && value <= 100)
+        setValidElectricityCost(value > 0 && value <= 100)
         dispatch(setElectricityCost(value))
         break
       case 'staff':
-        setValidLStaffCost(value >= 0 && value <= 1000)
+        setValidLStaffCost(value > 0 && value <= 1000)
         dispatch(setStaffCost(value))
         break
       case 'discount':
-        setValidLDiscount(value >= 0 && value <= 100)
+        setValidLDiscount(value > 0 && value <= 100)
         dispatch(setDictountRate(value))
         break
     }
@@ -71,6 +72,14 @@ export default function CommInfo() {
     }
     return Math.round(base * communityInfo[commInfo.countryID].exchangeToUSD * 100) / 100
   }
+
+  React.useEffect(() => {
+    if (validLandCost && validElectricityCost && validLStaffCost && validLDiscount) {
+      dispatch(setValidCommInfo(true))
+    } else {
+      dispatch(setValidCommInfo(false))
+    }
+  }, [validLandCost, validElectricityCost, validLStaffCost, validLDiscount, dispatch])
 
   return (
     <Grid container direction="row" alignItems="center" spacing={3}>
@@ -134,7 +143,7 @@ export default function CommInfo() {
           <Grid item xs={8}>
             <TextField
               error={!validLandCost}
-              helperText={!validLandCost ? t('Expected between 0 and') + ' 100000000' : ' '}
+              helperText={!validLandCost ? t('Expected between 0 and') + ' 100\'000\'000' : ' '}
               size="small"
               id="standard-number"
               type="number"

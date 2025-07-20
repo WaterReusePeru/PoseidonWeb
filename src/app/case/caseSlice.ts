@@ -4,7 +4,7 @@ import { treatmentTrains, ValueWaterQuality, waterQualities, WaterQuality, water
 
 type CaseState = {
   step: number
-  completedSteps: [number, number, number, number]
+  completedSteps: [boolean, boolean, boolean, boolean]
   commInfo: {
     countryID: number
     currency: number
@@ -58,7 +58,7 @@ type CaseState = {
 
 const initialState: CaseState = {
   step: 0,
-  completedSteps: [0, 0, 0, 0],
+  completedSteps: [true, false, false, false],
   commInfo: {
     countryID: 0,
     currency: 1, //Peru is the defaul country with local currency
@@ -117,15 +117,12 @@ export const caseSlice = createSlice({
     setCountry: (state, action) => {
       state.commInfo.countryID = action.payload
       state.commInfo.currency = 0
-      state.completedSteps[0] = 0
     },
     setCurrency: (state, action) => {
       action.payload === 1000 ? (state.commInfo.currency = 0) : (state.commInfo.currency = 1)
-      state.completedSteps[0] = 0
     },
     setLandCost: (state, action) => {
       state.commInfo.landCost = action.payload
-      state.completedSteps[0] = 0
     },
     setElectricityCost: (state, action) => {
       state.commInfo.electricityCost = action.payload
@@ -135,6 +132,9 @@ export const caseSlice = createSlice({
     },
     setDictountRate: (state, action) => {
       state.commInfo.discountRate = action.payload
+    },
+    setValidCommInfo: (state, action) => {
+      state.completedSteps[0] = action.payload
     },
     setCustomInput: (state, action) => {
       state.input.custom = action.payload
@@ -146,7 +146,7 @@ export const caseSlice = createSlice({
       state.input.customValues = action.payload
       state.input.customValueEntered = true
       if (state.input.quantity) {
-        state.completedSteps[1] = 1
+        state.completedSteps[1] = true
       }
     },
     setCustomQualityFactors: (state, action) => {
@@ -169,7 +169,7 @@ export const caseSlice = createSlice({
     setInputQualityCategory: (state, action) => {
       state.input.category = action.payload
       state.input.qualityClass = undefined
-      state.completedSteps[1] = 0
+      state.completedSteps[1] = false
     },
     setInputQualityClass: (state, action) => {
       state.input.qualityClass = action.payload
@@ -181,16 +181,16 @@ export const caseSlice = createSlice({
       // })
       // state.qualityFactors = qualityClassFactors
       if (state.input.quantity) {
-        state.completedSteps[1] = 1
+        state.completedSteps[1] = true
       }
     },
     setInputQuantity: (state, action) => {
       state.input.quantity = action.payload
       if (!action.payload) {
-        state.completedSteps[1] = 0
+        state.completedSteps[1] = false
       }
       if (action.payload && (typeof state.input.qualityClass === 'number' || state.input.customValueEntered))
-        state.completedSteps[1] = 1
+        state.completedSteps[1] = true
     },
     setCustomEndUse: (state, action) => {
       state.endUse.custom = action.payload
@@ -198,12 +198,12 @@ export const caseSlice = createSlice({
     setCustomEndUseValues: (state, action) => {
       state.endUse.customValues = action.payload
       state.endUse.customValueEntered = true
-      state.completedSteps[2] = 2
+      state.completedSteps[2] = true
     },
     setEndUseQualityCategory: (state, action) => {
       state.endUse.category = action.payload
       state.endUse.qualityClass = undefined
-      state.completedSteps[2] = 0
+      state.completedSteps[2] = false
     },
     setEndUseQualityClass: (state, action) => {
       state.endUse.qualityClass = action.payload
@@ -214,7 +214,7 @@ export const caseSlice = createSlice({
         }
       })
       state.qualityFactors = qualityClassFactors
-      state.completedSteps[2] = 2
+      state.completedSteps[2] = true
     },
     setSolutionNoneNeeded: (state, action) => {
       state.solution.noneNeeded = action.payload
@@ -296,6 +296,7 @@ export const {
   setElectricityCost,
   setStaffCost,
   setDictountRate,
+  setValidCommInfo,
   setInputQualityCategory,
   setInputQualityClass,
   setInputQuantity,
