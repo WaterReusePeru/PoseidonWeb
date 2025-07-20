@@ -1,5 +1,5 @@
 import React from 'react'
-import { InputAdornment, Tooltip, Typography } from '@mui/material'
+import { InputAdornment, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import { compare, useAppDispatch, useAppSelector } from '../hooks'
@@ -15,7 +15,6 @@ import {
   setDictountRate,
   setValidCommInfo,
 } from '../case/caseSlice'
-import Chip from '@mui/material/Chip'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 import { Language, getLocalisedValue } from '../i18n/languageFunctions'
